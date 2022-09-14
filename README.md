@@ -1,7 +1,7 @@
 # Xenon's Triblader Mod
 ![Kindling Triad](https://user-images.githubusercontent.com/105614278/168501697-8dccf971-8564-4166-bbdb-d3c6ec79d870.gif)
 
-Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion.
+Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. Manlea and Ninja skins should remain disabled in-game for this mod to work.
 
 # **PRE-RELEASE VERSION**
 
@@ -173,6 +173,7 @@ https://discord.gg/CsfUk9vpFq
 
 ## Install CCLoader
 CClaoder is a mod loader required to install mods on Crosscode.
+Versions older than v2.21.0 will give an error with this mod.
 
 1. Download CCloader from https://github.com/CCDirectLink/CCLoader/releases  
 ![image](https://user-images.githubusercontent.com/105614278/179910752-49fb02fd-87d4-43fb-8853-c1794925c223.png)

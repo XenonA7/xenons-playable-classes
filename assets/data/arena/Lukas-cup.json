@@ -1,0 +1,63 @@
+{
+  "core": {
+    "type": "SOLO_CUSTOM",
+    "name": {
+      "en_US": "PvP vs Lukas"
+    },
+    "info": {
+      "en_US": "Duel against Lukas in PvP Combat!"
+    },
+    "creator": {
+      "en_US": "Schneider"
+    },
+    "condition": "true",
+    "music": "evoEscape",
+    "noRush": true,
+    "mods": [
+      "WEAPON_ADJUST"
+    ],
+    "level": 75,
+    "difficulty": "5",
+    "banner": {
+      "src": "media/gui/arena-banners-mod.png",
+      "offX": 0,
+      "offY": 64,
+      "width": 280,
+      "height": 64
+    }
+  },
+  "rounds": [
+    {
+      "name": {
+        "en_US": "Let's Duel!"
+      },
+      "customCode": true,
+      "platPoints": 80000,
+      "coins": 0,
+      "objective": {
+        "en_US": "Gyahaha! Think you can beat me?\n\\c[1]<Play as Lea>\\c[0]"
+      },
+      "mods": [
+        "PVP_BATTLE"
+      ],
+      "points": 60000,
+      "type": "DEFAULT",
+      "medal": 0,
+      "waves": [],
+      "map": "arena.pvp.pvp-lukas",
+      "bonuses": [
+        {
+          "type": "HIT_COUNTER",
+          "value": 100,
+          "points": 5000
+        },
+        {
+          "type": "TIME",
+          "seconds": 240,
+          "points": 10000
+        }
+      ],
+      "spawn": "PLAYER_SPAWN"
+    }
+  ]
+}

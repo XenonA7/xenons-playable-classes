@@ -1,0 +1,66 @@
+{
+  "name": {
+    "en_US": "triblader4"
+  },
+  "realname": {
+    "en_US": "triblader4"
+  },
+  "size": {
+    "x": 16,
+    "y": 16,
+    "z": 24
+  },
+  "shadow": 16,
+  "animSheet": "npc.triblader4",
+  "walkAnimSet": {
+    "normal": {
+      "idle": "idle",
+      "move": "walk",
+      "run": "run"
+    },
+    "sit": {
+      "idle": "sit"
+    }
+  },
+  "walkAnims": "normal",
+  "configs": {
+    "normal": {
+      "relativeVel": 0.5
+    },
+    "running": {
+      "relativeVel": 1
+    },
+    "sit": {
+      "walkAnims": "sit",
+      "relativeVel": 0.5
+    }
+  },
+  "face": {
+    "width": 128,
+    "height": 149,
+    "centerX": 45,
+    "centerY": 52,
+    "src": "triblader4.png",
+    "parts": [
+      {
+        "normal": {
+          "srcX": 0,
+          "srcY": 0,
+          "width": 128,
+          "height": 149,
+          "destX": 0,
+          "destY": 0
+        }
+      }
+    ],
+    "expressions": {
+      "DEFAULT": {
+        "faces": [
+          [
+            "normal"
+          ]
+        ]
+      }
+    }
+  }
+}

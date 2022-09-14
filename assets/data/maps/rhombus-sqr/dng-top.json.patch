@@ -1,0 +1,455 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "TouchTrigger",
+      "x": 432,
+      "y": 364,
+      "level": 3,
+      "settings": {
+        "name": "XTM_Trigger",
+        "size": {
+          "x": 32,
+          "y": 136
+        },
+        "type": "SET_TRUE",
+        "zHeight": 32,
+        "mapId": 253,
+        "variable": "map.xtmConvo"
+      }
+    }
+  },
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 172
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "TeleportField",
+      "x": 364,
+      "y": 420,
+      "level": 3,
+      "settings": {
+        "name": "toDungeon",
+        "central": {
+          "global": true,
+          "name": "west"
+        },
+        "dir": "WEST",
+        "map": "xtm.char-select.outdoors",
+        "teleportLabel": {
+          "en_US": "Rhombus Dungeon #3",
+          "de_DE": "Rhombus Dungeon #3",
+          "fr_FR": "fr_FR",
+          "langUid": 1,
+          "zh_CN": "罗姆布斯地牢#3<<A<<[CHANGED 2021/01/12]",
+          "ja_JP": "ロンバスダンジョン#3<<A<<[CHANGED 2021/01/12]",
+          "ko_KR": "마름모 던전 #3<<A<<[CHANGED 2021/01/12]",
+          "zh_TW": "新手地牢#3<<A<<[CHANGED 2021/01/12]"
+        },
+        "longTelCond": "true",
+        "blockEvent": [
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "value": 0.5,
+                "type": "SET_RELATIVE_SPEED"
+              },
+              {
+                "target": {
+                  "x": 376,
+                  "y": 432,
+                  "lvl": "3"
+                },
+                "precise": true,
+                "type": "MOVE_TO_POINT"
+              },
+              {
+                "face": "WEST",
+                "rotate": true,
+                "type": "SET_FACE"
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": true,
+            "type": "DO_ACTION"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "FancyGuy"
+            },
+            "action": [
+              {
+                "target": {
+                  "x": 528,
+                  "y": 384,
+                  "lvl": "2"
+                },
+                "precise": false,
+                "type": "MOVE_TO_POINT"
+              },
+              {
+                "face": "WEST",
+                "rotate": true,
+                "type": "SET_FACE"
+              },
+              {
+                "time": 0.4,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "pondering"
+              },
+              {
+                "time": 0.8,
+                "type": "WAIT"
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": true,
+            "type": "DO_ACTION"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "duration": 0,
+            "align": "BOTTOM",
+            "group": "",
+            "wait": true,
+            "waitSkip": 0,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "teleport",
+              "name": "hideDefault"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "pos": {
+              "x": 524,
+              "y": 384
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_POS"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "FancyGuy"
+            },
+            "type": "WAIT_UNTIL_ACTION_DONE"
+          },
+          {
+            "alpha": 1,
+            "time": 0.5,
+            "lighter": false,
+            "type": "SET_OVERLAY",
+            "color": "black"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.fancyGuyWatched",
+            "value": true
+          },
+          {
+            "type": "TELEPORT",
+            "map": "xtm.char-select.outdoors",
+            "marker": "start"
+          }
+        ],
+        "gfxType": "SOLID",
+        "longTeleportCondition": "false",
+        "spawnDistance": 48,
+        "mapId": 202,
+        "marker": "start",
+        "blockEventCondition": "!map.fancyGuyWatched"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 521,
+      "y": 404,
+      "level": 3,
+      "settings": {
+        "name": "XTM_Conversation",
+        "eventType": "CUTSCENE",
+        "endCondition": "false",
+        "event": [
+          {
+            "zoom": 1.5,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "duration": 2
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "value": 0.8,
+                "type": "SET_RELATIVE_SPEED"
+              },
+              {
+                "type": "SET_FACE",
+                "face": "WEST",
+                "rotate": true,
+                "rotateSpeed": 3
+              },
+              {
+                "type": "MOVE_FORWARD",
+                "time": 0.3
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": true,
+            "type": "DO_ACTION"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "side": "LEFT",
+            "order": 0,
+            "clearSide": false,
+            "type": "ADD_MSG_PERSON",
+            "person": {
+              "person": "main.sergey",
+              "expression": "DOWN"
+            }
+          },
+          {
+            "side": "RIGHT",
+            "order": 0,
+            "clearSide": false,
+            "type": "ADD_MSG_PERSON",
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "message": {
+              "en_US": "Lea."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "DOWN"
+            }
+          },
+          {
+            "message": {
+              "en_US": "...Hi?"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "NERVOUS"
+            }
+          },
+          {
+            "message": {
+              "en_US": "Before we proceed, I want to take another precaution."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "EYES_CLOSED"
+            }
+          },
+          {
+            "message": {
+              "en_US": "..?"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_AWAY"
+            }
+          },
+          {
+            "message": {
+              "en_US": "That \\c[1]blue avatar\\c[0] had some way of tracking you back on the ship."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "NOTIFYING"
+            }
+          },
+          {
+            "message": {
+              "en_US": "[nods]"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD_SAD"
+            }
+          },
+          {
+            "message": {
+              "en_US": "I'm afraid that we are still not truly safe."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "WORRIED"
+            }
+          },
+          {
+            "message": {
+              "en_US": "While it will be harder for him to reach you inside the playground, he is no doubt still tracking your whereabouts as we speak."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "AWAY"
+            }
+          },
+          {
+            "message": {
+              "en_US": "..!"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED"
+            }
+          },
+          {
+            "message": {
+              "en_US": "I have an idea how we can throw off his tracking methods."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            }
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "waitSkip": 0,
+            "zoom": 1.5,
+            "type": "SET_CAMERA_TARGET",
+            "entity": {
+              "global": true,
+              "name": "toDungeon"
+            },
+            "wait": true
+          },
+          {
+            "type": "PLAY_SOUND",
+            "position": {
+              "x": 365,
+              "y": 420
+            },
+            "sound": "media/sound/misc/computer-beep-success.ogg",
+            "volume": 1
+          },
+          {
+            "type": "SHOW_EFFECT",
+            "entity": {
+              "global": true,
+              "name": "toDungeon"
+            },
+            "effect": {
+              "sheet": "scene.hacking",
+              "name": "hacking"
+            },
+            "duration": 0.5,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "align": "BOTTOM",
+            "waitSkip": 0
+          },
+          {
+            "message": {
+              "en_US": "Please go and use the teleporter. We shouldn't have to keep that \\c[3]pentafist girl\\c[0] waiting too long."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.sergey",
+              "expression": "AWAY"
+            }
+          },
+          {
+            "side": "ALL",
+            "type": "CLEAR_MSG"
+          },
+          {
+            "type": "RESET_CAMERA",
+            "speed": "FAST",
+            "transition": "EASE_IN_OUT"
+          }
+        ],
+        "triggerType": "ONCE",
+        "mapId": 254,
+        "startCondition": "map.xtmConvo"
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

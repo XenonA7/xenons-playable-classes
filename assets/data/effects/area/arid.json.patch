@@ -1,0 +1,6 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/area/arid.json"
+  }
+]

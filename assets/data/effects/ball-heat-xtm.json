@@ -1,0 +1,275 @@
+{
+  "DOCTYPE": "EFFECT",
+  "ANIMS": {
+    "SUB": [
+      {
+        "name": "BOUNCE",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 24,
+          "height": 16,
+          "offX": 0,
+          "offY": 32
+        },
+        "time": 0.04,
+        "repeat": false,
+        "pivot": {
+          "x": 12,
+          "y": 0
+        },
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "CIRCLE",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 16,
+          "height": 16,
+          "offX": 144,
+          "offY": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "KILL",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 32,
+          "height": 24,
+          "offX": 0,
+          "offY": 48
+        },
+        "time": 0.04,
+        "repeat": false,
+        "pivot": {
+          "x": 16,
+          "y": 0
+        },
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "TRAIL",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 24,
+          "height": 24,
+          "offX": 0,
+          "offY": 72
+        },
+        "time": 0.04,
+        "repeat": false,
+        "flipY": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "TRAIL_R",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 24,
+          "height": 24,
+          "offX": 0,
+          "offY": 72
+        },
+        "time": 0.04,
+        "repeat": false,
+        "flipX": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "TRAIL_S",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 16,
+          "height": 24,
+          "offX": 168,
+          "offY": 72
+        },
+        "time": 0.04,
+        "repeat": false,
+        "flipY": true,
+        "frames": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "TRAIL_S_R",
+        "sheet": {
+          "src": "media/entity/effects/ball.png",
+          "width": 16,
+          "height": 24,
+          "offX": 168,
+          "offY": 72
+        },
+        "time": 0.04,
+        "repeat": false,
+        "flipX": true,
+        "frames": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "EFFECTS": {
+    "ballBounce": [
+      {
+        "useTargetAngle": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        },
+        "type": "PLAY_ANIM",
+        "anim": "BOUNCE"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.35,
+        "duration": 0,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.75,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "sound": "media/sound/battle/airon/ball-bounce-heat3.ogg",
+        "type": "PLAY_SOUND"
+      }
+    ],
+    "ballAirKill": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "CIRCLE",
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "LIGHT",
+        "size": "L",
+        "fadeOut": 0.35
+      },
+      {
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/ball-kill.ogg",
+        "volume": 0.5
+      }
+    ],
+    "ballWallKill": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "KILL",
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "LIGHT",
+        "size": "L",
+        "fadeOut": 0.35
+      },
+      {
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/ball-kill.ogg",
+        "volume": 0.5
+      }
+    ],
+    "ballTrail": [
+      {
+        "useTargetAngle": true,
+        "offset": {
+          "x": 0,
+          "y": -7,
+          "z": -3
+        },
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0.1
+          }
+        },
+        "type": "PLAY_ANIM",
+        "anim": "TRAIL_S"
+      },
+      {
+        "time": 0.015,
+        "type": "WAIT"
+      },
+      {
+        "useTargetAngle": true,
+        "offset": {
+          "x": 0,
+          "y": -7,
+          "z": -3
+        },
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0.1
+          }
+        },
+        "type": "PLAY_ANIM",
+        "anim": "TRAIL_S_R"
+      },
+      {
+        "time": 0.015,
+        "type": "WAIT"
+      }
+    ]
+  }
+}

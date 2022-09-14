@@ -1,0 +1,34 @@
+[
+  {
+    "type": "ENTER",
+    "index": "headIdx"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "triblader.triblader2",
+      "img": "media/gui/severed-heads/triblader2.png"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "triblader.triblader3",
+      "img": "media/gui/severed-heads/triblader3.png"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "triblader.triblader4",
+      "img": "media/gui/severed-heads/triblader4.png"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "triblader.triblader5",
+      "img": "media/gui/severed-heads/triblader5.png"
+    }
+  }
+]

@@ -1,0 +1,408 @@
+{
+  "DOCTYPE": "PROP_SHEET",
+  "props": [
+    {
+      "name": "avatar1",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 0,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test"
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar2",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 32,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test",
+            "time": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar3",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 64,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test",
+            "time": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar4",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 96,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test"
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar5",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 128,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test",
+            "time": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar6",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 160,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test",
+            "time": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "name": "avatar7",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xtm-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 192,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "TeleportField",
+      "x": 266,
+      "y": 243,
+      "level": 1,
+      "settings": {
+        "mapId": 40,
+        "map": "xtm.bonus.dev",
+        "marker": "bottom",
+        "dir": "SOUTH",
+        "teleportLabel": {
+          "en_US": "To: XTM Dev Room"
+        },
+        "longTelCond": "false",
+        "gfxType": "AR",
+        "name": "xtmDev",
+        "spawnCondition": "plot.line >= 48000"
+      }
+    }
+  },
+
+
+
+  {
+    "type": "EXIT"
+  }
+]

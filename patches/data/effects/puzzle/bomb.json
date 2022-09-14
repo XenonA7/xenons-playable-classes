@@ -1,0 +1,86 @@
+{
+  "EFFECTS": {
+  	"bombHeatTrailSilent": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "red",
+        "alpha": 1,
+        "duration": 0.05,
+        "keepDuration": 0,
+        "noLighter": false,
+        "type": "FLASH_COLOR"
+      },
+      {
+        "radius": 10,
+        "useTargetAngle": false,
+        "numParticles": 5,
+        "duration": 0.1,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "alongY": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "anim": "TRAIL",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "radius": 10,
+        "useTargetAngle": false,
+        "numParticles": 5,
+        "duration": 0.1,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "alongY": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "anim": "TRAIL_R",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ]
+  }
+}

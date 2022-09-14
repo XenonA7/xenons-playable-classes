@@ -1,0 +1,436 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 954,
+      "y": 301,
+      "level": 0,
+      "settings": {
+        "mapId": 264,
+        "event": [
+          {
+            "type": "IF",
+            "condition": "plot.xtm.swapBack",
+            "thenStep": [
+              {
+                "type": "CHANGE_VAR_BOOL",
+                "varName": "plot.xtm.swapBack",
+                "changeType": "set",
+                "value": false
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 1",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "Lea"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 2",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "Schneider"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 3",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "Luke"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 4",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "triblader2"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 5",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "triblader3"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 6",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "triblader4"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character == 7",
+                "thenStep": [
+                  {
+                    "type": "SWITCH_PLAYER_CONFIG",
+                    "name": "triblader5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "name": "LeaSwitchBack",
+        "eventType": "PARALLEL",
+        "endCondition": "false",
+        "triggerType": "ONCE_PER_ENTRY"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 954,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 265,
+        "event": [
+          {
+            "type": "IF",
+            "condition": "!plot.xtm.character >= 1",
+            "thenStep": [
+              {
+                "changeType": "set",
+                "type": "CHANGE_VAR_NUMBER",
+                "varName": "plot.xtm.character",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "name": "characterInitOnce",
+        "eventType": "PARALLEL",
+        "endCondition": "false",
+        "triggerType": "ONCE"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 1227,
+      "y": 419,
+      "level": 0,
+      "settings": {
+        "name": "xtmSignBase",
+        "mapId": 265,
+        "propType": {
+          "sheet": "rhombus-interior",
+          "name": "groundProjector"
+        },
+        "propAnim": "",
+        "condAnims": []
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 1227,
+      "y": 427,
+      "level": {
+        "level": 0,
+        "offset": 12
+      },
+      "settings": {
+        "mapId": 266,
+        "propType": {
+          "sheet": "trading-autumn",
+          "name": "signClass"
+        },
+        "propAnim": "triblader",
+        "permaEffect": {
+          "sheet": "drops",
+          "name": "blink"
+        },
+        "interact": {
+          "icon": "INFO",
+          "hoverText": {
+            "en_US": "\\c[5]<XTM>\\c[0] Character Change"
+          },
+          "event": [
+            {
+              "side": "RIGHT",
+              "order": 0,
+              "clearSide": false,
+              "type": "ADD_MSG_PERSON",
+              "person": {
+                "person": "main.lea",
+                "expression": "DEFAULT"
+              }
+            },
+            {
+              "0": [
+                {
+                  "name": "Lea",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 1
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Lea\\c[0]\n\\!Class:\\. \\c[1]Spheromancer\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "1": [
+                {
+                  "name": "Schneider",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 2
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Schneider\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "2": [
+                {
+                  "name": "Luke",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 3
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Luke\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "3": [
+                {
+                  "name": "triblader2",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 4
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Triblader2\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "4": [
+                {
+                  "name": "triblader3",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 5
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Triblader3\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "5": [
+                {
+                  "name": "triblader4",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 6
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Triblader4\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\.\n\\c[2]+ Melee speed\\c[0]\n\\.\\c[2]+ Dash speed\\c[0]\n\\.\\c[1]- Standard melee damage\\c[0]"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "6": [
+                {
+                  "name": "triblader5",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "changeType": "set",
+                  "type": "CHANGE_VAR_NUMBER",
+                  "varName": "plot.xtm.character",
+                  "value": 7
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Triblader5\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. \\c[2]Steerable dash\\c[0]"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "text": {
+                    "en_US": "Use directional inputs to precisely and rapidly change directions while dashing,\\. unlike other characters which only dash in straight lines.\\! If aiming,\\. dash will follow the crosshair.\\! Move the crosshair while aim-dashing for precise pathing."
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "7": [],
+              "type": "SHOW_CHOICE",
+              "person": {
+                "person": "main.lea",
+                "expression": "DEFAULT"
+              },
+              "options": [
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Lea"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Schneider"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Luke"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Triblader2"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Triblader3"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Triblader4"
+                  },
+                  "activeCondition": ""
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Triblader5"
+                  },
+                  "activeCondition": "true"
+                }
+              ]
+            }
+          ]
+        },
+        "name": "xtmSign"
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

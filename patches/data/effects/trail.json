@@ -1,0 +1,40 @@
+{
+  "EFFECTS": {
+  	"blueQuick": [
+      {
+        "color": "#003080",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.08,
+        "type": "WAIT"
+      }
+    ],
+    "blueQuickest": [
+      {
+        "color": "#003080",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      }
+    ]
+  }
+}

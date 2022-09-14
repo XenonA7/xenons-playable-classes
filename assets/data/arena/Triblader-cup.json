@@ -1,0 +1,161 @@
+{
+  "core": {
+    "type": "SOLO_CUSTOM",
+    "name": {
+      "en_US": "Triblader League"
+    },
+    "info": {
+      "en_US": "Take on various triblader players of Crossworlds!"
+    },
+    "creator": {
+      "en_US": "XenonA7"
+    },
+    "condition": "plot.xtm.triArenaUnlock",
+    "music": "evoEscape",
+    "noRush": true,
+    "mods": [
+      "WEAPON_ADJUST"
+    ],
+    "level": 75,
+    "difficulty": "5",
+    "banner": {
+      "src": "media/gui/arena-banners-mod.png",
+      "offX": 280,
+      "offY": 0,
+      "width": 280,
+      "height": 64
+    }
+  },
+  "rounds": [
+    {
+      "name": {
+        "en_US": "Frequent Combat Arts"
+      },
+      "customCode": true,
+      "platPoints": 75000,
+      "coins": 0,
+      "objective": {
+        "en_US": "This player likes to use combat arts very often rather than save up SP.\n\\c[2]<Open to any character>\\c[0]"
+      },
+      "mods": [
+        "PVP_BATTLE"
+      ],
+      "points": 60000,
+      "type": "DEFAULT",
+      "medal": 0,
+      "waves": [],
+      "map": "arena.pvp.pvp-triblader-league-a",
+      "bonuses": [
+        {
+          "type": "HIT_COUNTER",
+          "value": 100,
+          "points": 5000
+        },
+        {
+          "type": "TIME",
+          "seconds": 240,
+          "points": 10000
+        }
+      ],
+      "spawn": "PLAYER_SPAWN"
+    },
+    {
+      "name": {
+        "en_US": "Double Trouble"
+      },
+      "customCode": true,
+      "platPoints": 80000,
+      "coins": 0,
+      "objective": {
+        "ko_KR": "Fight two triblader players in a party. Their level is scaled down to compensate.\n\\c[3]<Opponent levels are scaled down for unbalanced teams>\\c[0]\n\\c[2]<Open to any character>\\c[0]",
+        "en_US": "\\c[1]Will be implemented in later versions of XTM.\\c[0]"
+      },
+      "mods": [
+        "PVP_BATTLE"
+      ],
+      "points": 60000,
+      "type": "DEFAULT",
+      "medal": 0,
+      "waves": [],
+      "map": "arena.boss.turret-boss",
+      "bonuses": [
+        {
+          "type": "HIT_COUNTER",
+          "value": 100,
+          "points": 5000
+        },
+        {
+          "type": "TIME",
+          "seconds": 240,
+          "points": 10000
+        }
+      ],
+      "spawn": "PLAYER_SPAWN"
+    },
+    {
+      "name": {
+        "en_US": "Triangle Strategy"
+      },
+      "customCode": true,
+      "platPoints": 110000,
+      "coins": 0,
+      "objective": {
+        "en_US": "The so-called 'Triangle Strategy' is when a party runs three tribladers. Fight against a full party in PVP combat!\n\\c[3]<Opponent levels are scaled down for unbalanced teams>\\c[0]\n\\c[2]<Open to any character>\\c[0]"
+      },
+      "mods": [
+        "PVP_BATTLE"
+      ],
+      "points": 60000,
+      "type": "DEFAULT",
+      "medal": 0,
+      "waves": [],
+      "map": "arena.pvp.pvp-triblader-league-c",
+      "bonuses": [
+        {
+          "type": "HIT_COUNTER",
+          "value": 100,
+          "points": 5000
+        },
+        {
+          "type": "TIME",
+          "seconds": 240,
+          "points": 10000
+        }
+      ],
+      "spawn": "PLAYER_SPAWN"
+    },
+    {
+      "name": {
+        "en_US": "Triblader Prime"
+      },
+      "customCode": true,
+      "platPoints": 80000,
+      "coins": 0,
+      "objective": {
+        "ko_KR": "This top Crossworlds player has the end-game achievement allowing them to use multiple circuit paths at once, giving them a huge moveset to utilize.\n\\c[2]<Open to any character>\\c[0]",
+        "en_US": "\\c[1]Will be implemented in later versions of XTM.\\c[0]"
+      },
+      "mods": [
+        "PVP_BATTLE"
+      ],
+      "points": 60000,
+      "type": "DEFAULT",
+      "medal": 0,
+      "waves": [],
+      "map": "arena.boss.turret-boss",
+      "bonuses": [
+        {
+          "type": "HIT_COUNTER",
+          "value": 100,
+          "points": 5000
+        },
+        {
+          "type": "TIME",
+          "seconds": 240,
+          "points": 10000
+        }
+      ],
+      "spawn": "PLAYER_SPAWN"
+    }
+  ]
+}

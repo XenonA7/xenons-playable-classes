@@ -1,0 +1,412 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 640,
+      "y": 406,
+      "level": 2,
+      "settings": {
+        "mapId": 914,
+        "event": [
+          {
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "type": "PLAY_SOUND",
+            "position": {
+              "x": 640,
+              "y": 400
+            },
+            "sound": "media/sound/hud/quest-task-solved.ogg",
+            "volume": 0.8
+          },
+          {
+            "type": "SHOW_CENTER_MSG",
+            "titleText": {
+              "en_US": "\\c[3]New arena cup unlocked!\\c[0]"
+            },
+            "text": {
+              "en_US": "Triblader League"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "xtm-triblader-league"
+            },
+            "action": [
+              {
+                "type": "NAVIGATE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "landmark"
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "rotateSpeed": 3,
+                "rotate": true,
+                "face": "SOUTH"
+              },
+              {
+                "type": "CHANGE_VAR_BOOL",
+                "changeType": "set",
+                "value": true,
+                "varName": "plot.xtm.triArenaUnlock"
+              },
+              {
+                "type": "SHOW_EFFECT",
+                "rotOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "effect": {
+                  "sheet": "teleport",
+                  "name": "hideDefault"
+                },
+                "duration": 0,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "align": "BOTTOM",
+                "waitSkip": 0
+              },
+              {
+                "type": "WAIT",
+                "time": 1.2
+              },
+              {
+                "type": "RESET_NPC"
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": true
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.walk",
+            "changeType": "set",
+            "value": false
+          },
+          {
+            "type": "RESET_NPC",
+            "npc": {
+              "global": true,
+              "name": "xtm-triblader-league"
+            }
+          }
+        ],
+        "name": "xtm-walk",
+        "startCondition": "tmp.walk",
+        "endCondition": "false",
+        "eventType": "PARALLEL",
+        "triggerType": "ONCE"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 599,
+      "y": 431,
+      "level": 2,
+      "settings": {
+        "mapId": 913,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "plot.line >= 48000 && !plot.xtm.triArenaUnlock",
+            "config": "normal",
+            "event": {
+              "quest": [
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "LEFT"
+                },
+                {
+                  "person": {
+                    "person": "main.lea",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "RIGHT"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "Are you here looking for a duel as well?"
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "person": {
+                    "person": "main.lea",
+                    "expression": "SURPRISED_TOWARD"
+                  },
+                  "message": {
+                    "en_US": "..?"
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "We're all sitting here waiting for a turn on the fields..."
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                },
+                {
+                  "type": "WAIT",
+                  "time": 0.5
+                },
+                {
+                  "entity": {
+                    "global": true,
+                    "name": "xtm-triblader-league"
+                  },
+                  "action": [
+                    {
+                      "type": "SET_FACE_TO_ENTITY",
+                      "entity": {
+                        "global": true,
+                        "name": "c2"
+                      },
+                      "rotate": true,
+                      "rotateSpeed": 3
+                    }
+                  ],
+                  "type": "DO_ACTION",
+                  "keepState": true
+                },
+                {
+                  "entity": {
+                    "player": true
+                  },
+                  "action": [
+                    {
+                      "type": "SET_FACE_TO_ENTITY",
+                      "entity": {
+                        "global": true,
+                        "name": "c2"
+                      },
+                      "rotate": true,
+                      "rotateSpeed": 3
+                    }
+                  ],
+                  "type": "DO_ACTION",
+                  "keepState": true
+                },
+                {
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "speed": "NORMAL",
+                  "transition": "EASE_IN_OUT",
+                  "waitSkip": 0,
+                  "zoom": 1,
+                  "type": "SET_CAMERA_TARGET",
+                  "entity": {
+                    "global": true,
+                    "name": "c2"
+                  }
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "LEFT"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "They are either reserved by players who won't take it seriously or those who won't even show up."
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "Those two have been standing there for hours."
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                },
+                {
+                  "type": "RESET_CAMERA",
+                  "speed": "FAST",
+                  "wait": true,
+                  "transition": "EASE_IN_OUT"
+                },
+                {
+                  "entity": {
+                    "player": true
+                  },
+                  "action": [
+                    {
+                      "type": "SET_FACE_TO_ENTITY",
+                      "entity": {
+                        "global": true,
+                        "name": "xtm-triblader-league"
+                      },
+                      "rotate": true,
+                      "rotateSpeed": 3
+                    }
+                  ],
+                  "type": "DO_ACTION",
+                  "keepState": true
+                },
+                {
+                  "entity": {
+                    "global": true,
+                    "name": "xtm-triblader-league"
+                  },
+                  "action": [
+                    {
+                      "type": "SET_FACE_TO_ENTITY",
+                      "entity": {
+                        "player": true
+                      },
+                      "rotate": true,
+                      "rotateSpeed": 3
+                    }
+                  ],
+                  "type": "DO_ACTION",
+                  "keepState": true
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "LEFT"
+                },
+                {
+                  "person": {
+                    "person": "main.lea",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "RIGHT"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "I guess this means we will have to head over to the \\c[3]Rhombus Arena\\c[0] which is instanced."
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "message": {
+                    "en_US": "Feel free to come duel!\\. There are plenty of players also looking for matches there."
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "person": {
+                    "person": "main.lea",
+                    "expression": "NOD"
+                  },
+                  "message": {
+                    "en_US": "[nods]"
+                  },
+                  "type": "SHOW_MSG"
+                },
+                {
+                  "type": "CHANGE_VAR_BOOL",
+                  "changeType": "set",
+                  "value": true,
+                  "varName": "tmp.walk"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                },
+                {
+                  "type": "RESET_NPC",
+                  "npc": {
+                    "global": true,
+                    "name": "xtm-triblader-league"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "hidden": false,
+            "condition": "tmp.walk",
+            "config": "normal",
+            "event": []
+          },
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "hidden": true,
+            "condition": "plot.line < 48000 || plot.xtm.triArenaUnlock",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "name": "xtm-triblader-league",
+        "characterName": "triblader.triblader2",
+        "analyzable": {
+          "text": {
+            "en_US": "Triblader Player"
+          },
+          "active": ""
+        }
+      }
+    }
+  },
+
+
+  {
+    "type": "EXIT"
+  }
+]

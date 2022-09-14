@@ -1,0 +1,24 @@
+[
+  {
+    "type": "ENTER",
+    "index": "enemies"
+  },
+  {
+    "type": "IMPORT",
+    "src": "mod:patches/data/database/enemies.json"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": "commonEvents"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "patches/data/triblader2-events.json"
+  },
+  {
+    "type": "EXIT"
+  }
+]

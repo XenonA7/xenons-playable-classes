@@ -1,8 +1,12 @@
+0.5.1 (09/25/2022)
+### Fixes
+- Fixed alignment of effect in Blade Rink intro when Triblader5 switches to neutral
+- Fixed broken animation in map autumn\path-3-1.json in cutscene that plays after Vermillion Wasteland
+
 0.5.0 (09/25/2022)
 ### New Content
 - Triblader League round 2: "Blade Rink" added
 - Cutscene for 1st-time attempt at Blade Rink only
-
 ### Fixes
 - Removed unused debug spritesheet custom.png
 - Compressed file pvp-triblader-league-c.json

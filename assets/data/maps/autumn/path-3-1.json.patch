@@ -1,0 +1,39 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+    	"type": "EventTrigger",
+      "x": 600,
+      "y": 733,
+      "level": 1,
+      "settings": {
+        "mapId": 594,
+        "event": [
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "CLEAR_PLAYER_ANIM_SHEET"
+              }
+            ],
+            "type": "DO_ACTION"
+          }
+        ],
+        "eventType": "INTERRUPTABLE",
+        "name": "XTM-Anim-Fix",
+        "startCondition": "plot.line == 16200",
+        "endCondition": "false",
+        "triggerType": "ONCE"
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

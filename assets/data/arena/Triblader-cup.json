@@ -61,14 +61,13 @@
     },
     {
       "name": {
-        "en_US": "Double Trouble"
+        "en_US": "Blade Rink"
       },
       "customCode": true,
       "platPoints": 80000,
       "coins": 0,
       "objective": {
-        "ko_KR": "Fight two triblader players in a party. Their level is scaled down to compensate.\n\\c[3]<Opponent levels are scaled down for unbalanced teams>\\c[0]\n\\c[2]<Open to any character>\\c[0]",
-        "en_US": "\\c[1]Will be implemented in later versions of XTM.\\c[0]"
+        "en_US": "Fight two triblader players in a party. Their level is scaled down to compensate.\n\\c[3]<Opponent levels are scaled down for unbalanced teams>\\c[0]\n\\c[2]<Open to any character>\\c[0]"
       },
       "mods": [
         "PVP_BATTLE"
@@ -77,7 +76,7 @@
       "type": "DEFAULT",
       "medal": 0,
       "waves": [],
-      "map": "arena.boss.turret-boss",
+      "map": "arena.pvp.pvp-triblader-league-b",
       "bonuses": [
         {
           "type": "HIT_COUNTER",

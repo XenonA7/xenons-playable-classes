@@ -43355,10 +43355,6 @@
             "type": "MOVE_FORWARD"
           },
           {
-            "baseStrength": 2,
-            "type": "SPAWN_ASSAULT"
-          },
-          {
             "dir": {
               "actorAttrib": "dashDir"
             },

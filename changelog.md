@@ -1,3 +1,13 @@
+0.5.0 (09/25/2022)
+### New Content
+- Triblader League round 2: "Blade Rink" added
+- Cutscene for 1st-time attempt at Blade Rink only
+
+### Fixes
+- Removed unused debug spritesheet custom.png
+- Compressed file pvp-triblader-league-c.json
+- Removed unintentional assault proxies from Blizzard Slash
+
 0.4.3 (09/13/2022)
 ### Changes
 - Updated readme

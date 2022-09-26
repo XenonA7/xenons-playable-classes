@@ -1,3 +1,11 @@
+0.5.2 (09/25/2022)
+### Fixes
+- Fixed cutscene sound effect positioning in all 5 XTM arena maps
+### Changes
+- Slightly moved PVP sign in Blade Rink
+- Changed initial character animations on cutscene for subsequent Blade Rink rounds
+- Made timing adjustment on pvpBrake for Blade Rink in attempt to avoid invisible enemies on round start
+
 0.5.1 (09/25/2022)
 ### Fixes
 - Fixed alignment of effect in Blade Rink intro when Triblader5 switches to neutral

@@ -1,3 +1,7 @@
+0.6.1 (10/23/2022)
+### Fixes
+- Introduced the "posEntity" attribute to gambitProxy to prevent Wild Gambit's projectiles from shooting through walls
+
 0.6.0 (10/23/2022)
 ### New Content
 - Added some various Triblader2 party dialogue

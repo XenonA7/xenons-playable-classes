@@ -19706,6 +19706,7 @@
                           "uniformDir": 0.25,
                           "delay": 0,
                           "repeat": false,
+                          "posEntity": "PROXY_OWNER",
                           "type": "SHOOT_PROXY_RANGE",
                           "proxy": "neutralShard2",
                           "offset": {
@@ -19729,6 +19730,7 @@
                           "uniformDir": 0.25,
                           "delay": 0,
                           "repeat": false,
+                          "posEntity": "PROXY_OWNER",
                           "type": "SHOOT_PROXY_RANGE",
                           "proxy": "neutralKnife",
                           "offset": {
@@ -19996,6 +19998,7 @@
                               "uniformDir": 0.25,
                               "delay": 0,
                               "repeat": false,
+                              "posEntity": "PROXY_OWNER",
                               "type": "SHOOT_PROXY_RANGE",
                               "proxy": "thunderSmallWeak",
                               "offset": {
@@ -20109,6 +20112,7 @@
                               "uniformDir": 0.25,
                               "delay": 0,
                               "repeat": false,
+                              "posEntity": "PROXY_OWNER",
                               "type": "SHOOT_PROXY_RANGE",
                               "proxy": "flameNoStun",
                               "offset": {
@@ -20227,6 +20231,7 @@
                               "delay": 0,
                               "repeat": false,
                               "count": 16,
+                              "posEntity": "PROXY_OWNER",
                               "type": "SHOOT_PROXY_RANGE",
                               "proxy": "waveAbsorbBall",
                               "offset": {
@@ -20250,6 +20255,7 @@
                               "delay": 0,
                               "repeat": false,
                               "count": 8,
+                              "posEntity": "PROXY_OWNER",
                               "type": "SHOOT_PROXY_RANGE",
                               "proxy": "waveDust",
                               "offset": {

@@ -1,7 +1,7 @@
 # Xenon's Triblader Mod
 ![Kindling Triad](https://user-images.githubusercontent.com/105614278/168501697-8dccf971-8564-4166-bbdb-d3c6ec79d870.gif)
 
-Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. Manlea and Ninja skins should remain disabled in-game for this mod to work.
+Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. Manlea and Ninja skins should remain disabled in-game for this mod to work. Mod only contains text for English.
 
 # **PRE-RELEASE VERSION**
 
@@ -11,7 +11,7 @@ This is currently a pre-release version. Please provide the author, XenonA7, wit
 1. extendable-severed-heads https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
 
-### **Recommended Mods**
+### **Recommended Mods (optional - for enhanced party members)**
 1. cc-combat-art-level-extender https://github.com/CCDirectLink/cc-combat-art-level-extender  
    * Allows party members to use up to Lv.3 arts if you have mods that define higher-level arts for them. This will make your late-game Triblader party members use powerful attacks from XTM.  
 3. cc-party-element-effects https://github.com/XenonA7/cc-party-element-effects  
@@ -201,9 +201,9 @@ Note that if you click on any of these installed mods, there should be a file ca
 3. Launch the game. Go into the options menu and there will be a new tab with a hammer icon for mods (CCLoader adds this). It should look like this:  
 ![image](https://user-images.githubusercontent.com/105614278/179913184-8603fbe7-9cf6-4437-9ef7-e89b4930cb5c.png)  
 
-In this case, you are good to go. Note that XTM is compatible with ArcaneLab and Autumn's Genesis and other mods. There is an old list of other Crosscode mods located here: https://c2dl.info/cc/mods
-
 If your mods don't appear here, make sure you don't have "folders inside folders". The mod folders need **package.json** or **ccmod.json** directly inside in order to be recognized.
+
+If your mods appear in-game, you are good to go. Note that XTM is compatible with ArcaneLab and Autumn's Genesis and other mods. There is an old list of other Crosscode mods located here: https://c2dl.info/cc/mods
 
 # How to Update to a New Version
 1. Delete your old folder entirely.  

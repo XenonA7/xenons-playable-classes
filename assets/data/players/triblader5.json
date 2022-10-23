@@ -1095,7 +1095,7 @@
             "damageFactor": 0.3,
             "spFactor": 0,
             "guardable": "",
-            "skillBonus": "RANGED_DMG"
+            "skillBonus": "MELEE_DMG"
           },
           "offset": {
             "x": 0,
@@ -7269,7 +7269,7 @@
       },
       "type": "GENERIC"
     },
-    "giantAssLaser": {
+    "neutralLaser": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -7303,7 +7303,7 @@
           }
         },
         {
-          "value": 80,
+          "value": 220,
           "type": "SET_SPEED"
         },
         {
@@ -7333,7 +7333,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "enemies.designer",
-            "name": "celestLaser"
+            "name": "celestLaserBarrage"
           },
           "offset": {
             "x": 0,
@@ -7384,16 +7384,12 @@
           }
         },
         {
-          "value": -1500,
-          "type": "SET_Z_VEL"
-        },
-        {
-          "stopType": "LANDED",
-          "stopBeforeTime": 0,
-          "distance": 0,
-          "missileMode": 0,
-          "cancelIfBelowFall": true,
-          "type": "JUMP_TARGET_MOVEMENT"
+          "min": 0,
+          "max": 32,
+          "maxTime": 0.15,
+          "forceTime": true,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
         },
         {
           "group": "pre",
@@ -7426,12 +7422,15 @@
           "attack": {
             "type": "MASSIVE",
             "element": "NEUTRAL",
-            "damageFactor": 1,
+            "damageFactor": 1.5,
             "fly": "HEAVY",
             "reverse": false,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
-            "limiter": ""
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
           },
           "offset": {
             "x": 0,
@@ -19971,7 +19970,7 @@
                               }
                             },
                             {
-                              "time": 0.4,
+                              "time": 0.2,
                               "type": "WAIT"
                             },
                             {
@@ -20006,7 +20005,7 @@
                               }
                             },
                             {
-                              "time": 0.2,
+                              "time": 0.4,
                               "type": "WAIT"
                             },
                             {
@@ -20138,7 +20137,7 @@
                               "repeat": false,
                               "uniformHitDir": false,
                               "fixPos": false,
-                              "checkCollision": false,
+                              "checkCollision": true,
                               "type": "CIRCLE_ATTACK",
                               "attack": {
                                 "type": "MASSIVE",
@@ -20149,10 +20148,7 @@
                                 "status": 1,
                                 "guardable": "",
                                 "skillBonus": "MELEE_DMG",
-                                "limiter": "",
-                                "hints": [
-                                  "NO_PUZZLE"
-                                ]
+                                "limiter": ""
                               },
                               "offset": {
                                 "x": 0,
@@ -20220,7 +20216,7 @@
                               "align": "BOTTOM",
                               "centralAngle": 0.4,
                               "angleVary": 0,
-                              "startDist": 24,
+                              "startDist": 12,
                               "startDistCollide": "CLOSER",
                               "random": true,
                               "duration": 0.6,
@@ -20313,10 +20309,7 @@
                                 "status": 0.5,
                                 "guardable": "",
                                 "skillBonus": "MELEE_DMG",
-                                "stunSteps": [],
-                                "hints": [
-                                  "NO_PUZZLE"
-                                ]
+                                "stunSteps": []
                               },
                               "offset": {
                                 "x": 0,
@@ -20464,7 +20457,7 @@
                               "repeat": false,
                               "uniformHitDir": false,
                               "fixPos": false,
-                              "checkCollision": false,
+                              "checkCollision": true,
                               "type": "CIRCLE_ATTACK",
                               "attack": {
                                 "type": "MEDIUM",
@@ -20476,10 +20469,7 @@
                                 "status": 0.6,
                                 "guardable": "",
                                 "skillBonus": "MELEE_DMG",
-                                "stunSteps": [],
-                                "hints": [
-                                  "NO_PUZZLE"
-                                ]
+                                "stunSteps": []
                               },
                               "offset": {
                                 "x": 0,
@@ -20531,7 +20521,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.neutral",
-            "name": "proximityCharge"
+            "name": "proximityChargeTri"
           },
           "offset": {
             "x": 0,
@@ -20923,7 +20913,10 @@
               }
             ],
             "guardable": "",
-            "skillBonus": "MELEE_DMG"
+            "skillBonus": "MELEE_DMG",
+            "hints": [
+              "NO_PUZZLE"
+            ]
           },
           "offset": {
             "x": 0,
@@ -28403,8 +28396,8 @@
         "description": {
           "en_US": "Throw a heavy spike ball that pierces enemies and bounces off walls."
         },
-        "dmgType": "",
-        "stunType": "",
+        "dmgType": "RANGED",
+        "stunType": "INTERRUPT",
         "status": false,
         "steps": [
           {
@@ -28451,7 +28444,7 @@
         "description": {
           "en_US": "Throw out a volley of shards that home in on an enemy. More accurate at long range."
         },
-        "dmgType": "",
+        "dmgType": "RANGED",
         "stunType": "",
         "status": false,
         "steps": [
@@ -28614,6 +28607,9 @@
         "description": {
           "en_US": "A powerful shot that explodes on contact, doing collateral damage."
         },
+        "dmgType": "RANGED",
+        "stunType": "INTERRUPT",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -28820,6 +28816,9 @@
         "description": {
           "en_US": "Throw three handfuls of powerful knives. More accurate at close range."
         },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -29463,6 +29462,9 @@
           "langUid": 85,
           "zh_TW": "對單個敵人的強大攻擊。"
         },
+        "dmgType": "MELEE",
+        "stunType": "LOCK",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -29628,7 +29630,7 @@
           "en_US": "A controllable dash through the shadows. Enemies on your path will be struck with a delayed strike."
         },
         "dmgType": "MELEE",
-        "stunType": "INTERRUPT",
+        "stunType": "LOCK",
         "status": false,
         "steps": [
           {
@@ -29990,7 +29992,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "LOCK",
-        "status": true,
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -30230,7 +30232,7 @@
                 "repeat": false,
                 "uniformHitDir": false,
                 "fixPos": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
                   "type": "MASSIVE",
@@ -30397,6 +30399,9 @@
                   "guardable": "",
                   "skillBonus": "MELEE_DMG",
                   "hitInvincible": true,
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
                   "stunSteps": [
                     {
                       "value": 0,
@@ -30532,7 +30537,7 @@
                   "reverse": false,
                   "spFactor": 0,
                   "guardable": "",
-                  "skillBonus": "RANGED_DMG",
+                  "skillBonus": "MELEE_DMG",
                   "stunSteps": [
                     {
                       "type": "END_LOCK"
@@ -30656,7 +30661,7 @@
         "description": {
           "en_US": "Surrounds you with a spinning blade that damages enemies that get too close. Increase of \\c[3]+30%\\c[0] Defense while active."
         },
-        "dmgType": "RANGED",
+        "dmgType": "MELEE",
         "stunType": "",
         "status": false,
         "steps": [
@@ -30706,9 +30711,9 @@
           "en_US": "Deploy Shields"
         },
         "description": {
-          "en_US": "Places temporary static and orbiting shields to block weak projectiles. Also increases your defense by \\c[3]+50%\\c[0] while active."
+          "en_US": "Places temporary shields to block weak projectiles. Also increases your defense by \\c[3]+50%\\c[0] while active."
         },
-        "dmgType": "RANGED",
+        "dmgType": "NONE",
         "stunType": "",
         "status": false,
         "steps": [
@@ -30814,8 +30819,8 @@
         "description": {
           "en_US": "Perfect guard an attack and counter with a laser barrage fired from orbit."
         },
-        "dmgType": "MELEE",
-        "stunType": "INTERRUPT",
+        "dmgType": "MIXED",
+        "stunType": "LOCK",
         "status": false,
         "steps": [
           {
@@ -31030,7 +31035,7 @@
               {
                 "align": "BOTTOM",
                 "centralAngle": 1,
-                "angleVary": 0.25,
+                "angleVary": 0,
                 "startDist": 100,
                 "startDistCollide": "CLOSER",
                 "random": true,
@@ -31042,17 +31047,17 @@
                 "delay": 0,
                 "repeat": false,
                 "posEntity": "TARGET",
-                "count": 5,
+                "count": 6,
                 "type": "SHOOT_PROXY_RANGE",
-                "proxy": "giantAssLaser",
+                "proxy": "neutralLaser",
                 "offset": {
                   "x": 0,
                   "y": 0,
-                  "z": 600
+                  "z": 0
                 }
               },
               {
-                "time": 2.2,
+                "time": 1.5,
                 "type": "WAIT"
               },
               {
@@ -31279,7 +31284,7 @@
                 "flipLeftFace": 0,
                 "rectangular": false,
                 "uniformHitDir": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "repeat": false,
                 "fixPos": false,
                 "attack": {
@@ -31343,6 +31348,9 @@
         "description": {
           "en_US": "A powerful spinning strike that can hit multiple targets in an area."
         },
+        "dmgType": "MELEE",
+        "stunType": "",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -31407,7 +31415,7 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "MASSIVE",
@@ -31500,6 +31508,9 @@
         "description": {
           "en_US": "Take a gamble and roll a number from 1 to 9 for different attack results."
         },
+        "dmgType": "MIXED",
+        "stunType": "",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -31584,7 +31595,7 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "HEAVY",
@@ -31760,6 +31771,9 @@
         "description": {
           "en_US": "A massive swing that sends all enemies in front of you flying."
         },
+        "dmgType": "MELEE",
+        "stunType": "INTERRUPT",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -31823,13 +31837,13 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "MASSIVE",
               "fly": "MASSIVE+",
               "element": "NEUTRAL",
-              "damageFactor": 8,
+              "damageFactor": 9,
               "spFactor": 0,
               "reverse": false,
               "guardable": "",
@@ -31914,10 +31928,6 @@
             "type": "MOVE_TO_DIR"
           },
           {
-            "baseStrength": 2,
-            "type": "SPAWN_ASSAULT"
-          },
-          {
             "time": 0.65,
             "type": "WAIT"
           },
@@ -31941,6 +31951,9 @@
         "description": {
           "en_US": "Fling out bits of shrapnel from your sword that damage enemies."
         },
+        "dmgType": "MELEE",
+        "stunType": "",
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -32139,7 +32152,7 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "HEAVY",
@@ -35416,7 +35429,7 @@
       },
       "GUARD_SPECIAL1_B": {
         "name": {
-          "en_US": "Burning Sacrifice"
+          "en_US": "\\c[1]Burning Sacrifice\\c[0]"
         },
         "description": {
           "en_US": "Sacrifice \\c[1]-25%\\c[0] of your HP and increase your ATK by \\c[2]+15%\\c[0] for a moderate period. Can be stacked at your own risk."
@@ -43399,7 +43412,7 @@
       },
       "GUARD_SPECIAL2_B": {
         "name": {
-          "en_US": "Stasis Stance"
+          "en_US": "\\c[2]Stasis Stance\\c[0]"
         },
         "description": {
           "en_US": "Quickly encase yourself in ice for longer, negating even more damage and healing \\c[2]+25%\\c[0] of your maximum HP while frozen."
@@ -44123,7 +44136,7 @@
       },
       "GUARD_SPECIAL3_B": {
         "name": {
-          "en_US": "Tower of Tranquility"
+          "en_US": "\\c[2]Tower of Tranquility\\c[0]"
         },
         "description": {
           "en_US": "Construct a towering ice platform and freeze yourself to heal \\c[2]+40%\\c[0] of your HP and cure status effects while effects out of enemy reach."
@@ -52823,7 +52836,7 @@
       },
       "THROW_SPECIAL1_B": {
         "name": {
-          "en_US": "Vitality Curse"
+          "en_US": "\\c[2]Vitality Curse\\c[0]"
         },
         "description": {
           "en_US": "Hit an enemy with a curse that absorbs HP over time."
@@ -52961,7 +52974,7 @@
       },
       "THROW_SPECIAL2_B": {
         "name": {
-          "en_US": "Vitality Spring"
+          "en_US": "\\c[2]Vitality Spring\\c[0]"
         },
         "description": {
           "en_US": "Throw a projectile that will create a lingering zone that absorbs HP from all enemies within."
@@ -53450,7 +53463,7 @@
       },
       "GUARD_SPECIAL1_B": {
         "name": {
-          "en_US": "Pain Buckler"
+          "en_US": "\\c[2]Pain Buckler\\c[0]"
         },
         "description": {
           "en_US": "Block frontal attacks and recover some of the blocked damage for a short time."
@@ -54067,7 +54080,7 @@
       },
       "GUARD_SPECIAL2_B": {
         "name": {
-          "en_US": "Essence Enchantment"
+          "en_US": "\\c[2]Essence Enchantment\\c[0]"
         },
         "description": {
           "en_US": "Empower your sword with a healing essence, causing all standard attacks to emit healing projectiles for a time."

@@ -1416,7 +1416,7 @@
             "damageFactor": 0.3,
             "spFactor": 0,
             "guardable": "",
-            "skillBonus": "RANGED_DMG"
+            "skillBonus": "MELEE_DMG"
           },
           "offset": {
             "x": 0,
@@ -6603,7 +6603,7 @@
       },
       "type": "BALL"
     },
-    "giantAssLaser": {
+    "neutralLaser": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -6637,7 +6637,7 @@
           }
         },
         {
-          "value": 80,
+          "value": 220,
           "type": "SET_SPEED"
         },
         {
@@ -6667,7 +6667,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "enemies.designer",
-            "name": "celestLaser"
+            "name": "celestLaserBarrage"
           },
           "offset": {
             "x": 0,
@@ -6718,16 +6718,12 @@
           }
         },
         {
-          "value": -1500,
-          "type": "SET_Z_VEL"
-        },
-        {
-          "stopType": "LANDED",
-          "stopBeforeTime": 0,
-          "distance": 0,
-          "missileMode": 0,
-          "cancelIfBelowFall": true,
-          "type": "JUMP_TARGET_MOVEMENT"
+          "min": 0,
+          "max": 32,
+          "maxTime": 0.15,
+          "forceTime": true,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
         },
         {
           "group": "pre",
@@ -6760,12 +6756,15 @@
           "attack": {
             "type": "MASSIVE",
             "element": "NEUTRAL",
-            "damageFactor": 1,
+            "damageFactor": 1.5,
             "fly": "HEAVY",
             "reverse": false,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
-            "limiter": ""
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
           },
           "offset": {
             "x": 0,
@@ -16546,7 +16545,7 @@
         "repeat": false,
         "uniformHitDir": false,
         "fixPos": false,
-        "checkCollision": false,
+        "checkCollision": true,
         "type": "CIRCLE_ATTACK",
         "attack": {
           "type": "MASSIVE",
@@ -16713,13 +16712,13 @@
         "repeat": false,
         "uniformHitDir": false,
         "fixPos": false,
-        "checkCollision": false,
+        "checkCollision": true,
         "type": "CIRCLE_ATTACK",
         "attack": {
           "type": "MASSIVE",
           "fly": "MASSIVE+",
           "element": "NEUTRAL",
-          "damageFactor": 8,
+          "damageFactor": 9,
           "spFactor": 0,
           "reverse": false,
           "guardable": "",
@@ -16799,10 +16798,6 @@
         "time": 0.1,
         "stopBeforeEdge": true,
         "type": "MOVE_FORWARD"
-      },
-      {
-        "baseStrength": 2,
-        "type": "SPAWN_ASSAULT"
       },
       {
         "time": 0.65,
@@ -17223,7 +17218,7 @@
           {
             "align": "BOTTOM",
             "centralAngle": 1,
-            "angleVary": 0.25,
+            "angleVary": 0,
             "startDist": 100,
             "startDistCollide": "CLOSER",
             "random": true,
@@ -17235,17 +17230,17 @@
             "delay": 0,
             "repeat": false,
             "posEntity": "TARGET",
-            "count": 5,
+            "count": 6,
             "type": "SHOOT_PROXY_RANGE",
-            "proxy": "giantAssLaser",
+            "proxy": "neutralLaser",
             "offset": {
               "x": 0,
               "y": 0,
-              "z": 600
+              "z": 0
             }
           },
           {
-            "time": 2.2,
+            "time": 1.5,
             "type": "WAIT"
           },
           {

@@ -29,17 +29,17 @@
       {
         "rumbleType": "RANDOM",
         "power": "STRONGER",
-        "speed": "FASTEST",
+        "speed": "FAST",
         "duration": 0.5,
         "fade": true,
         "type": "RUMBLE"
       },
       {
-        "size": "XXXXL",
+        "size": "XXXL",
         "fadeIn": 0,
         "fadeOut": 0.1,
         "duration": -1,
-        "glow": true,
+        "glow": false,
         "type": "LIGHT"
       },
       {
@@ -54,7 +54,7 @@
           "z": 32
         },
         "pAlpha": {
-          "init": 1,
+          "init": 0.7,
           "start": {
             "value": 0,
             "spline": ""
@@ -96,8 +96,8 @@
         },
         "pScale": {
           "init": {
-            "x": 1,
-            "y": 1
+            "x": 0.8,
+            "y": 0.8
           },
           "end": {
             "value": {
@@ -153,6 +153,120 @@
       },
       {
         "type": "LOOP_END"
+      }
+    ],
+    "celestLaserBarrage": [
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "variance": 0.05,
+        "sound": "media/sound/designer/designer-celest.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "patternYCount": 1,
+        "animFrames": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "frameTime": 0.05,
+        "shiftSpeed": 500,
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.15,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 1
+            },
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "pattern": {
+          "src": "media/entity/effects/neutral.png",
+          "xCount": 3,
+          "offX": 320,
+          "offY": 0,
+          "width": 32,
+          "height": 48
+        },
+        "type": "LASER_SPRITE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 1
+            },
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "LASER_END",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "type": "STOP_SOUNDS"
       }
     ]
   }

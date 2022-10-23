@@ -118,6 +118,20 @@ ig.module("impact.feature.bgm.bgm-xtm")
         introEnd: 15.980,
         loopEnd: 57.542, 
         volume: 1.0
+      },
+      meatboySalt: {
+        path: "media/bgm/meatboy-salt.ogg",
+        loopEnd: 82.521,
+        volume: 1.0,
+        introPath: "media/bgm/meatboy-salt-i.ogg",
+        introEnd: 7.716
+      },
+      meatboyRapture: {
+        path: "media/bgm/meatboy-rapture.ogg",
+        loopEnd: 84.410,
+        volume: 1.0,
+        introPath: "media/bgm/meatboy-rapture-i.ogg",
+        introEnd: 3.512
       }
     });
 

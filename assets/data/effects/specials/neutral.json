@@ -301,6 +301,27 @@
           8,
           9
         ]
+      },
+      {
+        "name": "SHOCKWAVE_BIG_TRIANGLE",
+        "pivot": {
+          "x": 48,
+          "y": 49
+        },
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 96,
+          "height": 80
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 1,
+        "repeat": true,
+        "frames": [
+          0
+        ]
       }
     ]
   },
@@ -3655,6 +3676,124 @@
         "moveWithTarget": 1,
         "anim": "EXPLOSION_3",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+"proximityChargeTri": [
+      {
+        "color": "white",
+        "maxAlpha": 0.7,
+        "minAlpha": 0.2,
+        "blinkDuration": 0.15,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": true,
+        "speed": 0.7,
+        "sound": "media/sound/battle/enemies/charge-loop.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.6,
+            "y": 1.6
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.7,
+        "anim": "SHOCKWAVE_BIG",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.6,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 2,
+            "y": 2
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.45,
+        "angleVary": 1,
+        "anim": "SHOCKWAVE_BIG_TRIANGLE",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "color": "#999999",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            },
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

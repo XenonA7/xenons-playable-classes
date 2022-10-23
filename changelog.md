@@ -1,3 +1,45 @@
+0.6.0 (10/23/2022)
+### New Content
+- Added some various Triblader2 party dialogue
+### Changes
+- All healing combat arts now have their names in green text
+- All self-damaging combat arts (Burning Sacrifice) now use red text
+- Changed BGM for Blade Rink
+- Minor text speed edit to Blade Rink first-time cutscene
+- Reformatted some Triblader2 party dialogue event steps
+- Modified visual effect for Wild Gambit roll 4
+- Wild Gambit roll 4 reduced volume on charging sound
+- Wild Gambit roll 7 proxy waveAbsorbBall startDist reduced
+- Removed assault proxies from Heavy Slash
+- Blade Aura changed from RANGED_DMG to MELEE_DMG
+- Laser Barrage executes faster now
+### Fixes
+- Neutral art skillBonus corrections
+- Fixed missing stunType, dmgType, and status descriptions for all neutral arts
+- Fixed Laser Barrage bug with laser particle effect lingering on enemies
+- Laser Barrage now works properly against walls, fences, and corners
+- Added the attribute "checkCollision" for the following (fixes ability to hit through walls):
+   - Wirbelschlitzer attack hitbox
+   - Wild Gambit basic melee hitbox
+   - Wild Gambit roll 6 melee attack
+   - Wild Gambit roll 8 melee attack
+   - Heavy Slash attack hitbox
+   - Shrapnel Field spin attack
+   - Sky Shredder initial combo starter swing
+   - Laser Barrage final strike
+- Puzzle elements can now interact with:
+   - Wild Gambit roll 6 melee attack
+   - Wild Gambit roll 7 melee attack
+   - Wild Gambit roll 8 melee attack
+- Puzzle elements no longer interact with:
+   - Gleaming Surge delayed hits on enemies
+   - Sky Shredder falling spin attack
+   - Laser Barrage lasers
+### Balance
+- Heavy Slash damage increased 12%
+- Laser Barrage individual laser damage increased 50%
+- Laser Barrage total lasers changed from 5 to 6
+
 0.5.2 (09/25/2022)
 ### Fixes
 - Fixed cutscene sound effect positioning in all 5 XTM arena maps

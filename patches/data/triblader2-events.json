@@ -186,12 +186,6 @@
           }
         ]
       },
-      
-
-
-
-
-
       {
         "message": {
           "en_US": "Hi!"
@@ -204,10 +198,7 @@
         }
       },
       {
-        "type": "IF",
-        "withElse": true,
-        "condition": "party.size == 3",
-        "thenStep": [
+        "0": [
           {
             "person": {
               "person": "triblader.triblader2",
@@ -219,7 +210,19 @@
             "type": "SHOW_MSG"
           }
         ],
-        "elseStep": [
+        "1": [
+          {
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Wow, Lea! You've already amassed a huge party. Still want me to join?"
+            },
+            "type": "SHOW_MSG"
+          }
+        ],
+        "2": [
           {
             "person": {
               "person": "triblader.triblader2",
@@ -230,6 +233,12 @@
             },
             "type": "SHOW_MSG"
           }
+        ],
+        "type": "SELECT_FIRST",
+        "options": [
+          "party.size == 3",
+          "party.size > 3",
+          "party.size < 3"
         ]
       },
       {
@@ -305,7 +314,6 @@
           }
         ]
       },
-
       {
         "name": "end",
         "type": "LABEL"
@@ -322,15 +330,6 @@
       "type": "SOCIAL_ACTION"
     }
   },
-
-
-
-
-
-
-
-
-
   "triblader2-join": {
     "frequency": "ALWAYS",
     "repeat": "REPEAT",
@@ -364,9 +363,6 @@
           "expression": "DEFAULT"
         }
       },
-
-
-
       {
         "type": "SELECT_RANDOM",
         "options": [
@@ -379,7 +375,7 @@
         "0_0": [
           {
             "message": {
-              "en_US": "Need a sword by your side? I'll be right there!"
+              "en_US": "Need another sword by your side? I'll be right there!"
             },
             "autoContinue": false,
             "type": "SHOW_MSG",
@@ -541,252 +537,1648 @@
       "type": "SOCIAL_ACTION"
     }
   },
-
-
-
-
-
   "triblader2-dies": {
-      "frequency": "REGULAR",
-      "repeat": "REPEAT",
-      "eventType": "PARALLEL",
-      "overrideSideMessage": false,
-      "event": [
-        {
-          "type": "SELECT_RANDOM",
-          "options": [
-            {
-              "0": " ",
-              "count": 3,
-              "weight": 1,
-              "activeCondition": "combat.active"
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1,
+            "activeCondition": "combat.active"
+          },
+          {
+            "0": " ",
+            "count": 2,
+            "weight": 1,
+            "activeCondition": "!combat.active"
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Hang in there! I'll be back when I respawn."
             },
-            {
-              "0": " ",
-              "count": 2,
-              "weight": 1,
-              "activeCondition": "!combat.active"
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
             }
-          ],
-          "0_0": [
-            {
-              "message": {
-                "en_US": "Hang in there! I'll be back when I respawn."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "0_1": [
-            {
-              "message": {
-                "en_US": "They got me. I'll be back soon."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "0_2": [
-            {
-              "message": {
-                "en_US": "Aw, I missed my dodge! I'm out."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "1_0": [
-            {
-              "message": {
-                "en_US": "Um... how did I just die?"
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "1_1": [
-            {
-              "message": {
-                "en_US": "Sometimes I wonder why I choose to follow you."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ]
-        }
-      ],
-      "loopCount": 1,
-      "type": {
-        "member": "triblader2",
-        "eventType": "DIES",
-        "type": "PARTY_MEMBER_EVENT"
-      }
-    },
-    "triblader2-revived": {
-      "frequency": "REGULAR",
-      "repeat": "REPEAT",
-      "eventType": "PARALLEL",
-      "overrideSideMessage": false,
-      "event": [
-        {
-          "type": "SELECT_RANDOM",
-          "options": [
-            {
-              "0": " ",
-              "count": 2,
-              "weight": 1,
-              "activeCondition": "combat.active"
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "They got me. I'll be back soon."
             },
-            {
-              "0": " ",
-              "count": 2,
-              "weight": 1,
-              "activeCondition": "!combat.active"
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
             }
-          ],
-          "0_0": [
-            {
-              "message": {
-                "en_US": "Still going? Let's finish this!"
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Aw, I missed my dodge! I'm out."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
             }
-          ],
-          "0_1": [
-            {
-              "message": {
-                "en_US": "Backup has arrived again!"
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
+          }
+        ],
+        "1_0": [
+          {
+            "message": {
+              "en_US": "Um... how did I just die?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
             }
-          ],
-          "1_0": [
-            {
-              "message": {
-                "en_US": "That didn't go too well for me."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
+          }
+        ],
+        "1_1": [
+          {
+            "message": {
+              "en_US": "Sometimes I wonder why I choose to follow you."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
             }
-          ],
-          "1_1": [
-            {
-              "message": {
-                "en_US": "I might need to get some better gear after what just happened."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ]
-        }
-      ],
-      "loopCount": 1,
-      "type": {
-        "member": "triblader2",
-        "eventType": "REVIVED",
-        "type": "PARTY_MEMBER_EVENT"
+          }
+        ]
       }
-    },
-    "triblader2-equip-update": {
-      "frequency": "REGULAR",
-      "repeat": "REPEAT",
-      "eventType": "PARALLEL",
-      "overrideSideMessage": false,
-      "event": [
-        {
-          "type": "SELECT_RANDOM",
-          "options": [
-            {
-              "0": " ",
-              "count": 4,
-              "weight": 1
-            }
-          ],
-          "0_0": [
-            {
-              "message": {
-                "en_US": "Just got a new sword that is supposed to be more triangular than the last one. Let's hope that's true."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "0_1": [
-            {
-              "message": {
-                "en_US": "I just purchased some armor upgrades and consumables, this will help."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "0_2": [
-            {
-              "message": {
-                "en_US": "Another new sword! This one has a nicer icon than the last, it's a shame they all look the same in-game."
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ],
-          "0_3": [
-            {
-              "message": {
-                "en_US": "I just freshly stocked up on consumables, there goes all my credits!"
-              },
-              "type": "SHOW_SIDE_MSG",
-              "person": {
-                "person": "triblader.triblader2",
-                "expression": "DEFAULT"
-              }
-            }
-          ]
-        }
-      ],
-      "loopCount": 1,
-      "type": {
-        "member": "triblader2",
-        "eventType": "EQUIP_UPDATE",
-        "actionType": "PARTY_JOIN",
-        "type": "PARTY_MEMBER_EVENT"
-      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "triblader2",
+      "eventType": "DIES",
+      "type": "PARTY_MEMBER_EVENT"
     }
+  },
+  "triblader2-revived": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 2,
+            "weight": 1,
+            "activeCondition": "combat.active"
+          },
+          {
+            "0": " ",
+            "count": 2,
+            "weight": 1,
+            "activeCondition": "!combat.active"
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Still going? Let's finish this!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Backup has arrived again!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_0": [
+          {
+            "message": {
+              "en_US": "That didn't go too well for me."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_1": [
+          {
+            "message": {
+              "en_US": "I might need to get some better gear after what just happened."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "triblader2",
+      "eventType": "REVIVED",
+      "type": "PARTY_MEMBER_EVENT"
+    }
+  },
+  "triblader2-equip-update": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 4,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "The description says this new sword that is supposed to be more 'triangular' than my last one. Let's hope that's true."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "type": "SELECT_RANDOM",
+            "options": [
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Glasses"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Apollo"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Shizuka"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Schneider"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Luke"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.size == 2"
+              }
+            ],
+            "0_0": [
+              {
+                "message": {
+                  "en_US": "Is that really a stat value on Triblader gear?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.glasses",
+                  "expression": "LAUGH"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "No, although it should be."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              }
+            ],
+            "1_0": [
+              {
+                "message": {
+                  "en_US": "Such crude instruments of justice."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "antagonists.fancyguy",
+                  "expression": "MOPING"
+                }
+              }
+            ],
+            "2_0": [
+              {
+                "message": {
+                  "en_US": "Whichever dev wrote that description should be fired."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.shizuka",
+                  "expression": "SARCASTIC"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "SMILE"
+                }
+              }
+            ],
+            "3_0": [
+              {
+                "message": {
+                  "en_US": "Ja! I remember using that one when I was a lower level. My current sword is even more triangular."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "UP"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Really? Where did you get that?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "I don't even remember at this point."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "WONDERING"
+                }
+              }
+            ],
+            "4_0": [
+              {
+                "message": {
+                  "en_US": "I've got that one too! That's why we're the best class."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "WINK"
+                }
+              }
+            ],
+            "5_0": [
+              {
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "ANNOYED"
+                }
+              }
+            ]
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Juse bought over a dozen sandwiches. It's a good they don't spoil like in real life."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Another new sword! This one has a nicer icon than the last, it's a shame they all look the same in-game."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "I just freshly stocked up on consumables, there goes all my credits!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "triblader2",
+      "eventType": "EQUIP_UPDATE",
+      "actionType": "PARTY_JOIN",
+      "type": "PARTY_MEMBER_EVENT"
+    }
+  },
+  "triblader2-passive": {
+    "frequency": "RARE",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 4,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Ugh, these enemies can be annoying sometimes."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Looks like these guys want a fight!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "These guys want a fight? We'll give them one!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "Ugh..."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "type": "ENEMY_ATTACKS",
+      "playerStarted": false,
+      "battleStarted": true
+    }
+  },
+  "triblader2-overpowered-active": {
+    "frequency": "SOMETIMES",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "name": "end",
+        "type": "GOTO_LABEL"
+      },
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "These guys look pretty tough!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Um, we might be a bit underleveled for this."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "This fight might not go so well.."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "end",
+        "type": "LABEL"
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "levelGapAbove": 7,
+      "battleStarted": true,
+      "playerStarted": true,
+      "type": "ENEMY_ATTACKS"
+    }
+  },
+  "triblader2-underpowered-active": {
+    "frequency": "RARE",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "name": "end",
+        "type": "GOTO_LABEL"
+      },
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 5,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "These enemies look extremely weak..."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Don't you think we are quite overleveled for this?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Nothing like slaughtering early-game enemies."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "Are you grinding for materials again? I guess I can help."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_4": [
+          {
+            "message": {
+              "en_US": "Well at least these weak enemies won't be much of a threat."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "end",
+        "type": "LABEL"
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "levelGapBelow": -15,
+      "battleStarted": true,
+      "playerStarted": true,
+      "type": "ENEMY_ATTACKS"
+    }
+  },
+  "triblader2-active": {
+    "frequency": "RARE",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 5,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Time to put these enemies to the sword!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Let's take care of this."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "More enemies? Nothing a Triblader can't handle!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "I'll deal with these guys."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_4": [
+          {
+            "message": {
+              "en_US": "Here we go!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "type": "ENEMY_ATTACKS",
+      "battleStarted": true,
+      "playerStarted": true
+    }
+  },
+  "triblader2-aggro": {
+    "frequency": "RARE",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 7,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "We aggroed more enemies, be careful!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Even more enemies! Hang in there!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "More enemies showed up! Stay sharp!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "They just keep coming, don't they?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_4": [
+          {
+            "message": {
+              "en_US": "I'll take on the new enemies."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_5": [
+          {
+            "message": {
+              "en_US": "Where do you keep finding all these guys?!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "WHISTLING"
+            }
+          }
+        ],
+        "0_6": [
+          {
+            "message": {
+              "en_US": "We've got some more over here!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "type": "ENEMY_ATTACKS",
+      "battleStarted": false
+    }
+  },
+  "triblader2-cooldown-A": {
+    "frequency": "SOMETIMES",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 4,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Wow, you just keep on going! Let's do this!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "...What have I gotten myself into?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "type": "SELECT_RANDOM",
+            "options": [
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Emilie"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Glasses"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Apollo"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Joern"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Shizuka"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Schneider"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Luke"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.size == 2"
+              }
+            ],
+            "0_0": [
+              {
+                "message": {
+                  "en_US": "Oh we're just getting started!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.emilie",
+                  "expression": "CULTURE"
+                }
+              }
+            ],
+            "1_0": [
+              {
+                "message": {
+                  "en_US": "It seems like Lea needs to grind for item drops again."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.glasses",
+                  "expression": "EMBARRASSED"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Lea."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DETERMINED"
+                }
+              }
+            ],
+            "2_0": [
+              {
+                "message": {
+                  "en_US": "Try to keep up, Triblader!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "antagonists.fancyguy",
+                  "expression": "LECTURING"
+                }
+              }
+            ],
+            "3_0": [
+              {
+                "message": {
+                  "en_US": "Lea can get a bit..\\! carried away sometimes."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "antagonists.sidekick",
+                  "expression": "TOWARD"
+                }
+              }
+            ],
+            "4_0": [
+              {
+                "message": {
+                  "en_US": "Come on! Let's go all the way to max rank!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.shizuka",
+                  "expression": "BADASS"
+                }
+              }
+            ],
+            "5_0": [
+              {
+                "message": {
+                  "en_US": "The battle only gets more heated from here!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "EYES_CLOSED"
+                }
+              }
+            ],
+            "6_0": [
+              {
+                "message": {
+                  "en_US": "Think you can keep up?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "SKEPTICAL"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Is this how long you guys normally spend battling?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              }
+            ],
+            "7_0": [
+              {
+                "message": {
+                  "en_US": "Lea!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "PROUD"
+                }
+              }
+            ]
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Let's not let the battle get too out of control, right?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "How far are we going to take this?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "killCount": 0,
+      "rankReached": "A",
+      "type": "COOLDOWN_START"
+    }
+  },
+  "triblader2-cooldown-S": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 4,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "type": "SELECT_RANDOM",
+            "options": [
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Emilie"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Glasses"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Apollo"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Joern"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Shizuka"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Schneider"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.alive.Luke"
+              },
+              {
+                "0": " ",
+                "count": 1,
+                "weight": 1,
+                "activeCondition": "party.size == 2"
+              }
+            ],
+            "0_0": [
+              {
+                "message": {
+                  "en_US": "Mon dieu! It's getting crazy now!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.emilie",
+                  "expression": "SWEATY_SMILE"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Do you guys always fight this much?!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Yep!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.emilie",
+                  "expression": "SMILE"
+                }
+              }
+            ],
+            "1_0": [
+              {
+                "message": {
+                  "en_US": "So, umm..\\. Is this going to go on forever?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "You get used to it when playing with Lea."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.glasses",
+                  "expression": "SMUG"
+                }
+              }
+            ],
+            "2_0": [
+              {
+                "message": {
+                  "en_US": "Are we planning to stop any time soon?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "We shall not rest until justice has been served!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "antagonists.fancyguy",
+                  "expression": "POINTING"
+                }
+              }
+            ],
+            "3_0": [
+              {
+                "message": {
+                  "en_US": "Are you crazy? Save some enemies for the rest of the server!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Lea does this sometimes.\\. You get used to it."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "antagonists.sidekick",
+                  "expression": "SMILE"
+                }
+              }
+            ],
+            "4_0": [
+              {
+                "message": {
+                  "en_US": "Now the real grind begins!\\. Let's go, Lea!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.shizuka",
+                  "expression": "BADASS"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Keeping up with you two is harder than you think."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              }
+            ],
+            "5_0": [
+              {
+                "message": {
+                  "en_US": "Gyahahaha!\\. Max rank again, Lea!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "EYES_CLOSED"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "You guys fight to max rank often?"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "[nods]"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "NOD"
+                }
+              }
+            ],
+            "6_0": [
+              {
+                "message": {
+                  "en_US": "This is really starting to get crazy now!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "LAUGH"
+                }
+              },
+              {
+                "type": "IF",
+                "condition": "plot.xtm.character==2 || plot.xtm.character==3 || plot.xtm.character==4 || plot.xtm.character==5 || plot.xtm.character==6 || plot.xtm.character==7",
+                "withElse": true,
+                "thenStep": [
+                  {
+                    "message": {
+                      "en_US": "Us three Tribladers should handle it with ease!\\. This is called the Triangle Strategy, it's the best party composition!"
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                      "person": "triblader.triblader2",
+                      "expression": "DEFAULT"
+                    }
+                  },
+                  {
+                    "message": {
+                      "en_US": "Three Tribladers? \\. You know Lea is a Spheromancer, right?"
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                      "person": "main.luke",
+                      "expression": "SKEPTICAL"
+                    }
+                  },
+                  {
+                    "message": {
+                      "en_US": "Oh that's weird, I thought her profile said her class is Triblader.\\. It must be a glitch."
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                      "person": "triblader.triblader2",
+                      "expression": "DEFAULT"
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "message": {
+                      "en_US": "No kidding! How do you keep up with her?"
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                      "person": "triblader.triblader2",
+                      "expression": "DEFAULT"
+                    }
+                  },
+                  {
+                    "message": {
+                      "en_US": "I'm honestly not sure how I do it."
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                      "person": "main.luke",
+                      "expression": "UP"
+                    }
+                  }
+                ]
+              }
+            ],
+            "7_0": [
+              {
+                "message": {
+                  "en_US": "There's no way the two of us can handle all this, Lea!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "Lea!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "EXCITED"
+                }
+              }
+            ]
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "You reeeally need to grind, don't you?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "We've come too far to fail now!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "Lea! Are you just going to keep on going?!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "killCount": 0,
+      "rankReached": "S",
+      "type": "COOLDOWN_START"
+    }
+  },
+  "triblader2-battle-over-S": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 5,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "I thought that would never end."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "I have so many materials after that grind.\\. Let's head to a shop soon."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "You really like fighting, don't you?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_3": [
+          {
+            "message": {
+              "en_US": "This dull old blade can barely cut butter after all that."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_4": [
+          {
+            "message": {
+              "en_US": "If this was realistic, those enemies should be long extinct by now, sheesh."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "killCount": 0,
+      "rank": "S",
+      "type": "BATTLE_OVER"
+    }
+  },
+  "triblader2-turtle-end": {
+    "frequency": "REGULAR",
+    "repeat": "ONCE",
+    "condition": "party.alive.triblader2",
+    "eventType": "PARALLEL",
+    "runOnTrigger": [
+      1,
+      2
+    ],
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "call.runCount == 1",
+        "thenStep": [
+          {
+            "message": {
+              "en_US": "Oh hey, look! The turtles have tridents! That's a cool weapon."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "call.runCount == 2",
+        "thenStep": [
+          {
+            "message": {
+              "en_US": "Hey you know what? Why don't Tribladers get any trident attacks? That would make perfect sense!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "0": [
+              {
+                "message": {
+                  "en_US": "Yeah! With three pointy triangles on the tip!"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "EYES_CLOSED"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "It would have been a perfect fit for our class. Talk about a missed opportunity."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              }
+            ],
+            "1": [
+              {
+                "message": {
+                  "en_US": "A trident would be more fitting than the Daybreak spear we currently have."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "SKEPTICAL"
+                }
+              },
+              {
+                "message": {
+                  "en_US": "You're right! Seems like a missed opportunity."
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "triblader.triblader2",
+                  "expression": "DEFAULT"
+                }
+              }
+            ],
+            "2": [
+              {
+                "message": {
+                  "en_US": "[nods]"
+                },
+                "type": "SHOW_SIDE_MSG",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "NOD"
+                }
+              }
+            ],
+            "type": "SELECT_FIRST",
+            "options": [
+              "party.alive.Luke",
+              "party.alive.Schneider",
+              "party.size == 2"
+            ]
+          }
+        ]
+      }
+    ],
+    "loopCount": 3,
+    "type": {
+      "enemies": [
+        "beach.turtle-man"
+      ],
+      "killCount": 0,
+      "enemy": [],
+      "type": "COOLDOWN_START"
+    }
+  }
 }

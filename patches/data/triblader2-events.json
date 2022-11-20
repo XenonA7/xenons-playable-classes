@@ -2180,5 +2180,218 @@
       "enemy": [],
       "type": "COOLDOWN_START"
     }
+  },
+  "triblader2-SP-2": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 6600 && plot.line < 18650",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_SP_LEVEL",
+        "member": "triblader2",
+        "level": 2
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-SP-3": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 18650 && plot.line < 44650",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_SP_LEVEL",
+        "member": "triblader2",
+        "level": 3
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-SP-4": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 44650",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_SP_LEVEL",
+        "member": "triblader2",
+        "level": 4
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-21": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 4310 && plot.line < 6900",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 21,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-32": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 6900 && plot.line < 17200",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 32,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-39": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 17200 && plot.line < 18000",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 39,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-42": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 18000 && plot.line < 18800",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 42,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-46": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 18800 && plot.line < 21300",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 46,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-52": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 21300 && plot.line < 25400",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 52,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-56": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 25400 && plot.line < 40100",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 56,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-62": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 40100 && plot.line < 46000",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 62,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "triblader2-lv-68": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "plot.line >= 46000 && plot.line < 48000",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "triblader2",
+        "level": 68,
+        "updateEquipment": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
   }
 }

@@ -2571,6 +2571,42 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "SHOCK",
+            "damageFactor": 3,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "CHARGED"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "duration": 0,
           "rotOffset": {
             "x": 0,
@@ -2646,7 +2682,7 @@
             "element": "SHOCK",
             "fly": "LIGHT",
             "damageFactor": 1.9,
-            "status": 0.5,
+            "status": 0.7,
             "reverse": false,
             "stunSteps": [
               {
@@ -2672,13 +2708,6 @@
         "x": 24,
         "y": 24,
         "z": 12
-      },
-      "effects": "combat.triblader",
-      "effectKeys": {
-        "bounce": "triProjetileBounce",
-        "wall": "triProjetileBounce",
-        "air": "triProjetileKill",
-        "trail": "triProjetile"
       },
       "speed": 4000,
       "maxBounce": 0,
@@ -2718,6 +2747,9 @@
       },
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "volume": 3,
           "global": false,
@@ -2815,11 +2847,6 @@
           }
         },
         {
-          "group": "magnet",
-          "target": "SELF",
-          "type": "REMOVE_PROXIES"
-        },
-        {
           "time": 0.3,
           "type": "WAIT"
         }
@@ -2841,7 +2868,7 @@
       "multiHit": false,
       "light": "XXL",
       "noLightGlow": true,
-      "group": "magnet",
+      "group": "magnetMain",
       "type": "GENERIC",
       "attack": {
         "type": "HEAVY",
@@ -2879,8 +2906,11 @@
         ]
       },
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "ACTION",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "name": "loopMagnet",
           "type": "LABEL"
@@ -2918,7 +2948,7 @@
           ]
         },
         {
-          "time": 0.30,
+          "time": 0.25,
           "type": "WAIT"
         },
         {
@@ -2967,8 +2997,11 @@
     },
     "magnetBolt": {
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "volume": 1.5,
           "global": false,
@@ -3008,7 +3041,7 @@
         },
         {
           "time": 0.1,
-          "cancelOnHit": false,
+          "cancelOnHit": true,
           "collideCancel": 0.5,
           "orthoDirFactor": 0,
           "ignoreLastHit": false,
@@ -3017,9 +3050,9 @@
             "type": "LIGHT",
             "element": "SHOCK",
             "reverse": false,
-            "status": 0.45,
+            "status": 0,
             "spFactor": 0,
-            "damageFactor": 0.82,
+            "damageFactor": 0.68,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
@@ -7655,8 +7688,11 @@
     },
     "thunderController": {
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "target": "PROXY_OWNER",
@@ -7690,9 +7726,21 @@
           "type": "CLEAR_ENV_PARTICLES"
         },
         {
-          "time": 3.5,
+          "particleType": "FINAL_GLOW",
+          "quantity": 25,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "time": 4,
           "type": "WAIT"
         },
+        {
+          "particleType": "FINAL_GLOW",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        
         {
           "type": "CLEAR_EFFECTS"
         },
@@ -7724,6 +7772,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "minTime": 0,
           "maxTime": 1,
@@ -7838,6 +7889,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -7929,7 +7983,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "HEAVY",
@@ -8136,7 +8190,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -8145,7 +8199,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.78,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "MELEE_DMG",
             "noIronStance": true,
             "limiter": "",
@@ -8190,7 +8244,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -8199,8 +8253,8 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.75,
-            "guardable": "FROM_ABOVE",
-            "skillBonus": "RANGED_DMG",
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
             "noIronStance": true,
             "limiter": ""
           },
@@ -8490,6 +8544,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 0.9,
           "global": false,
           "loop": false,
@@ -8570,6 +8627,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "align": "CENTER",
@@ -8652,7 +8712,7 @@
           "type": "SET_Z_GRAVITY_FACTOR"
         },
         {
-          "value": 6,
+          "value": 8,
           "type": "SET_RELATIVE_SPEED"
         },
         {
@@ -8690,11 +8750,11 @@
           "attack": {
             "type": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 2,
+            "damageFactor": 2.5,
             "reverse": false,
-            "status": 0.5,
+            "status": 0,
             "guardable": "",
-            "skillBonus": "RANGED_DMG",
+            "skillBonus": "MELEE_DMG",
             "limiter": ""
           }
         }
@@ -9197,7 +9257,7 @@
             "type": "MASSIVE",
             "visualType": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 1.95,
+            "damageFactor": 2.15,
             "fly": "MASSIVE",
             "reverse": false,
             "status": 0.2,
@@ -13310,6 +13370,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 1,
           "type": "SET_AIR_FRICTION"
         },
@@ -13422,7 +13485,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -13431,7 +13494,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.78,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "RANGED_DMG",
             "noIronStance": true,
             "limiter": "",
@@ -13476,7 +13539,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -13485,7 +13548,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.75,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "RANGED_DMG",
             "noIronStance": true,
             "limiter": ""
@@ -23327,8 +23390,8 @@
         },
         "offset": {
           "x": 0,
-          "y": 0,
-          "z": 12
+          "y": 128,
+          "z": 140
         }
       },
       {
@@ -24646,7 +24709,7 @@
           "element": "SHOCK",
           "damageFactor": 0.5,
           "spFactor": 0,
-          "status": 0.3,
+          "status": 0,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
         },
@@ -24690,7 +24753,7 @@
           "fly": "MASSIVE+",
           "damageFactor": 2,
           "spFactor": 0,
-          "status": 0.3,
+          "status": 0,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
         },
@@ -26507,8 +26570,10 @@
         "type": "COMBAT_ART_CHARGE_NOZOOM"
       },
       {
-        "type": "REMOVE_PROXIES",
-        "group": "magnet"
+        "ignoreSelf": true,
+        "group": "magnetMain",
+        "keepCount": 1,
+        "type": "REMOVE_PROXIES"
       },
       {
         "wait": false,
@@ -27529,7 +27594,7 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "MASSIVE",

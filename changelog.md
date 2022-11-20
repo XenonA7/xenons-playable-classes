@@ -1,3 +1,96 @@
+0.7.0 (11/19/2022)
+### New Content
+- Added a character changing station to the Info Hub in Rookie Harbor
+- Triblader2 can now join the player near the start of Bergen Trail as a party member
+   - This is in addition to the dev room NPC
+   - Level/element/SP scaling will work regardless of when the NPC is recruited in a playthrough
+- Added commonEvent logic to manage Triblader2 party member level/SP/element progression throughout the story
+- Added modified event step to allow setting party members to variable level values
+### Major Changes
+- Targeted Surge: If you miss and use it again before the triangles despawn then your first attempt will stack
+- Magnet Prism is no longer limited to 1 projectile at a time (2 max), and no longer pierces
+### Changes
+- Minor audio volume adjustements to Blade Rink first-time cutscene
+- Prismatic Meltdown audio volume reduced when it shoots the laser
+- Shadow Spark projectile damage type changed from RANGED_DMG to MELEE_DMG
+- Lightning Rod final lightning proxy hit changed from RANGEED_DMG to MELEE_DMG
+- Proxy magnetBolt changed to breakType COMBATANT
+- Proxy thunderMed removed legacy "hints" properties
+- Proxy thunderMed changed from RANGED_DMG to MELEE_DMG
+- Proxy thunderController changed to breakType NEVER
+- Thunder Wrath weather effects linger for longer
+- Lightning Rod guardable flag changed from FROM_ABOVE to blank (player version only)
+- Proxy thunderHeavy guardable flag changed from FROM_ABOVE to blank
+- Proxy thunderHeavySkew guardable flag changed from FROM_ABOVE to blank
+- Proxy thunderHeavySkew changed from RANGED_DMG to MELEE_DMG
+- Added DETATCH_TIME_PARENT to the following generic proxies:
+   - bee
+   - circleBallShooter
+   - circleBall
+   - ms_TT
+   - tt_ball
+   - magnetBoltLong
+   - forkBoltSpawn
+   - forkBoltSecondary
+   - forkBoltHitbox
+   - magnetSphere
+   - magnetSphereTurret
+   - magnetBolt
+   - thunderController
+   - thunderSpawner
+   - thunderSmall
+   - thunderHeavy
+   - meltdown (only after it shoots the shockLaser proxy)
+   - shockLaser
+- Proxies that will remain without DETATCH_TIME_PARENT:
+   - faradayDummy
+   - lightningRodBolt
+   - shockSpecial
+   - fractalCloneController
+   - fractalClone
+   - thunderMed
+   - meltdownTarget
+   - thunderHeavySkew
+### Fixes
+- Most shock art skillBonus corrections
+- Fixed missing stunType, dmgType, and status descriptions for most shock arts
+- Fixed minor animation quirk in Blade Rink first-time cutscene
+- Fixed Triblader2-specific issue with second projectile of Celestial Constellation
+- Fixed ice wind effects from Arctic Blast rendering beneath upper terrain
+- Reworked the logic for beekeeper bees, they should no longer linger endlessly on defeated enemies
+- Added the attribute "checkCollision" for the following (fixes ability to hit through walls):
+   - Beekeeper melee attack
+   - Faraday Formation final spin attack
+   - Lightning Rod lightning bolt
+   - Amber Flurry rapid hits
+   - Amber Flurry final hit
+   - First Fractal final hit
+   - Alternating Charge lightning proxies
+   - Proxy thunderSmall
+   - Proxy thunderHeavy
+   - Proxy thunderHeavySkew
+   - Prismatic Meltdown laser impact
+- Puzzle elements can now interact with:
+   - Faraday Formation final spin attack
+   - Lightning Strike (added a non-damaging hitbox that can interact with puzzles)
+   - Targeted Surge initial projectile (added a non-damaging hitbox that can interact with puzzles)
+   - Lightning Fork
+### Balance
+- Beekeeper bees reduced from MEDIUM hit strength to LIGHT
+- Beekeeper bees speed slightly increased
+- Slightly reduced beekeeper sword damage
+- Shadow Spark no longer inflicts status
+- Shadow Spark projectile damage and shoot velocity increased
+- Targeted Surge no longer inflicts status
+- Targeted Surge now shoots faster and has faster projectiles
+- Targeted Surge minor damage reduction
+- Lightning Fork damage significantly reduced
+- Magnet Prism no longer inflicts status
+- Magnet Prism no longer pierces enemies
+- Magnet Prism max projectiles increased from 1 to 2
+- Magnet Prism rate of fire increased, damage adjusted to balance
+- First Fractal damage slightly increased
+
 0.6.1 (10/23/2022)
 ### Fixes
 - Introduced the "posEntity" attribute to gambitProxy to prevent Wild Gambit's projectiles from shooting through walls

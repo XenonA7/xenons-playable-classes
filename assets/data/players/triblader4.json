@@ -2940,6 +2940,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 3,
           "global": false,
           "loop": false,
@@ -3036,11 +3039,6 @@
           }
         },
         {
-          "group": "magnet",
-          "target": "SELF",
-          "type": "REMOVE_PROXIES"
-        },
-        {
           "time": 0.3,
           "type": "WAIT"
         }
@@ -3062,7 +3060,7 @@
       "multiHit": false,
       "light": "XXL",
       "noLightGlow": true,
-      "group": "magnet",
+      "group": "magnetMain",
       "type": "GENERIC",
       "attack": {
         "type": "HEAVY",
@@ -3100,8 +3098,11 @@
         ]
       },
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "ACTION",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "name": "loopMagnet",
           "type": "LABEL"
@@ -3139,7 +3140,7 @@
           ]
         },
         {
-          "time": 0.30,
+          "time": 0.25,
           "type": "WAIT"
         },
         {
@@ -3188,8 +3189,11 @@
     },
     "magnetBolt": {
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "volume": 1.5,
           "global": false,
@@ -3229,7 +3233,7 @@
         },
         {
           "time": 0.1,
-          "cancelOnHit": false,
+          "cancelOnHit": true,
           "collideCancel": 0.5,
           "orthoDirFactor": 0,
           "ignoreLastHit": false,
@@ -3238,9 +3242,9 @@
             "type": "LIGHT",
             "element": "SHOCK",
             "reverse": false,
-            "status": 0.45,
+            "status": 0,
             "spFactor": 0,
-            "damageFactor": 0.82,
+            "damageFactor": 0.68,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
@@ -3293,6 +3297,42 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "SHOCK",
+            "damageFactor": 3,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "CHARGED"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
         {
           "duration": 0,
           "rotOffset": {
@@ -8997,7 +9037,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -9006,7 +9046,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.78,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "MELEE_DMG",
             "noIronStance": true,
             "limiter": "",
@@ -9051,7 +9091,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -9060,8 +9100,8 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.75,
-            "guardable": "FROM_ABOVE",
-            "skillBonus": "RANGED_DMG",
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
             "noIronStance": true,
             "limiter": ""
           },
@@ -9852,8 +9892,11 @@
     },
     "thunderController": {
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "target": "PROXY_OWNER",
@@ -9887,9 +9930,21 @@
           "type": "CLEAR_ENV_PARTICLES"
         },
         {
-          "time": 3.5,
+          "particleType": "FINAL_GLOW",
+          "quantity": 25,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "time": 4,
           "type": "WAIT"
         },
+        {
+          "particleType": "FINAL_GLOW",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        
         {
           "type": "CLEAR_EFFECTS"
         },
@@ -9921,6 +9976,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "minTime": 0,
           "maxTime": 1,
@@ -10035,6 +10093,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -10126,7 +10187,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "HEAVY",
@@ -10175,6 +10236,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "volume": 0.9,
           "global": false,
@@ -10257,6 +10321,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -10338,7 +10405,7 @@
           "type": "SET_Z_GRAVITY_FACTOR"
         },
         {
-          "value": 6,
+          "value": 8,
           "type": "SET_RELATIVE_SPEED"
         },
         {
@@ -10376,11 +10443,11 @@
           "attack": {
             "type": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 2,
+            "damageFactor": 2.5,
             "reverse": false,
-            "status": 0.5,
+            "status": 0,
             "guardable": "",
-            "skillBonus": "RANGED_DMG",
+            "skillBonus": "MELEE_DMG",
             "limiter": ""
           }
         }
@@ -10844,7 +10911,7 @@
             "type": "MASSIVE",
             "visualType": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 1.95,
+            "damageFactor": 2.15,
             "fly": "MASSIVE",
             "reverse": false,
             "status": 0.2,
@@ -20983,6 +21050,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -21007,16 +21077,41 @@
           "type": "SET_AIR_FRICTION"
         },
         {
-          "changeType": "set",
-          "attribName": "beeLife",
-          "type": "SET_ATTRIB_NUMBER",
-          "value": 32
+          "align": "CENTER",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 1,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "LIGHT",
+            "element": "SHOCK",
+            "damageFactor": 0.08,
+            "reverse": false,
+            "status": 1,
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          }
         },
         {
           "changeType": "set",
-          "attribName": "beeHits",
+          "attribName": "beeLife",
           "type": "SET_ATTRIB_NUMBER",
-          "value": 3
+          "value": 7.2
         },
         {
           "name": "beeLoop",
@@ -21038,7 +21133,7 @@
         },
         {
           "time": 0.4,
-          "cancelOnHit": true,
+          "cancelOnHit": false,
           "collideCancel": 1,
           "rotateSpeed": 1.2,
           "orthoDirFactor": 0,
@@ -21047,35 +21142,21 @@
           "collideSlip": false,
           "type": "TACKLE",
           "attack": {
-            "type": "MEDIUM",
+            "type": "LIGHT",
             "element": "SHOCK",
             "damageFactor": 0.12,
             "reverse": false,
             "status": 1,
             "guardable": "",
             "skillBonus": "",
-            "limiter": ""
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
           },
           "hit": [
             {
-              "changeType": "sub",
-              "attribName": "beeHits",
-              "type": "SET_ATTRIB_NUMBER",
-              "value": 1
-            },
-            {
-              "withElse": false,
-              "type": "IF",
-              "condition": "entity.attrib.beeHits = 0",
-              "thenStep": [
-                {
-                  "name": "beeEnd",
-                  "type": "GOTO_LABEL"
-                }
-              ]
-            },
-            {
-              "time": 0.24,
+              "time": 0.05,
               "type": "MOVE_FORWARD"
             }
           ]
@@ -21096,10 +21177,6 @@
               "type": "GOTO_LABEL"
             }
           ]
-        },
-        {
-          "name": "beeEnd",
-          "type": "LABEL"
         }
       ],
       "invisible": false,
@@ -21114,7 +21191,7 @@
         "z": 16
       },
       "effects": null,
-      "speed": 250,
+      "speed": 300,
       "maxBounce": 0,
       "timer": 0,
       "trail": false,
@@ -21903,7 +21980,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "HEAVY",
@@ -21911,13 +21988,9 @@
             "damageFactor": 1,
             "reverse": false,
             "status": 1,
-            "hints": [
-              "escortBonusDmg",
-              "escortDodge"
-            ],
-            "guardable": "FROM_ABOVE",
-            "skillBonus": "RANGED_DMG",
-            "limiter": null
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": ""
           },
           "offset": {
             "x": 0,
@@ -22517,6 +22590,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -22621,12 +22697,8 @@
             },
             {
               "minTime": 0,
-              "maxTime": 0.5,
+              "maxTime": 0.3,
               "type": "WAIT_RANDOM"
-            },
-            {
-              "group": "aiming",
-              "type": "CLEAR_EFFECTS"
             },
             {
               "duration": 0,
@@ -22649,8 +22721,12 @@
               }
             },
             {
-              "time": 0.3,
+              "time": 0.15,
               "type": "WAIT"
+            },
+            {
+              "group": "aiming",
+              "type": "CLEAR_EFFECTS"
             },
             {
               "value": true,
@@ -22683,14 +22759,28 @@
             },
             {
               "type": "CLEAR_TEMP_TARGET"
+            },
+                {
+              "time": 0.2,
+              "type": "WAIT"
+            },
+            {
+              "name": "end",
+              "type": "GOTO_LABEL"
             }
           ]
         },
         {
-          "minTime": 0,
-          "maxTime": 0.6,
+          "minTime": 0.1,
+          "maxTime": 0.4,
           "type": "WAIT_RANDOM"
+        },
+
+        {
+          "name": "end",
+          "type": "LABEL"
         }
+        
       ],
       "invisible": false,
       "hp": 0,
@@ -22742,6 +22832,45 @@
       },
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "SHOCK",
+            "damageFactor": 3,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "CHARGED"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
         {
           "duration": -1,
           "align": "CENTER",
@@ -22816,7 +22945,7 @@
             "element": "SHOCK",
             "damageFactor": 1.5,
             "reverse": false,
-            "status": 0.5,
+            "status": 0,
             "guardable": "",
             "skillBonus": "RANGED_DMG"
           },
@@ -22949,6 +23078,9 @@
       "breakType": "NEVER",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 1.5,
           "global": false,
           "loop": false,
@@ -22982,7 +23114,7 @@
           }
         },
         {
-          "value": 4000,
+          "value": 5000,
           "type": "SET_SPEED"
         },
         {
@@ -22996,9 +23128,9 @@
             "type": "LIGHT",
             "element": "SHOCK",
             "reverse": false,
-            "status": 0.40,
+            "status": 0,
             "spFactor": 0,
-            "damageFactor": 0.88,
+            "damageFactor": 0.84,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
@@ -24134,6 +24266,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": 0.6,
           "align": "CENTER",
           "rotateFace": -1,
@@ -24259,6 +24394,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "align": "BOTTOM",
@@ -24479,6 +24617,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 3500,
           "type": "SET_SPEED"
         },
@@ -24506,15 +24647,12 @@
           "attack": {
             "type": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 0.5,
+            "damageFactor": 0.25,
             "status": 0.3,
             "fly": "LIGHT",
             "spFactor": 0,
             "guardable": "",
-            "skillBonus": "RANGED_DMG",
-            "hints": [
-              "NO_PUZZLE"
-            ]
+            "skillBonus": "RANGED_DMG"
           },
           "offset": {
             "x": 0,
@@ -26516,6 +26654,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 1,
           "type": "SET_AIR_FRICTION"
         },
@@ -26628,7 +26769,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -26637,7 +26778,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.78,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "RANGED_DMG",
             "noIronStance": true,
             "limiter": "",
@@ -26682,7 +26823,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -26691,7 +26832,7 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.75,
-            "guardable": "FROM_ABOVE",
+            "guardable": "",
             "skillBonus": "RANGED_DMG",
             "noIronStance": true,
             "limiter": ""
@@ -27015,9 +27156,7 @@
           "time": 0.5,
           "type": "WAIT"
         },
-        {
-          "type": "DETACH_TIME_PARENT"
-        },
+        
         {
           "duration": -1,
           "align": "CENTER",
@@ -27164,6 +27303,9 @@
               "offset": {
                 "z": 12
               }
+            },
+            {
+              "type": "DETACH_TIME_PARENT"
             },
             {
               "time": 3,
@@ -27407,7 +27549,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -27416,8 +27558,8 @@
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.5,
-            "guardable": "FROM_ABOVE",
-            "skillBonus": "RANGED_DMG",
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
             "noIronStance": true,
             "limiter": ""
           },
@@ -27455,6 +27597,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "value": 400,
           "type": "SET_SPEED"
@@ -27570,7 +27715,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MEDIUM",
@@ -41961,8 +42106,8 @@
             },
             "offset": {
               "x": 0,
-              "y": 0,
-              "z": 12
+              "y": 128,
+              "z": 140
             }
           },
           {
@@ -45374,8 +45519,8 @@
           "en_US": "A wide swing with a special sword that releases a swarm of electric bees."
         },
         "dmgType": "MELEE",
-        "stunType": "LOCK",
-        "status": false,
+        "stunType": "",
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -45444,12 +45589,12 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "MASSIVE",
               "element": "SHOCK",
-              "damageFactor": 1.5,
+              "damageFactor": 1.3,
               "reverse": false,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
@@ -45563,7 +45708,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "INTERRUPT",
-        "status": true,
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -45664,7 +45809,7 @@
               "element": "SHOCK",
               "damageFactor": 0.5,
               "spFactor": 0,
-              "status": 0.3,
+              "status": 0,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
             },
@@ -45705,7 +45850,7 @@
               "fly": "MASSIVE+",
               "damageFactor": 2,
               "spFactor": 0,
-              "status": 0.3,
+              "status": 0,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
             },
@@ -45760,7 +45905,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "INTERRUPT",
-        "status": true,
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -46175,7 +46320,7 @@
             "repeat": false,
             "uniformHitDir": false,
             "fixPos": false,
-            "checkCollision": false,
+            "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "HEAVY",
@@ -46185,9 +46330,6 @@
               "reverse": false,
               "guardable": "",
               "skillBonus": "MELEE_DMG",
-              "hints": [
-                "NO_PUZZLE"
-              ],
               "stunSteps": [
                 {
                   "type": "END_LOCK"
@@ -47697,7 +47839,7 @@
         },
         "dmgType": "RANGED",
         "stunType": "",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -47859,7 +48001,7 @@
         "description": {
           "en_US": "Throw out magnetic prisms that will zap the enemy you proceed to mark with a projectile."
         },
-        "dmgType": "",
+        "dmgType": "RANGED",
         "stunType": "",
         "status": false,
         "steps": [
@@ -47875,10 +48017,6 @@
           {
             "value": "HEAVY",
             "type": "SET_HIT_STABLE"
-          },
-          {
-            "group": "ttGroup",
-            "type": "REMOVE_PROXIES"
           },
           {
             "time": 0,
@@ -47953,20 +48091,37 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "spinRepeat"
+            "anim": "jump"
           },
           {
-            "value": 50,
+            "value": 100,
             "type": "SET_SPEED"
           },
           {
-            "time": 0.4,
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "fall"
+          },
+          {
+            "time": 0.1,
             "stopBeforeEdge": true,
             "type": "MOVE_BACKWARD"
           },
           {
             "time": 0,
             "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attack1End"
           },
           {
             "time": 0.05,
@@ -48049,8 +48204,7 @@
           },
           {
             "time": 0.2,
-            "stopBeforeEdge": true,
-            "type": "MOVE_FORWARD"
+            "type": "WAIT"
           },
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -48076,7 +48230,7 @@
         },
         "dmgType": "RANGED",
         "stunType": "",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -48199,7 +48353,7 @@
           "en_US": "Magnet Prism"
         },
         "description": {
-          "en_US": "Throw a slow-moving shock ball that zaps nearby enemies as it travels."
+          "en_US": "Throw a slow-moving electric prism that zaps nearby enemies as it travels."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -48215,8 +48369,10 @@
             }
           },
           {
-            "type": "REMOVE_PROXIES",
-            "group": "magnet"
+            "ignoreSelf": true,
+            "group": "magnetMain",
+            "keepCount": 1,
+            "type": "REMOVE_PROXIES"
           },
           {
             "wait": false,
@@ -48837,7 +48993,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "LOCK",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -49199,7 +49355,7 @@
                 "repeat": false,
                 "uniformHitDir": false,
                 "fixPos": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
                   "type": "MEDIUM",
@@ -49264,7 +49420,7 @@
                 "repeat": false,
                 "uniformHitDir": false,
                 "fixPos": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
                   "type": "MEDIUM",
@@ -49407,7 +49563,7 @@
                 "repeat": false,
                 "uniformHitDir": false,
                 "fixPos": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
                   "type": "MASSIVE",
@@ -49482,7 +49638,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -49653,8 +49809,8 @@
           "en_US": "Hit a single enemy to perform a quick flurry of phantom strikes."
         },
         "dmgType": "MELEE",
-        "stunType": "",
-        "status": false,
+        "stunType": "LOCK",
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -50049,7 +50205,7 @@
                 "repeat": false,
                 "uniformHitDir": false,
                 "fixPos": false,
-                "checkCollision": false,
+                "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
                   "type": "MASSIVE",
@@ -50114,7 +50270,7 @@
         },
         "dmgType": "MELEE",
         "stunType": "",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -50654,9 +50810,9 @@
         "description": {
           "en_US": "Dash into a single enemy to mark them for a homing laser attack."
         },
-        "dmgType": "NONE",
-        "stunType": "",
-        "status": false,
+        "dmgType": "MIXED",
+        "stunType": "INTERRUPT",
+        "status": true,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -51067,11 +51223,11 @@
           "en_US": "Thunder Wrath"
         },
         "description": {
-          "en_US": "Dash and leave a devastating lightning storm along your path."
+          "en_US": "Dash forward and leave a devastating lightning storm along your path."
         },
-        "dmgType": "NONE",
+        "dmgType": "MIXED",
         "stunType": "",
-        "status": false,
+        "status": true,
         "steps": [
           {
             "value": "IGNORE",
@@ -51488,7 +51644,7 @@
         "description": {
           "en_US": "Experience time at a faster rate for a brief period. Slightly reduces ATK, FOC stats while active."
         },
-        "dmgType": "RANGED",
+        "dmgType": "NONE",
         "stunType": "",
         "status": false,
         "steps": [

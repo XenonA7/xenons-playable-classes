@@ -1,0 +1,1002 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 437,
+      "y": 199,
+      "level": 4,
+      "settings": {
+        "mapId": 706,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "!plot.xtm.triblader2Join",
+            "config": "normal",
+            "event": {
+              "quest": [
+                {
+                  "person": {
+                    "person": "triblader.triblader2",
+                    "expression": "DEFAULT"
+                  },
+                  "type": "ADD_MSG_PERSON",
+                  "side": "LEFT"
+                },
+                {
+                  "type": "IF",
+                  "withElse": true,
+                  "condition": "party.alive.Emilie",
+                  "thenStep": [
+                    {
+                      "type": "IF",
+                      "withElse": true,
+                      "condition": "!map.triblader2talked",
+                      "thenStep": [
+                        {
+                          "type": "CHANGE_VAR_BOOL",
+                          "varName": "map.triblader2talked",
+                          "changeType": "set",
+                          "value": true
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT",
+                          "order": 0
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "EXCITED"
+                          },
+                          "message": {
+                            "en_US": "Hi!"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Hey there! Are you guys heading up the mountain?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "type": "SET_MSG_EXPRESSION",
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          }
+                        },
+                        {
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "SMILE"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT",
+                          "order": 1
+                        },
+                        {
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "SMILE"
+                          },
+                          "message": {
+                            "en_US": "Oui! We sure are!"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "I've been waiting here forever for my friend, I think she must have gone ahead without me."
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "type": "SET_MSG_EXPRESSION",
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "DEFAULT"
+                          }
+                        },
+                        {
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Why don't you come with us? Lea and I are heading that way too!"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Sure! Got room in your party for a \\c[3]Triblader\\c[0]?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "0": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NOD"
+                              },
+                              "message": {
+                                "en_US": "[nods]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Thank you so much! This is going to be fun!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "type": "SET_MSG_EXPRESSION",
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "SMILE"
+                              }
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "EXCITED"
+                              },
+                              "message": {
+                                "en_US": "..!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "JOIN",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "1": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "SHAKE"
+                              },
+                              "message": {
+                                "en_US": "[shakes head]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "type": "SET_MSG_EXPRESSION",
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "SUSPICIOUS"
+                              }
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Oh, ok.\\. I'll probably try to head up on my own again.."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "type": "CLEAR_MSG",
+                              "side": "ALL"
+                            },
+                            {
+                              "entity": {
+                                "global": true,
+                                "name": "triblader2"
+                              },
+                              "action": [
+                                {
+                                  "type": "SET_FACE",
+                                  "face": "SOUTH",
+                                  "rotate": true,
+                                  "rotateSpeed": 3
+                                }
+                              ],
+                              "type": "DO_ACTION"
+                            },
+                            {
+                              "entity": {
+                                "player": true
+                              },
+                              "action": [
+                                {
+                                  "type": "SET_FACE_TO_ENTITY",
+                                  "rotate": true,
+                                  "entity": {
+                                    "party": "Member2"
+                                  },
+                                  "rotateSpeed": 3
+                                }
+                              ],
+                              "type": "DO_ACTION"
+                            },
+                            {
+                              "entity": {
+                                "party": "Member2"
+                              },
+                              "action": [
+                                {
+                                  "type": "SET_FACE_TO_ENTITY",
+                                  "entity": {
+                                    "player": true
+                                  },
+                                  "rotate": true,
+                                  "rotateSpeed": 3
+                                }
+                              ],
+                              "type": "DO_ACTION"
+                            },
+                            {
+                              "entity1": {
+                                "player": true
+                              },
+                              "entity2": {
+                                "party": "Member2"
+                              },
+                              "zoom": 1.2,
+                              "type": "SET_CAMERA_BETWEEN",
+                              "speed": "NORMAL",
+                              "transition": "EASE_IN_OUT",
+                              "wait": true
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "UNCERTAIN"
+                              },
+                              "type": "ADD_MSG_PERSON",
+                              "side": "LEFT"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "DEFAULT"
+                              },
+                              "type": "ADD_MSG_PERSON",
+                              "side": "RIGHT"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "UNCERTAIN"
+                              },
+                              "message": {
+                                "en_US": "Lea, chérie? We're really going to leave her all alone on this mountain?"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NERVOUS"
+                              },
+                              "message": {
+                                "en_US": "..."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "CURIOUS"
+                              },
+                              "message": {
+                                "en_US": "I suppose we'll gain more EXP points if there are fewer of us..."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "END",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "type": "SHOW_CHOICE",
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "PROUD"
+                          },
+                          "options": [
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[Yes]"
+                              }
+                            },
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[No]"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "elseStep": [
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT",
+                          "order": 0
+                        },
+                        {
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "DEFAULT"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT",
+                          "order": 1
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Oh, you guys are still hanging around here?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "SHRUG"
+                          },
+                          "message": {
+                            "en_US": "Just taking some time to enjoy the sights and stock up on items!"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "type": "SET_MSG_EXPRESSION",
+                          "person": {
+                            "person": "main.emilie",
+                            "expression": "DEFAULT"
+                          }
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "I'd still be happy to join you guys if you changed your mind."
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "0": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NOD"
+                              },
+                              "message": {
+                                "en_US": "[nods]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "HAPPY"
+                              },
+                              "message": {
+                                "en_US": "Welcome to the team!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Her name is Lea and you can call me Emilienator."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Thanks guys! We should have no problems on the road ahead with a full party now."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "DETERMINED"
+                              },
+                              "message": {
+                                "en_US": "These bunnies don't stand a chance against all of us."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "JOIN",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "1": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "SHAKE"
+                              },
+                              "message": {
+                                "en_US": "[shakes head]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Ok, ok. I'm sorry I keep asking."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.emilie",
+                                "expression": "SUSPICIOUS"
+                              },
+                              "message": {
+                                "en_US": "..."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "END",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "type": "SHOW_CHOICE",
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "THINKING"
+                          },
+                          "options": [
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[Yes]"
+                              }
+                            },
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[No]"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "elseStep": [
+                    {
+                      "type": "IF",
+                      "withElse": true,
+                      "condition": "!map.triblader2talked",
+                      "thenStep": [
+                        {
+                          "type": "CHANGE_VAR_BOOL",
+                          "varName": "map.triblader2talked",
+                          "changeType": "set",
+                          "value": true
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Hey, did you see a \\c[3]hexacast\\c[0] player pass through here recently?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "THINKING"
+                          },
+                          "message": {
+                            "en_US": "\\s[5]..."
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "SHAKE"
+                          },
+                          "message": {
+                            "en_US": "[shakes head]"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Darn, I think she ditched me. We were supposed to meet up here before heading to \\c[3] Bergen Village\\c[0]."
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "SURPRISED_TOWARD"
+                          },
+                          "message": {
+                            "en_US": "..."
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Hey!\\. Are you heading up the mountain too?\\. Want to go together?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "0": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NOD_HAPPY"
+                              },
+                              "message": {
+                                "en_US": "[nods]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Sweet! I've never had a Spheromancer in my party before, what was your name?"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "PROUD"
+                              },
+                              "message": {
+                                "en_US": "Lea!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Nice to meet you, Lea. We'll make a great team!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "JOIN",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "1": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "SHAKE"
+                              },
+                              "message": {
+                                "en_US": "[shakes head]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "More of a solo player, are you?"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NOD"
+                              },
+                              "message": {
+                                "en_US": "[nods]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Ok, don't worry about it then."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "END",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "type": "SHOW_CHOICE",
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "options": [
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[Yes]"
+                              }
+                            },
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[No]"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "elseStep": [
+                        {
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "type": "ADD_MSG_PERSON",
+                          "side": "RIGHT"
+                        },
+                        {
+                          "person": {
+                            "person": "triblader.triblader2",
+                            "expression": "DEFAULT"
+                          },
+                          "message": {
+                            "en_US": "Oh, hi there again.\\. I've still not heard from my friend.\\. I don't suppose you changed your mind?"
+                          },
+                          "type": "SHOW_MSG"
+                        },
+                        {
+                          "0": [
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "You'll go with me up the mountain?"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "NOD"
+                              },
+                              "message": {
+                                "en_US": "[nods]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Wow, thanks! What was your name?"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "EXCITED"
+                              },
+                              "message": {
+                                "en_US": "Lea!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Ok, Lea! Let's go!"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "JOIN",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "1": [
+                            {
+                              "person": {
+                                "person": "main.lea",
+                                "expression": "SHAKE"
+                              },
+                              "message": {
+                                "en_US": "[shakes head]"
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "person": {
+                                "person": "triblader.triblader2",
+                                "expression": "DEFAULT"
+                              },
+                              "message": {
+                                "en_US": "Ok..\\. I'm sorry I asked."
+                              },
+                              "type": "SHOW_MSG"
+                            },
+                            {
+                              "name": "END",
+                              "type": "GOTO_LABEL"
+                            }
+                          ],
+                          "type": "SHOW_CHOICE",
+                          "person": {
+                            "person": "main.lea",
+                            "expression": "DEFAULT"
+                          },
+                          "options": [
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[Yes]"
+                              }
+                            },
+                            {
+                              "0": " ",
+                              "label": {
+                                "en_US": "[No]"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "JOIN",
+                  "type": "LABEL"
+                },
+                {
+                  "type": "CHANGE_VAR_BOOL",
+                  "varName": "plot.xtm.triblader2Join",
+                  "changeType": "set",
+                  "value": true
+                },
+                {
+                  "type": "SHOW_GET_MSG",
+                  "msgType": "PARTY",
+                  "object": {
+                    "en_US": "Triblader2",
+                    "de_DE": "",
+                    "ja_JP": "",
+                    "ko_KR": "",
+                    "zh_CN": "",
+                    "zh_TW": ""
+                  }
+                },
+                {
+                  "type": "ADD_PARTY_MEMBER",
+                  "member": "triblader2",
+                  "npc": {
+                    "global": true,
+                    "name": "triblader2"
+                  },
+                  "skipEffect": true
+                },
+                {
+                  "type": "IF",
+                  "withElse": true,
+                  "condition": "player.level <= 75 && player.level >= 10",
+                  "thenStep": [
+                    {
+                      "type": "SET_PARTY_MEMBER_LEVEL_VAR",
+                      "member": "triblader2",
+                      "level": {
+                        "varName": "player.level"
+                      },
+                      "updateEquipment": true
+                    }
+                  ],
+                  "elseStep": [
+                    {
+                      "type": "IF",
+                      "withElse": false,
+                      "condition": "player.level > 75",
+                      "thenStep": [
+                        {
+                          "type": "SET_PARTY_MEMBER_LEVEL",
+                          "member": "triblader2",
+                          "level": 75,
+                          "updateEquipment": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "IF",
+                      "withElse": false,
+                      "condition": "player.level < 10",
+                      "thenStep": [
+                        {
+                          "type": "SET_PARTY_MEMBER_LEVEL",
+                          "member": "triblader2",
+                          "level": 10,
+                          "updateEquipment": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "IF",
+                  "withElse": true,
+                  "condition": "plot.line >= 44650",
+                  "thenStep": [
+                    {
+                      "type": "SET_PARTY_MEMBER_SP_LEVEL",
+                      "member": "triblader2",
+                      "level": 4
+                    }
+                  ],
+                  "elseStep": [
+                    {
+                      "type": "IF",
+                      "withElse": true,
+                      "condition": "plot.line >= 18650",
+                      "thenStep": [
+                        {
+                          "type": "SET_PARTY_MEMBER_SP_LEVEL",
+                          "member": "triblader2",
+                          "level": 3
+                        }
+                      ],
+                      "elseStep": [
+                        {
+                          "type": "IF",
+                          "withElse": true,
+                          "condition": "plot.line >= 6600",
+                          "thenStep": [
+                            {
+                              "type": "SET_PARTY_MEMBER_SP_LEVEL",
+                              "member": "triblader2",
+                              "level": 2
+                            }
+                          ],
+                          "elseStep": [
+                            {
+                              "type": "SET_PARTY_MEMBER_SP_LEVEL",
+                              "member": "triblader2",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "SET_PARTY_MEMBER_ALL_ELEMENTS",
+                  "member": "triblader2",
+                  "allElements": false
+                },
+                {
+                  "name": "END",
+                  "type": "LABEL"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ]
+            }
+          },
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": true,
+            "condition": "plot.xtm.triblader2Join",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "triblader.triblader2",
+        "analyzable": {
+          "text": {
+            "en_US": "Triblader2"
+          },
+          "active": ""
+        },
+        "name": "triblader2"
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

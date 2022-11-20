@@ -28,11 +28,12 @@ https://discord.gg/CsfUk9vpFq
 
 
 ## **How to Play:**
-- With the mod installed, proceeding out of the Newcomer Bridge at the start of the game will take you to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
+- With the mod installed, the entrance to the Rhombus Dungeon at the start of the game will take you to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
 - The following can be accessed using any existing Lea save file, a new game is not required. It will work regardless of what character you are playing as.
   * Unlock the **Triblader League** arena cup by talking to the Tribladers standing around the **Open PVP Fields** in Rhombus Square. Unlockable after beating the final dungeon in the DLC (Ku'lero Temple).
-  * Quick-swap menu added to the Rhombus Arena lobby to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.
-  * The mod's dev room is located in **Lea's Attic** after completing the DLC dungeon (Ku'lero Temple). Here you will find a new party member and a training arena for a very customizable duel.
+  * Quick-swap menu added to the **Rhombus Arena Lobby** and **Rookie Harbor Info Hub** to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.
+  * The mod's dev room is located in **Lea's Attic** after completing the DLC dungeon (Ku'lero Temple). Here you will find miscellaneous pvp content with high levels of customization.
+  * New party member is available near the entrance to Bergen Trail. Their level and elements will be scaled properly regardless if you obtain them on a postgame save file or on a fresh playthrough.
 
 
 
@@ -152,19 +153,6 @@ https://discord.gg/CsfUk9vpFq
 - Wave Guard Lv.2a	**Phase Jump**
 - Wave Guard Lv.2b	**Essence Enchantment**
 - Wave Guard Lv.3	**Verdant Infection**
-
-
-## **Future Plans/Ideas, in order of priority:**
-- Balance patches and support
-- Rework or replace some of the combat arts that I don't like or are below-average quality (Looking at you, Sky Shredder)
-- Graphical overhaul to some combat arts and particle effects that are pretty "meh" right now (Trailblazer needs another look)
-- Continue writing the modding guide documentation
-- Draw sprites for more common animations, such as floating, kneeShake, opening chests, etc
-- PVP enemy AI overhaul, more unique behaviors
-- Draw sprites for generic male triblader (more character options)
-- Draw sprites for Lea holding a sword and doing triblader animations
-- Custom challenge maps (later to be contextualized in a cohesive storyline)
-- ArcaneLab support to allow for Spheroknight arts as craftable upgrades for your triblader, using AL's custom art system. I already have animation support and reworked versions of all Susie's arts to work with Lukas or the characters from this mod, but they are not included in the public version.
 
 
 # Install Instructions

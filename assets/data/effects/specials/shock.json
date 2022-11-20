@@ -12352,7 +12352,7 @@
     ],
     "shockLaserShoot": [
       {
-        "volume": 2,
+        "volume": 1.5,
         "global": false,
         "loop": false,
         "sound": "media/sound/battle/airon/shock/hit-shock-massive.ogg",
@@ -12791,7 +12791,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 0.35,
+        "particleDuration": 0.20,
         "angleVary": 1,
         "anim": "SHOCKWAVE_B_SHOCK_TRIANGLE",
         "type": "PLAY_ANIM"

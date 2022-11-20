@@ -33,7 +33,7 @@ https://discord.gg/CsfUk9vpFq
   * Unlock the **Triblader League** arena cup by talking to the Tribladers standing around the **Open PVP Fields** in Rhombus Square. Unlockable after beating the final dungeon in the DLC (Ku'lero Temple).
   * Quick-swap menu added to the **Rhombus Arena Lobby** and **Rookie Harbor Info Hub** to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.
   * The mod's dev room is located in **Lea's Attic** after completing the DLC dungeon (Ku'lero Temple). Here you will find miscellaneous pvp content with high levels of customization.
-  * New party member is available near the entrance to Bergen Trail. Their level and elements will be scaled properly regardless if you obtain them on a postgame save file or on a fresh playthrough.
+  * New **party member** is available near the entrance to Bergen Trail. Their level and elements will be scaled properly regardless if you obtain them on a postgame save file or on a fresh playthrough.
 
 
 

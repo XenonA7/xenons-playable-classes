@@ -1,3 +1,9 @@
+0.7.1 (12/04/22)
+### Fixes
+- Fixed Triblader2 party member contact event story progress threshold
+### Balance
+- Magnet Prism targeting range increased from 128 to 140
+
 0.7.0 (11/19/2022)
 ### New Content
 - Added a character changing station to the Info Hub in Rookie Harbor

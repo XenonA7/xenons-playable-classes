@@ -35,7 +35,7 @@
       {
         "withElse": false,
         "type": "IF",
-        "condition": "plot.line <= 48000",
+        "condition": "plot.line < 3500",
         "thenStep": [
           {
             "message": {

@@ -2916,7 +2916,7 @@
         },
         {
           "searchType": "CLOSE_RANGE",
-          "distance": 128,
+          "distance": 140,
           "ignoreCurrentTarget": false,
           "prevHitBehavior": "NONE",
           "type": "SET_CLOSE_TEMP_TARGET"

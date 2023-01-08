@@ -1035,6 +1035,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "face": "SOUTH",
           "rotate": false,
           "rotateSpeed": 3,
@@ -1349,6 +1352,9 @@
       "breakType": "NEVER",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "global": false,
           "loop": false,
           "sounds": [
@@ -1518,6 +1524,9 @@
       "breakType": "NEVER",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -1658,8 +1667,29 @@
         ]
       },
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "volume": 0.7,
+          "global": false,
+          "loop": false,
+          "speed": 1.3,
+          "variance": 0.1,
+          "sound": "media/sound/battle/dash-strong-1.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "volume": 1.5,
+          "global": false,
+          "loop": false,
+          "speed": 1.2,
+          "variance": 0.1,
+          "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
+          "type": "PLAY_SOUND"
+        },
         {
           "duration": -1,
           "align": "BOTTOM",
@@ -1750,7 +1780,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "puzzle.bomb",
-            "name": "explosion"
+            "name": "explosionLoud"
           },
           "offset": {
             "x": 0,
@@ -1823,10 +1853,13 @@
         ]
       },
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
         {
           "type": "CONNECT_PROXY_TO_TARGET"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
         },
         {
           "duration": -1,
@@ -3489,6 +3522,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -3677,6 +3713,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "align": "BOTTOM",
@@ -4650,6 +4689,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 0,
           "type": "SET_Z_VEL"
         },
@@ -4773,6 +4815,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "value": 0,
           "type": "SET_Z_VEL"
@@ -8252,6 +8297,26 @@
           }
         },
         {
+          "name": "enelSwordHitResist",
+          "actionDetached": false,
+          "perfectGuardTime": 0,
+          "type": "ADD_SHIELD",
+          "shield": {
+            "type": "DIRECTIONAL",
+            "settings": {
+              "baseFactor": 0.9,
+              "strength": "BLOCK_ALL",
+              "hitResist": "MASSIVE",
+              "stableOverride": "MASSIVE",
+              "duration": 6,
+              "range": 1,
+              "back": false,
+              "noShieldDamage": true,
+              "noDefaultFX": true
+            }
+          }
+        },
+        {
           "face": "SOUTH",
           "rotate": false,
           "rotateSpeed": 3,
@@ -10906,7 +10971,7 @@
             "type": "MASSIVE",
             "visualType": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 2.15,
+            "damageFactor": 2.08,
             "fly": "MASSIVE",
             "reverse": false,
             "status": 0.2,
@@ -12380,7 +12445,7 @@
     },
     "turbineStunner": {
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
         {
           "kind": "PART_TARGET_ROOT",
@@ -12589,6 +12654,9 @@
           "name": "rapidSpin",
           "type": "SET_ATTRIB_BOOL",
           "value": true
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
         },
         {
           "volume": 1.2,
@@ -12851,6 +12919,9 @@
           "waitTargetAlign": false,
           "waitUntil": "entity.srcAttrib.rapidSpin",
           "type": "STICKY_CIRCLE_AROUND"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
         },
         {
           "target": "PROXY_SRC",
@@ -14982,7 +15053,7 @@
       "effects": "ball",
       "speed": 650,
       "maxBounce": 0,
-      "timer": 1.5,
+      "timer": 2.0,
       "trail": false,
       "multiHit": false,
       "noLightGlow": true,
@@ -16871,6 +16942,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BASE",
           "rotateFace": 0,
@@ -16997,6 +17071,9 @@
       },
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "WAIT",
           "time": 0.1
         },
@@ -17038,6 +17115,9 @@
       "copyOwnerAnims": true,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "SET_OWNER_REPLACE_TARGET"
         },
@@ -17371,7 +17451,75 @@
       "breakType": "COMBATANT",
       "action": [
         {
-          "duration": -1,
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "firePillarEffect",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 32,
+          "yScale": 1,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "HEAT",
+            "damageFactor": 0.15,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "firePillarExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
           "flipLeftFace": false,
@@ -17382,22 +17530,13 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "combat.triblader",
-            "name": "firePillarExtra"
+            "name": "firePillarTrianglePulse"
           },
           "offset": {
             "x": 0,
             "y": 0,
             "z": 0
           }
-        },
-        {
-          "volume": 0.9,
-          "global": false,
-          "loop": false,
-          "speed": 1.0,
-          "variance": 0.1,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/airon/fire-hit-hard2.ogg"
         },
         {
           "value": 0,
@@ -17423,7 +17562,7 @@
           "attack": {
             "type": "MEDIUM",
             "element": "HEAT",
-            "damageFactor": 0.50,
+            "damageFactor": 0.25,
             "reverse": false,
             "spFactor": 0,
             "status": 1,
@@ -17476,8 +17615,63 @@
       "stickToSource": "NONE",
       "killEffect": {
         "sheet": "combat.triblader",
-        "name": "mirageFade"
+        "name": "firePillarFade"
       },
+      "stickFaceAlign": false,
+      "group": "firePillarGroup",
+      "startAnim": "",
+      "size": {
+        "x": 24,
+        "y": 24,
+        "z": 32
+      },
+      "config": {
+        "collType": "IGNORE",
+        "zGravityFactor": 2,
+        "shadow": 32
+      },
+      "type": "GENERIC"
+    },
+    "firePillarEffect": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "minTime": 0,
+          "maxTime": 1,
+          "type": "WAIT_RANDOM"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.triblader",
+            "name": "firePillarExtra"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 10
+        }
+      ],
+      "invisible": false,
+      "hp": 1.2,
+      "stickToSource": "PROXY_SRC",
       "stickFaceAlign": false,
       "group": "firePillarGroup",
       "startAnim": "",
@@ -18371,6 +18565,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "target": "PROXY_OWNER",
@@ -18490,6 +18687,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "face": "SOUTH",
           "rotate": false,
@@ -20861,6 +21061,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "ADD_TARGET_STUN_LOCK"
         },
         {
@@ -21089,7 +21292,7 @@
           "attack": {
             "type": "LIGHT",
             "element": "SHOCK",
-            "damageFactor": 0.08,
+            "damageFactor": 0.10,
             "reverse": false,
             "status": 1,
             "guardable": "",
@@ -21176,7 +21379,7 @@
       "hp": 0,
       "stickToSource": "NONE",
       "stickFaceAlign": false,
-      "group": "",
+      "group": "beeGroup",
       "startAnim": "",
       "size": {
         "x": 16,
@@ -21836,6 +22039,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
           "stats": [
@@ -22341,7 +22547,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.heat",
-            "name": "laserShoot"
+            "name": "laserShootQuiet"
           },
           "offset": {
             "x": 0,
@@ -23199,6 +23405,9 @@
       "breakType": "NEVER",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "SET_ATTRIB_BOOL",
           "name": "bombHit",
           "value": false
@@ -23460,6 +23669,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "align": "CENTER",
@@ -29265,7 +29477,7 @@
             "uniformDir": 0,
             "delay": 0,
             "repeat": false,
-            "count": 8,
+            "count": 10,
             "type": "SHOOT_PROXY_RANGE",
             "proxy": "neutralKnife",
             "offset": {
@@ -37177,7 +37389,7 @@
           "en_US": "Blade of E'nel"
         },
         "description": {
-          "en_US": "Summon a sword of holy flames that will supercharge your melee attacks for a short period."
+          "en_US": "Summon a sword of holy flames that will supercharge your melee attacks, provide knockback resistance, and \\c[3]10%\\c[0] damage reduction for a short period."
         },
         "dmgType": "MELEE",
         "stunType": "",
@@ -38082,7 +38294,7 @@
             "startDistCollide": "NONE",
             "random": false,
             "count": 1,
-            "duration": 0.0833,
+            "duration": 0.0633,
             "clockwise": false,
             "flipLeftFace": 0,
             "circularArea": false,
@@ -41739,7 +41951,7 @@
                 "type": "SHOW_EFFECT",
                 "effect": {
                   "sheet": "specials.cold",
-                  "name": "coldGuard2Activate"
+                  "name": "coldGuard2ActivateQuiet"
                 },
                 "offset": {
                   "x": 0,
@@ -45557,6 +45769,11 @@
             "type": "WAIT"
           },
           {
+            "sticking": false,
+            "group": "beeGroup",
+            "type": "REMOVE_PROXIES"
+          },
+          {
             "followUp": "attack1End",
             "wait": false,
             "viaWalkConfig": false,
@@ -45623,7 +45840,7 @@
             "startDist": 48,
             "startDistCollide": "CLOSER",
             "random": false,
-            "count": 16,
+            "count": 12,
             "duration": 0.36,
             "clockwise": false,
             "flipLeftFace": 6,
@@ -50007,7 +50224,7 @@
               {
                 "duration": -1,
                 "align": "BOTTOM",
-                "rotateFace": 0,
+                "rotateFace": 8,
                 "flipLeftFace": true,
                 "wait": false,
                 "waitSkip": 0,
@@ -55751,7 +55968,7 @@
             "type": "WAIT"
           },
           {
-            "align": "FACE",
+            "align": "BOTTOM",
             "centralAngle": 0,
             "startAngle": 0,
             "angleVary": 0,
@@ -55782,7 +55999,7 @@
             "type": "RESET_CAMERA"
           },
           {
-            "time": 0.35,
+            "time": 0.36,
             "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },

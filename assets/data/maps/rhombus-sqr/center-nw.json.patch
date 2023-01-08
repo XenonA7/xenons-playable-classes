@@ -18,6 +18,18 @@
             "time": 0.1
           },
           {
+            "type": "SHOW_GET_MSG",
+            "msgType": "ACTIVATED",
+            "object": {
+              "en_US": "Triblader League",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            }
+          },
+          {
             "type": "PLAY_SOUND",
             "position": {
               "x": 640,
@@ -28,11 +40,21 @@
           },
           {
             "type": "SHOW_CENTER_MSG",
-            "titleText": {
-              "en_US": "\\c[3]New arena cup unlocked!\\c[0]"
-            },
             "text": {
-              "en_US": "Triblader League"
+              "en_US": "You can now duel against Triblader players at the \\c[3]Custom Cups\\c[0] counter in the arena.",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "titleText": {
+              "en_US": "\\c[3]Triblader League\\c[0]",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
             }
           },
           {

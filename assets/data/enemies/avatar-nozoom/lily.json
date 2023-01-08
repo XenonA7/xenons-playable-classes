@@ -70,7 +70,7 @@
     "COND_HEALING": 0.15
   },
   "credit": 0,
-  "exp": 1000,
+  "exp": 0,
   "maxSp": 12,
   "enduranceScale": 1,
   "healDropRate": 0,

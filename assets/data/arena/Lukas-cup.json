@@ -10,7 +10,7 @@
     "creator": {
       "en_US": "Schneider"
     },
-    "condition": "true",
+    "condition": "plot.xtm.SchneiderArenaUnlock || plot.line >= 45700",
     "music": "evoEscape",
     "noRush": true,
     "mods": [
@@ -35,7 +35,7 @@
       "platPoints": 80000,
       "coins": 0,
       "objective": {
-        "en_US": "Gyahaha! Think you can beat me?\n\\c[1]<Play as Lea>\\c[0]"
+        "en_US": "Gyahaha! Think you can beat me?"
       },
       "mods": [
         "PVP_BATTLE"

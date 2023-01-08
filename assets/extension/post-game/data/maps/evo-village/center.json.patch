@@ -1,0 +1,1195 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 869,
+      "y": 1093,
+      "level": 1,
+      "settings": {
+        "name": "XTM_LukeWalkHome",
+        "eventType": "INTERRUPTABLE",
+        "endCondition": "false",
+        "event": [
+          {
+            "entity": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "action": [
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 806,
+                  "y": 560,
+                  "lvl": "1"
+                },
+                "distance": 16
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 1047,
+                  "y": 482,
+                  "lvl": "1"
+                },
+                "distance": 16
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 1497,
+                  "y": 565,
+                  "lvl": "1"
+                },
+                "distance": 16
+              },
+              {
+                "type": "NAVIGATE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "doorSchneider"
+                },
+                "distance": 20
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "action": [
+              {
+                "type": "ENTER_DOOR",
+                "door": {
+                  "global": true,
+                  "name": "doorSchneider"
+                }
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.lukeXTMThere",
+            "changeType": "set",
+            "value": false
+          }
+        ],
+        "triggerType": "ONCE",
+        "mapId": 1480,
+        "startCondition": "tmp.lukeXTMWalk"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 898,
+      "y": 1066,
+      "level": 1,
+      "settings": {
+        "name": "XTM_SchneiderDuelScene",
+        "eventType": "CUTSCENE",
+        "endCondition": "plot.line >= 45700",
+        "event": [
+          {
+            "alpha": 1,
+            "time": 0,
+            "lighter": false,
+            "type": "SET_OVERLAY",
+            "color": "black"
+          },
+          {
+            "type": "SHOW_EFFECT",
+            "entity": {
+              "player": true
+            },
+            "effect": {
+              "sheet": "combat.triblader",
+              "name": "vanishInstant"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "align": "BOTTOM",
+            "duration": 0
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.schneiderXTMThere",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.lukeXTMThere",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "alpha": 0,
+            "time": 1.2,
+            "lighter": false,
+            "type": "SET_OVERLAY",
+            "color": "black"
+          },
+          {
+            "entity1": {
+              "global": true,
+              "name": "schneiderXTM"
+            },
+            "entity2": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "zoom": 1,
+            "type": "SET_CAMERA_BETWEEN",
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "wait": true
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "WONDERING"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "WONDERING"
+            },
+            "message": {
+              "en_US": "You really want to do this, huh?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "EYES_CLOSED"
+            },
+            "message": {
+              "en_US": "Ja!\\. I just saw firsthand what I'm up against!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "IF",
+            "withElse": true,
+            "condition": "plot.apollo.rhombusLeaWin",
+            "thenStep": [
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "SKEPTICAL"
+                },
+                "message": {
+                  "en_US": "We all did.\\. And yet you still think you stand a chance?"
+                },
+                "type": "SHOW_MSG"
+              }
+            ],
+            "elseStep": [
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "SERIOUS"
+                },
+                "message": {
+                  "en_US": "I was there too.\\. It seems mean-spirited to ask right after she lost her big duel today."
+                },
+                "type": "SHOW_MSG"
+              }
+            ]
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "pos": {
+              "x": 900,
+              "y": 1016
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_POS"
+          },
+          {
+            "type": "SHOW_EFFECT",
+            "entity": {
+              "player": true
+            },
+            "effect": {
+              "sheet": "teleport",
+              "name": "showDefault"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "align": "BOTTOM",
+            "duration": 0,
+            "wait": false
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "WAIT",
+                "time": 1.2
+              },
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "target": {
+                  "x": 1005,
+                  "y": 1044,
+                  "lvl": "1"
+                },
+                "maxTime": 0,
+                "distance": 0,
+                "precise": false,
+                "planOnly": false,
+                "teleportOnFail": false,
+                "type": "NAVIGATE_TO_POINT"
+              },
+              {
+                "face": "SOUTH_WEST",
+                "rotate": true,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "idleStretch"
+              },
+              {
+                "face": "WEST",
+                "rotate": true,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+              },
+              {
+                "type": "WAIT",
+                "time": 0.2
+              },
+              {
+                "type": "JUMP",
+                "wait": true,
+                "jumpHeight": "L"
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "EXCITED"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "EXCITED"
+            },
+            "message": {
+              "en_US": "Hi!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 1
+              },
+              {
+                "target": {
+                  "x": 837,
+                  "y": 1065,
+                  "lvl": "1"
+                },
+                "maxTime": 0,
+                "distance": 0,
+                "precise": false,
+                "planOnly": false,
+                "teleportOnFail": false,
+                "type": "NAVIGATE_TO_POINT"
+              },
+              {
+                "face": "NORTH_WEST",
+                "rotate": true,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "entity1": {
+              "global": true,
+              "name": "schneiderXTM"
+            },
+            "entity2": {
+              "player": true
+            },
+            "zoom": 1,
+            "type": "SET_CAMERA_BETWEEN",
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "schneiderXTM"
+            },
+            "action": [
+              {
+                "face": "SOUTH_EAST",
+                "rotate": true,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "action": [
+              {
+                "type": "SET_FACE_TO_ENTITY",
+                "rotate": true,
+                "entity": {
+                  "player": true
+                },
+                "rotateSpeed": 3
+              }
+            ],
+            "repeating": true,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "LAUGH"
+            },
+            "message": {
+              "en_US": "HOLERÖ!\\!\\! Lea!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "UP"
+            },
+            "message": {
+              "en_US": "Well that's perfect timing if I've ever seen it."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": {
+              "person": "main.schneider",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "message": {
+              "en_US": "How?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "COMPLAINING"
+            },
+            "message": {
+              "en_US": "Well, \\c[3]\"Super Lukas\"\\c[0] over here saw your duel earlier today."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "RANTING"
+            },
+            "message": {
+              "en_US": "And now he wants to duel against you as well."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "IF",
+            "withElse": true,
+            "condition": "plot.apollo.rhombusLeaWin",
+            "thenStep": [
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "HAND_POINT_JOKE"
+                },
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "WONDERING"
+                }
+              },
+              {
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "SURPRISED"
+                },
+                "message": {
+                  "en_US": "What's with that look?\\. Are you making fun of me?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "SMUG"
+                }
+              },
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "EYES_CLOSED"
+                },
+                "message": {
+                  "en_US": "She is most certainly making fun of you."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "COMPLAINING"
+                },
+                "message": {
+                  "en_US": "I'm a fairly high rank in the \\c[3]Rhombus Arena\\c[0], I'll have you know!"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.luke",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "SKEPTICAL"
+                },
+                "message": {
+                  "en_US": "So are you accepting the challenge?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "NOD_HAPPY"
+                },
+                "message": {
+                  "en_US": "[nods]"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "EXCITED"
+                },
+                "message": {
+                  "en_US": "Lea!"
+                },
+                "type": "SHOW_MSG"
+              }
+            ],
+            "elseStep": [
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "NERVOUS"
+                },
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "WORRIED"
+                },
+                "message": {
+                  "en_US": "I told you not to bother her with this.\\. Don't you think she's had enough for the day?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "WONDERING"
+                }
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "SHAKE_EYE_CLOSED"
+                },
+                "message": {
+                  "en_US": "[shakes head]"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "HAND_POINT_SELF_DETERMINED"
+                },
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "HAND_POINT_DETERMINED"
+                },
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "SKEPTICAL"
+                },
+                "message": {
+                  "en_US": "So you'd be willing to accept my duel?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "NOD_NERVOUS"
+                },
+                "message": {
+                  "en_US": "[nods]"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "SERIOUS"
+                },
+                "message": {
+                  "en_US": "Lea, don't feel like he's forcing you to do it.\\. If you aren't up for it, that's fine."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "HAND_POINT"
+                },
+                "message": {
+                  "en_US": "Meet!"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.schneider",
+                  "expression": "TOWARDS"
+                }
+              },
+              {
+                "person": {
+                  "person": "main.luke",
+                  "expression": "EYES_CLOSED"
+                },
+                "message": {
+                  "en_US": "I guess the duel is on then!"
+                },
+                "type": "SHOW_MSG"
+              }
+            ]
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_FACE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "schneiderXTM"
+                },
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "repeating": true,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "action": [
+              {
+                "type": "SET_FACE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "schneiderXTM"
+                },
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "repeating": true,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_TARGET",
+            "entity": {
+              "global": true,
+              "name": "schneiderXTM"
+            }
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "EYES_CLOSED"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "EYES_CLOSED"
+            },
+            "message": {
+              "en_US": "Looks like I'm off to the arena then!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.schneider",
+              "expression": "UP"
+            },
+            "message": {
+              "en_US": "I'll see you there, Lea!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "schneiderXTM"
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 1
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 811,
+                  "y": 1097,
+                  "lvl": "1"
+                },
+                "distance": 8
+              },
+              {
+                "type": "NAVIGATE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "t15"
+                },
+                "distance": 0
+              },
+              {
+                "type": "SET_FACE",
+                "face": "SOUTH",
+                "rotate": true,
+                "rotateSpeed": 3
+              },
+              {
+                "type": "SHOW_EFFECT",
+                "rotOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "effect": {
+                  "sheet": "teleport",
+                  "name": "hideDefault"
+                },
+                "duration": 0,
+                "wait": true
+              },
+              {
+                "type": "CHANGE_VAR_BOOL",
+                "varName": "tmp.schneiderXTMThere",
+                "changeType": "set",
+                "value": false
+              }
+            ],
+            "type": "DO_ACTION"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 1.25
+          },
+          {
+            "entity1": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "entity2": {
+              "player": true
+            },
+            "zoom": 1.2,
+            "type": "SET_CAMERA_BETWEEN",
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "wait": false
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_FACE_TO_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "lukeXTM"
+                },
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "lukeXTM"
+            },
+            "action": [
+              {
+                "type": "SET_FACE_TO_ENTITY",
+                "entity": {
+                  "player": true
+                },
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Lea, have you ever dueled against a \\c[3]Triblader\\c[0] before?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SHAKE"
+            },
+            "message": {
+              "en_US": "[shakes head]"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "SKEPTICAL"
+            },
+            "message": {
+              "en_US": "Best advice I can give is to try to keep your distance and avoid his melee attacks."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "ASTONISHED"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "PONDERING"
+            },
+            "message": {
+              "en_US": "If you try to get in close and combo him, that probably won't work out for you."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "EXCITED"
+            },
+            "message": {
+              "en_US": "Thanks!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "WINK"
+            },
+            "message": {
+              "en_US": "Any time!\\. You know I'm rooting for you, right?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "CHARMED"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.luke",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Anyways, I can't wait to watch it!\\. I'll see you soon!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "EXCITED"
+            },
+            "message": {
+              "en_US": "Bye!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.lukeXTMWalk",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "speed": "FASTER",
+            "transition": "EASE_IN_OUT",
+            "wait": true,
+            "waitSkip": 0,
+            "type": "RESET_CAMERA"
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "plot.xtm.SchneiderArenaUnlock",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "type": "SHOW_GET_MSG",
+            "msgType": "ACTIVATED",
+            "object": {
+              "en_US": "Schneider Arena Challenge",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            }
+          },
+          {
+            "type": "PLAY_SOUND",
+            "position": {
+              "x": 640,
+              "y": 400
+            },
+            "sound": "media/sound/hud/quest-task-solved.ogg",
+            "volume": 0.8
+          },
+          {
+            "type": "SHOW_CENTER_MSG",
+            "text": {
+              "en_US": "You can now duel against Schneider at the \\c[3]Custom Cups\\c[0] counter in the arena.",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "titleText": {
+              "en_US": "\\c[3]PVP Versus Schneider\\c[0]",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            }
+          }
+        ],
+        "triggerType": "ONCE",
+        "mapId": 1477,
+        "startCondition": "plot.line >= 45400"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 801,
+      "y": 1008,
+      "level": 1,
+      "settings": {
+        "name": "lukeXTM",
+        "characterName": "main.luke",
+        "mapId": 1479,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH_WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "tmp.lukeXTMThere",
+            "config": "normal",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 771,
+      "y": 1036,
+      "level": 1,
+      "settings": {
+        "name": "schneiderXTM",
+        "characterName": "main.schneider",
+        "mapId": 1478,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "NORTH_EAST",
+            "action": [],
+            "hidden": false,
+            "condition": "tmp.schneiderXTMThere",
+            "config": "normal",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

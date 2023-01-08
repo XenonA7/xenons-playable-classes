@@ -16803,6 +16803,15 @@
     ],
     "mirageFade": [
       {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "variance": 0.1,
+        "sound": "media/sound/battle/airon/fire-hit-medium3.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
         "alpha": 0,
         "duration": 0.2,
         "type": "CHANGE_ALPHA"
@@ -16852,7 +16861,101 @@
         "type": "COPY_SPRITE"
       }
     ],
-    "firePillarExtra": [
+    "firePillarFade": [
+      {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "variance": 0.1,
+        "sound": "media/sound/battle/airon/fire-hit-medium3.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "alpha": 0,
+        "duration": 0.2,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "particleRotate": true,
+        "startDist": 12,
+        "random": false,
+        "moveDist": 12,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          }
+        },
+        "anim": "FLAME2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -12
+        },
+        "pAlpha": {
+          "init": 0.5,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.55,
+              "y": 0.55
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.3,
+        "angleVary": 1,
+        "anim": "HEAT_BIG_TRIANGLE",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "color": "#480808",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      }
+    ],
+    "firePillarTrianglePulse": [
       {
         "useTargetAngle": false,
         "keepAngleSync": false,
@@ -16875,8 +16978,8 @@
           },
           "start": {
             "value": {
-              "x": 1.2,
-              "y": 1.2
+              "x": 1.35,
+              "y": 1.35
             },
             "spline": "EASE_OUT"
           }
@@ -16885,13 +16988,23 @@
         "angleVary": 1,
         "anim": "HEAT_BIG_TRIANGLE",
         "type": "PLAY_ANIM"
+      }
+    ],
+    "firePillarExtra": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
       },
       {
         "type": "LOOP_START"
       },
       {
-        "numParticles": 2,
-        "duration": 0.3,
+        "numParticles": 3,
+        "duration": 0,
         "clockwise": true,
         "centralAngle": 1,
         "startDist": 8,
@@ -16902,21 +17015,37 @@
           "y": 0,
           "z": 0
         },
-        "moveDist": 32,
+        "moveDist": 12,
         "keySpline": "EASE_OUT",
-        "moveRotate": 0.08,
-        "inverse": true,
+        "moveRotate": 0.04,
+        "inverse": false,
         "normalMoveDist": 0,
         "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0.0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
         "pScale": {
           "init": {
-            "x": 0.25,
-            "y": 0.25
+            "x": 0.45,
+            "y": 0.45
           },
           "start": {
             "value": {
-              "x": 0.45,
-              "y": 0.45
+              "x": 0.8,
+              "y": 0.8
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
             },
             "time": 0.1,
             "spline": ""
@@ -16925,12 +17054,12 @@
         "moveWithTarget": 0,
         "particleDuration": 0.45,
         "cancelable": false,
-        "anim": "FLAME2",
+        "anim": "HEAT_SHADOW",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
         "numParticles": 1,
-        "duration": 0.3,
+        "duration": 0.6,
         "clockwise": true,
         "centralAngle": 1,
         "startAngle": 0,
@@ -16941,21 +17070,33 @@
         "keySpline": "EASE_IN_OUT",
         "moveRotate": 0.1,
         "inverse": false,
-        "normalMoveDist": 100,
+        "normalMoveDist": 38,
         "collision": false,
         "moveWithTarget": 0.2,
-        "pScale": {
-          "init": {
-            "x": 0.05,
-            "y": 0.05
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.3
           }
         },
-        "anim": "HEAT_BIG_TRIANGLE",
-        "angleVary": 1,
+        "pScale": {
+          "init": {
+            "x": 0.4,
+            "y": 0.4
+          }
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "anim": "FLAME2",
+        "angleVary": 0,
+        "particleDuration": 0.3,
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
-        "time": 0.3,
+        "time": 0.6,
         "type": "WAIT"
       },
       {

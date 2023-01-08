@@ -81,6 +81,135 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "explosionLoud": [
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/battle/explosion-2.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.6,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "rumbleType": "HORIZONTAL",
+        "power": "MEDIUM",
+        "speed": "FASTEST",
+        "duration": 0.35,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 12,
+        "uniformRandom": 0.5,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "moveDist": 0,
+        "keySpline": "EASE",
+        "collision": false,
+        "anim": "BOMB5",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 24,
+        "uniformRandom": 0.5,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "moveDist": 0,
+        "keySpline": "EASE",
+        "collision": false,
+        "anim": "BOMB5",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 28,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "moveDist": 0,
+        "keySpline": "EASE",
+        "collision": false,
+        "anim": "BOMB5",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0.1,
+        "clockwise": true,
+        "centralAngle": 1,
+        "startAngle": 0.125,
+        "startDist": 38,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "moveDist": 0,
+        "keySpline": "EASE",
+        "collision": false,
+        "anim": "BOMB5",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startAngle": 0.25,
+        "startDist": 48,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "moveDist": 0,
+        "keySpline": "EASE",
+        "collision": false,
+        "anim": "BOMB5",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

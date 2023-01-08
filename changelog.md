@@ -1,4 +1,87 @@
-0.7.1 (12/04/22)
+0.8.0 (01/07/2023)
+### New Content
+- Added a warning about modded party members when Triblader2 is recruited at Bergen Trail
+- Added a proper story cutscene to unlock the Schneider PVP duel (near end of 3rd day in the DLC story)
+   - For save files after this point, the arena cup will be automatically unlocked
+   - Added many random assortments of party members that can be present in the stands for the duel
+### Changes
+- Removed Schneider vs Luke arena cup
+- Arena cups are all open to all playable characters now, removed relevant text from descriptions
+- Arena lobby EventTrigger for managing character configs remains implemented but is now unused
+- Minor Triblader2 party dialogue tweaks
+- Adjusted text displays for Triblader League unlock cutscene to be in-line with other arena cup unlocks
+- Vermillion Firestorm lasers audio volume reduced
+- Flash Freeze audio volume reduced when freezing enemy
+- Daybreak proxies changed from breaktype NEVER to COMBATANT
+- Added sound effect when Daybreak is thrown
+- Daybreak impact sound effect volume increased
+- Trailblazer particle effects overhauled
+- Proy turbineStunner changed from breaktype NEVER to COMBATANT
+- Added DETATCH_TIME_PARENT to the following generic proxies:
+   - rudeBuster
+   - gleamingSurgeProxy
+   - shardAura
+   - spikeAura
+   - dropShieldOrbit
+   - dropShieldStatic
+   - defenseAura
+   - fireDaggerBombThrow
+   - fireDaggerBombStuck
+   - fireDaggerThrow
+   - fireDaggerStuck
+   - daybreakThrow
+   - daybreakStuck
+   - fireTornado
+   - mirageController
+   - mirageDummy
+   - firePillar
+   - firePillarEffect
+   - turbineStunner (after rapid spin)
+   - turbineDot (after rapid spin)
+   - attackBuffProxy
+   - flameWall
+- Generic proxies that will remain without DETATCH_TIME_PARENT:
+   - gambitProxy
+   - neutralFreeze
+   - neutralLaser
+   - subPierce
+   - flameHitS
+   - solarEruptionTipR
+   - solarEruptionTipL
+   - solarEruptionHead
+   - solarEruptionChainHitbox
+   - sunsteelController
+   - heatPierce
+   - flameHit
+   - meteor
+   - turbineStunner
+   - flamethrowerTriangle
+   - enelSwordSummon
+   - enelSwordAura
+   - firestormBase
+   - subPierceWeak
+   - flameHitSWeak
+   - heatLaser
+### Fixes
+- Walls 1-3 now destroy with proper effects in mod\char-select\beta.json
+- Fixed Lily granting exp in training island duels
+- Minor typo fix in Bergen Trail entrance modded dialogue
+- Fixed a rare issue where Spectral Legion would only spawn 3 clones
+- Fixed First Fractal particle effect alignment
+### Balance
+- Beekeeper total bees reduced by 4, damage per bee increased
+- Beekeeper will now despawn any previous bees when used
+- First Fractal damage slightly reduced
+- Blade of E'nel now grants full super armor (hit resist MASSIVE) while buff is active
+- Blade of E'nel now grants a shield that resists 10% of all damage while active
+- Homing Shards increased proxy lifetime from 1.5 to 2.0 seconds
+- Throwing Knives now shoots 2 additional knives on third volley
+- Trailblazer rate of fire increased
+- Trailblazer now has additional explosions when fire is spawned, dealing additional damage
+- Trailblazer fire contact damage slightly reduced
+
+
+0.7.1 (12/04/2022)
 ### Fixes
 - Fixed Triblader2 party member contact event story progress threshold
 ### Balance

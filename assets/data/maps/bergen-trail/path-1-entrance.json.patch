@@ -574,7 +574,7 @@
                             "expression": "DEFAULT"
                           },
                           "message": {
-                            "en_US": "Darn, I think she ditched me. We were supposed to meet up here before heading to \\c[3] Bergen Village\\c[0]."
+                            "en_US": "Darn, I think she ditched me. We were supposed to meet up here before heading to \\c[3]Bergen Village\\c[0]."
                           },
                           "type": "SHOW_MSG"
                         },
@@ -963,6 +963,42 @@
                   "type": "SET_PARTY_MEMBER_ALL_ELEMENTS",
                   "member": "triblader2",
                   "allElements": false
+                },
+                {
+                  "titleText": {
+                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
+                  },
+                  "text": {
+                    "en_US": "The game does not properly manage modded party members in story cutscenes.\\. For example, if you have a modded party member before an Apollo duel, they will accompany you into the duel and team up against Apollo."
+                  },
+                  "type": "SHOW_CENTER_MSG"
+                },
+                {
+                  "titleText": {
+                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
+                  },
+                  "text": {
+                    "en_US": "This is mostly harmless, although there are a few cutscenes where glitches or problems can result from having a modded party member in your party."
+                  },
+                  "type": "SHOW_CENTER_MSG"
+                },
+                {
+                  "titleText": {
+                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
+                  },
+                  "text": {
+                    "en_US": "If you encounter any specific cutscenes where a modded party member causes serious problems, please report the issue to the mod creator and proceed without the party member until that cutscene is over."
+                  },
+                  "type": "SHOW_CENTER_MSG"
+                },
+                {
+                  "titleText": {
+                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
+                  },
+                  "text": {
+                    "en_US": "Individual cutscenes with reported problems will be patched in future mod versions, although there should mostly not be problems using modded party members throughout the game."
+                  },
+                  "type": "SHOW_CENTER_MSG"
                 },
                 {
                   "name": "END",

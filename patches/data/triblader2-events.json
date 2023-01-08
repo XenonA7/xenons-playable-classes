@@ -554,7 +554,7 @@
           },
           {
             "0": " ",
-            "count": 2,
+            "count": 3,
             "weight": 1,
             "activeCondition": "!combat.active"
           }
@@ -611,6 +611,18 @@
           {
             "message": {
               "en_US": "Sometimes I wonder why I choose to follow you."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "triblader.triblader2",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_2": [
+          {
+            "message": {
+              "en_US": "Dude...\\. What?"
             },
             "type": "SHOW_SIDE_MSG",
             "person": {

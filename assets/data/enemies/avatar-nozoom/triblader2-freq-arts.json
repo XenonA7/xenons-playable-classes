@@ -1676,6 +1676,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": 1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -2146,19 +2149,19 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "volume": 0.7,
+          "volume": 0.5,
           "global": false,
           "loop": false,
-          "speed": 1.3,
+          "speed": 1.2,
           "variance": 0.1,
           "sound": "media/sound/battle/dash-strong-1.ogg",
           "type": "PLAY_SOUND"
         },
         {
-          "volume": 1.5,
+          "volume": 1.2,
           "global": false,
           "loop": false,
-          "speed": 1.2,
+          "speed": 1.5,
           "variance": 0.1,
           "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
           "type": "PLAY_SOUND"
@@ -5858,6 +5861,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "SHOW_RANDOM_ANIMATION",
           "randAnims": [
             "default",
@@ -6046,6 +6052,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "SHOW_RANDOM_ANIMATION",
           "randAnims": [
             "default",
@@ -6219,6 +6228,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "kind": "PART_TARGET_ROOT",
           "type": "SET_TEMP_TARGET"
@@ -20292,6 +20304,10 @@
             "type": "SET_TEMP_TARGET"
           },
           {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
             "selectType": "TARGET",
             "effect": {
               "sheet": "specials.heat",
@@ -20420,8 +20436,67 @@
             "type": "REMOVE_SHIELD"
           },
           {
-            "kind": "GUARDED_ATTACKER",
-            "type": "SET_TEMP_TARGET"
+            "duration": 0.5,
+            "target": "TARGET",
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "flameDash"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "target": "TARGET",
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "flameRingStrong"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.5,
+            "target": "TARGET",
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "redTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "value": true,
@@ -20505,69 +20580,6 @@
             }
           },
           {
-            "duration": 0.5,
-            "target": "TARGET",
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": true,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.heat",
-              "name": "flameDash"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "target": "TARGET",
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.heat",
-              "name": "flameRingStrong"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0.5,
-            "target": "TARGET",
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.heat",
-              "name": "redTrail"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
             "type": "SET_JUMPING",
             "value": false
           },
@@ -20592,6 +20604,10 @@
             "speed": "FASTER",
             "fade": true,
             "type": "RUMBLE_SCREEN"
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
           },
           {
             "time": 0.45,

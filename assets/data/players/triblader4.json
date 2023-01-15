@@ -1180,6 +1180,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "SHOW_RANDOM_ANIMATION",
           "randAnims": [
             "default",
@@ -1673,19 +1676,19 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "volume": 0.7,
+          "volume": 0.5,
           "global": false,
           "loop": false,
-          "speed": 1.3,
+          "speed": 1.2,
           "variance": 0.1,
           "sound": "media/sound/battle/dash-strong-1.ogg",
           "type": "PLAY_SOUND"
         },
         {
-          "volume": 1.5,
+          "volume": 1.2,
           "global": false,
           "loop": false,
-          "speed": 1.2,
+          "speed": 1.5,
           "variance": 0.1,
           "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
           "type": "PLAY_SOUND"
@@ -3840,6 +3843,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 0,
           "type": "SET_Z_GRAVITY_FACTOR"
         },
@@ -4516,6 +4522,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "SHOW_RANDOM_ANIMATION",
           "randAnims": [
@@ -7248,6 +7257,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": 1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -8638,6 +8650,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "kind": "PART_TARGET_ROOT",
           "type": "SET_TEMP_TARGET"
@@ -18787,6 +18802,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 0.8,
           "global": false,
           "loop": false,
@@ -19343,7 +19361,7 @@
     },
     "icicleMediumLineSimple": {
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "ACTION",
       "action": [
         {
           "duration": 0.8,
@@ -21437,6 +21455,9 @@
       },
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "volume": 0.8,
           "global": false,
@@ -25923,6 +25944,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BASE",
           "rotateFace": 0,
@@ -26072,6 +26096,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BASE",
           "rotateFace": 0,
@@ -26180,6 +26207,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "align": "BOTTOM",
           "centralAngle": 0,
@@ -35464,6 +35494,10 @@
                 "type": "SET_TEMP_TARGET"
               },
               {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              },
+              {
                 "selectType": "TARGET",
                 "effect": {
                   "sheet": "specials.heat",
@@ -35593,8 +35627,67 @@
                 "type": "REMOVE_SHIELD"
               },
               {
-                "kind": "GUARDED_ATTACKER",
-                "type": "SET_TEMP_TARGET"
+                "duration": 0.5,
+                "target": "TARGET",
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "flameDash"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "target": "TARGET",
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "flameRingStrong"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0.5,
+                "target": "TARGET",
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "redTrail"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
               },
               {
                 "value": true,
@@ -35678,69 +35771,6 @@
                 }
               },
               {
-                "duration": 0.5,
-                "target": "TARGET",
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": true,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameDash"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0,
-                "target": "TARGET",
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameRingStrong"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0.5,
-                "target": "TARGET",
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "redTrail"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
                 "type": "SET_JUMPING",
                 "value": false
               },
@@ -35765,6 +35795,10 @@
                 "speed": "FASTER",
                 "fade": true,
                 "type": "RUMBLE_SCREEN"
+              },
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
               },
               {
                 "time": 0.45,
@@ -38221,7 +38255,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0,
+              "dash": -1,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -38426,6 +38460,15 @@
             "logicTimeScale": 1,
             "moveXYScale": 1,
             "type": "ADD_TEMP_INFLUENCE"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
           },
           {
             "duration": 0.5,
@@ -43138,10 +43181,10 @@
       },
       "GUARD_SPECIAL1_B": {
         "name": {
-          "en_US": "Ice Brace"
+          "en_US": "\\c[2]Ice Brace\\c[0]"
         },
         "description": {
-          "en_US": "Instantly encase yourself in ice, negating huge amounts of damage for a short time."
+          "en_US": "Instantly encase yourself in ice, negating huge amounts of damage for a short time. Heals \\c[2]+5%\\c[0] of HP throughout the duration but can be dash-canceled."
         },
         "dmgType": "NONE",
         "stunType": "",
@@ -43150,17 +43193,17 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0,
               "action": -1,
               "move": -1,
               "reaim": -1
             }
           },
           {
-            "volume": 1.6,
+            "volume": 1.5,
             "global": false,
             "loop": false,
-            "speed": 0.7,
+            "speed": 1.0,
             "variance": 0.1,
             "sound": "media/sound/battle/ice-freeze.ogg",
             "type": "PLAY_SOUND"
@@ -43168,7 +43211,6 @@
           {
             "face": "SOUTH",
             "rotate": false,
-            "rotateSpeed": 3,
             "type": "SET_FACE"
           },
           {
@@ -43202,7 +43244,7 @@
             "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
-            "actionDetached": true,
+            "actionDetached": false,
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
@@ -43242,22 +43284,6 @@
             }
           },
           {
-            "name": "techShield",
-            "actionDetached": true,
-            "type": "ADD_SHIELD",
-            "shield": {
-              "type": "DIRECTIONAL",
-              "settings": {
-                "baseFactor": 0.15,
-                "hitResist": "MASSIVE",
-                "strength": "BLOCK_ALL",
-                "stableOverride": "MASSIVE",
-                "duration": 3,
-                "range": 1
-              }
-            }
-          },
-          {
             "value": -1,
             "type": "SET_WEIGHT"
           },
@@ -43284,8 +43310,77 @@
             }
           },
           {
-            "time": 3,
+            "attribName": "loops",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 6
+          },
+          {
+            "name": "loopStart",
+            "type": "LABEL"
+          },
+          {
+            "attribName": "loops",
+            "changeType": "sub",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "name": "techShield",
+            "actionDetached": true,
+            "type": "ADD_SHIELD",
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "baseFactor": 0.15,
+                "hitResist": "MASSIVE",
+                "strength": "BLOCK_ALL",
+                "stableOverride": "MASSIVE",
+                "duration": 0.5,
+                "range": 1
+              }
+            }
+          },
+          {
+            "value": 0.00833,
+            "target": "SELF",
+            "hideNumbers": false,
+            "type": "REGEN_HP"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "drops",
+              "name": "healing_blue"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
             "type": "WAIT"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.loops > 0",
+            "thenStep": [
+              {
+                "name": "loopStart",
+                "type": "GOTO_LABEL"
+              }
+            ]
           },
           {
             "group": "spikeDmgGroup",
@@ -43762,7 +43857,7 @@
           "en_US": "\\c[2]Stasis Stance\\c[0]"
         },
         "description": {
-          "en_US": "Quickly encase yourself in ice for longer, negating even more damage and healing \\c[2]+25%\\c[0] of your maximum HP while frozen."
+          "en_US": "Quickly encase yourself in ice for longer, negating even more damage and healing \\c[2]+25%\\c[0] of your maximum HP while frozen. Dash-cancelable."
         },
         "dmgType": "",
         "stunType": "",
@@ -43771,7 +43866,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -43967,6 +44062,82 @@
             "value": 1
           },
           {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.loops == 8",
+            "thenStep": [
+              {
+                "sticking": false,
+                "group": "wall",
+                "keepCount": 8,
+                "type": "REMOVE_PROXIES"
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 1,
+                "startAngle": 0,
+                "angleVary": 0,
+                "startDist": 24,
+                "startDistAdd": 72,
+                "startDistCollide": "DROP",
+                "random": false,
+                "count": 4,
+                "duration": 1,
+                "clockwise": false,
+                "repeat": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "icicleSmall",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 1,
+                "startAngle": 0.33,
+                "angleVary": 0,
+                "startDist": 24,
+                "startDistAdd": 72,
+                "startDistCollide": "DROP",
+                "random": false,
+                "count": 4,
+                "duration": 1,
+                "clockwise": false,
+                "repeat": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "icicleSmall",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 1,
+                "startAngle": 0.66,
+                "angleVary": 0,
+                "startDist": 24,
+                "startDistAdd": 72,
+                "startDistCollide": "DROP",
+                "random": false,
+                "count": 4,
+                "duration": 1,
+                "clockwise": false,
+                "repeat": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "icicleSmall",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
             "name": "techShield",
             "actionDetached": true,
             "type": "ADD_SHIELD",
@@ -44024,7 +44195,7 @@
                 "flipLeftFace": false,
                 "wait": false,
                 "waitSkip": 0,
-                "actionDetached": true,
+                "actionDetached": false,
                 "fixPos": false,
                 "type": "SHOW_EFFECT",
                 "effect": {
@@ -54695,6 +54866,10 @@
                 "type": "SET_TEMP_TARGET"
               },
               {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              },
+              {
                 "selectType": "TARGET",
                 "hitDir": "AWAY",
                 "align": "BOTTOM",
@@ -54851,6 +55026,10 @@
                 "time": 0.1,
                 "stopBeforeEdge": true,
                 "type": "MOVE_FORWARD"
+              },
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
               },
               {
                 "time": 0.5,

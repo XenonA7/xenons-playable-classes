@@ -17643,6 +17643,7 @@
         },
         "particleDuration": 1.5,
         "moveWithTarget": 1,
+        "cancelable": true,
         "angleVary": 1,
         "anim": "SNOWFLAKE1",
         "type": "OFFSET_PARTICLE_CIRCLE"

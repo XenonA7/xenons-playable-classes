@@ -1,3 +1,50 @@
+0.8.1 (01/14/2023)
+### Changes
+- Capitalized Triblader2/3/4/5 names in party menu
+- Minor adjustments to Daybreak throw sound effect properties
+- Trailblazer can no longer be canceled by dashing until the final spin attack
+- Ice Brace audio and effect adjustments
+- Schneider/Luke now use their sitting animation for Ice Brace and Stasis Stance
+- Schneider/Luke now use their own alternate animations for Tower of Tranquility
+- Proxy icicleMediumLineSimple changed to breakType ACTION
+- Added DETATCH_TIME_PARENT to the following generic proxies:
+   - frozenStar
+   - fallingRockBig
+   - fallingRockMed
+   - rockLine
+   - icicleSmall
+   - snowballFlurry
+   - iceFlak
+   - hailBomb
+   - iceFreeze
+   - icicleBigDmg
+- Generic proxies that will remain without DETATCH_TIME_PARENT:
+   - polarGeyser
+   - frozenRupture
+   - avalancheProxy
+   - snowHurricaneCharge
+   - snowHurricane
+   - frozenRay
+   - icicleMediumLineSimple
+   - icicleSubHit
+   - icicleSubHitNoFly
+   - icicleHugeDelay
+   - towerBase
+   - towerWeatherController
+   - icePlatform
+   - icicleSmallLasting
+### Fixes
+- Removed duplicate SET_TEMP_TARGET from Recoil Slash
+- Recoil Slash particle effects should show on countered enemy more consistently
+### Balance
+- Recoil Slash now grants super armor (hit resist MASSIVE) while counterattacking
+- Verdant Infection now grants super armor (hit resist MASSIVE) while counterattacking
+   - Enemy variant already contained this property, only player files updated
+- Ice Brace now heals 5% of HP throughout the full duration
+- Ice Brace can now be canceled with a dash
+- Stasis Stance can now be canceled with a dash
+- Added an additional icicle attack to Stasis Stance
+
 0.8.0 (01/07/2023)
 ### New Content
 - Added a warning about modded party members when Triblader2 is recruited at Bergen Trail

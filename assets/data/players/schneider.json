@@ -774,6 +774,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 0.6,
           "global": false,
           "loop": false,
@@ -908,6 +911,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "CONNECT_PROXY_TO_TARGET"
         },
@@ -2276,10 +2282,14 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "type": "SET_OWNER_REPLACE_TARGET"
         },
         {
           "searchType": "CLOSE_RANGE",
+          "distance": 512,
           "type": "SET_CLOSE_TEMP_TARGET"
         },
         {
@@ -2347,6 +2357,9 @@
       "copyOwnerAnims": true,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "SET_OWNER_REPLACE_TARGET"
         },
@@ -4986,6 +4999,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -5282,6 +5298,9 @@
       "copyOwnerAnims": true,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "SET_OWNER_REPLACE_TARGET"
         },
@@ -7593,6 +7612,9 @@
       },
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "target": "TARGET",
@@ -7678,6 +7700,9 @@
         "z": 24
       },
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": -1,
           "align": "BOTTOM",
@@ -9224,6 +9249,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "align": "BOTTOM",
           "type": "SHOOT_PROXY",
           "proxy": "essenceProxyController",
@@ -9287,6 +9315,9 @@
       "copyOwnerAnims": false,
       "breakType": "ACTION",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "name": "repeat",
           "type": "LABEL"
@@ -9743,6 +9774,9 @@
       },
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "volume": 0.95,
           "global": false,
           "variance": 0.1,
@@ -9951,7 +9985,7 @@
       "hp": 0,
       "stickToSource": "NONE",
       "stickFaceAlign": false,
-      "group": "",
+      "group": "arcingFaeGroup",
       "walkAnims": {
         "idle": "idle",
         "move": "hobble",
@@ -13183,6 +13217,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -13304,6 +13341,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "minTime": 0,
           "maxTime": 3,
@@ -13713,6 +13753,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "kind": "PART_TARGET_ROOT",
           "type": "SET_TEMP_TARGET"
@@ -14136,6 +14179,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -14368,6 +14414,9 @@
       "breakType": "NEVER",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "kind": "PART_TARGET_ROOT",
           "type": "SET_TEMP_TARGET"
         },
@@ -14565,6 +14614,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "value": false,
           "immediately": true,
@@ -14796,6 +14848,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "value": false,
           "immediately": true,
@@ -15395,6 +15450,9 @@
       },
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "sticking": false,
           "ignoreSelf": true,
           "group": "vitalitySpringGroup",
@@ -15555,6 +15613,9 @@
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "duration": 0,
           "target": "TARGET",
@@ -17729,9 +17790,10 @@
       "timeConnect": true,
       "noMoveRotate": true,
       "attack": {
-        "type": "LIGHT",
+        "type": "MEDIUM",
+        "fly": "LIGHT",
         "element": "WAVE",
-        "damageFactor": 0.25,
+        "damageFactor": 0.28,
         "reverse": false,
         "status": 0.2,
         "guardable": "",
@@ -17783,6 +17845,9 @@
       "copyOwnerAnims": true,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "type": "SET_OWNER_REPLACE_TARGET"
         },
@@ -17879,8 +17944,9 @@
           }
         },
         {
-          "duration": 0.5,
+          "duration": -1,
           "align": "BOTTOM",
+          "group": "swordEffect",
           "rotateFace": 6,
           "flipLeftFace": true,
           "wait": false,
@@ -17902,6 +17968,10 @@
           "type": "WAIT_UNTIL",
           "maxTime": 0.5,
           "condition": "entity.srcAttrib.phalanxShoot"
+        },
+        {
+          "group": "swordEffect",
+          "type": "CLEAR_EFFECTS"
         },
         {
           "wait": false,
@@ -18327,7 +18397,7 @@
       "stickToSource": "NONE",
       "stickFaceAlign": false,
       "group": "",
-      "hp": 2.5,
+      "hp": 3.0,
       "size": {
         "x": 16,
         "y": 16,
@@ -18343,6 +18413,9 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
         {
           "align": "BOTTOM",
           "centralAngle": 0,
@@ -18398,6 +18471,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -18437,7 +18513,7 @@
           "type": "SET_TEMP_TARGET"
         },
         {
-          "time": 0.25,
+          "time": 0.15,
           "type": "WAIT"
         },
         {
@@ -51717,7 +51793,7 @@
             "sound": "media/sound/battle/enemies/discharge.ogg"
           },
           {
-            "volume": 1.5,
+            "volume": 1.3,
             "global": false,
             "loop": false,
             "speed": 1,
@@ -51821,7 +51897,6 @@
             "uniformDir": 0,
             "delay": 0,
             "repeat": false,
-            "maxGroundDistance": 16,
             "type": "SHOOT_PROXY_RANGE",
             "proxy": "thunderSpawner",
             "offset": {
@@ -51846,7 +51921,6 @@
             "uniformDir": 0,
             "delay": 0,
             "repeat": true,
-            "maxGroundDistance": 16,
             "type": "SHOOT_PROXY_RANGE",
             "proxy": "thunderSpawner",
             "offset": {
@@ -51871,7 +51945,6 @@
             "uniformDir": 0,
             "delay": 0,
             "repeat": true,
-            "maxGroundDistance": 16,
             "type": "SHOOT_PROXY_RANGE",
             "proxy": "thunderSpawner",
             "offset": {
@@ -53462,6 +53535,12 @@
             }
           },
           {
+            "ignoreSelf": true,
+            "group": "arcingFaeGroup",
+            "keepCount": 1,
+            "type": "REMOVE_PROXIES"
+          },
+          {
             "duration": 0,
             "align": "CENTER",
             "rotateFace": -1,
@@ -55007,6 +55086,32 @@
                       "type": "END_LOCK"
                     }
                   ]
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "target": "TARGET",
+                "rotOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "rotateFace": 6,
+                "flipLeftFace": true,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "ignoreSlowMo": true,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "enemies.gods",
+                  "name": "verdantInfectionTrigger"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
                 }
               },
               {

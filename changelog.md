@@ -1,3 +1,47 @@
+0.8.2 (01/15/2023)
+### New Content
+- Added Ice Flak to PVP enemy move pool (they did not previously have a Lv.1 Cold Throw art)
+### Changes
+- Added a new particle effect when Verdant Infection is inflicted on an enemy
+- Warp Decoy can search further for a target to face (visual only)
+- Thunder Wrath audio volume slightly reduced
+- Removed maxGroundDistance restriction from Thunder Wrath (will work now even if you dash off cliffs)
+- Added DETATCH_TIME_PARENT to the following generic proxies:
+   - vitalityCurse
+   - vitalityCurseDrain
+   - bounceOrb
+   - vitalitySpring
+   - springAbsorbDot
+   - waveBomb
+   - waveDummy4
+   - waveLaserSpawn
+   - waveLaser
+   - waveMine
+   - waveDummy
+   - soulShatter
+   - waveDummy2
+   - spiritfall
+   - fallingFaeSmall
+   - fallingFaeBig
+   - waveTurretBody
+   - waveTurret
+   - essenceProxy
+   - essenceProxyController
+   - waveTimeBomb
+   - waveTimeBombExploder
+- Generic proxies that will remain without DETATCH_TIME_PARENT:
+   - waveMortar
+   - waveDashBoom
+   - exploTrail
+   - waveAbsorbDot
+### Balance
+   - Arcing Fae is now capped at two orbs maximum at a time. Shooting a third will despawn the first one.
+   - So'najiz Phalanx increased damage on initial wave bullets
+   - So'najiz Phalanx wave bullets attack strength changed from LIGHT to MEDIUM, will be harder to escape
+   - So'najiz Phalanx now starts shooting slightly faster (less starting lag)
+   - So'najiz Phalanx clones increased HP
+   - So'najiz Phalanx final lasers reduced delay between preview and activation
+
 0.8.1 (01/14/2023)
 ### Changes
 - Capitalized Triblader2/3/4/5 names in party menu

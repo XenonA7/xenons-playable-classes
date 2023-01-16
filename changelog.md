@@ -1,3 +1,14 @@
+0.8.3 (01/16/2023)
+### Changes
+- Renamed the main effect file to tribladerXTM.json
+- Cold particle effects moved to patch file format
+- cold-tri.json effect file deleted, data merged into cold.json patch
+- Icicle particle effects moved to patch file format
+- Heat particle effects moved to patch file format
+- Neutral particle effects moved to patch file format
+- Shock particle effects moved to patch file format
+- Replaced modded vanilla effect "slowMotionClock" with modded effect "slowMotionClockTriblader"
+
 0.8.2 (01/15/2023)
 ### New Content
 - Added Ice Flak to PVP enemy move pool (they did not previously have a Lv.1 Cold Throw art)

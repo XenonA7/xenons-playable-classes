@@ -930,7 +930,7 @@
         "y": 24,
         "z": 8
       },
-      "effects": "combat.triblader",
+      "effects": "combat.tribladerXTM",
       "effectKeys": {
         "bounce": "triProjetileBounce",
         "wall": "triProjetileBounce",
@@ -1020,7 +1020,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "vitalityCurse"
           },
           "offset": {
@@ -1044,7 +1044,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveSparks"
           },
           "offset": {
@@ -1176,7 +1176,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "vitalityCurseEffect"
           },
           "offset": {
@@ -1385,7 +1385,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "spikeAura"
           },
           "offset": {
@@ -1503,7 +1503,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "rudeBusterTrail"
           },
           "offset": {
@@ -1695,7 +1695,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.cold-tri",
+            "sheet": "specials.cold",
             "name": "starChargeTriangle"
           },
           "offset": {
@@ -1866,7 +1866,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksLiteTravel"
           },
           "offset": {
@@ -2019,7 +2019,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksLite"
           },
           "offset": {
@@ -2183,7 +2183,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksTravel"
           },
           "spriteFilter": [
@@ -2354,7 +2354,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparks"
           },
           "spriteFilter": [
@@ -3074,7 +3074,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "shockBoltNarrow"
           },
           "offset": {
@@ -3151,7 +3151,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveDummyAura"
           },
           "offset": {
@@ -3312,7 +3312,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "sweepWave"
               },
               "offset": {
@@ -3406,7 +3406,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "sweepWaveRev"
               },
               "offset": {
@@ -3500,7 +3500,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "sweepWave"
               },
               "offset": {
@@ -3593,7 +3593,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "finisherWave"
               },
               "offset": {
@@ -3768,7 +3768,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveDummyAura"
           },
           "offset": {
@@ -4593,7 +4593,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveSpecialCharge"
           },
           "offset": {
@@ -4664,7 +4664,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveSpecialSweep"
           },
           "offset": {
@@ -4913,7 +4913,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "sweepWave"
           },
           "offset": {
@@ -5007,7 +5007,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "sweepWaveRev"
           },
           "offset": {
@@ -5101,7 +5101,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "sweepWave"
           },
           "offset": {
@@ -5194,7 +5194,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "finisherWave"
           },
           "offset": {
@@ -5596,7 +5596,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.cold-tri",
+            "sheet": "specials.cold",
             "name": "icicleGround"
           },
           "offset": {
@@ -5922,7 +5922,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "blueSparkleMed"
           },
           "offset": {
@@ -6113,7 +6113,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "blueSparkleSmall"
           },
           "offset": {
@@ -6504,7 +6504,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "bombTriangle"
           },
           "offset": {
@@ -6942,7 +6942,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveInfection"
           },
           "spriteFilter": [
@@ -6965,7 +6965,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveBombTick"
           },
           "offset": {
@@ -7031,7 +7031,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveInfection"
           },
           "spriteFilter": [
@@ -7055,7 +7055,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveBombAlmost"
           },
           "offset": {
@@ -8580,7 +8580,7 @@
         "y": 24,
         "z": 12
       },
-      "effects": "combat.triblader",
+      "effects": "combat.tribladerXTM",
       "effectKeys": {
         "bounce": "triProjetileBounce",
         "wall": "triProjetileBounce",
@@ -8890,7 +8890,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "cyberCharge"
           },
           "offset": {
@@ -9027,7 +9027,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "cyberEmit"
           },
           "offset": {
@@ -9273,7 +9273,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "stabShockLoopBasic"
           },
           "offset": {
@@ -10228,7 +10228,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "turbineHeatwave"
           },
           "offset": {
@@ -10763,7 +10763,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mineAppear"
           },
           "offset": {
@@ -10783,7 +10783,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mineCharge"
           },
           "offset": {
@@ -10811,7 +10811,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mineBlink"
           },
           "offset": {
@@ -10831,7 +10831,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "waveMine"
           },
           "offset": {
@@ -10851,7 +10851,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mineTriangle"
           },
           "offset": {
@@ -11191,7 +11191,7 @@
             "z": 0
           },
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "solarChain"
           },
           "offset": {
@@ -11464,7 +11464,7 @@
             "z": 0
           },
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "solarChain"
           },
           "offset": {
@@ -11633,7 +11633,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksSE"
           },
           "spriteFilter": [
@@ -11724,7 +11724,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksSE"
           },
           "spriteFilter": [
@@ -12009,7 +12009,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mirageHeatEffect"
           },
           "offset": {
@@ -12051,7 +12051,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mirageWhirl"
           }
         },
@@ -12126,7 +12126,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "vanishInstant"
               },
               "offset": {
@@ -12211,7 +12211,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "heatSpecialSweepEnd"
           },
           "offset": {
@@ -12241,7 +12241,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "mirageFade"
           },
           "offset": {
@@ -12904,7 +12904,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksLiteTravel"
           },
           "offset": {
@@ -13000,7 +13000,7 @@
               "fixPos": false,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "combat.triblader",
+                "sheet": "combat.tribladerXTM",
                 "name": "vanishInstant"
               },
               "offset": {
@@ -13145,7 +13145,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "daybreakSparksLite"
           },
           "offset": {
@@ -13192,7 +13192,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "bombPulse"
           },
           "offset": {
@@ -13219,7 +13219,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "vanishInstant"
           },
           "offset": {
@@ -13358,7 +13358,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "frozenRayTrail"
           },
           "offset": {
@@ -13744,7 +13744,7 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.triblader",
+            "sheet": "combat.tribladerXTM",
             "name": "snowflakeFlak"
           },
           "offset": {
@@ -17083,7 +17083,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialCharge"
         },
         "offset": {
@@ -17146,7 +17146,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialSweep"
         },
         "offset": {
@@ -17251,7 +17251,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialCharge"
         },
         "offset": {
@@ -17335,7 +17335,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "wervynSweep"
         },
         "offset": {
@@ -17598,7 +17598,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "neutralCounterGuard"
         },
         "offset": {
@@ -17618,7 +17618,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "neutralCounterGuard2"
         },
         "offset": {
@@ -17760,7 +17760,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "parryHide"
             },
             "offset": {
@@ -17877,7 +17877,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepNeutralDouble"
             },
             "offset": {
@@ -18209,7 +18209,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialCharge"
         },
         "offset": {
@@ -18288,7 +18288,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepNeutral"
         },
         "offset": {
@@ -18360,7 +18360,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialSweepEnd"
         },
         "offset": {
@@ -18498,7 +18498,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "nSpecialSweepEnd"
         },
         "offset": {
@@ -18530,7 +18530,7 @@
         "hitDelay": 0,
         "type": "DIRECT_HIT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "gs-strike"
         },
         "attack": {
@@ -18637,7 +18637,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "fireWhirl"
         }
       },
@@ -18706,7 +18706,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialSweepEnd"
         },
         "offset": {
@@ -18967,7 +18967,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepHeat"
         },
         "offset": {
@@ -19067,7 +19067,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepHeatRev"
         },
         "offset": {
@@ -19150,7 +19150,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialCharge"
         },
         "offset": {
@@ -19359,7 +19359,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialSweepEnd"
         },
         "offset": {
@@ -19476,7 +19476,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialCharge"
         },
         "offset": {
@@ -19660,7 +19660,7 @@
         "actionDetached": false,
         "fixPos": false,
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialSweepBig"
         },
         "offset": {
@@ -19916,7 +19916,7 @@
         "actionDetached": false,
         "fixPos": false,
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialSweepBig"
         },
         "offset": {
@@ -19984,7 +19984,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "vanishMedium"
         },
         "offset": {
@@ -20144,7 +20144,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "firestormCharge"
         }
       },
@@ -20159,7 +20159,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "showInstant"
         },
         "offset": {
@@ -20226,7 +20226,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "finisherHeat"
         },
         "offset": {
@@ -20963,7 +20963,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepHeatDouble"
             },
             "offset": {
@@ -21153,7 +21153,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatDashShadow"
         },
         "offset": {
@@ -21400,7 +21400,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "heatSpecialSweepEnd"
         },
         "offset": {
@@ -21524,7 +21524,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "spikeAuraHeat"
         },
         "offset": {
@@ -21715,7 +21715,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "stabHeatLoopFast"
             },
             "offset": {
@@ -22069,7 +22069,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepColdRev"
         },
         "offset": {
@@ -22182,7 +22182,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepCold"
         },
         "offset": {
@@ -22314,7 +22314,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialCharge"
         },
         "offset": {
@@ -22458,7 +22458,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialSweepEnd"
         },
         "offset": {
@@ -22597,7 +22597,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialCharge"
         },
         "offset": {
@@ -22636,7 +22636,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "wervynSweepCold"
         },
         "offset": {
@@ -22842,7 +22842,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepColdDouble"
         },
         "offset": {
@@ -23038,7 +23038,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepColdDoubleRev"
         },
         "offset": {
@@ -23134,7 +23134,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialCharge"
         },
         "offset": {
@@ -23197,7 +23197,7 @@
         "actionDetached": false,
         "fixPos": false,
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialSweepBig"
         },
         "offset": {
@@ -23485,7 +23485,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialCharge"
         },
         "offset": {
@@ -23671,7 +23671,7 @@
         "actionDetached": false,
         "fixPos": false,
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialSweepBig"
         },
         "offset": {
@@ -23956,7 +23956,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabColdLoopFast"
         },
         "offset": {
@@ -24135,7 +24135,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialCharge"
         },
         "offset": {
@@ -24277,7 +24277,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepCold"
         },
         "offset": {
@@ -24418,7 +24418,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepColdRev"
         },
         "offset": {
@@ -24559,7 +24559,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepCold"
         },
         "offset": {
@@ -24630,7 +24630,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "coldSpecialSweepEnd"
         },
         "offset": {
@@ -24704,7 +24704,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabCold"
         },
         "offset": {
@@ -25005,7 +25005,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "spikeAuraCold"
         },
         "offset": {
@@ -25289,7 +25289,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabShock"
         },
         "offset": {
@@ -25500,7 +25500,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabShock"
         },
         "offset": {
@@ -25860,7 +25860,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabShock"
         },
         "offset": {
@@ -25984,7 +25984,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "triforce"
             },
             "offset": {
@@ -26206,7 +26206,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockDouble"
             },
             "offset": {
@@ -26310,7 +26310,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockDoubleRev"
             },
             "offset": {
@@ -26474,7 +26474,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockDouble"
             },
             "offset": {
@@ -26645,7 +26645,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "shockSpecialCharge"
             },
             "offset": {
@@ -26750,7 +26750,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "wervynSweepShock"
             },
             "offset": {
@@ -27075,7 +27075,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockShot"
         },
         "offset": {
@@ -27135,7 +27135,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockShot"
         },
         "offset": {
@@ -27207,7 +27207,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockShot"
         },
         "offset": {
@@ -27356,7 +27356,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockShot"
         },
         "offset": {
@@ -27409,7 +27409,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepShock"
         },
         "offset": {
@@ -27467,7 +27467,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockSpecialCharge"
         },
         "offset": {
@@ -27548,7 +27548,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockShot"
         },
         "offset": {
@@ -27601,7 +27601,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepShock"
         },
         "offset": {
@@ -27635,7 +27635,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockSpecialSweepEnd"
         },
         "offset": {
@@ -27745,7 +27745,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockFrontalSpikes"
         },
         "offset": {
@@ -27874,7 +27874,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabShockLoopFast"
         },
         "offset": {
@@ -28117,7 +28117,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "shockSpecialCharge"
             },
             "offset": {
@@ -28180,7 +28180,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockDouble"
             },
             "offset": {
@@ -28331,7 +28331,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockSpecialCharge"
         },
         "offset": {
@@ -28519,7 +28519,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "spikeAuraShock"
         },
         "offset": {
@@ -28601,7 +28601,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "shockSpecialSweepEnd"
         },
         "offset": {
@@ -28775,7 +28775,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSpecialSweep"
         },
         "offset": {
@@ -28795,7 +28795,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveExplodeKi"
         },
         "offset": {
@@ -28934,7 +28934,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "stabWaveLoopFast"
         },
         "offset": {
@@ -29018,7 +29018,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveShot"
         },
         "offset": {
@@ -29129,7 +29129,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSpecialCharge"
         },
         "offset": {
@@ -29167,7 +29167,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSuction"
         },
         "offset": {
@@ -29231,7 +29231,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "sweepWave"
         },
         "offset": {
@@ -29452,7 +29452,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveCounterGuard"
         },
         "offset": {
@@ -29471,7 +29471,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSuctionSilent"
         },
         "offset": {
@@ -29685,7 +29685,7 @@
         "fixPos": true,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveCircleJump"
         },
         "offset": {
@@ -29730,7 +29730,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "vanishInstant"
         },
         "offset": {
@@ -29752,7 +29752,7 @@
         "fixPos": true,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveTeleportTrail"
         },
         "offset": {
@@ -29904,7 +29904,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "finisherWave"
         },
         "offset": {
@@ -30123,7 +30123,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveCounterGuard"
         },
         "offset": {
@@ -30159,7 +30159,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveCounterGuard2"
         },
         "offset": {
@@ -30334,7 +30334,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepWave"
             },
             "offset": {
@@ -30566,7 +30566,7 @@
         "fixPos": true,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveShot"
         },
         "offset": {
@@ -30655,7 +30655,7 @@
         "fixPos": true,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveShot"
         },
         "offset": {
@@ -31024,7 +31024,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSpecialCharge"
         },
         "offset": {
@@ -31184,7 +31184,7 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.triblader",
+          "sheet": "combat.tribladerXTM",
           "name": "waveSpecialSweepEndAlt"
         },
         "offset": {
@@ -32108,7 +32108,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepNeutralRev"
             },
             "offset": {
@@ -32241,7 +32241,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepNeutral"
             },
             "offset": {
@@ -32375,7 +32375,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepNeutralRev"
             },
             "offset": {
@@ -32507,7 +32507,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "finisherNeutral"
             },
             "offset": {
@@ -32617,7 +32617,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepHeatRev"
             },
             "offset": {
@@ -32750,7 +32750,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepHeat"
             },
             "offset": {
@@ -32884,7 +32884,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepHeatRev"
             },
             "offset": {
@@ -33016,7 +33016,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "finisherHeat"
             },
             "offset": {
@@ -33126,7 +33126,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepColdRev"
             },
             "offset": {
@@ -33259,7 +33259,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepCold"
             },
             "offset": {
@@ -33393,7 +33393,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepColdRev"
             },
             "offset": {
@@ -33525,7 +33525,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "finisherCold"
             },
             "offset": {
@@ -33635,7 +33635,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockRev"
             },
             "offset": {
@@ -33768,7 +33768,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShock"
             },
             "offset": {
@@ -33902,7 +33902,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepShockRev"
             },
             "offset": {
@@ -34034,7 +34034,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "finisherShock"
             },
             "offset": {
@@ -34144,7 +34144,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepWaveRev"
             },
             "offset": {
@@ -34277,7 +34277,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepWave"
             },
             "offset": {
@@ -34411,7 +34411,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "sweepWaveRev"
             },
             "offset": {
@@ -34543,7 +34543,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.triblader",
+              "sheet": "combat.tribladerXTM",
               "name": "finisherWave"
             },
             "offset": {

@@ -1,0 +1,10 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/icicles.json"
+  },
+  {
+    "type": "ENTER",
+    "index": ["ANIMS", "SUB"]
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/cold.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ICE_SPIKE_HUGE",
+      "shapeType": "Z_FLAT",
+      "pivot": {
+        "x": 36,
+        "y": 160
+      },
+      "sheet": {
+        "src": "media/entity/effects/icicles.png",
+        "offX": 256,
+        "offY": 0,
+        "width": 72,
+        "height": 168
+      },
+      "wallY": 0,
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ICE_SHARD3",
+      "sheet": {
+        "src": "media/entity/effects/icicles.png",
+        "offX": 144,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "frames": [
+        2
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ICE_SHARD6",
+      "sheet": {
+        "src": "media/entity/effects/icicles.png",
+        "offX": 144,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "frames": [
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "COLD_WAVE_BIG_TRIANGLE",
+      "pivot": {
+        "x": 48,
+        "y": 47
+      },
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "offX": 192,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SYMBOL_BLACK",
+      "sheet": {
+        "src": "media/entity/effects/darkSwirl.png",
+        "xCount": 5,
+        "offX": 0,
+        "offY": 0,
+        "width": 40,
+        "height": 40
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.033,
+      "repeat": false,
+      "tileOffset": 0,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCKWAVE_BIG_GUI_COLD",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        2
+      ]
+    }
+  }
+]

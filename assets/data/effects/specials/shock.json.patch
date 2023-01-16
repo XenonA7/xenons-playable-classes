@@ -1,0 +1,101 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/shock.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCKWAVE_B_SHOCK_GUI_TRIANGLE",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big-triangle.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCKWAVE_B_SHOCK_TRIANGLE",
+      "pivot": {
+        "x": 48,
+        "y": 49
+      },
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "offX": 288,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_WAVE_BIG_TRIANGLE",
+      "pivot": {
+        "x": 48,
+        "y": 49
+      },
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "offX": 288,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "BULLET_SHOCK",
+      "sheet": {
+        "src": "media/entity/enemy/turret-arid-projectile.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        2
+      ]
+    }
+  }
+]

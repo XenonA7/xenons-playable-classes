@@ -1,0 +1,88 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/heat.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "BIGFIRE_FLOOR_GUI",
+      "shapeType": "Z_FLAT",
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 0,
+        "width": 48,
+        "height": 48
+      },
+      "renderMode": "source-over",
+      "guiSprites": true,
+      "wallY": 0,
+      "time": 0.033,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_HEAT2_INV",
+      "pivot": {
+        "x": 24,
+        "y": 32
+      },
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 96,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": true,
+      "time": 0.03,
+      "repeat": false,
+      "flipX": true,
+      "flipY": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9
+      ]
+    }
+  }
+]

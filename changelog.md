@@ -1,3 +1,7 @@
+0.8.4 (01/18/2023)
+### Fixes
+- Fixed a crash that can happen when entering the mod's dev room
+
 0.8.3 (01/16/2023)
 ### Changes
 - Renamed the main effect file to tribladerXTM.json

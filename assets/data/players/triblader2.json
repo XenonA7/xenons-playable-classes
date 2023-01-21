@@ -46364,7 +46364,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0,
               "charge": -1,
               "action": -1,
               "move": -1,

@@ -1,3 +1,7 @@
+0.8.5 (01/20/2023)
+### Changes
+- Faraday Formation is now dash-cancelable
+
 0.8.4 (01/18/2023)
 ### Fixes
 - Fixed a crash that can happen when entering the mod's dev room

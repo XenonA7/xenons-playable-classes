@@ -1,12 +1,50 @@
-0.8.5 (01/20/2023)
+## 0.9.0 (02/19/2023)
+### New Content
+- PVP enemies now use Prismatic Meltdown instead of Triforce Slash (_Shock_Close3)
+- PVP enemies now use Beekeeper instead of Shadow Spark (_Shock_Close1)
+- Added an extremely hidden secret chest to the outdoor area of the mod intro maps
+- Added xtm-areas.json
+- Triforce Slash particle effect improvements
+### Changes
+- Reformatted changelog headings
+- Slight reformat to database patch steps
+- Moved database patches to \patches\data\database
+- Triforce Slash updated description
+- Completely reworked the code for Triforce Slash
+- Proxy "bolt" deleted and replaced with "triforceTrigger"
+- Triforce Slash trigger proxy changed from BREAK to MASSIVE (player only)
+- Triforce Slash only deals MELEE_DMG now
+- Triforce Slash now uses brief super armor instead of invinsibility at the start of the attack
+- Triforce Slash can't interact with puzzle elements anymore
+- Triforce Slash no longer shoots proxies on the final hit
+- Triforce Slash has separate targeting methods for enemies with solid collision
+### Fixes
+- Fixed Ice Flak spawning hail at additional z+12 offset
+- Fixed a map bug where you could stand on a water tile in the mod intro area
+- Fixed Maroon Valley being revealed on the world map early due to modded maps
+- Triforce Slash trigger proxy no nonger pierces and causes targeting confusion
+- Fixed ability to shoot Triforce Slash through narrow walls
+- Fixed ability to shoot Lightning Strike through narrow walls
+- Fixed issue where Triforce Slash would target the wrong enemy
+### Balance
+- Fire Saw hit strength reduced from MASSIVE to HEAVY (knockback remains MASSIVE)
+- Fire Saw damage slightly reduced
+- Chilling Thrust status inflict factor reduced
+- Chilling Thrust contact damage slightly reduced
+- Triforce Slash trigger hitbox changed from 24x24x12 to 16x16x12
+- Lightning Strike proxy hitbox changed from 24x24x12 to 16x16x12
+- Triforce Slash damage greatly increased to bring it in line with Song of Storms
+- Overclock duration increased by 1 second
+
+## 0.8.5 (01/20/2023)
 ### Changes
 - Faraday Formation is now dash-cancelable
 
-0.8.4 (01/18/2023)
+## 0.8.4 (01/18/2023)
 ### Fixes
 - Fixed a crash that can happen when entering the mod's dev room
 
-0.8.3 (01/16/2023)
+## 0.8.3 (01/16/2023)
 ### Changes
 - Renamed the main effect file to tribladerXTM.json
 - Cold particle effects moved to patch file format
@@ -17,7 +55,7 @@
 - Shock particle effects moved to patch file format
 - Replaced modded vanilla effect "slowMotionClock" with modded effect "slowMotionClockTriblader"
 
-0.8.2 (01/15/2023)
+## 0.8.2 (01/15/2023)
 ### New Content
 - Added Ice Flak to PVP enemy move pool (they did not previously have a Lv.1 Cold Throw art)
 ### Changes
@@ -61,7 +99,7 @@
    - So'najiz Phalanx clones increased HP
    - So'najiz Phalanx final lasers reduced delay between preview and activation
 
-0.8.1 (01/14/2023)
+## 0.8.1 (01/14/2023)
 ### Changes
 - Capitalized Triblader2/3/4/5 names in party menu
 - Minor adjustments to Daybreak throw sound effect properties
@@ -108,7 +146,7 @@
 - Stasis Stance can now be canceled with a dash
 - Added an additional icicle attack to Stasis Stance
 
-0.8.0 (01/07/2023)
+## 0.8.0 (01/07/2023)
 ### New Content
 - Added a warning about modded party members when Triblader2 is recruited at Bergen Trail
 - Added a proper story cutscene to unlock the Schneider PVP duel (near end of 3rd day in the DLC story)
@@ -191,13 +229,13 @@
 - Trailblazer fire contact damage slightly reduced
 
 
-0.7.1 (12/04/2022)
+## 0.7.1 (12/04/2022)
 ### Fixes
 - Fixed Triblader2 party member contact event story progress threshold
 ### Balance
 - Magnet Prism targeting range increased from 128 to 140
 
-0.7.0 (11/19/2022)
+## 0.7.0 (11/19/2022)
 ### New Content
 - Added a character changing station to the Info Hub in Rookie Harbor
 - Triblader2 can now join the player near the start of Bergen Trail as a party member
@@ -290,11 +328,11 @@
 - Magnet Prism rate of fire increased, damage adjusted to balance
 - First Fractal damage slightly increased
 
-0.6.1 (10/23/2022)
+## 0.6.1 (10/23/2022)
 ### Fixes
 - Introduced the "posEntity" attribute to gambitProxy to prevent Wild Gambit's projectiles from shooting through walls
 
-0.6.0 (10/23/2022)
+## 0.6.0 (10/23/2022)
 ### New Content
 - Added some various Triblader2 party dialogue
 ### Changes
@@ -336,7 +374,7 @@
 - Laser Barrage individual laser damage increased 50%
 - Laser Barrage total lasers changed from 5 to 6
 
-0.5.2 (09/25/2022)
+## 0.5.2 (09/25/2022)
 ### Fixes
 - Fixed cutscene sound effect positioning in all 5 XTM arena maps
 ### Changes
@@ -344,12 +382,12 @@
 - Changed initial character animations on cutscene for subsequent Blade Rink rounds
 - Made timing adjustment on pvpBrake for Blade Rink in attempt to avoid invisible enemies on round start
 
-0.5.1 (09/25/2022)
+## 0.5.1 (09/25/2022)
 ### Fixes
 - Fixed alignment of effect in Blade Rink intro when Triblader5 switches to neutral
 - Fixed broken animation in map autumn\path-3-1.json in cutscene that plays after Vermillion Wasteland
 
-0.5.0 (09/25/2022)
+## 0.5.0 (09/25/2022)
 ### New Content
 - Triblader League round 2: "Blade Rink" added
 - Cutscene for 1st-time attempt at Blade Rink only
@@ -358,23 +396,23 @@
 - Compressed file pvp-triblader-league-c.json
 - Removed unintentional assault proxies from Blizzard Slash
 
-0.4.3 (09/13/2022)
+## 0.4.3 (09/13/2022)
 ### Changes
 - Updated readme
 - Reorganized github
 
-0.4.2 (09/09/2022)
+## 0.4.2 (09/09/2022)
 ### Changes
 - Minor edit to Apollo dialogue on player victory condition in guild-war
 
-0.4.1 (09/09/2022)
+## 0.4.1 (09/09/2022)
 ### Changes
 - Minor reformat to ccmod.json dependency list
 - Cleaned up some unused clutter in triblader-mm.png
 ### Fixes
 - Party members will no longer eat during PVP duels
 
-0.4.0 (09/08/2022)
+## 0.4.0 (09/08/2022)
 ### New Content
 - New graphical effects for Fire Whirl
 - New graphical effects for Blazing Mirage
@@ -440,7 +478,7 @@
 - Blade of E'nel fire ring aura now inflicts burn status
 - Blade of E'nel hitbox radius increased for all attacks to better match the visual effects
 
-0.3.0 (08/21/2022)
+## 0.3.0 (08/21/2022)
 ### New Content
 - Added remaining sprites for Triblader 2/3/4/5 floating animation
 ### Changes
@@ -453,11 +491,11 @@
 - Gave the dev room a proper navigation map
 - Fixed match point BGM not triggering on training island
 
-0.2.3 (08/20/2022)
+## 0.2.3 (08/20/2022)
 ### Fixes
 - Fixed crash in 1v1 training arena when setting 3 victory points
 
-0.2.2 (08/20/2022)
+## 0.2.2 (08/20/2022)
 ### Changes
 - Changelog headers reformatted
 - Created the following patch files and removed modified vanilla files for:
@@ -469,11 +507,11 @@
 ### Balance
 - Triblader League round 1 platinum points reduced from 80,000 to 75,000
 
-0.2.1 (08/20/2022)
+## 0.2.1 (08/20/2022)
 ### Fixes
 - Manually fixed git merge conflicts
 
-0.2.0 (08/20/2022)
+## 0.2.0 (08/20/2022)
 ### New Content
 - Added colored portraits for Triblader2/3/4/5 (likely to be revised in the future)
 - New map: Training Island
@@ -504,7 +542,7 @@
 ### Balance
 - Rude Buster explosion changed from MASSIVE to HEAVY strength
 
-0.1.5 (08/17/2022)
+## 0.1.5 (08/17/2022)
 ### Changes
 - Updated the nav map for triangle strategy
 ### Fixes
@@ -512,7 +550,7 @@
 - Corrected typo
 - (meta) Corrected changelog filetype for repo
 
-0.1.4 (08/10/2022)
+## 0.1.4 (08/10/2022)
 ### New Content
 - Added Triblader2/3/4/5 animations for opening chests
 - Lea placeholders for block push/pull animations
@@ -597,7 +635,7 @@
    - Ice Flak greatly buffed by removing the "dud" mechanic
    - Proxy iceStoneSmallSlow no longer inflicts status
 
-0.1.3 (07/30/2022)
+## 0.1.3 (07/30/2022)
 ### New Content
 - Added new bonus map accessible from dev room: \maps\xtm\bonus\guild-war.json
 - New bullet sprite for Essence Enchantment proxies
@@ -647,7 +685,7 @@
 - Ki Spin proxies inflict a greater amount of status
 
 
-0.1.2 (07/24/2022)
+## 0.1.2 (07/24/2022)
 - Vitality Curse initial hit downsized to MEDIUM strength from MASSIVE
 - Fixed Prismatic Meltdown not working on enemies with environmental collision such as the whale boss
 - Blade Aura defense buff changed from +20% to +30%
@@ -655,7 +693,7 @@
 - Triangle Strategy arena cup platinum requires 110,000 points now since I can consistently get that score
 
 
-0.1.1 (07/23/2022)
+## 0.1.1 (07/23/2022)
 - Re-organized prestart.js into individual files located in the js directory
 - Added invisible wall to prevent player ability to jump out of bounds in outdoors.json on the right side
 - Added NO_PUZZLE tag to gambitProxy, neutralExplosionSmall, flameNoStun, icicleSubHitNoFly, thunderSmallWeak
@@ -675,11 +713,11 @@
 - Added "NO_DAMAGE" limiter to some unguardable DIRECT_HIT steps in proxy waveTimeBombExploder
 - Removed the "NEVER" guardable property from Vitality Curse and Vitality Spring (players only)
 
-0.1.0 (07/20/2022)
+## 0.1.0 (07/20/2022)
 - First public beta release!
 - Updated install instructions in README
 
-0.0.18 (07/19/2022)
+## 0.0.18 (07/19/2022)
 - Implemented some dialogue for triblader2 party member, now fully functional with menus
 - Fixed portraits for triblader character files
 - Added new eventTrigger to arena-01.json.patch to handle non-XTM save files (undefined plot.xtm.character will be set to 1)
@@ -689,7 +727,7 @@
 - database.json.patch now includes triblader2-events.json
 
 
-0.0.17 (07/19/2022)
+## 0.0.17 (07/19/2022)
 - Disabled the map \assets\extension\post-game\data\maps\evo-village\interior\city-hall.json, this will not be part of the beta release
 - Added teleporter to Lea's attic to access XTM dev room, unlocks after finishing DLC dungeon
 - Added patch \assets\extension\post-game\data\maps\evo-village\interior\lea-upper.json.patch
@@ -706,7 +744,7 @@
 - Schneider animation in the enemy encyclopedia changed to battleRun
 - Triblader2 (freq. arts) name updated in enemy encyclopedia
 
-0.0.16 (07/19/2022)
+## 0.0.16 (07/19/2022)
 - Finished map: assets\data\maps\xtm\char-select\basement.json
 - Added variable plot.xtm.character to track player character choice
 - Rhombus Arena character change hologram now updates this variable when used
@@ -723,12 +761,12 @@
 - Modified assets\data\effects\area\arid.json with new effect switchActivateNoOffset
 - Teleporter at the end of beta.json map is no longer slow
 
-0.0.15 (07/16/2022)
+## 0.0.15 (07/16/2022)
 - Added proper unlock condition for Triblader League arena cup availible after DLC dungeon completion
 - New map patch file center-nw.json.patch for NPC that unlocks the Triblader League
 - Removed temporary map file dng-top-modded.json
 
-0.0.14 (07/15/2022)
+## 0.0.14 (07/15/2022)
 - Added new map: assets\data\maps\xtm\char-select\beta.json
 - Added new map: assets\data\maps\xtm\bonus\statue-cutscene.json
 - Added character swap prop to Rhombus Arena lobby patch file
@@ -743,14 +781,14 @@
 - Added teleporter to statue-cutscene to Autumn's Rise entrance (temporary)
 - Removed emilie.json player file (animation fixes) due to irrelevance
 
-0.0.13 (07/11/2022)
+## 0.0.13 (07/11/2022)
 - New combat art: Prismatic Meltdown (Shock Dash Lv.3a)
 - Thunder Wrath reclassed from Shock Dash Lv.3a to Shock Dash Lv.3b
 - Faraday Formation now has MASSIVE hit stability during the spinning portion of the attack
 - Changed the pivot point for SHOCK_WAVE_BIG_TRIANGLE from y = 47 to y = 49
 - Tweaked Triblader2 northeast running sprites
 
-0.0.12 (07/10/2022)
+## 0.0.12 (07/10/2022)
 - New combat art: Celestial Constellation (Shock Throw Lv.3a) (Usable by PVP enemies)
 - New combat art: Faraday Formation (Shock Melee Lv.2a)
 - PVP enemies now use Celestial Constellation instead of Magnet Storm
@@ -766,18 +804,18 @@
 - Wild Gambit roll 4 explosion damage reduced by 25%
 - Re-worded description for Lightning Rod
 
-0.0.11 (07/03/2022)
+## 0.0.11 (07/03/2022)
 - Fixed some trigger conditions in assets\data\maps\xtm\char-select\interior.json
 
-0.0.10 (07/03/2022)
+## 0.0.10 (07/03/2022)
 - Changed all "tmp.return" to "map.return" in assets\data\maps\xtm\char-select\interior.json
 
-0.0.9 (07/03/2022)
+## 0.0.9 (07/03/2022)
 - Added new audio for player's match point in Triblader League Round 1
 - Finished assets\data\maps\xtm\char-select\interior.json
 - Added map assets\data\maps\xtm\char-select\basement.json, unfinished state
 
-0.0.8 (07/01/2022)
+## 0.0.8 (07/01/2022)
 - New combat art: Avalanche Assault (Cold Melee Lv.3b)
 - (Nax) fix for PVP enemy healthbars overlap
 - Added y=5 offset to PVP enemy healthbars
@@ -800,7 +838,7 @@
 - Added better description of the healing amount to Tower of Tranquility description
 - Frigid Hurricane reclassed from Cold Melee Lv.3a to Cold Melee Lv.3b
 
-0.0.7 (06/22/2022)
+## 0.0.7 (06/22/2022)
 - New combat art: Tower of Tranquility (Cold Guard Lv.3b)
 - Ice Brace damage reduction nerfed from 90% to 85%
 - Stasis Stance damage reduction nerfed from 97.5% to 90%
@@ -818,7 +856,7 @@
 - Spike Ball added screen shake and sound effect when bouncing on walls
 - Removed unused effectKeys from Lightning Strike and Triforce Slash proxies
 
-0.0.6 (06/20/2022)
+## 0.0.6 (06/20/2022)
 - New combat art: Shrapnel Field (Neutral Melee Lv.2b)
 - New combat art: Lightning Fork (Shock Throw Lv.2a)
 - New combat art: Sunsteel Strike (Heat Melee Lv.3b)
@@ -840,7 +878,7 @@
 - flamehit, flameHitS, flameHitSWeak all now have stopBeforeEdge = false
 - In the map "training-2v2", replaced triblader3 with triblader4
 
-0.0.5 (06/12/2022)
+## 0.0.5 (06/12/2022)
 - Removed dependency for ArcaneLab
 - All modded headIdx hard-coded values subtracted by 2 (in PVP enemy files)
 - New combat art: Frost Rupture (Cold Melee Lv.2a)
@@ -872,7 +910,7 @@
 - Polar Geyser reclassed from Cold Melee Lv.1a to Cold Melee Lv.1b
 - Snowstorm reclassed from Cold Melee Lv.2a to Cold Melee Lv.2b
 
-0.0.4 (06/04/2022)
+## 0.0.4 (06/04/2022)
 - New combat art: Polar Geyser (Cold Melee Lv.1a)
 - Snow Sweep reclassed from Cold Melee Lv.1a to Cold Melee Lv.1b
 - Player Schneider2 file deleted, I am reverting him back to vanilla behavior for now
@@ -885,7 +923,7 @@
 - Fixed Chilling Thrust trail effect being set as actionDetached
 
 
-0.0.3 (06/04/2022)
+## 0.0.3 (06/04/2022)
 - Added changelog to root directory
 - New combat art: Calamity's Advent (Heat Melee Lv.3a) (Usable by PVP enemies)
 - Fixed heatLaser proxy to allow Vermillion Firestorm to be used at the edge of a ledge
@@ -911,10 +949,10 @@
 - Molten daggers no longer set to repeat sprite animation
 
 
-0.0.2 (05/30/2022)
+## 0.0.2 (05/30/2022)
 - Added temporary dependency on ArcaneLab to resolve headIdx conflicts
 - Removed problematic b.PVP code from prestart.js
 
 
-0.0.1 (05/29/2022)
+## 0.0.1 (05/29/2022)
 - Initial Pre-Pre-Release, not public

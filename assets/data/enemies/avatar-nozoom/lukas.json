@@ -2752,8 +2752,8 @@
       "stickToSource": "NONE",
       "stickFaceAlign": false,
       "size": {
-        "x": 24,
-        "y": 24,
+        "x": 16,
+        "y": 16,
         "z": 12
       },
       "speed": 4000,
@@ -7659,7 +7659,7 @@
       "breakType": "COMBATANT",
       "action": [
         {
-          "duration": 6,
+          "duration": 7,
           "target": "PROXY_OWNER",
           "align": "CENTER",
           "rotateFace": 0,
@@ -7680,7 +7680,7 @@
           }
         },
         {
-          "duration": 6,
+          "duration": 7,
           "target": "PROXY_OWNER",
           "align": "CENTER",
           "rotateFace": 0,
@@ -7701,7 +7701,7 @@
           }
         },
         {
-          "duration": 6,
+          "duration": 7,
           "target": "PROXY_OWNER",
           "align": "CENTER",
           "rotateFace": 0,
@@ -7737,7 +7737,7 @@
           ]
         },
         {
-          "time": 6,
+          "time": 7,
           "type": "WAIT"
         },
         {
@@ -8364,254 +8364,6 @@
         "flyHeight": 1
       },
       "type": "GENERIC"
-    },
-    "bolt": {
-      "animation": {
-        "name": "default",
-        "gfxOffset": {
-          "x": 0,
-          "y": 0
-        },
-        "sheet": {
-          "src": "media/entity/balls/default.png",
-          "offX": 80,
-          "offY": 168,
-          "width": 16,
-          "height": 16
-        },
-        "time": 0.05,
-        "repeat": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "volume": 0.55,
-          "global": false,
-          "loop": false,
-          "speed": 0.9,
-          "variance": 0.0,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/triforce-slash.ogg"
-        },
-        {
-          "duration": 0,
-          "rotOffset": {
-            "x": 0,
-            "y": -24
-          },
-          "target": "PROXY_SRC",
-          "align": "BOTTOM",
-          "rotateFace": -1,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "target2": "SELF",
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "shockBolt"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 12
-          }
-        },
-        {
-          "duration": 0,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "shockBoltHit"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "value": 4000,
-          "type": "SET_SPEED"
-        },
-        {
-          "name": "pullPos",
-          "target": "SELF",
-          "align": "BOTTOM",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "faceDistance": 0,
-          "type": "SET_ATTRIB_POS"
-        },
-        {
-          "attribName": "boltHitProxy",
-          "changeType": "set",
-          "type": "SET_ATTRIB_NUMBER",
-          "value": 0
-        },
-        {
-          "time": 1.5,
-          "cancelOnHit": false,
-          "withBranches": true,
-          "collideCancel": 1,
-          "rotateSpeed": 0.0,
-          "orthoDirFactor": 0,
-          "ignoreLastHit": false,
-          "type": "TACKLE",
-          "attack": {
-            "type": "BREAK",
-            "element": "SHOCK",
-            "fly": "LIGHT",
-            "damageFactor": 1,
-            "reverse": false,
-            "stunSteps": [
-              {
-                "type": "START_LOCK"
-              },
-              {
-                "type": "BLOCK_XY"
-              }
-            ],
-            "guardable": "NEVER",
-            "skillBonus": "RANGED_DMG"
-          },
-          "hit": [
-            {
-              "kind": "FIRST_HIT",
-              "type": "SET_TEMP_TARGET"
-            },
-            {
-              "target": "TARGET",
-              "type": "REMOVE_SHIELD"
-            },
-            {
-              "factor": 0.01,
-              "time": -1,
-              "keepEntityStatic": false,
-              "inversAccelerate": true,
-              "type": "ADD_SLOW_MOTION"
-            },
-            {
-              "attribName": "boltHitProxy",
-              "changeType": "set",
-              "type": "SET_ATTRIB_NUMBER",
-              "value": 1
-            }
-          ],
-          "missed": [
-            {
-              "attribName": "boltHit",
-              "changeType": "set",
-              "changeConnected": "PROXY_OWNER",
-              "type": "SET_ATTRIB_NUMBER",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "type": "CLEAR_EFFECTS"
-        },
-        {
-          "withElse": false,
-          "type": "IF",
-          "condition": "entity.attrib.boltHitProxy == 1",
-          "thenStep": [
-            {
-              "duration": 0,
-              "align": "CENTER",
-              "target": "TARGET",
-              "rotateFace": 0,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "fixPos": false,
-              "type": "SHOW_EFFECT",
-              "effect": {
-                "sheet": "specials.shock",
-                "name": "homingGenAlt"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            },
-            {
-              "attribName": "boltHit",
-              "changeType": "set",
-              "changeConnected": "PROXY_OWNER",
-              "type": "SET_ATTRIB_NUMBER",
-              "value": 1
-            },
-            {
-              "type": "CLEAR_EFFECTS"
-            },
-            {
-              "time": 5.5,
-              "type": "WAIT"
-            }
-          ]
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 24,
-        "y": 24,
-        "z": 12
-      },
-      "effects": "combat.tribladerXTM",
-      "effectKeys": {
-        "bounce": "triProjetileBounce",
-        "wall": "triProjetileBounce",
-        "air": "triProjetileKill",
-        "trail": "triProjetile"
-      },
-      "speed": 900,
-      "maxBounce": 0,
-      "timer": 0,
-      "trail": true,
-      "multiHit": false,
-      "light": "XXL",
-      "noLightGlow": true,
-      "type": "GENERIC",
-      "group": "boltGroup",
-      "attack": {
-        "type": "LIGHT",
-        "element": "COLD",
-        "damageFactor": 1,
-        "reverse": true,
-        "guardable": "NEVER",
-        "skillBonus": "RANGED_DMG"
-      },
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "PROJECTILE",
-        "airFriction": 1,
-        "maxVel": 900,
-        "zGravityFactor": 0,
-        "bounciness": 0.0001
-      }
     },
     "circleBallShooter": {
       "copyOwnerAnims": false,
@@ -13792,7 +13544,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 12
+                "z": 0
               }
             },
             {
@@ -13897,7 +13649,7 @@
                   "offset": {
                     "x": 0,
                     "y": 0,
-                    "z": 12
+                    "z": 0
                   }
                 },
                 {
@@ -14071,6 +13823,895 @@
           "fadeIn": 0.2
         }
       ]
+    },
+    "meltdown": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/blank32x32.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "thunderHeavySkew",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "meltdownCore"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "magnetTriangleBigOuter"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0.5,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "meltdownCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 64,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "time": 1.7,
+          "type": "WAIT"
+        },
+        {
+          "poiFilter": {
+            "conditions": [
+              {
+                "sticking": false,
+                "group": "meltdownTargetGroup",
+                "negated": false,
+                "type": "HAS_PROXY"
+              }
+            ],
+            "type": "ACTIVE_ENEMIES"
+          },
+          "distance": 600,
+          "type": "SET_POI_TEMP_TARGET"
+        },
+        {
+          "poiFilter": {
+            "group": "meltdownTargetGroup",
+            "type": "PROXY"
+          },
+          "distance": 600,
+          "type": "SET_POI_TEMP_TARGET"
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "value": true,
+              "immediately": true,
+              "type": "FACE_TO_TARGET"
+            },
+            {
+              "value": false,
+              "immediately": true,
+              "type": "FACE_TO_TARGET"
+            },
+            {
+              "duration": -1,
+              "align": "CENTER",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": true,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "shockLaserSource"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "align": "CENTER",
+              "centralAngle": 0,
+              "angleVary": 0,
+              "startDist": 0,
+              "startDistCollide": false,
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": true,
+              "flipLeftFace": 8,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "shockLaser",
+              "offset": {
+                "z": 12
+              }
+            },
+            {
+              "type": "DETACH_TIME_PARENT"
+            },
+            {
+              "time": 3,
+              "type": "WAIT"
+            },
+            {
+              "group": "meltdownTargetGroup",
+              "type": "REMOVE_PROXIES"
+            },
+            {
+              "group": "shockLaserGroup",
+              "type": "REMOVE_PROXIES"
+            }
+          ],
+          "elseStep": []
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "volume": 1.2,
+          "global": false,
+          "loop": false,
+          "speed": 0.9,
+          "sound": "media/sound/puzzle/shock-sucked.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -4
+          }
+        },
+        {
+          "time": 0.3,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "meltdownGroup",
+      "startAnim": "",
+      "size": {
+        "x": 32,
+        "y": 32,
+        "z": 32
+      },
+      "config": {
+        "zGravityFactor": 1,
+        "collType": "NONE",
+        "shadow": 32
+      },
+      "type": "GENERIC"
+    },
+    "meltdownTarget": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "sticking": false,
+          "group": "meltdownTargetGroup",
+          "target": "TARGET",
+          "type": "REMOVE_PROXIES"
+        },
+        {
+          "type": "CONNECT_PROXY_TO_TARGET"
+        },
+        {
+          "duration": -1,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXTM",
+            "name": "crosshairTarget"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "stickFaceAlign": false,
+      "group": "meltdownTargetGroup",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "thunderHeavySkew": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "volume": 0.8,
+          "global": false,
+          "loop": false,
+          "speed": 1.5,
+          "sound": "media/sound/battle/enemies/charge-05s.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "strength": "WALK_ESCAPE",
+          "pull": true,
+          "radius": 64,
+          "fadeRadius": 0,
+          "minRadius": 0,
+          "zHeight": 32,
+          "duration": 0.3,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.jungle",
+            "name": "ghostPreBold2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.3,
+          "type": "WAIT"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0.6,
+          "target": "SELF",
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "aura",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderBigAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "SELF",
+          "target2Offset": {
+            "x": -90,
+            "y": -40,
+            "z": 480
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.jungle",
+            "name": "apeBigBold"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 40,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 1,
+          "duration": 0.45,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "SHOCK",
+            "damageFactor": 1.8,
+            "fly": "MASSIVE+",
+            "reverse": false,
+            "status": 0.5,
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "noIronStance": true,
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.45,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "label": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "NONE",
+        "floatVariance": 0,
+        "flyHeight": 1
+      },
+      "type": "GENERIC"
+    },
+    "shockLaser": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 400,
+          "type": "SET_SPEED"
+        },
+        {
+          "poiFilter": {
+            "conditions": [
+              {
+                "sticking": false,
+                "group": "meltdownTargetGroup",
+                "negated": false,
+                "type": "HAS_PROXY"
+              }
+            ],
+            "type": "ACTIVE_ENEMIES"
+          },
+          "distance": 600,
+          "type": "SET_POI_TEMP_TARGET"
+        },
+        {
+          "poiFilter": {
+            "group": "meltdownTargetGroup",
+            "type": "PROXY"
+          },
+          "distance": 600,
+          "type": "SET_POI_TEMP_TARGET"
+        },
+        {
+          "strength": "WALK_ESCAPE",
+          "pull": true,
+          "radius": 64,
+          "fadeRadius": 0,
+          "minRadius": 0,
+          "zHeight": 32,
+          "duration": 3,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "PROXY_SRC",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "dashLightningHeavy"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "shockLaserSource"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "shockLaserShoot"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "CENTER",
+          "radius": 32,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 0,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "SHOCK",
+            "damageFactor": 0.95,
+            "reverse": false,
+            "status": 0.6,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "min": 0,
+          "max": 0,
+          "maxTime": 0.5,
+          "forceTime": true,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "value": 0,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "min": 0,
+          "max": 0,
+          "maxTime": 2.0,
+          "forceTime": true,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 1.0,
+          "angleVary": 0,
+          "startDist": 32,
+          "startDistAdd": 100,
+          "startDistCollide": "CLOSER",
+          "random": true,
+          "count": 9,
+          "duration": 0.5,
+          "clockwise": true,
+          "flipLeftFace": 8,
+          "circularArea": false,
+          "uniformDir": 0.25,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderSmall",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "min": 0,
+          "max": 0,
+          "maxTime": 0.5,
+          "forceTime": true,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "shockLaserGroup",
+      "startAnim": "",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 0
+      },
+      "config": {
+        "zGravityFactor": 3,
+        "collType": "NONE"
+      },
+      "type": "GENERIC"
+    },
+    "bee": {
+      "faceAnims": {
+        "sheet": {
+          "src": "media/entity/effects/triblader-mm.png",
+          "offX": 32,
+          "offY": 80,
+          "width": 16,
+          "height": 16
+        },
+        "dirs": 2,
+        "flipX": [
+          0,
+          1
+        ],
+        "tileOffsets": [
+          0,
+          0
+        ],
+        "SUB": [
+          {
+            "name": "default",
+            "time": 0.066,
+            "repeat": true,
+            "frames": [
+              0,
+              1
+            ]
+          }
+        ],
+        "DOCTYPE": "MULTI_DIR_ANIMATION"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXTM",
+            "name": "beeTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "align": "CENTER",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 1,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "LIGHT",
+            "element": "SHOCK",
+            "damageFactor": 0.10,
+            "reverse": false,
+            "status": 1,
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          }
+        },
+        {
+          "changeType": "set",
+          "attribName": "beeLife",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 7.2
+        },
+        {
+          "name": "beeLoop",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "condition": "entity.target == null",
+          "type": "IF",
+          "thenStep": [
+            {
+              "searchType": "CLOSE_RANGE",
+              "distance": 55,
+              "type": "SET_CLOSE_TEMP_TARGET"
+            }
+          ]
+        },
+        {
+          "time": 0.4,
+          "cancelOnHit": false,
+          "collideCancel": 1,
+          "rotateSpeed": 1.2,
+          "orthoDirFactor": 0,
+          "withBranches": true,
+          "ignoreLastHit": false,
+          "collideSlip": false,
+          "type": "TACKLE",
+          "attack": {
+            "type": "LIGHT",
+            "element": "SHOCK",
+            "damageFactor": 0.12,
+            "reverse": false,
+            "status": 1,
+            "guardable": "",
+            "skillBonus": "",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "hit": [
+            {
+              "time": 0.05,
+              "type": "MOVE_FORWARD"
+            }
+          ]
+        },
+        {
+          "changeType": "sub",
+          "attribName": "beeLife",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.beeLife > 0",
+          "thenStep": [
+            {
+              "name": "beeLoop",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "beeGroup",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "effects": null,
+      "speed": 300,
+      "maxBounce": 0,
+      "timer": 0,
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": false,
+      "config": {
+        "collType": "PROJECTILE",
+        "floatVariance": 3,
+        "floatAccel": 3,
+        "flyHeight": 12
+      },
+      "attack": {
+        "type": "NONE",
+        "element": "NEUTRAL",
+        "reverse": false,
+        "guardable": null,
+        "skillBonus": null,
+        "limiter": null
+      },
+      "timeBoni": null,
+      "behaviors": [],
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -21198,9 +21839,9 @@
         "checkCollision": true,
         "type": "CIRCLE_ATTACK",
         "attack": {
-          "type": "MASSIVE",
+          "type": "HEAVY",
           "element": "HEAT",
-          "damageFactor": 3,
+          "damageFactor": 2.7,
           "fly": "MASSIVE",
           "reverse": false,
           "spFactor": 0,
@@ -24846,8 +25487,8 @@
         "attack": {
           "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 2,
-          "status": 2.0,
+          "damageFactor": 1.8,
+          "status": 1.25,
           "fly": "MASSIVE",
           "reverse": true,
           "spFactor": 0,
@@ -25194,6 +25835,207 @@
       }
     ],
     "_Shock_Close1": [
+      {
+        "element": "SHOCK",
+        "skipEffect": false,
+        "type": "SET_ENEMY_ELEMENT_MODE"
+      },
+      {
+        "value": true,
+        "immediately": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": 2,
+        "type": "FACE_TO_TARGET_SPEED"
+      },
+      {
+        "value": "MASSIVE",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "followUp": "charge",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "charge"
+      },
+      {
+        "element": "SHOCK",
+        "level": 1,
+        "type": "COMBAT_ART_CHARGE_NOZOOM"
+      },
+      {
+        "value": false,
+        "immediately": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attack2End"
+      },
+      {
+        "duration": 0.25,
+        "align": "BOTTOM",
+        "rotateFace": 6,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXTM",
+          "name": "beekeperCharge"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "time": 0.25,
+        "type": "WAIT"
+      },
+      {
+        "sticking": false,
+        "group": "beeGroup",
+        "type": "REMOVE_PROXIES"
+      },
+      {
+        "followUp": "attack1End",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "spinLong"
+      },
+      {
+        "align": "BOTTOM",
+        "radius": 64,
+        "yScale": 0,
+        "zHeight": 24,
+        "centralAngle": 1.7,
+        "startAngle": -0.35,
+        "duration": 0.4,
+        "expandRadius": 0,
+        "alwaysFull": false,
+        "clockwise": false,
+        "flipLeftFace": 6,
+        "rectangular": false,
+        "repeat": false,
+        "uniformHitDir": false,
+        "fixPos": false,
+        "checkCollision": true,
+        "type": "CIRCLE_ATTACK",
+        "attack": {
+          "type": "MASSIVE",
+          "element": "SHOCK",
+          "damageFactor": 1.3,
+          "reverse": false,
+          "guardable": "",
+          "skillBonus": "MELEE_DMG"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": -1,
+        "align": "BOTTOM",
+        "rotateFace": 6,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXTM",
+          "name": "beekeeperSweep"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "align": "BOTTOM",
+        "centralAngle": 1.7,
+        "startAngle": -0.35,
+        "angleVary": 0,
+        "startDist": 48,
+        "startDistCollide": "CLOSER",
+        "random": false,
+        "count": 12,
+        "duration": 0.36,
+        "clockwise": false,
+        "flipLeftFace": 6,
+        "circularArea": true,
+        "uniformDir": 0,
+        "delay": 0,
+        "repeat": false,
+        "type": "SHOOT_PROXY_RANGE",
+        "proxy": "bee",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        }
+      },
+      {
+        "value": 200,
+        "type": "SET_SPEED"
+      },
+      {
+        "value": 3,
+        "type": "SET_ACCEL_SPEED"
+      },
+      {
+        "time": 0.15,
+        "stopBeforeEdge": true,
+        "type": "MOVE_FORWARD"
+      },
+      {
+        "value": 100,
+        "type": "SET_SPEED"
+      },
+      {
+        "time": 0.1,
+        "stopBeforeEdge": true,
+        "type": "MOVE_FORWARD"
+      },
+      {
+        "time": 0.1,
+        "stopBeforeEdge": true,
+        "type": "MOVE_FORWARD"
+      },
+      {
+        "time": 0.65,
+        "type": "WAIT"
+      },
+      {
+        "followUp": "idle",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "preIdle"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      }
+    ],
+    "_Shock_Close1Alt": [
       {
         "element": "SHOCK",
         "skipEffect": false,
@@ -25789,78 +26631,26 @@
         "type": "FACE_TO_TARGET"
       },
       {
-        "attribName": "boltHit",
-        "changeType": "set",
-        "type": "SET_ATTRIB_NUMBER",
-        "value": 0
+        "factor": 0.2,
+        "time": 0,
+        "keepEntityStatic": false,
+        "inversAccelerate": true,
+        "type": "ADD_SLOW_MOTION"
       },
       {
-        "value": 1,
-        "type": "SET_INVINCIBLE"
-      },
-      {
-        "wait": false,
-        "viaWalkConfig": false,
-        "type": "SHOW_ANIMATION",
-        "anim": "throwSpecial"
-      },
-      {
-        "value": "IGNORE",
-        "type": "SET_COLL_TYPE"
-      },
-      {
-        "value": false,
-        "type": "SET_JUMPING"
-      },
-      {
-        "value": 200,
-        "type": "SET_SPEED"
-      },
-      {
-        "value": 3,
-        "type": "SET_ACCEL_SPEED"
-      },
-      {
-        "time": 0.05,
-        "stopBeforeEdge": false,
-        "type": "MOVE_FORWARD"
-      },
-      {
+        "duration": 0.5,
         "align": "BOTTOM",
-        "centralAngle": 0,
-        "angleVary": 0,
-        "startDist": 12,
-        "startDistCollide": "CLOSER",
-        "random": false,
-        "count": 1,
-        "duration": 0.1,
-        "clockwise": true,
-        "flipLeftFace": 8,
-        "circularArea": true,
-        "uniformDir": 0,
-        "delay": 0,
-        "repeat": false,
-        "type": "SHOOT_PROXY_RANGE",
-        "proxy": "bolt",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 12
-        }
-      },
-      {
-        "duration": 0,
-        "align": "BOTTOM",
-        "rotateFace": 6,
-        "flipLeftFace": true,
+        "rotateFace": 0,
+        "flipLeftFace": false,
         "wait": false,
         "waitSkip": 0,
         "actionDetached": false,
+        "group": "trail",
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "combat.tribladerXTM",
-          "name": "stabShock"
+          "sheet": "specials.shock",
+          "name": "dashFast"
         },
         "offset": {
           "x": 0,
@@ -25869,138 +26659,287 @@
         }
       },
       {
-        "type": "WAIT_UNTIL",
-        "maxTime": 2.0,
-        "condition": "entity.attrib.boltHit > 0"
+        "value": true,
+        "immediately": true,
+        "type": "FACE_TO_TARGET"
       },
       {
-        "withElse": true,
-        "type": "IF",
-        "condition": "entity.attrib.boltHit == 1",
-        "thenStep": [
+        "value": false,
+        "immediately": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "group": "meltdownGroup",
+        "type": "REMOVE_PROXIES"
+      },
+      {
+        "group": "meltdownTargetGroup",
+        "type": "REMOVE_PROXIES"
+      },
+      {
+        "group": "shockLaserGroup",
+        "type": "REMOVE_PROXIES"
+      },
+      {
+        "value": "MASSIVE",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "align": "BOTTOM",
+        "type": "SHOOT_PROXY",
+        "proxy": "meltdown",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": -1,
+        "align": "CENTER",
+        "rotateFace": -1,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXTM",
+          "name": "meltdownCharge"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "spinRepeat"
+      },
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "speed": 1.1,
+        "sound": "media/sound/battle/airon/explosion-woosh.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 0.5,
+        "type": "WAIT"
+      },
+      {
+        "time": 0.5,
+        "removeEntityStatic": false,
+        "type": "CLEAR_SLOW_MOTION"
+      },
+      {
+        "type": "CLEAR_EFFECTS"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/dash-3.ogg"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "battleRun"
+      },
+      {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "duration": 0,
+        "align": "BOTTOM",
+        "rotateFace": -1,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": true,
+        "fixPos": true,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.shock",
+          "name": "thunderExplode"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": -1,
+        "align": "CENTER",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.shock",
+          "name": "dashLightningTrail"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.4,
+        "align": "CENTER",
+        "rotateFace": 8,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "group": "trail",
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.shock",
+          "name": "staticChargeTrail"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.4,
+        "align": "CENTER",
+        "rotateFace": 8,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "group": "trail",
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXTM",
+          "name": "meltdownSparkle"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.4,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 3,
+          "z": 6
+        }
+      },
+      {
+        "projectileSpeed": 600,
+        "type": "SET_FACE_TARGET_PREDICT"
+      },
+      {
+        "value": false,
+        "type": "SET_JUMPING"
+      },
+      {
+        "value": 0.4,
+        "type": "SET_INVINCIBLE"
+      },
+      {
+        "value": 600,
+        "type": "SET_SPEED"
+      },
+      {
+        "value": 2,
+        "type": "SET_ACCEL_SPEED"
+      },
+      {
+        "value": "IGNORE",
+        "type": "SET_COLL_TYPE"
+      },
+      {
+        "value": true,
+        "type": "SET_FACE_FIX"
+      },
+      {
+        "posType": "TARGET",
+        "align": "CENTER",
+        "type": "SET_HIT_PROXY",
+        "proxy": "meltdownTarget",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "time": 0.4,
+        "cancelOnHit": true,
+        "withBranches": true,
+        "orthoDirFactor": 0,
+        "ignoreLastHit": false,
+        "collideSlip": false,
+        "type": "TACKLE",
+        "attack": {
+          "type": "MASSIVE",
+          "element": "SHOCK",
+          "damageFactor": 2,
+          "reverse": false,
+          "spFactor": 0,
+          "stunSteps": [
+            {
+              "type": "END_LOCK"
+            }
+          ],
+          "guardable": "",
+          "skillBonus": "MELEE_DMG"
+        },
+        "hit": [
           {
-            "value": -1,
-            "type": "SET_INVINCIBLE"
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinRepeat"
           },
           {
-            "searchType": "IN_VIEW",
-            "ignoreCurrentTarget": true,
-            "prevHitBehavior": "PREFER_NON_HIT",
-            "type": "SET_CLOSE_TEMP_TARGET"
+            "group": "trail",
+            "type": "CLEAR_EFFECTS"
           },
           {
-            "condition": "entity.target == null",
-            "type": "IF",
-            "thenStep": [
-              {
-                "searchType": "CLOSE_RANGE",
-                "distance": 3200,
-                "type": "SET_CLOSE_TEMP_TARGET"
-              }
-            ]
-          },
-          {
-            "time": 0,
-            "removeEntityStatic": false,
-            "type": "CLEAR_SLOW_MOTION"
-          },
-          {
-            "factor": 0.2,
-            "time": 1.0,
-            "keepEntityStatic": false,
-            "inversAccelerate": true,
-            "type": "ADD_SLOW_MOTION"
-          },
-          {
-            "duration": -1,
-            "target": "TARGET",
+            "duration": 0.4,
             "align": "BOTTOM",
             "rotateFace": 0,
             "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
-            "group": "",
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "slowMotion"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": -1,
-            "target": "TARGET",
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "group": "",
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "slowMotion2"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "offsetX": 0,
-            "offsetY": 0,
-            "speed": "FASTESTEST",
-            "transition": "EASE_OUT",
-            "wait": false,
-            "waitSkip": 0,
-            "zoom": 1.5,
-            "target": "TARGET",
-            "focusType": "SELF",
-            "type": "FOCUS_CAMERA"
-          },
-          {
-            "time": 1,
-            "type": "WAIT"
-          },
-          {
-            "duration": -1,
-            "target": "TARGET",
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "triforce"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": -1,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "group": "hyper",
+            "group": "trail",
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
@@ -26014,860 +26953,64 @@
             }
           },
           {
-            "value": false,
-            "immediately": true,
-            "type": "FACE_TO_TARGET"
+            "duration": 0,
+            "align": "BOTTOM",
+            "target": "TARGET",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.shock",
+              "name": "dashHit"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
-            "value": false,
-            "type": "SET_JUMPING"
+            "type": "STOP_XY"
+          },
+          {
+            "type": "CLEAR_STUN_LOCKED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": true,
+            "type": "SET_FACE_FIX"
+          },
+          {
+            "value": 200,
+            "type": "SET_SPEED"
           },
           {
             "value": 1,
-            "type": "SET_AIR_FRICTION"
-          },
-          {
-            "value": 0,
             "type": "SET_Z_GRAVITY_FACTOR"
           },
           {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "battleJump"
-          },
-          {
-            "value": 600,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "time": 0.25,
-            "type": "WAIT"
-          },
-          {
-            "type": "STOP_XY"
-          },
-          {
-            "value": 0,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "target": "SELF",
-            "timeScale": 1.2,
-            "logicTimeScale": 1,
-            "moveXYScale": 1,
-            "type": "ADD_TEMP_INFLUENCE"
-          },
-          {
-            "target": "TARGET",
-            "timeScale": 1,
-            "logicTimeScale": 1,
-            "moveXYScale": 0.00001,
-            "type": "ADD_TEMP_INFLUENCE"
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "duration": 4,
-            "target": "TARGET",
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "target2": "SELF",
-            "target2Offset": {
-              "x": 0,
-              "y": 0,
-              "z": 480
-            },
-            "fixPos": true,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "meleeBold"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "name": "teleportPre",
-            "searchType": "RANDOM",
-            "distance": 48,
-            "centralAngle": 1,
-            "throwing": false,
-            "type": "SET_ATTRIB_CLOSE_TARGET_POS"
-          },
-          {
-            "attrib": "teleportPre",
-            "type": "TELEPORT_TO_ATTRIB_POS"
-          },
-          {
-            "value": false,
-            "immediately": true,
-            "type": "FACE_TO_TARGET"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "battleIdle"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "target2": "SELF",
-            "target2Offset": {
-              "x": 0,
-              "y": 0,
-              "z": 800
-            },
-            "fixPos": true,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "enemies.arid",
-              "name": "mageBolt"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.05,
-            "type": "WAIT"
-          },
-          {
-            "value": -800,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "type": "WAIT_UNTIL_ON_GROUND"
-          },
-          {
-            "value": 0,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "type": "STOP_XY"
-          },
-          {
-            "time": 0.25,
-            "type": "WAIT"
-          },
-          {
-            "attribName": "hitCombo",
-            "changeType": "set",
-            "type": "SET_ATTRIB_NUMBER",
-            "value": 4
-          },
-          {
-            "name": "comboMarker",
-            "type": "LABEL"
-          },
-          {
-            "attribName": "hitCombo",
-            "changeType": "sub",
-            "type": "SET_ATTRIB_NUMBER",
-            "value": 1
-          },
-          {
-            "value": false,
-            "type": "SET_JUMPING"
-          },
-          {
-            "followUp": "attack1End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "anim": "spinShort",
-            "type": "SHOW_ANIMATION"
-          },
-          {
-            "duration": 0.25,
-            "align": "BOTTOM",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "sweepShockDouble"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "target": "TARGET",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "homingGenNoFlash"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "volume": 0.4,
-            "global": false,
-            "loop": false,
-            "speed": 1.1,
-            "variance": 0.1,
-            "type": "PLAY_SOUND",
-            "sound": "media/sound/battle/triforce-slash.ogg"
-          },
-          {
-            "align": "BOTTOM",
-            "radius": 48,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 0.7,
-            "startAngle": -0.35,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": false,
-            "type": "CIRCLE_ATTACK",
-            "attack": {
-              "type": "LIGHT",
-              "visualType": "MASSIVE",
-              "element": "SHOCK",
-              "damageFactor": 1.7,
-              "spFactor": 0,
-              "status": 0.2,
-              "stunSteps": [
-                {
-                  "type": "START_LOCK"
-                },
-                {
-                  "type": "BLOCK_XY"
-                }
-              ],
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.25,
-            "type": "WAIT"
-          },
-          {
-            "followUp": "attack2End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "anim": "spinShortRev",
-            "type": "SHOW_ANIMATION"
-          },
-          {
-            "duration": -1,
-            "align": "BOTTOM",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "sweepShockDoubleRev"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "target": "TARGET",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "homingGenNoFlash"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "volume": 0.4,
-            "global": false,
-            "loop": false,
-            "speed": 1.1,
-            "variance": 0.1,
-            "type": "PLAY_SOUND",
-            "sound": "media/sound/battle/triforce-slash.ogg"
-          },
-          {
-            "align": "BOTTOM",
-            "radius": 48,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 0.7,
-            "startAngle": -0.35,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": false,
-            "type": "CIRCLE_ATTACK",
-            "attack": {
-              "type": "LIGHT",
-              "visualType": "MASSIVE",
-              "element": "SHOCK",
-              "damageFactor": 1.7,
-              "spFactor": 0,
-              "status": 0.2,
-              "stunSteps": [
-                {
-                  "type": "START_LOCK"
-                },
-                {
-                  "type": "BLOCK_XY"
-                }
-              ],
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.2,
-            "type": "WAIT"
-          },
-          {
-            "name": "teleport",
-            "searchType": "RANDOM",
-            "distance": 48,
-            "centralAngle": 1,
-            "throwing": false,
-            "type": "SET_ATTRIB_CLOSE_TARGET_POS"
-          },
-          {
-            "attrib": "teleport",
-            "type": "TELEPORT_TO_ATTRIB_POS"
-          },
-          {
-            "value": false,
-            "immediately": true,
-            "type": "FACE_TO_TARGET"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "battleIdle"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "target2": "SELF",
-            "target2Offset": {
-              "x": 0,
-              "y": 0,
-              "z": 800
-            },
-            "fixPos": true,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "enemies.arid",
-              "name": "mageBolt"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "withElse": false,
-            "type": "IF",
-            "condition": "entity.attrib.hitCombo > 0",
-            "thenStep": [
-              {
-                "name": "comboMarker",
-                "type": "GOTO_LABEL"
-              }
-            ]
-          },
-          {
-            "followUp": "attack1End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "anim": "spinShort",
-            "type": "SHOW_ANIMATION"
-          },
-          {
-            "duration": 0.25,
-            "align": "BOTTOM",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "sweepShockDouble"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "target": "TARGET",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "homingGenNoFlash"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "align": "BOTTOM",
-            "radius": 48,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 0.7,
-            "startAngle": -0.35,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": false,
-            "type": "CIRCLE_ATTACK",
-            "attack": {
-              "type": "LIGHT",
-              "visualType": "MASSIVE",
-              "element": "SHOCK",
-              "damageFactor": 2,
-              "spFactor": 0,
-              "status": 0.25,
-              "stunSteps": [
-                {
-                  "type": "START_LOCK"
-                },
-                {
-                  "type": "BLOCK_XY"
-                }
-              ],
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": -1,
-            "align": "CENTER",
-            "rotateFace": -1,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.shock",
-              "name": "triforceSlashCharge"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "offsetX": 0,
-            "offsetY": 0,
-            "speed": "NORMAL",
-            "transition": "EASE_OUT",
-            "wait": false,
-            "waitSkip": 0,
-            "zoom": 1.0,
-            "target": "SELF",
-            "focusType": "SELF",
-            "type": "FOCUS_CAMERA"
-          },
-          {
-            "type": "CLEAR_TEMP_INFLUENCE"
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "spinRepeat"
-          },
-          {
-            "volume": 0,
-            "global": false,
-            "loop": true,
-            "speed": 0.66,
-            "sound": "media/sound/battle/enemies/charge-05s.ogg",
-            "type": "PLAY_SOUND"
-          },
-          {
             "value": 180,
-            "type": "SET_SPEED"
+            "type": "SET_Z_VEL"
           },
           {
-            "time": 0.3,
+            "time": 0.4,
             "stopBeforeEdge": false,
             "type": "MOVE_BACKWARD"
-          },
-          {
-            "value": 0,
-            "type": "SET_SPEED"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "battleIdle"
-          },
-          {
-            "time": 0.2,
-            "type": "WAIT"
-          },
-          {
-            "time": 0.5,
-            "removeEntityStatic": false,
-            "type": "CLEAR_SLOW_MOTION"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "attack2End"
-          },
-          {
-            "duration": 0.5,
-            "align": "BOTTOM",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "shockSpecialCharge"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "followUp": "attack1End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "spinShort"
-          },
-          {
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "group": "boltGroup",
-            "type": "REMOVE_ALL_PROXIES"
-          },
-          {
-            "volume": 1,
-            "global": false,
-            "loop": false,
-            "speed": 1.6,
-            "sound": "media/sound/battle/magic-charge.ogg",
-            "type": "PLAY_SOUND"
-          },
-          {
-            "align": "BOTTOM",
-            "radius": 120,
-            "yScale": 0,
-            "zHeight": 64,
-            "centralAngle": 0.7,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": false,
-            "type": "CIRCLE_ATTACK",
-            "attack": {
-              "type": "MASSIVE",
-              "fly": "MASSIVE++",
-              "element": "SHOCK",
-              "damageFactor": 8,
-              "spFactor": 0,
-              "status": 1,
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG",
-              "stunSteps": [
-                {
-                  "type": "END_LOCK"
-                }
-              ]
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0.5,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": true,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "trail",
-              "name": "whiteQuickest"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0.9,
-            "align": "BOTTOM",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": true,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXTM",
-              "name": "wervynSweepShock"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "volume": 0.7,
-            "global": false,
-            "loop": false,
-            "speed": 1.1,
-            "variance": 0.1,
-            "type": "PLAY_SOUND",
-            "sound": "media/sound/battle/triforce-slash.ogg"
-          },
-          {
-            "followUp": "attack1End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "spinShort"
-          },
-          {
-            "value": 600,
-            "type": "SET_SPEED"
-          },
-          {
-            "value": 3,
-            "type": "SET_ACCEL_SPEED"
-          },
-          {
-            "time": 0.15,
-            "stopBeforeEdge": true,
-            "type": "MOVE_FORWARD"
-          },
-          {
-            "value": 300,
-            "type": "SET_SPEED"
-          },
-          {
-            "time": 0.10,
-            "type": "WAIT"
-          },
-          {
-            "align": "BOTTOM",
-            "centralAngle": 0.3,
-            "angleVary": 0,
-            "startDist": 12,
-            "startDistCollide": "CLOSER",
-            "random": true,
-            "count": 10,
-            "duration": 0.15,
-            "clockwise": false,
-            "flipLeftFace": 8,
-            "circularArea": true,
-            "uniformDir": 0,
-            "delay": 0,
-            "repeat": false,
-            "type": "SHOOT_PROXY_RANGE",
-            "proxy": "defaultShock",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 12
-            }
-          },
-          {
-            "align": "BOTTOM",
-            "centralAngle": 1,
-            "angleVary": 0,
-            "startDist": 12,
-            "startDistCollide": "CLOSER",
-            "random": true,
-            "count": 10,
-            "duration": 0.15,
-            "clockwise": false,
-            "flipLeftFace": 8,
-            "circularArea": true,
-            "uniformDir": 0,
-            "delay": 0,
-            "repeat": false,
-            "type": "SHOOT_PROXY_RANGE",
-            "proxy": "defaultShock",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 12
-            }
-          },
-          {
-            "time": 0.55,
-            "type": "WAIT"
-          },
-          {
-            "type": "CLEAR_EFFECTS"
           }
         ],
-        "elseStep": [
+        "missed": [
           {
-            "sticking": false,
-            "group": "boltGroup",
-            "ignoreSelf": false,
-            "type": "REMOVE_PROXIES"
-          },
-          {
-            "time": 0.3,
+            "time": 0.1,
             "type": "WAIT"
-          },
-          {
-            "type": "CLEAR_EFFECTS"
           }
         ]
-      },
-      {
-        "time": 0.1,
-        "type": "WAIT"
       }
     ],
     "_Shock_Guard1": [

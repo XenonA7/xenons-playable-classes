@@ -15,8 +15,19 @@
     "index": "commonEvents"
   },
   {
-    "type": "INCLUDE",
-    "src": "patches/data/triblader2-events.json"
+    "type": "IMPORT",
+    "src": "mod:patches/data/database/triblader2-events.json"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": "areas"
+  },
+  {
+    "type": "IMPORT",
+    "src": "mod:patches/data/database/xtm-areas.json"
   },
   {
     "type": "EXIT"

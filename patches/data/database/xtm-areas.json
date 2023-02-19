@@ -1,0 +1,19 @@
+{
+  "xtm-char-select": {
+    "name": {
+      "en_US": "Abandoned Site",
+      "langUid": 500000
+    },
+    "description": {
+      "en_US": "A forgotten area outside the main Playground."
+    },
+    "areaType": "DUNGEON",
+    "order": 10000,
+    "track": false,
+    "chests": 1,
+    "position": {
+      "x": 50,
+      "y": 50
+    }
+  }
+}

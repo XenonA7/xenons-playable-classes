@@ -1,3 +1,11 @@
+## 0.9.1 (02/19/2023)
+### Changes
+- Triforce Slash ending particle effects changed to guiSprites
+- Triforce Slash ending particle effects added pLight property
+### Fixes
+- Marginal improvement to water collision issue in mod intro outdoor area
+- Fixed typo in Triforce Slash particle effects data
+
 ## 0.9.0 (02/19/2023)
 ### New Content
 - PVP enemies now use Prismatic Meltdown instead of Triforce Slash (_Shock_Close3)

@@ -619,6 +619,23 @@
         ]
       },
       {
+        "name": "TRIFORCE_GUI",
+        "sheet": {
+          "src": "media/entity/effects/triblader-mm.png",
+          "offX": 0,
+          "offY": 100,
+          "width": 64,
+          "height": 54
+        },
+        "guiSprites": true,
+        "renderMode": "source-over",
+        "time": 1,
+        "flipX": false,
+        "frames": [
+          0
+        ]
+      },
+      {
         "name": "TELEPORT_RIPPLE",
         "sheet": {
           "src": "media/entity/effects/particles1.png  ",
@@ -23850,9 +23867,16 @@
         "inverse": false,
         "collision": false,
         "pAlpha": {
-          "init": 1,
+          "init": 0.5,
           "end": {
             "value": 0
+          }
+        },
+        "pLight": {
+          "init": "L",
+          "start": {
+            "value": "M",
+            "spline": "EASE_IN"
           }
         },
         "pScale": {
@@ -23871,13 +23895,14 @@
         "pRotate": {
           "init": 0,
           "start": {
-            "value": -0.2
+            "value": -0.3,
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 0.8,
         "particleDurVariance": 0.3,
-        "anngleVary": 1,
-        "anim": "TRIFORCE_SINGLE",
+        "angleVary": 1,
+        "anim": "TRIFORCE_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
@@ -23893,9 +23918,16 @@
         "inverse": false,
         "collision": false,
         "pAlpha": {
-          "init": 1,
+          "init": 0.5,
           "end": {
             "value": 0
+          }
+        },
+        "pLight": {
+          "init": "L",
+          "start": {
+            "value": "M",
+            "spline": "EASE_IN"
           }
         },
         "pScale": {
@@ -23914,13 +23946,14 @@
         "pRotate": {
           "init": 0,
           "start": {
-            "value": -0.2
+            "value": -0.3,
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 0.8,
         "particleDurVariance": 0.3,
-        "anngleVary": 1,
-        "anim": "TRIFORCE_SINGLE",
+        "angleVary": 1,
+        "anim": "TRIFORCE_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],

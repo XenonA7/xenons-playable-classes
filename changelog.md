@@ -1,3 +1,8 @@
+## 0.9.2 (03/06/2023)
+### New Content
+- Added a NPC in the mod dev room who will add all vanilla party members to your active party.
+   - I will not add support to any of the PVP duels for this, this is just a bonus feature.
+
 ## 0.9.1 (02/19/2023)
 ### Changes
 - Triforce Slash ending particle effects changed to guiSprites

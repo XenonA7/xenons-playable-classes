@@ -22,6 +22,7 @@
 	"icons": {
 		"24": "icon.png"
 	},
+	"postload": "postload.js",
 	"prestart": "prestart.js",
 	"dependencies": {
 		"extendable-severed-heads": ">=1.0.0",

@@ -81,7 +81,7 @@ ccmod.patchStepsLib.callable.register('FUNCTION', async function (state, args) {
   // New function
   const newSteps = [];
   newSteps.push({
-    type: 'EXIT',
+    type: 'EXIT_SM',
   });
 
   newSteps.push({
@@ -119,7 +119,7 @@ ccmod.patchStepsLib.callable.register('IF', async function (state, args) {
   if (ifIndex == -1) {
     const newSteps = [];
     newSteps.push({
-      type: 'EXIT',
+      type: 'EXIT_SM',
     });
 
     newSteps.push({
@@ -159,8 +159,8 @@ ccmod.patchStepsLib.callable.register('PRINT_STEPS', async function (state, _arg
 });
 
 /**
- * EXIT step, tells the step machine we are finished.
+ * EXIT_SM step, tells the step machine we are finished.
  */
-ccmod.patchStepsLib.callable.register('EXIT', async function (state) {
+ccmod.patchStepsLib.callable.register('EXIT_SM', async function (state) {
   state.stepMachine.exit();
 });

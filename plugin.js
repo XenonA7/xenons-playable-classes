@@ -13,13 +13,15 @@ export default class TribladerMod {
             cat: sc.OPTION_CATEGORY.GENERAL,
             header,
             hasDivider: true,
+            restart: true,
         }
     }
+
     async poststart() {
-        ig.lang.labels.sc.gui.options.headers[header] = 'Xeons triblader mod'
+        ig.lang.labels.sc.gui.options.headers[header] = 'Triblader mod'
         ig.lang.labels.sc.gui.options[overrideRhombusDngId] = {
             name: 'Redirect to char select map',
-            description: 'Change the entrance to rhombus dungeon so it redirects to a character selection map'
+            description: 'Redirect to the character selection map before rhombus dungeon. \\c[1]Needs a restart!',
         }
         const optionalAssets = {}
 

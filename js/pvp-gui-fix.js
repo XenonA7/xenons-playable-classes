@@ -16,7 +16,11 @@ sc.PvpModel.inject({
         ig.vars.set('tmp.pvp_' + name + '_defeated', true)
         sc.Model.notifyObserver(this, sc.PVP_MESSAGE.COMBATANT_DEFEATED, combatant)
         /* speed up the game when the player is defeated */
-        if (name == 'player' && sc.pvp.enemies.length > 1) setTimeout(() => (ig.system.skipMode = true), 3000)
+        if (name == 'player' && sc.pvp.enemies.length > 1) setTimeout(() => {
+            if (combatant.isDefeated()) {
+                ig.system.skipMode = true
+            }
+        }, 3000)
         return this.parent(combatant)
     },
     startNextRound(autoContinue) {

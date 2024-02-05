@@ -2,7 +2,7 @@ sc.PartyModel.inject({
     _spawnPartyMemberEntity(partyMemberName, showEffects, idx, npc) {
         this.parent(partyMemberName, showEffects, idx, npc)
         /* fix sc.PartyMemberEntity not inheriting their name from ig.ENTITY.NPC */
-        this.partyEntities[partyMemberName].name = npc?.name
+        if (npc) this.partyEntities[partyMemberName].name = npc.name
     },
 })
 
@@ -12,7 +12,7 @@ sc.PVP_MESSAGE.COMBATANT_DEFEATED = 4
 sc.PVP_MESSAGE.ROUND_START = 5
 sc.PvpModel.inject({
     onPvpCombatantDefeat(combatant) {
-        const name = combatant == ig.game.playerEntity ? 'player' : combatant.name
+        const name = combatant ? (combatant == ig.game.playerEntity ? 'player' : combatant.name) : ''
         ig.vars.set('tmp.pvp_' + name + '_defeated', true)
         sc.Model.notifyObserver(this, sc.PVP_MESSAGE.COMBATANT_DEFEATED, combatant)
         /* speed up the game when the player is defeated */

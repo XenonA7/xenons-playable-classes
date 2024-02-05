@@ -66,7 +66,7 @@ ig.GUI.StatusBar.inject({
         if (model == sc.pvp) {
             if (message == sc.PVP_MESSAGE.COMBATANT_DEFEATED) {
                 if (sc.pvp.enemies.length > 1 && this.target instanceof ig.ENTITY.Combatant && this.target.isDefeated()) {
-                    this.subHpHandler?.remove()
+                    this.subHpHandler && this.subHpHandler.remove()
                     this.doStateTransition('HIDDEN', false, true)
                 }
             } else if (message == sc.PVP_MESSAGE.ROUND_START) {

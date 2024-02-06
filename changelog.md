@@ -1,3 +1,21 @@
+## 0.9.3 (02/05/2024)
+### General
+- Now requires CCLoader2 version 2.22.1 or higher!
+- Simplify requirement version increased to 2.12.1
+- New dependency mod: AlyBox by Alyxia
+   - https://github.com/lexisother/cc-alybox/releases
+   - Install instructions have been updated
+- Now requires extendable-severed-heads version 1.1.0
+   - https://github.com/CCDirectLink/extendable-severed-heads/releases
+### New Content
+- PVP fixes and improvements by **Krypek**
+   - Added variable support for detecting player death and enemy combatant death
+   - Game will fast-forward if player is defeated in a duel but has party members remaining
+   - Hide healthbars for defeated duel enemies
+   - Improvements and fixes to duel GUI rendering when multiple opponents are involved
+### Changes
+- Removed postload.js (code moved to AlyBox mod)
+
 ## 0.9.2 (03/06/2023)
 ### New Content
 - Added a NPC in the mod dev room who will add all vanilla party members to your active party.

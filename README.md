@@ -10,6 +10,8 @@ This is currently a pre-release version. Please provide the author, XenonA7, wit
 ### **Required Mods**
 1. extendable-severed-heads https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
+2. cc-alybox https://github.com/lexisother/cc-alybox
+   * Library mod needed for some features
 
 ### **Recommended Mods (optional - for enhanced party members)**
 1. cc-combat-art-level-extender https://github.com/CCDirectLink/cc-combat-art-level-extender  
@@ -178,6 +180,7 @@ Versions older than v2.21.0 will give an error with this mod.
 1. Download and extract XTM and its dependencies, along with recommended mods if desired  
 (XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
 (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
+(Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
 (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
 (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 

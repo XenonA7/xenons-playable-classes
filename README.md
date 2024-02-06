@@ -8,19 +8,27 @@ Install instructions can be found at the bottom of this page. The DLC is require
 This is currently a pre-release version. Please provide the author, XenonA7, with feedback on combat art balance. Also please report any crashes, glitches, or other issues as a result from playing the entire game under a different character configuration. I won't be able to test every quest, cutscene, etc myself so feedback is critical. Please give feedback at the Discord linked below.
 
 ### **Required Mods**
-1. extendable-severed-heads https://github.com/CCDirectLink/extendable-severed-heads  
+1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
-2. cc-alybox https://github.com/lexisother/cc-alybox
+2. **cc-alybox:** https://github.com/lexisother/cc-alybox
    * Library mod needed for some features
 
 ### **Recommended Mods (optional - for enhanced party members)**
-1. cc-combat-art-level-extender https://github.com/CCDirectLink/cc-combat-art-level-extender  
+1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
    * Allows party members to use up to Lv.3 arts if you have mods that define higher-level arts for them. This will make your late-game Triblader party members use powerful attacks from XTM.  
-3. cc-party-element-effects https://github.com/XenonA7/cc-party-element-effects  
+3. **cc-party-element-effects:** https://github.com/XenonA7/cc-party-element-effects  
    * A small fix that makes party members show the "element swap" particle effect when they switch elements. This does not happen without the mod.
 
 ### **Discord Server**
 https://discord.gg/CsfUk9vpFq
+
+### **Special Thanks:**
+- **Lychee:** Spritework for Triblader Lea
+- **Krypek:** Code for better handling of multi-opponent duels, implemented option to skip modded intro map
+- **Nax:** JS support
+- **Alyxia:** JS support, author of AlyBox
+- **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
+- **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
 
 ## **Main Features:**
 1. Fully playable triblader class, with a full set of 92 new combat arts to discover

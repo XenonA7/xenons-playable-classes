@@ -39,6 +39,7 @@ https://discord.gg/CsfUk9vpFq
 
 ## **How to Play:**
 - With the mod installed, the entrance to the Rhombus Dungeon at the start of the game will take you to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
+  * Note that this can be disabled in the options menu.
 - The following can be accessed using any existing Lea save file, a new game is not required. It will work regardless of what character you are playing as.
   * Unlock the **Triblader League** arena cup by talking to the Tribladers standing around the **Open PVP Fields** in Rhombus Square. Unlockable after beating the final dungeon in the DLC (Ku'lero Temple).
   * Quick-swap menu added to the **Rhombus Arena Lobby** and **Rookie Harbor Info Hub** to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.

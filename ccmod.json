@@ -23,6 +23,7 @@
 		"24": "icon.png"
 	},
 	"prestart": "prestart.js",
+	"plugin": "plugin.js",
 	"dependencies": {
 		"Simplify": ">=2.12.1",
 		"extendable-severed-heads": ">=1.1.0",

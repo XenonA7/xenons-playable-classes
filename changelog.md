@@ -1,3 +1,7 @@
+## 0.9.4 (02/07/2024)
+### New Content
+- Added option to skip the modded intro maps in the options menu (feature by **Krypek**)
+
 ## 0.9.3 (02/05/2024)
 ### General
 - Now requires CCLoader2 version 2.22.1 or higher!

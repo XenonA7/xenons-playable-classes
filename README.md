@@ -186,11 +186,11 @@ Versions older than v2.21.0 will give an error with this mod.
 
 ## Install Mods
 1. Download and extract XTM and its dependencies, along with recommended mods if desired  
-(XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
-(Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
-(Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
-(Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
-(Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
+- (XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
+- (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
+- (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
+- (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
+- (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 
 2. Place extracted mod folders inside **\CrossCode\assets\mods**  
 ![image](https://user-images.githubusercontent.com/105614278/179912844-b0ac6c4e-4a03-4a97-a3fc-22eb7d1a4bce.png)  

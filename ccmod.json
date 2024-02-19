@@ -19,6 +19,9 @@
 		"ja_JP": "Playable Tribladers, PVP, and more!",
 		"ko_KR": "Playable Tribladers, PVP, and more!"
 	},
+	"repository": "https://github.com/XenonA7/xenons-triblader-mod",
+	"tags": ["character"],
+	"authors": "xenon",
 	"icons": {
 		"24": "icon.png"
 	},

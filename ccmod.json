@@ -20,7 +20,7 @@
 		"ko_KR": "Playable Tribladers, PVP, and more!"
 	},
 	"repository": "https://github.com/XenonA7/xenons-triblader-mod",
-	"tags": ["character"],
+	"tags": ["player character", "party member", "pvp duel"],
 	"authors": ["xenon", "krypek", "lexisother"],
 	"icons": {
 		"24": "icon.png"

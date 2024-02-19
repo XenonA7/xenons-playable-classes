@@ -21,7 +21,7 @@
 	},
 	"repository": "https://github.com/XenonA7/xenons-triblader-mod",
 	"tags": ["character"],
-	"authors": "xenon",
+	"authors": ["xenon", "krypek", "lexisother"],
 	"icons": {
 		"24": "icon.png"
 	},

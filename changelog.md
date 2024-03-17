@@ -1,4 +1,4 @@
-1.0.1 (03/16/2024)
+## 1.0.1 (03/16/2024)
 ### Changes
 - Magnet Storm now resets camera during final strike
 - Magnet Storm added sound effect when final strike hits

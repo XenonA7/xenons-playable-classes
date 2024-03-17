@@ -3335,6 +3335,12 @@
       "breakType": "ACTION",
       "action": [
         {
+          "changeType": "set",
+          "type": "CHANGE_VAR_BOOL",
+          "varName": "tmp.shizukaSnipeHit",
+          "value": true
+        },
+        {
           "selectType": "TARGET",
           "hitDir": "TOWARD",
           "align": "BOTTOM",

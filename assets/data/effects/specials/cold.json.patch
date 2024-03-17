@@ -136,5 +136,65 @@
         2
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "COLD_SHADOW",
+      "pivot": {
+        "x": 12,
+        "y": 8
+      },
+      "sheet": {
+        "src": "media/entity/effects/triblader.png",
+        "offX": 0,
+        "offY": 112,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.025,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "COLD_SHADOW2",
+      "pivot": {
+        "x": 12,
+        "y": 8
+      },
+      "sheet": {
+        "src": "media/entity/effects/triblader.png",
+        "offX": 0,
+        "offY": 112,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.025,
+      "flipX": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
   }
 ]

@@ -86,7 +86,7 @@ ig.module("impact.feature.bgm.bgm-xtm")
       },
       trianglePrep: {
         path: "media/bgm/triangle-prep.ogg",
-        loopEnd: 94.128,
+        loopEnd: 93.798,
         volume: 0.8,
         introPath: "media/bgm/triangle-prep-i.ogg",
         introEnd: 2.801
@@ -119,19 +119,26 @@ ig.module("impact.feature.bgm.bgm-xtm")
         loopEnd: 57.542, 
         volume: 1.0
       },
-      meatboySalt: {
-        path: "media/bgm/meatboy-salt.ogg",
-        loopEnd: 82.521,
+      formlessOnslaught: {
+        path: "media/bgm/formless-onslaught.ogg",
+        loopEnd: 76.507,
         volume: 1.0,
-        introPath: "media/bgm/meatboy-salt-i.ogg",
-        introEnd: 7.716
+        introPath: "media/bgm/formless-onslaught-i.ogg",
+        introEnd: 3.753
       },
-      meatboyRapture: {
-        path: "media/bgm/meatboy-rapture.ogg",
-        loopEnd: 84.410,
+      decisiveEncounter: {
+        path: "media/bgm/decisive-encounter.ogg",
+        loopEnd: 57.638,
         volume: 1.0,
-        introPath: "media/bgm/meatboy-rapture-i.ogg",
-        introEnd: 3.512
+        introPath: "media/bgm/decisive-encounter-i.ogg",
+        introEnd: 3.040
+      },
+      decisiveEncounter2: {
+        path: "media/bgm/decisive-encounter-2.ogg",
+        loopEnd: 57.522,
+        volume: 1.0,
+        introPath: "media/bgm/decisive-encounter-2-i.ogg",
+        introEnd: 2.534
       }
     });
 

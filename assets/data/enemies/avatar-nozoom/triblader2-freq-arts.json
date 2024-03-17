@@ -77,7 +77,7 @@
   "healDropRate": 0,
   "boss": false,
   "bossOrder": 0,
-  "headIdx": 14,
+  "headIdx": "triblader2",
   "padding": {
     "x": 2,
     "y": 2
@@ -1157,10 +1157,17 @@
     },
     "vitalityCurseDrain": {
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
         {
           "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "sticking": false,
+          "group": "vitalityCurseDrainGroup",
+          "ignoreSelf": true,
+          "keepCount": 3,
+          "type": "REMOVE_PROXIES"
         },
         {
           "type": "CONNECT_PROXY_TO_TARGET"
@@ -1236,13 +1243,13 @@
             "damageFactor": 0.12,
             "reverse": false,
             "status": 0,
-            "guardable": "NEVER",
+            "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
           }
         },
         {
-          "factor": 0.15,
+          "factor": 0.05,
           "type": "ABSORB_DAMAGE"
         },
         {
@@ -1272,7 +1279,7 @@
       "hp": 0,
       "stickToSource": "TARGET",
       "stickFaceAlign": false,
-      "group": "",
+      "group": "vitalityCurseDrainGroup",
       "size": {
         "x": 19,
         "y": 19,
@@ -2003,10 +2010,17 @@
         ]
       },
       "copyOwnerAnims": false,
-      "breakType": "NEVER",
+      "breakType": "COMBATANT",
       "action": [
         {
           "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "sticking": false,
+          "group": "fireDaggerStuckGroup",
+          "ignoreSelf": true,
+          "keepCount": 12,
+          "type": "REMOVE_PROXIES"
         },
         {
           "duration": -1,
@@ -2052,7 +2066,7 @@
           "changeType": "set",
           "proxyOwner": false,
           "type": "SET_ATTRIB_NUMBER",
-          "value": 20
+          "value": 10
         },
         {
           "name": "startDagger",
@@ -2069,16 +2083,16 @@
           "attack": {
             "type": "NONE",
             "element": "HEAT",
-            "damageFactor": 0.06,
+            "damageFactor": 0.09,
             "reverse": false,
-            "status": 1.05,
+            "status": 1.175,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
           }
         },
         {
-          "time": 0.4,
+          "time": 0.8,
           "type": "WAIT"
         },
         {
@@ -2104,7 +2118,7 @@
       "hp": 0,
       "stickToSource": "TARGET",
       "stickFaceAlign": false,
-      "group": "",
+      "group": "fireDaggerStuckGroup",
       "size": {
         "x": 1,
         "y": 1,
@@ -5688,7 +5702,7 @@
             "damageFactor": 3.5,
             "fly": "MASSIVE+",
             "reverse": false,
-            "status": 1,
+            "status": 1.5,
             "hints": [
               "NO_PUZZLE"
             ],
@@ -5732,7 +5746,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.cold",
-            "name": "coldExplode"
+            "name": "coldExplodeIT"
           },
           "offset": {
             "x": 0,
@@ -5752,7 +5766,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.icicles",
-            "name": "hugeAppear"
+            "name": "hugeAppearIT"
           },
           "offset": {
             "x": 0,
@@ -6280,6 +6294,13 @@
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
+          "target": "TARGET",
+          "type": "ADD_ACTION_BUFF",
+          "stats": [
+            "DEFENSE-BLADEAURA"
+          ]
+        },
+        {
           "maxTime": 2.25,
           "type": "WAIT_UNTIL_TARGET_DEFEATED"
         },
@@ -6654,7 +6675,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "WAVE",
-        "damageFactor": 0.3,
+        "damageFactor": 0.175,
         "fly": "LIGHT",
         "reverse": true,
         "status": 1.0,
@@ -8270,7 +8291,7 @@
           "attack": {
             "type": "MASSIVE",
             "element": "SHOCK",
-            "damageFactor": 0.85,
+            "damageFactor": 0.875,
             "fly": "MASSIVE+",
             "reverse": false,
             "status": 0.78,
@@ -8330,6 +8351,11 @@
             "status": 0.75,
             "guardable": "",
             "skillBonus": "MELEE_DMG",
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ],
             "noIronStance": true,
             "limiter": ""
           },
@@ -8621,7 +8647,18 @@
       "breakType": "ACTION",
       "action": [
         {
-          "strength": "EASY_ESCAPE",
+          "strength": "WALK_ESCAPE",
+          "pull": true,
+          "radius": 200,
+          "fadeRadius": 0,
+          "minRadius": 140,
+          "zHeight": 100,
+          "duration": 1,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "strength": "RUN_ESCAPE",
           "pull": true,
           "radius": 150,
           "fadeRadius": 0,
@@ -9084,7 +9121,7 @@
             "type": "MASSIVE",
             "visualType": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 2.08,
+            "damageFactor": 1.99,
             "fly": "MASSIVE",
             "reverse": false,
             "status": 0.2,
@@ -9360,6 +9397,65 @@
           "type": "WAIT"
         },
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "align": "BOTTOM",
+          "dir": {
+            "x": 0,
+            "y": 1
+          },
+          "centralAngle": 1,
+          "startAngle": 0,
+          "angleVary": 0,
+          "startDist": 8,
+          "startDistCollide": "CLOSER",
+          "random": true,
+          "count": 1,
+          "duration": 0.25,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "ccBullet",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "dir": {
+            "x": 0,
+            "y": 1
+          },
+          "centralAngle": 1,
+          "startAngle": 0,
+          "angleVary": 0,
+          "startDist": 8,
+          "startDistCollide": "CLOSER",
+          "random": true,
+          "count": 1,
+          "duration": 0.55,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "ccBullet2",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "align": "BOTTOM",
           "radius": 24,
           "yScale": 0,
@@ -9379,7 +9475,7 @@
           "attack": {
             "type": "MEDIUM",
             "element": "SHOCK",
-            "damageFactor": 0.3,
+            "damageFactor": 0.2,
             "reverse": false,
             "status": 0.5,
             "guardable": "",
@@ -9540,6 +9636,9 @@
               "type": "STICKY_CIRCLE_AROUND"
             },
             {
+              "type": "DETACH_TIME_PARENT"
+            },
+            {
               "align": "BOTTOM",
               "radius": 24,
               "yScale": 0,
@@ -9559,7 +9658,7 @@
               "attack": {
                 "type": "MEDIUM",
                 "element": "SHOCK",
-                "damageFactor": 0.3,
+                "damageFactor": 0.2,
                 "reverse": false,
                 "status": 0.5,
                 "guardable": "",
@@ -9629,6 +9728,9 @@
               "type": "STICKY_CIRCLE_AROUND"
             },
             {
+              "type": "DETACH_TIME_PARENT"
+            },
+            {
               "align": "BOTTOM",
               "radius": 24,
               "yScale": 0,
@@ -9648,7 +9750,7 @@
               "attack": {
                 "type": "MEDIUM",
                 "element": "SHOCK",
-                "damageFactor": 0.3,
+                "damageFactor": 0.2,
                 "reverse": false,
                 "status": 0.5,
                 "guardable": "",
@@ -9745,6 +9847,124 @@
         "shadow": 16,
         "collType": "IGNORE"
       }
+    },
+    "ccBullet": {
+      "effects": "ball-shock-xtm",
+      "effectKeys": {
+        "trail": "ccBulletFX"
+      },
+      "speed": 130,
+      "maxBounce": 1,
+      "timer": 1.8,
+      "trail": true,
+      "multiHit": false,
+      "noLightGlow": false,
+      "type": "BALL",
+      "destroyProxy": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 8
+      },
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/blank32x32.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "HEAVY",
+        "element": "SHOCK",
+        "damageFactor": 0.45,
+        "status": 0.25,
+        "fly": "HEAVY",
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "shadow": 16,
+      "light": "L",
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 1,
+          "pause": 5,
+          "fadeIn": 0,
+          "startWait": 0,
+          "fadeOutVary": 0
+        }
+      ]
+    },
+    "ccBullet2": {
+      "effects": "ball-shock-xtm",
+      "effectKeys": {
+        "trail": "ccBulletFX"
+      },
+      "speed": 160,
+      "maxBounce": 1,
+      "timer": 2,
+      "trail": true,
+      "multiHit": false,
+      "noLightGlow": false,
+      "type": "BALL",
+      "destroyProxy": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 8
+      },
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/blank32x32.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "HEAVY",
+        "element": "SHOCK",
+        "damageFactor": 0.45,
+        "status": 0.25,
+        "fly": "HEAVY",
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "shadow": 16,
+      "light": "L",
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 1,
+          "pause": 5,
+          "fadeIn": 0,
+          "startWait": 0,
+          "fadeOutVary": 0
+        }
+      ]
     },
     "turbineStunner": {
       "copyOwnerAnims": false,
@@ -12041,11 +12261,33 @@
         {
           "strength": "RUN_ESCAPE",
           "pull": false,
-          "radius": 120,
+          "radius": 90,
           "fadeRadius": 0,
           "minRadius": 32,
           "zHeight": 32,
-          "duration": 2,
+          "duration": 3.5,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "strength": "WALK_ESCAPE",
+          "pull": true,
+          "radius": 200,
+          "fadeRadius": 0,
+          "minRadius": 120,
+          "zHeight": 100,
+          "duration": 3.5,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "strength": "RUN_ESCAPE",
+          "pull": true,
+          "radius": 150,
+          "fadeRadius": 0,
+          "minRadius": 90,
+          "zHeight": 100,
+          "duration": 3.5,
           "align": "BOTTOM",
           "type": "PUSH_PULL_FORCE"
         },
@@ -14014,7 +14256,7 @@
               "type": "DETACH_TIME_PARENT"
             },
             {
-              "time": 3,
+              "time": 3.5,
               "type": "WAIT"
             },
             {
@@ -14307,7 +14549,7 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "value": 400,
+          "value": 275,
           "type": "SET_SPEED"
         },
         {
@@ -14456,7 +14698,7 @@
         {
           "min": 0,
           "max": 0,
-          "maxTime": 2.0,
+          "maxTime": 2.5,
           "forceTime": true,
           "stopBeforeEdge": false,
           "type": "MOVE_TO_DISTANCE"
@@ -14620,15 +14862,9 @@
           "type": "CLEAR_TEMP_TARGET"
         },
         {
-          "condition": "entity.target == null",
-          "type": "IF",
-          "thenStep": [
-            {
-              "searchType": "CLOSE_RANGE",
-              "distance": 55,
-              "type": "SET_CLOSE_TEMP_TARGET"
-            }
-          ]
+          "searchType": "CLOSE_RANGE",
+          "distance": 55,
+          "type": "SET_CLOSE_TEMP_TARGET"
         },
         {
           "time": 0.4,
@@ -17874,6 +18110,10 @@
         "value": false,
         "immediately": true,
         "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
       },
       {
         "wait": false,
@@ -23115,7 +23355,7 @@
         "anim": "attack1End"
       },
       {
-        "time": 0.4,
+        "time": 0.6,
         "type": "WAIT"
       }
     ],
@@ -23440,15 +23680,15 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 4,
-        "yScale": 1,
-        "zHeight": 16,
-        "centralAngle": 1,
-        "duration": 0.1,
-        "expandRadius": 48,
-        "alwaysFull": true,
+        "radius": 56,
+        "yScale": 0,
+        "zHeight": 24,
+        "centralAngle": 0.7,
+        "duration": 0.2,
+        "expandRadius": 0,
+        "alwaysFull": false,
         "clockwise": false,
-        "flipLeftFace": 0,
+        "flipLeftFace": 6,
         "rectangular": false,
         "repeat": false,
         "uniformHitDir": false,
@@ -23456,13 +23696,13 @@
         "checkCollision": true,
         "type": "CIRCLE_ATTACK",
         "attack": {
-          "type": "MASSIVE",
+          "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 1,
+          "damageFactor": 1.5,
           "fly": "MASSIVE",
           "reverse": false,
           "spFactor": 0,
-          "status": 1,
+          "status": 0.9,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
         },
@@ -23636,15 +23876,15 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 4,
-        "yScale": 1,
-        "zHeight": 16,
-        "centralAngle": 1,
-        "duration": 0.1,
-        "expandRadius": 48,
-        "alwaysFull": true,
-        "clockwise": false,
-        "flipLeftFace": 0,
+        "radius": 56,
+        "yScale": 0,
+        "zHeight": 24,
+        "centralAngle": 0.7,
+        "duration": 0.2,
+        "expandRadius": 0,
+        "alwaysFull": false,
+        "clockwise": true,
+        "flipLeftFace": 6,
         "rectangular": false,
         "repeat": false,
         "uniformHitDir": false,
@@ -23652,13 +23892,13 @@
         "checkCollision": true,
         "type": "CIRCLE_ATTACK",
         "attack": {
-          "type": "MASSIVE",
+          "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 1,
+          "damageFactor": 2,
           "fly": "MASSIVE",
           "reverse": false,
           "spFactor": 0,
-          "status": 1,
+          "status": 0.6,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
         },
@@ -23743,12 +23983,12 @@
       },
       {
         "align": "BOTTOM",
-        "centralAngle": 0.5,
-        "angleVary": 0,
+        "centralAngle": 0.4,
+        "angleVary": 0.2,
         "startDist": 12,
         "startDistCollide": "CLOSER",
-        "random": true,
-        "count": 3,
+        "random": false,
+        "count": 8,
         "duration": 0.1,
         "clockwise": true,
         "flipLeftFace": 6,
@@ -23757,7 +23997,7 @@
         "delay": 0,
         "repeat": false,
         "type": "SHOOT_PROXY_RANGE",
-        "proxy": "iceSpecialSmall",
+        "proxy": "iceSpecialSmallWeak",
         "offset": {
           "x": 0,
           "y": 0,
@@ -23797,7 +24037,7 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 68,
+        "radius": 72,
         "yScale": 0,
         "zHeight": 24,
         "centralAngle": 1.7,
@@ -23813,9 +24053,10 @@
         "fixPos": false,
         "checkCollision": true,
         "attack": {
-          "type": "MASSIVE",
+          "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 2.0,
+          "damageFactor": 3.0,
+          "status": 0.6,
           "reverse": false,
           "guardable": "",
           "skillBonus": "MELEE_DMG",
@@ -23847,6 +24088,26 @@
           "z": 0
         },
         "type": "SHOW_EFFECT"
+      },
+      {
+        "duration": 0.7,
+        "align": "CENTER",
+        "rotateFace": 8,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.cold",
+          "name": "blizzardSlashSnowflakes"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
       },
       {
         "duration": 0,
@@ -23899,7 +24160,7 @@
       {
         "align": "BOTTOM",
         "centralAngle": 1,
-        "angleVary": 0,
+        "angleVary": 0.1,
         "startDist": 12,
         "startDistCollide": "CLOSER",
         "random": false,
@@ -23912,7 +24173,7 @@
         "delay": 0,
         "repeat": false,
         "type": "SHOOT_PROXY_RANGE",
-        "proxy": "iceSpecialSmall",
+        "proxy": "iceSpecialSmallWeak",
         "offset": {
           "x": 0,
           "y": 0,
@@ -24817,7 +25078,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "specials.cold",
-          "name": "coldSubChargeMega"
+          "name": "coldSubChargeMegaLite"
         },
         "offset": {
           "x": 0,
@@ -26371,7 +26632,7 @@
         "attack": {
           "type": "HEAVY",
           "element": "SHOCK",
-          "damageFactor": 1,
+          "damageFactor": 1.15,
           "spFactor": 0,
           "status": 0.2,
           "guardable": "",
@@ -26407,7 +26668,7 @@
         "attack": {
           "type": "HEAVY",
           "element": "SHOCK",
-          "damageFactor": 1.15,
+          "damageFactor": 1.25,
           "reverse": false,
           "spFactor": 0,
           "status": 0.2,
@@ -26444,7 +26705,7 @@
         "attack": {
           "type": "HEAVY",
           "element": "SHOCK",
-          "damageFactor": 1.35,
+          "damageFactor": 1.45,
           "reverse": false,
           "spFactor": 0,
           "status": 0.2,
@@ -26488,7 +26749,7 @@
         "attack": {
           "type": "MASSIVE",
           "element": "SHOCK",
-          "damageFactor": 1.7,
+          "damageFactor": 1.8,
           "reverse": false,
           "spFactor": 0,
           "status": 0.2,
@@ -28548,6 +28809,7 @@
         "waitSkip": 0,
         "actionDetached": false,
         "fixPos": false,
+        "group": "thunderWrathDashFX",
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "specials.shock",
@@ -28568,6 +28830,7 @@
         "waitSkip": 0,
         "actionDetached": false,
         "fixPos": false,
+        "group": "thunderWrathDashFX",
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "dust",
@@ -28660,6 +28923,7 @@
         "waitSkip": 0,
         "actionDetached": false,
         "fixPos": false,
+        "group": "thunderWrathDashFX",
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "combat.tribladerXTM",
@@ -28680,6 +28944,7 @@
         "waitSkip": 0,
         "actionDetached": false,
         "fixPos": false,
+        "group": "thunderWrathDashFX",
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "specials.shock",
@@ -28728,7 +28993,12 @@
       {
         "time": 0.4,
         "stopBeforeEdge": false,
+        "collideCancel": 1,
         "type": "MOVE_FORWARD"
+      },
+      {
+        "group": "thunderWrathDashFX",
+        "type": "CLEAR_EFFECTS"
       },
       {
         "type": "STOP_REPEATING_FORCE"
@@ -28896,7 +29166,7 @@
           "type": "MASSIVE",
           "element": "WAVE",
           "fly": "MASSIVE+",
-          "damageFactor": 2.6,
+          "damageFactor": 1.5,
           "reverse": false,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
@@ -29423,7 +29693,8 @@
         "attack": {
           "type": "MASSIVE",
           "element": "WAVE",
-          "damageFactor": 4,
+          "damageFactor": 5.0,
+          "critFactor": 0,
           "fly": "MASSIVE+++",
           "reverse": false,
           "spFactor": 0,

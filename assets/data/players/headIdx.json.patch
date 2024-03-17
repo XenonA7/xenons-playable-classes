@@ -7,28 +7,32 @@
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "id": "triblader.triblader2",
-      "img": "media/gui/severed-heads/triblader2.png"
+      "img": "media/gui/severed-heads/triblader2.png",
+      "name": "triblader2"
     }
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "id": "triblader.triblader3",
-      "img": "media/gui/severed-heads/triblader3.png"
+      "img": "media/gui/severed-heads/triblader3.png",
+      "name": "triblader3"
     }
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "id": "triblader.triblader4",
-      "img": "media/gui/severed-heads/triblader4.png"
+      "img": "media/gui/severed-heads/triblader4.png",
+      "name": "triblader4"
     }
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "id": "triblader.triblader5",
-      "img": "media/gui/severed-heads/triblader5.png"
+      "img": "media/gui/severed-heads/triblader5.png",
+      "name": "triblader5"
     }
   }
 ]

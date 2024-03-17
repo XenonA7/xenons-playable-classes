@@ -122,39 +122,6 @@
         }
       ],
       "spawn": "PLAYER_SPAWN"
-    },
-    {
-      "name": {
-        "en_US": "Triblader Prime"
-      },
-      "customCode": true,
-      "platPoints": 80000,
-      "coins": 0,
-      "objective": {
-        "ko_KR": "This top Crossworlds player has the end-game achievement allowing them to use multiple circuit paths at once, giving them a huge moveset to utilize.",
-        "en_US": "\\c[1]Will be implemented in later versions of XTM.\\c[0]"
-      },
-      "mods": [
-        "PVP_BATTLE"
-      ],
-      "points": 60000,
-      "type": "DEFAULT",
-      "medal": 0,
-      "waves": [],
-      "map": "arena.boss.turret-boss",
-      "bonuses": [
-        {
-          "type": "HIT_COUNTER",
-          "value": 100,
-          "points": 5000
-        },
-        {
-          "type": "TIME",
-          "seconds": 240,
-          "points": 10000
-        }
-      ],
-      "spawn": "PLAYER_SPAWN"
     }
   ]
 }

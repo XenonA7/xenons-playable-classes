@@ -87,6 +87,26 @@
           3,
           4
         ]
+      },
+      {
+        "name": "TRAIL_LEA",
+        "sheet": {
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 0,
+          "width": 24,
+          "height": 24
+        },
+        "time": 0.06,
+        "repeat": false,
+        "flipY": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
       }
     ]
   },
@@ -180,6 +200,29 @@
           }
         },
         "anim": "TRAIL",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.015,
+        "type": "WAIT"
+      }
+    ],
+    "ballTrailLea": [
+      {
+        "useTargetAngle": true,
+        "offset": {
+          "x": 0,
+          "y": -7,
+          "z": -3
+        },
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0.3,
+            "spline": ""
+          }
+        },
+        "anim": "TRAIL_LEA",
         "type": "PLAY_ANIM"
       },
       {

@@ -6,143 +6,13 @@
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
-      "type": "EventTrigger",
-      "x": 954,
-      "y": 301,
-      "level": 0,
-      "settings": {
-        "mapId": 264,
-        "event": [
-          {
-            "type": "IF",
-            "condition": "plot.xtm.swapBack",
-            "thenStep": [
-              {
-                "type": "CHANGE_VAR_BOOL",
-                "varName": "plot.xtm.swapBack",
-                "changeType": "set",
-                "value": false
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 1",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "Lea"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 2",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "Schneider"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 3",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "Luke"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 4",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "triblader2"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 5",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "triblader3"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 6",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "triblader4"
-                  }
-                ]
-              },
-              {
-                "type": "IF",
-                "condition": "plot.xtm.character == 7",
-                "thenStep": [
-                  {
-                    "type": "SWITCH_PLAYER_CONFIG",
-                    "name": "triblader5"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "name": "LeaSwitchBack",
-        "eventType": "PARALLEL",
-        "endCondition": "false",
-        "triggerType": "ONCE_PER_ENTRY"
-      }
-    }
-  },
-  {
-    "type": "ADD_ARRAY_ELEMENT",
-    "content": {
-      "type": "EventTrigger",
-      "x": 954,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 265,
-        "event": [
-          {
-            "type": "IF",
-            "condition": "!plot.xtm.character >= 1",
-            "thenStep": [
-              {
-                "changeType": "set",
-                "type": "CHANGE_VAR_NUMBER",
-                "varName": "plot.xtm.character",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "name": "characterInitOnce",
-        "eventType": "PARALLEL",
-        "endCondition": "false",
-        "triggerType": "ONCE"
-      }
-    }
-  },
-  {
-    "type": "ADD_ARRAY_ELEMENT",
-    "content": {
       "type": "Prop",
       "x": 1227,
       "y": 419,
       "level": 0,
       "settings": {
         "name": "xtmSignBase",
-        "mapId": 265,
+        "mapId": 264,
         "propType": {
           "sheet": "rhombus-interior",
           "name": "groundProjector"
@@ -163,7 +33,7 @@
         "offset": 12
       },
       "settings": {
-        "mapId": 266,
+        "mapId": 265,
         "propType": {
           "sheet": "trading-autumn",
           "name": "signClass"
@@ -186,7 +56,19 @@
               "type": "ADD_MSG_PERSON",
               "person": {
                 "person": "main.lea",
-                "expression": "DEFAULT"
+                "expression": "BLANK"
+              }
+            },
+            {
+              "type": "SHOW_BOARD_MSG",
+              "side": "RIGHT",
+              "text": {
+                "en_US": "Select a character.",
+                "de_DE": "",
+                "ja_JP": "",
+                "ko_KR": "",
+                "zh_CN": "",
+                "zh_TW": ""
               }
             },
             {
@@ -196,10 +78,11 @@
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 1
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -216,14 +99,40 @@
               ],
               "1": [
                 {
+                  "name": "triblader-lea",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                    "en_US": "Character:\\. \\c[3]Lea\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                  },
+                  "center": true,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "2": [
+                {
                   "name": "Schneider",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 2
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -238,16 +147,17 @@
                   "side": "ALL"
                 }
               ],
-              "2": [
+              "3": [
                 {
                   "name": "Luke",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 3
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -262,16 +172,17 @@
                   "side": "ALL"
                 }
               ],
-              "3": [
+              "4": [
                 {
                   "name": "triblader2",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 4
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -286,16 +197,17 @@
                   "side": "ALL"
                 }
               ],
-              "4": [
+              "5": [
                 {
                   "name": "triblader3",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 5
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -310,16 +222,17 @@
                   "side": "ALL"
                 }
               ],
-              "5": [
+              "6": [
                 {
                   "name": "triblader4",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 6
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -334,16 +247,17 @@
                   "side": "ALL"
                 }
               ],
-              "6": [
+              "7": [
                 {
                   "name": "triblader5",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
                 {
-                  "changeType": "set",
-                  "type": "CHANGE_VAR_NUMBER",
-                  "varName": "plot.xtm.character",
-                  "value": 7
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
                 },
                 {
                   "text": {
@@ -366,17 +280,24 @@
                   "side": "ALL"
                 }
               ],
-              "7": [],
+              "8": [],
               "type": "SHOW_CHOICE",
               "person": {
                 "person": "main.lea",
-                "expression": "DEFAULT"
+                "expression": "BLANK"
               },
               "options": [
                 {
                   "0": " ",
                   "label": {
                     "en_US": "Lea"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Lea (Triblader)"
                   },
                   "activeCondition": "true"
                 },

@@ -1,3 +1,20 @@
+/*
+    Author: Krypek
+    Created: 1/29/2024
+
+    Description: Adds variable support to detect when player/enemy combatants are defeated in PVP
+                 duels involving multiple opponents on each team.
+
+                 When the player dies, tmp.pvp_player_defeated is set to true.
+                 Else, tmp.pvp_ENTITY_NAME_defeated is set to true.
+                 You handle setting these values to false yourself, it doesn't reset between rounds.
+
+                 Other features:
+                 - Speeds up game when player is defeated in PVP but has party members remaining.
+                 - Hides defeated enemy healthbars.
+                 - Improved/fixed PVP GUI rendering for scoreboard.
+*/
+
 sc.PartyModel.inject({
     _spawnPartyMemberEntity(partyMemberName, showEffects, idx, npc) {
         this.parent(partyMemberName, showEffects, idx, npc)
@@ -39,7 +56,8 @@ sc.SUB_HP_EDITOR.PVP.rearrangeAll = function () {
     sc.SUB_HP_EDITOR.PVP.hpBars = sc.SUB_HP_EDITOR.PVP.hpBars.sort((a, b) => a.order - b.order)
     for (let i = 0; i < sc.SUB_HP_EDITOR.PVP.hpBars.length; i++) {
         const bar = sc.SUB_HP_EDITOR.PVP.hpBars[i]
-        bar.setPos(bar.hook.pos.x, i * 25 + 5)
+        bar.setPos(bar.hook.pos.x, i * 15 + 5)
+        //Note: XTM's original spacing was bar.setPos(bar.hook.pos.x, i * 25 + 5)
     }
 }
 sc.SUB_HP_EDITOR.PVP.inject({

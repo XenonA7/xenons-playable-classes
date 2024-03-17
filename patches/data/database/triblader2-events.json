@@ -1861,7 +1861,7 @@
               },
               {
                 "type": "IF",
-                "condition": "plot.xtm.character==2 || plot.xtm.character==3 || plot.xtm.character==4 || plot.xtm.character==5 || plot.xtm.character==6 || plot.xtm.character==7",
+                "condition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
                 "withElse": true,
                 "thenStep": [
                   {

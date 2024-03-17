@@ -1,7 +1,8 @@
 {
   "DOCTYPE": "PLAYER",
-  "character": "triblader.triblader4",
-  "sheet": "npc.triblader4",
+  "character": "main.lea",
+  "sheet": "npc.triblader-lea",
+  "headIdx": 0,
   "class": "TRIBLADER",
   "stats": {
     "hp": {
@@ -590,6 +591,9 @@
       "maxBounce": 3,
       "timer": 1.5,
       "trail": true,
+      "effectKeys": {
+        "trail": "ballTrailLea"
+      },
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
@@ -662,8 +666,7 @@
         "reverse": false,
         "spFactor": 0,
         "hints": [
-          "CHARGED",
-          "STANDARD"
+          "CHARGED"
         ],
         "guardable": "",
         "skillBonus": "RANGED_DMG"
@@ -1674,7 +1677,7 @@
           "z": 0
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
+          "src": "media/entity/effects/triblader-lea.png",
           "xCount": 1,
           "offX": 0,
           "offY": 0,
@@ -1856,7 +1859,7 @@
           "z": 0
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
+          "src": "media/entity/effects/triblader-lea.png",
           "xCount": 1,
           "offX": 0,
           "offY": 0,
@@ -6743,6 +6746,9 @@
       "maxBounce": 3,
       "timer": 1.5,
       "trail": true,
+      "effectKeys": {
+        "trail": "ballTrailLea"
+      },
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
@@ -15987,9 +15993,9 @@
           "y": 25
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
@@ -16121,7 +16127,7 @@
           },
           "effect": {
             "sheet": "combat.tribladerXTM",
-            "name": "solarChain"
+            "name": "solarChainLea"
           },
           "offset": {
             "x": 0,
@@ -16260,9 +16266,9 @@
           "y": 25
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
@@ -16394,7 +16400,7 @@
           },
           "effect": {
             "sheet": "combat.tribladerXTM",
-            "name": "solarChain"
+            "name": "solarChainLea"
           },
           "offset": {
             "x": 0,
@@ -16525,29 +16531,6 @@
       }
     },
     "solarEruptionHilt": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 204,
-          "width": 30,
-          "height": 40
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
       "copyOwnerAnims": false,
       "breakType": "ACTION",
       "action": [
@@ -16620,15 +16603,18 @@
           "z": -4
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 142,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
         "dirs": "1",
         "flipX": [
           0
+        ],
+        "flipY": [
+          1
         ],
         "tileOffsets": [
           0
@@ -29053,7 +29039,7 @@
             "type": "SET_JUMPING"
           },
           {
-            "value": 400,
+            "value": 320,
             "type": "SET_SPEED"
           },
           {
@@ -29252,7 +29238,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "NEUTRAL",
-              "damageFactor": 0.85,
+              "damageFactor": 1.05,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -29301,7 +29287,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.20,
             "type": "WAIT"
           }
         ]
@@ -29346,7 +29332,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "NEUTRAL",
-              "damageFactor": 0.85,
+              "damageFactor": 1.05,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -29395,7 +29381,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.20,
             "type": "WAIT"
           }
         ]
@@ -29440,7 +29426,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "NEUTRAL",
-              "damageFactor": 1.0,
+              "damageFactor": 1.4,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -33464,7 +33450,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -33513,7 +33499,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -33558,7 +33544,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -33607,7 +33593,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -33652,7 +33638,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 1.0,
+              "damageFactor": 1.4,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -34140,7 +34126,7 @@
       },
       "ATTACK_SPECIAL2_A": {
         "name": {
-          "en_US": "Solar Eruption"
+          "en_US": "Sunfury"
         },
         "description": {
           "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
@@ -39990,7 +39976,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "COLD",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -40039,7 +40025,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -40084,7 +40070,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "COLD",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -40133,7 +40119,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -40178,7 +40164,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "COLD",
-              "damageFactor": 1.0,
+              "damageFactor": 1.4,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -46544,7 +46530,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "SHOCK",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -46593,7 +46579,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -46638,7 +46624,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "SHOCK",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -46687,7 +46673,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -46732,7 +46718,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "SHOCK",
-              "damageFactor": 1.0,
+              "damageFactor": 1.4,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -53465,7 +53451,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "WAVE",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -53514,7 +53500,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -53559,7 +53545,7 @@
               "type": "MEDIUM",
               "fly": "HEAVY",
               "element": "WAVE",
-              "damageFactor": 0.95,
+              "damageFactor": 1.15,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",
@@ -53608,7 +53594,7 @@
             "type": "SPAWN_ASSAULT"
           },
           {
-            "time": 0.15,
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -53653,7 +53639,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "WAVE",
-              "damageFactor": 1.0,
+              "damageFactor": 1.4,
               "spFactor": 1,
               "reverse": false,
               "guardable": "",

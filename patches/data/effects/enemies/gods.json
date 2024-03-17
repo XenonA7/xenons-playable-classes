@@ -488,6 +488,125 @@
         "anim": "CIRCLE_SOURCE_WAVE_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
+    ],
+    "sweepPierceDull": [
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0.001,
+        "startAngle": 0,
+        "startDist": 248,
+        "particleRotate": true,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.7
+        },
+        "pScale": {
+          "init": {
+            "x": 0.05,
+            "y": 5
+          },
+          "start": {
+            "value": {
+              "x": 0.15,
+              "y": 10
+            },
+            "spline": ""
+          }
+        },
+        "anim": "CIRCLE_SOURCE_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/battle/airon/close-combat-heat-sweep-massive.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 1.7,
+        "sound": "media/sound/battle/enemies/samurai/sword-slide.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "#0d0000",
+        "fadeIn": 0.1,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "type": "SCREEN_FLASH"
+      },
+      {
+        "rumbleType": "RANDOM",
+        "power": "MEDIUM",
+        "speed": "FASTEST",
+        "duration": 0.2,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0.001,
+        "startAngle": 0,
+        "startDist": 200,
+        "particleRotate": true,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 12
+            },
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 12
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "CIRCLE_SOURCE_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

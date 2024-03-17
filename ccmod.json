@@ -1,6 +1,6 @@
 {
 	"id": "xenons-triblader-mod",
-	"version": "0.9.4",
+	"version": "1.0.0",
 	"title": {
 		"en_US": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
 		"de_DE": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
@@ -22,6 +22,9 @@
 	"icons": {
 		"24": "icon.png"
 	},
+	"repository": "https://github.com/XenonA7/xenons-triblader-mod",
+	"tags": ["player character", "party member", "pvp duel", "arena", "combat arts"],
+	"authors": ["XenonA7", "krypek", "HeartLychee"],
 	"prestart": "prestart.js",
 	"plugin": "plugin.js",
 	"dependencies": {

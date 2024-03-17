@@ -315,6 +315,172 @@
         "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
         "type": "PLAY_SOUND"
       }
+    ],
+    "hugeAppearIT": [
+      {
+        "rumbleType": "RANDOM",
+        "power": "MEDIUM",
+        "speed": "FASTEST",
+        "duration": 0.5,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "sound": "media/sound/battle/special/special-impact.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "scaleX": 1.5,
+        "scaleY": 1.5,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "relative": true,
+        "duration": 0.4,
+        "keySpline": "EASE_OUT_STRONG",
+        "start": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "end": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": "MOVE_OFFSET"
+      },
+      {
+        "size": "XXXL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.5,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.5,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.5,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.6,
+        "duration": 0.4,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 1,
+        "moveDist": 48,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 1,
+        "moveDist": 80,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.35,
+        "type": "WAIT"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 0.35,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      }
     ]
   }
 }

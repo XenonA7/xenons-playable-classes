@@ -1,11 +1,7 @@
 # Xenon's Triblader Mod
 ![Kindling Triad](https://user-images.githubusercontent.com/105614278/168501697-8dccf971-8564-4166-bbdb-d3c6ec79d870.gif)
 
-Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. Manlea and Ninja skins should remain disabled in-game for this mod to work. Mod only contains text for English.
-
-# **PRE-RELEASE VERSION**
-
-This is currently a pre-release version. Please provide the author, XenonA7, with feedback on combat art balance. Also please report any crashes, glitches, or other issues as a result from playing the entire game under a different character configuration. I won't be able to test every quest, cutscene, etc myself so feedback is critical. Please give feedback at the Discord linked below.
+Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. **Manlea and Ninja skins should remain disabled in-game for this mod to work**. Mod only contains text for English.
 
 ### **Required Mods**
 1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
@@ -23,7 +19,7 @@ This is currently a pre-release version. Please provide the author, XenonA7, wit
 https://discord.gg/CsfUk9vpFq
 
 ### **Special Thanks:**
-- **Lychee:** Spritework for Triblader Lea
+- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations
 - **Krypek:** Code for better handling of multi-opponent duels, implemented option to skip modded intro map
 - **Nax:** JS support
 - **Alyxia:** JS support, author of AlyBox
@@ -212,3 +208,5 @@ If your mods appear in-game, you are good to go. Note that XTM is compatible wit
 2. Install the new version where the old one used to be  
 
 * You can't just override the old version because if a new version removes old files or renames certain files then overriding will mess it up.
+
+* All new versions of XTM are save-compatible with previous versions unless otherwise stated in the changelog.

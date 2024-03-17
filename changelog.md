@@ -1,3 +1,17 @@
+1.0.1 (##/##/2024)
+### Changes
+- Magnet Storm now resets camera during final strike
+- Magnet Storm added sound effect when final strike hits
+- Re-worded the description for Magnet Storm
+### Fixes
+- Blizzard Slash fixed missing HEAVY hit stability
+### Balance
+- Changes to both player and enemy:
+  * Icicle Slash reverted to old punch-style hitbox
+  * Icicle Slash hit stability decreased from MASSIVE to HEAVY
+  * Blizzard Slash first swing reverted to old punch-style hitbox
+  * Blizzard Slash second swing increased hitbox radius from 72 to 88
+
 ## 1.0.0 (03/16/2024)
 ### New Content
 - New character: Triblader Lea (sprites by **HeartLychee**)

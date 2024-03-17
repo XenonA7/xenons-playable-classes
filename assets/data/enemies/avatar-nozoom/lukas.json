@@ -23671,6 +23671,10 @@
         "type": "FACE_TO_TARGET"
       },
       {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
+      },
+      {
         "followUp": "attack1End",
         "wait": false,
         "viaWalkConfig": false,
@@ -23679,15 +23683,15 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 56,
-        "yScale": 0,
-        "zHeight": 24,
-        "centralAngle": 0.7,
-        "duration": 0.2,
-        "expandRadius": 0,
-        "alwaysFull": false,
+        "radius": 4,
+        "yScale": 1,
+        "zHeight": 16,
+        "centralAngle": 0.6,
+        "duration": 0.1,
+        "expandRadius": 48,
+        "alwaysFull": true,
         "clockwise": false,
-        "flipLeftFace": 6,
+        "flipLeftFace": 0,
         "rectangular": false,
         "repeat": false,
         "uniformHitDir": false,
@@ -23697,7 +23701,7 @@
         "attack": {
           "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 1.5,
+          "damageFactor": 1,
           "fly": "MASSIVE",
           "reverse": false,
           "spFactor": 0,
@@ -23867,6 +23871,10 @@
         "type": "FACE_TO_TARGET"
       },
       {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
+      },
+      {
         "followUp": "attack2End",
         "wait": false,
         "viaWalkConfig": false,
@@ -23875,15 +23883,15 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 56,
-        "yScale": 0,
-        "zHeight": 24,
-        "centralAngle": 0.7,
-        "duration": 0.2,
-        "expandRadius": 0,
-        "alwaysFull": false,
-        "clockwise": true,
-        "flipLeftFace": 6,
+        "radius": 4,
+        "yScale": 1,
+        "zHeight": 16,
+        "centralAngle": 0.6,
+        "duration": 0.1,
+        "expandRadius": 48,
+        "alwaysFull": true,
+        "clockwise": false,
+        "flipLeftFace": 0,
         "rectangular": false,
         "repeat": false,
         "uniformHitDir": false,
@@ -23893,11 +23901,11 @@
         "attack": {
           "type": "HEAVY",
           "element": "COLD",
-          "damageFactor": 2,
+          "damageFactor": 1,
           "fly": "MASSIVE",
           "reverse": false,
           "spFactor": 0,
-          "status": 0.6,
+          "status": 1,
           "guardable": "",
           "skillBonus": "MELEE_DMG"
         },
@@ -24036,7 +24044,7 @@
       },
       {
         "align": "BOTTOM",
-        "radius": 72,
+        "radius": 88,
         "yScale": 0,
         "zHeight": 24,
         "centralAngle": 1.7,

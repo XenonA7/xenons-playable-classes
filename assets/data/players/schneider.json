@@ -11267,6 +11267,22 @@
           "type": "WAIT"
         },
         {
+          "volume": 0.6,
+          "global": false,
+          "loop": false,
+          "speed": 0.9,
+          "sound": "media/sound/battle/magic-charge.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "volume": 1.2,
+          "global": false,
+          "loop": false,
+          "speed": 1.0,
+          "sound": "media/sound/battle/airon/shock/hit-shock-massive.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
           "duration": -1,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -11341,7 +11357,18 @@
           "type": "CLEAR_SLOW_MOTION"
         },
         {
-          "time": 1,
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "speed": "SLOW",
+          "transition": "EASE_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "type": "RESET_CAMERA"
+        },
+        {
+          "time": 0.8,
           "type": "WAIT"
         },
         {
@@ -43823,7 +43850,7 @@
             }
           },
           {
-            "value": "MASSIVE",
+            "value": "HEAVY",
             "type": "SET_HIT_STABLE"
           },
           {
@@ -43835,15 +43862,15 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 56,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 0.7,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
+            "radius": 4,
+            "yScale": 1,
+            "zHeight": 16,
+            "centralAngle": 0.6,
+            "duration": 0.1,
+            "expandRadius": 48,
+            "alwaysFull": true,
             "clockwise": false,
-            "flipLeftFace": 6,
+            "flipLeftFace": 0,
             "rectangular": false,
             "repeat": false,
             "uniformHitDir": false,
@@ -43853,7 +43880,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "COLD",
-              "damageFactor": 1.5,
+              "damageFactor": 1,
               "fly": "MASSIVE",
               "reverse": false,
               "spFactor": 0,
@@ -44283,6 +44310,10 @@
             }
           },
           {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
             "followUp": "attack2End",
             "wait": false,
             "viaWalkConfig": false,
@@ -44291,15 +44322,15 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 56,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 0.7,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": true,
-            "flipLeftFace": 6,
+            "radius": 4,
+            "yScale": 1,
+            "zHeight": 16,
+            "centralAngle": 0.6,
+            "duration": 0.1,
+            "expandRadius": 48,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
             "rectangular": false,
             "repeat": false,
             "uniformHitDir": false,
@@ -44309,11 +44340,11 @@
             "attack": {
               "type": "HEAVY",
               "element": "COLD",
-              "damageFactor": 2,
+              "damageFactor": 1,
               "fly": "MASSIVE",
               "reverse": false,
               "spFactor": 0,
-              "status": 0.6,
+              "status": 1,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
             },
@@ -44452,7 +44483,7 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 72,
+            "radius": 88,
             "yScale": 0,
             "zHeight": 24,
             "centralAngle": 1.7,
@@ -50351,7 +50382,7 @@
           "en_US": "Magnet Storm"
         },
         "description": {
-          "en_US": "Throw an unstable magnetic cluster that unleashes a devastating attack when it hits an enemy."
+          "en_US": "Hit a single enemy to unleash a devastating attack involving advanced magnet prisms."
         },
         "dmgType": "RANGED",
         "stunType": "LOCK",

@@ -52,6 +52,7 @@ https://discord.gg/CsfUk9vpFq
 ![triblader3](https://user-images.githubusercontent.com/105614278/168503467-896c5082-e2bc-4640-9a85-651c878634d2.gif)
 ![triblader4](https://user-images.githubusercontent.com/105614278/168503633-d4a825cb-7f82-4b6b-a6fc-4e471e74ad31.gif)
 ![triblader5](https://user-images.githubusercontent.com/105614278/168504082-661b6b87-e9b3-42ef-8192-603a01f0f1ca.gif)
+![triblader-lea](https://github.com/XenonA7/xenons-triblader-mod/assets/105614278/da027b4e-a16b-4eb3-8639-3c12ceaa92e7)
 
 ## **Combat Arts:** 
 

@@ -4296,7 +4296,7 @@
               "type": "SHOW_THROW_FX"
             },
             {
-              "proxy": "defaultWave",
+              "proxy": "defaultWaveClone",
               "type": "SHOOT_PROXY_PLAYER"
             },
             {
@@ -11644,7 +11644,7 @@
         "y": 16,
         "z": 16
       },
-      "group": "solarEruptionParts",
+      "group": "",
       "type": "GENERIC",
       "timeBoni": null,
       "behaviors": [],
@@ -11758,7 +11758,7 @@
         "y": 16,
         "z": 16
       },
-      "group": "solarEruptionGroup",
+      "group": "",
       "type": "GENERIC",
       "timeBoni": null,
       "behaviors": [],
@@ -11991,7 +11991,6 @@
           }
         },
         {
-          "followUp": "attackMirrEnd",
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
@@ -19471,7 +19470,6 @@
         "type": "FACE_TO_TARGET"
       },
       {
-        "followUp": "attackMirrEnd",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
@@ -19625,6 +19623,18 @@
       {
         "value": "MASSIVE",
         "type": "SET_HIT_STABLE"
+      },
+      {
+        "followUp": "charge",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "charge"
+      },
+      {
+        "element": "HEAT",
+        "level": 2,
+        "type": "COMBAT_ART_CHARGE_NOZOOM"
       },
       {
         "wait": false,
@@ -20922,7 +20932,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "specials.heat",
-          "name": "laserSrc"
+          "name": "laserSrcMega"
         },
         "offset": {
           "x": 0,
@@ -22170,7 +22180,6 @@
         }
       },
       {
-        "followUp": "attackMirrEnd",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
@@ -23209,7 +23218,6 @@
         "type": "WAIT"
       },
       {
-        "followUp": "attackMirrEnd",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",

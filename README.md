@@ -25,6 +25,7 @@ https://discord.gg/CsfUk9vpFq
 - **Alyxia:** JS support, author of AlyBox
 - **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
 - **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
+- **Lubkuluk**: JS support, patch for Hexacast key panel functionality
 
 ## **Main Features:**
 1. Fully playable triblader class, with a full set of 92 new combat arts to discover

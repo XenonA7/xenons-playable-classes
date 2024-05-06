@@ -5627,7 +5627,7 @@
               "type": "SHOW_THROW_FX"
             },
             {
-              "proxy": "defaultWave",
+              "proxy": "defaultWaveClone",
               "type": "SHOOT_PROXY_PLAYER"
             },
             {
@@ -16625,7 +16625,7 @@
         "y": 16,
         "z": 16
       },
-      "group": "solarEruptionParts",
+      "group": "",
       "type": "GENERIC",
       "timeBoni": null,
       "behaviors": [],
@@ -16739,7 +16739,7 @@
         "y": 16,
         "z": 16
       },
-      "group": "solarEruptionGroup",
+      "group": "",
       "type": "GENERIC",
       "timeBoni": null,
       "behaviors": [],
@@ -17583,7 +17583,6 @@
           }
         },
         {
-          "followUp": "attackMirrEnd",
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
@@ -33788,7 +33787,6 @@
             }
           },
           {
-            "followUp": "attackMirrEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
@@ -37876,7 +37874,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "laserSrc"
+              "name": "laserSrcMega"
             },
             "offset": {
               "x": 0,
@@ -38874,7 +38872,6 @@
             }
           },
           {
-            "followUp": "attackMirrEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
@@ -41304,7 +41301,6 @@
             "type": "WAIT"
           },
           {
-            "followUp": "attackMirrEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",

@@ -1,3 +1,19 @@
+## 1.0.2 (05/05/2024)
+### New Content
+- Added font icons needed for custom skills in Hexacast mod
+- Added Lubkuluk to XTM credits for Hexacast KeyPanel code contribution
+- Added teleporter to AL dev room from XTM dev room (only works if AL is installed)
+- Added map art-testing-AL.json, not implemented by default
+### Changes
+- Moved the hologram sign slightly in the art-testing map
+- Removed the sword icon from the mod's name entry
+- Deleted unnecessary proxy groupings "solarEruptionParts" and "solarEruptionGroup"
+- Vermillion Firestorm effect laserSrc changed to laserSrcMega
+### Fixes
+- Fixed pvp opponents not charging before using Solar Eruption
+- Removed all broken animation references to "attackMirrEnd"
+- Fixed Spectral Legion clones shooting wrong proxy types occasionally
+
 ## 1.0.1 (03/16/2024)
 ### Changes
 - Magnet Storm now resets camera during final strike

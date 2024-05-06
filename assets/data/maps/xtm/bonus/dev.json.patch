@@ -1,0 +1,76 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 538,
+          "y": 254,
+          "level": 1,
+          "settings": {
+            "mapId": 130,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "guildac.dev-room",
+            "marker": "teleporter",
+            "name": "al-dev",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] Dev Room (old)"
+            },
+            "longTelCond": "false",
+            "spawnCondition": "!tmp.blockExit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'arcane-labs')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 538,
+          "y": 254,
+          "level": 1,
+          "settings": {
+            "mapId": 130,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "guildac.dev-room",
+            "marker": "teleporter",
+            "name": "al-dev",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] Dev Room (old)"
+            },
+            "longTelCond": "false",
+            "spawnCondition": "!tmp.blockExit",
+            "blockEvent": [
+              {
+                "titleText": {
+                  "en_US": "The following mods are required to enter:"
+                },
+                "text": {
+                  "en_US": "\\c[3]Arcane Lab\\c[0]"
+                },
+                "type": "SHOW_CENTER_MSG"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "EXIT"
+  }
+]

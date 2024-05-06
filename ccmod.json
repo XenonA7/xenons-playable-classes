@@ -1,14 +1,14 @@
 {
 	"id": "xenons-triblader-mod",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"title": {
-		"en_US": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"de_DE": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"fr_FR": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"zh_CN": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"zh_TW": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"ja_JP": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]",
-		"ko_KR": "Xenon's \\c[2]Triblader\\c[0] Mod \\i[diff-2]"
+		"en_US": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"de_DE": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"fr_FR": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"zh_CN": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"zh_TW": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"ja_JP": "Xenon's \\c[2]Triblader\\c[0] Mod",
+		"ko_KR": "Xenon's \\c[2]Triblader\\c[0] Mod"
 	},
 	"description": {
 		"en_US": "Playable Tribladers, PVP, and more!",

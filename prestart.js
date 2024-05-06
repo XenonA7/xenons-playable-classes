@@ -1,3 +1,4 @@
+import "./js/custom-font-icons.js";
 import "./js/custom-bgm.js";
 import "./js/custom-party-options.js";
 import "./js/custom-arena-cups.js";

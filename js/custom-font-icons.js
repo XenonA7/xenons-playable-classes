@@ -12,6 +12,7 @@ ig.module("game.feature.font.xtm-custom-icons").requires("game.feature.font.font
 	sc.fontsystem.font.setMapping({"class-quadro" :[fontIdx, 4]});
 	sc.fontsystem.font.setMapping({"class-penta" :[fontIdx, 5]});
 	sc.fontsystem.font.setMapping({"class-hexa" :[fontIdx, 6]});
+	sc.fontsystem.font.setMapping({"head-lily" :[fontIdx, 7]});
 
 	//small font icons
 	sc.fontsystem.smallFont.setMapping({"icon-test" :[smallFontIdx, 0]});

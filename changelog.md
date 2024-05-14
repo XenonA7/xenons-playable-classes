@@ -1,3 +1,7 @@
+## 1.0.3 (05/13/2024)
+### New Content
+- Added additional font icons needed for Hexacast mod custom skills
+
 ## 1.0.2 (05/05/2024)
 ### New Content
 - Added font icons needed for custom skills in Hexacast mod

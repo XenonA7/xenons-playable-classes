@@ -56677,7 +56677,7 @@
           },
           {
             "duration": -1,
-            "align": "BOTTOM",
+            "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
             "wait": false,

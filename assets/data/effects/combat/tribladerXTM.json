@@ -13467,6 +13467,14 @@
     ],
     "waveTriangleTrail": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": 0.45,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
         "type": "LOOP_START"
       },
       {
@@ -13475,7 +13483,7 @@
         "circular": false,
         "xScale": 1,
         "yScale": 1,
-        "moveZDist": 16,
+        "moveZDist": 32,
         "pAlpha": {
           "init": 1,
           "start": {
@@ -13504,6 +13512,9 @@
           }
         },
         "angleVary": 1,
+        "cancelable": false,
+        "particleDuration": 0.9,
+        "particleDurVariance": 0.3,
         "anim": "WAVE_BIG_TRIANGLE",
         "type": "PLAY_ANIMS_OVER_ENTITY"
       },
@@ -13513,7 +13524,7 @@
         "circular": false,
         "xScale": 1,
         "yScale": 1,
-        "moveZDist": 16,
+        "moveZDist": 32,
         "pAlpha": {
           "init": 1,
           "start": {
@@ -13542,6 +13553,9 @@
           }
         },
         "angleVary": 1,
+        "cancelable": false,
+        "particleDuration": 0.9,
+        "particleDurVariance": 0.3,
         "anim": "WAVE_BIG_TRIANGLE",
         "type": "PLAY_ANIMS_OVER_ENTITY"
       },

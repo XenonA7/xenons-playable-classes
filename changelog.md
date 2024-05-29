@@ -1,3 +1,10 @@
+## 1.1.0 (05/29/2024)
+### New Content
+- Added green screen map to XTM dev room
+### Changes
+- Triblader5 DASH_SLOW action is now also steerable
+- Added light source to effect waveTriangleTrail (used in Soul Shatter)
+
 ## 1.0.3 (05/13/2024)
 ### New Content
 - Added additional font icons needed for Hexacast mod custom skills

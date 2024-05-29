@@ -29185,12 +29185,28 @@
             "type": "SET_ACCEL_SPEED"
           },
           {
-            "dir": {
-              "actorAttrib": "dashDir"
-            },
-            "time": 0.12,
-            "stopBeforeEdge": false,
-            "type": "MOVE_TO_DIR"
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "type": "MOVE_FORWARD",
+            "time": 0.04,
+            "stopBeforeEdge": false
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "type": "MOVE_FORWARD",
+            "time": 0.04,
+            "stopBeforeEdge": false
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "type": "MOVE_FORWARD",
+            "time": 0.04,
+            "stopBeforeEdge": false
           },
           {
             "time": 0.24,
@@ -56706,7 +56722,7 @@
           },
           {
             "duration": -1,
-            "align": "BOTTOM",
+            "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
             "wait": false,

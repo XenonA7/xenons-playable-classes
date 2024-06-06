@@ -4585,6 +4585,10 @@
           "type": "SET_HIT_STABLE"
         },
         {
+          "sp": -1,
+          "type": "CONSUME_SP"
+        },
+        {
           "element": "WAVE",
           "level": 1,
           "type": "COMBAT_ART_CHARGE_NOZOOM"
@@ -11944,9 +11948,6 @@
       "action": [
         {
           "type": "DETACH_TIME_PARENT"
-        },
-        {
-          "type": "SET_OWNER_REPLACE_TARGET"
         },
         {
           "duration": 0,

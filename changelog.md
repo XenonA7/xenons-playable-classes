@@ -1,3 +1,9 @@
+## 1.1.1 (06/06/2024)
+### Changes
+- Blazing Mirage and So'najiz Phalanx clones no longer draw enemy aggro
+### Fixes
+- Fixed Spectral Legion clones able to consume SP
+
 ## 1.1.0 (05/29/2024)
 ### New Content
 - Added green screen map to XTM dev room

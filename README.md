@@ -8,6 +8,8 @@ Install instructions can be found at the bottom of this page. The DLC is require
    * Required for mods that add extra characters
 2. **cc-alybox:** https://github.com/lexisother/cc-alybox
    * Library mod needed for some features
+3. **menu-ui-replacer:** https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+   * Library mod needed for modded menu portraits
 
 ### **Recommended Mods (optional - for enhanced party members)**
 1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
@@ -189,6 +191,7 @@ Versions older than v2.21.0 will give an error with this mod.
 - (XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
 - (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
 - (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
+- (Required) menu-ui-replacer: https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
 - (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
 - (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 

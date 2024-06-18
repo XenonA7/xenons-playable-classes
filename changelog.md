@@ -1,3 +1,7 @@
+## 1.2.1 (06/18/2024)
+### Fixes
+- Added Menu UI Replacer to install instructions
+
 ## 1.2.0 (06/18/2024)
 ### General
 - New dependency mod: Menu UI Replacer

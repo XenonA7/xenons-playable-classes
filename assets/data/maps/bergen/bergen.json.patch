@@ -1,0 +1,35 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 97
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Door",
+      "x": 192,
+      "y": 1104,
+      "level": 3,
+      "settings": {
+        "name": "spookyHouse",
+        "doorType": "DEFAULT",
+        "dir": "SOUTH",
+        "transitionType": "REGULAR",
+        "mapId": 854,
+        "map": "bergen.spooky-house",
+        "marker": "exit",
+        "hideCondition": "",
+        "blockEventCondition": "",
+        "variation": "",
+        "condition": ""
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

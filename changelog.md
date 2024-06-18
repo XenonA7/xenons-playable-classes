@@ -1,3 +1,17 @@
+## 1.2.0 (06/18/2024)
+### General
+- New dependency mod: Menu UI Replacer
+  * https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+### New Content
+- New menu sprites when playing as Triblader2/3/4/5
+  * Original artwork by Orco Pixelado
+  * Thanks to Bakafish for library mod support
+- Added unfinished map file
+### Changes
+- Orco Pixelado added to mod credits
+- Hue adjustments to Triblader4 portraits
+- Updated Triblader4 sprite hue to be more consistent with portraits
+
 ## 1.1.1 (06/06/2024)
 ### Changes
 - Blazing Mirage and So'najiz Phalanx clones no longer draw enemy aggro

@@ -1,0 +1,186 @@
+[
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "DOCTYPE": "MENU_GUI_CONFIG",
+      "name": "triblader2",
+      "gfx": "media/gui/menu-triblader2.png",
+      "Large": {
+        "gfxOffX": 0,
+        "gfxOffY": -20,
+        "offX": 0,
+        "offY": 0,
+        "sizeX": 144,
+        "sizeY": 400
+      },
+      "Small": {
+        "gfxOffX": 2,
+        "gfxOffY": -6,
+        "offX": 144,
+        "offY": 16,
+        "sizeX": 96,
+        "sizeY": 272
+      },
+      "Head": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 144,
+        "offY": 288,
+        "sizeX": 126,
+        "sizeY": 35
+      },
+      "AreaButton": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 208,
+        "offY": 352,
+        "sizeX": 14,
+        "sizeY": 12
+      },
+      "MapFloorButtonContainer": {
+        "offX": 208,
+        "offY": 368,
+        "sizeX": 34,
+        "sizeY": 20
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "DOCTYPE": "MENU_GUI_CONFIG",
+      "name": "triblader3",
+      "gfx": "media/gui/menu-triblader3.png",
+      "Large": {
+        "gfxOffX": 0,
+        "gfxOffY": -20,
+        "offX": 0,
+        "offY": 0,
+        "sizeX": 144,
+        "sizeY": 400
+      },
+      "Small": {
+        "gfxOffX": 2,
+        "gfxOffY": -6,
+        "offX": 144,
+        "offY": 16,
+        "sizeX": 96,
+        "sizeY": 272
+      },
+      "Head": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 144,
+        "offY": 288,
+        "sizeX": 126,
+        "sizeY": 35
+      },
+      "AreaButton": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 208,
+        "offY": 352,
+        "sizeX": 14,
+        "sizeY": 12
+      },
+      "MapFloorButtonContainer": {
+        "offX": 208,
+        "offY": 368,
+        "sizeX": 34,
+        "sizeY": 20
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "DOCTYPE": "MENU_GUI_CONFIG",
+      "name": "triblader4",
+      "gfx": "media/gui/menu-triblader4.png",
+      "Large": {
+        "gfxOffX": 0,
+        "gfxOffY": -20,
+        "offX": 0,
+        "offY": 0,
+        "sizeX": 144,
+        "sizeY": 400
+      },
+      "Small": {
+        "gfxOffX": 2,
+        "gfxOffY": -6,
+        "offX": 144,
+        "offY": 16,
+        "sizeX": 96,
+        "sizeY": 272
+      },
+      "Head": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 144,
+        "offY": 288,
+        "sizeX": 126,
+        "sizeY": 35
+      },
+      "AreaButton": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 208,
+        "offY": 352,
+        "sizeX": 14,
+        "sizeY": 12
+      },
+      "MapFloorButtonContainer": {
+        "offX": 208,
+        "offY": 368,
+        "sizeX": 34,
+        "sizeY": 20
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "DOCTYPE": "MENU_GUI_CONFIG",
+      "name": "triblader5",
+      "gfx": "media/gui/menu-triblader5.png",
+      "Large": {
+        "gfxOffX": 0,
+        "gfxOffY": -20,
+        "offX": 0,
+        "offY": 0,
+        "sizeX": 144,
+        "sizeY": 400
+      },
+      "Small": {
+        "gfxOffX": 2,
+        "gfxOffY": -6,
+        "offX": 144,
+        "offY": 16,
+        "sizeX": 96,
+        "sizeY": 272
+      },
+      "Head": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 144,
+        "offY": 288,
+        "sizeX": 126,
+        "sizeY": 35
+      },
+      "AreaButton": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 208,
+        "offY": 352,
+        "sizeX": 14,
+        "sizeY": 12
+      },
+      "MapFloorButtonContainer": {
+        "offX": 208,
+        "offY": 368,
+        "sizeX": 34,
+        "sizeY": 20
+      }
+    }
+  }
+]

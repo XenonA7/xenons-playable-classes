@@ -1,6 +1,6 @@
 {
 	"id": "xenons-triblader-mod",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"title": {
 		"en_US": "Xenon's \\c[2]Triblader\\c[0] Mod",
 		"de_DE": "Xenon's \\c[2]Triblader\\c[0] Mod",
@@ -31,6 +31,7 @@
 		"Simplify": ">=2.12.1",
 		"extendable-severed-heads": ">=1.1.0",
 		"cc-alybox": ">=1.0.0",
+		"menu-ui-replacer": ">=1.0.4",
 		"crosscode": ">=1.4.0",
 		"post-game": ">=1.4.0"
 	}

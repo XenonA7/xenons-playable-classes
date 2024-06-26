@@ -1,4 +1,4 @@
-## 1.2.2 (06/18/2024)
+## 1.2.2 (06/26/2024)
 ### Changes
 - Moved WIP maps to Hexacast mod
 - Added particle pLight source to Triblader charged ball trails

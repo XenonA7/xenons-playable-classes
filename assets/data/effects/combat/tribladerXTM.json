@@ -2181,6 +2181,19 @@
   "EFFECTS": {
     "sweepNeutral": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -2321,6 +2334,19 @@
       }
     ],
     "sweepNeutralRev": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,
@@ -2463,6 +2489,19 @@
     ],
     "finisherNeutral": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.6,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -2585,6 +2624,19 @@
       }
     ],
     "sweepHeat": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,
@@ -2727,6 +2779,19 @@
     ],
     "sweepHeatRev": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -2868,6 +2933,19 @@
     ],
     "finisherHeat": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.6,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -2990,6 +3068,19 @@
       }
     ],
     "sweepCold": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,
@@ -3132,6 +3223,19 @@
     ],
     "sweepColdRev": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -3273,6 +3377,19 @@
     ],
     "finisherCold": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.6,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -3395,6 +3512,19 @@
       }
     ],
     "sweepShock": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,
@@ -3537,6 +3667,19 @@
     ],
     "sweepShockRev": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -3678,6 +3821,19 @@
     ],
     "finisherShock": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.6,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -3800,6 +3956,19 @@
       }
     ],
     "sweepWave": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,
@@ -3942,6 +4111,19 @@
     ],
     "sweepWaveRev": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.2,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
+      {
         "numParticles": 1,
         "duration": 0,
         "centralAngle": 0,
@@ -4082,6 +4264,19 @@
       }
     ],
     "finisherWave": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.6,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "type": "LIGHT"
+      },
       {
         "numParticles": 1,
         "duration": 0,

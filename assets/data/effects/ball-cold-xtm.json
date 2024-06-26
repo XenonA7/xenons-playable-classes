@@ -212,6 +212,7 @@
             "value": 0.4
           }
         },
+        "pLight": "M",
         "useTargetAngle": true
       },
       {
@@ -232,6 +233,7 @@
             "value": 0.4
           }
         },
+        "pLight": "M",
         "useTargetAngle": true
       },
       {

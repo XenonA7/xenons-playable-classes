@@ -243,6 +243,7 @@
             "value": 0.1
           }
         },
+        "pLight": "M",
         "type": "PLAY_ANIM",
         "anim": "TRAIL_S"
       },
@@ -263,6 +264,7 @@
             "value": 0.1
           }
         },
+        "pLight": "M",
         "type": "PLAY_ANIM",
         "anim": "TRAIL_S_R"
       },

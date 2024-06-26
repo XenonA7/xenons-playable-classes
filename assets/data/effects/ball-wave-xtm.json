@@ -199,6 +199,7 @@
             "spline": ""
           }
         },
+        "pLight": "M",
         "anim": "TRAIL",
         "type": "PLAY_ANIM"
       },
@@ -222,6 +223,7 @@
             "spline": ""
           }
         },
+        "pLight": "M",
         "anim": "TRAIL_LEA",
         "type": "PLAY_ANIM"
       },

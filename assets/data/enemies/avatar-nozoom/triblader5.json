@@ -649,7 +649,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -689,7 +690,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -730,7 +732,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -771,7 +774,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -812,7 +816,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -5417,7 +5422,8 @@
       "timer": 1.5,
       "trail": true,
       "multiHit": false,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "L",
       "type": "BALL",
       "animation": {
         "name": "default",

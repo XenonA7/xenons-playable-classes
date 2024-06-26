@@ -1,3 +1,10 @@
+## 1.2.2 (06/18/2024)
+### Changes
+- Moved WIP maps to Hexacast mod
+- Added particle pLight source to Triblader charged ball trails
+- Updated charged ball light settings to Hexacast standard
+- Added light sources to standard melee attack effects
+
 ## 1.2.1 (06/18/2024)
 ### Fixes
 - Added Menu UI Replacer to install instructions

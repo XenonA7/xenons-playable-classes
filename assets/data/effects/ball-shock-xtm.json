@@ -430,6 +430,7 @@
             "spline": ""
           }
         },
+        "pLight": "M",
         "anim": "TRAIL",
         "type": "PLAY_ANIM"
       },
@@ -452,6 +453,7 @@
             "spline": ""
           }
         },
+        "pLight": "M",
         "anim": "TRAIL_R",
         "type": "PLAY_ANIM"
       },

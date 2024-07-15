@@ -24555,6 +24555,81 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "spikeAuraNPC": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "volume": 0.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "radius": 250,
+        "sound": "media/sound/battle/airon/close-combat-sweep-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startAngle": 0.6,
+        "startDist": 40,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 0,
+        "keySpline": "EASE_IN",
+        "rotateWithTime": false,
+        "inverse": true,
+        "collision": false,
+        "pAlpha": {
+          "init": 1
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.5,
+              "y": 0.25
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "pRotate": {
+          "init": -0.05
+        },
+        "moveWithTarget": 0.5,
+        "particleDuration": 0.3,
+        "anim": "SWORD1_SHADOW",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "radius": 250,
+        "sound": "media/sound/battle/airon/close-combat-sweep-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 0.12,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
     ]
   }
 }

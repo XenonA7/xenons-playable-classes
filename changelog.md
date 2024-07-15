@@ -1,3 +1,14 @@
+## 1.2.3 (07/14/2024)
+### Changes
+- Updated XTM dev room combat music settings
+- Added effect spikeAuraNPC
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\art-testing.json
+  * \maps\xtm\bonus\art-testing.-ALjson
+  * \maps\xtm\bonus\art-testing-unused.json
+  * \maps\xtm\bonus\green-screen-room.json
+- Deleted "art-testing" and "green-screen-room" teleporters from dev room
+
 ## 1.2.2 (06/26/2024)
 ### Changes
 - Moved WIP maps to Hexacast mod

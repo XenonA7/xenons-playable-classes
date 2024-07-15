@@ -149,16 +149,16 @@ ig.module("impact.feature.bgm.bgm-xtm")
           volume: 0.9,
         },
         battle: {
-          track: "fieldBattle",
-          volume: 0.7,
+          track: "aridBattle",
+          volume: 1,
         },
     		rankBattle: {
-    			track: "fieldBattle",
-    			volume: 0.7
+    			track: "aridBattle",
+    			volume: 1
     		},
     		sRankBattle: {
-    			track: "fieldBattle",
-    			volume: 0.7
+    			track: "s-rank",
+    			volume: 1
     		}
       }
 

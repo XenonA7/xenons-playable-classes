@@ -21,7 +21,7 @@
         "longTelCond": "false",
         "gfxType": "AR",
         "name": "xtmDev",
-        "spawnCondition": "plot.line >= 48000"
+        "spawnCondition": "plot.line >= 48000 && false"
       }
     }
   },

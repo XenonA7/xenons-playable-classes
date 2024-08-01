@@ -1,3 +1,13 @@
+## 1.2.4 (07/31/2024)
+### Changes
+- Removed dev room teleporter from Lea's attic; the new dev room is currently in the Hexacast mod
+- Deleted "training-island" teleporter from dev room
+- Deleted "training-2v2" teleporter from dev room
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\training-island.json
+  * \maps\xtm\bonus\training-1v1.json
+  * \maps\xtm\bonus\training-2v2.json
+
 ## 1.2.3 (07/14/2024)
 ### Changes
 - Updated XTM dev room combat music settings

@@ -1,3 +1,10 @@
+## 1.2.5 (08/04/2024)
+### Changes
+- Removed remaining content from dev room, migrated to Hexacast mod
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\guild-war.json
+  * \maps\xtm\bonus\statue-cutscene.json
+
 ## 1.2.4 (07/31/2024)
 ### Changes
 - Removed dev room teleporter from Lea's attic; the new dev room is currently in the Hexacast mod

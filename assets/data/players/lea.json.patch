@@ -1,0 +1,24 @@
+[
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-arcanelab.json"
+      },
+      {
+       "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-triblader.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-hexacast-bonus.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-pentafist.json"
+      }
+    ]
+  }
+]

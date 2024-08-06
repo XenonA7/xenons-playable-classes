@@ -1,3 +1,16 @@
+## 1.3.0 (08/05/2024)
+### Important
+- Added dependency mod: crosscode-extension-asset-preloader
+  * https://github.com/elluminance/crosscode-extension-asset-preloader
+### New Content
+- Added Triblader, Pentafist, AL, and Lily custom skills to Lea (136 total)
+- Added \patches\data\effects\specials\wave-custom.json
+### Changes
+- Imported \assets\media\gui\custom-skills from hexacast mod
+### Fixes
+- Fixed Triblader-Lea sprite offset for northeast jump animaitons
+- Fixed Triblader-Lea sprite offset for east and southeast throwSpecial animation
+
 ## 1.2.5 (08/04/2024)
 ### Changes
 - Removed remaining content from dev room, migrated to Hexacast mod

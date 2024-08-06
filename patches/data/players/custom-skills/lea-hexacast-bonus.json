@@ -1,0 +1,2491 @@
+{
+  "proxies": {
+    "lily-bubbles": {
+      "effects": "turret",
+      "speed": 250,
+      "maxBounce": 0,
+      "timer": 3,
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": true,
+      "noMoveRotate": true,
+      "type": "BALL",
+      "effect": "ar",
+      "maxBounds": 0,
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/wave.png",
+          "offX": 288,
+          "offY": 128,
+          "width": 16,
+          "height": 16
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "LIGHT",
+        "element": "WAVE",
+        "damageFactor": 0.25,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "behaviors": [
+        {
+          "steerDegree": 0.15,
+          "adjustTime": 1,
+          "type": "FOLLOW_TARGET"
+        },
+        {
+          "type": "WIRL_SIDEWAYS",
+          "relWirl": 0.1,
+          "wirlTime": 0.3,
+          "delay": 0.3
+        },
+        {
+          "speedFactor": 0.2,
+          "startWait": 0,
+          "fadeOut": 0.5,
+          "fadeOutVary": 0,
+          "pause": 0.2,
+          "pauseVary": 0,
+          "fadeIn": 0.2,
+          "type": "SLOW_DOWN"
+        }
+      ],
+      "timeBoni": null
+    },
+    "lily-slowDownAura": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "duration": -1,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "lilyBubble"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "target": "TARGET",
+          "timeScale": 1,
+          "logicTimeScale": 1,
+          "moveXYScale": 0.3,
+          "type": "ADD_TEMP_INFLUENCE"
+        },
+        {
+          "type": "WAIT",
+          "time": 2
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "stickFaceAlign": false,
+      "group": "lily-slowDown",
+      "startAnim": "",
+      "size": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "effects": "turret",
+      "speed": 250,
+      "maxBounce": 0,
+      "timer": 3,
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": true,
+      "type": "GENERIC",
+      "effect": "ar",
+      "maxBounds": 0,
+      "attack": {
+        "type": "LIGHT",
+        "element": "NEUTRAL",
+        "damageFactor": 0.25,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "",
+        "limiter": ""
+      },
+      "behaviors": [
+        {
+          "steerDegree": 0.15,
+          "adjustTime": 1,
+          "type": "FOLLOW_TARGET"
+        },
+        {
+          "type": "WIRL_SIDEWAYS",
+          "relWirl": 0.1,
+          "wirlTime": 0.3,
+          "delay": 0.3
+        },
+        {
+          "speedFactor": 0.2,
+          "startWait": 0,
+          "fadeOut": 0.5,
+          "fadeOutVary": 0,
+          "pause": 0.2,
+          "pauseVary": 0,
+          "fadeIn": 0.2,
+          "type": "SLOW_DOWN"
+        }
+      ],
+      "timeBoni": null,
+      "config": {}
+    },
+    "lily-waveTornado": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "lilyWaveTornado"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "attribName": "runs",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 3
+        },
+        {
+          "value": 0.4,
+          "type": "SET_FRICTION"
+        },
+        {
+          "value": false,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "name": "start",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "!entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "kind": "PROXY_OWNER",
+              "type": "SET_TEMP_TARGET"
+            }
+          ]
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "move",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "lilyWaveTornadoMove"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 128,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "LIGHT",
+            "element": "WAVE",
+            "damageFactor": 0.9,
+            "reverse": false,
+            "stunSteps": [
+              {
+                "value": 100,
+                "accel": 0,
+                "offZ": 0,
+                "maxTime": 0,
+                "type": "Z_VEL"
+              },
+              {
+                "distance": 0,
+                "speed": 300,
+                "maxTime": 0,
+                "value": 24,
+                "accel": 0,
+                "offZ": 0,
+                "type": "PULL"
+              }
+            ],
+            "guardable": "NEVER",
+            "skillBonus": "",
+            "noIronStance": true,
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "attribName": "runs",
+          "changeType": "sub",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "type": "SET_SPEED",
+          "value": 250
+        },
+        {
+          "min": 0,
+          "max": 16,
+          "maxTime": 1.5,
+          "forceTime": false,
+          "rotateSpeed": 0.2,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "conditions": [
+            {
+              "min": 0,
+              "max": 48,
+              "type": "!TARGET_DISTANCE"
+            }
+          ],
+          "maxTime": 1.5,
+          "type": "WAIT_UNTIL_COMBAT_TRUE"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "group": "move",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.runs > 0",
+          "thenStep": [
+            {
+              "type": "SET_SPEED",
+              "value": 120
+            },
+            {
+              "value": 0.6,
+              "type": "FACE_TO_TARGET_SPEED"
+            },
+            {
+              "min": 0,
+              "max": 16,
+              "maxTime": 1,
+              "forceTime": true,
+              "rotateSpeed": 1,
+              "stopBeforeEdge": false,
+              "type": "MOVE_TO_DISTANCE"
+            },
+            {
+              "name": "start",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "IGNORE",
+        "zGravityFactor": 1
+      },
+      "type": "GENERIC"
+    },
+    "lily-lightningSmall": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "PROXY_OWNER",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldConnect"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldPre"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "searchType": "IN_VIEW",
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "value": 400,
+              "type": "SET_SPEED"
+            },
+            {
+              "min": 0,
+              "max": 32,
+              "maxTime": 2,
+              "forceTime": false,
+              "rotateSpeed": 1,
+              "stopBeforeEdge": false,
+              "type": "MOVE_TO_DISTANCE"
+            }
+          ],
+          "elseStep": [
+            {
+              "value": 200,
+              "type": "SET_SPEED"
+            },
+            {
+              "time": 2,
+              "stopBeforeEdge": false,
+              "collideCancel": 1,
+              "type": "MOVE_FORWARD"
+            }
+          ]
+        },
+        {
+          "value": 300,
+          "type": "SET_SPEED"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldPre2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "min": 0,
+              "max": 16,
+              "maxTime": 0.3,
+              "forceTime": true,
+              "rotateSpeed": 1.2,
+              "stopBeforeEdge": false,
+              "type": "MOVE_TO_DISTANCE"
+            }
+          ],
+          "elseStep": [
+            {
+              "time": 0.3,
+              "type": "WAIT"
+            }
+          ]
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "SELF",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 480
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldSmall"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 0,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "SHOCK",
+            "damageFactor": 5,
+            "reverse": false,
+            "status": 0.5,
+            "hints": [
+              "CHARGED",
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.4,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "label": "worstbirthdayever",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "IGNORE",
+        "floatVariance": 0,
+        "flyHeight": 1,
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "lily-lightningOrb": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "searchType": "IN_VIEW",
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "homingGen"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "attribName": "steps",
+              "changeType": "set",
+              "type": "SET_ATTRIB_NUMBER",
+              "value": 5
+            }
+          ],
+          "elseStep": [
+            {
+              "attribName": "steps",
+              "changeType": "set",
+              "type": "SET_ATTRIB_NUMBER",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 0.4
+        },
+        {
+          "name": "move",
+          "type": "LABEL"
+        },
+        {
+          "attribName": "steps",
+          "changeType": "sub",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.attrib.steps == 0",
+          "thenStep": [
+            {
+              "duration": 0,
+              "align": "CENTER",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "group": "lily-trail",
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "homingChargeLily"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "type": "WAIT",
+              "time": 0.45
+            },
+            {
+              "type": "SET_SPEED",
+              "value": 900
+            },
+            {
+              "value": false,
+              "immediately": true,
+              "type": "FACE_TO_TARGET"
+            },
+            {
+              "type": "WAIT",
+              "time": 0.05
+            },
+            {
+              "duration": -1,
+              "align": "CENTER",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "group": "lily-trail",
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "shockChainTrail2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "withElse": true,
+              "type": "IF",
+              "condition": "entity.hasTmpTarget",
+              "thenStep": [
+                {
+                  "min": 0,
+                  "max": 48,
+                  "maxTime": 0.3,
+                  "forceTime": false,
+                  "rotateSpeed": 0.001,
+                  "missReactTime": 0.1,
+                  "stopBeforeEdge": false,
+                  "type": "MOVE_TO_DISTANCE"
+                }
+              ],
+              "elseStep": [
+                {
+                  "time": 0.3,
+                  "collideCancel": 1,
+                  "stopBeforeEdge": false,
+                  "type": "MOVE_FORWARD"
+                }
+              ]
+            },
+            {
+              "type": "STOP_XY"
+            },
+            {
+              "name": "attack",
+              "type": "GOTO_LABEL"
+            }
+          ],
+          "elseStep": [
+            {
+              "duration": -1,
+              "align": "CENTER",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "group": "lily-trail",
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "shockChainTrail2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "withElse": true,
+              "type": "IF",
+              "condition": "entity.hasTmpTarget",
+              "thenStep": [
+                {
+                  "min": 0,
+                  "max": 48,
+                  "maxTime": 0.1,
+                  "forceTime": false,
+                  "rotateSpeed": 0.05,
+                  "stopBeforeEdge": false,
+                  "type": "MOVE_TO_DISTANCE"
+                }
+              ],
+              "elseStep": [
+                {
+                  "time": 0.1,
+                  "collideCancel": 1,
+                  "stopBeforeEdge": false,
+                  "type": "MOVE_FORWARD"
+                }
+              ]
+            },
+            {
+              "group": "lily-trail",
+              "type": "CLEAR_EFFECTS"
+            }
+          ]
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "conditions": [
+            {
+              "min": 0,
+              "max": 56,
+              "negated": false,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "maxTime": 0.4,
+          "type": "WAIT_UNTIL_COMBAT_TRUE"
+        },
+        {
+          "conditions": [
+            {
+              "min": 0,
+              "max": 56,
+              "negated": false,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "withElse": true,
+          "type": "COMBAT_IF",
+          "thenStep": [
+            {
+              "name": "attack",
+              "type": "LABEL"
+            },
+            {
+              "type": "CLEAR_EFFECTS"
+            },
+            {
+              "duration": -1,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "homingBoom2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "align": "BOTTOM",
+              "radius": 64,
+              "yScale": 0,
+              "zHeight": 0,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": true,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": false,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "MASSIVE",
+                "visualType": "LIGHT",
+                "element": "SHOCK",
+                "damageFactor": 1,
+                "reverse": false,
+                "stunSteps": [
+                  {
+                    "type": "START_LOCK"
+                  },
+                  {
+                    "type": "BLOCK_XY"
+                  }
+                ],
+                "guardable": "",
+                "skillBonus": "",
+                "limiter": "",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "type": "WAIT",
+              "time": 1
+            },
+            {
+              "type": "CLEAR_EFFECTS"
+            },
+            {
+              "type": "STOP_REPEATING_FORCE"
+            },
+            {
+              "align": "BOTTOM",
+              "radius": 64,
+              "yScale": 0,
+              "zHeight": 0,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": true,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": false,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "MASSIVE",
+                "element": "SHOCK",
+                "damageFactor": 5,
+                "fly": "MASSIVE+",
+                "reverse": false,
+                "stunSteps": [
+                  {
+                    "type": "END_LOCK"
+                  }
+                ],
+                "guardable": "",
+                "skillBonus": "",
+                "limiter": "",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "type": "WAIT",
+              "time": 0.3
+            }
+          ],
+          "elseStep": [
+            {
+              "withElse": false,
+              "type": "IF",
+              "condition": "entity.attrib.steps > 0",
+              "thenStep": [
+                {
+                  "value": false,
+                  "immediately": true,
+                  "type": "FACE_TO_TARGET"
+                },
+                {
+                  "name": "move",
+                  "type": "GOTO_LABEL"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "timeDisconnect": true,
+      "startAnim": "",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "effects": "ball-shock",
+      "speed": 700,
+      "maxBounce": 0,
+      "timer": 1,
+      "trail": true,
+      "multiHit": false,
+      "light": "XL",
+      "noLightGlow": false,
+      "config": {
+        "collType": "PROJECTILE",
+        "accelSpeed": 5,
+        "airFriction": 1,
+        "maxVel": 550,
+        "zGravityFactor": 0,
+        "relativeVel": 1
+      },
+      "type": "GENERIC",
+      "attack": {
+        "type": "MEDIUM",
+        "element": "SHOCK",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "hints": [
+          "CHARGED"
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG"
+      },
+      "timeBoni": null,
+      "behaviors": []
+    },
+    "lily-lightningAura": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "lilyShockCircle"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "attribName": "lily-bolt",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 0
+        },
+        {
+          "attribName": "lily-shoot",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 0
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 0,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2.5
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 0,
+              "startAngle": 0.33,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2.25
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 0,
+              "startAngle": 0.66,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 0.5,
+              "startAngle": 0.125,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 2,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2.5
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 0.5,
+              "startAngle": -0.125,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 2,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2.5
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 1,
+              "startAngle": 0,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 3,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 512,
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "align": "CENTER",
+              "centralAngle": 1,
+              "startAngle": 0,
+              "angleVary": 0,
+              "startDistCollide": "NONE",
+              "random": false,
+              "count": 3,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "lily-lightningAuraShot",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 2.5
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "lily-lightningAuraGroup",
+      "timeDisconnect": true,
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 8
+      },
+      "effects": "ball-shock",
+      "speed": 700,
+      "maxBounce": 0,
+      "timer": 1,
+      "trail": true,
+      "multiHit": false,
+      "light": "XL",
+      "noLightGlow": false,
+      "config": {
+        "collType": "NONE",
+        "maxVel": 550,
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC",
+      "attack": {
+        "type": "MEDIUM",
+        "element": "SHOCK",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "hints": [
+          "CHARGED"
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG"
+      },
+      "timeBoni": null,
+      "behaviors": []
+    },
+    "lily-lightningAuraShot": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "attribName": "lily-id",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": {
+            "varName": "entity.srcAttrib.lily-bolt"
+          }
+        },
+        {
+          "attribName": "lily-bolt",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "duration": -1,
+          "rotOffset": {
+            "x": 0,
+            "y": -640
+          },
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "lily-line",
+          "target2": "SELF",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "lilyShockAim"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 0.1,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "time": 0.5,
+          "turn": 0.05,
+          "random": 0,
+          "type": "ROTATE_FACE"
+        },
+        {
+          "name": "loop",
+          "type": "LABEL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.srcAttrib.lily-shoot < entity.attrib.lily-id",
+          "thenStep": [
+            {
+              "time": 0.1,
+              "turn": 0.01,
+              "random": 0,
+              "type": "ROTATE_FACE"
+            },
+            {
+              "name": "loop",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "condition": "entity.srcAttrib.lily-shoot >= entity.attrib.lily-id"
+        },
+        {
+          "value": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "duration": 1,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "lilyShockCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "group": "lily-line",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": -1,
+          "rotOffset": {
+            "x": 0,
+            "y": -640
+          },
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "SELF",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "lilyShockAim2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.3,
+          "turn": 0.03,
+          "random": 0,
+          "type": "ROTATE_FACE"
+        },
+        {
+          "attribName": "lily-shoot",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "value": 0.2,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.15
+        },
+        {
+          "value": 0.4,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.15
+        },
+        {
+          "value": 1,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.15
+        },
+        {
+          "value": 1.6,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.2
+        },
+        {
+          "value": 0.1,
+          "type": "FACE_TO_TARGET_SPEED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.05
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "align": "CENTER",
+          "type": "SHOOT_PROXY",
+          "proxy": "lily-bold",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 1.5
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "timeDisconnect": true,
+      "startAnim": "",
+      "size": {
+        "x": 0,
+        "y": 0,
+        "z": 24
+      },
+      "effects": "ball-shock",
+      "speed": 700,
+      "maxBounce": 0,
+      "timer": 1,
+      "trail": true,
+      "multiHit": false,
+      "light": "XL",
+      "noLightGlow": false,
+      "config": {
+        "collType": "NONE",
+        "maxVel": 550,
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC",
+      "attack": {
+        "type": "MEDIUM",
+        "element": "SHOCK",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "hints": [
+          "CHARGED"
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG"
+      },
+      "timeBoni": null,
+      "behaviors": []
+    },
+    "lily-bold": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "target": "PROXY_OWNER",
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boltAuraPlayerBlink"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "PROXY_SRC",
+          "target2Align": "FACE",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "lilyShockShoot"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 4000,
+          "type": "SET_SPEED"
+        },
+        {
+          "time": 0.4,
+          "cancelOnHit": false,
+          "collideCancel": 1,
+          "orthoDirFactor": 0,
+          "ignoreLastHit": false,
+          "collideSlip": false,
+          "type": "TACKLE",
+          "attack": {
+            "type": "HEAVY",
+            "element": "SHOCK",
+            "reverse": false,
+            "guardable": "ALWAYS",
+            "skillBonus": "",
+            "limiter": ""
+          }
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "value": "NONE",
+          "type": "SET_COLL_TYPE"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "label": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "PROJECTILE",
+        "airFriction": 1,
+        "zGravityFactor": 0,
+        "bounciness": 0.0001
+      },
+      "type": "GENERIC"
+    }
+  },
+  "actions": {
+    "COLD": {
+      "CS_LILY_HEXACAST_ATTACK_SPECIAL2_A": {
+        "name": {
+          "en_US": "Chilling Gale"
+        },
+        "description": {
+          "en_US": "Move forward while blasting enemies in front of you with a snowstorm."
+        },
+        "dmgType": "MELEE",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special",
+            "followUp": "specialLoop"
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 4,
+            "yScale": 1,
+            "zHeight": 16,
+            "centralAngle": 0.1,
+            "duration": 0.05,
+            "expandRadius": 120,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": true,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "LIGHT",
+              "element": "COLD",
+              "damageFactor": 0.5,
+              "reverse": false,
+              "spFactor": 0,
+              "status": 1.5,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": ""
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.cold",
+              "name": "dashTrail3"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.cold",
+              "name": "freezeBreeze"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "type": "SET_RELATIVE_SPEED",
+            "value": 0.65
+          },
+          {
+            "time": 1.5,
+            "rotateSpeed": 0.5,
+            "stopBeforeEdge": false,
+            "allowStop": true,
+            "type": "PLAYER_MOVE_TO_DIR"
+          },
+          {
+            "type": "STOP_REPEATING_FORCE"
+          },
+          {
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      }
+    },
+    "SHOCK": {
+      "CS_LILY_HEXACAST_THROW_SPECIAL1_A": {
+        "name": {
+          "en_US": "Diving Jolt"
+        },
+        "description": {
+          "en_US": "Throw a projectile that chases an enemy before striking with a lightning bolt."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.2,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "lily-lightningSmall",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      },
+      "CS_LILY_HEXACAST_THROW_SPECIAL2_A": {
+        "name": {
+          "en_US": "Lightning Orb"
+        },
+        "description": {
+          "en_US": "Throw a projectile that slowly seeks an enemy before moving in for a final strike."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.2,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0,
+            "angleVary": 0,
+            "startDist": 24,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "lily-lightningOrb",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.8,
+            "type": "WAIT"
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      },
+      "CS_LILY_HEXACAST_GUARD_SPECIAL2_A": {
+        "name": {
+          "en_US": "Bolt Aura"
+        },
+        "description": {
+          "en_US": "Activate an aura that passively shoots lightning bolts at nearby enemies."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.5,
+              "move": 0.6,
+              "reaim": 0.6
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "aim"
+          },
+          {
+            "group": "lily-lightningAuraGroup",
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0,
+            "angleVary": 0,
+            "startDist": 24,
+            "startDistCollide": "NONE",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "lily-lightningAura",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      }
+    },
+    "WAVE": {
+      "CS_LILY_HEXACAST_THROW_SPECIAL1_A": {
+        "name": {
+          "en_US": "Bubble Pulse"
+        },
+        "description": {
+          "en_US": "Shoot a wide spread of bubbles that slow enemies on hit."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.2,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special"
+          },
+          {
+            "volume": 1,
+            "global": false,
+            "loop": false,
+            "speed": 1.5,
+            "type": "PLAY_SOUND",
+            "sound": "media/sound/boss/crab/robot-bubbles.ogg"
+          },
+          {
+            "sticking": false,
+            "group": "lily-slowDown",
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "posType": "TARGET",
+            "align": "CENTER",
+            "type": "SET_HIT_PROXY",
+            "proxy": "lily-slowDownAura",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.5,
+            "angleVary": 0,
+            "startDist": 12,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "count": 7,
+            "duration": 0.4,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": true,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "maxGroundDistance": 16,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "lily-bubbles",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.8,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
+            }
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
+          }
+        ]
+      },
+      "CS_LILY_HEXACAST_THROW_SPECIAL3_A": {
+        "name": {
+          "en_US": "Spirit Tornado"
+        },
+        "description": {
+          "en_US": "Summon a powerful tornado that chases after enemies."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "type": "SET_RELATIVE_SPEED",
+            "value": 0.25
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.25,
+            "focusType": "BETWEEN_TARGET",
+            "type": "FOCUS_CAMERA"
+          },
+          {
+            "zoom": 1.7,
+            "duration": 1,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "lilyTornadoCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 1,
+            "rotateSpeed": 0.75,
+            "stopBeforeEdge": false,
+            "allowStop": true,
+            "type": "PLAYER_MOVE_TO_DIR"
+          },
+          {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "type": "RESET_CAMERA"
+          },
+          {
+            "zoomType": "LIGHT",
+            "fadeIn": 0.1,
+            "duration": 0.2,
+            "fadeOut": 0.3,
+            "type": "SET_ZOOM_BLUR"
+          },
+          {
+            "type": "STOP_REPEATING_FORCE"
+          },
+          {
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "lily-waveTornado",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "time": 0.7,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
+            }
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
+          }
+        ]
+      },
+      "CS_LILY_HEXACAST_ATTACK_SPECIAL2_A": {
+        "name": {
+          "en_US": "Verdant Blast"
+        },
+        "description": {
+          "en_US": "Draw in enemies before triggering a large explosion."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "lilyWavePull"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "strength": "RUN_ESCAPE",
+            "pull": true,
+            "radius": 240,
+            "fadeRadius": 48,
+            "minRadius": 16,
+            "zHeight": 32,
+            "duration": -1,
+            "align": "BOTTOM",
+            "type": "PUSH_PULL_FORCE"
+          },
+          {
+            "type": "SET_RELATIVE_SPEED",
+            "value": 0.3
+          },
+          {
+            "time": 1.2,
+            "rotateSpeed": 3,
+            "stopBeforeEdge": false,
+            "allowStop": true,
+            "type": "PLAYER_MOVE_TO_DIR"
+          },
+          {
+            "type": "STOP_REPEATING_FORCE"
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "special"
+          },
+          {
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "lilyWaveXplode"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 96,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 1,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": false,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MASSIVE",
+              "element": "WAVE",
+              "damageFactor": 8.5,
+              "critFactor": 0,
+              "fly": "MASSIVE+",
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "hints": [
+                "NO_PUZZLE"
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 1,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
+            }
+          },
+          {
+            "followUp": "idle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
+          }
+        ]
+      }
+    }
+  }
+}

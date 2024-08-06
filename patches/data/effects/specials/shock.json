@@ -5251,6 +5251,60 @@
         "anim": "SHOCKWAVE_B_SHOCK",
         "type": "PLAY_ANIM"
       }
+    ],
+    "magnetTriangleOuterSphero": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "particleRotate": false,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "spline": ""
+          }
+        },
+        "moveDist": 0,
+        "keySpline": "LINEAR",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "moveWithTarget": 1,
+        "particleDuration": 9,
+        "cancelable": true,
+        "anim": "SHOCKWAVE_B_SHOCK_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 9,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
     ]
   }
 }

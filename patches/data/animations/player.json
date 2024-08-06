@@ -1,0 +1,41 @@
+{
+  "tri-battleWalk": {
+    "src": "media/entity/npc/lea-tri.png",
+    "xCount": 8,
+    "offX": 0,
+    "offY": 0,
+    "width": 32,
+    "height": 40
+  },
+  "tri-attack": {
+    "src": "media/entity/npc/lea-tri.png",
+    "xCount": 11,
+    "offX": 0,
+    "offY": 200,
+    "width": 32,
+    "height": 40
+  },
+  "tri-spin": {
+    "src": "media/entity/npc/lea-tri.png",
+    "xCount": 3,
+    "offX": 0,
+    "offY": 320,
+    "width": 32,
+    "height": 40
+  },
+  "tri-extra": {
+    "src": "media/entity/npc/lea-tri.png",
+    "offX": 96,
+    "offY": 320,
+    "width": 32,
+    "height": 40
+  },
+  "tri-aim": {
+    "src": "media/entity/npc/lea-tri.png",
+    "xCount": 4,
+    "offX": 256,
+    "offY": 0,
+    "width": 32,
+    "height": 40
+  }
+}

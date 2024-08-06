@@ -1,0 +1,897 @@
+{
+  "proxies": {
+    "penta-icicleLine": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "time": 0.05,
+          "stopBeforeEdge": false,
+          "type": "MOVE_FORWARD"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "angleVary": 0,
+          "startDistCollide": false,
+          "random": false,
+          "count": 8,
+          "duration": 0.65,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "offsetArea": {
+            "x": 8,
+            "y": 8
+          },
+          "circularArea": true,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "maxGroundDistance": 4,
+          "ballCount": 20,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "icicleSmall",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.65,
+          "stopBeforeEdge": false,
+          "type": "MOVE_FORWARD"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "IGNORE",
+        "maxVel": 300,
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "penta-waveGun": {
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 8
+      },
+      "effects": "specials.wave",
+      "effectKeys": {
+        "trail": "waveGunSmall",
+        "wall": "waveGunXplode",
+        "air": "waveGunXplode"
+      },
+      "speed": 900,
+      "maxBounce": 0,
+      "timer": 1,
+      "trail": true,
+      "multiHit": true,
+      "light": "XL",
+      "noLightGlow": false,
+      "type": "BALL",
+      "animation": {
+        "name": "default",
+        "gfxOffset": {
+          "x": 0,
+          "y": -4
+        },
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 144,
+          "offY": 0,
+          "width": 16,
+          "height": 16
+        },
+        "renderMode": "lighter",
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "HEAVY",
+        "element": "WAVE",
+        "damageFactor": 1.3,
+        "reverse": false,
+        "spFactor": 0,
+        "hints": [
+          "CHARGED"
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG"
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "FOLLOW_TARGET",
+          "steerDegree": 0.4
+        }
+      ]
+    },
+    "penta-faeSpike": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/blank32x32.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "action": [
+        {
+          "volume": 0.95,
+          "global": false,
+          "variance": 0.1,
+          "speed": 0.80,
+          "loop": false,
+          "type": "PLAY_SOUND",
+          "sound": "media/sound/puzzle/wave-charge-2.ogg"
+        },
+        {
+          "volume": 0.4,
+          "global": false,
+          "variance": 0.1,
+          "speed": 0.80,
+          "loop": true,
+          "type": "PLAY_SOUND",
+          "sound": "media/sound/puzzle/wave-loop.ogg"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.ele-pillars",
+            "name": "projectileWaveBig"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 80,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "variance": 4,
+          "accel": 5,
+          "speed": 500,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 1.5,
+          "condition": "entity.ownerAttrib.penta-spike"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.penta-spike",
+          "thenStep": [
+            {
+              "value": 0,
+              "type": "SET_FLOAT_HEIGHT"
+            },
+            {
+              "value": 2,
+              "type": "SET_Z_GRAVITY_FACTOR"
+            },
+            {
+              "value": "IGNORE",
+              "type": "SET_COLL_TYPE"
+            },
+            {
+              "align": "BOTTOM",
+              "radius": 24,
+              "yScale": 0,
+              "zHeight": 24,
+              "centralAngle": 1,
+              "duration": 1,
+              "expandRadius": 0,
+              "alwaysFull": false,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": false,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": true,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "HEAVY",
+                "element": "WAVE",
+                "damageFactor": 2.6,
+                "reverse": false,
+                "spFactor": 0,
+                "status": 2.0,
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "limiter": ""
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "duration": 0,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": true,
+              "fixPos": true,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "waveBigGunBounce"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "value": 1000,
+              "type": "SET_SPEED"
+            },
+            {
+              "value": 1,
+              "type": "SET_AIR_FRICTION"
+            },
+            {
+              "value": 100,
+              "type": "SET_ACCEL_SPEED"
+            },
+            {
+              "value": -400,
+              "type": "SET_Z_VEL"
+            },
+            {
+              "time": 0,
+              "type": "PLAYER_ADJUST_FACE"
+            },
+            {
+              "time": 0.12,
+              "stopBeforeEdge": false,
+              "collideCancel": 1,
+              "type": "MOVE_FORWARD"
+            },
+            {
+              "maxTime": 2,
+              "type": "WAIT_UNTIL_ON_GROUND"
+            }
+          ]
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "value": 0,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "type": "STOP_SOUNDS"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.jungle",
+            "name": "wavBossBombXplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "CENTER",
+          "radius": 96,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 0,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 4.0,
+            "fly": "MASSIVE+",
+            "reverse": false,
+            "status": 1.5,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 0.2
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "walkAnims": {
+        "idle": "idle",
+        "move": "hobble",
+        "jump": "jump",
+        "fall": "fall"
+      },
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "maxVel": 1000,
+        "zGravityFactor": 1,
+        "shadow": 32,
+        "collType": "NONE"
+      },
+      "type": "GENERIC"
+    }
+  },
+  "actions": {
+    "COLD": {
+      "CS_PENTAFIST_ATTACK_SPECIAL1_A": {
+        "name": {
+          "en_US": "Frozen Cage",
+          "de_DE": "Frozen Cage",
+          "fr_FR": "fr_FR",
+          "zh_CN": "冰牢",
+          "ja_JP": "フローズンケージ",
+          "langUid": 116,
+          "ko_KR": "얼어붙은 새장",
+          "zh_TW": "冰牢"
+        },
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "tri-throwSpecial"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.pentafist",
+              "name": "punchColdFinisher"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": 300,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 3,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.cold",
+              "name": "coldPunch"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 48,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.25,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MASSIVE",
+              "element": "COLD",
+              "damageFactor": 2,
+              "fly": "MASSIVE+",
+              "spFactor": 0,
+              "status": 0.5,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "sticking": false,
+            "group": "wall",
+            "keepCount": 8,
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.15,
+            "angleVary": 0,
+            "startDistCollide": false,
+            "random": false,
+            "count": 2,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "penta-icicleLine",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          }
+        ]
+      }
+    },
+    "WAVE": {
+      "CS_PENTAFIST_THROW_SPECIAL1_A": {
+        "name": {
+          "en_US": "Fae Stream",
+          "de_DE": "Fae Stream",
+          "fr_FR": "fr_FR",
+          "zh_CN": "灵力流",
+          "ja_JP": "フェアリーストリーム",
+          "langUid": 128,
+          "ko_KR": "요정 격류",
+          "zh_TW": "靈力流"
+        },
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.5,
+              "move": 0.5,
+              "reaim": 0.52
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.1,
+            "angleVary": 0,
+            "startDist": 16,
+            "startDistCollide": "CLOSER",
+            "random": true,
+            "count": 3,
+            "duration": 0.3,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "penta-waveGun",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "tri-throwSpecial"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_TO_DIR"
+          },
+          {
+            "time": 0.52,
+            "type": "WAIT"
+          }
+        ]
+      },
+      "CS_PENTAFSIT_THROW_SPECIAL2_A": {
+        "name": {
+          "en_US": "Fae Spike"
+        },
+        "description": {
+          "en_US": "Serve up an explosive orb and punch it down in the direction you're aiming."
+        },
+        "dmgType": "RANGED",
+        "stunType": "INTERRUPT",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "penta-spike",
+            "value": false
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "tri-throwSpecial"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.triblader",
+              "name": "waveShot"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -6
+            }
+          },
+          {
+            "proxy": "penta-faeSpike",
+            "type": "SHOOT_PROXY_PLAYER"
+          },
+          {
+            "value": 300,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "penta-trail",
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "specialTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "jump"
+          },
+          {
+            "duration": 0.4,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "upwardHit"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "zoomType": "LIGHT",
+            "fadeIn": 0,
+            "duration": 0.2,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR"
+          },
+          {
+            "value": 300,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "value": 0.80,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "time": 0.10,
+            "type": "WAIT"
+          },
+          {
+            "duration": 0.5,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "wavePull"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "minWait": 0.30,
+            "type": "STOP_Z_ZENITH"
+          },
+          {
+            "value": 0,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "value": 0,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "group": "penta-trail",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "tri-throwSpecial"
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "penta-spike",
+            "value": true
+          },
+          {
+            "rumbleType": "HORIZONTAL",
+            "power": "STRONGER",
+            "speed": "FASTEST",
+            "duration": 0.35,
+            "fade": true,
+            "type": "RUMBLE_SCREEN"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.pentafist",
+              "name": "punchWaveFinisher"
+            }
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "wavePunchPenta"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "fall"
+          },
+          {
+            "value": 2,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "maxTime": 0.5,
+            "type": "WAIT_UNTIL_ON_GROUND"
+          }
+        ]
+      }
+    }
+  }
+}

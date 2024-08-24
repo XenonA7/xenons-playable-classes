@@ -1,4 +1,4 @@
-## 2.0.0 (##/##/2024)
+## 2.0.0 (08/23/2024)
 ### Important
 - Mod is now known as "Xenon's Playable Classes", also known as the "playable classes mod"
 - Hexacast mod discontinued, all content is now merged here

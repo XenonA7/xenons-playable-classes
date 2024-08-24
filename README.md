@@ -1,10 +1,6 @@
 # Xenon's Playable Classes
 ![hexacast-preview](https://github.com/user-attachments/assets/2a18ca80-29b9-4816-beb5-44a23220a34a) ![KindlingTriad lowRes](https://github.com/user-attachments/assets/bc8e3667-71ee-4597-9d3d-0b26fe83e089)
 
-
-
-
-
 Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is not recommended for a first playthrough. **Manlea and Ninja skins should remain disabled if you are playing as a character other than Lea**. Mod only contains text for English.
 
 ### **Discord Server**
@@ -12,8 +8,8 @@ https://discord.gg/CsfUk9vpFq
 >**Note:** Additional addon mods created by me and others can be found on the Discord server.
 
 # **Mod Content:**
-1. Playable Triblader and Hexacast characters with all new combat arts (Hexacast is still WIP and currently 77% done)
-2. Generic triblader party member
+1. Playable Triblader and Hexacast characters with all new combat arts (Hexacast is only 77% done but still playable)
+2. Generic Triblader party member
 3. Updated Schneider/Luke movesets
 4. New area in Bergen Village containing various maps and content
 5. Triblader PVP arena cups available after beating Ku'lero Temple
@@ -47,13 +43,17 @@ https://discord.gg/CsfUk9vpFq
 5. After finishing Ku'lero Temple, look for this quest in Rhombus Square to unlock an arena cup
    ![xpc-triblader-league](https://github.com/user-attachments/assets/315ef6db-51e6-421a-9029-2c15338f0a98)
 
+# Custom Skills
+Custom Skills are a bonus feature that is only available if you have the **Arcane Lab** mod installed. Arcane Lab is optional, and custom skills won't be available within XPC if it is not installed. Custom skills allow characters to equip combat arts outside of the skill tree. This includes bonus combat arts, arts from other mods, and arts from other classes in XPC. It also allows you to change your default attacks to those of other classes.
 
+Custom Skills can be accessed in the east room of the new Bergen Village area, along with more info about how to use and equip them.
+![custom-skills](https://github.com/user-attachments/assets/a0cfce97-4635-40b1-b3c8-de6033fb64d7)
 
-
-
+### Recommended Arcane Lab version to use with XPC (optional):
+https://github.com/2hh8899/ArcaneLab/tree/20c24d5a72e46d08a067f5a17486533b672c707e
 
 # **Special Thanks:**
-- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations
+- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations, help with Hexacast spritework
 - **Krypek:** JS support, code for better handling of multi-opponent duels
 - **Nax:** JS support
 - **Alyxia:** JS support, author of AlyBox
@@ -63,17 +63,9 @@ https://discord.gg/CsfUk9vpFq
 - **Orco Pixelado**: Triblader menu portrait artwork
 - **Laz**: Gameplay testing, created music used for XPC hideout area
 
-
-
-
-
-
-
-
-
-
-
 # Install Info
+### **Mod Loader Required (CCLoader2)**
+* https://github.com/CCDirectLink/CCLoader/releases
 ### **Required Dependency Mods**
 1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
@@ -84,41 +76,34 @@ https://discord.gg/CsfUk9vpFq
 4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
    * Allows mods to load DLC assets properly
   
-### **Recommended Mods (optional - for enhanced party members)**
-1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
-   * Allows party members to use up to Lv.3 arts if you have mods that define higher-level arts for them. This will make your late-game Triblader party members use powerful attacks from XPC.  
-2. **cc-party-element-effects:** https://github.com/XenonA7/cc-party-element-effects  
-   * A small fix that makes party members show the "element swap" particle effect when they switch elements. This does not happen without the mod.
-
-
-
+## Install Instructions
 1. Back up your save files **\AppData\Local\CrossCode**
 
+### Install the Mod Loader
+2. Download CCloader2 from https://github.com/CCDirectLink/CCLoader/releases
+>**Note:** Always download the latest version, the screenshot below is probably outdated.
 
-## Install CCLoader
-CClaoder is a mod loader required to install mods on Crosscode.
-Versions older than v2.21.0 will give an error with this mod.
-
-1. Download CCloader from https://github.com/CCDirectLink/CCLoader/releases  
 ![image](https://user-images.githubusercontent.com/105614278/179910752-49fb02fd-87d4-43fb-8853-c1794925c223.png)
-2. Extract the files  
+
+3. Extract the files  
 ![image](https://user-images.githubusercontent.com/105614278/179910853-0a511c33-a559-4e85-82ee-83e210ee3d83.png)
-3. Locate these files from the extracted directory  
+
+4. Locate these files from the extracted directory  
 ![image](https://user-images.githubusercontent.com/105614278/179910937-8c62ce97-f062-41c0-90b0-685c483e3de9.png)
-4. Copy the files into your Crosscode game directory  
+
+5. Copy the files into your Crosscode game directory  
 ![image](https://user-images.githubusercontent.com/105614278/179911026-a895f1f7-7dfa-406a-8e94-8d4fc9e5bc62.png)
-5. Launch the game to verify it is installed. You will see the CCLoader version in the bottom-right of the screen.  
+
+6. Launch the game to verify it is installed. You will see the CCLoader version in the bottom-right of the screen.  
 ![image](https://user-images.githubusercontent.com/105614278/179911121-3f74421f-251a-462a-8172-aae6314d840f.png)
 
-## Install Mods
-1. Download and extract XTM and its dependencies, along with recommended mods if desired  
-- (XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
+### Install Mods
+1. Download and extract XPC and its dependencies
+- (XPC Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
 - (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
 - (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
 - (Required) menu-ui-replacer: https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
 - (Required) crosscode-extension-asset-preloader: https://github.com/elluminance/crosscode-extension-asset-preloader/releases
-- (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
-- (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 
 2. Place extracted mod folders inside **\CrossCode\assets\mods**  
 ![image](https://user-images.githubusercontent.com/105614278/179912844-b0ac6c4e-4a03-4a97-a3fc-22eb7d1a4bce.png)  

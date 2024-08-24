@@ -48,6 +48,7 @@ Install instructions can be found at the bottom of this page. The DLC is require
 Custom Skills are a bonus feature that is only available if you have the **Arcane Lab** mod installed. Arcane Lab is optional, and custom skills won't be available within XPC if it is not installed. Custom skills allow characters to equip combat arts outside of the skill tree. This includes bonus combat arts, arts from other mods, and arts from other classes in XPC. It also allows you to change your default attacks to those of other classes.
 
 Custom Skills can be accessed in the east room of the new Bergen Village area, along with more info about how to use and equip them.
+
 ![custom-skills](https://github.com/user-attachments/assets/a0cfce97-4635-40b1-b3c8-de6033fb64d7)
 
 ### Recommended Arcane Lab version to use with XPC (optional):

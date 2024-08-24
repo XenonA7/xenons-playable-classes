@@ -1,233 +1,85 @@
 {
-    "avatar-nozoom.luke": {
-        "name": {
-            "en_US": "Luke"
-        },
-        "track": true,
-        "order": 500000,
-        "kills": 1,
-        "area": "evo-village",
-        "anim": "run",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] evotar created from Schneider who helped you escape \\c[1]Vermillion Wasteland\\c[0].\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "The other Schneider"
-        },
-        "category": "PLAYERS",
-        "level": 62,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
+  "penguin-heat": {
+    "name": {
+      "en_US": "Flamepeng",
+      "de_DE": "Flamepeng",
+      "fr_FR": "Flamepeng",
+      "zh_CN": "Flamepeng",
+      "zh_TW": "Flamepeng",
+      "ja_JP": "Flamepeng",
+      "ko_KR": "Flamepeng",
+      "langUid": 65
     },
-    "avatar-nozoom.lukas": {
-        "name": {
-            "en_US": "Schneider"
-        },
-        "track": true,
-        "order": 500001,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "battleRun",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player and fellow member of the \\c[3]First Scholars\\c[0].\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "Self-proclaimed 'Triblader Supreme'"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 7815,
-            "attack": 808,
-            "defense": 808,
-            "focus": 808,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
+    "track": true,
+    "order": 200000,
+    "area": "bergen-trails",
+    "anim": "move",
+    "extra": "shuffle",
+    "category": "ANIMALS",
+    "species": {
+      "en_US": "Bird",
+      "de_DE": "Vogel<<C<<Geprüft: Minsu",
+      "zh_CN": "鸟类",
+      "zh_TW": "鳥類",
+      "ja_JP": "鳥",
+      "ko_KR": "새",
+      "langUid": -1
     },
-    "avatar-nozoom.triblader2": {
-        "name": {
-            "en_US": "Crossworlds Player"
-        },
-        "track": true,
-        "order": 500002,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "battleRun",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "Has conquered all tables in Crossworlds"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
+    "level": 17,
+    "boostedLevel": 59,
+    "params": {
+      "hp": 777,
+      "attack": 62,
+      "defense": 71,
+      "focus": 69,
+      "elemFactor": [
+        0.8,
+        1.1,
+        1.3,
+        0.8
+      ],
+      "statusInflict": [
+        0.5,
+        1.3,
+        1.5,
+        1
+      ],
+      "statusEffect": [
+        0.5,
+        1.3,
+        1.5,
+        1
+      ]
     },
-    "avatar-nozoom.triblader3": {
-        "name": {
-            "en_US": "Crossworlds Player"
-        },
-        "track": true,
-        "order": 500003,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "spinRepeat",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "She would rather play as a Heptalancer"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
-    },
-    "avatar-nozoom.triblader4": {
-        "name": {
-            "en_US": "Crossworlds Player"
-        },
-        "track": true,
-        "order": 500004,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "run",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "Breaks with the norm to wear blue armor"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
-    },
-    "avatar-nozoom.triblader5": {
-        "name": {
-            "en_US": "Crossworlds Player"
-        },
-        "track": true,
-        "order": 500004,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "battleIdle",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "Dislikes dueling without party members"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
-    },
-    "avatar-nozoom.triblader2-freq-arts": {
-        "name": {
-            "en_US": "Crossworlds Player (Freq. Arts)"
-        },
-        "track": true,
-        "order": 500005,
-        "kills": 1,
-        "area": "rhombus-sqr",
-        "anim": "levelUpStand",
-        "descriptions": [{
-            "text": {
-                "en_US": "A \\c[3]triblader\\c[0] player who you dueled in the Rhombus Arena. This player likes to use combat arts frequently rather than save up SP."
-            },
-            "condition": ""
-        }],
-        "species": {
-            "en_US": "Quite obsessed with maximizing her FOC stat"
-        },
-        "category": "PLAYERS",
-        "level": 75,
-        "boostedLevel": 0,
-        "params": {
-            "hp": 4600,
-            "attack": 460,
-            "defense": 460,
-            "focus": 460,
-            "elemFactor": [0.83, 0.83, 0.83, 0.83]
-        },
-        "credit": 0,
-        "exp": 0,
-        "itemDrops": [],
-        "boss": false
-    }
+    "credit": 105,
+    "exp": 40,
+    "itemDrops": [],
+    "boss": false,
+    "descriptions": [
+      {
+        "condition": "!quest.xpc-heat-penguins.solved",
+        "text": {
+          "en_US": "What? They breathe fire now?!",
+          "de_DE": "What? They breathe fire now?!",
+          "zh_CN": "What? They breathe fire now?!",
+          "zh_TW": "What? They breathe fire now?!",
+          "ja_JP": "What? They breathe fire now?!",
+          "ko_KR": "What? They breathe fire now?!",
+          "langUid": -10
+        }
+      },
+      {
+        "condition": "quest.xpc-heat-penguins.solved",
+        "text": {
+          "en_US": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "de_DE": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "zh_CN": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "zh_TW": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "ja_JP": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "ko_KR": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "langUid": -11
+        }
+      }
+    ]
+  }
 }

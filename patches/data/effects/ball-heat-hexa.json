@@ -1,0 +1,386 @@
+{
+  "EFFECTS": {
+    "ballTrailHexaHeat": [
+      {
+        "useTargetAngle": true,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "spline": ""
+          }
+        },
+        "pLight": "M",
+        "particleDuration": 0.15,
+        "anim": "HEXAGON_HEAT",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      }
+    ],
+    "ballTrailHexaHeatSlow": [
+      {
+        "useTargetAngle": true,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "spline": ""
+          }
+        },
+        "pLight": "M",
+        "particleDuration": 0.5,
+        "anim": "HEXAGON_HEAT",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      }
+    ],
+    "heatCardTrail": [
+      {
+        "color": "#ffbfaa",
+        "maxAlpha": 0.7,
+        "minAlpha": 0,
+        "blinkDuration": 0.15,
+        "blinkCount": -1,
+        "noLighter": true,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "scaleX": 0.85,
+        "scaleY": 0.85,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "variance": 0.1,
+        "sound": "media/sound/boss/gynthar/card-stuck.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "speed": 0.9,
+        "variance": 0.1,
+        "sound": "media/sound/boss/turret/big-shot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.2,
+        "global": false,
+        "loop": false,
+        "speed": 1.3,
+        "variance": 0.05,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/puzzle/ferro-heat-tail.ogg"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": true,
+        "moveDist": 12,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "particleRotate": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 5
+        },
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0.8,
+        "anim": "FLAME2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": -0.3,
+        "startDist": 8,
+        "random": true,
+        "moveDist": 8,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "particleRotate": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 2
+        },
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        "pAlpha": {
+          "init": 0.75,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "anim": "FLAME3",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "color": "#ff512e",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.2,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.7,
+              "y": 0.7
+            },
+            "spline": ""
+          }
+        },
+        "offset": {
+          "x": 0,
+          "y": -3,
+          "z": -3
+        },
+        "particleDuration": 0.25,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "color": "#ff512e",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.2,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.7,
+              "y": 0.7
+            },
+            "spline": ""
+          }
+        },
+        "offset": {
+          "x": 0,
+          "y": -3,
+          "z": -3
+        },
+        "particleDuration": 0.25,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "heatCardWallDeath": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "KILL",
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "LIGHT",
+        "size": "L",
+        "fadeOut": 0.35
+      },
+      {
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/ball-kill.ogg",
+        "volume": 0.5
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "random": false,
+        "zBounciness": 0,
+        "collision": true,
+        "angleVary": 1,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 30,
+        "minZSpeed": 60,
+        "maxZSpeed": 80,
+        "minZVel": 20,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 1.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "HEXA_CARD_HEAT"
+      }
+    ],
+    "heatCardAirDeath": [
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "random": false,
+        "zBounciness": 0,
+        "collision": true,
+        "angleVary": 1,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 30,
+        "minZSpeed": 60,
+        "maxZSpeed": 80,
+        "minZVel": 20,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 1.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "HEXA_CARD_HEAT"
+      }
+    ]
+  }
+}

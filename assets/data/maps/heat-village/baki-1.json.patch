@@ -1,0 +1,186 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 202,
+      "y": 614,
+      "level": 1,
+      "settings": {
+        "mapId": 896,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "permaFx": {
+              "sheet": "specials.heat",
+              "name": "firebrandAura1"
+            },
+            "face": "NORTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "name": "hex1",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "characterName": "hexacast.hexacast2"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 239,
+      "y": 607,
+      "level": 1,
+      "settings": {
+        "mapId": 893,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "name": "hex2",
+        "characterName": "cross-worlds.pentafist-female-blue",
+        "displayName": {
+          "en_US": "Alyxia"
+        }
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 204,
+      "y": 576,
+      "level": 1,
+      "settings": {
+        "mapId": 895,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "sit",
+            "event": []
+          }
+        ],
+        "name": "hex3",
+        "characterName": "guards.female-tall-white",
+        "analyzable": {
+          "text": {
+            "en_US": "Guard",
+            "de_DE": "Wache",
+            "fr_FR": "fr_FR",
+            "langUid": 251,
+            "zh_CN": "守卫",
+            "ko_KR": "경비원",
+            "ja_JP": "衛兵",
+            "zh_TW": "守衛"
+          },
+          "active": ""
+        }
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 204,
+      "y": 600,
+      "level": 1,
+      "settings": {
+        "name": "hex-talk",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "hex3"
+            },
+            "text": {
+              "en_US": "Go cast your fancy magic someplace else."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "..."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex3"
+            },
+            "text": {
+              "en_US": "Please stay away while you've got that spell on you!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "We can't even damage NPCs anyway."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex3"
+            },
+            "text": {
+              "en_US": "Whoa, whoa, whoa! Watch the magic!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "This is going to go on forever, you know?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Yeah..."
+            }
+          }
+        ],
+        "mapId": 897,
+        "spawnCondition": ""
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

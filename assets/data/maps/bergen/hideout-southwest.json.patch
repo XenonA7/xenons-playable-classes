@@ -1,0 +1,413 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'project-red')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 515,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 304,
+            "name": "prd-dev-xenon",
+            "dir": "SOUTH",
+            "map": "project-red.dev.xenona7-dev",
+            "marker": "entrance",
+            "teleportLabel": {
+              "en_US": "To: \\c[1]Project Red\\c[0] dev room",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[1]Project Red\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              },
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "(This mod hasn't been announced yet, so it's currently impossible to obtain).",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'project-red')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 515,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 304,
+            "name": "prd-dev-xenon",
+            "dir": "SOUTH",
+            "map": "project-red.dev.xenona7-dev",
+            "marker": "entrance",
+            "teleportLabel": {
+              "en_US": "To: \\c[1]Project Red\\c[0] dev room",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'arcane-labs') && !activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 627,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 313,
+            "name": "al-center",
+            "dir": "SOUTH",
+            "map": "guildac.center",
+            "marker": "teleporter",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] main lobby",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Arcane Lab\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 627,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 313,
+            "name": "al-center",
+            "dir": "SOUTH",
+            "map": "guildac.center",
+            "marker": "teleporter",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] main lobby",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'autumns-genesis')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 515,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 312,
+            "name": "ag-dungeon",
+            "dir": "SOUTH",
+            "map": "autumn-dng.entrance",
+            "marker": "start",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Autumn's Genesis\\c[0] - Autumn's Terminus",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Autumn's Genesis\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'autumns-genesis')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 515,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 312,
+            "name": "ag-dungeon",
+            "dir": "SOUTH",
+            "map": "autumn-dng.entrance",
+            "marker": "start",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Autumn's Genesis\\c[0] - Autumn's Terminus",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'clock-tower')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 403,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 311,
+            "name": "ct-jungle",
+            "dir": "SOUTH",
+            "map": "jungle.left.outside-path01",
+            "marker": "mid-right",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Clock Tower\\c[0] - River's End",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Clock Tower\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'clock-tower')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 403,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 311,
+            "name": "ct-jungle",
+            "dir": "SOUTH",
+            "map": "jungle.left.outside-path01",
+            "marker": "mid-right",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Clock Tower\\c[0] - River's End",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'vermillion-training-facility')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 291,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 310,
+            "name": "vtf-connect-cave",
+            "dir": "SOUTH",
+            "map": "bio-forest.connect-cave",
+            "marker": "back",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Vermillion Training Facility\\c[0] - cave entrance",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Vermillion Training Facility\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'vermillion-training-facility')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 291,
+          "y": 143,
+          "level": 0,
+          "settings": {
+            "mapId": 310,
+            "name": "vtf-connect-cave",
+            "dir": "SOUTH",
+            "map": "bio-forest.connect-cave",
+            "marker": "back",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Vermillion Training Facility\\c[0] - cave entrance",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -60,7 +60,7 @@
           {
             "entity": {
               "global": true,
-              "name": "xtm-triblader-league"
+              "name": "duelChallenger"
             },
             "action": [
               {
@@ -80,7 +80,7 @@
                 "type": "CHANGE_VAR_BOOL",
                 "changeType": "set",
                 "value": true,
-                "varName": "plot.xtm.triArenaUnlock"
+                "varName": "plot.xpc.triArenaUnlock"
               },
               {
                 "type": "SHOW_EFFECT",
@@ -123,15 +123,15 @@
             "type": "RESET_NPC",
             "npc": {
               "global": true,
-              "name": "xtm-triblader-league"
+              "name": "duelChallenger"
             }
           }
         ],
-        "name": "xtm-walk",
-        "startCondition": "tmp.walk",
+        "name": "xpc-walk",
+        "startCondition": "tmp.walkTrigger",
         "endCondition": "false",
         "eventType": "PARALLEL",
-        "triggerType": "ONCE"
+        "triggerType": "ONCE_PER_ENTRY"
       }
     }
   },
@@ -150,7 +150,7 @@
             "face": "SOUTH",
             "action": [],
             "hidden": false,
-            "condition": "plot.line >= 48000 && !plot.xtm.triArenaUnlock",
+            "condition": "plot.line >= 48000 && !plot.xpc.triArenaUnlock",
             "config": "normal",
             "event": {
               "quest": [
@@ -169,6 +169,17 @@
                   },
                   "type": "ADD_MSG_PERSON",
                   "side": "RIGHT"
+                },
+                {
+                  "type": "IF",
+                  "withElse": false,
+                  "condition": "tmp.xpcDeclined",
+                  "thenStep": [
+                    {
+                      "name": "repeatSkip",
+                      "type": "GOTO_LABEL"
+                    }
+                  ]
                 },
                 {
                   "person": {
@@ -211,7 +222,7 @@
                 {
                   "entity": {
                     "global": true,
-                    "name": "xtm-triblader-league"
+                    "name": "duelChallenger"
                   },
                   "action": [
                     {
@@ -282,7 +293,7 @@
                     "expression": "DEFAULT"
                   },
                   "message": {
-                    "en_US": "Those two have been standing there for hours."
+                    "en_US": "Those two have been standing there for hours..."
                   },
                   "type": "SHOW_MSG"
                 },
@@ -305,7 +316,7 @@
                       "type": "SET_FACE_TO_ENTITY",
                       "entity": {
                         "global": true,
-                        "name": "xtm-triblader-league"
+                        "name": "duelChallenger"
                       },
                       "rotate": true,
                       "rotateSpeed": 3
@@ -317,7 +328,7 @@
                 {
                   "entity": {
                     "global": true,
-                    "name": "xtm-triblader-league"
+                    "name": "duelChallenger"
                   },
                   "action": [
                     {
@@ -359,30 +370,88 @@
                   "type": "SHOW_MSG"
                 },
                 {
+                  "name": "repeatSkip",
+                  "type": "LABEL"
+                },
+                {
                   "person": {
                     "person": "triblader.triblader2",
                     "expression": "DEFAULT"
                   },
                   "message": {
-                    "en_US": "Feel free to come duel!\\. There are plenty of players also looking for matches there."
+                    "en_US": "You up for a fight? We're always seeking new opponents!"
                   },
                   "type": "SHOW_MSG"
                 },
                 {
-                  "person": {
-                    "person": "main.lea",
-                    "expression": "NOD"
-                  },
-                  "message": {
-                    "en_US": "[nods]"
-                  },
-                  "type": "SHOW_MSG"
-                },
-                {
-                  "type": "CHANGE_VAR_BOOL",
-                  "changeType": "set",
-                  "value": true,
-                  "varName": "tmp.walk"
+                  "type": "OPEN_QUEST_DIALOG",
+                  "quest": "xpc-triblader-league",
+                  "accepted": [
+                    {
+                      "person": {
+                        "person": "main.lea",
+                        "expression": "NOD"
+                      },
+                      "message": {
+                        "en_US": "[nods]"
+                      },
+                      "type": "SHOW_MSG"
+                    },
+                    {
+                      "person": {
+                        "person": "triblader.triblader2",
+                        "expression": "DEFAULT"
+                      },
+                      "message": {
+                        "en_US": "Awesome! I'll see you in the arena!"
+                      },
+                      "type": "SHOW_MSG"
+                    },
+                    {
+                      "type": "CHANGE_VAR_BOOL",
+                      "changeType": "set",
+                      "value": true,
+                      "varName": "tmp.walk"
+                    },
+                    {
+                      "type": "CHANGE_VAR_BOOL",
+                      "changeType": "set",
+                      "value": true,
+                      "varName": "tmp.walkTrigger"
+                    },
+                    {
+                      "type": "WAIT",
+                      "time": 0.05
+                    }
+                  ],
+                  "declined": [
+                    {
+                      "person": {
+                        "person": "main.lea",
+                        "expression": "SHAKE"
+                      },
+                      "message": {
+                        "en_US": "[shakes head]"
+                      },
+                      "type": "SHOW_MSG"
+                    },
+                    {
+                      "person": {
+                        "person": "triblader.triblader2",
+                        "expression": "DEFAULT"
+                      },
+                      "message": {
+                        "en_US": "I'll be here if you change your mind."
+                      },
+                      "type": "SHOW_MSG"
+                    },
+                    {
+                      "type": "CHANGE_VAR_BOOL",
+                      "varName": "tmp.xpcDeclined",
+                      "changeType": "set",
+                      "value": true
+                    }
+                  ]
                 },
                 {
                   "type": "CLEAR_MSG",
@@ -392,7 +461,7 @@
                   "type": "RESET_NPC",
                   "npc": {
                     "global": true,
-                    "name": "xtm-triblader-league"
+                    "name": "duelChallenger"
                   }
                 }
               ]
@@ -410,24 +479,22 @@
             "reactType": "FIXED_POS",
             "face": "SOUTH",
             "hidden": true,
-            "condition": "plot.line < 48000 || plot.xtm.triArenaUnlock",
+            "condition": "plot.line < 48000 || plot.xpc.triArenaUnlock",
             "config": "normal",
             "event": []
           }
         ],
-        "name": "xtm-triblader-league",
+        "name": "duelChallenger",
         "characterName": "triblader.triblader2",
         "analyzable": {
           "text": {
-            "en_US": "Triblader Player"
+            "en_US": "Duel Challenger"
           },
           "active": ""
         }
       }
     }
   },
-
-
   {
     "type": "EXIT"
   }

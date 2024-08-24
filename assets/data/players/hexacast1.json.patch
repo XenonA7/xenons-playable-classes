@@ -1,0 +1,28 @@
+[
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/hexacast-arcanelab.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/hexacast-spheromancer.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/hexacast-triblader.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/hexacast-pentafist.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/hexacast-bonus.json"
+      }
+    ]
+  }
+]

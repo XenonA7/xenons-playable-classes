@@ -26,7 +26,7 @@
           }
         ],
         "eventType": "INTERRUPTABLE",
-        "name": "XTM-Anim-Fix",
+        "name": "XPC-Anim-Fix",
         "startCondition": "plot.line == 16200",
         "endCondition": "false",
         "triggerType": "ONCE"

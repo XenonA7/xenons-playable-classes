@@ -1,0 +1,115 @@
+{
+  "DOCTYPE": "SCALABLE_PROP_SHEET",
+  "jsonTEMPLATES": {
+    "ArText": {
+      "baseSize": {
+        "x": 16,
+        "y": 8,
+        "z": 4
+      },
+      "scalableX": true,
+      "scalableY": false,
+      "scalableStep": 4,
+      "wallY": 0,
+      "renderMode": "lighter",
+      "collType": "NONE",
+      "gfx": "media/map/xpc-props.png",
+      "gfxBaseX": 0,
+      "gfxBaseY": 16,
+      "patterns": {
+        "x": {
+          "jsonPARAM": "srcX"
+        },
+        "y": {
+          "jsonPARAM": "srcY"
+        },
+        "w": {
+          "jsonPARAM": "width"
+        },
+        "h": 12,
+        "xCount": 1,
+        "yCount": 1
+      },
+      "gfxEnds": {
+        "west": {
+          "SHORT": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 12,
+            "xCount": 1
+          },
+          "LONG": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 24,
+            "xCount": 1,
+            "renderHeight": 4
+          }
+        },
+        "east": {
+          "SHORT": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 12,
+            "xCount": 1
+          },
+          "LONG": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 24,
+            "xCount": 1,
+            "renderHeight": 4
+          }
+        }
+      },
+      "timePadding": {
+        "x": 12,
+        "y": 0
+      },
+      "effects": {
+        "sheet": "ar",
+        "show": "show",
+        "hide": "hide"
+      }
+    }
+  },
+  "entries": {
+    "wallArXmc": {
+      "baseSize": {
+        "x": 16,
+        "y": 16,
+        "z": 0
+      },
+      "scalableX": true,
+      "scalableY": false,
+      "scalableStep": 4,
+      "renderMode": "lighter",
+      "collType": "NONE",
+      "gfx": "media/map/xpc-props.png",
+      "gfxBaseX": 2,
+      "gfxBaseY": 1,
+      "patterns": {
+        "x": 0,
+        "y": 0,
+        "w": 82,
+        "h": 16,
+        "xCount": 1,
+        "yCount": 1
+      },
+      "timePadding": {
+        "x": 16,
+        "y": 0
+      }
+    },
+    "textClassTips": {
+      "jsonINSTANCE": "ArText",
+      "srcX": 0,
+      "srcY": 2,
+      "width": 80
+    }
+  }
+}

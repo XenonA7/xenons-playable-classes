@@ -1,0 +1,130 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 537,
+      "y": 1076,
+      "level": 1,
+      "settings": {
+        "mapId": 575,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "WEST",
+            "permaFx": {
+              "sheet": "specials.shock",
+              "name": "thunderJacketAuraNPC"
+            },
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "name": "hex1",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "characterName": "hexacast.hexacast2"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 498,
+      "y": 1079,
+      "level": 1,
+      "settings": {
+        "mapId": 574,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "EAST",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "name": "hex2",
+        "characterName": "cross-worlds.pentafist-female-blue",
+        "displayName": {
+          "en_US": "Alyxia"
+        }
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 525,
+      "y": 1052,
+      "level": 1,
+      "settings": {
+        "mapId": 576,
+        "name": "hex-talk",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Come on! Just enable PVP already~"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "Not a chance! I'll get blasted into the pond!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "I just want to try something real quick."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "No, you want to hit me with that \\c[5]Thunder Jacket\\c[0]!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Aww, you're no fun."
+            }
+          }
+        ],
+        "spawnCondition": ""
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

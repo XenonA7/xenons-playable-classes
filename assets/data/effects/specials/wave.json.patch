@@ -1,6 +1,464 @@
 [
   {
     "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/wave-hexa.json"
+  },
+  {
+    "type": "INCLUDE",
     "src": "mod:patches/data/effects/specials/wave-custom.json"
+  },
+
+
+
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_BIG_HEXAGON_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GREEN_GLOW",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "width": 8,
+        "height": 8,
+        "offY": 16
+      },
+      "time": 0.05,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "repeat": true
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 256,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TELEPORT_DOT1",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 200,
+        "offY": 48,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TELEPORT_DOT2",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 184,
+        "offY": 40,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GOD_HEXAGON_WAVE",
+      "pivot": {
+        "x": 48,
+        "y": 48
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_EXPLODE_GUI",
+      "sheet": {
+        "src": "media/entity/effects/wave.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 128,
+        "width": 48,
+        "height": 48
+      },
+      "renderMode": "lighter",
+      "guiSprites": true,
+      "time": 0.033,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_WAVE",
+      "pivot": {
+        "x": 48,
+        "y": 28
+      },
+      "sheet": {
+        "src": "media/entity/effects/wave.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 64,
+        "height": 56
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.014,
+      "repeat": false,
+      "tileOffset": 0,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_WAVE_INV",
+      "pivot": {
+        "x": 48,
+        "y": 28
+      },
+      "sheet": {
+        "src": "media/entity/effects/wave.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 64,
+        "height": 56
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.014,
+      "repeat": false,
+      "flipX": true,
+      "tileOffset": 0,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "BLASTER_TRAIL",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 4,
+        "offX": 480,
+        "offY": 0,
+        "width": 32,
+        "height": 128
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.065,
+      "flipX": false,
+      "frames": [
+        0,
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_EXPLODE_LOOP",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-wave.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.0375,
+      "flipX": false,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_SPARKLE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 192,
+        "offY": 176,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.08,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCKWAVE_B_WAVE_BACK",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle-big.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_BIG_WAVE_GUI",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 192,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "RAINBOW_CIRCLE_GUI",
+      "sheet": {
+        "src": "media/entity/enemy/boss/gynthar-light1.png",
+        "xCount": 8,
+        "offX": 0,
+        "offY": 0,
+        "width": 160,
+        "height": 160
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.066,
+      "flipX": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CYBER_CIRCLE_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 480,
+        "offY": 192,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUNGEON_ARROW_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 1,
+        "offX": 256,
+        "offY": 128,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "faceRotate": true,
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
   }
 ]

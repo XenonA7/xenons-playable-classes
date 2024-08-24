@@ -1,0 +1,465 @@
+{
+  "avatar-nozoom.luke": {
+    "name": {
+      "en_US": "Luke"
+    },
+    "track": true,
+    "order": 500000,
+    "kills": 1,
+    "area": "evo-village",
+    "anim": "run",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] evotar created from Schneider who helped you escape \\c[1]Vermillion Wasteland\\c[0].\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "The other Schneider"
+    },
+    "category": "PLAYERS",
+    "level": 62,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.lukas": {
+    "name": {
+      "en_US": "Schneider"
+    },
+    "track": true,
+    "order": 500001,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "battleRun",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player and fellow member of the \\c[3]First Scholars\\c[0].\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Self-proclaimed 'Triblader Supreme'"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 7815,
+      "attack": 808,
+      "defense": 808,
+      "focus": 808,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.triblader2": {
+    "name": {
+      "en_US": "Crossworlds Player"
+    },
+    "track": true,
+    "order": 500002,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "battleRun",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Has conquered all tables in Crossworlds"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.triblader3": {
+    "name": {
+      "en_US": "Crossworlds Player"
+    },
+    "track": true,
+    "order": 500003,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "spinRepeat",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "She would rather play as a Heptalancer"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.triblader4": {
+    "name": {
+      "en_US": "Crossworlds Player"
+    },
+    "track": true,
+    "order": 500004,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "run",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Breaks with the norm to wear blue armor"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.triblader5": {
+    "name": {
+      "en_US": "Crossworlds Player"
+    },
+    "track": true,
+    "order": 500004,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "battleIdle",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who agreed to a duel.\nTribladers have many wide-area attacks and lingering projectiles that cause a lot of collateral damage."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Dislikes dueling without party members"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.triblader2-freq-arts": {
+    "name": {
+      "en_US": "Crossworlds Player (Freq. Arts)"
+    },
+    "track": true,
+    "order": 500005,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "levelUpStand",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who you dueled in the Rhombus Arena. This player likes to use combat arts frequently rather than save up SP."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Quite obsessed with maximizing her FOC stat"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
+  "avatar-nozoom.apollo-4": {
+    "name": {
+      "en_US": "Apollo 4 (nozoom variant)"
+    },
+    "track": false,
+    "order": 500006,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": "pointing",
+    "extra": "pondering",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "XPC Apollo variant with no camera actions."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Warrior of Justice",
+      "de_DE": "Krieger der Gerechtigkeit<<C<<Geprüft: Minsu",
+      "zh_CN": "正义战士<<A<<[CHANGED 2020/06/17]",
+      "zh_TW": "正義戰士<<A<<[CHANGED 2020/06/15]",
+      "ja_JP": "正義の戦士<<A<<[CHANGED 2020/06/17]",
+      "ko_KR": "정의의 사도<<A<<[CHANGED 2020/06/17]",
+      "langUid": -4
+    },
+    "category": "PLAYERS",
+    "level": 70,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4579,
+      "attack": 459,
+      "defense": 457,
+      "focus": 456,
+      "elemFactor": [
+        0.92,
+        0.92,
+        0.92,
+        0.92
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "The \\c[3]Warrior of Justice\\c[0] demands one last duel to decide who is the truest of the true Spheromancers!\nThis time he will do his title justice by unleashing the full arsenal of his abilities. Combat Arts of all 3 levels and 4 elements await you!",
+          "de_DE": "Der \\c[3]Krieger der Gerechtigkeit\\c[0] verlangt nach einem letzten Duell, um zu entscheiden, wer der wahrste der wahren Spheromancer ist!\nDieses Mal wird er seinem Titel gerecht, indem er das volle Arsenal seiner Fähigkeiten ausschöpft. Kampfkünste aller 3 Level und alle 4 Elemente erwarten dich!<<C<<Geprüft: Minsu",
+          "zh_CN": "正义使者想与你进行最后一次决斗，看看谁才是真正的气圆使者！\n这次他的能力将完全解放。准备面对所有3级战技和四种元素！<<A<<[CHANGED 2021/05/04]",
+          "zh_TW": "看看誰回來了！阿波羅想要再次完成未盡的使命，這一次他將會使用火焰和冰霜元素來對付你，向你展示展示什麼叫做探索者的“真正潛力”。跟你一樣他也會使用2級戰技，進攻更為兇狠，如果你不小心的話還會被破防。<<A<<[CHANGED 2021/05/04]",
+          "ja_JP": "\\c[3]正義の戦士\\c[0]は、真のスフィロマンサーの中のスフィロマンサーが誰であるかをはっきりさせようと最後の決闘を申し込んできた！\r\n今回は持てる武器をすべて解き放ち、彼の正義とやらをまっとうするつもりだろう。3つのレベルと4つのエレメントから成るコンバットアーツが待っているぞ！<<A<<[CHANGED 2021/05/04]",
+          "ko_KR": "\\c[3]정의의 사도\\c[0]가 단 한 명의 진정한 원술사를 가릴 마지막 대결을 신청합니다!\n이번에 그는 자신이 가진 모든 기술을 쏟아부어 제대로 상대할 겁니다. 전투 기술 레벨 3과 4가지 속성 전부 나올 테니 단단히 준비하세요!<<A<<[CHANGED 2021/05/04]",
+          "langUid": -6
+        },
+        "condition": ""
+      }
+    ]
+  },
+  "avatar-nozoom.lily": {
+    "name": {
+      "en_US": "Lily (nozoom variant)"
+    },
+    "track": false,
+    "order": 500007,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": false,
+    "extra": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "XPC Lily variant with no camera actions."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "A Flower?",
+      "de_DE": "Eine Blume?<<C<<Geprüft: Minsu",
+      "zh_CN": "花朵？<<A<<[CHANGED 2021/01/12]",
+      "zh_TW": "正義戰士<<A<<[CHANGED 2021/01/12]",
+      "ja_JP": "花？<<A<<[CHANGED 2021/01/12]",
+      "ko_KR": "꽃?<<A<<[CHANGED 2021/01/12]",
+      "langUid": -4
+    },
+    "category": "PLAYERS",
+    "level": 70,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4579,
+      "attack": 459,
+      "defense": 457,
+      "focus": 456,
+      "elemFactor": [
+        0.92,
+        0.92,
+        0.92,
+        0.92
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A hexacast player from a new guild called the \\c[3]Star Chasers\\c[0]. She is quite curious of her new surroundings (and new leader after their previous one was permabanned). While her sweet demeanor is disarming, she fights with the grace of a breeze and as fierce as the tempest!",
+          "de_DE": "Ein Hexacast-Spieler aus einer neuen Gilde namens \\c[3]Star Chasers\\c[0]. Sie ist ziemlich neugierig auf ihre neue Umgebung (und den neuen Anführer, nachdem ihr vorheriger dauerhaft gebannt wurde). Während ihr süßes Auftreten entwaffnend ist, kämpft sie mit der Anmut einer Brise und so heftig wie der Sturm!<<C<<Geprüft: Minsu",
+          "zh_CN": "一位来自新公会\\c[3]追星者\\c[0]的陆合法师。她对新环境和新的领导人都颇为好奇（之前的会长被永久封禁了）。虽然她的言行举止十分温和，但战斗起来却无比火爆！<<A<<[CHANGED 2021/05/04]",
+          "zh_TW": "看看誰回來了！阿波羅想要再次完成未盡的使命，這一次他將會使用火焰和冰霜元素來對付你，向你展示展示什麼叫做探索者的“真正潛力”。跟你一樣他也會使用2級戰技，進攻更為兇狠，如果你不小心的話還會被破防。<<A<<[CHANGED 2021/05/04]",
+          "ja_JP": "\\c[3]スターチェイサー\\c[0]と呼ばれる新しいギルドに属するヘクサキャストのプレイヤー。自分の置かれた新しい環境（と前のリーダーが永久BANされたので、次のリーダー）が非常に気になっている。優しい物腰で敵意を和らげる一方、神の優雅さと嵐のような激しい怒りで戦う！<<A<<[CHANGED 2021/05/04]",
+          "ko_KR": "\\c[3]별의 추격자들\\c[0]이라는 새로운 길드의 일원인 육법사 플레이어입니다. 그녀는 자신의 새로운 주변 상황과 전 길드장이 영구 정지를 당한 후 새로 임명된 길드장에 대해 궁금해합니다. 그녀의 상냥한 행동은 상대를 무장 해제시키지만, 산들바람같은 우아함과 폭풍같은 맹렬함으로 전투에 임합니다!<<A<<[CHANGED 2021/05/04]",
+          "langUid": -6
+        },
+        "condition": ""
+      }
+    ]
+  },
+  "avatar-nozoom.shizuka": {
+    "name": {
+      "en_US": "Shizuka (nozoom variant)"
+    },
+    "track": false,
+    "order": 500008,
+    "kills": 1,
+    "area": "rhombus-sqr",
+    "anim": false,
+    "extra": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "XPC Shizuka variant with no camera actions."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Protective Sister",
+      "de_DE": "Große Schwester<<C<<Geprüft: Minsu",
+      "zh_CN": "护兄心切妹妹<<A<<[CHANGED 2018/09/02]",
+      "zh_TW": "保護妹妹<<A<<[CHANGED 2018/09/02]",
+      "ja_JP": "強靭な妹<<A<<[CHANGED 2018/09/02]",
+      "ko_KR": "과보호 여동생<<A<<[CHANGED 2018/09/02]",
+      "langUid": -4
+    },
+    "category": "PLAYERS",
+    "level": 60,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 3518,
+      "attack": 349,
+      "defense": 350,
+      "focus": 351,
+      "elemFactor": [
+        0.92,
+        0.92,
+        0.92,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "It is Shizuka! And she is pissed.\nExpect her to use some of your favorite strategies against you!",
+          "de_DE": "Es ist Shizuka! Und sie ist stinksauer.\nGeh davon aus, dass sie einige deiner Lieblingsstrategien gegen dich verwendet!<<C<<Geprüft: Minsu",
+          "zh_CN": "是静！愤怒的静。\n她会使用你最常使用的战术来对付你！<<A<<[CHANGED 2018/05/01]",
+          "zh_TW": "是靜！憤怒的靜。\r\n她會使用你最常使用的戰術來對付你！<<A<<[CHANGED 2018/05/01]",
+          "ja_JP": "シズカは怒っている！\nレアと同じような戦略を使ってくるぞ、気を付けよう！<<A<<[CHANGED 2018/05/01]",
+          "ko_KR": "시즈카입니다! 열 받아 있군요.\n당신에게 마음에 드는 전략을 사용할 것으로 보입니다!<<A<<[CHANGED 2018/05/01]",
+          "langUid": -6
+        },
+        "condition": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/ball-wave-hexa.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXAGON_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 0,
+        "offY": 72,
+        "width": 16,
+        "height": 16
+      },
+      "renderMode": "lighter",
+      "time": 0.15,
+      "repeat": false,
+      "frames": [
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 256,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GREEN_GLOW",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "width": 8,
+        "height": 8,
+        "offY": 16
+      },
+      "time": 0.05,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "repeat": true
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SMALL_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 144,
+        "offY": 192,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  }
+]

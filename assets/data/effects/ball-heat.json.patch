@@ -1,0 +1,107 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/ball-heat-hexa.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXAGON_HEAT",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 0,
+        "offY": 72,
+        "width": 16,
+        "height": 16
+      },
+      "renderMode": "lighter",
+      "time": 0.15,
+      "repeat": false,
+      "frames": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "FLAME2",
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "offX": 0,
+        "offY": 392,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": true,
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "FLAME3",
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "offX": 0,
+        "offY": 272,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": true,
+      "time": 0.04,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_HEAT",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 64,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  }
+]

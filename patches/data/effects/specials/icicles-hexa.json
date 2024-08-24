@@ -1,0 +1,2406 @@
+{
+  "EFFECTS": {
+    "tinyAppear": [
+      {
+        "rumbleType": "RANDOM",
+        "power": "WEAK",
+        "speed": "FASTEST",
+        "duration": 0.5,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "sound": "media/sound/battle/special/special-impact.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "scaleX": 0.5,
+        "scaleY": 0.5,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "relative": true,
+        "duration": 0.4,
+        "keySpline": "EASE_OUT_STRONG",
+        "start": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "end": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": "MOVE_OFFSET"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.5,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.6,
+        "duration": 0.4,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 1,
+        "moveDist": 48,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 1,
+        "moveDist": 32,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 20,
+        "duration": 0.8,
+        "centralAngle": 1,
+        "startDist": 12,
+        "random": 1,
+        "moveDist": 0,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.35,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 0.35,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      }
+    ],
+    "icePillarTiny": [
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "color": "white",
+        "alpha": 0,
+        "fadeIn": 0.1,
+        "fadeOut": 0,
+        "duration": -1,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0.4,
+        "spline": "EASE_IN",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.5,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "sound": "media/sound/battle/shiny-effect.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "volume": 1.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 4,
+        "random": true,
+        "moveDist": 32,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 75,
+        "minZSpeed": 200,
+        "maxZSpeed": 350,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 90,
+        "minZSpeed": 200,
+        "maxZSpeed": 350,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "volume": 1.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.6,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "alpha": 0,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      }
+    ],
+    "icicleExplodeTiny": [
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 1,
+        "moveDist": 8,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "alpha": 0,
+        "duration": 0.2,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 0.6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 40,
+        "minZSpeed": 180,
+        "maxZSpeed": 220,
+        "zBounciness": 0.5,
+        "minZVel": 40,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 40,
+        "minZSpeed": 180,
+        "maxZSpeed": 220,
+        "zBounciness": 0.5,
+        "minZVel": 40,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      }
+    ],
+    "hail1Appear": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.3,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 1,
+        "scaleY": 1,
+        "duration": 0.4,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.2,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 1,
+        "moveDist": 8,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "hail2Appear": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.3,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 1,
+        "scaleY": 1,
+        "duration": 0.4,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.4,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 1,
+        "moveDist": 12,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "hail3Appear": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.8,
+        "duration": 0.9,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 1,
+        "scaleY": 1,
+        "duration": 0.4,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": 0.4,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 1,
+        "moveDist": 12,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.5,
+        "centralAngle": 1,
+        "startDist": 4,
+        "random": true,
+        "moveDist": 16,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.95,
+            "y": 0.95
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "time": 0.2,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.35,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "SNOWFLAKE1",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "iceCardGroundDeath": [
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 1,
+        "moveDist": 8,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "alpha": 0,
+        "duration": 0.2,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 0.6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 40,
+        "minZSpeed": 180,
+        "maxZSpeed": 220,
+        "zBounciness": 0.5,
+        "minZVel": 40,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 2,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 10,
+        "maxSpeed": 40,
+        "minZSpeed": 180,
+        "maxZSpeed": 220,
+        "zBounciness": 0.5,
+        "minZVel": 40,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "random": true,
+        "zBounciness": 0,
+        "zGravityFactor": 1.1,
+        "collision": true,
+        "angleVary": 1,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 20,
+        "maxSpeed": 30,
+        "minZSpeed": 100,
+        "maxZSpeed": 140,
+        "minZVel": 40,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 2.0,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "HEXA_CARD_COLD"
+      }
+    ],
+    "sleetSentryTurret": [
+      {
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.75,
+              "y": 0.75
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "TURRET",
+        "type": "PLAY_FACE_ANIM"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 3,
+              "y": 3
+            },
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.2,
+        "anim": "COLD_CIRCLE",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.3,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 1,
+        "moveDist": 24,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 8,
+        "uniformRandom": 0.7,
+        "moveDist": 24,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 50,
+        "maxSpeed": 120,
+        "minZSpeed": 200,
+        "maxZSpeed": 250,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 50,
+        "maxSpeed": 120,
+        "minZSpeed": 200,
+        "maxZSpeed": 250,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.8,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      }
+    ],
+    "fortressHailAppear": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.3,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 1,
+        "scaleY": 1,
+        "duration": 0.4,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.1,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.25,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 1,
+        "moveDist": 16,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "pAlpha": {
+          "init": 0.5,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.8,
+              "y": 0.8
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.4,
+        "moveWithTarget": 1,
+        "anim": "COLD_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      }
+    ],
+    "fortressHailSparkle": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "radius": 6,
+        "duration": 0,
+        "moveZDist": 2,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.95,
+            "y": 0.95
+          }
+        },
+        "anim": "BLUE_SPARKLE",
+        "moveWithTarget": true,
+        "angleVary": 1,
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "fortressHailExplode": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 100,
+        "minZSpeed": 200,
+        "maxZSpeed": 250,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 1.0,
+        "particleDurVariance": 0.3,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 100,
+        "minZSpeed": 200,
+        "maxZSpeed": 250,
+        "zBounciness": 0.5,
+        "minZVel": 80,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "particleDuration": 1.0,
+        "particleDurVariance": 0.3,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      }
+    ],
+    "crystalCarnageGlaive": [
+      {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "intensity": 0.3,
+        "type": "DARKNESS"
+      },
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "variance": 0.1,
+        "sound": "media/sound/boss/gynthar/card-stuck.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "speed": 0.9,
+        "variance": 0.1,
+        "sound": "media/sound/boss/turret/big-shot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.0,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "variance": 0.1,
+        "sound": "media/sound/battle/shiny-effect.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.4,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 24,
+        "uniformRandom": 0.4,
+        "particleRotate": true,
+        "moveRotate": -6,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 0,
+        "moveVariance": 0,
+        "keySpline": "EASE_OUT_STRONG",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          }
+        },
+        "pRotate": {
+          "init": -0.25
+        },
+        "cancelable": true,
+        "particleDuration": 10,
+        "moveWithTarget": 1,
+        "anim": "ICE_SPIKE_HUGE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "global": false,
+        "loop": false,
+        "speed": 0.65,
+        "sounds": [
+          {
+            "sound": "media/sound/battle/airon/cold/close-combat-cold-sweep-1.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          },
+          {
+            "sound": "media/sound/battle/airon/cold/close-combat-cold-sweep-2.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          },
+          {
+            "sound": "media/sound/battle/airon/cold/close-combat-cold-sweep-3.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          }
+        ],
+        "type": "PLAY_RANDOM_SOUND"
+      },
+      {
+        "volume": 1.8,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "variance": 0.1,
+        "sound": "media/sound/battle/enemies/mine/ground-ice-crystal-disintegrate.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0.25,
+        "centralAngle": 1,
+        "startDist": 6,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 90,
+        "minZSpeed": 50,
+        "maxZSpeed": 200,
+        "zBounciness": 0.5,
+        "zGravityFactor": 1.5,
+        "minZVel": 80,
+        "collision": true,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.9,
+            "y": 0.9
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 1.2,
+        "particleDurVariance": 0.3,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0.25,
+        "centralAngle": 1,
+        "startDist": 6,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 90,
+        "minZSpeed": 50,
+        "maxZSpeed": 200,
+        "zBounciness": 0.5,
+        "collision": true,
+        "pAlpha": {
+        "zGravityFactor": 1.5,
+        "minZVel": 80,
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.9,
+            "y": 0.9
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 1.2,
+        "particleDurVariance": 0.3,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0.25,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 12,
+        "moveDist": 4,
+        "moveVariance": 2,
+        "moveRotate": 1.4,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          }
+        },
+        "angleVary": 1,
+        "moveWithTarget": 1,
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 18,
+        "duration": 0.256,
+        "clockwise": true,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "random": true,
+        "startDist": 24,
+        "particleRotate": true,
+        "moveRotate": 0,
+        "offset": {
+          "x": 0,
+          "y": 64,
+          "z": 64
+        },
+        "rotOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 48,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT_STRONG",
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0,
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 0.1,
+              "y": 0.1
+            },
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.3,
+        "anim": "CIRCLE_SMALL_COLD",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.105,
+        "type": "WAIT"
+      },
+      {
+        "global": false,
+        "loop": false,
+        "speed": 0.65,
+        "sounds": [
+          {
+            "sound": "media/sound/battle/airon/close-combat-heat-sweep-1.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          },
+          {
+            "sound": "media/sound/battle/airon/close-combat-heat-sweep-2.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          },
+          {
+            "sound": "media/sound/battle/airon/close-combat-heat-sweep-3.ogg",
+            "volume": 0.5,
+            "variance": 0.1
+          }
+        ],
+        "type": "PLAY_RANDOM_SOUND"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "type": "STOP_SOUNDS"
+      }
+    ],
+    "crystalCarnageExplode": [
+      {
+        "size": "XXXL",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.4,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#11326b",
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "duration": 0.1,
+        "type": "SCREEN_FLASH"
+      },
+      {
+        "rumbleType": "RANDOM",
+        "power": "STRONG",
+        "speed": "FASTER",
+        "duration": 0.4,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "sound": "media/sound/battle/airon/cold/ball-hit-cold-massive.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "sound": "media/sound/boss/guardian/guardian-hammer-down.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/battle/shiny-effect.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.5,
+        "global": false,
+        "loop": false,
+        "variance": 0.1,
+        "speed": 0.8,
+        "sound": "media/sound/battle/explosion-4.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/boss/crab/crystal-explode.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 2,
+              "y": 2
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.3,
+        "anim": "COLD_CIRCLE",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 24,
+        "particleRotate": true,
+        "moveDist": 100,
+        "moveVariance": 48,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 3.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.2,
+        "anim": "CIRCLE_SMALL_COLD",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1.0,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 2.5,
+              "y": 2.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "COLD_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0.5,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 48,
+        "moveDist": 24,
+        "moveVariance": 12,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0.2,
+            "time": 0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.30,
+              "y": 0.30
+            },
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0.2,
+        "particleDuration": 0.5,
+        "particleDurVariance": 0.2,
+        "angleVary": 0,
+        "cancelable": false,
+        "anim": "GOD_HEXAGON_COLD",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 12,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 120,
+        "minZSpeed": 300,
+        "maxZSpeed": 550,
+        "zBounciness": 0.5,
+        "collision": true,
+        "pAlpha": {
+        "zGravityFactor": 2,
+        "minZVel": 80,
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 2.0,
+        "particleDurVariance": 0.5,
+        "anim": "ICE_SHARD6",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 12,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 25,
+        "maxSpeed": 120,
+        "minZSpeed": 300,
+        "maxZSpeed": 550,
+        "zBounciness": 0.5,
+        "collision": true,
+        "pAlpha": {
+        "zGravityFactor": 2,
+        "minZVel": 80,
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.5,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.5,
+          "start": {
+            "value": 0,
+            "time": 1,
+            "spline": ""
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 2.0,
+        "particleDurVariance": 0.5,
+        "anim": "ICE_SHARD3",
+        "type": "DEBRIS_CIRCLE"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "uniformRandom": 0.4,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 24,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT_STRONG",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.9,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "time": 0.45,
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "pRotate": {
+          "init": 0.1,
+          "start": {
+            "value": 0.15,
+            "time": 0.9,
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.6,
+        "moveWithTarget": 1,
+        "anim": "ICE_SPIKE_HUGE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.08,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 30,
+        "uniformRandom": 1,
+        "moveDist": 32,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.08,
+        "type": "WAIT"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1.0,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 2.5,
+              "y": 2.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "COLD_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 45,
+        "uniformRandom": 1,
+        "moveDist": 32,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.08,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 20,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 60,
+        "uniformRandom": 1,
+        "moveDist": 32,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "SNOW_BURST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 20,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "moveDist": 100,
+        "moveVariance": 16,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 2,
+            "y": 2
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "SNOWFLAKE1",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ]
+  }
+}

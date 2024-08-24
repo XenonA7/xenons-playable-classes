@@ -1,37 +1,37 @@
 {
-	"id": "xenons-triblader-mod",
-	"version": "1.3.0",
+	"id": "xenons-playable-classes",
+	"version": "2.0.0",
 	"title": {
-		"en_US": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"de_DE": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"fr_FR": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"zh_CN": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"zh_TW": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"ja_JP": "Xenon's \\c[2]Triblader\\c[0] Mod",
-		"ko_KR": "Xenon's \\c[2]Triblader\\c[0] Mod"
+		"en_US": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"de_DE": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"fr_FR": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"zh_CN": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"zh_TW": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"ja_JP": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]",
+		"ko_KR": "Xenon's Playable Classes \\i[class-tri] \\i[class-hexa]"
 	},
 	"description": {
-		"en_US": "Playable Tribladers, PVP, and more!",
-		"de_DE": "Playable Tribladers, PVP, and more!",
-		"fr_FR": "Playable Tribladers, PVP, and more!",
-		"zh_CN": "Playable Tribladers, PVP, and more!",
-		"zh_TW": "Playable Tribladers, PVP, and more!",
-		"ja_JP": "Playable Tribladers, PVP, and more!",
-		"ko_KR": "Playable Tribladers, PVP, and more!"
+		"en_US": "Playable characters, PVP, and more!",
+		"de_DE": "Playable characters, PVP, and more!",
+		"fr_FR": "Playable characters, PVP, and more!",
+		"zh_CN": "Playable characters, PVP, and more!",
+		"zh_TW": "Playable characters, PVP, and more!",
+		"ja_JP": "Playable characters, PVP, and more!",
+		"ko_KR": "Playable characters, PVP, and more!"
 	},
 	"icons": {
 		"24": "icon.png"
 	},
 	"repository": "https://github.com/XenonA7/xenons-triblader-mod",
 	"tags": ["player character", "party member", "pvp duel", "arena", "combat arts"],
-	"authors": ["XenonA7", "krypek", "HeartLychee"],
+	"authors": ["XenonA7", "HeartLychee", "krypek"],
 	"prestart": "prestart.js",
-	"plugin": "plugin.js",
+	"poststart": "poststart.js",
 	"dependencies": {
 		"Simplify": ">=2.12.1",
 		"extendable-severed-heads": ">=1.1.0",
-		"cc-alybox": ">=1.0.0",
-		"menu-ui-replacer": ">=1.0.4",
+		"cc-alybox": ">=1.1.0",
+		"menu-ui-replacer": ">=1.0.5",
 		"extension-asset-preloader": ">=1.0.0",
 		"crosscode": ">=1.4.0",
 		"post-game": ">=1.4.0"

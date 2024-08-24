@@ -1,0 +1,94 @@
+{
+  "EFFECTS": {
+    "frontFlipped": [
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 0.3,
+        "startAngle": 0.35,
+        "startDist": 12,
+        "flipRightParticles": true,
+        "offset": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "minSpeed": 80,
+        "maxSpeed": 160,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "anim": "DUST_UP",
+        "type": "PARTICLE_CIRCLE"
+      }
+    ],
+    "magicMortarDust": [
+      {
+        "numParticles": 6,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 36,
+        "flipRightParticles": true,
+        "offset": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "minSpeed": 20,
+        "maxSpeed": 120,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        "anim": "DUST_UP_BIG",
+        "type": "PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0,
+        "clockwise": true,
+        "centralAngle": 1,
+        "startAngle": 0.05,
+        "startDist": 50,
+        "flipRightParticles": true,
+        "offset": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "minSpeed": 20,
+        "maxSpeed": 100,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        "cancelable": true,
+        "anim": "DUST_UP_BIG",
+        "type": "PARTICLE_CIRCLE"
+      }
+    ]
+  }
+}

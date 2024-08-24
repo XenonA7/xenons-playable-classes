@@ -1,0 +1,191 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 353,
+      "y": 913,
+      "level": 2,
+      "settings": {
+        "name": "hex1",
+        "characterName": "hexacast.hexacast2",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "mapId": 1317,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "EAST",
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": [],
+            "action": [
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "fanLoop"
+              },
+              {
+                "time": -1,
+                "type": "WAIT"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 174,
+      "y": 968,
+      "level": 2,
+      "settings": {
+        "name": "hex2",
+        "characterName": "cross-worlds.pentafist-female-blue",
+        "displayName": {
+          "en_US": "Alyxia"
+        },
+        "mapId": 1316,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "EAST",
+            "action": [
+              {
+                "type": "JUMP",
+                "jumpHeight": "S",
+                "wait": true
+              },
+              {
+                "type": "JUMP",
+                "jumpHeight": "S",
+                "wait": true
+              },
+              {
+                "minTime": 1,
+                "maxTime": 3,
+                "type": "WAIT_RANDOM"
+              }
+            ],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 361,
+      "y": 954,
+      "level": 2,
+      "settings": {
+        "name": "hex-talk",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "I'm stuck! Why are you just sitting there?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "I'm too tired from running around all these jumping puzzles."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "And this beach is so hot and humid..."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "I can't even get back, I just respawn on this rock when I hit the water."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "You JADC'd yourself into that mess, you can JADC yourself back out."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "But I didn't even do that! I just hopped down from above!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Why not just quicktravel? The landmark is right there."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "I don't have it discovered yet, I came from the cliff entrance."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Seems like poor map design."
+            }
+          }
+        ],
+        "endlessDialog": false,
+        "once": false,
+        "mapId": 1318,
+        "spawnCondition": ""
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

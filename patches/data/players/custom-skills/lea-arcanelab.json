@@ -10791,7 +10791,7 @@
                 "fixPos": false,
                 "type": "SHOW_EFFECT",
                 "effect": {
-                  "sheet": "combat.tribladerXTM",
+                  "sheet": "combat.tribladerXPC",
                   "name": "sweepHeat"
                 },
                 "offset": {
@@ -11723,7 +11723,7 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "combat.tribladerXTM",
+              "sheet": "combat.tribladerXPC",
               "name": "finisherHeat"
             },
             "offset": {

@@ -12,15 +12,15 @@
       "level": 1,
       "settings": {
         "mapId": 40,
-        "map": "xtm.bonus.dev",
+        "map": "xpc.bonus.dev",
         "marker": "bottom",
         "dir": "SOUTH",
         "teleportLabel": {
-          "en_US": "To: XTM Dev Room"
+          "en_US": "To: XPC Dev Room"
         },
         "longTelCond": "false",
         "gfxType": "AR",
-        "name": "xtmDev",
+        "name": "xpcDev",
         "spawnCondition": "plot.line >= 48000 && false"
       }
     }

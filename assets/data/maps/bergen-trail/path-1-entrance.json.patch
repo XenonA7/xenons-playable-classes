@@ -18,7 +18,7 @@
             "face": "SOUTH",
             "action": [],
             "hidden": false,
-            "condition": "!plot.xtm.triblader2Join",
+            "condition": "!plot.xpc.triblader2Join",
             "config": "normal",
             "event": {
               "quest": [
@@ -844,7 +844,7 @@
                 },
                 {
                   "type": "CHANGE_VAR_BOOL",
-                  "varName": "plot.xtm.triblader2Join",
+                  "varName": "plot.xpc.triblader2Join",
                   "changeType": "set",
                   "value": true
                 },
@@ -1016,7 +1016,7 @@
             "face": "SOUTH",
             "action": [],
             "hidden": true,
-            "condition": "plot.xtm.triblader2Join",
+            "condition": "plot.xpc.triblader2Join",
             "config": "normal",
             "event": []
           }

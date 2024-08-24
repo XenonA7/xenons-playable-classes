@@ -1,0 +1,417 @@
+{
+  "EFFECTS": {
+    "hackingShowSlow": [
+      {
+        "size": "XL",
+        "fadeIn": 0.2,
+        "fadeOut": 0.2,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 0,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "alpha": 1,
+        "duration": 1.5,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/scenes/bomb-start.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 2,
+        "sound": "media/sound/scenes/swoosh-fall-short.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.4,
+        "global": false,
+        "loop": false,
+        "speed": 2,
+        "sound": "media/sound/scenes/teleport.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "red",
+        "alpha": 0,
+        "duration": 1,
+        "keepDuration": 2,
+        "noLighter": false,
+        "type": "FLASH_COLOR"
+      },
+      {
+        "dir": "NORTH",
+        "startValue": 1,
+        "endValue": 0,
+        "duration": 2,
+        "setOnlyOneSide": false,
+        "type": "WIPE"
+      },
+      {
+        "dir": "NORTH",
+        "startValue": 1,
+        "endValue": 0,
+        "duration": 2,
+        "numParticles": 14,
+        "moveOffset": {
+          "y": 16
+        },
+        "inverse": true,
+        "moveWithTarget": 1,
+        "particleDuration": 0.1,
+        "anim": "HACKING_S",
+        "type": "WIPE_PARTICLES"
+      },
+      {
+        "dir": "NORTH",
+        "startValue": 1,
+        "endValue": 0,
+        "duration": 2,
+        "numParticles": 10,
+        "moveOffset": {
+          "y": 8
+        },
+        "moveWithTarget": 1,
+        "anim": "RHOMBUS_DOT_RED",
+        "type": "WIPE_PARTICLES"
+      },
+      {
+        "radius": 48,
+        "useTargetAngle": false,
+        "numParticles": 6,
+        "duration": 2,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.8,
+              "y": 0.8
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.8,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_L1",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "radius": 48,
+        "useTargetAngle": false,
+        "numParticles": 6,
+        "duration": 1.5,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.8,
+              "y": 0.8
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.8,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_L2",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "volume": 0.55,
+        "global": false,
+        "loop": false,
+        "speed": 0.45,
+        "sound": "media/sound/misc/computer-beep-success.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "radius": 32,
+        "useTargetAngle": false,
+        "numParticles": 1,
+        "duration": 0.15,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 1,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_S",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "color": "red",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.2,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 3,
+              "y": 3
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "particleDuration": 0.5,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "color": "red",
+        "alpha": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": 0.05,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "time": 0.5,
+        "type": "WAIT"
+      }
+    ],
+    "hackingPointSilent": [
+      {
+        "color": "red",
+        "maxAlpha": 0.5,
+        "minAlpha": 0,
+        "blinkDuration": 0.8,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "red",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.4,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 2
+            },
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "color": "red",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.4,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 2,
+              "y": 1
+            },
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "radius": 24,
+        "useTargetAngle": false,
+        "numParticles": 1,
+        "duration": 0.5,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 1,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_L1",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "radius": 24,
+        "useTargetAngle": false,
+        "numParticles": 5,
+        "duration": 0.5,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 1,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_S",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "time": 0.25,
+        "type": "WAIT"
+      },
+      {
+        "radius": 24,
+        "useTargetAngle": false,
+        "numParticles": 1,
+        "duration": 0.5,
+        "alongY": true,
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 1,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "HACKING_L2",
+        "type": "PLAY_ANIM_RANGE"
+      },
+      {
+        "time": 0.25,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ]
+  }
+}

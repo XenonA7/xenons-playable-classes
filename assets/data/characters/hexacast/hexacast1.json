@@ -1,0 +1,69 @@
+{
+  "name": {
+    "en_US": "Hexacast1"
+  },
+  "realname": {
+    "en_US": "Hexacast1"
+  },
+  "size": {
+    "x": 16,
+    "y": 16,
+    "z": 24
+  },
+  "animSheet": "npc.hexacast1",
+  "walkAnimSet": {
+    "normal": {
+      "idle": "idle",
+      "move": "walk",
+      "run": "run",
+      "jump": "jump",
+      "fall": "fall"
+    },
+    "sit": {
+      "idle": "sit"
+    }
+  },
+  "walkAnims": "normal",
+  "shadow": 16,
+  "configs": {
+    "normal": {
+      "relativeVel": 0.5
+    },
+    "running": {
+      "relativeVel": 1
+    },
+    "sit": {
+      "walkAnims": "sit",
+      "relativeVel": 0.5,
+      "shadow": 0
+    }
+  },
+  "face": {
+    "width": 105,
+    "height": 148,
+    "centerX": 37,
+    "centerY": 50,
+    "src": "hexacast1.png",
+    "parts": [
+      {
+        "normal": {
+          "srcX": 0,
+          "srcY": 0,
+          "width": 105,
+          "height": 148,
+          "destX": 0,
+          "destY": 0
+        }
+      }
+    ],
+    "expressions": {
+      "DEFAULT": {
+        "faces": [
+          [
+            "normal"
+          ]
+        ]
+      }
+    }
+  }
+}

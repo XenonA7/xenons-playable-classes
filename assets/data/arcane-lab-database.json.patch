@@ -12,6 +12,10 @@
         "src": "patches/data/lea-arcane-lab-database.json"
       },
       {
+        "type": "INCLUDE",
+        "src": "patches/data/hexacast-arcane-lab-database.json"
+      },
+      {
         "type": "EXIT"
       }
     ]

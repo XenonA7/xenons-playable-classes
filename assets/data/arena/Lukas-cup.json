@@ -10,7 +10,7 @@
     "creator": {
       "en_US": "Schneider"
     },
-    "condition": "plot.xtm.SchneiderArenaUnlock || plot.line >= 45700",
+    "condition": "plot.xpc.SchneiderArenaUnlock || plot.line >= 45700",
     "music": "evoEscape",
     "noRush": true,
     "mods": [

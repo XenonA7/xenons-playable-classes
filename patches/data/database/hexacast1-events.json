@@ -1,0 +1,502 @@
+{
+  "hexacast1-party-add": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SET_CONTACT_TYPE",
+        "member": "Hexacast1",
+        "status": "FRIEND"
+      },
+      {
+        "type": "SET_PARTY_MEMBER_LEVEL",
+        "member": "Hexacast1",
+        "level": 75,
+        "updateEquipment": true
+      },
+      {
+        "type": "SET_PARTY_MEMBER_SP_LEVEL",
+        "member": "Hexacast1",
+        "level": 4
+      },
+      {
+        "type": "SET_PARTY_MEMBER_ALL_ELEMENTS",
+        "member": "Hexacast1",
+        "allElements": true
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  },
+  "hexacast1-join": {
+    "frequency": "ALWAYS",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "outgoing": true,
+        "type": "RING_PRIVATE_MSG"
+      },
+      {
+        "type": "START_PRIVATE_MSG"
+      },
+      {
+        "side": "LEFT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "hexacast.hexacast1",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "side": "RIGHT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "main.lea",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "I'm on my way."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Ok, I've got some time."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "I'll join for a bit."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "end",
+        "type": "LABEL"
+      },
+      {
+        "member": "Hexacast1",
+        "skipEffect": false,
+        "temporary": false,
+        "type": "ADD_PARTY_MEMBER"
+      },
+      {
+        "skipSounds": false,
+        "type": "END_PRIVATE_MSG"
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "Hexacast1",
+      "actionType": "PARTY_JOIN",
+      "type": "SOCIAL_ACTION"
+    }
+  },
+  "hexacast1-remove": {
+    "frequency": "ALWAYS",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "outgoing": true,
+        "type": "RING_PRIVATE_MSG"
+      },
+      {
+        "type": "START_PRIVATE_MSG"
+      },
+      {
+        "side": "LEFT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "hexacast.hexacast1",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "side": "RIGHT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "main.lea",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Until next time."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "I'll see you later."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Goodbye."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "member": "Hexacast1",
+        "skipEffect": false,
+        "type": "REMOVE_PARTY_MEMBER"
+      },
+      {
+        "skipSounds": false,
+        "type": "END_PRIVATE_MSG"
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "Hexacast1",
+      "actionType": "PARTY_LEAVE",
+      "type": "SOCIAL_ACTION"
+    }
+  },
+  "hexacast1-contact": {
+    "frequency": "ALWAYS",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "outgoing": true,
+        "type": "RING_PRIVATE_MSG"
+      },
+      {
+        "type": "START_PRIVATE_MSG"
+      },
+      {
+        "side": "RIGHT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "main.lea",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "side": "LEFT",
+        "order": 0,
+        "clearSide": false,
+        "type": "ADD_MSG_PERSON",
+        "person": {
+          "person": "hexacast.hexacast1",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "party.has.Hexacast1 && !location.isMapDungeon",
+        "thenStep": [
+          {
+            "message": {
+              "en_US": "Hi?"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            }
+          },
+          {
+            "message": {
+              "en_US": "Why are you calling? I'm right here."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "message": {
+              "en_US": "..!"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "ANNOYED"
+            }
+          },
+          {
+            "name": "end",
+            "type": "GOTO_LABEL"
+          }
+        ]
+      },
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "party.has.Hexacast1 && location.isMapDungeon",
+        "thenStep": [
+          {
+            "side": "LEFT",
+            "order": 0,
+            "clearSide": false,
+            "type": "ADD_MSG_PERSON",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "message": {
+              "en_US": "I'll meet up with you after the dungeon."
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            }
+          },
+          {
+            "message": {
+              "en_US": "[nods]"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD"
+            }
+          },
+          {
+            "name": "end",
+            "type": "GOTO_LABEL"
+          }
+        ]
+      },
+      {
+        "message": {
+          "en_US": "Hi!"
+        },
+        "autoContinue": false,
+        "type": "SHOW_MSG",
+        "person": {
+          "person": "main.lea",
+          "expression": "EXCITED"
+        }
+      },
+      {
+        "0": [
+          {
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Are you in need of a \\c[3]fourth\\c[0] party member?"
+            },
+            "type": "SHOW_MSG"
+          }
+        ],
+        "1": [
+          {
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Your party is pretty big already. Still want me to join?"
+            },
+            "type": "SHOW_MSG"
+          }
+        ],
+        "2": [
+          {
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Want me to join you? I can also join if your party is already full."
+            },
+            "type": "SHOW_MSG"
+          }
+        ],
+        "type": "SELECT_FIRST",
+        "options": [
+          "party.size == 3",
+          "party.size > 3",
+          "party.size < 3"
+        ]
+      },
+      {
+        "0": [
+          {
+            "message": {
+              "en_US": "[nods]"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD"
+            }
+          },
+          {
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Ok, I am on my way."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "ADD_PARTY_MEMBER",
+            "member": "Hexacast1",
+            "skipEffect": false,
+            "temporary": false
+          }
+        ],
+        "1": [
+          {
+            "message": {
+              "en_US": "[shakes head]"
+            },
+            "autoContinue": false,
+            "type": "SHOW_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "SHAKE"
+            }
+          },
+          {
+            "person": {
+              "person": "hexacast.hexacast1",
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "Perhaps another time then."
+            },
+            "type": "SHOW_MSG"
+          }
+        ],
+        "type": "SHOW_CHOICE",
+        "person": {
+          "person": "main.lea",
+          "expression": "DEFAULT"
+        },
+        "options": [
+          {
+            "0": " ",
+            "label": {
+              "en_US": "[yes]"
+            }
+          },
+          {
+            "1": " ",
+            "label": {
+              "en_US": "[no]"
+            }
+          }
+        ]
+      },
+      {
+        "name": "end",
+        "type": "LABEL"
+      },
+      {
+        "skipSounds": false,
+        "type": "END_PRIVATE_MSG"
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "Hexacast1",
+      "actionType": "CONTACT",
+      "type": "SOCIAL_ACTION"
+    }
+  }
+}

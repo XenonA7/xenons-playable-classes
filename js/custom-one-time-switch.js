@@ -1,4 +1,4 @@
-ig.module("game.feature.puzzle.entities.xtm-one-time-switch").requires("impact.base.entity").defines(function() {
+ig.module("game.feature.puzzle.entities.xpc-one-time-switch").requires("impact.base.entity").defines(function() {
   sc.ONE_TIME_SWTICH_TYPE["default2"] = {
     size: {
       x: 16,

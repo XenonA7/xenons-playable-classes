@@ -1,0 +1,955 @@
+{
+  "level": 17,
+  "boostedLevel": 59,
+  "params": {
+    "hp": 777,
+    "attack": 62,
+    "defense": 71,
+    "focus": 69,
+    "elemFactor": [
+      0.8,
+      1.1,
+      1.3,
+      0.8
+    ],
+    "statusInflict": [
+      0.5,
+      1.3,
+      1.5,
+      1
+    ],
+    "statusEffect": [
+      0.5,
+      1.3,
+      1.5,
+      1
+    ]
+  },
+  "credit": 105,
+  "exp": 40,
+  "maxSp": 0,
+  "enduranceScale": 2,
+  "itemDrops": [],
+  "healDropRate": 0,
+  "targetDetect": {
+    "detectDistance": 64,
+    "loseDistance": 320,
+    "notifyNeighbourRadius": 64,
+    "onDistance": true
+  },
+  "boss": false,
+  "bossOrder": 0,
+  "hpBreaks": [],
+  "size": {
+    "x": 16,
+    "y": 16,
+    "z": 24
+  },
+  "padding": {
+    "x": 2,
+    "y": 2
+  },
+  "anims": "enemies.penguin-heat",
+  "defaultState": "IDLE",
+  "walkConfigs": {
+    "normal": {
+      "idle": "idle",
+      "move": "move",
+      "damage": "damage",
+      "jump": "jump",
+      "fall": "fall",
+      "run": "run"
+    }
+  },
+  "material": "METAL",
+  "aiGroup": "",
+  "aiLearnType": "REGULAR",
+  "_wm": null,
+  "walkAnims": "normal",
+  "weight": 100,
+  "maxVel": 180,
+  "jumpingEnabled": true,
+  "shadow": 20,
+  "hitStable": "LIGHT",
+  "faceToTarget": true,
+  "DOCTYPE": "ENEMY",
+  "trackers": {
+    "move": {
+      "target": 4,
+      "initRandom": 0.33,
+      "resetRandom": 0.33,
+      "noStateReset": false,
+      "noAssist": false,
+      "type": "TIME"
+    }
+  },
+  "states": {
+    "IDLE": {
+      "choices": [
+        {
+          "req": [
+            {
+              "type": "HAS_TARGET"
+            }
+          ],
+          "postSwitchState": "DEFAULT"
+        },
+        {
+          "req": [
+            {
+              "type": "!SPAWN_POINT_DISTANCE",
+              "max": 64
+            }
+          ],
+          "action": "MoveToSpawnPoint"
+        },
+        {
+          "req": [
+            {
+              "max": 0.1,
+              "negated": false,
+              "type": "RANDOM"
+            }
+          ],
+          "action": "ShuffleRandom"
+        },
+        {
+          "req": [
+            {
+              "max": 0.4,
+              "negated": false,
+              "type": "RANDOM"
+            }
+          ],
+          "action": "MoveRandom"
+        },
+        {
+          "action": "Idle"
+        }
+      ]
+    },
+    "HACK_SPAWN": {
+      "enabledReactions": [],
+      "choices": [
+        {
+          "action": "HackingSpawn"
+        }
+      ]
+    },
+    "DEFAULT": {
+      "enabledReactions": [],
+      "choices": [
+        {
+          "req": [
+            {
+              "type": "!HAS_TARGET"
+            }
+          ],
+          "postSwitchState": "IDLE"
+        },
+        {
+          "req": [
+            {
+              "distance": 300,
+              "throwing": true,
+              "type": "!TARGET_REACHABLE"
+            }
+          ],
+          "action": "AdjustFast"
+        },
+        {
+          "req": [
+            {
+              "distance": 200,
+              "throwing": true,
+              "type": "!TARGET_REACHABLE"
+            }
+          ],
+          "action": "Adjust"
+        },
+        {
+          "action": "Breath",
+          "frequency": "SOMETIMES"
+        },
+        {
+          "action": "ThrowTri",
+          "frequency": "OFTEN"
+        },
+        {
+          "req": [
+            {
+              "negated": false,
+              "type": "TRACKER_READY",
+              "name": "move"
+            }
+          ],
+          "action": "Circle"
+        },
+        {
+          "action": "Idle"
+        }
+      ]
+    },
+    "PASSIVE_INVIS": {
+      "weight": -1,
+      "hitIgnore": true,
+      "aggression": "PEACEFUL",
+      "annotate": {
+        "active": "NONE",
+        "passive": "IMMUNE",
+        "weapon": "ANY",
+        "element": "ANY",
+        "extra": []
+      },
+      "choices": []
+    }
+  },
+  "proxies": {
+    "fireballSmall": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "offX": 368,
+          "offY": 0,
+          "width": 16,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "effects": "ball-heat",
+      "light": "M",
+      "speed": 200,
+      "maxBounce": 0,
+      "timer": 3,
+      "attack": {
+        "type": "MEDIUM",
+        "element": "HEAT",
+        "damageFactor": 0.7,
+        "reverse": false,
+        "status": 0.5,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [],
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": false,
+      "type": "BALL",
+      "maxBounds": 0
+    },
+    "flame": {
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "effects": "specials.heat",
+      "effectKeys": {
+        "wall": "flameKill"
+      },
+      "speed": 340,
+      "maxBounce": 0,
+      "timer": 0.8,
+      "trail": false,
+      "multiHit": true,
+      "light": "XL",
+      "noLightGlow": true,
+      "type": "BALL",
+      "effect": "ar",
+      "maxBounds": 0,
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "xCount": 6,
+          "offX": 0,
+          "offY": 0,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "time": 0.07,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "attack": {
+        "type": "LIGHT",
+        "element": "HEAT",
+        "damageFactor": 0.12,
+        "reverse": false,
+        "spFactor": 0,
+        "status": 1.1,
+        "stunSteps": [
+          {
+            "type": "START_LOCK"
+          }
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 0.15,
+          "pause": 5,
+          "fadeIn": 0.2,
+          "startWait": 0.3,
+          "fadeOutVary": 0.15
+        }
+      ],
+      "timeBoni": null
+    }
+  },
+  "actions": {
+    "Idle": [
+      {
+        "value": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "minTime": 0.1,
+        "maxTime": 0.3,
+        "type": "WAIT_RANDOM"
+      }
+    ],
+    "HackingSpawn": [
+      {
+        "value": false,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": "MASSIVE",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "value": -1,
+        "type": "SET_WEIGHT"
+      },
+      {
+        "name": "spawn_immunity",
+        "target": "SELF",
+        "actionDetached": false,
+        "shield": {
+          "type": "DIRECTIONAL",
+          "settings": {
+            "neutralize": true,
+            "duration": 2,
+            "range": 1,
+            "back": false
+          }
+        },
+        "type": "ADD_SHIELD"
+      },
+      {
+        "duration": 2,
+        "align": "CENTER",
+        "rotateFace": 0,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": true,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "scene.hacking",
+          "name": "hackingShowSlow"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -4
+        }
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      },
+      {
+        "enemyState": "DEFAULT",
+        "type": "SET_ENEMY_STATE"
+      },
+      {
+        "minTime": 0.1,
+        "maxTime": 0.3,
+        "type": "WAIT_RANDOM"
+      }
+    ],
+    "MoveToSpawnPoint": [
+      {
+        "value": 0.5,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "maxTime": 3,
+        "maxDistance": 16,
+        "precise": false,
+        "type": "NAVIGATE_TO_SPAWN_POINT"
+      }
+    ],
+    "MoveRandom": [
+      {
+        "value": 0.3,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "value": false,
+        "type": "SET_JUMPING"
+      },
+      {
+        "minTime": 0.3,
+        "maxTime": 0.5,
+        "dirChanges": 0,
+        "type": "MOVE_RANDOM",
+        "stopBeforeEdge": true
+      },
+      {
+        "minTime": 0.5,
+        "maxTime": 0.6,
+        "type": "WAIT_RANDOM"
+      }
+    ],
+    "Adjust": [
+      {
+        "value": 0.5,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "maxTime": 1,
+        "forceTime": false,
+        "distance": 100,
+        "stayBehind": false,
+        "planOnly": false,
+        "targetType": "ENEMY",
+        "type": "NAVIGATE_TO_TARGET"
+      }
+    ],
+    "ShuffleRandom": [
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "shuffle",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "volume": 0.6,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.3,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "volume": 0.6,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      }
+    ],
+    "ThrowTri": [
+      {
+        "active": "PRE_ATTACK",
+        "extra": [
+          "ATTACK_BACK",
+          "BE_PASSIVE_IF_TARGETED"
+        ],
+        "type": "CHANGE_ENEMY_ANNOTATION"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "shuffle",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "volume": 1,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "duration": 0.7,
+        "align": "CENTER",
+        "rotateFace": 0,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "enemies.penguin-heat",
+          "name": "subChargeThrow"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -4
+        }
+      },
+      {
+        "volume": 1,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "volume": 1,
+        "variance": 0.1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-step-1.ogg"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/move/snow-land.ogg"
+      },
+      {
+        "value": false,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "aim",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "time": 0.3,
+        "type": "WAIT"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "throw",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "active": "ATTACK",
+        "type": "CHANGE_ENEMY_ANNOTATION"
+      },
+      {
+        "projectileSpeed": 400,
+        "type": "SET_FACE_TARGET_PREDICT"
+      },
+      {
+        "duration": 0,
+        "align": "CENTER",
+        "rotateFace": -1,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": true,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "enemies.penguin-heat",
+          "name": "triShoot"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "align": "BOTTOM",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 12
+        },
+        "centralAngle": 0.1,
+        "angleVary": 0,
+        "startDist": 4,
+        "startDistCollide": "CLOSER",
+        "random": false,
+        "count": 3,
+        "duration": 0,
+        "flipLeftFace": 0,
+        "circularArea": false,
+        "uniformDir": 0,
+        "delay": 0,
+        "repeat": false,
+        "type": "SHOOT_PROXY_RANGE",
+        "proxy": "fireballSmall"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "value": false,
+        "immediately": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "CLEAR_ANIMATION"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      }
+    ],
+    "Circle": [
+      {
+        "value": false,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": 0.4,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "maxTime": 1,
+        "distance": 100,
+        "distVariance": 20,
+        "keepDirection": false,
+        "throwing": true,
+        "planOnly": false,
+        "type": "NAVIGATE_SIDEWAYS_TARGET"
+      },
+      {
+        "value": true,
+        "type": "FACE_TO_TARGET"
+      }
+    ],
+    "Breath": [
+      {
+        "active": "PRE_ATTACK",
+        "type": "CHANGE_ENEMY_ANNOTATION"
+      },
+      {
+        "value": "HEAVY",
+        "type": "SET_HIT_STABLE"
+      },
+      {
+        "value": 0.8,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "maxTime": 0.5,
+        "forceTime": false,
+        "distance": 72,
+        "planOnly": false,
+        "targetType": "ENEMY",
+        "precise": false,
+        "stayBehind": false,
+        "type": "NAVIGATE_TO_TARGET"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "run",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "duration": 0,
+        "align": "CENTER",
+        "rotateFace": -1,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "enemies.penguin-heat",
+          "name": "subChargeBreath"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "value": 0.4,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "time": 1,
+        "stopBeforeEdge": false,
+        "type": "MOVE_FORWARD"
+      },
+      {
+        "value": 0.3,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "value": false,
+        "type": "SET_JUMPING"
+      },
+      {
+        "value": "IGNORE",
+        "type": "SET_COLL_TYPE"
+      },
+      {
+        "value": false,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "slide",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "active": "ATTACK",
+        "type": "CHANGE_ENEMY_ANNOTATION"
+      },
+      {
+        "jumpHeight": "M",
+        "wait": false,
+        "ignoreSounds": false,
+        "type": "JUMP"
+      },
+      {
+        "time": 0.3,
+        "stopBeforeEdge": false,
+        "type": "MOVE_BACKWARD"
+      },
+      {
+        "value": 50,
+        "type": "SET_SPEED"
+      },
+      {
+        "wait": false,
+        "viaWalkConfig": false,
+        "anim": "slide",
+        "type": "SHOW_ANIMATION"
+      },
+      {
+        "value": 0.15,
+        "type": "FACE_TO_TARGET_SPEED"
+      },
+      {
+        "value": true,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "duration": 0,
+        "align": "BOTTOM",
+        "rotateFace": -1,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "enemies.penguin-heat",
+          "name": "breathShoot"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "align": "BOTTOM",
+        "centralAngle": 0.05,
+        "angleVary": 0,
+        "startDist": 16,
+        "startDistCollide": "CLOSER",
+        "random": true,
+        "count": 40,
+        "duration": 1,
+        "clockwise": false,
+        "flipLeftFace": 0,
+        "circularArea": false,
+        "uniformDir": 0,
+        "delay": 0,
+        "repeat": false,
+        "type": "SHOOT_PROXY_RANGE",
+        "proxy": "flame",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 2
+        }
+      },
+      {
+        "duration": -1,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        }
+      },
+      {
+        "time": 1,
+        "stopBeforeEdge": false,
+        "type": "MOVE_BACKWARD"
+      },
+      {
+        "value": false,
+        "type": "FACE_TO_TARGET"
+      },
+      {
+        "value": "VIRTUAL",
+        "type": "SET_COLL_TYPE"
+      },
+      {
+        "time": 0.3,
+        "type": "WAIT"
+      }
+    ],
+    "AdjustFast": [
+      {
+        "value": 1,
+        "type": "SET_RELATIVE_SPEED"
+      },
+      {
+        "maxTime": 1,
+        "forceTime": false,
+        "distance": 150,
+        "stayBehind": false,
+        "planOnly": false,
+        "targetType": "ENEMY",
+        "type": "NAVIGATE_TO_TARGET"
+      }
+    ]
+  },
+  "reactions": {},
+  "meta": {
+    "species": {
+      "en_US": "Bird",
+      "de_DE": "Vogel<<C<<Geprüft: Minsu",
+      "zh_CN": "鸟类",
+      "zh_TW": "鳥類",
+      "ja_JP": "鳥",
+      "ko_KR": "새",
+      "langUid": 1
+    },
+    "category": "ANIMALS",
+    "descriptions": [
+      {
+        "condition": "!plot.xpc.tempQuest",
+        "text": {
+          "en_US": "What? They breathe fire now?!",
+          "de_DE": "What? They breathe fire now?!",
+          "zh_CN": "What? They breathe fire now?!",
+          "zh_TW": "What? They breathe fire now?!",
+          "ja_JP": "What? They breathe fire now?!",
+          "ko_KR": "What? They breathe fire now?!",
+          "langUid": -10
+        }
+      },
+      {
+        "condition": "plot.xpc.tempQuest",
+        "text": {
+          "en_US": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "de_DE": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "zh_CN": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "zh_TW": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "ja_JP": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "ko_KR": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "langUid": -11
+        }
+      }
+    ]
+  }
+}

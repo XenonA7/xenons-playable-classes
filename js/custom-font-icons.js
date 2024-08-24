@@ -1,8 +1,8 @@
-ig.module("game.feature.font.xtm-custom-icons").requires("game.feature.font.font-system").defines(function() {
+ig.module("game.feature.font.xpc-custom-icons").requires("game.feature.font.font-system").defines(function() {
 	var fontIdx = sc.fontsystem.font.iconSets.length, smallFontIdx = sc.fontsystem.smallFont.iconSets.length;
 	
-	sc.fontsystem.font.pushIconSet(new ig.Font("media/font/xtm-font-icons.png", 16, ig.MultiFont.ICON_START));
-	sc.fontsystem.smallFont.pushIconSet(new ig.Font("media/font/xtm-font-icons-small.png", 14, ig.MultiFont.ICON_START));
+	sc.fontsystem.font.pushIconSet(new ig.Font("media/font/xpc-font-icons.png", 16, ig.MultiFont.ICON_START));
+	sc.fontsystem.smallFont.pushIconSet(new ig.Font("media/font/xpc-font-icons-small.png", 14, ig.MultiFont.ICON_START));
 	
 	//large font icons
 	sc.fontsystem.font.setMapping({"xenon-logo" :[fontIdx, 0]});

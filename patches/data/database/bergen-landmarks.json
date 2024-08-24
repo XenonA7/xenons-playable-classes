@@ -1,0 +1,24 @@
+{
+  "xpc": {
+    "name": {
+      "en_US": "Modding Hideout",
+      "de_DE": "Modding Hideout",
+      "fr_FR": "Modding Hideout",
+      "langUid": 287,
+      "zh_CN": "Modding Hideout",
+      "ja_JP": "Modding Hideout",
+      "ko_KR": "Modding Hideout",
+      "zh_TW": "Modding Hideout"
+    },
+    "description": {
+      "en_US": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "de_DE": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "fr_FR": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "langUid": 288,
+      "zh_CN": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "ja_JP": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "ko_KR": "An unused area next to \\v[area.bergen.name] repurposed by modders.",
+      "zh_TW": "An unused area next to \\v[area.bergen.name] repurposed by modders."
+    }
+  }
+}

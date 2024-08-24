@@ -1,0 +1,407 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'arcane-labs') && !activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+              "type": "NPC",
+          "x": 935,
+          "y": 270,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 420,
+            "npcStates": [
+              {
+                "reactType": "FIXED_POS",
+                "face": "SOUTH",
+                "action": [],
+                "hidden": false,
+                "condition": "",
+                "config": "normal",
+                "event": []
+              }
+            ],
+            "name": "hex1",
+            "characterName": "hexacast.hexacast2",
+            "displayName": {
+              "en_US": "HeartLychee"
+            }
+          }
+        }
+      },
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "NPC",
+          "x": 937,
+          "y": 310,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 421,
+            "npcStates": [
+              {
+                "reactType": "FIXED_POS",
+                "face": "NORTH",
+                "action": [],
+                "hidden": false,
+                "condition": "",
+                "config": "normal",
+                "event": []
+              }
+            ],
+            "name": "hex2",
+            "characterName": "cross-worlds.pentafist-female-blue",
+            "displayName": {
+              "en_US": "Alyxia"
+            }
+          }
+        }
+      },
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "XenoDialog",
+          "x": 903,
+          "y": 282,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 422,
+            "name": "hexTalk-noAL",
+            "spawnCondition": "plot.line >= 40100",
+            "dialog": [
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "This is the place?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "Yes, it's supposed to be this building right here."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "It appears to be empty though. There is no way in."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "But they said the secret guild base is in this house!"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "They must have moved locations. It is certainly not an easy process to join, is it?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "Now what do we do? We can't try all those cool hybrid classes unless we can join the guild!"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "I'll try to ask my friend again, he might be able get us in contact with them."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "These guys certainly are an elusive group to track down."
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "NPC",
+          "x": 898,
+          "y": 193,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 420,
+            "npcStates": [
+              {
+                "reactType": "FIXED_POS",
+                "face": "SOUTH_WEST",
+                "action": [],
+                "hidden": false,
+                "condition": "",
+                "config": "normal",
+                "event": []
+              }
+            ],
+            "name": "hex1",
+            "characterName": "hexacast.hexacast2",
+            "displayName": {
+              "en_US": "HeartLychee"
+            }
+          }
+        }
+      },
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "NPC",
+          "x": 919,
+          "y": 224,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 421,
+            "npcStates": [
+              {
+                "reactType": "FIXED_POS",
+                "face": "WEST",
+                "action": [],
+                "hidden": false,
+                "condition": "",
+                "config": "normal",
+                "event": []
+              }
+            ],
+            "name": "hex2",
+            "characterName": "cross-worlds.pentafist-female-blue",
+            "displayName": {
+              "en_US": "Alyxia"
+            }
+          }
+        }
+      },
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "NPC",
+          "x": 864,
+          "y": 210,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 423,
+            "npcStates": [
+              {
+                "reactType": "FIXED_POS",
+                "face": "EAST",
+                "action": [],
+                "hidden": false,
+                "condition": "",
+                "config": "normal",
+                "event": []
+              }
+            ],
+            "name": "hex3",
+            "characterName": "guildac.shooty"
+          }
+        }
+      },
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "XenoDialog",
+          "x": 892,
+          "y": 251,
+          "level": 2,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 422,
+            "name": "hexTalk-AL",
+            "spawnCondition": "plot.line >= 40100",
+            "dialog": [
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "You're part of that super secret guild, right?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "And this house is your headquarters? We want to join!"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "Actually, this is our old headquarters. We just got done moving to a new location in a less-public area."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "Although how did you hear about us? We don't really do open recruitment."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "We saw a \\c[3]Hexummoner\\c[0] fighting using an army of robots! I want to do that too!"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "Is it true that your guild has \\c[3]8 custom classes\\c[0] the members can play as?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "Oh dear, we aren't supposed to show that off in public yet. A lot is still being developed."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "The guild leader won't be happy about this."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "text": {
+                  "en_US": "Aww, does that mean we can't join?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "Most players won't have access to the new location. But you come across it, I think you are allowed to join."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "Let me guess, is it that blocked exit north of \\c[3]pathway 5\\c[0]?"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                },
+                "text": {
+                  "en_US": "Nobody knows what's over there, or how to unlock it."
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex3"
+                },
+                "text": {
+                  "en_US": "I'm not going to confirm that. We will be more open to the public in due time, but not for now."
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "EXIT"
+  }
+]

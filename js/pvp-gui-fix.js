@@ -57,7 +57,7 @@ sc.SUB_HP_EDITOR.PVP.rearrangeAll = function () {
     for (let i = 0; i < sc.SUB_HP_EDITOR.PVP.hpBars.length; i++) {
         const bar = sc.SUB_HP_EDITOR.PVP.hpBars[i]
         bar.setPos(bar.hook.pos.x, i * 15 + 5)
-        //Note: XTM's original spacing was bar.setPos(bar.hook.pos.x, i * 25 + 5)
+        //Note: XPC's original spacing was bar.setPos(bar.hook.pos.x, i * 25 + 5)
     }
 }
 sc.SUB_HP_EDITOR.PVP.inject({

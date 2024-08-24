@@ -1,0 +1,220 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 97
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Door",
+      "x": 192,
+      "y": 1104,
+      "level": 3,
+      "settings": {
+        "name": "spookyHouse",
+        "doorType": "DEFAULT",
+        "dir": "SOUTH",
+        "transitionType": "REGULAR",
+        "mapId": 854,
+        "map": "bergen.spooky-house",
+        "marker": "exit",
+        "hideCondition": "",
+        "blockEventCondition": "",
+        "variation": "",
+        "condition": ""
+      }
+    }
+  },
+
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1033,
+      "y": 874,
+      "level": 3,
+      "settings": {
+        "name": "cards1",
+        "characterName": "hexacast.hexacast2",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "mapId": 605,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "EAST",
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": [],
+            "action": [
+              {
+                "volume": 0.4,
+                "global": false,
+                "loop": false,
+                "variance": 0.05,
+                "speed": 1.4,
+                "radius": 200,
+                "sound": "media/sound/boss/gynthar/cards-fold.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "shuffle1"
+              },
+              {
+                "volume": 0.4,
+                "global": false,
+                "loop": false,
+                "variance": 0.05,
+                "speed": 1.4,
+                "radius": 200,
+                "sound": "media/sound/boss/gynthar/cards-fold.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "shuffle1"
+              },
+              {
+                "volume": 0.4,
+                "global": false,
+                "loop": false,
+                "variance": 0.05,
+                "speed": 1.4,
+                "radius": 200,
+                "sound": "media/sound/boss/gynthar/cards-fold.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "shuffle1"
+              },
+              {
+                "volume": 0.65,
+                "global": false,
+                "loop": false,
+                "variance": 0.05,
+                "speed": 0.8,
+                "radius": 200,
+                "sound": "media/sound/boss/gynthar/cards-unfold.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "shuffle2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1064,
+      "y": 878,
+      "level": 3,
+      "settings": {
+        "name": "cards2",
+        "characterName": "cross-worlds.pentafist-female-blue",
+        "displayName": {
+          "en_US": "Alyxia"
+        },
+        "mapId": 604,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "WEST",
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 1097,
+      "y": 873,
+      "level": 3,
+      "settings": {
+        "name": "cards-talk",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "cards2"
+            },
+            "text": {
+              "en_US": "Since when did you know how to shuffle cards all fancy like that?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "cards1"
+            },
+            "text": {
+              "en_US": "I don't know, I just seem to be good at it."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "cards2"
+            },
+            "text": {
+              "en_US": "But you're so bad at it in real life!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "cards1"
+            },
+            "text": {
+              "en_US": "I don't really need to think about it here, it just works."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "cards1"
+            },
+            "text": {
+              "en_US": "It must be a hidden perk of Hexacasts."
+            }
+          }
+        ],
+        "endlessDialog": false,
+        "once": false,
+        "mapId": 2100,
+        "spawnCondition": ""
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

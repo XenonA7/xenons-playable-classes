@@ -17,7 +17,7 @@
           "y": 47
         },
         "sheet": {
-          "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+          "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
           "offX": 192,
           "offY": 0,
           "width": 96,
@@ -42,7 +42,7 @@
           "y": 47
         },
         "sheet": {
-          "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+          "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
           "offX": 384,
           "offY": 0,
           "width": 96,

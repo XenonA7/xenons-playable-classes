@@ -1,0 +1,184 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1792,
+      "y": 788,
+      "level": 1,
+      "settings": {
+        "mapId": 524,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "misc.advisor-researcher",
+        "displayName": {
+          "en_US": "Moderator"
+        },
+        "name": "moderator"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1819,
+      "y": 825,
+      "level": 1,
+      "settings": {
+        "mapId": 525,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "permaFx": {
+              "sheet": "specials.shock",
+              "name": "stasisAuraNPC"
+            },
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "mod.penta-damage",
+        "displayName": {
+          "en_US": "Alyxia"
+        },
+        "name": "hex2"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1774,
+      "y": 821,
+      "level": 1,
+      "settings": {
+        "mapId": 526,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "EAST",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "hexacast.hexacast2",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "name": "hex1"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 1758,
+      "y": 795,
+      "level": 1,
+      "settings": {
+        "mapId": 523,
+        "name": "hexTalk",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "moderator"
+            },
+            "text": {
+              "en_US": "Your bug report has been submitted to Instatainment technical support."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "moderator"
+            },
+            "text": {
+              "en_US": "Please explain how this bug was encountered."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "I was just trying out this new shock art I got in the dungeon!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Please, she's been stuck like this for almost an hour!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "moderator"
+            },
+            "text": {
+              "en_US": "Do you have anything further to add to your report?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Come on, can't you do anything?\\. Who thought this combat art was a good idea?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "moderator"
+            },
+            "text": {
+              "en_US": "Your bug report is currently under review."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "Useless auto moderators!\\. Now what do I do?"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

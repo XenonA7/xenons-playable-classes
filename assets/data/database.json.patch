@@ -8,6 +8,21 @@
     "src": "mod:patches/data/database/enemies.json"
   },
   {
+    "type": "IMPORT",
+    "src": "mod:patches/data/database/enemies-avatar.json"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": "quests"
+  },
+  {
+    "type": "IMPORT",
+    "src": "mod:patches/data/database/quests.json"
+  },
+  {
     "type": "EXIT"
   },
   {
@@ -19,6 +34,14 @@
     "src": "mod:patches/data/database/triblader2-events.json"
   },
   {
+    "type": "INCLUDE",
+    "src": "patches/data/database/hexacast1-events.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "patches/data/database/hexacast3-events.json"
+  },
+  {
     "type": "EXIT"
   },
   {
@@ -27,7 +50,18 @@
   },
   {
     "type": "IMPORT",
-    "src": "mod:patches/data/database/xtm-areas.json"
+    "src": "mod:patches/data/database/xpc-areas.json"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": ["areas", "bergen", "landmarks"]
+  },
+  {
+    "type": "INCLUDE",
+    "src": "patches/data/database/bergen-landmarks.json"
   },
   {
     "type": "EXIT"

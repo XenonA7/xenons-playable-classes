@@ -1,0 +1,159 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 184,
+      "y": 256,
+      "level": 0,
+      "settings": {
+        "name": "projectorAL",
+        "mapId": 587,
+        "propType": {
+          "sheet": "arid-furniture",
+          "name": "groundProjector"
+        },
+        "propAnim": "",
+        "condAnims": []
+      }
+    }
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "Prop",
+          "x": 184,
+          "y": 252,
+          "level": {
+            "level": 0,
+            "offset": 4
+          },
+          "settings": {
+            "name": "ALConsole",
+            "interact": {
+              "icon": "INFO",
+              "hoverText": {
+                "en_US": "AL Custom Skills"
+              },
+              "event": [
+                {
+                  "withElse": false,
+                  "type": "IF",
+                  "condition": "!tmp.alWarning",
+                  "thenStep": [
+                    {
+                      "text": {
+                        "en_US": "\\c[1]Note about custom skills:\\c[0]\n\\!Only \\c[3]Hexacast1\\c[0] and \\c[3]Hexacast2\\c[0] are crrently supported."
+                      },
+                      "center": true,
+                      "autoContinue": false,
+                      "type": "SHOW_BOARD_MSG"
+                    },
+                    {
+                      "text": {
+                        "en_US": "Custom skills will only appear in the menu for supported characters. If you ever change your player character \\c[1]after\\c[0] equipping custom skills, you must disable them again or else the game will crash when you try to attack."
+                      },
+                      "center": true,
+                      "autoContinue": false,
+                      "type": "SHOW_BOARD_MSG"
+                    },
+                    {
+                      "text": {
+                        "en_US": "You can enable/disable custom skills using the \\c[3]Custom C. Preset\\c[0] item under the toggleables tab in your inventory screen. Grab it from the chest in the eastern room upstairs."
+                      },
+                      "center": true,
+                      "autoContinue": false,
+                      "type": "SHOW_BOARD_MSG"
+                    },
+                    {
+                      "type": "CHANGE_VAR_BOOL",
+                      "varName": "tmp.alWarning",
+                      "changeType": "set",
+                      "value": true
+                    },
+                    {
+                      "name": "end",
+                      "type": "GOTO_LABEL"
+                    }
+                  ]
+                },
+                {
+                  "type": "AL_OPEN_CUSTOM_SKILL_MENU"
+                },
+                {
+                  "name": "end",
+                  "type": "LABEL"
+                }
+              ]
+            },
+            "mapId": 588,
+            "propType": {
+              "sheet": "trading-autumn",
+              "name": "signHuge"
+            },
+            "propAnim": "map",
+            "condAnims": [],
+            "spawnCondition": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'arcane-labs') && !activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "Prop",
+          "x": 184,
+          "y": 252,
+          "level": {
+            "level": 0,
+            "offset": 4
+          },
+          "settings": {
+            "name": "ALConsole",
+            "interact": {
+              "icon": "INFO",
+              "hoverText": {
+                "en_US": "AL Custom Skills"
+              },
+              "event": [
+                {
+                  "titleText": {
+                    "en_US": "\\c[1]Note about custom skills:\\c[0]"
+                  },
+                  "text": {
+                    "en_US": "The \\c[3]Arcane Lab\\c[0] mod must be installed to use custom skills. This allows you to access a large list of additional combat arts and standard attacks beyond what is in your circuit tree."
+                  },
+                  "type": "SHOW_CENTER_MSG"
+                }
+              ]
+            },
+            "mapId": 588,
+            "propType": {
+              "sheet": "trading-autumn",
+              "name": "signHuge"
+            },
+            "propAnim": "map",
+            "condAnims": [],
+            "spawnCondition": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "EXIT"
+  }
+]

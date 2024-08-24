@@ -1,0 +1,552 @@
+{
+  "DOCTYPE": "EFFECT",
+  "ANIMS": {
+    "namedSheets": null,
+    "shapeType": "Y_EXPAND",
+    "SUB": [
+      {
+        "name": "BLINK_SPARKLE",
+        "sheet": {
+          "src": "media/entity/effects/particles1.png",
+          "offX": 144,
+          "offY": 56,
+          "width": 8,
+          "height": 8
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "RHOMBUS_DOT",
+        "sheet": {
+          "src": "media/entity/effects/particles1.png ",
+          "xCount": 5,
+          "offX": 16,
+          "offY": 24,
+          "width": 8,
+          "height": 8
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.1,
+        "flipX": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "CLASS_TRI",
+        "sheet": {
+          "src": "media/pics/class-symbols.png",
+          "offX": 0,
+          "offY": 72,
+          "width": 32,
+          "height": 32
+        },
+        "renderMode": "lighter",
+        "time": 0.04,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "CLASS_QUADRO",
+        "sheet": {
+          "src": "media/pics/class-symbols.png",
+          "offX": 40,
+          "offY": 72,
+          "width": 32,
+          "height": 32
+        },
+        "renderMode": "lighter",
+        "time": 0.04,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "CLASS_PENTA",
+        "sheet": {
+          "src": "media/pics/class-symbols.png",
+          "offX": 80,
+          "offY": 72,
+          "width": 32,
+          "height": 32
+        },
+        "renderMode": "lighter",
+        "time": 0.04,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "CLASS_HEXA",
+        "sheet": {
+          "src": "media/pics/class-symbols.png",
+          "offX": 120,
+          "offY": 72,
+          "width": 32,
+          "height": 32
+        },
+        "renderMode": "lighter",
+        "time": 0.04,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "CLASS_SPHERO",
+        "sheet": {
+          "src": "media/pics/class-symbols.png",
+          "offX": 160,
+          "offY": 72,
+          "width": 32,
+          "height": 32
+        },
+        "renderMode": "lighter",
+        "time": 0.04,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      }
+    ]
+  },
+  "EFFECTS": {
+    "lightXL": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "lightXXL": [
+      {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "classLogosAura": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "glow": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 16
+        },
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "size": "XXL",
+        "fadeIn": 1,
+        "fadeOut": 1,
+        "duration": 0,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 16,
+        "duration": 4,
+        "centralAngle": 1,
+        "startDist": 24,
+        "random": true,
+        "moveDist": 24,
+        "moveVariance": 8,
+        "keySpline": "EASE_IN",
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 16
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 0.5,
+        "angleVary": 1,
+        "anim": "BLINK_SPARKLE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_TRI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.2,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_QUADRO",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.4,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_PENTA",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.6,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_HEXA",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.8,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_SPHERO",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.5,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_TRI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.7,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_QUADRO",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.9,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_PENTA",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.1,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_HEXA",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startAngle": 0.3,
+        "startDist": 24,
+        "uniformRandom": 0,
+        "moveDist": 8,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "pAlpha": {
+          "init": 0.85
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "particleDuration": 2,
+        "anim": "CLASS_SPHERO",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ]
+  }
+}

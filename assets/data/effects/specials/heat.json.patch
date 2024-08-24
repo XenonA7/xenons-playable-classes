@@ -1,7 +1,15 @@
 [
   {
     "type": "INCLUDE",
-    "src": "mod:patches/data/effects/specials/heat.json"
+    "src": "mod:patches/data/effects/specials/heat-tri.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/heat-hexa.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/heat-custom.json"
   },
   {
     "type": "ENTER",
@@ -153,7 +161,7 @@
         "y": 47
       },
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
         "offX": 96,
         "offY": 0,
         "width": 96,
@@ -166,6 +174,353 @@
       "frames": [
         0
       ]
+    }
+  },
+
+
+
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAT_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 96,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAT_BIG_HEXAGON_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 96,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_HEAT",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 64,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_HEAT_90",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 64,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ],
+      "framesAngle": [
+        -90
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_UP",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 24,
+        "height": 32,
+        "offY": 32
+      },
+      "pivot": {
+        "x": 10,
+        "y": 24
+      },
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GOD_HEXAGON_HEAT",
+      "pivot": {
+        "x": 48,
+        "y": 48
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SMALL_HEAT",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 144,
+        "offY": 48,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SMALL_HEAT_GUI",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 144,
+        "offY": 48,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAT_DOT1",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 160,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAT_DOT2",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 160,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "EXPLOSION_BIG_FAST",
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "width": 48,
+        "height": 48,
+        "xCount": 6
+      },
+      "time": 0.033,
+      "repeat": false,
+      "pivot": {
+        "x": 24,
+        "y": 24
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TORCH_FLAME",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 232,
+        "offY": 96,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "repeat": false,
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "METEOR_MED",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 0,
+        "offY": 24,
+        "width": 32,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "repeat": false,
+      "time": 0.1,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "METEOR_BIG",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 112,
+        "offY": 16,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "repeat": false,
+      "time": 0.1,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "BIGFIRE_NO_GUI",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "xCount": 6,
+          "offX": 0,
+          "offY": 0,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": false,
+        "time": 0.033,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
     }
   }
 ]

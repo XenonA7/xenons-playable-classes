@@ -50,7 +50,7 @@
           },
           {
             "message": {
-              "en_US": "Hi, Lea. I couldn't help but notice that you contacted me before the point in the story where XTM usually allows me as a party member."
+              "en_US": "Hi, Lea. I couldn't help but notice that you contacted me before the point in the story where XPC usually allows me as a party member."
             },
             "autoContinue": false,
             "type": "SHOW_MSG",

@@ -1,0 +1,122 @@
+{
+  "EFFECTS": {
+    "hologramCustom": [
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "intensity": 0.3,
+        "type": "DARKNESS"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "size": "XXXL",
+        "fadeIn": 1,
+        "fadeOut": 1,
+        "duration": 0,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "size": "XL",
+        "fadeIn": 1,
+        "fadeOut": 1,
+        "duration": 0,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "size": "XXL",
+        "fadeIn": 1,
+        "fadeOut": 1,
+        "duration": 0,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 48,
+        "uniformRandom": 0,
+        "moveDist": 12,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": 0.5,
+        "rotateWithTime": true,
+        "inverse": true,
+        "collision": false,
+        "particleDuration": 1,
+        "anim": "DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 60,
+        "duration": 2,
+        "centralAngle": 1,
+        "startDist": 32,
+        "random": true,
+        "moveDist": 24,
+        "moveVariance": 8,
+        "keySpline": "EASE_IN",
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.5,
+        "anim": "DOT1",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 48,
+        "uniformRandom": 0,
+        "moveDist": 12,
+        "keySpline": "EASE_IN_OUT",
+        "moveRotate": -0.5,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 1,
+        "anim": "DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ]
+  }
+}

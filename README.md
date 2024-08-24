@@ -10,7 +10,7 @@ Install instructions can be found at the bottom of this page. The DLC is require
    * Library mod needed for some features
 3. **menu-ui-replacer:** https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
    * Library mod needed for modded menu portraits
-4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader
+4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
    * Allows mods to load DLC assets properly
 
 ### **Recommended Mods (optional - for enhanced party members)**
@@ -194,7 +194,7 @@ Versions older than v2.21.0 will give an error with this mod.
 - (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
 - (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
 - (Required) menu-ui-replacer: https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
-- (Required) crosscode-extension-asset-preloader: https://github.com/elluminance/crosscode-extension-asset-preloader
+- (Required) crosscode-extension-asset-preloader: https://github.com/elluminance/crosscode-extension-asset-preloader/releases
 - (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
 - (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 

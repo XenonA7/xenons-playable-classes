@@ -1,0 +1,96 @@
+{
+  "EFFECTS": {
+    "flameRingSweepFinRev": [
+      {
+        "volume": 1.2,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "size": "XXXL",
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.4,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 50,
+        "duration": 0.4,
+        "clockwise": false,
+        "centralAngle": 1.5,
+        "startAngle": -0.25,
+        "startDist": 32,
+        "alongZ": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 96,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "anim": "FLAME_RING",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.6,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 2,
+              "y": 2
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.4,
+        "anim": "HEAT_WAVE_BIG",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "volume": 1.2,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
+        "type": "PLAY_SOUND"
+      }
+    ]
+  }
+}

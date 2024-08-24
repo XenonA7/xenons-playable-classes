@@ -34,5 +34,29 @@
       "img": "media/gui/severed-heads/triblader5.png",
       "name": "triblader5"
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "hexacast.hexacast1",
+      "img": "media/gui/severed-heads/hexacast1.png",
+      "name": "hexacast1"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "hexacast.hexacast2",
+      "img": "media/gui/severed-heads/hexacast2.png",
+      "name": "hexacast2"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "hexacast.hexacast3",
+      "img": "media/gui/severed-heads/hexacast3.png",
+      "name": "hexacast3"
+    }
   }
 ]

@@ -1,0 +1,248 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/ball-hexa.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXAGON_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 0,
+        "offY": 72,
+        "width": 16,
+        "height": 16
+      },
+      "renderMode": "lighter",
+      "time": 0.15,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "RHOMBUS_DOT",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "xCount": 5,
+        "offX": 16,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/sweep2.png",
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.04,
+      "repeat": false,
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL2",
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "sheet": {
+        "src": "media/entity/effects/sweep2.png",
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.04,
+      "repeat": false,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SMALL_BUBBLE",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 168,
+        "offY": 40,
+        "width": 8,
+        "height": 8
+      },
+      "time": 0.2,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STEAM2",
+      "sheet": {
+        "src": "media/entity/effects/bomb-explo.png",
+        "offX": 96,
+        "offY": 32,
+        "width": 32,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STAR",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 144,
+        "offY": 96,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STAR_FILLED",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 144,
+        "offY": 96,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "repeat": false,
+      "frames": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHINE_SPARKLE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 1,
+        "offX": 192,
+        "offY": 128,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.1,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  }
+]

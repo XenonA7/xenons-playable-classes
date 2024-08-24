@@ -1,7 +1,7 @@
 ig.ENV_PARTICLES.BLUE_TRIANGLES = {
   animSheet: {
     sheet: {
-      src: "media/env/particle-xtm.png",
+      src: "media/env/particle-xpc.png",
       width: 8,
       height: 8,
       offX: 0
@@ -49,7 +49,7 @@ ig.ENV_PARTICLES.BLUE_TRIANGLES = {
 ig.ENV_PARTICLES.RED_TRIANGLES = {
   animSheet: {
     sheet: {
-      src: "media/env/particle-xtm.png",
+      src: "media/env/particle-xpc.png",
       width: 8,
       height: 8,
       offX: 24

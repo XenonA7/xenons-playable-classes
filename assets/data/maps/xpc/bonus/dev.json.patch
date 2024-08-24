@@ -1,0 +1,189 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 740,
+      "y": 381,
+      "level": 1,
+      "settings": {
+        "name": "xpcSignBase",
+        "mapId": 130,
+        "propType": {
+          "sheet": "rhombus-interior",
+          "name": "groundProjector"
+        },
+        "propAnim": "",
+        "condAnims": []
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 740,
+      "y": 381,
+      "level": {
+        "level": 1,
+        "offset": 8
+      },
+      "settings": {
+        "name": "xpcSign",
+        "mapId": 131,
+        "propType": {
+          "sheet": "trading-autumn",
+          "name": "signClass"
+        },
+        "propAnim": "hexacast",
+        "permaEffect": {
+          "sheet": "drops",
+          "name": "blink"
+        },
+        "interact": {
+          "icon": "INFO",
+          "hoverText": {
+            "en_US": "\\c[5]<XPC>\\c[0] Character Change"
+          },
+          "event": [
+            {
+              "side": "RIGHT",
+              "order": 0,
+              "clearSide": false,
+              "type": "ADD_MSG_PERSON",
+              "person": {
+                "person": "main.lea",
+                "expression": "BLANK"
+              }
+            },
+            {
+              "type": "SHOW_BOARD_MSG",
+              "side": "RIGHT",
+              "text": {
+                "en_US": "Select a character.",
+                "de_DE": "",
+                "ja_JP": "",
+                "ko_KR": "",
+                "zh_CN": "",
+                "zh_TW": ""
+              }
+            },
+            {
+              "0": [
+                {
+                  "name": "Lea",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "1": [
+                {
+                  "name": "Hexacast1",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Straight\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "2": [
+                {
+                  "name": "Hexacast2",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Homing\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "3": [],
+              "type": "SHOW_CHOICE",
+              "person": {
+                "person": "main.lea",
+                "expression": "BLANK"
+              },
+              "options": [
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Lea"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Hexacast1"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Hexacast2"
+                  },
+                  "activeCondition": "true"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

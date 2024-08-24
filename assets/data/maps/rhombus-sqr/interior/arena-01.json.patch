@@ -11,7 +11,7 @@
       "y": 419,
       "level": 0,
       "settings": {
-        "name": "xtmSignBase",
+        "name": "xpcSignBase",
         "mapId": 264,
         "propType": {
           "sheet": "rhombus-interior",
@@ -46,7 +46,7 @@
         "interact": {
           "icon": "INFO",
           "hoverText": {
-            "en_US": "\\c[5]<XTM>\\c[0] Character Change"
+            "en_US": "\\c[5]<XPC>\\c[0] Character Change"
           },
           "event": [
             {
@@ -86,9 +86,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Lea\\c[0]\n\\!Class:\\. \\c[1]Spheromancer\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -111,9 +111,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Lea\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -136,9 +136,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Schneider\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Schneider\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -161,9 +161,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Luke\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Luke\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -186,9 +186,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Triblader2\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader2\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -211,9 +211,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Triblader3\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. None"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader3\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -236,9 +236,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Triblader4\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\.\n\\c[2]+ Melee speed\\c[0]\n\\.\\c[2]+ Dash speed\\c[0]\n\\.\\c[1]- Standard melee damage\\c[0]"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader4\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n\\c[2]Faster melee speed\\c[0]\n\\c[2]Longer dash distance\\c[0]\n\\c[1]Lower standard melee damage\\c[0]"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -261,9 +261,9 @@
                 },
                 {
                   "text": {
-                    "en_US": "Character:\\. \\c[3]Triblader5\\c[0]\n\\!Class:\\. \\c[2]Triblader\\c[0]\n\\!Special attributes:\\. \\c[2]Steerable dash\\c[0]"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader5\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n\\c[2]* Steerable dash\\c[0]"
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -271,7 +271,7 @@
                   "text": {
                     "en_US": "Use directional inputs to precisely and rapidly change directions while dashing,\\. unlike other characters which only dash in straight lines.\\! If aiming,\\. dash will follow the crosshair.\\! Move the crosshair while aim-dashing for precise pathing."
                   },
-                  "center": true,
+                  "center": false,
                   "autoContinue": false,
                   "type": "SHOW_BOARD_MSG"
                 },
@@ -347,7 +347,187 @@
             }
           ]
         },
-        "name": "xtmSign"
+        "name": "xpcSign"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 1227,
+      "y": 459,
+      "level": 0,
+      "settings": {
+        "name": "xpcSignBase",
+        "mapId": 267,
+        "propType": {
+          "sheet": "rhombus-interior",
+          "name": "groundProjector"
+        },
+        "propAnim": "",
+        "condAnims": []
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 1227,
+      "y": 467,
+      "level": {
+        "level": 0,
+        "offset": 12
+      },
+      "settings": {
+        "mapId": 268,
+        "propType": {
+          "sheet": "trading-autumn",
+          "name": "signClass"
+        },
+        "propAnim": "hexacast",
+        "permaEffect": {
+          "sheet": "drops",
+          "name": "blink"
+        },
+        "interact": {
+          "icon": "INFO",
+          "hoverText": {
+            "en_US": "\\c[5]<XPC>\\c[0] Character Change"
+          },
+          "event": [
+            {
+              "side": "RIGHT",
+              "order": 0,
+              "clearSide": false,
+              "type": "ADD_MSG_PERSON",
+              "person": {
+                "person": "main.lea",
+                "expression": "BLANK"
+              }
+            },
+            {
+              "type": "SHOW_BOARD_MSG",
+              "side": "RIGHT",
+              "text": {
+                "en_US": "Select a character.",
+                "de_DE": "",
+                "ja_JP": "",
+                "ko_KR": "",
+                "zh_CN": "",
+                "zh_TW": ""
+              }
+            },
+            {
+              "0": [
+                {
+                  "name": "Lea",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "1": [
+                {
+                  "name": "Hexacast1",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Straight\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "2": [
+                {
+                  "name": "Hexacast2",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Homing\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "3": [],
+              "type": "SHOW_CHOICE",
+              "person": {
+                "person": "main.lea",
+                "expression": "BLANK"
+              },
+              "options": [
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Lea"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Hexacast1"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Hexacast2"
+                  },
+                  "activeCondition": "true"
+                }
+              ]
+            }
+          ]
+        },
+        "name": "xpcSign"
       }
     }
   },

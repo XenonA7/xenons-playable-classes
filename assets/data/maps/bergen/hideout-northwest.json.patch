@@ -1,0 +1,75 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "(activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')) && activeMods.find(e => e.name === 'lqm-joern-mod') && activeMods.find(e => e.name === 'Qine')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 380,
+          "y": 436,
+          "level": 1,
+          "settings": {
+            "mapId": 124,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "xpc.bonus.ultimate-pvp",
+            "marker": "entrance",
+            "name": "ultimate-pvp",
+            "teleportLabel": {
+              "en_US": "To: Ultimate PVP"
+            },
+            "longTelCond": "false",
+            "blockEventCondition": "",
+            "spawnCondition": "!tmp.blockExit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "(!activeMods.find(e => e.name === 'arcane-labs') && !activeMods.find(e => e.name === 'arcane-lab')) || !activeMods.find(e => e.name === 'lqm-joern-mod') || !activeMods.find(e => e.name === 'Qine')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 380,
+          "y": 436,
+          "level": 1,
+          "settings": {
+            "mapId": 124,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "xpc.bonus.ultimate-pvp",
+            "marker": "entrance",
+            "name": "ultimate-pvp",
+            "teleportLabel": {
+              "en_US": "To: Ultimate PVP"
+            },
+            "longTelCond": "false",
+            "blockEventCondition": "",
+            "spawnCondition": "!tmp.blockExit",
+            "blockEvent": [
+              {
+                "titleText": {
+                  "en_US": "The following mods are required to enter:"
+                },
+                "text": {
+                  "en_US": "\\c[3]Arcane Lab\\c[0]\n\\c[3]Lubkuluk's Joern Mod\\c[0]\n\\c[3]Qine\\c[0]"
+                },
+                "type": "SHOW_CENTER_MSG"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

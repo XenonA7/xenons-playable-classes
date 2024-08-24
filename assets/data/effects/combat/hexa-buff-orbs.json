@@ -1,0 +1,345 @@
+{
+  "DOCTYPE": "EFFECT",
+  "ANIMS": {
+    "SUB": [
+      {
+        "name": "CIRCLE_NEUTRAL_GUI",
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.066,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "CIRCLE_HEAT_GUI",
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 0,
+          "offY": 48,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.066,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "CIRCLE_COLD_GUI",
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 0,
+          "offY": 96,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.066,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "CIRCLE_SHOCK_GUI",
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 0,
+          "offY": 144,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.066,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "CIRCLE_WAVE_GUI",
+        "sheet": {
+          "src": "media/entity/effects/lighter-particle.png",
+          "offX": 0,
+          "offY": 192,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 0.066,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "HEAL_ORB",
+        "shapeType": "Y_FLAT",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/buff-orbs.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 16,
+          "height": 16
+        },
+        "guiSprites": true,
+        "renderMode": "source-over",
+        "time": 0.5,
+        "frames": [
+          3
+        ]
+      },
+      {
+        "name": "WAVE_ORB",
+        "shapeType": "Y_FLAT",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/buff-orbs.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 16,
+          "height": 16
+        },
+        "guiSprites": true,
+        "renderMode": "source-over",
+        "time": 0.5,
+        "frames": [
+          7
+        ]
+      }
+    ]
+  },
+  "EFFECTS": {
+    "healOrbFly": [
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 2,
+              "y": 2
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "CIRCLE_WAVE_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "pAlpha": {
+          "init": 1
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "HEAL_ORB",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.75,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "CIRCLE_WAVE_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.033,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "waveOrbFly": [
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 2,
+              "y": 2
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "CIRCLE_WAVE_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "pAlpha": {
+          "init": 1
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": -1,
+        "cancelable": true,
+        "anim": "WAVE_ORB",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.75,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.4,
+        "anim": "CIRCLE_WAVE_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.033,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ]
+  }
+}

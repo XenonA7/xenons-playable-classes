@@ -1,7 +1,11 @@
 [
   {
     "type": "INCLUDE",
-    "src": "mod:patches/data/effects/specials/neutral.json"
+    "src": "mod:patches/data/effects/specials/neutral-tri.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/neutral-hexa.json"
   },
   {
     "type": "ENTER",
@@ -20,7 +24,7 @@
         "y": 49
       },
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
         "offX": 0,
         "offY": 0,
         "width": 96,
@@ -30,6 +34,466 @@
       "renderMode": "lighter",
       "time": 1,
       "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+
+
+
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "NEUTRAL_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "NEUTRAL_BIG_HEXAGON_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "RHOMBUS_DOT",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "xCount": 5,
+        "offX": 16,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GOD_HEXAGON_NEUTRAL",
+      "pivot": {
+        "x": 48,
+        "y": 48
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SMALL_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 144,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEFAULT_SWEEP_NEUTRAL",
+      "sheet": {
+        "src": "media/entity/effects/sweep.png",
+        "width": 64,
+        "height": 48
+      },
+      "pivot": {
+        "x": 32,
+        "y": 34
+      },
+      "time": 0.03,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEFAULT_SWEEP_NEUTRAL_REV",
+      "sheet": {
+        "src": "media/entity/effects/sweep.png",
+        "width": 64,
+        "height": 48
+      },
+      "pivot": {
+        "x": 32,
+        "y": 34
+      },
+      "flipX": 1,
+      "time": 0.03,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TRIFORCE_NEUTRAL_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 177,
+        "width": 64,
+        "height": 54
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 1,
+      "flipX": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GLOW_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "width": 14,
+        "height": 14,
+        "offX": 112,
+        "offY": 96,
+        "xCount": null
+      },
+      "time": 0.5,
+      "repeat": false,
+      "guiSprites": false,
+      "frames": [
+        0
+      ],
+      "renderMode": "lighter"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GLOW_HEXAGON_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "width": 14,
+        "height": 14,
+        "offX": 112,
+        "offY": 96,
+        "xCount": null
+      },
+      "time": 0.5,
+      "repeat": false,
+      "guiSprites": true,
+      "frames": [
+        0
+      ],
+      "renderMode": "lighter"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_BALL",
+      "shapeType": "Z_FLAT",
+      "sheet": {
+        "src": "media/entity/effects/designer-magic.png",
+        "offX": 192,
+        "offY": 64,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "wallY": 1,
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_BALL_GUI",
+      "shapeType": "Z_FLAT",
+      "sheet": {
+        "src": "media/entity/effects/designer-magic.png",
+        "offX": 192,
+        "offY": 64,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "wallY": 1,
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_PUFF",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "width": 8,
+        "height": 8,
+        "offY": 112,
+        "offX": 96
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.05,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHINE_PRE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 96,
+        "offY": 256,
+        "width": 48,
+        "height": 57
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.016,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHINE_MAIN",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 96,
+        "offY": 192,
+        "width": 59,
+        "height": 62
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.033,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHINE_SPARKLE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 1,
+        "offX": 192,
+        "offY": 128,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.1,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUNGEON_ARROW",
+      "sheet": {
+        "src": "media/entity/objects/dungeon-ar.png",
+        "xCount": 1,
+        "offX": 64,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "faceRotate": true,
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_UP",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 24,
+        "height": 32,
+        "offY": 32
+      },
+      "pivot": {
+        "x": 10,
+        "y": 24
+      },
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_BIG_BACK",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
       "frames": [
         0
       ]

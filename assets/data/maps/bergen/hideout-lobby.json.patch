@@ -1,0 +1,103 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'arcane-labs') && !activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "Door",
+          "x": 896,
+          "y": 376,
+          "level": 1,
+          "settings": {
+            "name": "d1",
+            "doorType": "DEFAULT",
+            "dir": "WEST",
+            "transitionType": "REGULAR",
+            "mapId": 135,
+            "map": "bergen.hideout-east",
+            "marker": "d1",
+            "hideCondition": "",
+            "blockEventCondition": "true",
+            "variation": "",
+            "blockEvent": [
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "NAVIGATE_ESCAPE_ENTITY",
+                    "distance": 32,
+                    "entity": {
+                      "global": true,
+                      "name": "d1"
+                    }
+                  },
+                  {
+                    "type": "SET_FACE_TO_ENTITY",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "entity": {
+                      "global": true,
+                      "name": "d1"
+                    }
+                  },
+                  {
+                    "type": "WAIT",
+                    "time": 0.1
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true
+              },
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Arcane Lab\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'arcane-labs') || activeMods.find(e => e.name === 'arcane-lab')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "Door",
+          "x": 896,
+          "y": 376,
+          "level": 1,
+          "settings": {
+            "name": "d1",
+            "doorType": "DEFAULT",
+            "dir": "WEST",
+            "transitionType": "REGULAR",
+            "mapId": 135,
+            "map": "bergen.hideout-east",
+            "marker": "d1",
+            "hideCondition": "",
+            "variation": ""
+          }
+        }
+      }
+    ]
+  }
+]

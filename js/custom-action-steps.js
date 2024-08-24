@@ -1,4 +1,6 @@
-ig.module("game.feature.combat.xtm-combat-action-steps").requires("game.feature.combat.combat-action-steps").defines(function() {
+ig.module("game.feature.combat.xpc-combat-action-steps").requires("game.feature.combat.combat-action-steps").defines(function() {
+
+  //Triblader
 
   var r = Vec2.create(),
   t = {
@@ -114,5 +116,31 @@ ig.module("game.feature.combat.xtm-combat-action-steps").requires("game.feature.
       return true
     }
   });
+
+  //Hexacast
+
+  ig.ACTION_STEP.RESET_GUARD_COMBO = ig.ActionStepBase.extend({
+      init: function(a) {},
+      start: function(a) {
+          a = a.getCombatantRoot();
+          a.combo.guardedHits = 0;
+          a.combo.blockedDamage = 0;
+          a.combo.blockedFactor = 0;
+          a.combo.guardedEntity = null;
+      }
+  });
+
+/*
+  ig.ACTION_STEP.RESET_TARGET_GUARD_COMBO = ig.ActionStepBase.extend({
+      init: function(a) {},
+      start: function(a) {
+          a = a.getCombatantRoot();
+          (a.getTarget()).combo.guardedHits = 0;
+          (a.getTarget()).combo.blockedDamage = 0;
+          (a.getTarget()).combo.blockedFactor = 0;
+          (a.getTarget()).combo.guardedEntity = null;
+      }
+  });
+*/
 
 });

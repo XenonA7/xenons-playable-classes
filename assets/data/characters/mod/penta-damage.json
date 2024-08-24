@@ -1,0 +1,84 @@
+{
+  "name": {
+    "en_US": "Pentafist"
+  },
+  "animSheet": {
+    "DOCTYPE": "MULTI_DIR_ANIMATION",
+    "namedSheets": {
+      "move": {
+        "src": "media/entity/npc/penta-damage.png",
+        "width": 32,
+        "height": 40,
+        "xCount": 1
+      }
+    },
+    "shapeType": "Y_FLAT",
+    "offset": {
+      "x": 0,
+      "y": -2,
+      "z": 0
+    },
+    "SUB": [
+      {
+        "sheet": "move",
+        "dirs": 2,
+        "flipX": [
+          0,
+          1
+        ],
+        "tileOffsets": [
+          0,
+          0
+        ],
+        "SUB": [
+          {
+            "name": "idle",
+            "time": 1,
+            "repeat": false,
+            "frames": [
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "walkAnimSet": {
+    "normal": {
+      "idle": "idle",
+      "move": "idle"
+    }
+  },
+  "walkAnims": "normal",
+  "configs": {
+    "normal": {
+      "relativeVel": 0.5
+    }
+  },
+  "face": {
+    "src": "bunny.png",
+    "width": 160,
+    "height": 192,
+    "parts": [
+      {
+        "normal": {
+          "srcX": 0,
+          "srcY": 0,
+          "width": 160,
+          "height": 192,
+          "destX": 0,
+          "destY": 0
+        }
+      }
+    ],
+    "expressions": {
+      "DEFAULT": {
+        "faces": [
+          [
+            "normal"
+          ]
+        ]
+      }
+    }
+  }
+}

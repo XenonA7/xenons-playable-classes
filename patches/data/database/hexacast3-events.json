@@ -1,0 +1,240 @@
+{
+  "hexacasst3-dies": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1,
+            "activeCondition": "combat.active"
+          },
+          {
+            "0": " ",
+            "count": 3,
+            "weight": 1,
+            "activeCondition": "!combat.active"
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "Welp, I tried."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "I'm dead.\\. You can handle this, right?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_2": [
+          {
+            "message": {
+              "en_US": "Not again...\\. I'm out for now."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_0": [
+          {
+            "message": {
+              "en_US": "Umm...\\. What just happened?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_1": [
+          {
+            "message": {
+              "en_US": "Ack!\\. I should start using a hack client at this point."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_2": [
+          {
+            "message": {
+              "en_US": "I'm just really bad at this, aren't I?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "Hexacast3",
+      "eventType": "DIES",
+      "type": "PARTY_MEMBER_EVENT"
+    }
+  },
+  "hexacasst3-revived": {
+    "frequency": "REGULAR",
+    "repeat": "REPEAT",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "type": "SELECT_RANDOM",
+        "options": [
+          {
+            "0": " ",
+            "count": 2,
+            "weight": 1,
+            "activeCondition": "combat.active"
+          },
+          {
+            "0": " ",
+            "count": 2,
+            "weight": 1,
+            "activeCondition": "!combat.active"
+          }
+        ],
+        "0_0": [
+          {
+            "message": {
+              "en_US": "I'm back...\\. Although I am not sure I can be much help."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "0_1": [
+          {
+            "message": {
+              "en_US": "Oh boy, I am probably just going to die again."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_0": [
+          {
+            "message": {
+              "en_US": "That didn't go too well for me, as usual."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ],
+        "1_1": [
+          {
+            "message": {
+              "en_US": "I must resist the urge to mod my stats after that disaster of a fight."
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 1,
+    "type": {
+      "member": "Hexacast3",
+      "eventType": "REVIVED",
+      "type": "PARTY_MEMBER_EVENT"
+    }
+  },
+  "hexacast3-penguin-heat-end": {
+    "frequency": "REGULAR",
+    "repeat": "ONCE",
+    "condition": "party.alive.Hexacast3",
+    "eventType": "PARALLEL",
+    "runOnTrigger": [
+      1,
+      2
+    ],
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "call.runCount == 1",
+        "thenStep": [
+          {
+            "message": {
+              "en_US": "They charge up when they use the breath attack. Watch out for that!"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      },
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "call.runCount == 2",
+        "thenStep": [
+          {
+            "message": {
+              "en_US": "Ughh,\\. why did I have to make them throw three fireballs at once?"
+            },
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "hexacast.hexacast3",
+              "expression": "DEFAULT"
+            }
+          }
+        ]
+      }
+    ],
+    "loopCount": 2,
+    "type": {
+      "enemies": [
+        "penguin-heat"
+      ],
+      "killCount": 0,
+      "enemy": [],
+      "type": "COOLDOWN_START"
+    }
+  }
+}

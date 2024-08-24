@@ -1,0 +1,243 @@
+{
+  "level": 75,
+  "params": {
+    "hp": 4000,
+    "attack": 550,
+    "defense": 550,
+    "focus": 550
+  },
+  "credit": 0,
+  "exp": 0,
+  "maxSp": 8,
+  "enduranceScale": 1,
+  "healDropRate": 0,
+  "boss": false,
+  "bossOrder": 0,
+  "padding": {
+    "x": 4,
+    "y": 4
+  },
+  "material": "METAL",
+  "aiGroup": "",
+  "aiLearnType": "REGULAR",
+  "itemDrops": null,
+  "targetDetect": {
+    "onDistance": true,
+    "detectDistance": 1024
+  },
+  "hpBreaks": [],
+  "size": {
+    "x": 16,
+    "y": 16,
+    "z": 24
+  },
+  "anims": "enemies.spellcard-neutral",
+  "defaultState": "INIT",
+  "walkConfigs": {
+    "normal": {
+      "idle": "default"
+    }
+  },
+  "_wm": {
+    "attributes": {
+      "behavior": {
+        "_type": "String",
+        "_info": "Main behavior",
+        "_select": [
+          "STANDARD"
+        ]
+      }
+    }
+  },
+  "walkAnims": "normal",
+  "accelSpeed": 0.5,
+  "groundConnect": "FIXED",
+  "airFriction": 0.8,
+  "weight": -1,
+  "maxVel": 120,
+  "collType": "IGNORE",
+  "zGravityFactor": 0,
+  "shadow": 24,
+  "hitStable": "BREAK",
+  "hitIgnore": false,
+  "aggression": "PEACEFUL",
+  "annotate": {
+    "active": "NONE",
+    "passive": "NONE",
+    "weapon": "ANY",
+    "element": "ANY",
+    "extra": []
+  },
+  "DOCTYPE": "ENEMY",
+  "trackers": {
+    "regen": {
+      "target": 3,
+      "initRandom": 0,
+      "resetRandom": 0,
+      "noStateReset": false,
+      "noAssist": false,
+      "type": "TIME"
+    }
+  },
+  "states": {
+    "INIT": {
+      "faceToTarget": false,
+      "choices": [
+        {
+          "req": [
+            {
+              "type": "!VAR_CONDITION",
+              "condition": {
+                "actorAttrib": "init-done"
+              }
+            }
+          ],
+          "action": "InitAction",
+          "postSwitchState": "IDLE"
+        }
+      ]
+    },
+    "IDLE": {
+      "choices": [
+        {
+          "action": "Idle"
+        }
+      ]
+    }
+  },
+  "proxies": {
+
+  },
+  "actions": {
+    "Idle": [
+      {
+        "time": 10,
+        "type": "WAIT"
+      }
+    ],
+    "InitAction": [
+      {
+        "value": 0.5,
+        "type": "SET_Z_GRAVITY_FACTOR"
+      },
+      {
+        "value": 12,
+        "type": "SET_FLOAT_HEIGHT"
+      },
+      {
+        "duration": -1,
+        "align": "CENTER",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.neutral",
+          "name": "accelerationMineAura"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "withElse": false,
+        "type": "IF",
+        "condition": "entity.attrib.behavior == \"STANDARD\"",
+        "thenStep": [
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "rotating"
+          },
+          {
+            "shiftOnCollision": false,
+            "type": "SET_SIZE",
+            "size": {
+              "x": 16,
+              "y": 16,
+              "z": 24
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "guard",
+              "name": "neutral_full"
+            },
+            "offset": {
+              "x": 0,
+              "y": 4,
+              "z": 0
+            }
+          },
+          {
+            "name": "shieldMain",
+            "actionDetached": false,
+            "perfectGuardTime": 10,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "baseFactor": 0.5,
+                "neutralize": false,
+                "hitResist": "MASSIVE",
+                "strength": "BLOCK_ALL",
+                "duration": 10,
+                "range": 72,
+                "back": false,
+                "noShieldDamage": true
+              }
+            },
+            "type": "ADD_SHIELD"
+          },
+          {
+            "time": 10,
+            "type": "WAIT"
+          },
+          {
+            "type": "REDUCE_HP",
+            "basedOn": "MAX_HP",
+            "factor": 1
+          }
+        ]
+      },
+      {
+        "time": 0.8,
+        "type": "WAIT"
+      },
+      {
+        "type": "SET_ATTRIB_BOOL",
+        "name": "init-done",
+        "value": true
+      }
+    ]
+  },
+  "reactions": {},
+  "meta": {
+    "species": {
+      "en_US": "Spellcard"
+    },
+    "category": "ABSTRACT",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]Hexacast\\c[0] spellcard used in combat arts."
+        },
+        "condition": ""
+      }
+    ]
+  }
+}

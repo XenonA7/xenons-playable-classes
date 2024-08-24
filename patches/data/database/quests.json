@@ -1,0 +1,219 @@
+{
+  "xpc-heat-penguins": {
+    "hubSettings": {
+      "character": "hexacast.hexacast3",
+      "location": {
+        "en_US": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "de_DE": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "zh_CN": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "zh_TW": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "ja_JP": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "ko_KR": "What monstrosities have I created?! Please help, I'm in the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+        "langUid": 13050
+      }
+    },
+    "name": {
+      "en_US": "Fire Breathing Penguins",
+      "de_DE": "Fire Breathing Penguins",
+      "zh_CN": "Fire Breathing Penguins",
+      "zh_TW": "Fire Breathing Penguins",
+      "ja_JP": "Fire Breathing Penguins",
+      "ko_KR": "Fire Breathing Penguins",
+      "langUid": 188
+    },
+    "person": {
+      "en_US": "Hexacast3",
+      "de_DE": "Hexacast3",
+      "zh_CN": "Hexacast3",
+      "zh_TW": "Hexacast3",
+      "ja_JP": "Hexacast3",
+      "ko_KR": "Hexacast3",
+      "langUid": 189
+    },
+    "level": 17,
+    "order": 101,
+    "description": {
+      "en_US": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "de_DE": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "zh_CN": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "zh_TW": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "ja_JP": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "ko_KR": "A rookie modder has created some deadly penguins and has asked for help clearing them out. Help lead the player though the cave under the \\c[3]Abandoned House\\c[0] in \\c[3]Bergen Village\\c[0].",
+      "langUid": 191
+    },
+    "briefing": {
+      "en_US": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "de_DE": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "zh_CN": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "zh_TW": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "ja_JP": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "ko_KR": "The penguins have been dealt with and the player led you to a hidden \\c[3]hideout for modders\\c[0]. There are certainly a lot of exciting possibilities within those walls.",
+      "langUid": 192
+    },
+    "hideRewards": false,
+    "tasks": [
+      {
+        "task": {
+          "en_US": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "de_DE": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "zh_CN": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "zh_TW": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "ja_JP": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "ko_KR": "Clear out the modded \\c[3]\\v[combat.name.penguin-heat]s\\c[0] from the cave beneath \\c[3]Bergen Village\\c[0].",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "label": "task1",
+            "type": "CONDITION"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "de_DE": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "zh_CN": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "zh_TW": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "ja_JP": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "ko_KR": "Learn about the \\c[3]Modding community\\c[0] located north of the cave.",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "label": "task2",
+            "type": "CONDITION"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "exp": {
+        "exp": 50,
+        "bonus": 0
+      },
+      "money": 200
+    },
+    "area": "bergen"
+  },
+  "xpc-triblader-league": {
+    "elite": true,
+    "hubSettings": {
+      "character": "triblader.triblader2",
+      "condition": "plot.line >= 48000",
+      "location": {
+        "en_US": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "de_DE": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "zh_CN": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "zh_TW": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "ja_JP": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "ko_KR": "Triblader players seeking pvp duels! \\c[3]- Open PVP Fields\\c[0]",
+        "langUid": 13050
+      }
+    },
+    "name": {
+      "en_US": "The Triblader League",
+      "de_DE": "The Triblader League",
+      "zh_CN": "The Triblader League",
+      "zh_TW": "The Triblader League",
+      "ja_JP": "The Triblader League",
+      "ko_KR": "The Triblader League",
+      "langUid": 188
+    },
+    "person": {
+      "en_US": "Duel Challenger",
+      "de_DE": "Duel Challenger",
+      "zh_CN": "Duel Challenger",
+      "zh_TW": "Duel Challenger",
+      "ja_JP": "Duel Challenger",
+      "ko_KR": "Duel Challenger",
+      "langUid": 189
+    },
+    "level": 75,
+    "order": 200,
+    "description": {
+      "en_US": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "de_DE": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "zh_CN": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "zh_TW": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "ja_JP": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "ko_KR": "Triblader players want to duel in the \\c[3]Rhombus Arena\\c[0]! Fight through the \\c[3]Triblader League\\c[0] cup to defeat them all!",
+      "langUid": 191
+    },
+    "briefing": {
+      "en_US": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "de_DE": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "zh_CN": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "zh_TW": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "ja_JP": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "ko_KR": "You successfully defeated the Triblader players from the \\c[3]Rhombus Arena\\c[0]!",
+      "langUid": 192
+    },
+    "hideRewards": false,
+    "tasks": [
+      {
+        "task": {
+          "en_US": "Defeat the first challenger.",
+          "de_DE": "Defeat the first challenger.",
+          "zh_CN": "Defeat the first challenger.",
+          "zh_TW": "Defeat the first challenger.",
+          "ja_JP": "Defeat the first challenger.",
+          "ko_KR": "Defeat the first challenger.",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "label": "task1",
+            "type": "CONDITION"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "de_DE": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "zh_CN": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "zh_TW": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "ja_JP": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "ko_KR": "Defeat the \\c[3]Blade Rink\\c[0] duo.",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "label": "task2",
+            "type": "CONDITION"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "de_DE": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "zh_CN": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "zh_TW": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "ja_JP": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "ko_KR": "Defeat the \\c[3]Triangle Strategy\\c[0] team.",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "label": "task3",
+            "type": "CONDITION"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "exp": {
+        "exp": 150,
+        "bonus": 0
+      },
+      "cp": {
+        "amount": 1,
+        "element": "NEUTRAL"
+      },
+      "money": 50000
+    },
+    "area": "rhombus-sqr"
+  }
+}

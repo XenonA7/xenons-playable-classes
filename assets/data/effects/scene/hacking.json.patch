@@ -1,0 +1,39 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/scene/hacking.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "RHOMBUS_DOT_RED",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "xCount": 5,
+        "offX": 16,
+        "offY": 120,
+        "width": 7,
+        "height": 7
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/ball-cold-hexa.json"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "ANIMS",
+      "SUB"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "COLD_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 192,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXAGON_COLD",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 0,
+        "offY": 72,
+        "width": 16,
+        "height": 16
+      },
+      "renderMode": "lighter",
+      "time": 0.15,
+      "repeat": false,
+      "frames": [
+        2
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SNOWFLAKE1",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 224,
+        "offY": 32,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SNOW_BURST",
+      "sheet": {
+        "src": "media/entity/effects/hit2.png",
+        "offX": 0,
+        "offY": 80,
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.06,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ICE_SHARD3",
+      "sheet": {
+        "src": "media/entity/effects/icicles.png",
+        "offX": 144,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "frames": [
+        2
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ICE_SHARD6",
+      "sheet": {
+        "src": "media/entity/effects/icicles.png",
+        "offX": 144,
+        "offY": 0,
+        "width": 16,
+        "height": 16
+      },
+      "frames": [
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_COLD",
+      "pivot": {
+        "x": 40,
+        "y": 32
+      },
+      "sheet": {
+        "src": "media/entity/effects/cold.png",
+        "xCount": 5,
+        "offX": 0,
+        "offY": 32,
+        "width": 64,
+        "height": 48
+      },
+      "guiSprites": true,
+      "time": 0.03,
+      "repeat": false,
+      "flipX": false,
+      "flipY": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_COLD_INV",
+      "pivot": {
+        "x": 24,
+        "y": 32
+      },
+      "sheet": {
+        "src": "media/entity/effects/cold.png",
+        "xCount": 5,
+        "offX": 0,
+        "offY": 32,
+        "width": 64,
+        "height": 48
+      },
+      "guiSprites": true,
+      "time": 0.03,
+      "repeat": false,
+      "flipX": true,
+      "flipY": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9
+      ]
+    }
+  }
+]

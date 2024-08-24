@@ -11,14 +11,14 @@
       "y": 1093,
       "level": 1,
       "settings": {
-        "name": "XTM_LukeWalkHome",
+        "name": "XPC_LukeWalkHome",
         "eventType": "INTERRUPTABLE",
         "endCondition": "false",
         "event": [
           {
             "entity": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "action": [
               {
@@ -66,7 +66,7 @@
           {
             "entity": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "action": [
               {
@@ -89,14 +89,14 @@
           },
           {
             "type": "CHANGE_VAR_BOOL",
-            "varName": "tmp.lukeXTMThere",
+            "varName": "tmp.lukeXPCThere",
             "changeType": "set",
             "value": false
           }
         ],
         "triggerType": "ONCE",
         "mapId": 1480,
-        "startCondition": "tmp.lukeXTMWalk"
+        "startCondition": "tmp.lukeXPCWalk"
       }
     }
   },
@@ -108,7 +108,7 @@
       "y": 1066,
       "level": 1,
       "settings": {
-        "name": "XTM_SchneiderDuelScene",
+        "name": "XPC_SchneiderDuelScene",
         "eventType": "CUTSCENE",
         "endCondition": "plot.line >= 45700",
         "event": [
@@ -125,7 +125,7 @@
               "player": true
             },
             "effect": {
-              "sheet": "combat.tribladerXTM",
+              "sheet": "combat.tribladerXPC",
               "name": "vanishInstant"
             },
             "offset": {
@@ -138,13 +138,13 @@
           },
           {
             "type": "CHANGE_VAR_BOOL",
-            "varName": "tmp.schneiderXTMThere",
+            "varName": "tmp.schneiderXPCThere",
             "changeType": "set",
             "value": true
           },
           {
             "type": "CHANGE_VAR_BOOL",
-            "varName": "tmp.lukeXTMThere",
+            "varName": "tmp.lukeXPCThere",
             "changeType": "set",
             "value": true
           },
@@ -158,11 +158,11 @@
           {
             "entity1": {
               "global": true,
-              "name": "schneiderXTM"
+              "name": "schneiderXPC"
             },
             "entity2": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "zoom": 1,
             "type": "SET_CAMERA_BETWEEN",
@@ -385,7 +385,7 @@
           {
             "entity1": {
               "global": true,
-              "name": "schneiderXTM"
+              "name": "schneiderXPC"
             },
             "entity2": {
               "player": true
@@ -404,7 +404,7 @@
           {
             "entity": {
               "global": true,
-              "name": "schneiderXTM"
+              "name": "schneiderXPC"
             },
             "action": [
               {
@@ -428,7 +428,7 @@
           {
             "entity": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "action": [
               {
@@ -753,7 +753,7 @@
                 "type": "SET_FACE_TO_ENTITY",
                 "entity": {
                   "global": true,
-                  "name": "schneiderXTM"
+                  "name": "schneiderXPC"
                 },
                 "rotate": true,
                 "rotateSpeed": 3
@@ -768,14 +768,14 @@
           {
             "entity": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "action": [
               {
                 "type": "SET_FACE_TO_ENTITY",
                 "entity": {
                   "global": true,
-                  "name": "schneiderXTM"
+                  "name": "schneiderXPC"
                 },
                 "rotate": true,
                 "rotateSpeed": 3
@@ -797,7 +797,7 @@
             "type": "SET_CAMERA_TARGET",
             "entity": {
               "global": true,
-              "name": "schneiderXTM"
+              "name": "schneiderXPC"
             }
           },
           {
@@ -835,7 +835,7 @@
           {
             "entity": {
               "global": true,
-              "name": "schneiderXTM"
+              "name": "schneiderXPC"
             },
             "action": [
               {
@@ -880,7 +880,7 @@
               },
               {
                 "type": "CHANGE_VAR_BOOL",
-                "varName": "tmp.schneiderXTMThere",
+                "varName": "tmp.schneiderXPCThere",
                 "changeType": "set",
                 "value": false
               }
@@ -895,7 +895,7 @@
           {
             "entity1": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "entity2": {
               "player": true
@@ -915,7 +915,7 @@
                 "type": "SET_FACE_TO_ENTITY",
                 "entity": {
                   "global": true,
-                  "name": "lukeXTM"
+                  "name": "lukeXPC"
                 },
                 "rotate": true,
                 "rotateSpeed": 3
@@ -935,7 +935,7 @@
           {
             "entity": {
               "global": true,
-              "name": "lukeXTM"
+              "name": "lukeXPC"
             },
             "action": [
               {
@@ -1075,7 +1075,7 @@
           },
           {
             "type": "CHANGE_VAR_BOOL",
-            "varName": "tmp.lukeXTMWalk",
+            "varName": "tmp.lukeXPCWalk",
             "changeType": "set",
             "value": true
           },
@@ -1088,7 +1088,7 @@
           },
           {
             "type": "CHANGE_VAR_BOOL",
-            "varName": "plot.xtm.SchneiderArenaUnlock",
+            "varName": "plot.xpc.SchneiderArenaUnlock",
             "changeType": "set",
             "value": true
           },
@@ -1147,7 +1147,7 @@
       "y": 1008,
       "level": 1,
       "settings": {
-        "name": "lukeXTM",
+        "name": "lukeXPC",
         "characterName": "main.luke",
         "mapId": 1479,
         "npcStates": [
@@ -1156,7 +1156,7 @@
             "face": "SOUTH_WEST",
             "action": [],
             "hidden": false,
-            "condition": "tmp.lukeXTMThere",
+            "condition": "tmp.lukeXPCThere",
             "config": "normal",
             "event": []
           }
@@ -1172,7 +1172,7 @@
       "y": 1036,
       "level": 1,
       "settings": {
-        "name": "schneiderXTM",
+        "name": "schneiderXPC",
         "characterName": "main.schneider",
         "mapId": 1478,
         "npcStates": [
@@ -1181,7 +1181,7 @@
             "face": "NORTH_EAST",
             "action": [],
             "hidden": false,
-            "condition": "tmp.schneiderXTMThere",
+            "condition": "tmp.schneiderXPCThere",
             "config": "normal",
             "event": []
           }

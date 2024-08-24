@@ -1,7 +1,15 @@
 [
   {
     "type": "INCLUDE",
-    "src": "mod:patches/data/effects/specials/shock.json"
+    "src": "mod:patches/data/effects/specials/shock-tri.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/shock-hexa.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/shock-custom.json"
   },
   {
     "type": "ENTER",
@@ -16,7 +24,7 @@
     "content": {
       "name": "SHOCKWAVE_B_SHOCK_GUI_TRIANGLE",
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle.png",
         "offX": 0,
         "offY": 0,
         "width": 96,
@@ -40,7 +48,7 @@
         "y": 49
       },
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
         "offX": 288,
         "offY": 0,
         "width": 96,
@@ -63,7 +71,7 @@
         "y": 49
       },
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
         "offX": 288,
         "offY": 0,
         "width": 96,
@@ -108,7 +116,7 @@
         "y": 47
       },
       "sheet": {
-        "src": "media/entity/effects/lighter-particle-big-triangle-sheet.png",
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
         "offX": 288,
         "offY": 0,
         "width": 96,
@@ -118,6 +126,604 @@
       "renderMode": "lighter",
       "time": 1,
       "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+
+
+
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_BIG_HEXAGON",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 288,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_BIG_HEXAGON_GUI",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/lighter-particle-big-hexagon.png",
+        "offX": 288,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEXA_CARD_SHOCK",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-cards.png",
+        "offX": 0,
+        "offY": 192,
+        "width": 24,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_DOT1_INV",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 96,
+        "offY": 96,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_BALL_TRAIL_SHOCK",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 144,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SMALL_SHOCK",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 144,
+        "offY": 144,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "GOD_HEXAGON_SHOCK",
+      "pivot": {
+        "x": 48,
+        "y": 48
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEFAULT_SWEEP_SHOCK",
+      "sheet": {
+        "src": "media/entity/effects/sweep.png",
+        "width": 64,
+        "height": 48,
+        "offX": 0,
+        "offY": 288
+      },
+      "pivot": {
+        "x": 32,
+        "y": 34
+      },
+      "time": 0.03,
+      "repeat": false,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEFAULT_SWEEP_SHOCK_REV",
+      "sheet": {
+        "src": "media/entity/effects/sweep.png",
+        "width": 64,
+        "height": 48,
+        "offX": 0,
+        "offY": 288
+      },
+      "pivot": {
+        "x": 32,
+        "y": 34
+      },
+      "flipX": 1,
+      "time": 0.03,
+      "repeat": false,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_LIGHTNING_TALL",
+      "shapeType": "Y_FLAT",
+      "pivot": {
+        "x": 6,
+        "y": 200
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 288,
+        "offY": 96,
+        "width": 32,
+        "height": 200
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.038,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CYBER_BOLT_SHOCK",
+      "pivot": {
+        "x": 8,
+        "y": 40
+      },
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 80,
+        "offY": 128,
+        "width": 16,
+        "height": 40
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_SWEEP2_FAST",
+      "pivot": {
+        "x": 16,
+        "y": 28
+      },
+      "sheet": {
+        "src": "media/entity/effects/shock.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 64,
+        "height": 56
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.020,
+      "repeat": false,
+      "flipX": true,
+      "tileOffset": 0,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SHOCK_SWEEP2_FASTER",
+      "pivot": {
+        "x": 16,
+        "y": 28
+      },
+      "sheet": {
+        "src": "media/entity/effects/shock.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 64,
+        "height": 56
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.010,
+      "repeat": false,
+      "flipX": true,
+      "tileOffset": 0,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STASIS_CHAIN_END_LONG",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 240,
+        "width": 9,
+        "height": 60
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.075,
+      "repeat": false,
+      "flipX": true,
+      "tileOffset": 0,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        -1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STASIS_CHAIN_END_SHORT",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 304,
+        "width": 9,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.075,
+      "repeat": false,
+      "flipX": true,
+      "tileOffset": 0,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        -1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STASIS_LOCK",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 80,
+        "offY": 176,
+        "width": 9,
+        "height": 13
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": false,
+      "flipX": false,
+      "tileOffset": 0,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STASIS_TIMER",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 90,
+        "offY": 176,
+        "width": 3,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": false,
+      "flipX": false,
+      "tileOffset": 0,
+      "frames": [
+        0
+      ],
+      "framesAngle": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "STASIS_TIMER_DARK",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 90,
+        "offY": 176,
+        "width": 3,
+        "height": 8
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": false,
+      "flipX": false,
+      "tileOffset": 0,
+      "frames": [
+        1
+      ],
+      "framesAngle": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_UP",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 24,
+        "height": 32,
+        "offY": 32
+      },
+      "pivot": {
+        "x": 10,
+        "y": 24
+      },
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_UP_BIG",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 32,
+        "height": 48,
+        "offY": 64
+      },
+      "pivot": {
+        "x": 8,
+        "y": 40
+      },
+      "time": 0.07,
+      "repeat": false,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CROSSHAIR",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 208,
+        "offY": 32,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.033,
+      "repeat": true,
+      "frames": [
+        0,
+        0
+      ],
+      "framesAlpha": [
+        1,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SOURCE_SHOCK_GUI",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 144,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CYBER_CIRCLE_SHOCK",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 480,
+        "offY": 288,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "repeat": false,
       "frames": [
         0
       ]

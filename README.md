@@ -4,7 +4,8 @@
 Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is not recommended for a first playthrough. **Manlea and Ninja skins should remain disabled if you are playing as a character other than Lea**. Mod only contains text for English.
 
 ### **Discord Server**
-https://discord.gg/CsfUk9vpFq
+![!](https://invidget.switchblade.xyz/CsfUk9vpFq)
+
 >**Note:** Additional addon mods created by me and others can be found on the Discord server.
 
 # **Mod Content:**

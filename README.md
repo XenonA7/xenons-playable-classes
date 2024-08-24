@@ -1,54 +1,26 @@
-# Xenon's Triblader Mod
-![Kindling Triad](https://user-images.githubusercontent.com/105614278/168501697-8dccf971-8564-4166-bbdb-d3c6ec79d870.gif)
+# Xenon's Playable Classes
+![hexacast-preview](https://github.com/user-attachments/assets/2a18ca80-29b9-4816-beb5-44a23220a34a) ![KindlingTriad lowRes](https://github.com/user-attachments/assets/bc8e3667-71ee-4597-9d3d-0b26fe83e089)
 
-Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. **Manlea and Ninja skins should remain disabled in-game for this mod to work**. Mod only contains text for English.
 
-### **Required Dependency Mods**
-1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
-   * Required for mods that add extra characters
-2. **cc-alybox:** https://github.com/lexisother/cc-alybox
-   * Library mod needed for some features
-3. **menu-ui-replacer:** https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
-   * Library mod needed for modded menu portraits
-4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
-   * Allows mods to load DLC assets properly
 
-### **Recommended Mods (optional - for enhanced party members)**
-1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
-   * Allows party members to use up to Lv.3 arts if you have mods that define higher-level arts for them. This will make your late-game Triblader party members use powerful attacks from XTM.  
-3. **cc-party-element-effects:** https://github.com/XenonA7/cc-party-element-effects  
-   * A small fix that makes party members show the "element swap" particle effect when they switch elements. This does not happen without the mod.
+
+
+Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is not recommended for a first playthrough. **Manlea and Ninja skins should remain disabled if you are playing as a character other than Lea**. Mod only contains text for English.
 
 ### **Discord Server**
 https://discord.gg/CsfUk9vpFq
+>**Note:** Additional addon mods created by me and others can be found on the Discord server.
 
-### **Special Thanks:**
-- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations
-- **Krypek:** Code for better handling of multi-opponent duels, implemented option to skip modded intro map
-- **Nax:** JS support
-- **Alyxia:** JS support, author of AlyBox
-- **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
-- **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
-- **Lubkuluk**: JS support, patch for Hexacast key panel functionality
-- **Orco Pixelado**: Triblader menu portrait artwork
+# **Mod Content:**
+1. Playable Triblader and Hexacast characters with all new combat arts (Hexacast is still WIP and currently 77% done)
+2. Generic triblader party member
+3. Updated Schneider/Luke movesets
+4. New area in Bergen Village containing various maps and content
+5. Triblader PVP arena cups available after beating Ku'lero Temple
+6. Highly customizable practice arenas for triblader PVP duels
+7. Support for ArcaneLab custom skills (more info below)
 
-## **Main Features:**
-1. Fully playable triblader class, with a full set of 92 new combat arts to discover
-2. Triblader PVP arena cups
-3. Party member and updated Schneider/Luke movesets
-4. Highly customizable practice arena for triblader PVP
-
-
-## **How to Play:**
-- With the mod installed, the entrance to the Rhombus Dungeon at the start of the game will take you to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
-  * Note that this can be disabled in the options menu.
-- The following can be accessed using any existing Lea save file, a new game is not required. It will work regardless of what character you are playing as.
-  * Unlock the **Triblader League** arena cup by talking to the Tribladers standing around the **Open PVP Fields** in Rhombus Square. Unlockable after beating the final dungeon in the DLC (Ku'lero Temple).
-  * Quick-swap menu added to the **Rhombus Arena Lobby** and **Rookie Harbor Info Hub** to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.
-  * The mod's dev room is located in **Lea's Attic** after completing the DLC dungeon (Ku'lero Temple). Here you will find miscellaneous pvp content with high levels of customization.
-  * New **party member** is available near the entrance to Bergen Trail. Their level and elements will be scaled properly regardless if you obtain them on a postgame save file or on a fresh playthrough.
-
-
+>**Note:** All mod content is optional and can be ignored in the main story. You can still play as Lea and just experience the modded content as her. The mod can also be loaded up on your existing save files if you want instant access to the duels and all the combat arts. It is also possible to fully complete the game as one of the modded characters. You can change characters at any time throughout the game as many times as you like. Skill tree, inventory, and progress will not be affected by changing characters.
 
 ## **Playable Characters:** 
 
@@ -59,117 +31,67 @@ https://discord.gg/CsfUk9vpFq
 ![triblader4](https://user-images.githubusercontent.com/105614278/168503633-d4a825cb-7f82-4b6b-a6fc-4e471e74ad31.gif)
 ![triblader5](https://user-images.githubusercontent.com/105614278/168504082-661b6b87-e9b3-42ef-8192-603a01f0f1ca.gif)
 ![triblader-lea](https://github.com/XenonA7/xenons-triblader-mod/assets/105614278/da027b4e-a16b-4eb3-8639-3c12ceaa92e7)
+![Hexacast1](https://github.com/user-attachments/assets/e083a9c0-6b50-4cba-8ab3-31bb22e5ef68)
+![Hexacast2](https://github.com/user-attachments/assets/9c7f862b-c225-4935-a4d6-e99ef1381f5a)
 
-## **Combat Arts:** 
+## **How to Play:**
+1. The entrance to the Rhombus Dungeon at the start of the game will have an option to divert to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
+2. Regardless of whether you played the modded intro, characters can always be freely changed at the following locations:
+   * Info Hub (Rookie Harbor)
+   * Arena Lobby (Rhombus Square)
+   * Mod Hideout (Bergen Village custom area)
+3. New **party member** is available near the entrance to Bergen Trail. Their level and elements will be scaled properly regardless if you obtain them on a postgame save file or on a fresh playthrough.
+4. Look for this new quest in Bergen Village to access the new area with bonus customizable pvp content
+   ![xpc-heat-penguins](https://github.com/user-attachments/assets/b0a69c2c-fe17-4313-9ea7-52b5b82a5850)
 
-![neutral](https://user-images.githubusercontent.com/105614278/168505340-e0a770c7-7a3b-4f6d-a173-bd1886e1e4cd.png)
-- Neutral Melee Lv.1a	**Wirbelschlitzer**
-- Neutral Melee Lv.1b	**Wild Gambit**
-- Neutral Melee Lv.2a	**Heavy Slash**
-- Neutral Melee Lv.2b	**Shrapnel Field**
-- Neutral Throw Lv.1a	**Spike Ball** (Created by Eisus)
-- Neutral Throw Lv.1b	**Homing Shards**
-- Neutral Throw Lv.2a	**Rude Buster**
-- Neutral Throw Lv.2b	**Throwing Knives**
-- Neutral Dash Lv.1a	**Azure Charge**
-- Neutral Dash Lv.1b	**First Cut**
-- Neutral Dash Lv.2a	**Gleaming Surge**
-- Neutral Dash Lv.2b	**Sky Shredder**
-- Neutral Guard Lv.1a	**Scattering Shards**
-- Neutral Guard Lv.1b	**Blade Aura**
-- Neutral Guard Lv.2a	**Deploy Shields**
-- Neutral Guard Lv.2b	**Laser Barrage**
-
-![heat](https://user-images.githubusercontent.com/105614278/168505403-98d388f9-8d53-4d25-8bd2-956ef6a33e4c.png)
-- Heat Melee Lv.1a	**Fire Whirl**
-- Heat Melee Lv.1b	**Flame Stab**
-- Heat Melee Lv.2a	**Solar Eruption**
-- Heat Melee Lv.2b	**Scorching Rays**
-- Heat Melee Lv.3a	**Calamity's Advent**
-- Heat Melee Lv.3b	**Sunsteel Strike**
-- Heat Throw Lv.1	**Molten Daggers**
-- Heat Throw Lv.2	**Daybreak**
-- Heat Throw Lv.3	N/A
-- Heat Dash Lv.1a	**Fire Saw**
-- Heat Dash Lv.1b	**Searing Twister**
-- Heat Dash Lv.2a	**Blazing Mirage**
-- Heat Dash Lv.2b	**Trailblazer**
-- Heat Dash Lv.3	**Flame Turbine**
-- Heat Guard Lv.1a	**Recoil Slash**
-- Heat Guard Lv.1b	**Burning Sacrifice**
-- Heat Guard Lv.2a	**Kindling Triad**
-- Heat Guard Lv.2b	**Lava Sweep**
-- Heat Guard Lv.3a 	**Vermillion Firestorm**
-- Heat Guard Lv.3b	**Blade of E'nel**
-
-![cold](https://user-images.githubusercontent.com/105614278/168505452-d0485b21-d090-482d-b493-d72090f12fa7.png)
-- Cold Melee Lv.1a	**Polar Geyser**
-- Cold Melee Lv.1b	**Snow Sweep**
-- Cold Melee Lv.2a	**Frost Rupture**
-- Cold Melee Lv.2b	**Snowstorm**
-- Cold Melee Lv.3a	**Frigid Hurricane**
-- Cold Melee Lv.3b	**Avalanche Assault**
-- Cold Throw Lv.1a	**Sleet Singularity**
-- Cold Throw Lv.1b	**Ice Flak**
-- Cold Throw Lv.2a	**Arctic Blast**
-- Cold Throw Lv.2b	**Hail Bomb**
-- Cold Throw Lv.3	**Frozen Rays**
-- Cold Dash Lv.1	**Chilling Thrust**
-- Cold Dash Lv.2	**Flash Freeze**
-- Cold Dash Lv.3	N/A
-- Cold Guard Lv.1a	**Icicle Slash**
-- Cold Guard Lv.1b	**Ice Brace**
-- Cold Guard Lv.2a	**Blizzard Slash**
-- Cold Guard Lv.2b	**Stasis Stance**
-- Cold Guard Lv.3a	**Icicle Tomb**
-- Cold Guard Lv.3b	**Tower of Tranquility**
-
-![shock](https://user-images.githubusercontent.com/105614278/168505459-99dbff01-3261-465e-a470-c381c7133198.png)
-- Shock Melee Lv.1a	**Beekeeper**
-- Shock Melee Lv.1b	**Shadow Spark**
-- Shock Melee Lv.2a	**Faraday Formation**
-- Shock Melee Lv.2b	**Lightning Rod**
-- Shock Melee Lv.3	**Triforce Slash**
-- Shock Throw Lv.1a	**Lightning Strike**
-- Shock Throw Lv.1b	**Targeted Surge**
-- Shock Throw Lv.2a	**Lightning Fork**
-- Shock Throw Lv.2b	**Magnet Prism**
-- Shock Throw Lv.3a	**Celestial Constellation**
-- Shock Throw Lv.3b	**Magnet Storm**
-- Shock Dash Lv.1a	**Amber Flurry**
-- Shock Dash Lv.1b	**Static Charge**
-- Shock Dash Lv.2a	**First Fractal**
-- Shock Dash Lv.2b	**Alternating Charge**
-- Shock Dash Lv.3a	**Prismatic Meltdown**
-- Shock Dash Lv.3b	**Thunder Wrath**
-- Shock Guard Lv.1	**Overclock**
-- Shock Guard Lv.2	**Glitch Time**
-- Shock Guard Lv.3	N/A
-
-![wave](https://user-images.githubusercontent.com/105614278/168505468-e7f002ac-f5e0-4633-b444-a19dcde8418c.png)
-- Wave Melee Lv.1	**Ki Spin**
-- Wave Melee Lv.2	**Vortex Thrust**
-- Wave Melee Lv.3	N/A
-- Wave Throw Lv.1a	**Wave Mortar**
-- Wave Throw Lv.1b	**Vitality Curse**
-- Wave Throw Lv.2a	**Arcing Fae**
-- Wave Throw Lv.2b	**Vitality Spring**
-- Wave Throw Lv.3a	**Ether Bomb**
-- Wave Throw Lv.3b	**So'najiz Phalanx**
-- Wave Dash Lv.1a	**Wave Motion Bomb**
-- Wave Dash Lv.1b	**Warp Decoy**
-- Wave Dash Lv.2a	**Soul Shatter**
-- Wave Dash Lv.2b	**Spectral Swordsman**
-- Wave Dash Lv.3a	**Spiritfall**
-- Wave Dash Lv.3b	**Spectral Legion**
-- Wave Guard Lv.1a	**Tri turret**
-- Wave Guard Lv.1b	**Pain Buckler**
-- Wave Guard Lv.2a	**Phase Jump**
-- Wave Guard Lv.2b	**Essence Enchantment**
-- Wave Guard Lv.3	**Verdant Infection**
+5. After finishing Ku'lero Temple, look for this quest in Rhombus Square to unlock an arena cup
+   ![xpc-triblader-league](https://github.com/user-attachments/assets/315ef6db-51e6-421a-9029-2c15338f0a98)
 
 
-# Install Instructions
+
+
+
+
+# **Special Thanks:**
+- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations
+- **Krypek:** JS support, code for better handling of multi-opponent duels
+- **Nax:** JS support
+- **Alyxia:** JS support, author of AlyBox
+- **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
+- **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
+- **Lubkuluk**: JS support, patch for Hexacast key panel functionality
+- **Orco Pixelado**: Triblader menu portrait artwork
+- **Laz**: Gameplay testing, created music used for XPC hideout area
+
+
+
+
+
+
+
+
+
+
+
+# Install Info
+### **Required Dependency Mods**
+1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
+   * Required for mods that add extra characters
+2. **cc-alybox:** https://github.com/lexisother/cc-alybox
+   * Library mod needed for some features
+3. **menu-ui-replacer:** https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+   * Library mod needed for modded menu portraits
+4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
+   * Allows mods to load DLC assets properly
+  
+### **Recommended Mods (optional - for enhanced party members)**
+1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
+   * Allows party members to use up to Lv.3 arts if you have mods that define higher-level arts for them. This will make your late-game Triblader party members use powerful attacks from XPC.  
+2. **cc-party-element-effects:** https://github.com/XenonA7/cc-party-element-effects  
+   * A small fix that makes party members show the "element swap" particle effect when they switch elements. This does not happen without the mod.
+
+
+
 1. Back up your save files **\AppData\Local\CrossCode**
 
 

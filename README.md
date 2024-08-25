@@ -48,6 +48,7 @@ Install instructions can be found at the bottom of this page. The DLC is require
 Custom Skills are a bonus feature that is only available if you have the **Arcane Lab** mod installed. Arcane Lab is optional, and custom skills won't be available within XPC if it is not installed. Custom skills allow characters to equip combat arts outside of the skill tree. This includes bonus combat arts, arts from other mods, and arts from other classes in XPC. It also allows you to change your default attacks to those of other classes.
 
 Custom Skills can be accessed in the east room of the new Bergen Village area, along with more info about how to use and equip them.
+
 ![custom-skills](https://github.com/user-attachments/assets/a0cfce97-4635-40b1-b3c8-de6033fb64d7)
 
 ### Recommended Arcane Lab version to use with XPC (optional):
@@ -107,21 +108,23 @@ https://github.com/2hh8899/ArcaneLab/tree/20c24d5a72e46d08a067f5a17486533b672c70
 - (Required) crosscode-extension-asset-preloader: https://github.com/elluminance/crosscode-extension-asset-preloader/releases
 
 2. Place extracted mod folders inside **\CrossCode\assets\mods**  
-![image](https://user-images.githubusercontent.com/105614278/179912844-b0ac6c4e-4a03-4a97-a3fc-22eb7d1a4bce.png)  
 
-Note that if you click on any of these installed mods, there should be a file called **package.json** or **ccmod.json** directly inside those folders. If not, CCLoader won't be able to find the mods.
+   ![image](https://github.com/user-attachments/assets/7c4bf606-5e2b-40fe-b3c9-685e13392a1b)
+
+>**Note:** Note that if you click on any of these installed mods, there should be a file called **package.json** or **ccmod.json** directly inside those folders. If not, CCLoader won't be able to find the mods.
 
 3. Launch the game. Go into the options menu and there will be a new tab with a hammer icon for mods (CCLoader adds this). It should look like this:  
-![image](https://user-images.githubusercontent.com/105614278/179913184-8603fbe7-9cf6-4437-9ef7-e89b4930cb5c.png)  
+   ![image](https://github.com/user-attachments/assets/3b3a0108-9bed-4c52-be08-23ecc9b44f82)
+
 
 If your mods don't appear here, make sure you don't have "folders inside folders". The mod folders need **package.json** or **ccmod.json** directly inside in order to be recognized. If your mods appear in-game, you are good to go.
 
 # How to Update to a New Version
 1. Delete your old folder entirely.  
-![image](https://user-images.githubusercontent.com/105614278/180620611-e05635f6-16c4-406f-9689-7bbbed2d4cd5.png)  
+![image](https://github.com/user-attachments/assets/b1ad2d8b-7e84-434d-847f-d5bf43bf7d5a)
 
-2. Install the new version where the old one used to be  
+2. Install the new version where the old one used to be.
 
 * You can't just override the old version because if a new version removes old files or renames certain files then overriding will mess it up.
 
-* All new versions of XTM are save-compatible with previous versions unless otherwise stated in the changelog.
+* All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.

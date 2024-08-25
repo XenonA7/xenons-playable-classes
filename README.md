@@ -114,9 +114,7 @@ Note that if you click on any of these installed mods, there should be a file ca
 3. Launch the game. Go into the options menu and there will be a new tab with a hammer icon for mods (CCLoader adds this). It should look like this:  
 ![image](https://user-images.githubusercontent.com/105614278/179913184-8603fbe7-9cf6-4437-9ef7-e89b4930cb5c.png)  
 
-If your mods don't appear here, make sure you don't have "folders inside folders". The mod folders need **package.json** or **ccmod.json** directly inside in order to be recognized.
-
-If your mods appear in-game, you are good to go. Note that XTM is compatible with ArcaneLab and Autumn's Genesis and other mods. There is an old list of other Crosscode mods located here: https://c2dl.info/cc/mods
+If your mods don't appear here, make sure you don't have "folders inside folders". The mod folders need **package.json** or **ccmod.json** directly inside in order to be recognized. If your mods appear in-game, you are good to go.
 
 # How to Update to a New Version
 1. Delete your old folder entirely.  

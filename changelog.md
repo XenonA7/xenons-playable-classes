@@ -1,3 +1,15 @@
+## 2.0.1 (08/25/2024)
+### New Content
+- Added a "Quest Debug" sign to the unused-content map in the Bergen hideout basement
+ * This can be used to fix the Flamepeng quest retroactively in save files where it was completed in the old XTM
+   mod and is now broken in XPC after updating and playing on the same save file.
+### Changes
+- Added a dialogue box to the character change sign in hideout-north
+- Added art-testing-sound-test map to files (unused in-game)
+### Fixes
+- Fixed xpc-lab props animation timing variation
+- Removed old XTM terminology from README.md
+
 ## 2.0.0 (08/23/2024)
 ### Important
 - Mod is now known as "Xenon's Playable Classes", also known as the "playable classes mod"

@@ -456,7 +456,8 @@
         ],
         "SUB": [
           {
-            "name": "test"
+            "name": "test",
+            "time": 0.5
           }
         ]
       }
@@ -513,7 +514,8 @@
         ],
         "SUB": [
           {
-            "name": "test"
+            "name": "test",
+            "time": 0.25
           }
         ]
       }

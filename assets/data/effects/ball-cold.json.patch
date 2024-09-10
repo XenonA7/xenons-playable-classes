@@ -99,6 +99,30 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
+      "name": "SNOW_BURST_SLOW",
+      "sheet": {
+        "src": "media/entity/effects/hit2.png",
+        "offX": 0,
+        "offY": 80,
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.08,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
       "name": "ICE_SHARD3",
       "sheet": {
         "src": "media/entity/effects/icicles.png",

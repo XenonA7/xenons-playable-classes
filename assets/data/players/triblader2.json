@@ -36858,6 +36858,20 @@
                 "type": "SET_WEIGHT"
               },
               {
+                "name": "techShield",
+                "actionDetached": true,
+                "type": "ADD_SHIELD",
+                "shield": {
+                  "type": "DIRECTIONAL",
+                  "settings": {
+                    "baseFactor": 0.25,
+                    "range": 1,
+                    "stableOverride": "MASSIVE",
+                    "duration": 2.0
+                  }
+                }
+              },
+              {
                 "volume": 1,
                 "speed": 1,
                 "variance": 0.1,
@@ -37285,6 +37299,10 @@
                 "time": 0.20,
                 "stopBeforeEdge": true,
                 "type": "MOVE_FORWARD"
+              },
+              {
+                "name": "techShield ",
+                "type": "REMOVE_SHIELD"
               },
               {
                 "time": 0.4,

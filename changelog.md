@@ -1,3 +1,19 @@
+## 2.1.0 (09/10/2024)
+### New Content
+- New Hexacast combat art: Icy Gust (Cold Dash Lv.1A)
+### Changes
+- Tweaked Hexacast character portraits
+- Added additional ground detailing to unused-content and enemy-testing maps
+- Reduced opacity of hailBullet2 trail
+- Deleted Shield Generator combat art
+### Fixes
+- Fixed typo and text description for custom skill sign in art-testing
+- Fixed crash in ultimate-pvp when talking to Triblader3 as Hexacast2
+- Fixed effect wavePullHex using WAVE_DOT1 instead of WAVE_DOT2 particles
+### Balance
+- Added a start delay to Cosmic Recursion
+- Kindling Triad now provides a temporary shield during the counter attack
+
 ## 2.0.1 (08/25/2024)
 ### New Content
 - Added a "Quest Debug" sign to the unused-content map in the Bergen hideout basement

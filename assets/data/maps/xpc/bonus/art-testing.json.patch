@@ -51,7 +51,7 @@
                   "thenStep": [
                     {
                       "text": {
-                        "en_US": "\\c[1]Note about custom skills:\\c[0]\n\\!Only \\c[3]Hexacast1\\c[0] and \\c[3]Hexacast2\\c[0] are crrently supported."
+                        "en_US": "\\c[1]Note about custom skills:\\c[0]\n\\!Only \\c[3]Lea\\c[0], \\c[3]Hexacast1\\c[0] and \\c[3]Hexacast2\\c[0] are currently supported."
                       },
                       "center": true,
                       "autoContinue": false,

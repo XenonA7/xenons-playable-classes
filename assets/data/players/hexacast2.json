@@ -35044,6 +35044,54 @@
         "maxSpeed": 400
       },
       "type": "GENERIC"
+    },
+    "icyGust": {
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "effects": "ball-cold",
+      "effectKeys": {
+        "wall": "ballWallKillIcyGust",
+        "air": "ballAirKillIcyGust",
+        "trail": "icyGustTrail"
+      },
+      "speed": 400,
+      "maxBounce": 0,
+      "timer": 0.4,
+      "trail": true,
+      "multiHit": true,
+      "light": "L",
+      "noLightGlow": true,
+      "type": "BALL",
+      "effect": "ar",
+      "maxBounds": 0,
+      "animation": {},
+      "attack": {
+        "type": "LIGHT",
+        "element": "COLD",
+        "damageFactor": 0.12,
+        "reverse": false,
+        "spFactor": 0,
+        "status": 1.45,
+        "stunSteps": [],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 0.15,
+          "pause": 5,
+          "fadeIn": 0.2,
+          "startWait": 0.3,
+          "fadeOutVary": 0.15
+        }
+      ],
+      "timeBoni": null
     }
   },
   "actions": {
@@ -42998,126 +43046,25 @@
       },
       "GUARD_SPECIAL2_A": {
         "name": {
-          "en_US": "Shield Generator"
+          "en_US": "\\c[1]PLACEHOLDER\\c[0]"
         },
         "description": {
-          "en_US": "Deploy a stationary shield that blocks projectiles and parries melee attacks."
+          "en_US": "Not yet implemented!"
         },
-        "dmgType": "MELEE",
-        "stunType": "INTERRUPT",
-        "status": false,
+        "dmgType": "MIXED",
+        "stunType": "LOCK",
+        "status": true,
         "steps": [
           {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": 0.1,
-              "action": -1,
-              "move": -1,
-              "reaim": -1
-            }
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "specialShoot",
-            "followUp": "specialLoop"
-          },
-          {
-            "value": 600,
-            "type": "SET_SPEED"
-          },
-          {
-            "time": 0.05,
-            "stopBeforeEdge": true,
-            "type": "MOVE_BACKWARD"
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "rotateFace": 8,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.cold",
-              "name": "lingeringColdThrow"
+            "text": {
+              "en_US": "Not Yet Implemented!"
             },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "enemyType": "shield-generator",
-            "noRumble": true,
-            "type": "KILL_ENEMIES"
-          },
-          {
-            "align": "BOTTOM",
-            "centralAngle": 0,
-            "angleVary": 0,
-            "startDist": 12,
-            "startDistCollide": "NONE",
-            "random": false,
-            "duration": 0,
-            "clockwise": false,
-            "flipLeftFace": 0,
-            "circularArea": false,
-            "uniformDir": 0,
-            "delay": 0,
-            "repeat": false,
-            "type": "SPAWN_ENEMIES",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 12
-            },
-            "count": 1,
-            "enemyInfo": {
-              "group": "",
-              "party": "PLAYER",
-              "face": "SOUTH",
-              "startEffect": {
-                "sheet": "specials.neutral",
-                "name": "shieldGeneratorAppear"
-              },
-              "targetOnSpawn": false,
-              "level": {
-                "varName": "player.level"
-              },
-              "type": "shield-generator",
-              "attribs": {
-                "behavior": "STANDARD"
-              }
-            }
-          },
-          {
-            "time": 0.4,
-            "type": "WAIT"
-          },
-          {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": 0,
-              "action": 0,
-              "move": 0,
-              "reaim": 0
-            }
-          },
-          {
-            "followUp": "idle",
-            "wait": true,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "mode": "NO_LINE",
+            "color": "RED",
+            "actionDetached": true,
+            "hideOutsideOfScreen": false,
+            "type": "SHOW_AR_MSG",
+            "time": 2
           }
         ]
       }
@@ -48769,25 +48716,227 @@
       },
       "DASH_SPECIAL1_A": {
         "name": {
-          "en_US": "\\c[1]PLACEHOLDER\\c[0]"
+          "en_US": "Icy Gust"
         },
         "description": {
-          "en_US": "Not yet implemented!"
+          "en_US": "Dash forward and expel an icy blast behind you."
         },
         "dmgType": "MIXED",
-        "stunType": "LOCK",
+        "stunType": "",
         "status": true,
         "steps": [
           {
-            "text": {
-              "en_US": "Not Yet Implemented!"
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.6,
+              "action": 0.5,
+              "move": 0.6,
+              "reaim": 0.6
+            }
+          },
+          {
+            "volume": 0.9,
+            "global": false,
+            "loop": false,
+            "type": "PLAY_SOUND",
+            "sound": "media/sound/battle/dash-3.ogg"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "runGrumpy"
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 300,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 2,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": 0.45,
+            "type": "SET_INVINCIBLE"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
             },
-            "mode": "NO_LINE",
-            "color": "RED",
-            "actionDetached": true,
-            "hideOutsideOfScreen": false,
-            "type": "SHOW_AR_MSG",
-            "time": 2
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.55,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.cold",
+              "name": "icyGustDashTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.55,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.cold",
+              "name": "icyGustDashTrail2"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.55,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 3,
+              "z": 6
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.08,
+            "startAngle": 0.46,
+            "startDist": 16,
+            "startDistCollide": "CLOSER",
+            "random": true,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "delay": 0,
+            "repeat": false,
+            "duration": 0.45,
+            "count": 24,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "icyGust",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 24,
+            "yScale": 0,
+            "zHeight": 0,
+            "centralAngle": 0,
+            "duration": 0.5,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MEDIUM",
+              "element": "COLD",
+              "damageFactor": 2,
+              "fly": "HEAVY",
+              "reverse": true,
+              "status": 1,
+              "stunSteps": [],
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.3,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "time": 0.2,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "brake",
+            "followUp": "preIdle"
           }
         ]
       },
@@ -55922,7 +56071,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -55933,6 +56082,51 @@
               "actorAttrib": "dashDir"
             },
             "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "sweepRevEndInstant"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "cosmicDashPre"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
             "followUp": "sweepEnd",

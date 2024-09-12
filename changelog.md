@@ -1,3 +1,16 @@
+## 2.2.0 (09/12/2024)
+### New Content
+- New Hexacast combat art: Reciprocal Gale (Cold Dash Lv.2A)
+- Added a xenodialogue to hideout-north
+### Changes
+- Icy Gust is now dash-cancelable before the art completes
+- Made Beam Blaster hitbox slightly more reliable
+- Ashen Inferno no longer stops player at cliff edge
+- Reduced light raduis of effect ashenInfernoSweep
+### Balance
+- Beam Blaster hitbox size slightly increased
+- Beam Blaster hitbox now hits 16 below vertically
+
 ## 2.1.0 (09/10/2024)
 ### New Content
 - New Hexacast combat art: Icy Gust (Cold Dash Lv.1A)

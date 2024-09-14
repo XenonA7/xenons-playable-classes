@@ -2,7 +2,7 @@
   "DOCTYPE": "MULTI_DIR_ANIMATION",
   "namedSheets": {
     "walk": {
-      "src": "media/entity/npc/triblader-lea.png ",
+      "src": "media/entity/npc/triblader-lea.png",
       "xCount": 11,
       "offX": 0,
       "offY": 0,

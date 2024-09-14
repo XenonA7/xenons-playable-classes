@@ -7,9 +7,9 @@
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "type": "NPC",
-      "x": 353,
-      "y": 913,
-      "level": 2,
+      "x": 1305,
+      "y": 1356,
+      "level": 1,
       "settings": {
         "name": "hex1",
         "characterName": "hexacast.hexacast2",
@@ -46,9 +46,9 @@
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "type": "NPC",
-      "x": 174,
-      "y": 968,
-      "level": 2,
+      "x": 1321,
+      "y": 1418,
+      "level": 1,
       "settings": {
         "name": "hex2",
         "characterName": "cross-worlds.pentafist-female-blue",
@@ -59,7 +59,7 @@
         "npcStates": [
           {
             "reactType": "FIXED_FACE",
-            "face": "EAST",
+            "face": "WEST",
             "action": [
               {
                 "type": "JUMP",
@@ -90,9 +90,9 @@
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
       "type": "XenoDialog",
-      "x": 361,
-      "y": 954,
-      "level": 2,
+      "x": 1350,
+      "y": 1376,
+      "level": 1,
       "settings": {
         "name": "hex-talk",
         "dialog": [
@@ -102,7 +102,7 @@
               "name": "hex2"
             },
             "text": {
-              "en_US": "I'm stuck! Why are you just sitting there?"
+              "en_US": "That rock is a farce! It's not real!"
             }
           },
           {
@@ -111,7 +111,25 @@
               "name": "hex1"
             },
             "text": {
-              "en_US": "I'm too tired from running around all these jumping puzzles."
+              "en_US": "You do realize that this is a game, right? None of it is real."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "But it's a glitch! You can walk and shoot right through it!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "I'm way too tired from running around all the jumping puzzles to care honestly."
             }
           },
           {
@@ -129,16 +147,7 @@
               "name": "hex2"
             },
             "text": {
-              "en_US": "I can't even get back, I just respawn on this rock when I hit the water."
-            }
-          },
-          {
-            "entity": {
-              "global": true,
-              "name": "hex1"
-            },
-            "text": {
-              "en_US": "You JADC'd yourself into that mess, you can JADC yourself back out."
+              "en_US": "But it totally ruins the immersion!"
             }
           },
           {
@@ -147,16 +156,7 @@
               "name": "hex2"
             },
             "text": {
-              "en_US": "But I didn't even do that! I just hopped down from above!"
-            }
-          },
-          {
-            "entity": {
-              "global": true,
-              "name": "hex1"
-            },
-            "text": {
-              "en_US": "Why not just quicktravel? The landmark is right there."
+              "en_US": "If this bug exists for the rock, what's to say I won't just fall through random parts of the ground?"
             }
           },
           {
@@ -165,7 +165,7 @@
               "name": "hex2"
             },
             "text": {
-              "en_US": "I don't have it discovered yet, I came from the cliff entrance."
+              "en_US": "Or what if random walls have this bug, and enemies jump out at me through it?"
             }
           },
           {
@@ -174,7 +174,16 @@
               "name": "hex1"
             },
             "text": {
-              "en_US": "Seems like poor map design."
+              "en_US": "..."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "You always worry too much..."
             }
           }
         ],

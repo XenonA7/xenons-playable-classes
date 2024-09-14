@@ -4950,7 +4950,7 @@
           "align": "CENTER",
           "radius": 96,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 32,
           "centralAngle": 0,
           "duration": 0.3,
           "expandRadius": 0,

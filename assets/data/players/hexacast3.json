@@ -43156,7 +43156,17 @@
                 "type": "FACE_TO_TARGET"
               },
               {
-                "time": 0.6,
+                "time": 0.4,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dash"
+              },
+              {
+                "time": 0.2,
                 "type": "WAIT"
               },
               {

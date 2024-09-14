@@ -1,0 +1,1305 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1063,
+      "y": 1492,
+      "level": 1,
+      "settings": {
+        "name": "hex1",
+        "displayName": {
+          "en_US": "HeartLychee"
+        },
+        "characterName": "hexacast.hexacast2",
+        "mapId": 884,
+        "npcStates": [
+          {
+            "reactType": "FIXED_POS",
+            "face": "NORTH",
+            "action": [
+              {
+                "type": "WAIT",
+                "time": 0.5
+              },
+              {
+                "jumpHeight": "S",
+                "wait": true,
+                "ignoreSounds": true,
+                "type": "JUMP"
+              },
+              {
+                "jumpHeight": "S",
+                "wait": true,
+                "ignoreSounds": true,
+                "type": "JUMP"
+              },
+              {
+                "type": "WAIT",
+                "time": 1
+              }
+            ],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "NPC",
+      "x": 1091,
+      "y": 1516,
+      "level": 1,
+      "settings": {
+        "name": "hex2",
+        "characterName": "cross-worlds.pentafist-female-blue",
+        "displayName": {
+          "en_US": "Alyxia"
+        },
+        "mapId": 885,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "ground",
+            "event": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 1043,
+      "y": 1521,
+      "level": 1,
+      "settings": {
+        "mapId": 886,
+        "name": "hexTalk",
+        "spawnCondition": "!tmp.hexTalk2",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "Are you done yet? We have quests to do!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "But look at all these options!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "You can customize your \\c[3]VRPs\\c[0]! I can't believe more people don't use this!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "It's just a silly cosmetic. I can't believe you are spending real money on this."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "I can't decide on what to pick for my charged shots."
+            },
+            "event": [
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 1
+              },
+              {
+                "person": {
+                  "person": "cross-worlds.pentafist-female-blue",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 0
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "RIGHT",
+                "order": 1
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Hey, you there!\\. Help me decide on these \\c[3]VRP cosmetics\\c[0]!"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "HAND_SELF_SURPRISED"
+                },
+                "message": {
+                  "en_US": "Hi?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Just let me know which one you like the best."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "person": {
+                  "person": "cross-worlds.pentafist-female-blue",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Y..\\! You bought them all?!?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "side": "ALL",
+                "type": "CLEAR_MSG"
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "SLOW",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "wait": false,
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                }
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "type": "SET_FACE_TO_ENTITY",
+                    "entity": {
+                      "player": true
+                    },
+                    "rotate": true,
+                    "rotateSpeed": 3
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": false,
+                "repeating": true,
+                "keepState": true
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "SET_SLIP_THROUGH",
+                    "value": true
+                  },
+                  {
+                    "type": "SET_RELATIVE_SPEED",
+                    "value": 0.4
+                  },
+                  {
+                    "type": "NAVIGATE_TO_POINT",
+                    "target": {
+                      "x": 1072,
+                      "y": 1556,
+                      "lvl": "1"
+                    }
+                  },
+                  {
+                    "type": "SET_FACE",
+                    "face": "NORTH",
+                    "rotate": true,
+                    "rotateSpeed": 3
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "keepState": true
+              },
+              {
+                "type": "WAIT",
+                "time": 0.2
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 1
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Here's what it looks like by default."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "side": "ALL",
+                "type": "CLEAR_MSG"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "type": "SWAP_ENTITY_WITH_ENEMY",
+                "enemyInfo": {
+                  "group": "",
+                  "party": "PLAYER",
+                  "face": "SOUTH",
+                  "type": "hexacast2-cutscenes",
+                  "level": 1,
+                  "attribs": {}
+                }
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "SET_FACE",
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": false,
+                "keepState": true
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  },
+                  {
+                    "time": 0.15,
+                    "turn": 0.02,
+                    "type": "ROTATE_FACE"
+                  },
+                  {
+                    "time": 0.3,
+                    "type": "WAIT"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowHex"
+              },
+              {
+                "time": 0.5,
+                "type": "WAIT"
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 1
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "I can also change it to be based on the other classes too!"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "side": "ALL",
+                "type": "CLEAR_MSG"
+              },
+              {
+                "pos": {
+                  "x": 1063,
+                  "y": 1400
+                },
+                "speed": "NORMAL",
+                "transition": "EASE_IN_OUT",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_POS"
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "SET_FACE",
+                    "face": "NORTH",
+                    "rotate": true,
+                    "rotateSpeed": 3
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": false,
+                "keepState": true
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "SOUTH_WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  },
+                  {
+                    "time": 0.3,
+                    "type": "WAIT"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowSph"
+              },
+              {
+                "time": 0.6,
+                "type": "WAIT"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "time": 0,
+                    "turn": 0.05,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowTri"
+              },
+              {
+                "time": 0.6,
+                "type": "WAIT"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "time": 0,
+                    "turn": 0.05,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowQua"
+              },
+              {
+                "time": 0.6,
+                "type": "WAIT"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "time": 0,
+                    "turn": 0.05,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowPen"
+              },
+              {
+                "time": 0.6,
+                "type": "WAIT"
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 1
+              },
+              {
+                "person": {
+                  "person": "cross-worlds.pentafist-female-blue",
+                  "expression": "DEFAULT"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "LEFT",
+                "order": 0
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "SURPRISED_TOWARD"
+                },
+                "type": "ADD_MSG_PERSON",
+                "side": "RIGHT",
+                "order": 0
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "global": true,
+                  "name": "hex2"
+                }
+              },
+              {
+                "person": {
+                  "person": "cross-worlds.pentafist-female-blue",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "...Seriously?\\. Those are just the basic ones everybody has."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                }
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "But isn't it cool?\\. If I enable them all at once, it randomly cycles between them!"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "SOUTH",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "player": true
+                }
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Well, what do you think?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "ANNOYED"
+                },
+                "message": {
+                  "en_US": "..."
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                }
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Aww, really?\\. Ok, what about these ones?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "ASTONISHED"
+                }
+              },
+              {
+                "pos": {
+                  "x": 1040,
+                  "y": 1350
+                },
+                "speed": "NORMAL",
+                "transition": "EASE_IN_OUT",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_POS"
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "SET_FACE",
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": false,
+                "keepState": true
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  },
+                  {
+                    "time": 0.15,
+                    "turn": -0.02,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowHexBubble"
+              },
+              {
+                "time": 1,
+                "type": "WAIT"
+              },
+              {
+                "person": {
+                  "person": "cross-worlds.pentafist-female-blue",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Well at least these are more unique."
+                },
+                "autoContinue": true,
+                "type": "SHOW_MSG"
+              },
+              {
+                "time": 0.5,
+                "type": "WAIT"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  },
+                  {
+                    "time": 0.15,
+                    "turn": 0.05,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowHexStar"
+              },
+              {
+                "time": 1.5,
+                "type": "WAIT"
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "WEST",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  },
+                  {
+                    "time": 0.15,
+                    "turn": -0.05,
+                    "type": "ROTATE_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "type": "DO_ENEMY_ACTION",
+                "enemy": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "actionName": "_ThrowHexSteam"
+              },
+              {
+                "time": 1,
+                "type": "WAIT"
+              },
+              {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                }
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                }
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "face": "NORTH",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": false,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                },
+                "action": [
+                  {
+                    "face": "SOUTH",
+                    "rotate": true,
+                    "rotateSpeed": 3,
+                    "type": "SET_FACE"
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "repeating": false,
+                "keepState": true
+              },
+              {
+                "person": {
+                  "person": "hexacast.hexacast2",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": "Did you think any of these are cool?"
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "SWAP_BACK_ENEMY_WITH_ENTITY",
+                "entity": {
+                  "global": true,
+                  "name": "hex1"
+                }
+              },
+              {
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_IN_OUT",
+                "waitSkip": 0,
+                "zoom": 1.25,
+                "type": "SET_CAMERA_TARGET",
+                "entity": {
+                  "player": true
+                }
+              },
+              {
+                "0": [
+                  {
+                    "person": {
+                      "person": "main.lea",
+                      "expression": "NOD"
+                    },
+                    "message": {
+                      "en_US": "[nods]"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "hexacast.hexacast2",
+                      "expression": "DEFAULT"
+                    },
+                    "message": {
+                      "en_US": "Sweet!\\. Ok, I will use these from now on.\\. Thanks for your opinion!"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "player": true
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "main.lea",
+                      "expression": "EXCITED"
+                    },
+                    "message": {
+                      "en_US": "Lea!"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "type": "CLEAR_MSG",
+                    "side": "ALL"
+                  },
+                  {
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    },
+                    "action": [
+                      {
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                      }
+                    ],
+                    "type": "DO_ACTION",
+                    "wait": true,
+                    "repeating": false,
+                    "keepState": true
+                  },
+                  {
+                    "type": "RESET_NPC",
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    }
+                  },
+                  {
+                    "type": "CHANGE_VAR_BOOL",
+                    "varName": "tmp.hexTalk2",
+                    "changeType": "set",
+                    "value": true
+                  }
+                ],
+                "1": [
+                  {
+                    "person": {
+                      "person": "main.lea",
+                      "expression": "SHAKE"
+                    },
+                    "message": {
+                      "en_US": "[shakes head]"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "hexacast.hexacast2",
+                      "expression": "DEFAULT"
+                    },
+                    "message": {
+                      "en_US": "Oh no, these are lame too?"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "global": true,
+                      "name": "hex2"
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "cross-worlds.pentafist-female-blue",
+                      "expression": "DEFAULT"
+                    },
+                    "message": {
+                      "en_US": "See?\\. She agrees that these cosmetics are a waste of money."
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "hexacast.hexacast2",
+                      "expression": "DEFAULT"
+                    },
+                    "message": {
+                      "en_US": "But there are still a lot more options to try!\\. I just need to get some more!"
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "waitSkip": 0,
+                    "zoom": 1.25,
+                    "type": "SET_CAMERA_TARGET",
+                    "entity": {
+                      "player": true
+                    }
+                  },
+                  {
+                    "person": {
+                      "person": "main.lea",
+                      "expression": "SMILE"
+                    },
+                    "message": {
+                      "en_US": "..."
+                    },
+                    "type": "SHOW_MSG"
+                  },
+                  {
+                    "type": "CLEAR_MSG",
+                    "side": "ALL"
+                  },
+                  {
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    },
+                    "action": [
+                      {
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                      }
+                    ],
+                    "type": "DO_ACTION",
+                    "wait": true,
+                    "repeating": false,
+                    "keepState": true
+                  },
+                  {
+                    "type": "RESET_NPC",
+                    "entity": {
+                      "global": true,
+                      "name": "hex1"
+                    }
+                  }
+                ],
+                "type": "SHOW_CHOICE",
+                "person": {
+                  "person": "main.lea",
+                  "expression": "SURPRISED_TOWARD"
+                },
+                "options": [
+                  {
+                    "0": " ",
+                    "label": {
+                      "en_US": "[Yes]"
+                    }
+                  },
+                  {
+                    "0": " ",
+                    "label": {
+                      "en_US": "[No]"
+                    }
+                  }
+                ]
+              },
+              {
+                "entity": {
+                  "player": true
+                },
+                "action": [
+                  {
+                    "type": "SET_SLIP_THROUGH",
+                    "value": false
+                  }
+                ],
+                "type": "DO_ACTION",
+                "wait": true,
+                "keepState": true
+              },
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "Just pick a random one at this point...\\. I just want to get back to the game."
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "XenoDialog",
+      "x": 1043,
+      "y": 1540,
+      "level": 1,
+      "settings": {
+        "mapId": 887,
+        "name": "hexTalk2",
+        "spawnCondition": "tmp.hexTalk2",
+        "dialog": [
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "Ok, you picked your cosmetics, what is the holdup?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "But the shop just updated, look at all the new ones!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "But we haven't even had a chance to play with the ones you just bought a minute ago!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "That other player liked your choices, isn't that good enough for you?"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex1"
+            },
+            "text": {
+              "en_US": "But look!\\. It says these are a limited time offer.\\. I might miss out if I don't buy these now!"
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "..."
+            }
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "hex2"
+            },
+            "text": {
+              "en_US": "We're never going to get back to the game, are we?"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

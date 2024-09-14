@@ -1,3 +1,9 @@
+## 2.2.2 (09/14/2024)
+### Changes
+- Tweaked Hexacast character portraits
+### Fixes
+- Re-added missing NPC encounter from Basin Keep
+
 ## 2.2.1 (09/14/2024)
 ### Changes
 - Removed NPC encounter in beach/path-04 (Rough Lagoon) and replaced it with a new conversation in the same map

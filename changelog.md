@@ -1,6 +1,6 @@
 ## 2.2.1 (09/14/2024)
 ### Changes
-- Removed NPC encounter in beath/path-04 (Rough Lagoon) and replaced it with a new conversation in the same map
+- Removed NPC encounter in beach/path-04 (Rough Lagoon) and replaced it with a new conversation in the same map
 - Tweaked player animations during Spell Volley combat art
 ### Fixes
 - Fixed a file path issue in triblader animation sheets

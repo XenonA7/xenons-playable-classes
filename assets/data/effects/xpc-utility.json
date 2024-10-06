@@ -547,6 +547,34 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "zOffset8": [
+      {
+        "relative": false,
+        "duration": 0,
+        "keySpline": "LINEAR",
+        "start": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 8,
+          "z": 8
+        },
+        "type": "MOVE_OFFSET"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
     ]
   }
 }

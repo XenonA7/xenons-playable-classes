@@ -4965,7 +4965,7 @@
           "posType": "TARGET",
           "align": "BOTTOM",
           "type": "SET_HIT_PROXY",
-          "proxy": "healTargetFXProxy",
+          "proxy": "healMortarFXProxy",
           "offset": {
             "x": 0,
             "y": 0,
@@ -4995,7 +4995,7 @@
             "element": "WAVE",
             "damageFactor": 0,
             "reverse": false,
-            "guardable": "",
+            "guardable": "NEVER",
             "skillBonus": "",
             "limiter": "NO_DAMAGE",
             "hints": [
@@ -5039,7 +5039,7 @@
       },
       "type": "GENERIC"
     },
-    "healTargetFXProxy": {
+    "healMortarFXProxy": {
       "copyOwnerAnims": false,
       "breakType": "NEVER",
       "action": [
@@ -5142,6 +5142,541 @@
         "x": 0,
         "y": 0,
         "z": 0
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "miasmicMortarInit": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "align": "BASE",
+          "type": "SHOOT_PROXY",
+          "proxy": "miasmicMortarHome",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "miasmicMortarHome": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "kind": "PROXY_OWNER",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "miasmicMortarCard",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          }
+        },
+        {
+          "time": 1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "miasmicMortarCard": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 12,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 256,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "ball-wave",
+        "name": "waveCardAirDeath"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "volume": 0.8,
+          "global": false,
+          "loop": false,
+          "variance": 0.1,
+          "speed": 0.7,
+          "sound": "media/sound/boss/gynthar/card-stuck.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale90"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "toxicMortarCardAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "group": "",
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "toxicMortarBase"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "value": true,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "value": 350,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 1.5,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "value": 4,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "stopType": "LANDED",
+          "distance": 0,
+          "rotateSpeed": 0,
+          "adjustSpeedMax": 550,
+          "maxSpeedChange": 550,
+          "missileMode": 0,
+          "cancelIfBelowFall": false,
+          "type": "JUMP_TARGET_MOVEMENT"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "volume": 0.5,
+          "global": false,
+          "loop": false,
+          "speed": 0.7,
+          "sound": "media/sound/boss/gynthar/card-stuck.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "group": "mireGroup",
+          "type": "REMOVE_PROXIES"
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "clearKillEffect": "true",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "ball-wave",
+            "name": "waveCardAirDeath"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "miasmicMortarImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "type": "SHOOT_PROXY",
+          "proxy": "miasmaProxy",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "IGNORE",
+        "shadow": 16
+      },
+      "type": "GENERIC"
+    },
+    "healingBurstDisjoint": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "healingBurstFXProxy",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 64,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 0.4,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "party": "ENEMY",
+          "attack": {
+            "type": "NONE",
+            "element": "WAVE",
+            "damageFactor": 0,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.4,
+          "type": "WAIT"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "healingBurstFXProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 0.25,
+          "target": "TARGET",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "TARGET",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healingCustom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
       },
       "config": {},
       "type": "GENERIC"
@@ -6452,6 +6987,115 @@
           }
         ]
       },
+      "CS_CUSTOM2_HEXACAST_THROW_SPECIAL2_A": {
+        "name": {
+          "en_US": "Miasmic Mortar"
+        },
+        "description": {
+          "en_US": "Toss a temporal miasma spell card aimed at your cursor position."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.polarityThrowType",
+            "thenStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": false
+              },
+              {
+                "followUp": "sweepEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowWave"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": true
+              },
+              {
+                "followUp": "sweepRevEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweepRev"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowWaveRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY_CURSOR",
+            "proxy": "miasmicMortarInit",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 1200
+            }
+          },
+          {
+            "time": 0.6,
+            "type": "WAIT"
+          }
+        ]
+      },
       "CS_LILY_HEXACAST_THROW_SPECIAL3_A": {
         "name": {
           "en_US": "Spirit Tornado"
@@ -6588,6 +7232,120 @@
           },
           {
             "type": "CLEAR_ANIMATION"
+          }
+        ]
+      },
+      "CS_CUSTOM1_HEXACAST_ATTACK_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[2]Healing Burst\\c[0]"
+        },
+        "description": {
+          "en_US": "Hit an ally in front of you to heal them a large amount."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.3,
+              "action": 1.2,
+              "move": 1.2,
+              "reaim": 1.2
+            }
+          },
+          {
+            "followUp": "specialLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "specialShoot"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 300,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 3,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "duration": 0.3,
+            "align": "BOTTOM",
+            "rotOffset": {
+              "x": 0,
+              "y": -18
+            },
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "healingBurstFX"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0,
+            "angleVary": 0,
+            "startDist": 18,
+            "startDistCollide": "NONE",
+            "random": false,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "duration": 0,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "healingBurstDisjoint",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "count": 1
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "postShootSlow"
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
           }
         ]
       },

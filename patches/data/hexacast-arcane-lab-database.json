@@ -5531,6 +5531,27 @@
       "offY": 288
     }
   },
+  "csHexacastCustom2WaveThrow2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM2_HEXACAST_THROW_SPECIAL2_A",
+        "actionCheckKey": "THROW_SPECIAL2"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Miasmic Mortar"
+    },
+    "description": {
+      "en_US": "Toss a temporal miasma spell card aimed at your cursor position."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 96,
+      "offY": 24
+    }
+  },
   "csSpheromancerWaveThrow3A": {
     "list": [
       {
@@ -5729,6 +5750,27 @@
       "src": "media/gui/custom-skills/al-spheroknight.png",
       "offX": 72,
       "offY": 216
+    }
+  },
+  "csHexacastCustom1WaveAttack1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_ATTACK_SPECIAL1_A",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] \\c[2]Healing Burst\\c[0]"
+    },
+    "description": {
+      "en_US": "Hit an ally in front of you to heal them a large amount."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 120,
+      "offY": 0
     }
   },
   "csSpheromancerWaveAttack2A": {

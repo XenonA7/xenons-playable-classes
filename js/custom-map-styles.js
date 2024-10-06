@@ -86,4 +86,3 @@ ig.module('xpc.patches.map-styles')
       sheet: "media/entity/style/shockwave-dng-destruct.png"
     });
 });
-//# sourceMappingURL=map-styles.js.map

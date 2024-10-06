@@ -1400,6 +1400,14 @@
           ]
         },
         {
+          "name": "chestFrame1",
+          "time": 0.08,
+          "repeat": false,
+          "frames": [
+            7
+          ]
+        },
+        {
           "name": "landOnGround",
           "time": 0.07,
           "repeat": false,

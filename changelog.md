@@ -1,3 +1,30 @@
+## 2.3.0 (10/06/2024)
+### New Content
+- New Hexacast combat art: Celestial Cohort (Wave Dash Lv.3B)
+- New Hexacast combat art: Temporal Miasma (Wave Dash Lv.2A)
+- New Hexacast custom skill: Miasmic Mortar (Wave Throw Lv.2)
+- New Hexacast custom skill: Healing Burst (Wave Melee Lv.1)
+- Defined new animation "chestFrame1" to Triblader2/3/4/5/Lea
+- Added new Hexacast tips to hideout-lobby
+- Added a new xenodialogue conversation to hideout-east
+### Changes
+- Upgrade rooms in Rhombus Dungeon now support XPC characters for animations
+- Element unlock rooms in all dungeons now support XPC characters for animations
+- Added dialogue to the party member NPC advisor in the unused content room
+- Extended hideout-east map width by 2 tiles
+- Removed sourceMappingURL line from map-styles.js
+- Updated Essence Steal description
+- Hexacast homing shots now disabled if any air conditioner enemies are present on the map
+- Reduced dot particle count in effect specials.wave-slowDebuff
+- Renamed healTargetFXProxy to healMortarFXProxy
+### Fixes
+- Fixed player disappearing sometimes on Calamity Beacon descent
+- Fixed a typo in char-select/basement
+- Fixed a typo in hideout-lobby
+- Fixed Abandoned Site appearing on world map
+- Fixed Lightning Hex to not apply jolt status effect
+- Heal Mortar impact is no longer guardable
+
 ## 2.2.2 (09/14/2024)
 ### Changes
 - Tweaked Hexacast character portraits

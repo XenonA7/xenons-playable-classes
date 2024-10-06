@@ -1,0 +1,570 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 2
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 876,
+      "y": 292,
+      "level": 0,
+      "settings": {
+        "name": "UpgradeXPC",
+        "eventType": "CUTSCENE",
+        "endCondition": "false",
+        "event": [
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.upgradeCollected",
+            "value": true
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "value": 0.5,
+                "type": "SET_RELATIVE_SPEED"
+              },
+              {
+                "target": {
+                  "x": 624,
+                  "y": 416,
+                  "lvl": "0"
+                },
+                "precise": true,
+                "type": "MOVE_TO_POINT"
+              },
+              {
+                "face": "SOUTH",
+                "rotate": true,
+                "type": "SET_FACE"
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "pos": {
+              "x": 624,
+              "y": 400
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_POS"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "mode": "SLOW_OUT",
+            "type": "PAUSE_BGM"
+          },
+          {
+            "rumbleType": "HORIZONTAL",
+            "name": "",
+            "duration": 0.5,
+            "power": "WEAK",
+            "speed": "FASTER",
+            "fade": true,
+            "type": "RUMBLE_SCREEN"
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.toggle3",
+            "value": true
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.6
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "value": 12,
+                "type": "SET_FLOAT_HEIGHT"
+              },
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+                "thenStep": [
+                  {
+                    "type": "SHOW_ANIMATION",
+                    "anim": "hover"
+                  },
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+                "thenStep": [
+                  {
+                    "type": "SHOW_ANIMATION",
+                    "anim": "floatEyesClosed"
+                  },
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "wait": false,
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-poses",
+                  "name": "floatEyeClosed"
+                }
+              },
+              {
+                "name": "END",
+                "type": "LABEL"
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": true,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "pos": {
+              "x": 624,
+              "y": 384
+            },
+            "speed": "SLOWER",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_POS"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "mainPlatform"
+            },
+            "duration": -1,
+            "align": "BOTTOM",
+            "group": "glow",
+            "wait": false,
+            "waitSkip": 0,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.upgrade",
+              "name": "square-glow"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "particleType": "BLUE_SQUARES",
+            "quantity": 0,
+            "type": "SET_ENV_PARTICLES"
+          },
+          {
+            "particleType": "RED_SQUARES",
+            "quantity": 20,
+            "type": "SET_ENV_PARTICLES"
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow3",
+            "value": true
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow2",
+            "value": true
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow1",
+            "value": true
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.8
+          },
+          {
+            "zoom": 1.5,
+            "duration": 2,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM"
+          },
+          {
+            "zoomType": "LIGHT",
+            "fadeIn": 3,
+            "duration": -1,
+            "fadeOut": 1,
+            "name": "blurr",
+            "type": "SET_ZOOM_BLUR"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "duration": 0,
+            "align": "BOTTOM",
+            "group": "glow",
+            "wait": true,
+            "waitSkip": 0,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.upgrade",
+              "name": "chargeFast"
+            },
+            "offset": {
+              "x": 0,
+              "y": 4,
+              "z": 12
+            }
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "duration": 0,
+            "align": "BOTTOM",
+            "group": "glow",
+            "wait": false,
+            "waitSkip": 0,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.upgrade",
+              "name": "chargeBlowFast"
+            },
+            "offset": {
+              "x": 0,
+              "y": 4,
+              "z": 12
+            }
+          },
+          {
+            "name": "blurr",
+            "fadeOut": 0.2,
+            "type": "FADE_OUT_ZOOM_BLUR"
+          },
+          {
+            "zoomType": "MEDIUM",
+            "fadeIn": 0,
+            "duration": 0.2,
+            "fadeOut": 0.4,
+            "type": "SET_ZOOM_BLUR"
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 1
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "mainPlatform"
+            },
+            "group": "glow",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "type": "RESTORE_WEATHER_PARTICLES"
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow3",
+            "value": false
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow2",
+            "value": false
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.glow1",
+            "value": false
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "value": 0,
+                "type": "SET_FLOAT_HEIGHT"
+              },
+              {
+                "type": "WAIT_UNTIL_ON_GROUND"
+              },
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+                "thenStep": [
+                  {
+                    "type": "SHOW_ANIMATION",
+                    "anim": "chestFrame1"
+                  },
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+                "thenStep": [
+                  {
+                    "type": "SHOW_ANIMATION",
+                    "anim": "landOnGround"
+                  },
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "wait": false,
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-poses",
+                  "name": "landOnGround"
+                }
+              },
+              {
+                "name": "END",
+                "type": "LABEL"
+              }
+            ],
+            "repeating": false,
+            "wait": false,
+            "keepState": true,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "wait": true,
+            "waitSkip": 0,
+            "type": "RESET_CAMERA"
+          },
+          {
+            "msgType": "ACTIVATED",
+            "object": {
+              "en_US": "Character Menu",
+              "de_DE": "Charakter-Menü",
+              "fr_FR": "fr_FR",
+              "langUid": 1,
+              "zh_CN": "角色菜单",
+              "ja_JP": "キャラクターメニュー",
+              "ko_KR": "캐릭터 메뉴",
+              "zh_TW": "角色選單"
+            },
+            "type": "SHOW_GET_MSG"
+          },
+          {
+            "task": {
+              "en_US": "Complete the final dungeon of \\c[3]Newcomer's Bridge\\c[0].",
+              "de_DE": "Schließe den letzten Dungeon der \\c[3]Neulingsbrücke\\c[0] ab.",
+              "fr_FR": "fr_FR",
+              "langUid": 60,
+              "zh_CN": "完成\\c[3]迎新桥\\c[0]的最终地牢。",
+              "ja_JP": "\\c[3]ニューカマーズブリッジ\\c[0]の最終ダンジョンをクリアする。",
+              "ko_KR": "\\c[3]초심자의 다리\\c[0]의 마지막 던전을 통과하세요.",
+              "zh_TW": "完成\\c[3]迎新橋\\c[0]的最終地牢。"
+            },
+            "type": "SET_PERMA_TASK"
+          },
+          {
+            "core": "MENU",
+            "value": true,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "MODIFIER",
+            "value": true,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "MENU_SOCIAL",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "MENU_CIRCUIT",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "MENU_SYNOPSIS",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "ELEMENT_NEUTRAL",
+            "value": true,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "ELEMENT_HEAT",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "ELEMENT_COLD",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "ELEMENT_SHOCK",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "core": "ELEMENT_WAVE",
+            "value": false,
+            "type": "SET_PLAYER_CORE"
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.toggle3",
+            "value": false
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+                "thenStep": [
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "type": "IF",
+                "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+                "thenStep": [
+                  {
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle",
+                    "wait": true
+                  },
+                  {
+                    "name": "END",
+                    "type": "GOTO_LABEL"
+                  }
+                ]
+              },
+              {
+                "wait": true,
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player",
+                  "name": "preIdle"
+                }
+              },
+              {
+                "name": "END",
+                "type": "LABEL"
+              }
+            ],
+            "repeating": false,
+            "wait": true,
+            "keepState": false,
+            "immediately": false,
+            "type": "DO_ACTION"
+          },
+          {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.tutorialEquip",
+            "value": true
+          },
+          {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+          }
+        ],
+        "triggerType": "ONCE",
+        "mapId": 114,
+        "startCondition": "map.startUpgrade"
+      }
+    }
+  },
+  {
+    "type": "EXIT"
+  }
+]

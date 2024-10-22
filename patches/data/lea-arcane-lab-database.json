@@ -36,6 +36,80 @@
       "offY": 0
     }
   },
+  "csLeaHexacastBaseRanged": {
+    "list": [
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED",
+        "actionCheckKey": "THROW"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED",
+        "actionCheckKey": "THROW_CHARGED"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_REV",
+        "actionCheckKey": "THROW_CHARGED_REV"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_NORMAL",
+        "actionCheckKey": "THROW_NORMAL"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_NORMAL_REV",
+        "actionCheckKey": "THROW_NORMAL_REV"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-hexa] Hexacast Ranged"
+    },
+    "description": {
+      "en_US": "The standard Hexacast ranged attacks."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 24,
+      "offY": 24
+    }
+  },
+  "csLeaHexacastBaseRangedHoming": {
+    "list": [
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING",
+        "actionCheckKey": "THROW"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING",
+        "actionCheckKey": "THROW_CHARGED"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING_REV",
+        "actionCheckKey": "THROW_CHARGED_REV"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_NORMAL",
+        "actionCheckKey": "THROW_NORMAL"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_NORMAL_REV",
+        "actionCheckKey": "THROW_NORMAL_REV"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-hexa] Hexacast Ranged (Homing)"
+    },
+    "description": {
+      "en_US": "The \\c[3]homing\\c[0] Hexacast charged shots."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 48,
+      "offY": 24
+    }
+  },
   "csLeaTribladerBaseMelee": {
     "list": [
       {
@@ -92,6 +166,35 @@
       "src": "media/gui/custom-skills/base-icons.png",
       "offX": 48,
       "offY": 0
+    }
+  },
+  "csLeaHexacastBaseMelee": {
+    "list": [
+      {
+        "replaceTo": "CS_HEXACAST_ATTACK",
+        "actionCheckKey": "ATTACK"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_ATTACK_REV",
+        "actionCheckKey": "ATTACK_REV"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_ATTACK_FINISHER",
+        "actionCheckKey": "ATTACK_FINISHER"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-hexa] Hexacast Melee"
+    },
+    "description": {
+      "en_US": "The standard Hexacast melee attacks."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 0,
+      "offY": 24
     }
   },
   "csLeaTribladerBaseDash": {

@@ -5,7 +5,11 @@
   },
   {
     "type": "INCLUDE",
-    "src": "mod:patches/data/animations/player.json"
+    "src": "mod:patches/data/animations/lea-tri.json"
+  },
+  {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/animations/lea-hexa.json"
   },
   {
     "type": "EXIT"
@@ -538,6 +542,92 @@
             1,
             2,
             3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "sheet": "hexa-attack",
+      "dirs": "6",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tileOffsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "anchorOffsetX": [
+        10,
+        15,
+        10,
+        -9,
+        -14,
+        -12
+      ],
+      "anchorOffsetY": [
+        -22,
+        -13,
+        -2,
+        -4,
+        -9,
+        -21
+      ],
+      "anchorOffsetZ": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "SUB": [
+        {
+          "name": "hexa-attackEnd",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            6
+          ]
+        },
+        {
+          "name": "hexa-attackEndLoop",
+          "time": 0.08,
+          "repeat": true,
+          "frames": [
+            12,
+            18,
+            24
+          ]
+        },
+        {
+          "flipX": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "tileOffsets": [
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
           ]
         }
       ]

@@ -1,3 +1,22 @@
+## 2.4.0 (10/21/2024)
+### New Content
+- Added base Hexacast ranged/attack actions as Lea custom skills
+- Added Lea Hexacast attack animation (sprites by HeartLychee)
+- Added hideout-hexa map to XPC hideout area and updated Bergen area map
+- Added OLV fade in/out effects to xpc-utility effect sheet
+- Added weather XPC_SPACE and env particle DARK_DUST_XPC_SPACE
+- Added doormat-spawn-fix.js (code by Krypek)
+### Changes
+- Added Azure Lazuline to mod credits
+- Increased dot particle size in effect miasmaBuffAura
+- Renamed \patches\data\animations\player.json to \patches\data\animations\lea-tri.json
+- Deleted unused Hexacast animations
+ * spinClosedFull
+ * spinClosedShort
+ * spinClosedShortRev
+### Fixes
+- Fixed unintentional charged shots when using Hexacast uncharged throws (code by Azure Lazuline)
+
 ## 2.3.0 (10/06/2024)
 ### New Content
 - New Hexacast combat art: Celestial Cohort (Wave Dash Lv.3B)
@@ -11,6 +30,7 @@
 - Upgrade rooms in Rhombus Dungeon now support XPC characters for animations
 - Element unlock rooms in all dungeons now support XPC characters for animations
 - Added dialogue to the party member NPC advisor in the unused content room
+- Added shadows to hideout-northwest under bridges
 - Extended hideout-east map width by 2 tiles
 - Removed sourceMappingURL line from map-styles.js
 - Updated Essence Steal description

@@ -13,6 +13,10 @@
       },
       {
         "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-hexacast.json"
+      },
+      {
+        "type": "INCLUDE",
         "src": "mod:patches/data/players/custom-skills/lea-hexacast-bonus.json"
       },
       {

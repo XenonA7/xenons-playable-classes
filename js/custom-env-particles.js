@@ -93,3 +93,52 @@ ig.ENV_PARTICLES.RED_TRIANGLES = {
     anim: "big"
   }]
 };
+
+ig.ENV_PARTICLES.DARK_DUST_XPC_SPACE = {
+  animSheet: {
+    sheet: {
+      src: "media/env/particle.png",
+      width: 8,
+      height: 8,
+      offY: 8
+    },
+    renderMode: "lighter",
+    SUB: [{
+      name: "small",
+      frames: [0],
+      time: 0.1
+    }, {
+      name: "medium",
+      frames: [1],
+      time: 0.1
+    }, {
+      name: "big",
+      frames: [2],
+      time: 0.1
+    }]
+  },
+  speed: 300,
+  speedVariance: 80,
+  dir: {
+    x: -1,
+    y: -0.33
+  },
+  randomFlip: {
+    x: false,
+    y: false
+  },
+  randomRotate: 0,
+  time: 3,
+  timeVariance: 0.5,
+  fadeTime: 0.5,
+  levels: [{
+    scale: 1,
+    anim: "small"
+  }, {
+    scale: 1.2,
+    anim: "medium"
+  }, {
+    scale: 1.5,
+    anim: "big"
+  }]
+};

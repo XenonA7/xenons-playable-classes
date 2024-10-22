@@ -1,0 +1,10 @@
+{
+  "hexa-attack": {
+    "src": "media/entity/npc/lea-hexa.png",
+    "xCount": 6,
+    "offX": 0,
+    "offY": 0,
+    "width": 32,
+    "height": 40
+  }
+}

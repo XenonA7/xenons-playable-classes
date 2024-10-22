@@ -575,6 +575,38 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "olvHide2s": [
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "alpha": 0,
+        "duration": 2,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      }
+    ],
+    "olvShow2s": [
+      {
+        "alpha": 0,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "alpha": 1,
+        "duration": 2,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      }
     ]
   }
 }

@@ -61,7 +61,8 @@ https://github.com/2hh8899/ArcaneLab/tree/20c24d5a72e46d08a067f5a17486533b672c70
 - **Alyxia:** JS support, author of AlyBox
 - **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
 - **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
-- **Lubkuluk**: JS support, patch for Hexacast key panel functionality
+- **Lubkuluk**: Patch for Hexacast key panel functionality
+- **Azure Lazuline**: Patch for character-specific charge delays
 - **Orco Pixelado**: Triblader menu portrait artwork
 - **Laz**: Gameplay testing, created music used for XPC hideout area
 

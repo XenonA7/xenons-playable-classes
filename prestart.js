@@ -16,3 +16,4 @@ import "./js/hexacast-throw-fix.js";
 import "./js/key-panel-fix.js";
 import "./js/pvp-gui-fix.js";
 import "./js/pvp-party-eat-fix.js";
+import "./js/wave-recall-combat-clear.js";

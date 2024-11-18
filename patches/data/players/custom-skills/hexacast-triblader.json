@@ -17301,41 +17301,6 @@
       "config": {},
       "type": "GENERIC"
     },
-    "tri-animationViewerProxy": {
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "target": "OWNER",
-          "timeScale": 0.25,
-          "logicTimeScale": 1,
-          "moveXYScale": 1,
-          "type": "ADD_TEMP_INFLUENCE"
-        },
-        {
-          "time": 4,
-          "type": "WAIT"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "type": "CLEAR_EFFECTS"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "OWNER",
-      "stickFaceAlign": false,
-      "group": "tri-speedAura",
-      "size": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "config": {},
-      "type": "GENERIC"
-    },
     "tri-lightningStop": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
@@ -50144,8 +50109,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "specialShoot",
-            "followUp": "specialLoop"
+            "anim": "tri-throwSpecial"
           },
           {
             "duration": 0,
@@ -50160,6 +50124,27 @@
             "effect": {
               "sheet": "specials.cold",
               "name": "coldAreaShock"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "dummySword",
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "stabColdLoopFast"
             },
             "offset": {
               "x": 0,
@@ -62684,54 +62669,6 @@
             "align": "BOTTOM",
             "type": "SHOOT_PROXY",
             "proxy": "tri-overclockProxy",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          }
-        ]
-      },
-      "CS_ALT_TRIBLADER_GUARD_SPECIAL1_A": {
-        "name": {
-          "en_US": "\\c[3]Animation Debugger\\c[0]"
-        },
-        "description": {
-          "en_US": "Temporary slow motion for animation dev use."
-        },
-        "dmgType": "NONE",
-        "stunType": "",
-        "status": false,
-        "steps": [
-          {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": 0,
-              "action": 0.5,
-              "move": 0.6,
-              "reaim": 0.6
-            }
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "aim"
-          },
-          {
-            "sticking": false,
-            "group": "tri-speedAura",
-            "ignoreSelf": false,
-            "type": "REMOVE_PROXIES"
-          },
-          {
-            "align": "BOTTOM",
-            "type": "SHOOT_PROXY",
-            "proxy": "tri-animationViewerProxy",
             "offset": {
               "x": 0,
               "y": 0,

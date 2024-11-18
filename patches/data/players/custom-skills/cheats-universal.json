@@ -1,0 +1,660 @@
+{
+  "proxies": {
+    "cheat-animationViewerProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "target": "OWNER",
+          "timeScale": 0.25,
+          "logicTimeScale": 1,
+          "moveXYScale": 1,
+          "type": "ADD_TEMP_INFLUENCE"
+        },
+        {
+          "time": 4,
+          "type": "WAIT"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "tri-speedAura",
+      "size": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "cursorTeleportTarget": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/enemy/heat-projectile.png",
+          "offX": 112,
+          "offY": 16,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": false,
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "action": [
+        {
+          "time": 0.03,
+          "type": "WAIT"
+        },
+        {
+          "name": "targetBase",
+          "target": "SELF",
+          "align": "BASE",
+          "faceDistance": 0,
+          "type": "SET_ATTRIB_POS"
+        },
+        {
+          "attrib": "targetBase",
+          "type": "TELEPORT_TO_ATTRIB_POS"
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "cursorTeleportProxyGroup",
+      "startAnim": "",
+      "size": {
+        "x": 48,
+        "y": 48,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    }
+  },
+  "actions": {
+    "NEUTRAL": {
+      "CS_CHEAT_THROW_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[3]Cursor Teleport\\c[0]"
+        },
+        "description": {
+          "en_US": "Teleport to your cursor."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.05,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "vanishInstant"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "smokeBombBigHide"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
+          },
+          {
+            "value": true,
+            "type": "SET_FACE_FIX"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "type": "STOP_XY"
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "name": "teleportShield",
+            "actionDetached": false,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "neutralize": true,
+                "hitResist": "MASSIVE",
+                "strength": "BLOCK_ALL",
+                "duration": 0.5,
+                "range": 1,
+                "back": false
+              }
+            },
+            "type": "ADD_SHIELD"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "itemEffect"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY_CURSOR",
+            "proxy": "cursorTeleportTarget",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 1200
+            }
+          },
+          {
+            "time": 0.04,
+            "type": "WAIT"
+          },
+          {
+            "kind": "ACTION_PROXY",
+            "key": "cursorTeleportProxyGroup",
+            "type": "SET_TEMP_TARGET"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.hasTmpTarget",
+            "thenStep": [
+              {
+                "name": "cursorPos",
+                "target": "TARGET",
+                "align": "BASE",
+                "faceDistance": 0,
+                "type": "SET_ATTRIB_POS"
+              }
+            ]
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTER",
+            "transition": "EASE_IN_OUT",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1,
+            "focusType": "SELF",
+            "type": "FOCUS_CAMERA"
+          },
+          {
+            "attrib": "cursorPos",
+            "type": "TELEPORT_TO_ATTRIB_POS"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.designer",
+              "name": "spawnShredder"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      },
+      "CS_CHEAT_ATTACK_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[3]Cliff Jump 1\\c[0]"
+        },
+        "description": {
+          "en_US": "Jump up and forward, enough to climb standard cliffs."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": 100,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 1.5,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 350,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.hacking",
+              "name": "hackingPointSilent"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "jump"
+          },
+          {
+            "time": 0.3,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "fall"
+          },
+          {
+            "time": 0.1,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "type": "WAIT_UNTIL_ON_GROUND"
+          }
+        ]
+      },
+      "CS_CHEAT_ATTACK_SPECIAL2_A": {
+        "name": {
+          "en_US": "\\c[3]Cliff Jump 2\\c[0]"
+        },
+        "description": {
+          "en_US": "Jump up and forward, enough to climb double cliffs."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": 100,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 1.5,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 450,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.hacking",
+              "name": "hackingPointSilent"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "jump"
+          },
+          {
+            "time": 0.3,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "fall"
+          },
+          {
+            "time": 0.1,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "type": "WAIT_UNTIL_ON_GROUND"
+          }
+        ]
+      },
+      "CS_CHEAT_DASH_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[3]NoClip\\c[0]"
+        },
+        "description": {
+          "en_US": "Walk through walls and disable gravity until you dash cancel."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "SET_RELATIVE_SPEED",
+            "value": 0.5
+          },
+          {
+            "name": "noclipShield",
+            "actionDetached": false,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "neutralize": true,
+                "hitResist": "BLOCK",
+                "strength": "BLOCK_ALL",
+                "duration": -1,
+                "range": 1,
+                "back": false
+              }
+            },
+            "type": "ADD_SHIELD"
+          },
+          {
+            "value": "NONE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": 0,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "value": 0,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "value": 1,
+            "type": "SET_AIR_FRICTION"
+          },
+          {
+            "value": "BLOCK",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "walk"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "scene.hacking",
+              "name": "hackingPointSilent"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "volume": 0.7,
+            "global": false,
+            "loop": false,
+            "variance": 0,
+            "speed": 1.1,
+            "sound": "media/sound/scenes/designer-magic.ogg",
+            "type": "PLAY_SOUND"
+          },
+          {
+            "name": "loop",
+            "type": "LABEL"
+          },
+          {
+            "time": 1,
+            "rotateSpeed": 5,
+            "stopBeforeEdge": false,
+            "allowStop": false,
+            "type": "PLAYER_MOVE_TO_DIR"
+          },
+          {
+            "name": "loop",
+            "type": "GOTO_LABEL"
+          }
+        ]
+      },
+      "CS_CHEAT_GUARD_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[3]Animation Debugger\\c[0]"
+        },
+        "description": {
+          "en_US": "Temporary slow motion for animation dev use."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.5,
+              "move": 0.6,
+              "reaim": 0.6
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "aim"
+          },
+          {
+            "sticking": false,
+            "group": "tri-speedAura",
+            "ignoreSelf": false,
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "cheat-animationViewerProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          }
+        ]
+      }
+    }
+  }
+}

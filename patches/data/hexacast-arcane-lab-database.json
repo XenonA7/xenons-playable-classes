@@ -364,6 +364,27 @@
       "offY": 0
     }
   },
+  "csHexacastCustom2NeutralThrow1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM2_HEXACAST_THROW_SPECIAL1_A",
+        "actionCheckKey": "THROW_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Sentry Card"
+    },
+    "description": {
+      "en_US": "Summon a sentry card at your cursor position that shoots at a nearby enemy."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 72,
+      "offY": 48
+    }
+  },
   "csSpheromancerNeutralThrow2A": {
     "list": [
       {
@@ -470,6 +491,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 72,
       "offY": 96
+    }
+  },
+  "csHexacastCustom1NeutralThrow2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_THROW_SPECIAL2_A",
+        "actionCheckKey": "THROW_SPECIAL2"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Heavy Sentry"
+    },
+    "description": {
+      "en_US": "Summon a more powerful sentry card at your cursor position."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 96,
+      "offY": 48
     }
   },
   "csSpheromancerNeutralAttack1A": {
@@ -686,6 +728,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 168,
       "offY": 96
+    }
+  },
+  "csHexacastCustom1NeutralAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Poison Slash"
+    },
+    "description": {
+      "en_US": "Hit a single enemy to inflict them with \\c[3]poison\\c[0]."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 48,
+      "offY": 48
     }
   },
   "csSpheromancerNeutralDash1A": {
@@ -5009,27 +5072,6 @@
     },
     "description": {
       "en_US": "Experience time at a faster rate for a brief period. Slightly reduces ATK, FOC stats while active."
-    },
-    "icon": {
-      "src": "media/gui/circuit-icons.png",
-      "offX": 168,
-      "offY": 264
-    }
-  },
-  "csAltTribladerShockGuard1A": {
-    "list": [
-      {
-        "replaceTo": "CS_ALT_TRIBLADER_GUARD_SPECIAL1_A",
-        "actionCheckKey": "GUARD_SPECIAL1"
-      }
-    ],
-    "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
-    "name": {
-      "en_US": "\\i[xenon-logo] \\c[3]Animation Debugger\\c[0]"
-    },
-    "description": {
-      "en_US": "Temporary slow motion for animation dev use."
     },
     "icon": {
       "src": "media/gui/circuit-icons.png",

@@ -64,7 +64,7 @@
         },
         "subtasks": [
           {
-            "label": "task1",
+            "label": "task0",
             "type": "CONDITION"
           }
         ]
@@ -81,7 +81,7 @@
         },
         "subtasks": [
           {
-            "label": "task2",
+            "label": "task1",
             "type": "CONDITION"
           }
         ]
@@ -163,7 +163,7 @@
         },
         "subtasks": [
           {
-            "label": "task1",
+            "label": "task0",
             "type": "CONDITION"
           }
         ]
@@ -180,7 +180,7 @@
         },
         "subtasks": [
           {
-            "label": "task2",
+            "label": "task1",
             "type": "CONDITION"
           }
         ]
@@ -197,7 +197,7 @@
         },
         "subtasks": [
           {
-            "label": "task3",
+            "label": "task2",
             "type": "CONDITION"
           }
         ]
@@ -215,5 +215,139 @@
       "money": 50000
     },
     "area": "rhombus-sqr"
+  },
+  "xpc-cheat-skills": {
+    "hubSettings": {
+      "character": "cross-worlds.quadroguard-male-black",
+      "condition": "plot.xpc.csRoomEntered",
+      "location": {
+        "en_US": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "de_DE": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "zh_CN": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "zh_TW": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "ja_JP": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "ko_KR": "Interested in cheat codes? Find me outside the \\c[3]Modding Hideout\\c[0].",
+        "langUid": 13050
+      }
+    },
+    "name": {
+      "en_US": "Cheat Codes",
+      "de_DE": "Cheat Codes",
+      "zh_CN": "Cheat Codes",
+      "zh_TW": "Cheat Codes",
+      "ja_JP": "Cheat Codes",
+      "ko_KR": "Cheat Codes",
+      "langUid": 188
+    },
+    "person": {
+      "en_US": "Cheit",
+      "de_DE": "Cheit",
+      "zh_CN": "Cheit",
+      "zh_TW": "Cheit",
+      "ja_JP": "Cheit",
+      "ko_KR": "Cheit",
+      "langUid": 189
+    },
+    "level": 18,
+    "order": 102,
+    "description": {
+      "en_US": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "de_DE": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "zh_CN": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "zh_TW": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "ja_JP": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "ko_KR": "A sketchy modder is handing out \\c[1]cheat codes\\c[0] outside the \\c[3]Modding Hideout\\c[0] in \\c[3]Bergen Village\\c[0]. It might be worth checking out.",
+      "langUid": 191
+    },
+    "briefing": {
+      "en_US": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "de_DE": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "zh_CN": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "zh_TW": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "ja_JP": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "ko_KR": "You received several \\c[1]cheat codes\\c[0] which can be equipped as custom skills. Use with caution!",
+      "langUid": 192
+    },
+    "hideRewards": false,
+    "tasks": [
+      {
+        "task": {
+          "en_US": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "de_DE": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "fr_FR": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "zh_CN": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "ja_JP": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "ko_KR": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "zh_TW": "Obtain the \\c[3]\\v[item.toggle-arcanelab-skill.name]\\c[0] item.",
+          "langUid": 212
+        },
+        "subtasks": [
+          {
+            "item": "toggle-arcanelab-skill",
+            "amount": 1,
+            "keepItems": true,
+            "type": "COLLECT"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Follow the modder to his testing area.",
+          "de_DE": "Follow the modder to his testing area.",
+          "zh_CN": "Follow the modder to his testing area.",
+          "zh_TW": "Follow the modder to his testing area.",
+          "ja_JP": "Follow the modder to his testing area.",
+          "ko_KR": "Follow the modder to his testing area.",
+          "langUid": 213
+        },
+        "subtasks": [
+          {
+            "label": "task1",
+            "type": "CONDITION"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "de_DE": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "zh_CN": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "zh_TW": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "ja_JP": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "ko_KR": "Use \\c[1]NoClip\\c[0] to talk to the modder.",
+          "langUid": 214
+        },
+        "subtasks": [
+          {
+            "label": "task2",
+            "type": "CONDITION"
+          }
+        ]
+      },
+      {
+        "task": {
+          "en_US": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "de_DE": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "zh_CN": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "zh_TW": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "ja_JP": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "ko_KR": "Use \\c[1]Cliff Jump\\c[0] to talk to the modder.",
+          "langUid": 215
+        },
+        "subtasks": [
+          {
+            "label": "task3",
+            "type": "CONDITION"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "exp": {
+        "exp": 50,
+        "bonus": 0
+      }
+    },
+    "area": "bergen"
   }
 }

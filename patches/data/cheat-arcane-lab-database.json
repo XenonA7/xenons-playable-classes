@@ -1,0 +1,107 @@
+{
+  "csCheatNeutralThrow1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CHEAT_THROW_SPECIAL1_A",
+        "actionCheckKey": "THROW_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "name": {
+      "en_US": "\\i[xenon-logo] \\c[3]Cursor Teleport\\c[0]"
+    },
+    "description": {
+      "en_US": "Teleport to your cursor."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/cheat-icons.png",
+      "offX": 120,
+      "offY": 24
+    }
+  },
+  "csCheatNeutralAttack1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CHEAT_ATTACK_SPECIAL1_A",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "name": {
+      "en_US": "\\i[xenon-logo] \\c[3]Cliff Jump 1\\c[0]"
+    },
+    "description": {
+      "en_US": "Jump up and forward, enough to climb standard cliffs."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/cheat-icons.png",
+      "offX": 72,
+      "offY": 24
+    }
+  },
+  "csCheatNeutralAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CHEAT_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "name": {
+      "en_US": "\\i[xenon-logo] \\c[3]Cliff Jump 2\\c[0]"
+    },
+    "description": {
+      "en_US": "Jump up and forward, enough to climb double cliffs."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/cheat-icons.png",
+      "offX": 96,
+      "offY": 24
+    }
+  },
+  "csCheatNeutralDash1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CHEAT_DASH_SPECIAL1_A",
+        "actionCheckKey": "DASH_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "name": {
+      "en_US": "\\i[xenon-logo] \\c[3]NoClip\\c[0]"
+    },
+    "description": {
+      "en_US": "Walk through walls and disable gravity until you dash cancel."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/cheat-icons.png",
+      "offX": 48,
+      "offY": 24
+    }
+  },
+  "csCheatNeutralGuard1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CHEAT_GUARD_SPECIAL1_A",
+        "actionCheckKey": "GUARD_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "name": {
+      "en_US": "\\i[xenon-logo] \\c[3]Animation Debugger\\c[0]"
+    },
+    "description": {
+      "en_US": "Temporary slow motion for animation dev use."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/cheat-icons.png",
+      "offX": 24,
+      "offY": 24
+    }
+  }
+}

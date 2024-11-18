@@ -42,6 +42,10 @@
     "src": "patches/data/database/hexacast3-events.json"
   },
   {
+    "type": "INCLUDE",
+    "src": "patches/data/database/xpc-misc-events.json"
+  },
+  {
     "type": "EXIT"
   },
   {

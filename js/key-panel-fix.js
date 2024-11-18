@@ -1,3 +1,11 @@
+/*
+    Author: Lubkuluk
+    Created: 03/17/2024
+
+    Description: Implements tmp.onKeyPanel to determine if the player is standing on a key panel. Used
+    for Hexacast so they can use SHOOT_PROXY_PLAYER for THROW_CHARGED when this is true
+*/
+
 ig.ENTITY.KeyPanel.inject({
         setActive: function (a) {
             this.active = a;

@@ -2510,6 +2510,139 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "sentryCardBulletWallFX": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "SENTRY_CARD_BULLET_BOUNCE",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          }
+        }
+      }
+    ],
+    "sentryCardBulletSoundFX": [
+      {
+        "size": "M",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.5,
+        "global": false,
+        "loop": false,
+        "speed": 1.4,
+        "variance": 0.1,
+        "sound": "media/sound/boss/turret/fast-shot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 5,
+        "type": "WAIT"
+      }
+    ],
+    "sentryCardBulletAirKill": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "SENTRY_CARD_BULLET_CIRCLE",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          }
+        }
+      }
+    ],
+
+    "sentryCard2BulletWallFX": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "SENTRY_CARD_BULLET_BOUNCE",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      }
+    ],
+    "sentryCard2BulletSoundFX": [
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "scaleX": 0.9,
+        "scaleY": 0.9,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "volume": 0.5,
+        "global": false,
+        "loop": false,
+        "speed": 1.0,
+        "variance": 0.1,
+        "sound": "media/sound/boss/turret/fast-shot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "time": 5,
+        "type": "WAIT"
+      }
+    ],
+    "sentryCard2BulletAirKill": [
+      {
+        "type": "PLAY_ANIM",
+        "anim": "SENTRY_CARD_BULLET_CIRCLE",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      }
     ]
   }
 }

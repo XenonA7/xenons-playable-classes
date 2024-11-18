@@ -1,3 +1,45 @@
+## 2.5.0 (11/17/2024)
+### Important
+- Do not update if your quests "Fire Breathing Penguins" or "The Triblader League" are
+	currently in progress. It is best to update if these quests are complete or have
+	not been accepted yet.
+### New Content
+- New Hexacast combat art: Thundering Sparks (Shock Throw Lv.3B)
+- New Hexacast custom skill: Poison Slash (Neutral Melee Lv.2)
+- New Hexacast custom skill: Sentry Card (Neutral Throw Lv.1)
+- New Hexacast custom skill: Heavy Sentry (Neutral Throw Lv.2)
+- Added "cheat" custom skills to Lea and all XPC characters + Lea
+   * Cursor Teleport (Neutral Throw Lv.1)
+   * Cliff Jump 1 (Neutral Melee Lv.1)
+   * Cliff Jump 2 (Neutral Melee Lv.1)
+   * NoClip (Neutral Dash Lv.1)
+- Added new quest to unlock cheat custom skills
+   * Available after entering the custom skill hideout room
+   * Quest NPC located near the modding hideout landmark
+- Added \patches\data\database\xpc-misc-events.json
+- Added N and NE sprites for Hexacast 1/2/3 float animation
+### Changes
+- Removed \maps\bergen\hideout-hexa-just-platform.json
+- Tweaked icon sprites for Lea ranged Hexacast custom skills
+- Animation Debugger custom skill is now a neutral guard art instead of a shock guard art
+- Animation Debugger moved from character-specific custom skill patches to cheats-universal.json
+- Animation Debugger and all other debug custom skills are now locked behind the new quest
+- Renamed quest condition labels for existing XPC quests to match task number
+- Renamed effect whitheringSlashAir to witheringSlashAir
+- Added random top lightning offesets to Hexacast proxy thunderSmall, thunderSmallWeak, and thunderSmallZirvitarDash
+- Replaced all Hexacast instances of effect boldSmallNoShake with boldSmallNoShakeHex
+- Slightly tweaked Hexacast3 color palette
+### Fixes
+- Hexacast Arctic Blast custom skill now uses proper sword animation
+- Fixed the "Dash Master" NG+ functionality for XPC characters by adding the missing DASH_LONG action
+- Fixed frame 2 of Hexacast south walk animation having a 1 pixel offset
+- Fixed Ethereal Stance showing a circle-shaped effect instead of hexagonal
+- Active Wave Recall cards now despawn when combat begins (code by Azure Lazuline)
+- Fixed missing SET_ACCEL_SPEED in proxy magnetDeckBoltHitbox
+### Balance
+- Shine no longer benefits from Pin Body
+   * Introduced the same bug as Triblader cold guard arts (pin body disabled until element switch)
+
 ## 2.4.0 (10/21/2024)
 ### New Content
 - Added base Hexacast ranged/attack actions as Lea custom skills

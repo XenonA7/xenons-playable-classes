@@ -83,3 +83,12 @@ sc.STAT_CHANGE_SETTINGS["POISON_INFLICT-1"] = {
   icon: "stat-hack",
   grade: "stat-rank-1"
 };
+
+sc.STAT_CHANGE_SETTINGS["POISON_INFLICT-2"] = {
+  change: sc.STAT_CHANGE_TYPE.MODIFIER,
+  type: sc.STAT_PARAM_TYPE.TOXIC_HAZARD,
+  value: 99,
+  negative: false,
+  icon: "stat-hack",
+  grade: "stat-rank-3"
+};

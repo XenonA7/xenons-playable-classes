@@ -2572,27 +2572,6 @@
       "offY": 264
     }
   },
-  "csLeaAltTribladerShockGuard1A": {
-    "list": [
-      {
-        "replaceTo": "CS_ALT_TRIBLADER_GUARD_SPECIAL1_A",
-        "actionCheckKey": "GUARD_SPECIAL1"
-      }
-    ],
-    "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Lea'",
-    "name": {
-      "en_US": "\\i[xenon-logo] \\c[3]Animation Debugger\\c[0]"
-    },
-    "description": {
-      "en_US": "Temporary slow motion for animation dev use."
-    },
-    "icon": {
-      "src": "media/gui/circuit-icons.png",
-      "offX": 168,
-      "offY": 264
-    }
-  },
   "csLeaTribladerShockGuard2A": {
     "list": [
       {

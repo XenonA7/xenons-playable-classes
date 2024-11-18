@@ -1,0 +1,98 @@
+{
+  "xpc-cheat-skills-post-comment": {
+    "frequency": "ALWAYS",
+    "repeat": "ONCE",
+    "condition": "quest.xpc-cheat-skills.solved && plot.line < 40000",
+    "eventType": "PARALLEL",
+    "overrideSideMessage": false,
+    "event": [
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "message": {
+          "en_US": "Um, Lea?\\. Did anything happen just now?"
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.sergey",
+          "expression": "DEFAULT"
+        }
+      },
+      {
+        "message": {
+          "en_US": "..."
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.lea",
+          "expression": "NERVOUS"
+        }
+      },
+      {
+        "message": {
+          "en_US": "I had to step out for a few minutes and now I am seeing some strange readings."
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.sergey",
+          "expression": "AWAY"
+        }
+      },
+      {
+        "message": {
+          "en_US": "..!"
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.lea",
+          "expression": "DETERMINED"
+        }
+      },
+      {
+        "message": {
+          "en_US": "Is there anything I need to know about?"
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.sergey",
+          "expression": "NOTIFYING"
+        }
+      },
+      {
+        "message": {
+          "en_US": "[shakes head]"
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.lea",
+          "expression": "SHAKE"
+        }
+      },
+      {
+        "message": {
+          "en_US": "Hmm...\\. Ok then, it must be nothing."
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.sergey",
+          "expression": "DOWN"
+        }
+      },
+      {
+        "message": {
+          "en_US": "..."
+        },
+        "type": "SHOW_SIDE_MSG",
+        "person": {
+          "person": "main.lea",
+          "expression": "EXHAUSTED"
+        }
+      }
+    ],
+    "type": {
+      "type": "MAP_ENTERED"
+    }
+  }
+}

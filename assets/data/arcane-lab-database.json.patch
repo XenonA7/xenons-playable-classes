@@ -16,6 +16,10 @@
         "src": "patches/data/hexacast-arcane-lab-database.json"
       },
       {
+        "type": "INCLUDE",
+        "src": "patches/data/cheat-arcane-lab-database.json"
+      },
+      {
         "type": "EXIT"
       }
     ]

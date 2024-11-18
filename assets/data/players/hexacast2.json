@@ -4117,6 +4117,38 @@
           "type": "CLEAR_EFFECTS"
         },
         {
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "angleVary": 0,
+          "startDist": 50,
+          "startDistCollide": "NONE",
+          "random": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "duration": 0.05,
+          "count": 1,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderTopMarker",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 480
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "kind": "ACTION_PROXY",
+          "key": "thunderTopMarkerGroup",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -4124,17 +4156,17 @@
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
-          "target2": "SELF",
+          "target2": "TARGET",
           "target2Offset": {
             "x": 0,
             "y": 0,
-            "z": 480
+            "z": 0
           },
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "boldSmallNoShake"
+            "name": "boldSmallNoShakeHex"
           },
           "offset": {
             "x": 0,
@@ -4256,6 +4288,38 @@
           "type": "CLEAR_EFFECTS"
         },
         {
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "angleVary": 0,
+          "startDist": 50,
+          "startDistCollide": "NONE",
+          "random": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "duration": 0.05,
+          "count": 1,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderTopMarker",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 480
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "kind": "ACTION_PROXY",
+          "key": "thunderTopMarkerGroup",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -4263,17 +4327,17 @@
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
-          "target2": "SELF",
+          "target2": "TARGET",
           "target2Offset": {
             "x": 0,
             "y": 0,
-            "z": 480
+            "z": 0
           },
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "boldSmallNoShake"
+            "name": "boldSmallNoShakeHex"
           },
           "offset": {
             "x": 0,
@@ -4372,6 +4436,38 @@
           "type": "CLEAR_EFFECTS"
         },
         {
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "angleVary": 0,
+          "startDist": 50,
+          "startDistCollide": "NONE",
+          "random": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "duration": 0.05,
+          "count": 1,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderTopMarker",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 480
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "kind": "ACTION_PROXY",
+          "key": "thunderTopMarkerGroup",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -4379,17 +4475,17 @@
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
-          "target2": "SELF",
+          "target2": "TARGET",
           "target2Offset": {
             "x": 0,
             "y": 0,
-            "z": 480
+            "z": 0
           },
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "boldSmallNoShake"
+            "name": "boldSmallNoShakeHex"
           },
           "offset": {
             "x": 0,
@@ -11892,6 +11988,10 @@
         {
           "value": 2000,
           "type": "SET_SPEED"
+        },
+        {
+          "value": 2,
+          "type": "SET_ACCEL_SPEED"
         },
         {
           "value": 0.0001,
@@ -38009,6 +38109,1075 @@
       },
       "config": {},
       "type": "GENERIC"
+    },
+    "thunderingSparksSource": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "name": "tsSourceActivate",
+          "changeType": "set",
+          "type": "SET_ATTRIB_BOOL",
+          "value": false
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "startDist": 0,
+          "startDistCollide": "CLOSER",
+          "random": false,
+          "count": 1,
+          "duration": 0,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderingSparksCard",
+          "offset": {
+            "z": 0
+          }
+        },
+        {
+          "duration": 0.55,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "tsPreEndpoint"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.65,
+          "type": "WAIT"
+        },
+        {
+          "name": "tsSourceActivate",
+          "changeType": "set",
+          "type": "SET_ATTRIB_BOOL",
+          "value": true
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "tsLaserSrcFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "tsLaserSrc"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.8,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "type": "GENERIC",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
+    },
+    "thunderingSparksCard": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 192,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": true,
+                "time": 0.03,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "ball-shock",
+        "name": "shockCardDeath"
+      },
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": true,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "tsCardFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderingSparksCopyTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": true,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "tsCardFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderingSparksCardFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "PROXY_SRC",
+          "target2Align": "BOTTOM",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "fixPos": false,
+          "group": "tsPreviewFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.jungle",
+            "name": "shockbossTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "tsCardFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 1,
+          "duration": 0.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "HEAVY",
+            "element": "SHOCK",
+            "damageFactor": 2,
+            "fly": "LIGHT",
+            "status": 0.5,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "CHARGED",
+              "NO_PUZZLE"
+            ],
+            "stunSteps": [
+              {
+                "type": "START_LOCK"
+              }
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -16
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0.5,
+          "startAngle": 0.25,
+          "startDist": 40,
+          "startDistCollide": "DROP",
+          "random": true,
+          "count": 1,
+          "duration": 0.035,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "delay": 0,
+          "repeat": true,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderSmallTS",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 10,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 1000,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "time": 0.5,
+          "collideCancel": 1,
+          "stopBeforeEdge": false,
+          "type": "MOVE_FORWARD"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "group": "tsCardFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderingSparksWallImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "clearKillEffect": "true",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "ball-shock",
+            "name": "shockCardDeath"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "tsPreviewFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "tsPreEndpoint"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "condition": "entity.srcAttrib.tsSourceActivate",
+          "maxTime": 2,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "group": "tsPreviewFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": true,
+          "group": "tsLaserSrcFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "tsLaserSrc"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          },
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": true,
+          "target2": "PROXY_SRC",
+          "target2Align": "CENTER",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderingSparksLightning"
+          }
+        },
+        {
+          "type": "CLEAR_STUN_LOCKED"
+        },
+        {
+          "value": true,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "angleVary": 0,
+          "startDist": 0,
+          "startDistCollide": "NONE",
+          "count": 1,
+          "duration": 0.1,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderingSparksHitbox",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "angleVary": 0,
+          "startDist": 0,
+          "startDistCollide": "NONE",
+          "count": 1,
+          "duration": 0.1,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderingSparksHitboxAlt",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.75,
+          "type": "WAIT"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "group": "tsLaserSrcFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "value": 2000,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 0.0001,
+          "type": "SET_BOUNCINESS"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 1,
+          "duration": 0.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "SHOCK",
+            "damageFactor": 2,
+            "fly": "MASSIVE",
+            "status": 0.5,
+            "reverse": true,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "CHARGED",
+              "NO_PUZZLE"
+            ],
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -16
+          }
+        },
+        {
+          "min": 0,
+          "max": 24,
+          "maxTime": 0.5,
+          "forceTime": false,
+          "rotateSpeed": 30,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": null,
+      "label": "",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "collType": "PROJECTILE",
+        "maxVel": 1000,
+        "shadow": 16,
+        "zGravityFactor": 0,
+        "bounciness": 0.0001
+      },
+      "type": "GENERIC"
+    },
+    "thunderSmallTS": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "time": 1.3,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldPre2HexFast"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "angleVary": 0,
+          "startDist": 50,
+          "startDistCollide": "NONE",
+          "random": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": true,
+          "duration": 0.05,
+          "count": 1,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "thunderTopMarker",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 480
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "kind": "ACTION_PROXY",
+          "key": "thunderTopMarkerGroup",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "TARGET",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "boldSmallNoShakeHex"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 0,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "fly": "LIGHT",
+            "element": "SHOCK",
+            "damageFactor": 1.25,
+            "reverse": true,
+            "status": 0,
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.4,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "NONE",
+        "floatVariance": 0,
+        "flyHeight": 1
+      },
+      "type": "GENERIC"
+    },
+    "thunderTopMarker": {
+      "animation": {},
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "thunderTopMarkerGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "thunderingSparksHitbox": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 2000,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 0.0001,
+          "type": "SET_BOUNCINESS"
+        },
+        {
+          "value": 5,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "immediately": true,
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 36,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 1,
+          "duration": 0.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "HEAVY",
+            "element": "SHOCK",
+            "damageFactor": 0.45,
+            "status": 1,
+            "fly": "LIGHT",
+            "spFactor": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -16
+          }
+        },
+        {
+          "min": 0,
+          "max": 48,
+          "maxTime": 0.25,
+          "forceTime": false,
+          "rotateSpeed": 0,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "group": "",
+      "type": "GENERIC",
+      "timeBoni": null,
+      "behaviors": [],
+      "config": {
+        "collType": "NONE",
+        "maxVel": 4000,
+        "zGravityFactor": 0
+      }
+    },
+    "thunderingSparksHitboxAlt": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 2000,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 0.0001,
+          "type": "SET_BOUNCINESS"
+        },
+        {
+          "value": 5,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "immediately": true,
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 36,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 1,
+          "duration": 0.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "HEAVY",
+            "element": "SHOCK",
+            "damageFactor": 0.45,
+            "status": 1,
+            "fly": "LIGHT",
+            "reverse": true,
+            "spFactor": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -16
+          }
+        },
+        {
+          "min": 0,
+          "max": 48,
+          "maxTime": 0.25,
+          "forceTime": false,
+          "rotateSpeed": 0,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "group": "",
+      "type": "GENERIC",
+      "timeBoni": null,
+      "behaviors": [],
+      "config": {
+        "collType": "NONE",
+        "maxVel": 4000,
+        "zGravityFactor": 0
+      }
     }
   },
   "actions": {
@@ -43486,6 +44655,206 @@
           }
         ]
       },
+      "DASH_LONG": {
+        "dmgType": "",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "volume": 0.9,
+                "global": false,
+                "loop": false,
+                "type": "PLAY_SOUND",
+                "sound": "media/sound/battle/dash-3.ogg"
+              },
+              {
+                "factor": 3,
+                "type": "SET_PLAYER_INVINCIBLE"
+              },
+              {
+                "followUp": "aimMove",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dash"
+              },
+              {
+                "value": false,
+                "type": "SET_JUMPING"
+              },
+              {
+                "value": 400,
+                "type": "SET_SPEED"
+              },
+              {
+                "value": 2,
+                "type": "SET_ACCEL_SPEED"
+              },
+              {
+                "value": "IGNORE",
+                "type": "SET_COLL_TYPE"
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0,
+                "angleVary": 0,
+                "startDistCollide": "NONE",
+                "random": false,
+                "duration": 0.035,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": false,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": true,
+                "count": 1,
+                "maxGroundDistance": 16,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "darkFireGround",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "dashBurst"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 3,
+                  "z": 6
+                }
+              },
+              {
+                "dir": {
+                  "actorAttrib": "dashDir"
+                },
+                "time": 0.05,
+                "stopBeforeEdge": false,
+                "type": "MOVE_TO_DIR"
+              },
+              {
+                "value": "VIRTUAL",
+                "type": "SET_COLL_TYPE"
+              },
+              {
+                "dir": {
+                  "actorAttrib": "dashDir"
+                },
+                "time": 0.11,
+                "stopBeforeEdge": false,
+                "type": "MOVE_TO_DIR"
+              },
+              {
+                "type": "STOP_REPEATING_FORCE"
+              }
+            ],
+            "elseStep": [
+              {
+                "volume": 0.9,
+                "global": false,
+                "loop": false,
+                "type": "PLAY_SOUND",
+                "sound": "media/sound/battle/dash-3.ogg"
+              },
+              {
+                "factor": 3,
+                "type": "SET_PLAYER_INVINCIBLE"
+              },
+              {
+                "followUp": "aimMove",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dash"
+              },
+              {
+                "value": false,
+                "type": "SET_JUMPING"
+              },
+              {
+                "value": 320,
+                "type": "SET_SPEED"
+              },
+              {
+                "value": 2,
+                "type": "SET_ACCEL_SPEED"
+              },
+              {
+                "value": "IGNORE",
+                "type": "SET_COLL_TYPE"
+              },
+              {
+                "duration": 0.2,
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "dust",
+                  "name": "line"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 3,
+                  "z": 6
+                }
+              },
+              {
+                "dir": {
+                  "actorAttrib": "dashDir"
+                },
+                "time": 0.05,
+                "stopBeforeEdge": false,
+                "type": "MOVE_TO_DIR"
+              },
+              {
+                "value": "VIRTUAL",
+                "type": "SET_COLL_TYPE"
+              },
+              {
+                "dir": {
+                  "actorAttrib": "dashDir"
+                },
+                "time": 0.11,
+                "stopBeforeEdge": false,
+                "type": "MOVE_TO_DIR"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "aim"
+              },
+              {
+                "type": "WAIT",
+                "time": 0.2
+              }
+            ]
+          }
+        ]
+      },
       "GUARD": {
         "steps": [
           {
@@ -45801,6 +47170,10 @@
           {
             "value": -1,
             "type": "SET_WEIGHT"
+          },
+          {
+            "value": 0,
+            "type": "SET_ALL_SPIKE_DAMAGE"
           },
           {
             "name": "shineShield",
@@ -54037,6 +55410,353 @@
           },
           {
             "time": 0.2,
+            "type": "WAIT"
+          }
+        ]
+      },
+      "THROW_SPECIAL3_B": {
+        "name": {
+          "en_US": "Thundering Sparks"
+        },
+        "description": {
+          "en_US": "Throw out two piercing spell cards that trace a massive lightning path behind them."
+        },
+        "dmgType": "RANGED",
+        "stunType": "LOCK",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "group": "chargeFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.shock",
+              "name": "thunderingSparksCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "group": "chargeFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.hexacastXPC",
+              "name": "thunderingSparksChargeHexagons"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "followUp": "sweepRevEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "time": 0.21,
+            "type": "WAIT"
+          },
+          {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 3,
+              "z": 6
+            }
+          },
+          {
+            "group": "chargeFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "group": "ts-trail",
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.shock",
+              "name": "thunderingSparksAura"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": 2,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "value": 250,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "value": 1,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.shock",
+              "name": "thunderingSparksThrowRev"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.02,
+            "startDist": 24,
+            "startDistCollide": "CLOSER",
+            "random": true,
+            "count": 1,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "thunderingSparksSource",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "followUp": "sweepEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "time": 0.21,
+            "type": "WAIT"
+          },
+          {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 3,
+              "z": 6
+            }
+          },
+          {
+            "value": 2,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "value": 250,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "value": 1,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.shock",
+              "name": "thunderingSparksThrow"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.02,
+            "startDist": 24,
+            "startDistCollide": "CLOSER",
+            "random": true,
+            "count": 1,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "thunderingSparksSource",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "group": "ts-trail",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "time": 0.4,
             "type": "WAIT"
           }
         ]
@@ -62951,8 +64671,8 @@
             "fixPos": true,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "enemies.glitch-boss",
-              "name": "frobbitLand"
+              "sheet": "specials.wave",
+              "name": "etherealStanceExplode"
             },
             "offset": {
               "x": 0,

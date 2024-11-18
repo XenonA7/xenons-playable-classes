@@ -244,5 +244,55 @@
         1
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SENTRY_CARD_BULLET_BOUNCE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "width": 16,
+        "height": 16,
+        "offX": 160,
+        "offY": 288
+      },
+      "time": 0.05,
+      "repeat": false,
+      "pivot": {
+        "x": 8,
+        "y": 0
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SENTRY_CARD_BULLET_CIRCLE",
+      "sheet": {
+        "src": "media/entity/enemy/turret-rhombus.png",
+        "width": 16,
+        "height": 16,
+        "offX": 160,
+        "offY": 304
+      },
+      "time": 0.05,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
   }
 ]

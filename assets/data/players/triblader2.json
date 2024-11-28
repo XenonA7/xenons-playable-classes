@@ -44107,10 +44107,6 @@
             "type": "SET_FACE"
           },
           {
-            "value": 0,
-            "type": "SET_ALL_SPIKE_DAMAGE"
-          },
-          {
             "duration": -1,
             "align": "BOTTOM",
             "rotateFace": 0,
@@ -44211,6 +44207,10 @@
           {
             "name": "loopStart",
             "type": "LABEL"
+          },
+          {
+            "duration": 0.5,
+            "type": "DISABLE_SPIKEDMG"
           },
           {
             "attribName": "loops",
@@ -44868,10 +44868,6 @@
             "type": "PLAY_SOUND"
           },
           {
-            "value": 0,
-            "type": "SET_ALL_SPIKE_DAMAGE"
-          },
-          {
             "duration": -1,
             "align": "BOTTOM",
             "rotateFace": 0,
@@ -45077,6 +45073,10 @@
                 "range": 1
               }
             }
+          },
+          {
+            "duration": 0.5,
+            "type": "DISABLE_SPIKEDMG"
           },
           {
             "value": 0.02,
@@ -45907,10 +45907,6 @@
             "type": "PLAY_SOUND"
           },
           {
-            "value": 0,
-            "type": "SET_ALL_SPIKE_DAMAGE"
-          },
-          {
             "duration": -1,
             "align": "BOTTOM",
             "rotateFace": 0,
@@ -46029,6 +46025,10 @@
                 "range": 1
               }
             }
+          },
+          {
+            "duration": 0.5,
+            "type": "DISABLE_SPIKEDMG"
           },
           {
             "type": "HEAL_STATUS"
@@ -55772,6 +55772,10 @@
               "y": 0,
               "z": 0
             }
+          },
+          {
+            "duration": 0.5,
+            "type": "DISABLE_HEALTHBAR"
           },
           {
             "value": 0,

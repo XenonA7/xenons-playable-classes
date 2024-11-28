@@ -57,12 +57,11 @@ https://github.com/2hh8899/ArcaneLab/tree/20c24d5a72e46d08a067f5a17486533b672c70
 # **Special Thanks:**
 - **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations, help with Hexacast spritework
 - **Krypek:** JS support, code for better handling of multi-opponent duels
-- **Nax:** JS support
 - **Alyxia:** JS support, author of AlyBox
 - **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
 - **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
 - **Lubkuluk**: Patch for Hexacast key panel functionality
-- **Azure Lazuline**: Patch for character-specific charge delays
+- **Azure Lazuline**: JS support, many small code features and patches
 - **Orco Pixelado**: Triblader menu portrait artwork
 - **Laz**: Gameplay testing, created music used for XPC hideout area
 

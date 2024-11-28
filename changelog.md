@@ -1,3 +1,34 @@
+## 2.6.0 (11/27/2024)
+### New Content
+- New Hexacast combat art: Snow Lance (Cold Melee Lv.1A)
+- New Hexacast combat art: Icicle Lance (Cold Melee Lv.2A)
+- Added action step DISABLE_SPIKEDMG (code by Azure Lazuline)
+- Added action step DISABLE_HEALTHBAR (code by Azure Lazuline)
+### Changes
+- Deleted broken action step SET_ALL_SPIKE_DAMAGE
+- Sorted js files according to contributors
+- Updated in-game mod credits
+- Improved sprite symmetry in lighter-particle-big-hexagon.png
+- Tweaked rumble, audio, screen flash for effect thunderingSparksLightning
+- Added more emphasis to effect sentryCard2Shoot
+- Minor Apollo dialogue edits to "cheat codes" quest
+- Renamed effect icePillarTiny to icePillarTinyExplode
+- Improved player invisiblity by disabling healthbar in the following arts (special thanks to Azure Lazuline):
+   * Phase Jump
+   * Ethereal Stance
+   * Shock Surge
+   * Wave Recall
+   * Zir'vitar Strike
+### Fixes
+- Fixed loop timing for effect fireBarrageHexagons
+- Fixed Jolt Mortar trail effect starting too early
+- Added "guardable": "NEVER" property to Healing Burst
+- Fixed pin body issue for the following arts (special thanks to Azure Lazuline):
+   * Shine
+   * Ice Brace
+   * Stasis Stance
+   * Tower of Tranquility
+
 ## 2.5.0 (11/17/2024)
 ### Important
 - Do not update if your quests "Fire Breathing Penguins" or "The Triblader League" are
@@ -8,7 +39,7 @@
 - New Hexacast custom skill: Poison Slash (Neutral Melee Lv.2)
 - New Hexacast custom skill: Sentry Card (Neutral Throw Lv.1)
 - New Hexacast custom skill: Heavy Sentry (Neutral Throw Lv.2)
-- Added "cheat" custom skills to Lea and all XPC characters + Lea
+- Added "cheat" custom skills to Lea and all XPC characters
    * Cursor Teleport (Neutral Throw Lv.1)
    * Cliff Jump 1 (Neutral Melee Lv.1)
    * Cliff Jump 2 (Neutral Melee Lv.1)

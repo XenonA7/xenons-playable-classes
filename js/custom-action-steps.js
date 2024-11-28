@@ -95,27 +95,7 @@ ig.module("game.feature.combat.xpc-combat-action-steps").requires("game.feature.
       return false
     }
   });
-
-  ig.ACTION_STEP.SET_ALL_SPIKE_DAMAGE = ig.ActionStepBase.extend({
-    value: null,
-    _wm: new ig.Config({
-      attributes: {
-        value: {
-          _type: "Number",
-          _info: "Value for spike damage factor"
-        }
-      }
-    }),
-    init: function (a) {
-      assertContent(a, "value");
-      this.value = a.value
-    },
-    run: function (a) {
-      a.spikeDmg.tmpFactor = this.value;
-      a.spikeDmg.baseFactor = this.value;
-      return true
-    }
-  });
+  
 
   //Hexacast
 

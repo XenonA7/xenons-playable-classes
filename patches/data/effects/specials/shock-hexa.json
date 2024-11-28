@@ -18612,7 +18612,7 @@
         "volume": 1.1,
         "global": false,
         "loop": false,
-        "speed": 1,
+        "speed": 1.2,
         "sound": "media/sound/battle/airon/shock/hit-shock-massive.ogg",
         "type": "PLAY_SOUND"
       },
@@ -18625,15 +18625,32 @@
         "type": "PLAY_SOUND"
       },
       {
+        "volume": 0.65,
+        "global": false,
+        "loop": false,
+        "speed": 0.9,
+        "variance": 0.075,
+        "sound": "media/sound/battle/hexacast/jacket-shoot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
         "rumbleType": "RANDOM",
-        "power": "STRONG",
-        "speed": "FAST",
+        "power": "STRONGEST",
+        "speed": "FASTER",
         "duration": 0.3,
         "fade": true,
         "type": "RUMBLE"
       },
       {
-        "color": "#120212",
+        "rumbleType": "RANDOM",
+        "power": "STRONG",
+        "speed": "FASTER",
+        "duration": 0.8,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "color": "#2F092F",
         "fadeIn": 0.05,
         "fadeOut": 0.3,
         "duration": -1,

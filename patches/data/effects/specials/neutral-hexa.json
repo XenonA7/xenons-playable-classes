@@ -7659,6 +7659,45 @@
         "type": "LIGHT"
       },
       {
+        "rumbleType": "RANDOM",
+        "power": "WEAKER",
+        "speed": "FAST",
+        "duration": 0.1,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.5,
+          "start": {
+            "value": 0,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.1,
+              "y": 1.1
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 0.2,
+        "anim": "NEUTRAL_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
         "type": "LOOP_START"
       },
       {

@@ -3459,7 +3459,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "ball-shock",
-            "name": "shockCardSmallTrail"
+            "name": "joltMortarCardTrail"
           },
           "offset": {
             "x": 0,
@@ -5590,7 +5590,7 @@
             "element": "WAVE",
             "damageFactor": 0,
             "reverse": false,
-            "guardable": "",
+            "guardable": "NEVER",
             "skillBonus": "",
             "limiter": "NO_DAMAGE",
             "hints": [

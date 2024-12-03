@@ -31,6 +31,6 @@ ig.EVENT_STEP.SET_PARTY_MEMBER_LEVEL_VAR = ig.EventStepBase.extend({
     this.updateEquipment = a.updateEquipment || false
   },
   start: function () {
-    sc.party.getPartyMemberModel(this.member).setLevel(ig.Event.getExpressionValue(this.level), this.exp, this.updateEquipment, true)
+    sc.party.getPartyMemberModel(this.member).setLevel(Number(ig.Event.getExpressionValue(this.level)), this.exp, this.updateEquipment, true)
   }
 });

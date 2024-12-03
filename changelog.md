@@ -1,3 +1,8 @@
+## 2.6.1 (12/03/2024)
+### Fixes
+- Fixed Triblader2 level 99 party member (thanks to Krypek and others)
+   * This is not retroactive to existing bugged save files
+
 ## 2.6.0 (11/27/2024)
 ### New Content
 - New Hexacast combat art: Snow Lance (Cold Melee Lv.1A)

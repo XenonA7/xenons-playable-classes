@@ -1,3 +1,37 @@
+## 2.7.0 (12/09/2024)
+### General
+- Hexacast litter mod updated to 2.1.0
+### New Content
+- Added shadowflame variants to all Hexacast heat arts
+- Added new penguin-heat-alt enemy (modified sprites by Orco Pixelado), unique attacks not yet implemented
+- Added shadowflame-alts.json efffect sheet
+### Changes
+- Reworked Flamepeng element resist values (now mostly weak to cold, not shock)
+- Added "kills" value to flamepeng database entry
+- Debris particles in effect meteorFinalExplode changed to guiSprites
+- Proxy thunderSmallTS now uses new effect boldSmallTS instead of boldSmallNoShakeHex
+- Reduced shadowflame melee travel distance
+- Moved the following effects to sheet shadowflame-alts
+  * firebrandAttackDark 
+  * augmentedFlamesCharge
+  * augmentedFlamesBoom
+- Reduced particle count for effect darkFireBoom
+### Fixes
+- Fixed triblader JADC - no longer stops before edge on standard melee attacks
+- Fixed hexacast JADC
+- Fixed shadowflame JADC
+- Fixed a duplicate json entry for for effect thunderingSparksLightning
+- Fixed duplicate grouping for effect icicleLancePlayerHexagons
+- Fixed particle delay mismatch in effect icicleLancePillarHexagons
+- Fixed shadowflame melee finisher radius being too large
+### Balance
+- Shadowflame Firebrand is now the powered-up version of Firebrand
+- Icicle Lance start delay increased from 0.35s to 0.42s
+- Icicle Lance width decreased from 32 to 24
+- Icicle Lance final icicles no longer stun enemies
+- Shadowflame melee attack rate increased
+- Shadowflame melee attack damage slightly decreased
+
 ## 2.6.1 (12/03/2024)
 ### Fixes
 - Fixed Triblader2 level 99 party member (thanks to Krypek and others)

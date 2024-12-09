@@ -29400,7 +29400,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -29494,7 +29494,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -29589,7 +29589,7 @@
           },
           {
             "time": 0.15,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
           {
@@ -29601,7 +29601,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -29613,7 +29613,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -33612,7 +33612,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -33706,7 +33706,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -33801,7 +33801,7 @@
           },
           {
             "time": 0.15,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
           {
@@ -33813,7 +33813,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -33825,7 +33825,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -40154,7 +40154,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -40248,7 +40248,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -40343,7 +40343,7 @@
           },
           {
             "time": 0.15,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
           {
@@ -40355,7 +40355,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -40367,7 +40367,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -46711,7 +46711,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -46805,7 +46805,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -46900,7 +46900,7 @@
           },
           {
             "time": 0.15,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
           {
@@ -46912,7 +46912,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -46924,7 +46924,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -53632,7 +53632,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -53726,7 +53726,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -53821,7 +53821,7 @@
           },
           {
             "time": 0.15,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
           {
@@ -53833,7 +53833,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {
@@ -53845,7 +53845,7 @@
               "actorAttrib": "dashDir"
             },
             "time": 0.1,
-            "stopBeforeEdge": true,
+            "stopBeforeEdge": false,
             "type": "MOVE_TO_DIR"
           },
           {

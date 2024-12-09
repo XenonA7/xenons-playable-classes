@@ -12066,6 +12066,7 @@
         "startDist": 28,
         "useTargetAngle": true,
         "moveDist": 0,
+        "clockwise": true,
         "keySpline": "EASE_IN_OUT",
         "collision": false,
         "pAlpha": {
@@ -12111,6 +12112,7 @@
         "startDist": 28,
         "useTargetAngle": true,
         "moveDist": 0,
+        "clockwise": true,
         "keySpline": "EASE_IN_OUT",
         "collision": false,
         "pAlpha": {
@@ -12144,7 +12146,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 0.3,
+        "particleDuration": 0.4,
         "anim": "HEXA_COLD",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },

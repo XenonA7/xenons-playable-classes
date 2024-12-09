@@ -2447,8 +2447,8 @@
         "type": "PLAY_SOUND"
       },
       {
-        "scaleX": 0.65,
-        "scaleY": 0.65,
+        "scaleX": 0.55,
+        "scaleY": 0.55,
         "duration": 0,
         "type": "CHANGE_SCALE"
       },
@@ -2464,13 +2464,13 @@
         },
         "pScale": {
           "init": {
-            "x": 0.5,
-            "y": 0.5
+            "x": 0.4,
+            "y": 0.4
           },
           "start": {
             "value": {
-              "x": 1.5,
-              "y": 1.5
+              "x": 1.4,
+              "y": 1.4
             },
             "spline": "EASE_OUT"
           }
@@ -2520,7 +2520,7 @@
         "centralAngle": 1,
         "startDist": 8,
         "random": true,
-        "moveDist": 32,
+        "moveDist": 28,
         "moveVariance": 4,
         "keySpline": "EASE_OUT",
         "inverse": false,
@@ -2548,7 +2548,7 @@
         "centralAngle": 1,
         "startDist": 16,
         "uniformRandom": 1,
-        "moveDist": 48,
+        "moveDist": 40,
         "moveVariance": 4,
         "keySpline": "EASE_OUT",
         "inverse": false,
@@ -2576,7 +2576,7 @@
         "centralAngle": 1,
         "startDist": 24,
         "uniformRandom": 1,
-        "moveDist": 32,
+        "moveDist": 28,
         "moveVariance": 4,
         "keySpline": "EASE_OUT",
         "inverse": false,
@@ -2666,6 +2666,38 @@
         "type": "PLAY_SOUND"
       },
       {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.3,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.2,
+              "y": 1.2
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "angleVary": 0,
+        "moveWithTarget": 1,
+        "particleDuration": 0.8,
+        "anim": "COLD_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
         "type": "LOOP_START"
       },
       {
@@ -2681,9 +2713,9 @@
         "numParticles": 8,
         "duration": 0.2,
         "centralAngle": 1,
-        "startDist": 8,
+        "startDist": 6,
         "random": true,
-        "moveDist": 32,
+        "moveDist": 28,
         "moveVariance": 4,
         "keySpline": "EASE_OUT",
         "inverse": false,
@@ -2734,8 +2766,8 @@
         },
         "pScale": {
           "init": {
-            "x": 1.0,
-            "y": 1.0
+            "x": 0.85,
+            "y": 0.85
           },
           "end": {
             "value": {
@@ -2786,8 +2818,8 @@
         },
         "pScale": {
           "init": {
-            "x": 1.0,
-            "y": 1.0
+            "x": 0.85,
+            "y": 0.85
           },
           "end": {
             "value": {

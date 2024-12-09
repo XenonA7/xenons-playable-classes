@@ -28671,8 +28671,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },
@@ -28749,7 +28749,7 @@
                   "type": "HEAVY",
                   "element": "HEAT",
                   "visualType": "MEDIUM",
-                  "damageFactor": 1.35,
+                  "damageFactor": 1.20,
                   "reverse": false,
                   "fly": "HEAVY",
                   "guardable": "",
@@ -28764,7 +28764,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 125,
                 "type": "SET_SPEED"
               },
               {
@@ -28772,7 +28772,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.1,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -28835,7 +28835,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -30149,7 +30149,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -30177,8 +30177,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },
@@ -30255,7 +30255,7 @@
                   "type": "HEAVY",
                   "element": "HEAT",
                   "visualType": "MEDIUM",
-                  "damageFactor": 1.35,
+                  "damageFactor": 1.20,
                   "reverse": false,
                   "fly": "HEAVY",
                   "guardable": "",
@@ -30270,7 +30270,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 125,
                 "type": "SET_SPEED"
               },
               {
@@ -30278,7 +30278,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.1,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -30341,7 +30341,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -31655,7 +31655,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -31773,7 +31773,7 @@
               },
               {
                 "align": "BOTTOM",
-                "radius": 72,
+                "radius": 64,
                 "yScale": 0,
                 "zHeight": 0,
                 "centralAngle": 1.5,
@@ -31792,7 +31792,7 @@
                 "attack": {
                   "type": "HEAVY",
                   "element": "HEAT",
-                  "damageFactor": 1.45,
+                  "damageFactor": 1.25,
                   "fly": "MASSIVE+",
                   "reverse": false,
                   "spFactor": 0,
@@ -31812,7 +31812,7 @@
               },
               {
                 "time": 0.15,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_FORWARD"
               },
               {
@@ -31824,7 +31824,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.2,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -31887,7 +31887,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -33198,7 +33198,7 @@
                   },
                   {
                     "time": 0.15,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_FORWARD"
                   },
                   {
@@ -33210,7 +33210,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -33222,7 +33222,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -33260,8 +33260,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },
@@ -33338,7 +33338,7 @@
                   "type": "HEAVY",
                   "element": "HEAT",
                   "visualType": "MEDIUM",
-                  "damageFactor": 1.35,
+                  "damageFactor": 1.20,
                   "reverse": false,
                   "fly": "HEAVY",
                   "guardable": "",
@@ -33353,7 +33353,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 125,
                 "type": "SET_SPEED"
               },
               {
@@ -33361,7 +33361,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.1,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -33424,7 +33424,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -34738,7 +34738,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -34766,8 +34766,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },
@@ -34844,7 +34844,7 @@
                   "type": "HEAVY",
                   "element": "HEAT",
                   "visualType": "MEDIUM",
-                  "damageFactor": 1.35,
+                  "damageFactor": 1.20,
                   "reverse": false,
                   "fly": "HEAVY",
                   "guardable": "",
@@ -34859,7 +34859,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 125,
                 "type": "SET_SPEED"
               },
               {
@@ -34867,7 +34867,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.1,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -34930,7 +34930,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -36244,7 +36244,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -36362,7 +36362,7 @@
               },
               {
                 "align": "BOTTOM",
-                "radius": 72,
+                "radius": 64,
                 "yScale": 0,
                 "zHeight": 0,
                 "centralAngle": 1.5,
@@ -36381,7 +36381,7 @@
                 "attack": {
                   "type": "HEAVY",
                   "element": "HEAT",
-                  "damageFactor": 1.45,
+                  "damageFactor": 1.25,
                   "fly": "MASSIVE+",
                   "reverse": false,
                   "spFactor": 0,
@@ -36401,7 +36401,7 @@
               },
               {
                 "time": 0.15,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_FORWARD"
               },
               {
@@ -36413,7 +36413,7 @@
                   "actorAttrib": "dashDir"
                 },
                 "time": 0.2,
-                "stopBeforeEdge": true,
+                "stopBeforeEdge": false,
                 "type": "MOVE_TO_DIR"
               },
               {
@@ -36476,7 +36476,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.05,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -37787,7 +37787,7 @@
                   },
                   {
                     "time": 0.15,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_FORWARD"
                   },
                   {
@@ -37799,7 +37799,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {
@@ -37811,7 +37811,7 @@
                       "actorAttrib": "dashDir"
                     },
                     "time": 0.1,
-                    "stopBeforeEdge": true,
+                    "stopBeforeEdge": false,
                     "type": "MOVE_TO_DIR"
                   },
                   {

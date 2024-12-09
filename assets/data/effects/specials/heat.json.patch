@@ -176,9 +176,6 @@
       ]
     }
   },
-
-
-
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
@@ -497,30 +494,72 @@
     "index": 0,
     "content": {
       "name": "BIGFIRE_NO_GUI",
-        "sheet": {
-          "src": "media/entity/effects/heat.png",
-          "xCount": 6,
-          "offX": 0,
-          "offY": 0,
-          "width": 48,
-          "height": 48
-        },
-        "guiSprites": false,
-        "time": 0.033,
-        "frames": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        ]
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 0,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "time": 0.033,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEBRISHEAT1_GUI",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "centerPivot": false,
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DEBRISHEAT2_GUI",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png ",
+        "offX": 0,
+        "offY": 8,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": true,
+      "centerPivot": false,
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0
+      ]
     }
   }
 ]

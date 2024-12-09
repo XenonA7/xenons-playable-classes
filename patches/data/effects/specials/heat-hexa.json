@@ -9937,7 +9937,7 @@
         "type": "LIGHT"
       },
       {
-        "color": "4a160c",
+        "color": "#4a160c",
         "alpha": 0.9,
         "fadeIn": 0.05,
         "fadeOut": 0.6,
@@ -11624,7 +11624,7 @@
         "useTargetAngle": false,
         "keepAngleSync": false,
         "pAlpha": {
-          "init": 0.9,
+          "init": 1,
           "start": {
             "value": 0,
             "spline": ""
@@ -11691,8 +11691,8 @@
           "y": 0,
           "z": 0
         },
-        "minSpeed": 120,
-        "maxSpeed": 180,
+        "minSpeed": 140,
+        "maxSpeed": 200,
         "minZSpeed": 250,
         "maxZSpeed": 350,
         "zBounciness": 0.5,
@@ -11724,14 +11724,14 @@
           "start": {
             "value": 0,
             "time": 1,
-            "spline": ""
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "angleVary": 1,
         "cancelable": false,
-        "anim": "DEBRISHEAT1",
+        "anim": "DEBRISHEAT1_GUI",
         "type": "DEBRIS_CIRCLE"
       },
       {
@@ -11775,18 +11775,18 @@
           }
         },
         "pRotate": {
-          "init": -0.5,
+          "init": 0,
           "start": {
-            "value": 0,
+            "value": -0.5,
             "time": 1,
-            "spline": ""
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "angleVary": 1,
         "cancelable": false,
-        "anim": "DEBRISHEAT2",
+        "anim": "DEBRISHEAT2_GUI",
         "type": "DEBRIS_CIRCLE"
       },
       {
@@ -11801,8 +11801,8 @@
           "y": 0,
           "z": 0
         },
-        "minSpeed": 30,
-        "maxSpeed": 80,
+        "minSpeed": 50,
+        "maxSpeed": 150,
         "minZSpeed": 190,
         "maxZSpeed": 260,
         "zBounciness": 0.5,
@@ -11834,14 +11834,14 @@
           "start": {
             "value": 0,
             "time": 1,
-            "spline": ""
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "angleVary": 1,
         "cancelable": false,
-        "anim": "DEBRISHEAT1",
+        "anim": "DEBRISHEAT1_GUI",
         "type": "DEBRIS_CIRCLE"
       },
       {
@@ -11856,8 +11856,8 @@
           "y": 0,
           "z": 0
         },
-        "minSpeed": 80,
-        "maxSpeed": 120,
+        "minSpeed": 100,
+        "maxSpeed": 180,
         "minZSpeed": 190,
         "maxZSpeed": 260,
         "zBounciness": 0.5,
@@ -11885,18 +11885,18 @@
           }
         },
         "pRotate": {
-          "init": -0.5,
+          "init": 0,
           "start": {
-            "value": 0,
+            "value": -0.5,
             "time": 1,
-            "spline": ""
+            "spline": "EASE_OUT"
           }
         },
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "angleVary": 1,
         "cancelable": false,
-        "anim": "DEBRISHEAT2",
+        "anim": "DEBRISHEAT2_GUI",
         "type": "DEBRIS_CIRCLE"
       },
       {
@@ -12064,7 +12064,7 @@
           }
         },
         "moveWithTarget": 0.2,
-        "particleDuration": 0.6,
+        "particleDuration": 0.65,
         "angleVary": 0,
         "cancelable": false,
         "anim": "GOD_HEXAGON_HEAT",

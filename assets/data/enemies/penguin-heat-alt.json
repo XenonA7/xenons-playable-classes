@@ -1,11 +1,11 @@
 {
-  "level": 17,
-  "boostedLevel": 59,
+  "level": 26,
+  "boostedLevel": 62,
   "params": {
-    "hp": 777,
-    "attack": 62,
-    "defense": 71,
-    "focus": 69,
+    "hp": 1250,
+    "attack": 105,
+    "defense": 115,
+    "focus": 100,
     "elemFactor": [
       0.8,
       1.2,
@@ -25,16 +25,16 @@
       1
     ]
   },
-  "credit": 105,
-  "exp": 40,
+  "credit": 150,
+  "exp": 30,
   "maxSp": 0,
   "enduranceScale": 2,
   "itemDrops": [],
   "healDropRate": 0,
   "targetDetect": {
-    "detectDistance": 64,
+    "detectDistance": 0,
     "loseDistance": 320,
-    "notifyNeighbourRadius": 64,
+    "notifyNeighbourRadius": 120,
     "onDistance": true
   },
   "boss": false,
@@ -49,7 +49,7 @@
     "x": 2,
     "y": 2
   },
-  "anims": "enemies.penguin-heat",
+  "anims": "enemies.penguin-heat-alt",
   "defaultState": "IDLE",
   "walkConfigs": {
     "normal": {

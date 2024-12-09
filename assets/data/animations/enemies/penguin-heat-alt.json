@@ -1,0 +1,195 @@
+{
+  "DOCTYPE": "MULTI_DIR_ANIMATION",
+  "namedSheets": {
+    "move": {
+      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "xCount": 10,
+      "offX": 0,
+      "offY": 0,
+      "width": 32,
+      "height": 32
+    },
+    "poses": {
+      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "xCount": 10,
+      "offX": 0,
+      "offY": 192,
+      "width": 32,
+      "height": 32
+    },
+    "move2": {
+      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "xCount": 10,
+      "offX": 0,
+      "offY": 96,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "shapeType": "Y_FLAT",
+  "SUB": [
+    {
+      "dirs": "6",
+      "tileOffsets": [
+        0,
+        10,
+        20,
+        20,
+        10,
+        0
+      ],
+      "flipX": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "sheet": "move",
+      "SUB": [
+        {
+          "name": "idle",
+          "time": 0.1,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "move",
+          "time": 0.15,
+          "frames": [
+            2,
+            3,
+            4,
+            1
+          ],
+          "repeat": true
+        },
+        {
+          "name": "damage",
+          "time": 0.05,
+          "frames": [
+            9,
+            9
+          ],
+          "framesGfxOffset": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "repeat": true
+        },
+        {
+          "name": "aim",
+          "time": 0.05,
+          "frames": [
+            5,
+            6
+          ]
+        },
+        {
+          "name": "throw",
+          "time": 0.05,
+          "frames": [
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "dirs": "6",
+      "tileOffsets": [
+        0,
+        10,
+        20,
+        20,
+        10,
+        0
+      ],
+      "flipX": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "sheet": "move2",
+      "SUB": [
+        {
+          "name": "run",
+          "time": 0.1,
+          "frames": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "repeat": true
+        },
+        {
+          "name": "runRev",
+          "time": 0.1,
+          "frames": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "repeat": true
+        },
+        {
+          "name": "jump",
+          "time": 0.1,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "fall",
+          "time": 0.1,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "slide",
+          "time": 0.1,
+          "frames": [
+            4
+          ],
+          "gfxOffset": {
+            "x": 0,
+            "y": 2
+          }
+        }
+      ]
+    },
+    {
+      "dirs": "2",
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "flipX": [
+        0,
+        1
+      ],
+      "sheet": "poses",
+      "SUB": [
+        {
+          "name": "shuffle",
+          "time": 0.1,
+          "frames": [
+            0,
+            1
+          ],
+          "repeat": true
+        }
+      ]
+    }
+  ]
+}

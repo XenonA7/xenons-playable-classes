@@ -13,8 +13,8 @@
     "track": true,
     "order": 200000,
     "area": "bergen-trails",
+    "kills": 3,
     "anim": "move",
-    "extra": "shuffle",
     "category": "ANIMALS",
     "species": {
       "en_US": "Bird",
@@ -34,9 +34,9 @@
       "focus": 69,
       "elemFactor": [
         0.8,
+        1.2,
         1.1,
-        1.3,
-        0.8
+        0.9
       ],
       "statusInflict": [
         0.5,
@@ -77,6 +77,76 @@
           "zh_TW": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
           "ja_JP": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
           "ko_KR": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
+          "langUid": -11
+        }
+      }
+    ]
+  },
+  "penguin-heat-alt": {
+    "name": {
+      "en_US": "Elder Flamepeng",
+      "de_DE": "Elder Flamepeng",
+      "fr_FR": "Elder Flamepeng",
+      "zh_CN": "Elder Flamepeng",
+      "zh_TW": "Elder Flamepeng",
+      "ja_JP": "Elder Flamepeng",
+      "ko_KR": "Elder Flamepeng",
+      "langUid": 66
+    },
+    "track": true,
+    "order": 200001,
+    "area": "heat-area",
+    "kills": 3,
+    "anim": "move",
+    "category": "ANIMALS",
+    "species": {
+      "en_US": "Bird",
+      "de_DE": "Vogel<<C<<Geprüft: Minsu",
+      "zh_CN": "鸟类",
+      "zh_TW": "鳥類",
+      "ja_JP": "鳥",
+      "ko_KR": "새",
+      "langUid": -1
+    },
+    "level": 26,
+    "boostedLevel": 62,
+    "params": {
+      "hp": 1250,
+      "attack": 105,
+      "defense": 115,
+      "focus": 100,
+      "elemFactor": [
+        0.8,
+        1.2,
+        1.1,
+        0.9
+      ],
+      "statusInflict": [
+        0.5,
+        1.3,
+        1.5,
+        1
+      ],
+      "statusEffect": [
+        0.5,
+        1.3,
+        1.5,
+        1
+      ]
+    },
+    "credit": 150,
+    "exp": 30,
+    "itemDrops": [],
+    "boss": false,
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
+          "de_DE": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
+          "zh_CN": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
+          "zh_TW": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
+          "ja_JP": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
+          "ko_KR": "An improvement on the original modded \\c[3]\\v[combat.name.penguin]\\c[0] enemy. Now with more firepower and fashion!",
           "langUid": -11
         }
       }

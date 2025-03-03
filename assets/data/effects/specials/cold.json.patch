@@ -382,30 +382,5 @@
         2
       ]
     }
-  },
-  {
-    "type": "ADD_ARRAY_ELEMENT",
-    "index": 0,
-    "content": {
-      "name": "SNOW_BURST_GUI",
-      "sheet": {
-        "src": "media/entity/effects/hit2.png",
-        "offX": 0,
-        "offY": 80,
-        "width": 32,
-        "height": 32
-      },
-      "guiSprites": true,
-      "time": 0.06,
-      "repeat": true,
-      "frames": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
   }
 ]

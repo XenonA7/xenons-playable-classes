@@ -2407,12 +2407,12 @@
         "type": "PLAY_RANDOM_SOUND"
       },
       {
-        "numParticles": 12,
+        "numParticles": 16,
         "duration": 0.2,
         "clockwise": true,
         "centralAngle": 0.5,
         "startAngle": -0.2,
-        "startDist": 24,
+        "startDist": 48,
         "random": false,
         "moveDist": 56,
         "moveVariance": 32,
@@ -2421,8 +2421,8 @@
         "collision": false,
         "pScale": {
           "init": {
-            "x": 0.9,
-            "y": 0.9
+            "x": 1.1,
+            "y": 1.1
           },
           "end": {
             "value": {

@@ -6833,14 +6833,8 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
-        "type": "LOOP_START"
-      },
-      {
-        "time": 0.2,
+        "time": 0.3,
         "type": "WAIT"
-      },
-      {
-        "type": "LOOP_END"
       }
     ],
     "aceOfFlamesCardCharge": [

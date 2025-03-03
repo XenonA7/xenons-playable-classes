@@ -6667,8 +6667,9 @@
         "type": "LOOP_START"
       },
       {
-        "color": "#380456",
-        "noLighter": false,
+        "color": "#291259",
+        "fadeColor": "#010003",
+        "noLighter": true,
         "pAlpha": {
           "init": 0.6,
           "start": {
@@ -6690,7 +6691,6 @@
           }
         },
         "particleDuration": 0.6,
-        "moveWithTarget": 0,
         "type": "COPY_SPRITE"
       },
       {
@@ -6698,8 +6698,9 @@
         "type": "WAIT"
       },
       {
-        "color": "#380456",
-        "noLighter": false,
+        "color": "#291259",
+        "fadeColor": "#010003",
+        "noLighter": true,
         "pAlpha": {
           "init": 0.6,
           "start": {
@@ -6721,7 +6722,6 @@
           }
         },
         "particleDuration": 0.6,
-        "moveWithTarget": 0,
         "type": "COPY_SPRITE"
       },
       {

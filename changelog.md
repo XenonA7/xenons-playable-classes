@@ -1,3 +1,29 @@
+## 2.7.1 (03/02/2025)
+### New Content
+- Added Lubkuluk code to pvp-gui-fix.js to disable speedup on player death using variable tmp.speedUpBlock
+- Added sprites for missing directions in Hexacast "float" animation
+### Changes
+- Tweaked the shadowflame version of effect calamityCopyTrail
+- Changed rendermode of all neutral SHINE_SPARKLE particles to lighter
+- Changed all healing custom skill hitboxes to use the SIGNAL limiter
+- Changed cameraInBounds to false for map pvp-triblader-league-c
+- Proxies waveRecallCardA and waveRecallCardB are no longer considered threats by enemies
+- Added SNOW_BURST particles to start of effect hailBullet2Aura
+- Increased SNOWFLAKE1 startDist in effect frigidFlurrySweep1
+- Improved vertical alignment/shape for explosion hitbox in proxy frigidFlurryCard
+- Ashen Hex, Ashen Inferno, Spark Stream, and Creeping Cold improved vertical hitbox (includes shadowflame variants)
+### Fixes
+- Fixed issue caused by moving immediately when coming up the elevator in hideout-lobby
+- Fixed Icicle Lance missing description
+- Fixed instances of string bool values in Hexacast player files
+- Fixed instances of file path space padding in Hexacast/Triblader/CustomSkill/Enemy files
+- Fixed FADE_COLOR step not working in effect aceOfFlamesCharge
+- Deleted duplicate SNOW_BURST_GUI entry in effect file cold.json.patch
+- Fixed missing shadow size for proxies hailBullet1, hailBullet2, hailBullet3
+### Balance
+- Flame Tackle TACKLE hit strength changed from MEDIUM to HEAVY
+- Fire Barrage TACKLE hit strength changed from HEAVY to MASSIVE
+
 ## 2.7.0 (12/09/2024)
 ### General
 - Hexacast litter mod updated to 2.1.0

@@ -11,6 +11,7 @@
 
                  Other features:
                  - Speeds up game when player is defeated in PVP but has party members remaining.
+                    -This can be disabled by having the variable "tmp.speedUpBlock" set to true
                  - Hides defeated enemy healthbars.
                  - Improved/fixed PVP GUI rendering for scoreboard.
 */
@@ -32,8 +33,8 @@ sc.PvpModel.inject({
         const name = combatant ? (combatant == ig.game.playerEntity ? 'player' : combatant.name) : ''
         ig.vars.set('tmp.pvp_' + name + '_defeated', true)
         sc.Model.notifyObserver(this, sc.PVP_MESSAGE.COMBATANT_DEFEATED, combatant)
-        /* speed up the game when the player is defeated */
-        if (name == 'player' && sc.pvp.enemies.length > 1) setTimeout(() => {
+        /* speed up the game when the player is defeated but only when tmp.speedUpBlock isn't active */
+        if (name == 'player' && sc.pvp.enemies.length > 1 && !ig.vars.get("tmp.speedUpBlock")) setTimeout(() => {
             if (combatant.isDefeated()) {
                 ig.system.skipMode = true
             }
@@ -76,11 +77,14 @@ sc.SUB_HP_EDITOR.PVP.inject({
 
 ig.GUI.StatusBar.inject({
     init(combatant) {
+        if (!ig.vars.get("tmp.playerOppose")) {
         sc.Model.addObserver(sc.pvp, this)
         this.parent(combatant)
+    }
     },
     modelChanged(model, message, data) {
-        this.parent(model, message, data)
+        if (!ig.vars.get("tmp.playerOppose")) {
+            this.parent(model, message, data)
         if (model == sc.pvp) {
             if (message == sc.PVP_MESSAGE.COMBATANT_DEFEATED) {
                 if (sc.pvp.enemies.length > 1 && this.target instanceof ig.ENTITY.Combatant && this.target.isDefeated()) {
@@ -95,6 +99,7 @@ ig.GUI.StatusBar.inject({
                     this.doStateTransition('DEFAULT')
                 }
             }
+        }
         }
     },
 })

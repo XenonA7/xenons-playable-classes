@@ -1747,7 +1747,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 0,
               "offY": 80,
               "width": 72,
@@ -2764,7 +2764,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 0,
               "offY": 80,
               "width": 72,
@@ -2783,7 +2783,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 0,
               "offY": 0,
               "width": 88,

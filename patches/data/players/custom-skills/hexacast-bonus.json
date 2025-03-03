@@ -371,7 +371,7 @@
           "time": 0.4
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -2533,7 +2533,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -3069,7 +3069,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -3545,7 +3545,7 @@
           "type": "PLAY_SOUND"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -4430,7 +4430,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -4909,7 +4909,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -4997,7 +4997,7 @@
             "reverse": false,
             "guardable": "NEVER",
             "skillBonus": "",
-            "limiter": "NO_DAMAGE",
+            "limiter": "SIGNAL",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -5466,7 +5466,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -5592,7 +5592,7 @@
             "reverse": false,
             "guardable": "NEVER",
             "skillBonus": "",
-            "limiter": "NO_DAMAGE",
+            "limiter": "SIGNAL",
             "hints": [
               "NO_PUZZLE"
             ]

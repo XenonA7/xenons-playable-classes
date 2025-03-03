@@ -1648,7 +1648,7 @@
         "duration": 0.6,
         "centralAngle": 1,
         "startDist": 40,
-        "random": 1,
+        "random": true,
         "particleRotate": true,
         "moveDist": 100,
         "keySpline": "EASE_IN",

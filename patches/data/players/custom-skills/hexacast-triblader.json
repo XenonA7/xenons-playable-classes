@@ -2320,7 +2320,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 256,
               "offY": 8,
               "width": 72,
@@ -4441,7 +4441,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 256,
               "offY": 8,
               "width": 72,
@@ -4748,7 +4748,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 0,
               "offY": 80,
               "width": 72,
@@ -4767,7 +4767,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 0,
               "offY": 0,
               "width": 88,
@@ -5154,7 +5154,7 @@
               "y": 8
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 88,
               "offY": 0,
               "width": 40,
@@ -5168,7 +5168,7 @@
               "y": 40
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 88,
               "offY": 56,
               "width": 48,

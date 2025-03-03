@@ -417,7 +417,7 @@
         "height": 16
       },
       "guiSprites": true,
-      "renderMode": "source-over",
+      "renderMode": "lighter",
       "time": 0.1,
       "repeat": true,
       "frames": [

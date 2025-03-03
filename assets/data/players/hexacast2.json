@@ -1151,7 +1151,7 @@
               "y": 8
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 88,
               "offY": 0,
               "width": 40,
@@ -1165,7 +1165,7 @@
               "y": 40
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 88,
               "offY": 56,
               "width": 48,
@@ -2070,7 +2070,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 256,
               "offY": 8,
               "width": 72,
@@ -2489,7 +2489,7 @@
           },
           "hit": [
             {
-              "clearKillEffect": "true",
+              "clearKillEffect": true,
               "type": "MOD_GENERIC_PROXY"
             },
             {
@@ -3109,6 +3109,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "shadow": 8,
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -4983,7 +4984,7 @@
           "type": "PLAY_SOUND"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -5729,6 +5730,7 @@
       "trail": true,
       "multiHit": true,
       "noLightGlow": false,
+      "shadow": 16,
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -7383,6 +7385,10 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
+          "threat": "false",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
           "volume": 0.7,
           "global": false,
           "loop": false,
@@ -7680,6 +7686,10 @@
       "action": [
         {
           "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "threat": "false",
+          "type": "MOD_GENERIC_PROXY"
         },
         {
           "volume": 0.7,
@@ -9617,7 +9627,7 @@
           "type": "MOVE_TO_DISTANCE"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -12424,7 +12434,7 @@
           "type": "MOVE_TO_DISTANCE"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -14491,7 +14501,7 @@
           }
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -14557,12 +14567,12 @@
           }
         },
         {
-          "align": "CENTER",
+          "align": "BOTTOM",
           "radius": 80,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 24,
           "centralAngle": 1,
-          "duration": 0,
+          "duration": 0.1,
           "expandRadius": 0,
           "alwaysFull": false,
           "clockwise": false,
@@ -15091,7 +15101,7 @@
               }
             },
             {
-              "clearKillEffect": "true",
+              "clearKillEffect": true,
               "type": "MOD_GENERIC_PROXY"
             },
             {
@@ -15474,7 +15484,7 @@
           ]
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -16499,7 +16509,7 @@
               "anim": "hidden"
             },
             {
-              "clearKillEffect": "true",
+              "clearKillEffect": true,
               "type": "MOD_GENERIC_PROXY"
             },
             {
@@ -16574,7 +16584,7 @@
               "type": "CLEAR_EFFECTS"
             },
             {
-              "clearKillEffect": "true",
+              "clearKillEffect": true,
               "type": "MOD_GENERIC_PROXY"
             },
             {
@@ -18544,7 +18554,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -21388,7 +21398,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -21396,7 +21406,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -21699,7 +21709,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -21727,7 +21737,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -22197,7 +22207,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -22639,7 +22649,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -22862,7 +22872,7 @@
           "align": "BOTTOM",
           "radius": 56,
           "yScale": 0,
-          "zHeight": 8,
+          "zHeight": 32,
           "centralAngle": 1,
           "startAngle": 0,
           "duration": 0.1,
@@ -22892,7 +22902,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -22979,7 +22989,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -23048,7 +23058,7 @@
           "align": "BOTTOM",
           "radius": 80,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 32,
           "centralAngle": 1,
           "duration": 0.2,
           "expandRadius": 0,
@@ -23078,7 +23088,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -23399,7 +23409,7 @@
           "align": "BOTTOM",
           "radius": 84,
           "yScale": 0,
-          "zHeight": 8,
+          "zHeight": 32,
           "centralAngle": 1,
           "startAngle": 0,
           "duration": 0.1,
@@ -23432,7 +23442,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -23537,7 +23547,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -23545,7 +23555,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -23870,7 +23880,7 @@
           "align": "BOTTOM",
           "radius": 84,
           "yScale": 0,
-          "zHeight": 8,
+          "zHeight": 32,
           "centralAngle": 1,
           "startAngle": 0,
           "duration": 0.1,
@@ -23903,7 +23913,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -24008,7 +24018,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -24016,7 +24026,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -25776,7 +25786,7 @@
           "time": 0.4
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -26444,7 +26454,7 @@
               }
             },
             {
-              "clearKillEffect": "true",
+              "clearKillEffect": true,
               "type": "MOD_GENERIC_PROXY"
             },
             {
@@ -26873,7 +26883,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 306,
               "offY": 164,
               "width": 4,
@@ -27158,7 +27168,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -27402,7 +27412,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -27793,7 +27803,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 306,
               "offY": 164,
               "width": 4,
@@ -27963,7 +27973,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -28079,7 +28089,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 48,
               "offY": 320,
               "width": 32,
@@ -28176,7 +28186,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -28993,7 +29003,7 @@
           }
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -29720,7 +29730,7 @@
           }
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -29991,7 +30001,7 @@
           }
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -30315,7 +30325,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -30663,7 +30673,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -31081,7 +31091,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -31198,7 +31208,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 48,
               "offY": 320,
               "width": 32,
@@ -31275,7 +31285,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -31472,7 +31482,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -31588,7 +31598,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 48,
               "offY": 320,
               "width": 32,
@@ -31669,7 +31679,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -32464,7 +32474,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -33031,7 +33041,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -33263,7 +33273,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -33458,7 +33468,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -33909,7 +33919,7 @@
           {
             "name": "default",
             "sheet": {
-            "src": "media/entity/effects/hexacast/shadowflame.png",
+              "src": "media/entity/effects/hexacast/shadowflame.png",
               "offX": 306,
               "offY": 164,
               "width": 4,
@@ -34179,7 +34189,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -34354,7 +34364,7 @@
           "type": "STOP_XY"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -36060,7 +36070,7 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -36267,7 +36277,7 @@
           "align": "BOTTOM",
           "radius": 32,
           "yScale": 0,
-          "zHeight": 16,
+          "zHeight": 32,
           "centralAngle": 1,
           "duration": 1.5,
           "expandRadius": 0,
@@ -36297,7 +36307,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -36328,7 +36338,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -37302,7 +37312,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -37494,7 +37504,7 @@
           "type": "SET_COLL_TYPE"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -37555,6 +37565,7 @@
       "trail": true,
       "multiHit": true,
       "noLightGlow": true,
+      "shadow": 16,
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -37984,7 +37995,7 @@
           "type": "SET_SHADOW"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -38419,7 +38430,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -38937,7 +38948,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -39510,7 +39521,7 @@
           "type": "LABEL"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -39874,7 +39885,7 @@
           "type": "JUMP_TARGET_MOVEMENT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -40340,7 +40351,7 @@
           "type": "JUMP_TARGET_MOVEMENT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -40582,7 +40593,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -40940,7 +40951,7 @@
           "type": "WAIT"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -41624,7 +41635,7 @@
           }
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -44381,7 +44392,7 @@
           "anim": "hidden"
         },
         {
-          "clearKillEffect": "true",
+          "clearKillEffect": true,
           "type": "MOD_GENERIC_PROXY"
         },
         {
@@ -45516,7 +45527,7 @@
               "z": 0
             },
             "sheet": {
-              "src": "media/entity/effects/icicles.png  ",
+              "src": "media/entity/effects/icicles.png",
               "offX": 256,
               "offY": 8,
               "width": 72,
@@ -50845,7 +50856,7 @@
                     "delay": 0,
                     "repeat": false,
                     "duration": 0,
-                    "proxy": "chargedWave",
+                    "proxy": "chargedWaveHoming",
                     "offset": {
                       "x": 0,
                       "y": 0,
@@ -56350,7 +56361,7 @@
             "collideSlip": false,
             "type": "TACKLE",
             "attack": {
-              "type": "MEDIUM",
+              "type": "HEAVY",
               "element": "HEAT",
               "damageFactor": 2.0,
               "fly": "HEAVY",
@@ -57024,7 +57035,7 @@
             "collideSlip": false,
             "type": "TACKLE",
             "attack": {
-              "type": "HEAVY",
+              "type": "MASSIVE",
               "element": "HEAT",
               "damageFactor": 2.5,
               "fly": "MEDIUM",
@@ -57570,7 +57581,7 @@
                   "z": 12
                 },
                 "type": "SHOW_EFFECT"
-              }              
+              }
             ]
           },
           {
@@ -59911,7 +59922,7 @@
           "en_US": "Icicle Lance"
         },
         "description": {
-          "en_US": "."
+          "en_US": "Damage enemies in a long row in front of you before following with a row of ice pillars."
         },
         "dmgType": "MELEE",
         "stunType": "",

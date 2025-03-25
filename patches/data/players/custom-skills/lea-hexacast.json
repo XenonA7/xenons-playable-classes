@@ -20,7 +20,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -73,7 +73,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -124,7 +124,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -174,7 +174,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -225,7 +225,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]

@@ -6,6 +6,10 @@
       {
         "type": "INCLUDE",
         "src": "mod:patches/data/players/custom-skills/cheats-universal.json"
+      },
+      {
+        "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/triblader-bonus.json"
       }
     ]
   }

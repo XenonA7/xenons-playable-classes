@@ -1,6 +1,10 @@
 [
   {
     "type": "INCLUDE",
+    "src": "mod:patches/data/effects/ball-tri.json"
+  },
+  {
+    "type": "INCLUDE",
     "src": "mod:patches/data/effects/ball-hexa.json"
   },
   {
@@ -10,6 +14,36 @@
       "SUB"
     ]
   },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWORD1_SHADOW",
+      "pivot": {
+        "x": 12,
+        "y": 8
+      },
+      "sheet": {
+        "src": "media/entity/effects/triblader.png",
+        "offX": 0,
+        "offY": 64,
+        "width": 24,
+        "height": 24
+      },
+      "guiSprites": true,
+      "time": 0.033,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+
+
+  
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,

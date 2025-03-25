@@ -1,0 +1,140 @@
+{
+  "EFFECTS": {
+    "neutralKnifeTrail": [
+      {
+        "color": "#5b9cb0",
+        "maxAlpha": 0.5,
+        "minAlpha": 0.1,
+        "blinkDuration": 0.5,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "global": false,
+        "loop": false,
+        "sounds": [
+          {
+            "sound": "media/sound/battle/triblader/blade1.ogg",
+            "volume": 0.4,
+            "variance": 0.1,
+            "speed": 1.5
+          },
+          {
+            "sound": "media/sound/battle/triblader/blade2.ogg",
+            "volume": 0.4,
+            "variance": 0.1,
+            "speed": 1.5
+          }
+        ],
+        "type": "PLAY_RANDOM_SOUND"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "scaleX": 1.5,
+        "scaleY": 1.5,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.225,
+          "start": {
+            "value": 0
+          }
+        },
+        "particleDuration": 0.1,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.02,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "neutralKnifeWallKill": [
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.6,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/ball-bounce-1.ogg"
+      },
+      {
+        "volume": 0.5,
+        "global": false,
+        "loop": false,
+        "speed": 0.9,
+        "variance": 0.1,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/enemies/ninja-shuriken.ogg"
+      },
+      {
+        "type": "PLAY_ANIM",
+        "anim": "KILL",
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 1
+          }
+        }
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 0.4,
+        "startAngle": 0.3,
+        "random": true,
+        "startDist": 6,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 24,
+        "keySpline": "EASE_OUT",
+        "rotateWithTime": false,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 1
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "pRotate": {
+          "init": 0
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.3,
+        "cancelable": true,
+        "anim": "SWORD1_SHADOW",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ]
+  }
+}

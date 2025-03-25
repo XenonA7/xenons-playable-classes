@@ -235,7 +235,7 @@
           {
             "offsetX": 0,
             "offsetY": 0,
-            "speed": "FASTER",
+            "speed": "FAST",
             "transition": "EASE_IN_OUT",
             "wait": false,
             "waitSkip": 0,
@@ -265,6 +265,15 @@
               "x": 0,
               "y": 0,
               "z": 0
+            }
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.1,
+              "move": 0.1,
+              "reaim": 0.1
             }
           },
           {

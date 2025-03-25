@@ -65,7 +65,7 @@
       "guiSprites": true,
       "renderMode": "lighter",
       "time": 0.05,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]

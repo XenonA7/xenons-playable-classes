@@ -1,0 +1,23 @@
+{
+  "csTribladerCustom1NeutralAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Wild Gambit"
+    },
+    "description": {
+      "en_US": "Take a gamble and roll a number from 1 to 9 for different attack results."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 120,
+      "offY": 96
+    }
+  }
+}

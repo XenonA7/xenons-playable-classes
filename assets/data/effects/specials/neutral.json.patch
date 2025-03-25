@@ -33,12 +33,35 @@
       "guiSprites": true,
       "renderMode": "lighter",
       "time": 1,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]
     }
   },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "RUDE_BUSTER",
+      "sheet": {
+        "src": "media/entity/effects/triblader/tri-misc.png",
+        "offX": 32,
+        "offY": 0,
+        "width": 30,
+        "height": 21
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+
+  
 
 
 
@@ -376,7 +399,7 @@
       "guiSprites": true,
       "renderMode": "source-over",
       "time": 0.016,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]
@@ -397,7 +420,7 @@
       "guiSprites": true,
       "renderMode": "source-over",
       "time": 0.033,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]
@@ -419,7 +442,7 @@
       "guiSprites": true,
       "renderMode": "lighter",
       "time": 0.1,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0,
         1,

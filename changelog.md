@@ -1,3 +1,59 @@
+## 2.8.0 (03/24/2025)
+### Important
+- Any equipped custom skills on Hexacast1/2 will need to be re-equipped in the menu after updating
+### New Content
+- Added the file "info-for-modders.md" which documents all code/technical features of XPC
+- New Triblader combat art: Shattering Blade (Neutral Melee Lv.1B), Wild Gambit converted to custom skill
+- Added limited Triblader custom skill support for old combat arts
+- Added teleporters between hideout-southwest and starcaller2 lobby - only active if the Starcaller2 mod is also installed
+### Changes
+- Reformatted all internal names for Hexacast custom skills belonging to Tri/Sphero from "csTriblader..." to "csHexacastTriblader..."
+- Cursor Teleport no longer has a 0.5 second delay between teleporting and when you are able to walk
+- Edited dialogue in hideout-outide cutscene questFirstEntrance to remove post-bergen lea words
+- Changed center wall decoration in hideout-hexa to be more hexagonal
+- Added new particle effects to triblader effect beeTrail
+- Deleted particle BEE_RIPPLE_REV from combat.tribladerXPC effect sheet
+- Added pitch variance to all Triblader/Hexacast bee buzzing effects
+- Created new effects for Rude Buster
+- Proxy rudeBuster modernized as BALL proxy (replaced ancient primitive code)
+- Improved triblader effect frozenRayTrail
+- Removed plot.xpc.tempQuest (placeholder in flamepeng enemy files)
+- Removed unused action step REMOVE_ALL_PROXIES
+- Overhauled Blade Aura's effects
+- Improved Triforce Slash effects sweepShockDouble and sweepShockDoubleRev
+- Added basic throw effect to Spike Ball
+- Changed effects, description, and animations for Lightning Strike
+- Tribladers now use the same animations in Homing Shards as Lea/Hexacast did in the custom skill version
+- Updated effects for proxy neutralKnife (Throwing Knives)
+- Deleted ttyd_disapproval.ogg
+- Updated effects for Wirbelschlitzer
+- Added +2 to all offset z values of Triblader double sweep effects
+- Improved and reformatted effects sweepNeutralDouble and sweepNeutralDoubleRev
+- Updated sweepNeutralDouble effect alignment in Laser Barrage
+- Spike Ball now shows a more complete throw animation
+### Fixes
+- Fixed animation issue following initial conversation (apollo version) in cheat codes quest
+- Fixed repeating 1-frame animations for all particle effects
+- Fixed repeating 1-frame animations for all player/enemy/customSkill proxies
+- Fixed Rude Buster proxy start position
+- Removed unused proxy specialSmall from tribladers
+- Fixed all instances of WAIT for time 0.01 in all files (increased to 0.02 minimum standard)
+- Fixed Blade Aura effect by showing it on user instead of proxy
+- Fixed Blade Aura hitbox offset
+- Fixed proxy triforceTrigger sliding on walls for a short time
+- Fixed pLight for effect triforceShatter
+- Fixed Throwing Knives startDistCollide settings
+- Fixed Wirbelschlitzer SWORD1_END particle timing
+- Fixed Fire Whirl hitbox zHeight
+### Balance
+- Rude Buster explosion radius reduced from 24+48 to 24+32
+- Blade Aura duration increased from 6 to 8
+- Homing Shards now takes half the time to shoot
+- Homing Shards damage decreased
+- Throwing Knives now has bigger projectiles
+- Wirbelschlitzer start delay reduced, damage reduced, hit strength decreased from MASSIVE to HEAVY
+
+
 ## 2.7.1 (03/02/2025)
 ### New Content
 - Added Lubkuluk code to pvp-gui-fix.js to disable speedup on player death using variable tmp.speedUpBlock

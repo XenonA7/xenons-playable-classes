@@ -387,6 +387,27 @@
     "element": "NEUTRAL",
     "activeCondition": "player.entity.name == 'Lea'",
     "name": {
+      "en_US": "\\i[class-tri] Shattering Blade"
+    },
+    "description": {
+      "en_US": "Swing and scatter a field of blade fragments in front of you. More effective on larger targets."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 120,
+      "offY": 96
+    }
+  },
+  "csLeaTribladerCustom1NeutralAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
       "en_US": "\\i[class-tri] Wild Gambit"
     },
     "description": {

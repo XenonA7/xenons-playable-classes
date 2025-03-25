@@ -483,7 +483,7 @@
         "guiSprites": true,
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -500,7 +500,7 @@
         "guiSprites": true,
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -9908,6 +9908,7 @@
       {
         "volume": 0.5,
         "global": false,
+        "variance": 0.04,
         "loop": true,
         "sound": "media/sound/battle/enemies/bee-buzz.ogg",
         "type": "PLAY_SOUND"

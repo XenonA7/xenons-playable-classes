@@ -80,7 +80,7 @@
       "guiSprites": true,
       "renderMode": "lighter",
       "time": 1,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]
@@ -125,7 +125,7 @@
       "guiSprites": true,
       "renderMode": "lighter",
       "time": 1,
-      "repeat": true,
+      "repeat": false,
       "frames": [
         0
       ]

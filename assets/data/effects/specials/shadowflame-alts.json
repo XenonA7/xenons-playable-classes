@@ -806,7 +806,7 @@
         "guiSprites": true,
         "renderMode": "source-over",
         "time": 0.04,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]

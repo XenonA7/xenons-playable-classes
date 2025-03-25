@@ -8,18 +8,6 @@ ig.module("game.feature.combat.xpc-combat-action-steps").requires("game.feature.
     FACE: 2
   };
 
-  ig.ACTION_STEP.REMOVE_ALL_PROXIES = ig.ActionStepBase.extend({
-      init: function(a) {
-          this.group = a.group || null
-      },
-      start: function(a) {
-          for (var a = ig.game.entities, b = a.length; b--;) {
-              var d = a[b];
-              d && (d instanceof sc.CombatProxyEntity && d.group == this.group) && d.destroy()
-          }
-      }
-  });
-
   ig.ACTION_STEP.COMBAT_ART_CHARGE_NOZOOM = ig.ActionStepBase.extend({
     _wm: new ig.Config({
       attributes: {

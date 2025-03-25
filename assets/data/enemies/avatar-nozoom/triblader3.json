@@ -480,7 +480,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -517,7 +517,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -553,7 +553,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -589,7 +589,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -625,7 +625,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -662,7 +662,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -703,7 +703,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -745,7 +745,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -787,7 +787,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -829,7 +829,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -875,7 +875,7 @@
           "offY": 120
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -889,40 +889,6 @@
         "hints": [
           "CHARGED"
         ],
-        "guardable": "",
-        "skillBonus": "RANGED_DMG"
-      },
-      "timeBoni": null,
-      "behaviors": []
-    },
-    "specialSmall": {
-      "effects": "ball",
-      "speed": 550,
-      "maxBounce": 0,
-      "timer": 1,
-      "trail": false,
-      "multiHit": false,
-      "noLightGlow": false,
-      "type": "BALL",
-      "animation": {
-        "name": "default",
-        "sheet": {
-          "src": "media/entity/balls/default.png",
-          "width": 24,
-          "height": 24
-        },
-        "time": 0.05,
-        "repeat": true,
-        "frames": [
-          4
-        ]
-      },
-      "attack": {
-        "type": "MEDIUM",
-        "element": "NEUTRAL",
-        "damageFactor": 0.8,
-        "reverse": false,
-        "spFactor": 0,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -963,7 +929,7 @@
           "height": 16
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -994,7 +960,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -1377,18 +1343,9 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "face": "SOUTH",
-          "rotate": false,
-          "rotateSpeed": 3,
-          "type": "SET_FACE"
-        },
-        {
-          "value": true,
-          "type": "SET_FACE_FIX"
-        },
-        {
           "duration": -1,
-          "align": "BOTTOM",
+          "align": "CENTER",
+          "target": "PROXY_OWNER",
           "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
@@ -1402,7 +1359,7 @@
           },
           "offset": {
             "x": 0,
-            "y": -16,
+            "y": 0,
             "z": 0
           }
         },
@@ -1418,14 +1375,14 @@
           "radius": 48,
           "yScale": 0,
           "zHeight": 32,
-          "centralAngle": 20,
-          "duration": 6,
+          "centralAngle": 1,
+          "duration": 0.2,
           "expandRadius": 0,
           "alwaysFull": false,
           "clockwise": false,
           "flipLeftFace": 0,
           "rectangular": false,
-          "repeat": false,
+          "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
           "checkCollision": true,
@@ -1441,13 +1398,16 @@
           },
           "offset": {
             "x": 0,
-            "y": -8,
+            "y": 0,
             "z": 0
           }
         },
         {
-          "time": 6,
+          "time": 8,
           "type": "WAIT"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
         },
         {
           "type": "CLEAR_EFFECTS"
@@ -1460,23 +1420,17 @@
       "group": "bladeAura",
       "type": "GENERIC",
       "size": {
-        "x": 24,
-        "y": 24,
-        "z": 32
+        "x": 4,
+        "y": 4,
+        "z": 4
       },
       "config": {
         "collType": "NONE"
       }
     },
     "rudeBuster": {
-      "faceAnims": {
+      "animation": {
         "name": "default",
-        "shapeType": "Y_FLAT",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
         "sheet": {
           "src": "media/entity/effects/triblader/tri-misc.png",
           "offX": 32,
@@ -1484,20 +1438,44 @@
           "width": 30,
           "height": 21
         },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "repeat": true,
+        "renderMode": "lighter",
+        "time": 0.05,
+        "repeat": false,
         "frames": [
           0
         ]
       },
+      "destroyProxy": "rudeBusterExplosion",
+      "effects": "combat.tribladerXPC",
+      "effectKeys": {
+        "trail": "rudeBusterTrail"
+      },
+      "speed": 550,
+      "maxBounce": 0,
+      "timer": 1,
+      "trail": true,
+      "multiHit": false,
+      "noLightGlow": true,
+      "light": "L",
+      "attack": {
+        "type": "HEAVY",
+        "element": "NEUTRAL",
+        "damageFactor": 4.5,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "FOLLOW_TARGET",
+          "steerDegree": 0.08
+        }
+      ],
+      "type": "BALL"
+    },
+    "rudeBusterExplosion": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -1505,8 +1483,8 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "duration": -1,
-          "align": "CENTER",
+          "duration": 0,
+          "align": "BOTTOM",
           "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
@@ -1515,8 +1493,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "rudeBusterTrail"
+            "sheet": "specials.neutral",
+            "name": "rudeBusterExplode"
           },
           "offset": {
             "x": 0,
@@ -1525,38 +1503,13 @@
           }
         },
         {
-          "time": 1,
-          "cancelOnHit": true,
-          "withBranches": true,
-          "collideCancel": 1,
-          "orthoDirFactor": 0,
-          "rotateSpeed": 0.1,
-          "ignoreLastHit": true,
-          "type": "TACKLE",
-          "attack": {
-            "type": "HEAVY",
-            "element": "NEUTRAL",
-            "damageFactor": 4.5,
-            "reverse": false,
-            "spFactor": 0,
-            "hints": [
-              "CHARGED"
-            ],
-            "guardable": "",
-            "skillBonus": "RANGED_DMG"
-          }
-        },
-        {
-          "type": "STOP_XY"
-        },
-        {
           "align": "BOTTOM",
           "radius": 24,
           "yScale": 1,
           "zHeight": 16,
           "centralAngle": 1,
           "duration": 0.1,
-          "expandRadius": 48,
+          "expandRadius": 32,
           "alwaysFull": true,
           "clockwise": false,
           "flipLeftFace": 0,
@@ -1583,111 +1536,25 @@
           }
         },
         {
-          "type": "CLEAR_EFFECTS"
-        },
-        {
-          "duration": 0,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.neutral",
-            "name": "proximityBlast"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "volume": 1,
-          "global": false,
-          "loop": false,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/triblader/dr_damage.ogg"
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": true,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "teleport",
-            "name": "hideInstant"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
           "time": 0.3,
           "type": "WAIT"
-        },
-        {
-          "type": "CLEAR_EFFECTS"
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "NONE",
       "stickFaceAlign": false,
       "group": "",
-      "timeDisconnect": true,
-      "startAnim": "",
       "size": {
         "x": 16,
         "y": 16,
         "z": 16
       },
-      "effects": "ball-neutral",
-      "speed": 400,
-      "maxBounce": 0,
-      "timer": 1,
-      "trail": true,
-      "multiHit": false,
-      "light": "XL",
-      "noLightGlow": false,
       "config": {
-        "collType": "PROJECTILE",
-        "accelSpeed": 5,
-        "airFriction": 1,
-        "maxVel": 700,
-        "zGravityFactor": 0,
-        "relativeVel": 1
+        "collType": "NONE",
+        "zGravityFactor": 0
       },
-      "type": "GENERIC",
-      "attack": {
-        "type": "MEDIUM",
-        "element": "NEUTRAL",
-        "damageFactor": 3,
-        "reverse": false,
-        "hints": [
-          "CHARGED"
-        ],
-        "guardable": "",
-        "skillBonus": "RANGED_DMG"
-      },
-      "timeBoni": null,
-      "behaviors": [
-        {
-          "type": "FOLLOW_TARGET",
-          "steerDegree": 0.6,
-          "adjustTime": 0
-        }
-      ]
+      "type": "GENERIC"
     },
     "frozenStar": {
       "copyOwnerAnims": false,
@@ -1954,7 +1821,7 @@
           }
         },
         {
-          "time": 0.01,
+          "time": 0.02,
           "type": "WAIT"
         }
       ],
@@ -2162,7 +2029,7 @@
         ],
         "time": 1,
         "faceRotate": true,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -2290,7 +2157,7 @@
           }
         },
         {
-          "time": 0.01,
+          "time": 0.02,
           "type": "WAIT"
         }
       ],
@@ -2348,7 +2215,7 @@
         ],
         "time": 1,
         "faceRotate": true,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -2629,7 +2496,7 @@
           "height": 16
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -2807,7 +2674,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -2967,7 +2834,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -5398,7 +5265,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           1
         ]
@@ -5435,7 +5302,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -6202,7 +6069,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -6242,7 +6109,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -6426,7 +6293,7 @@
         },
         "renderMode": "lighter",
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -7448,7 +7315,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -8941,7 +8808,7 @@
           "offX": 288
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -9598,7 +9465,7 @@
       "breakType": "COMBATANT",
       "action": [
         {
-          "time": 0.01,
+          "time": 0.02,
           "type": "WAIT"
         },
         {
@@ -9886,7 +9753,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -9945,7 +9812,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -12981,7 +12848,7 @@
           }
         },
         {
-          "time": 0.01,
+          "time": 0.02,
           "type": "WAIT"
         },
         {
@@ -13330,7 +13197,7 @@
         ],
         "time": 1,
         "faceRotate": true,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -13694,7 +13561,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -14045,7 +13912,7 @@
           "height": 24
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -14084,7 +13951,7 @@
           "height": 32
         },
         "time": 0.05,
-        "repeat": true,
+        "repeat": false,
         "frames": [
           0
         ]
@@ -18369,7 +18236,7 @@
         "proxy": "spikeAura",
         "offset": {
           "x": 0,
-          "y": -16,
+          "y": 0,
           "z": 0
         }
       },
@@ -18754,8 +18621,8 @@
             "anim": "spinShort"
           },
           {
-            "duration": -1,
-            "align": "BOTTOM",
+            "duration": 0,
+            "align": "CENTER",
             "rotateFace": 6,
             "flipLeftFace": true,
             "wait": false,
@@ -19029,10 +18896,35 @@
         "type": "SHOOT_PROXY_PLAYER"
       },
       {
+        "followUp": "attack2End",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
-        "anim": "attack2End"
+        "anim": "spinShortRev"
+      },
+      {
+        "duration": 0,
+        "align": "CENTER",
+        "rotateFace": -1,
+        "flipLeftFace": false,
+        "rotOffset": {
+          "x": 0,
+          "y": -12
+        },
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXPC",
+          "name": "spikeBallShoot"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
       },
       {
         "value": 80,
@@ -19531,7 +19423,7 @@
         "align": "BOTTOM",
         "radius": 56,
         "yScale": 0,
-        "zHeight": 0,
+        "zHeight": 24,
         "centralAngle": 2.5,
         "startAngle": -0.25,
         "duration": 0.5,
@@ -21546,7 +21438,7 @@
         "type": "CLEAR_EFFECTS"
       },
       {
-        "time": 0.01,
+        "time": 0.02,
         "type": "WAIT"
       },
       {
@@ -27438,15 +27330,34 @@
         "type": "FACE_TO_TARGET"
       },
       {
-        "followUp": "attack1End",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
-        "anim": "spinShort"
+        "anim": "throwSpecial"
       },
       {
         "duration": 0,
         "align": "BOTTOM",
+        "rotateFace": 6,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXPC",
+          "name": "stabShockSwordOnly"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0,
+        "align": "CENTER",
         "rotateFace": 6,
         "flipLeftFace": true,
         "wait": false,
@@ -27520,11 +27431,50 @@
         "type": "PLAYER_ADJUST_FACE"
       },
       {
-        "followUp": "attack2End",
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
-        "anim": "spinShortRev"
+        "anim": "throwSpecial"
+      },
+      {
+        "duration": 0,
+        "align": "BOTTOM",
+        "rotateFace": 6,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "combat.tribladerXPC",
+          "name": "stabShockSwordOnly"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0,
+        "align": "CENTER",
+        "rotateFace": 6,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.shock",
+          "name": "shockTribladerThrow"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
       },
       {
         "align": "BOTTOM",
@@ -29838,7 +29788,7 @@
         "type": "CLEAR_EFFECTS"
       },
       {
-        "time": 0.01,
+        "time": 0.02,
         "type": "WAIT"
       },
       {

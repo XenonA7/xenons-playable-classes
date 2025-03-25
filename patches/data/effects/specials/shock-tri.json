@@ -815,6 +815,23 @@
     ],
     "shockTribladerThrow": [
       {
+        "size": "XL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.3,
+        "duration": 0.1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#e573f5",
+        "alpha": 0.5,
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": 0.05,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
         "useTargetAngle": false,
         "keepAngleSync": false,
         "offset": {
@@ -823,7 +840,7 @@
           "z": 32
         },
         "pAlpha": {
-          "init": 0.5,
+          "init": 0.4,
           "start": {
             "value": 0,
             "spline": ""
@@ -836,8 +853,8 @@
           },
           "start": {
             "value": {
-              "x": 0.75,
-              "y": 0.75
+              "x": 0.95,
+              "y": 0.95
             },
             "spline": ""
           }
@@ -848,49 +865,6 @@
         "angleVary": 1,
         "anim": "SHOCK_WAVE_BIG_TRIANGLE",
         "type": "PLAY_ANIM"
-      },
-      {
-        "time": 0.2,
-        "type": "WAIT"
-      },
-      {
-        "useTargetAngle": false,
-        "keepAngleSync": false,
-        "offset": {
-          "x": 0,
-          "y": 32,
-          "z": 32
-        },
-        "pAlpha": {
-          "init": 1,
-          "start": {
-            "value": 0,
-            "spline": ""
-          }
-        },
-        "pScale": {
-          "init": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "start": {
-            "value": {
-              "x": 0.75,
-              "y": 0.75
-            },
-            "spline": ""
-          }
-        },
-        "moveWithTarget": 1,
-        "particleDuration": 0.3,
-        "cancelable": true,
-        "angleVary": 1,
-        "anim": "SHOCK_WAVE_BIG_TRIANGLE",
-        "type": "PLAY_ANIM"
-      },
-      {
-        "time": 0.3,
-        "type": "WAIT"
       }
     ],
     "homingBoomTame": [
@@ -1784,7 +1758,7 @@
       {
         "rumbleType": "HORIZONTAL",
         "power": "WEAKER",
-        "speed": "FASTER",
+        "speed": "NORMAL",
         "duration": -1,
         "fade": false,
         "type": "RUMBLE"
@@ -4820,7 +4794,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "color": "#555",
+        "color": "#2f1c30",
         "fadeIn": 0.05,
         "fadeOut": 0.5,
         "duration": 0,
@@ -5300,6 +5274,89 @@
       },
       {
         "time": 9,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "slowMotionLite": [
+      {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "sound": "media/sound/battle/big-swipe-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "#2f1c30",
+        "fadeIn": 0.05,
+        "fadeOut": 0.5,
+        "duration": 0,
+        "type": "SCREEN_FLASH"
+      },
+      {
+        "fadeIn": 0.3,
+        "fadeOut": 0.2,
+        "duration": -1,
+        "intensity": 0.3,
+        "type": "DARKNESS"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "sound": "media/sound/puzzle/slow-down.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 20,
+        "duration": 1,
+        "centralAngle": 1,
+        "startDist": 48,
+        "uniformRandom": 0.2,
+        "particleRotate": true,
+        "useTargetAngle": true,
+        "moveDist": 80,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.6,
+        "anim": "SHOCK_BALL_DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 1,
         "type": "WAIT"
       },
       {

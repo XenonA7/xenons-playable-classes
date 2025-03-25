@@ -927,7 +927,7 @@
     "category": "ANIMALS",
     "descriptions": [
       {
-        "condition": "!plot.xpc.tempQuest",
+        "condition": "!quest.xpc-heat-penguins.solved",
         "text": {
           "en_US": "What? They breathe fire now?!",
           "de_DE": "What? They breathe fire now?!",
@@ -939,7 +939,7 @@
         }
       },
       {
-        "condition": "plot.xpc.tempQuest",
+        "condition": "quest.xpc-heat-penguins.solved",
         "text": {
           "en_US": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",
           "de_DE": "A modified \\c[3]\\v[combat.name.penguin]\\c[0] enemy designed by modders to utilize heat attacks.",

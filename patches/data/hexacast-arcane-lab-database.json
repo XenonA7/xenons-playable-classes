@@ -1,5 +1,5 @@
 {
-  "csSpheromancerBaseRanged": {
+  "csHexacastSpheromancerBaseRanged": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_CHARGED",
@@ -36,7 +36,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseRanged": {
+  "csHexacastTribladerBaseRanged": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_CHARGED",
@@ -73,7 +73,7 @@
       "offY": 0
     }
   },
-  "csSpheromancerBaseMelee": {
+  "csHexacastSpheromancerBaseMelee": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK",
@@ -102,7 +102,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseMelee": {
+  "csHexacastTribladerBaseMelee": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK",
@@ -131,7 +131,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseMeleeFast": {
+  "csHexacastTribladerBaseMeleeFast": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_FAST",
@@ -160,7 +160,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseDash": {
+  "csHexacastTribladerBaseDash": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH",
@@ -185,7 +185,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseDashSteer": {
+  "csHexacastTribladerBaseDashSteer": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_STEER",
@@ -210,7 +210,7 @@
       "offY": 0
     }
   },
-  "csTribladerBaseGuard": {
+  "csHexacastTribladerBaseGuard": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD",
@@ -235,7 +235,7 @@
       "offY": 0
     }
   },
-  "csSpheromancerNeutralThrow1A": {
+  "csHexacastSpheromancerNeutralThrow1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_A",
@@ -268,7 +268,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralThrow1B": {
+  "csHexacastSpheromancerNeutralThrow1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_B",
@@ -301,7 +301,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralThrow1A": {
+  "csHexacastTribladerNeutralThrow1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_A",
@@ -322,7 +322,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralThrow1B": {
+  "csHexacastTribladerNeutralThrow1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_B",
@@ -385,7 +385,7 @@
       "offY": 48
     }
   },
-  "csSpheromancerNeutralThrow2A": {
+  "csHexacastSpheromancerNeutralThrow2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_A",
@@ -418,7 +418,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralThrow2B": {
+  "csHexacastSpheromancerNeutralThrow2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_B",
@@ -451,7 +451,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralThrow2A": {
+  "csHexacastTribladerNeutralThrow2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_A",
@@ -472,7 +472,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralThrow2B": {
+  "csHexacastTribladerNeutralThrow2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_B",
@@ -514,7 +514,7 @@
       "offY": 48
     }
   },
-  "csSpheromancerNeutralAttack1A": {
+  "csHexacastSpheromancerNeutralAttack1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_A",
@@ -547,7 +547,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralAttack1B": {
+  "csHexacastSpheromancerNeutralAttack1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_B",
@@ -580,7 +580,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralAttack1A": {
+  "csHexacastTribladerNeutralAttack1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_A",
@@ -601,10 +601,31 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralAttack1B": {
+  "csHexacastTribladerNeutralAttack1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-tri] Shattering Blade"
+    },
+    "description": {
+      "en_US": "Swing and scatter a field of blade fragments in front of you. More effective on larger targets."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 120,
+      "offY": 96
+    }
+  },
+  "csHexacastTribladerCustom1NeutralAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL1_B",
         "actionCheckKey": "ATTACK_SPECIAL1"
       }
     ],
@@ -622,7 +643,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralAttack2A": {
+  "csHexacastSpheromancerNeutralAttack2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_A",
@@ -655,7 +676,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralAttack2B": {
+  "csHexacastSpheromancerNeutralAttack2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_B",
@@ -688,7 +709,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralAttack2A": {
+  "csHexacastTribladerNeutralAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_A",
@@ -709,7 +730,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralAttack2B": {
+  "csHexacastTribladerNeutralAttack2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_B",
@@ -751,7 +772,7 @@
       "offY": 48
     }
   },
-  "csSpheromancerNeutralDash1A": {
+  "csHexacastSpheromancerNeutralDash1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_A",
@@ -784,7 +805,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralDash1B": {
+  "csHexacastSpheromancerNeutralDash1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_B",
@@ -817,7 +838,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralDash1A": {
+  "csHexacastTribladerNeutralDash1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_A",
@@ -838,7 +859,7 @@
       "offY": 96
     }
   },
-  "csTribladerNeutralDash1B": {
+  "csHexacastTribladerNeutralDash1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_B",
@@ -871,7 +892,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerNeutralDash2A": {
+  "csHexacastSpheromancerNeutralDash2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_A",
@@ -904,7 +925,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerNeutralDash2B": {
+  "csHexacastSpheromancerNeutralDash2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_B",
@@ -937,7 +958,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralDash2A": {
+  "csHexacastTribladerNeutralDash2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_A",
@@ -958,7 +979,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralDash2B": {
+  "csHexacastTribladerNeutralDash2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_B",
@@ -979,7 +1000,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerNeutralGuard1A": {
+  "csHexacastSpheromancerNeutralGuard1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_A",
@@ -1012,7 +1033,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerNeutralGuard1B": {
+  "csHexacastSpheromancerNeutralGuard1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_B",
@@ -1045,7 +1066,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralGuard1A": {
+  "csHexacastTribladerNeutralGuard1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_A",
@@ -1066,7 +1087,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralGuard1B": {
+  "csHexacastTribladerNeutralGuard1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_B",
@@ -1108,7 +1129,7 @@
       "offY": 24
     }
   },
-  "csSpheromancerNeutralGuard2A": {
+  "csHexacastSpheromancerNeutralGuard2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_A",
@@ -1141,7 +1162,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerNeutralGuard2B": {
+  "csHexacastSpheromancerNeutralGuard2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_B",
@@ -1174,7 +1195,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralGuard2A": {
+  "csHexacastTribladerNeutralGuard2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
@@ -1195,7 +1216,7 @@
       "offY": 120
     }
   },
-  "csTribladerNeutralGuard2B": {
+  "csHexacastTribladerNeutralGuard2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_B",
@@ -1216,7 +1237,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerHeatThrow1A": {
+  "csHexacastSpheromancerHeatThrow1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_A",
@@ -1249,7 +1270,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatThrow1A": {
+  "csHexacastTribladerHeatThrow1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_A",
@@ -1291,7 +1312,7 @@
       "offY": 0
     }
   },
-  "csSpheromancerHeatThrow2A": {
+  "csHexacastSpheromancerHeatThrow2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_A",
@@ -1324,7 +1345,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatThrow2A": {
+  "csHexacastTribladerHeatThrow2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_A",
@@ -1345,7 +1366,7 @@
       "offY": 144
     }
   },
-  "csSpheromancerHeatAttack1A": {
+  "csHexacastSpheromancerHeatAttack1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_A",
@@ -1378,7 +1399,7 @@
       "offY": 144
     }
   },
-  "csSpheromancerHeatAttack1B": {
+  "csHexacastSpheromancerHeatAttack1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_B",
@@ -1411,7 +1432,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack1A": {
+  "csHexacastTribladerHeatAttack1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_A",
@@ -1444,7 +1465,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack1B": {
+  "csHexacastTribladerHeatAttack1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_B",
@@ -1506,7 +1527,7 @@
       "offY": 72
     }
   },
-  "csSpheromancerHeatAttack2A": {
+  "csHexacastSpheromancerHeatAttack2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_A",
@@ -1539,7 +1560,7 @@
       "offY": 144
     }
   },
-  "csSpheromancerHeatAttack2B": {
+  "csHexacastSpheromancerHeatAttack2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_B",
@@ -1572,7 +1593,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack2A": {
+  "csHexacastTribladerHeatAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_A",
@@ -1593,7 +1614,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack2B": {
+  "csHexacastTribladerHeatAttack2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_B",
@@ -1672,7 +1693,7 @@
       "offY": 72
     }
   },
-  "csSpheromancerHeatAttack3A": {
+  "csHexacastSpheromancerHeatAttack3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL3_A",
@@ -1705,7 +1726,7 @@
       "offY": 144
     }
   },
-  "csSpheromancerHeatAttack3B": {
+  "csHexacastSpheromancerHeatAttack3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL3_B",
@@ -1738,7 +1759,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack3A": {
+  "csHexacastTribladerHeatAttack3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL3_A",
@@ -1759,7 +1780,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatAttack3B": {
+  "csHexacastTribladerHeatAttack3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL3_B",
@@ -1838,7 +1859,7 @@
       "offY": 72
     }
   },
-  "csSpheromancerHeatDash1A": {
+  "csHexacastSpheromancerHeatDash1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_A",
@@ -1871,7 +1892,7 @@
       "offY": 144
     }
   },
-  "csSpheromancerHeatDash1B": {
+  "csHexacastSpheromancerHeatDash1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_B",
@@ -1904,7 +1925,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatDash1A": {
+  "csHexacastTribladerHeatDash1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_A",
@@ -1925,7 +1946,7 @@
       "offY": 144
     }
   },
-  "csTribladerHeatDash1B": {
+  "csHexacastTribladerHeatDash1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_B",
@@ -1975,7 +1996,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerHeatDash2A": {
+  "csHexacastSpheromancerHeatDash2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_A",
@@ -2008,7 +2029,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatDash2B": {
+  "csHexacastSpheromancerHeatDash2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_B",
@@ -2041,7 +2062,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatDash2A": {
+  "csHexacastTribladerHeatDash2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_A",
@@ -2062,7 +2083,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatDash2B": {
+  "csHexacastTribladerHeatDash2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_B",
@@ -2112,7 +2133,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerHeatDash3A": {
+  "csHexacastSpheromancerHeatDash3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL3_A",
@@ -2145,7 +2166,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatDash3A": {
+  "csHexacastTribladerHeatDash3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL3_A",
@@ -2166,7 +2187,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatGuard1A": {
+  "csHexacastSpheromancerHeatGuard1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_A",
@@ -2199,7 +2220,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatGuard1B": {
+  "csHexacastSpheromancerHeatGuard1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_B",
@@ -2232,7 +2253,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard1A": {
+  "csHexacastTribladerHeatGuard1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_A",
@@ -2255,7 +2276,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard1B": {
+  "csHexacastTribladerHeatGuard1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_B",
@@ -2305,7 +2326,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerHeatGuard2A": {
+  "csHexacastSpheromancerHeatGuard2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_A",
@@ -2338,7 +2359,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatGuard2B": {
+  "csHexacastSpheromancerHeatGuard2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_B",
@@ -2371,7 +2392,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard2A": {
+  "csHexacastTribladerHeatGuard2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
@@ -2392,7 +2413,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard2B": {
+  "csHexacastTribladerHeatGuard2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_B",
@@ -2413,7 +2434,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatGuard3A": {
+  "csHexacastSpheromancerHeatGuard3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL3_A",
@@ -2446,7 +2467,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerHeatGuard3B": {
+  "csHexacastSpheromancerHeatGuard3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL3_B",
@@ -2479,7 +2500,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard3A": {
+  "csHexacastTribladerHeatGuard3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL3_A",
@@ -2500,7 +2521,7 @@
       "offY": 168
     }
   },
-  "csTribladerHeatGuard3B": {
+  "csHexacastTribladerHeatGuard3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL3_B",
@@ -2550,7 +2571,7 @@
       "offY": 96
     }
   },
-  "csSpheromancerColdThrow1A": {
+  "csHexacastSpheromancerColdThrow1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_A",
@@ -2583,7 +2604,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerColdThrow1B": {
+  "csHexacastSpheromancerColdThrow1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_B",
@@ -2616,7 +2637,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdThrow1A": {
+  "csHexacastTribladerColdThrow1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_A",
@@ -2637,7 +2658,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdThrow1B": {
+  "csHexacastTribladerColdThrow1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_B",
@@ -2708,7 +2729,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerColdThrow2A": {
+  "csHexacastSpheromancerColdThrow2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_A",
@@ -2741,7 +2762,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerColdThrow2B": {
+  "csHexacastSpheromancerColdThrow2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_B",
@@ -2774,7 +2795,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdThrow2A": {
+  "csHexacastTribladerColdThrow2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_A",
@@ -2795,7 +2816,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdThrow2B": {
+  "csHexacastTribladerColdThrow2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_B",
@@ -2845,7 +2866,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerColdThrow3A": {
+  "csHexacastSpheromancerColdThrow3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL3_A",
@@ -2878,7 +2899,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdThrow3A": {
+  "csHexacastTribladerColdThrow3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL3_A",
@@ -2951,7 +2972,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerColdAttack1A": {
+  "csHexacastSpheromancerColdAttack1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_A",
@@ -2984,7 +3005,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerColdAttack1B": {
+  "csHexacastSpheromancerColdAttack1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_B",
@@ -3017,7 +3038,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdAttack1A": {
+  "csHexacastTribladerColdAttack1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_A",
@@ -3038,7 +3059,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdAttack1B": {
+  "csHexacastTribladerColdAttack1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_B",
@@ -3145,7 +3166,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerColdAttack2A": {
+  "csHexacastSpheromancerColdAttack2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_A",
@@ -3178,7 +3199,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerColdAttack2B": {
+  "csHexacastSpheromancerColdAttack2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_B",
@@ -3211,7 +3232,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdAttack2A": {
+  "csHexacastTribladerColdAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_A",
@@ -3232,7 +3253,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdAttack2B": {
+  "csHexacastTribladerColdAttack2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADR_ATTACK_SPECIAL2_B",
@@ -3303,7 +3324,7 @@
       "offY": 360
     }
   },
-  "csSpheromancerColdAttack3A": {
+  "csHexacastSpheromancerColdAttack3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL3_A",
@@ -3336,7 +3357,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerColdAttack3B": {
+  "csHexacastSpheromancerColdAttack3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL3_B",
@@ -3369,7 +3390,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdAttack3A": {
+  "csHexacastTribladerColdAttack3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL3_A",
@@ -3390,7 +3411,7 @@
       "offY": 192
     }
   },
-  "csTribladerColdAttack3B": {
+  "csHexacastTribladerColdAttack3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL3_B",
@@ -3440,7 +3461,7 @@
       "offY": 120
     }
   },
-  "csSpheromancerColdDash1A": {
+  "csHexacastSpheromancerColdDash1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_A",
@@ -3473,7 +3494,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdDash1A": {
+  "csHexacastTribladerColdDash1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_A",
@@ -3494,7 +3515,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdDash2A": {
+  "csHexacastSpheromancerColdDash2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_A",
@@ -3527,7 +3548,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdDash2A": {
+  "csHexacastTribladerColdDash2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_A",
@@ -3548,7 +3569,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard1A": {
+  "csHexacastSpheromancerColdGuard1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_A",
@@ -3581,7 +3602,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard1B": {
+  "csHexacastSpheromancerColdGuard1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_B",
@@ -3614,7 +3635,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard1A": {
+  "csHexacastTribladerColdGuard1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_A",
@@ -3641,7 +3662,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard1B": {
+  "csHexacastTribladerColdGuard1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_B",
@@ -3662,7 +3683,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard2A": {
+  "csHexacastSpheromancerColdGuard2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_A",
@@ -3695,7 +3716,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard2B": {
+  "csHexacastSpheromancerColdGuard2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_B",
@@ -3728,7 +3749,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard2A": {
+  "csHexacastTribladerColdGuard2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
@@ -3749,7 +3770,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard2B": {
+  "csHexacastTribladerColdGuard2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_B",
@@ -3770,7 +3791,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard3A": {
+  "csHexacastSpheromancerColdGuard3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL3_A",
@@ -3803,7 +3824,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerColdGuard3B": {
+  "csHexacastSpheromancerColdGuard3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL3_B",
@@ -3836,7 +3857,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard3A": {
+  "csHexacastTribladerColdGuard3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL3_A",
@@ -3857,7 +3878,7 @@
       "offY": 216
     }
   },
-  "csTribladerColdGuard3B": {
+  "csHexacastTribladerColdGuard3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL3_B",
@@ -3878,7 +3899,7 @@
       "offY": 216
     }
   },
-  "csSpheromancerShockThrow1A": {
+  "csHexacastSpheromancerShockThrow1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_A",
@@ -3911,7 +3932,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockThrow1B": {
+  "csHexacastSpheromancerShockThrow1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_B",
@@ -3944,7 +3965,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow1A": {
+  "csHexacastTribladerShockThrow1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_A",
@@ -3965,7 +3986,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow1B": {
+  "csHexacastTribladerShockThrow1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_B",
@@ -4057,7 +4078,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockThrow2A": {
+  "csHexacastSpheromancerShockThrow2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_A",
@@ -4090,7 +4111,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockThrow2B": {
+  "csHexacastSpheromancerShockThrow2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_B",
@@ -4123,7 +4144,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow2A": {
+  "csHexacastTribladerShockThrow2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_A",
@@ -4144,7 +4165,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow2B": {
+  "csHexacastTribladerShockThrow2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_B",
@@ -4236,7 +4257,7 @@
       "offY": 360
     }
   },
-  "csSpheromancerShockThrow3A": {
+  "csHexacastSpheromancerShockThrow3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL3_A",
@@ -4269,7 +4290,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockThrow3B": {
+  "csHexacastSpheromancerShockThrow3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL3_B",
@@ -4302,7 +4323,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow3A": {
+  "csHexacastTribladerShockThrow3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL3_A",
@@ -4323,7 +4344,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockThrow3B": {
+  "csHexacastTribladerShockThrow3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL3_B",
@@ -4373,7 +4394,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerShockAttack1A": {
+  "csHexacastSpheromancerShockAttack1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_A",
@@ -4406,7 +4427,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockAttack1B": {
+  "csHexacastSpheromancerShockAttack1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL1_B",
@@ -4439,7 +4460,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockAttack1A": {
+  "csHexacastTribladerShockAttack1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_A",
@@ -4460,7 +4481,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockAttack1B": {
+  "csHexacastTribladerShockAttack1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_B",
@@ -4510,7 +4531,7 @@
       "offY": 168
     }
   },
-  "csSpheromancerShockAttack2A": {
+  "csHexacastSpheromancerShockAttack2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_A",
@@ -4543,7 +4564,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockAttack2B": {
+  "csHexacastSpheromancerShockAttack2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_B",
@@ -4576,7 +4597,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockAttack2A": {
+  "csHexacastTribladerShockAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_A",
@@ -4597,7 +4618,7 @@
       "offY": 240
     }
   },
-  "csTribladerShockAttack2B": {
+  "csHexacastTribladerShockAttack2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_B",
@@ -4618,7 +4639,7 @@
       "offY": 240
     }
   },
-  "csSpheromancerShockAttack3A": {
+  "csHexacastSpheromancerShockAttack3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL3_A",
@@ -4651,7 +4672,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockAttack3A": {
+  "csHexacastTribladerShockAttack3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL3_A",
@@ -4672,7 +4693,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockDash1A": {
+  "csHexacastSpheromancerShockDash1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_A",
@@ -4705,7 +4726,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockDash1B": {
+  "csHexacastSpheromancerShockDash1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_B",
@@ -4738,7 +4759,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash1A": {
+  "csHexacastTribladerShockDash1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_A",
@@ -4759,7 +4780,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash1B": {
+  "csHexacastTribladerShockDash1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_B",
@@ -4809,7 +4830,7 @@
       "offY": 192
     }
   },
-  "csSpheromancerShockDash2A": {
+  "csHexacastSpheromancerShockDash2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_A",
@@ -4842,7 +4863,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockDash2B": {
+  "csHexacastSpheromancerShockDash2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_B",
@@ -4875,7 +4896,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash2A": {
+  "csHexacastTribladerShockDash2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_A",
@@ -4896,7 +4917,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash2B": {
+  "csHexacastTribladerShockDash2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_B",
@@ -4917,7 +4938,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockDash3A": {
+  "csHexacastSpheromancerShockDash3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL3_A",
@@ -4950,7 +4971,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockDash3B": {
+  "csHexacastSpheromancerShockDash3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL3_B",
@@ -4983,7 +5004,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash3A": {
+  "csHexacastTribladerShockDash3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL3_A",
@@ -5004,7 +5025,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockDash3B": {
+  "csHexacastTribladerShockDash3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL3_B",
@@ -5025,7 +5046,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockGuard1A": {
+  "csHexacastSpheromancerShockGuard1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_A",
@@ -5058,7 +5079,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockGuard1A": {
+  "csHexacastTribladerShockGuard1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_A",
@@ -5079,7 +5100,7 @@
       "offY": 264
     }
   },
-  "csSpheromancerShockGuard2A": {
+  "csHexacastSpheromancerShockGuard2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_A",
@@ -5112,7 +5133,7 @@
       "offY": 264
     }
   },
-  "csTribladerShockGuard2A": {
+  "csHexacastTribladerShockGuard2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
@@ -5166,7 +5187,7 @@
       "offY": 360
     }
   },
-  "csSpheromancerWaveThrow1A": {
+  "csHexacastSpheromancerWaveThrow1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_A",
@@ -5199,7 +5220,7 @@
       "offY": 288
     }
   },
-  "csSpheromancerWaveThrow1B": {
+  "csHexacastSpheromancerWaveThrow1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL1_B",
@@ -5232,7 +5253,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow1A": {
+  "csHexacastTribladerWaveThrow1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_A",
@@ -5253,7 +5274,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow1B": {
+  "csHexacastTribladerWaveThrow1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL1_B",
@@ -5394,7 +5415,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveThrow2A": {
+  "csHexacastSpheromancerWaveThrow2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_A",
@@ -5427,7 +5448,7 @@
       "offY": 288
     }
   },
-  "csSpheromancerWaveThrow2B": {
+  "csHexacastSpheromancerWaveThrow2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL2_B",
@@ -5460,7 +5481,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow2A": {
+  "csHexacastTribladerWaveThrow2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_A",
@@ -5481,7 +5502,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow2B": {
+  "csHexacastTribladerWaveThrow2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL2_B",
@@ -5594,7 +5615,7 @@
       "offY": 24
     }
   },
-  "csSpheromancerWaveThrow3A": {
+  "csHexacastSpheromancerWaveThrow3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL3_A",
@@ -5627,7 +5648,7 @@
       "offY": 288
     }
   },
-  "csSpheromancerWaveThrow3B": {
+  "csHexacastSpheromancerWaveThrow3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_THROW_SPECIAL3_B",
@@ -5660,7 +5681,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow3A": {
+  "csHexacastTribladerWaveThrow3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL3_A",
@@ -5681,7 +5702,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveThrow3B": {
+  "csHexacastTribladerWaveThrow3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_THROW_SPECIAL3_B",
@@ -5744,7 +5765,7 @@
       "offY": 360
     }
   },
-  "csTribladerWaveAttack1A": {
+  "csHexacastTribladerWaveAttack1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL1_A",
@@ -5815,7 +5836,7 @@
       "offY": 0
     }
   },
-  "csSpheromancerWaveAttack2A": {
+  "csHexacastSpheromancerWaveAttack2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_ATTACK_SPECIAL2_A",
@@ -5848,7 +5869,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveAttack2A": {
+  "csHexacastTribladerWaveAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_ATTACK_SPECIAL2_A",
@@ -5890,7 +5911,7 @@
       "offY": 360
     }
   },
-  "csSpheromancerWaveDash1A": {
+  "csHexacastSpheromancerWaveDash1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_A",
@@ -5923,7 +5944,7 @@
       "offY": 288
     }
   },
-  "csSpheromancerWaveDash1B": {
+  "csHexacastSpheromancerWaveDash1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL1_B",
@@ -5956,7 +5977,7 @@
       "offY": 288
     }
   },
-  "csTribladerWaveDash1A": {
+  "csHexacastTribladerWaveDash1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_A",
@@ -5977,7 +5998,7 @@
       "offY": 288
     }
   },
-  "csSpheromancerWaveDash2A": {
+  "csHexacastSpheromancerWaveDash2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_A",
@@ -6010,7 +6031,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveDash2B": {
+  "csHexacastSpheromancerWaveDash2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL2_B",
@@ -6043,7 +6064,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveDash2A": {
+  "csHexacastTribladerWaveDash2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_A",
@@ -6085,7 +6106,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveDash2B": {
+  "csHexacastTribladerWaveDash2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL2_B",
@@ -6106,7 +6127,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveDash3A": {
+  "csHexacastSpheromancerWaveDash3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL3_A",
@@ -6139,7 +6160,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveDash3B": {
+  "csHexacastSpheromancerWaveDash3B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_DASH_SPECIAL3_B",
@@ -6172,7 +6193,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveDash3A": {
+  "csHexacastTribladerWaveDash3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL3_A",
@@ -6193,7 +6214,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveDash3B": {
+  "csHexacastTribladerWaveDash3B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_DASH_SPECIAL3_B",
@@ -6214,7 +6235,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveGuard1A": {
+  "csHexacastSpheromancerWaveGuard1A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_A",
@@ -6247,7 +6268,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveGuard1B": {
+  "csHexacastSpheromancerWaveGuard1B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL1_B",
@@ -6280,7 +6301,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveGuard1A": {
+  "csHexacastTribladerWaveGuard1A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_A",
@@ -6301,7 +6322,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveGuard1B": {
+  "csHexacastTribladerWaveGuard1B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL1_B",
@@ -6322,7 +6343,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveGuard2A": {
+  "csHexacastSpheromancerWaveGuard2A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_A",
@@ -6355,7 +6376,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveGuard2B": {
+  "csHexacastSpheromancerWaveGuard2B": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL2_B",
@@ -6388,7 +6409,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveGuard2A": {
+  "csHexacastTribladerWaveGuard2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
@@ -6409,7 +6430,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveGuard2B": {
+  "csHexacastTribladerWaveGuard2B": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_B",
@@ -6430,7 +6451,7 @@
       "offY": 312
     }
   },
-  "csSpheromancerWaveGuard3A": {
+  "csHexacastSpheromancerWaveGuard3A": {
     "list": [
       {
         "replaceTo": "CS_SPHEROMANCER_GUARD_SPECIAL3_A",
@@ -6463,7 +6484,7 @@
       "offY": 312
     }
   },
-  "csTribladerWaveGuard3A": {
+  "csHexacastTribladerWaveGuard3A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL3_A",

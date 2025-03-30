@@ -1,3 +1,65 @@
+## 2.9.0 (03/30/2025)
+### New Content
+- New Triblader combat art: Double Whirl (Heat Melee Lv.2A), Solar Eruption converted to custom skill
+- Added triblader animations spinLongFast and spinLongFastRev
+### Changes
+- Lea (spheromancer) now uses Triblader-Lea unique effect sprites when using Triblader custom skills
+  * Daybreak
+  * Sunfury
+  * Wave charged shot
+- Modernized action steps for Recoil Slash
+- Removed camera steps from Recoil Slash
+- Overhauled effects for Recoil Slash
+- Adjusted lighting parameters for effect rudeBusterExplode
+- Deleted smack.ogg, changed hit sound for Gleaming Surge
+- Removed camera steps from Lava Sweep
+- Lava Sweep pull force now has minimum radius 32 (was 0)
+- Improved effect heatSpecialSweepBig (Lava Sweep, Vermillion Firestorm, Trailblazer)
+- Improved effect flameWallTriblader
+- Improved effect bigSweepDaybreak, reduced screen flash intensity
+- Classified Daybreak as INTERRUPT
+- Added light sources to the following triblader effects:
+  * wirbelschlitzerSweep
+  * spikeBallShoot
+  * sweepNeutralDouble
+  * sweepNeutralDoubleRev
+  * triProjectile
+  * wervynSweep
+  * stabNeutral
+  * finisherNeutralBig
+  * sweepHeatDouble
+  * sweepHeatDoubleRev
+  * heatCounterGuard2
+  * stabHeatLoopFast
+  * daybreakSparks
+  * daybreakSparksLite
+### Fixes
+- Fixed triblader-lea unique sprites for Daybreak, wave charged shot, and Solar Eruption (now a custom skill)
+- Fixed Triblader animation spinLongRev having different frame duration thatn spinLong
+- Fixed 2.8.0 Wirbelschlitzer changes not applying to some PVP triblader variants
+- Fixed Recoil Slash stun and hitbox inconsistencies
+- Fixed Kindling Triad stun mechanics and final hit knockback
+- Removed inert stun steps from triblader proxy "flame"
+- Fixed light radius for Fire Saw, Lava Sweep, and Daybreak
+- Fixed two instances of name string space padding in Triblader REMOVE_SHIELD steps
+- Lava Sweep lingering fire now benefits from MELEE_DMG skillBonus
+- Daybreak collateral hitbox zHeight fix
+### Balance
+- Wirbelschlitzer knockback increased from HEAVY to MASSIVE
+- Kindling Triad proxy flamethrowerTriangle is now breakType ACTION (will not continue if player cancels attack)
+- Kindling Triad total damage slightly increased
+- Recoil Slash damage factor decreased from 6 to 5.25
+- Lava Sweep no longer provides a shield to the user, now grants HEAVY hit stability
+- Lava Sweep no longer stun locks enemies
+- Lava Sweep hit strength decreased from MASSIVE to HEAVY
+- Lava Sweep melee damage factor increased from 1.5 to 2.5
+- Lava Sweep pull force decreased from DASH_ESCAPE to RUN_ESCAPE
+- Lava Sweep lingering fire damage decreased
+- Daybreak projectile speed decreased from 800 to 600
+- Daybreak impact damage factor decreased from 2 to 0.5
+- Daybreak collateral damage factor decreased from 0.8 to 0.6
+- Daybreak tick damage factor decreased from 0.4 to 0.275
+
 ## 2.8.0 (03/24/2025)
 ### Important
 - Any equipped custom skills on Hexacast1/2 will need to be re-equipped in the menu after updating
@@ -52,7 +114,6 @@
 - Homing Shards damage decreased
 - Throwing Knives now has bigger projectiles
 - Wirbelschlitzer start delay reduced, damage reduced, hit strength decreased from MASSIVE to HEAVY
-
 
 ## 2.7.1 (03/02/2025)
 ### New Content

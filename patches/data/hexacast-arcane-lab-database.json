@@ -1603,6 +1603,27 @@
     "element": "HEAT",
     "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
     "name": {
+      "en_US": "\\i[class-tri] Double Whirl"
+    },
+    "description": {
+      "en_US": "Two large spin attacks followed by a blast of fire from your sword."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 144
+    }
+  },
+  "csHexacastCustom1TribladerHeatAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
       "en_US": "\\i[class-tri] Solar Eruption"
     },
     "description": {

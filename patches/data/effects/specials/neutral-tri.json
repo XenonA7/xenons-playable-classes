@@ -504,10 +504,10 @@
     ],
     "rudeBusterExplode": [
       {
-        "size": "XXL",
+        "size": "XXXL",
         "fadeIn": 0,
         "fadeOut": 0.5,
-        "duration": 0.5,
+        "duration": 0.7,
         "glow": false,
         "type": "LIGHT"
       },

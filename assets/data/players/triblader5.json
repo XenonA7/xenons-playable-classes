@@ -1748,7 +1748,7 @@
           "attack": {
             "type": "MASSIVE",
             "element": "HEAT",
-            "damageFactor": 2,
+            "damageFactor": 0.5,
             "status": 2,
             "guardable": "",
             "stunSteps": [],
@@ -1805,7 +1805,7 @@
       "config": {
         "collType": "PROJECTILE",
         "airFriction": 1,
-        "maxVel": 800,
+        "maxVel": 600,
         "zGravityFactor": 0,
         "bounciness": 0.0001
       }
@@ -1912,7 +1912,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.heat",
-            "name": "bigSweep"
+            "name": "bigSweepDaybreak"
           },
           "offset": {
             "x": 0,
@@ -1924,7 +1924,7 @@
           "align": "BOTTOM",
           "radius": 72,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 32,
           "centralAngle": 3.5,
           "startAngle": -0.25,
           "duration": 0.7,
@@ -1942,7 +1942,7 @@
             "type": "HEAVY",
             "element": "HEAT",
             "fly": "MEDIUM",
-            "damageFactor": 0.8,
+            "damageFactor": 0.6,
             "status": 1,
             "reverse": false,
             "spFactor": 0,
@@ -1952,7 +1952,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -1971,9 +1971,9 @@
             "type": "NONE",
             "visualType": "LIGHT",
             "element": "HEAT",
-            "damageFactor": 0.40,
+            "damageFactor": 0.275,
             "reverse": false,
-            "status": 0.3,
+            "status": 0.4,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": ""
@@ -3423,12 +3423,12 @@
             "type": "NONE",
             "visualType": "LIGHT",
             "element": "HEAT",
-            "damageFactor": 0.3,
+            "damageFactor": 0.15,
             "reverse": false,
             "spFactor": 0,
             "status": 1,
             "guardable": "",
-            "skillBonus": "",
+            "skillBonus": "MELEE_DMG",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -3440,8 +3440,9 @@
           }
         },
         {
-          "time": 5,
-          "type": "WAIT"
+          "minTime": 4.75,
+          "maxTime": 5.25,
+          "type": "WAIT_RANDOM"
         },
         {
           "type": "CLEAR_EFFECTS"
@@ -15885,870 +15886,6 @@
       "config": {},
       "type": "GENERIC"
     },
-    "solarEruptionTipR": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "pivot": {
-          "x": 16,
-          "y": 25
-        },
-        "sheet": {
-          "src": "media/entity/effects/triblader/tri-misc.png",
-          "offX": 112,
-          "offY": 118,
-          "width": 30,
-          "height": 48
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "volume": 0.7,
-          "global": false,
-          "loop": false,
-          "speed": 1.0,
-          "variance": 0.0,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/big-swipe-1.ogg"
-        },
-        {
-          "volume": 0.7,
-          "global": false,
-          "loop": false,
-          "speed": 1.0,
-          "variance": 0.1,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/spin-03.ogg"
-        },
-        {
-          "name": "hiltCenter",
-          "target": "SELF",
-          "align": "CENTER",
-          "faceDistance": 0,
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "type": "SET_ATTRIB_POS"
-        },
-        {
-          "align": "CENTER",
-          "type": "SHOOT_PROXY",
-          "proxy": "solarEruptionHilt",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": -12
-          }
-        },
-        {
-          "selectType": "PREV_ACTION_PROXY",
-          "type": "SET_PROXY_TEMP_TARGET"
-        },
-        {
-          "align": "CENTER",
-          "type": "SHOOT_PROXY",
-          "proxy": "solarEruptionHead",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": -12
-          }
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 16,
-          "yScale": 0,
-          "zHeight": 16,
-          "centralAngle": 1,
-          "duration": 0.05,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "MASSIVE",
-            "element": "HEAT",
-            "damageFactor": 1,
-            "reverse": false,
-            "fly": "LIGHT",
-            "status": 1,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "target": "SELF",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "target2": "ATTRIB_POINT",
-          "target2Key": "hiltCenter",
-          "target2Align": "CENTER",
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "target2Offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "solarChain"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 12
-          }
-        },
-        {
-          "value": 1,
-          "type": "SET_ACCEL_SPEED"
-        },
-        {
-          "value": 1600,
-          "type": "SET_SPEED"
-        },
-        {
-          "time": 0.14,
-          "stopBeforeEdge": false,
-          "type": "MOVE_FORWARD"
-        },
-        {
-          "target": "PROXY_OWNER",
-          "distance": 1000,
-          "duration": 0.2,
-          "ccw": true,
-          "rotateTime": 2.0,
-          "distAdjustSpeed": 500,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "target": "PROXY_OWNER",
-          "distance": 4,
-          "duration": 0.05,
-          "ccw": true,
-          "rotateTime": 3.0,
-          "distAdjustSpeed": 650,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 16,
-          "yScale": 0,
-          "zHeight": 16,
-          "centralAngle": 1,
-          "duration": 0.05,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "MASSIVE",
-            "element": "HEAT",
-            "damageFactor": 1,
-            "reverse": false,
-            "fly": "LIGHT",
-            "status": 1,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "kind": "PROXY_OWNER",
-          "type": "SET_TEMP_TARGET"
-        },
-        {
-          "value": false,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "min": 0,
-          "max": 20,
-          "maxTime": 3,
-          "forceTime": false,
-          "rotateSpeed": 4.2,
-          "stopBeforeEdge": false,
-          "type": "MOVE_TO_DISTANCE"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "group": "trail",
-          "type": "CLEAR_EFFECTS"
-        }
-      ],
-      "invisible": true,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "group": "",
-      "type": "GENERIC",
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "NONE",
-        "shadow": 16,
-        "maxVel": 600,
-        "zGravityFactor": 0
-      }
-    },
-    "solarEruptionTipL": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "pivot": {
-          "x": 16,
-          "y": 25
-        },
-        "sheet": {
-          "src": "media/entity/effects/triblader/tri-misc.png",
-          "offX": 112,
-          "offY": 118,
-          "width": 30,
-          "height": 48
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "volume": 0.7,
-          "global": false,
-          "loop": false,
-          "speed": 1.0,
-          "variance": 0.0,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/big-swipe-1.ogg"
-        },
-        {
-          "volume": 0.7,
-          "global": false,
-          "loop": false,
-          "speed": 1.0,
-          "variance": 0.1,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/battle/spin-03.ogg"
-        },
-        {
-          "name": "hiltCenter",
-          "target": "SELF",
-          "align": "CENTER",
-          "faceDistance": 0,
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "type": "SET_ATTRIB_POS"
-        },
-        {
-          "align": "CENTER",
-          "type": "SHOOT_PROXY",
-          "proxy": "solarEruptionHilt",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": -12
-          }
-        },
-        {
-          "selectType": "PREV_ACTION_PROXY",
-          "type": "SET_PROXY_TEMP_TARGET"
-        },
-        {
-          "align": "CENTER",
-          "type": "SHOOT_PROXY",
-          "proxy": "solarEruptionHead",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": -12
-          }
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 16,
-          "yScale": 0,
-          "zHeight": 16,
-          "centralAngle": 1,
-          "duration": 0.05,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "MASSIVE",
-            "element": "HEAT",
-            "damageFactor": 1,
-            "reverse": false,
-            "fly": "LIGHT",
-            "status": 1,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "target": "SELF",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "target2": "ATTRIB_POINT",
-          "target2Key": "hiltCenter",
-          "target2Align": "CENTER",
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "target2Offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "solarChain"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 12
-          }
-        },
-        {
-          "value": 1,
-          "type": "SET_ACCEL_SPEED"
-        },
-        {
-          "value": 1600,
-          "type": "SET_SPEED"
-        },
-        {
-          "time": 0.11,
-          "stopBeforeEdge": false,
-          "type": "MOVE_FORWARD"
-        },
-        {
-          "target": "PROXY_OWNER",
-          "distance": 1000,
-          "duration": 0.15,
-          "ccw": false,
-          "rotateTime": 2.0,
-          "distAdjustSpeed": 800,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "target": "PROXY_OWNER",
-          "distance": 4,
-          "duration": 0.05,
-          "ccw": false,
-          "rotateTime": 3.0,
-          "distAdjustSpeed": 800,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 16,
-          "yScale": 0,
-          "zHeight": 16,
-          "centralAngle": 1,
-          "duration": 0.05,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "MASSIVE",
-            "element": "HEAT",
-            "damageFactor": 1,
-            "reverse": false,
-            "fly": "LIGHT",
-            "status": 1,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "kind": "PROXY_OWNER",
-          "type": "SET_TEMP_TARGET"
-        },
-        {
-          "value": false,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "min": 0,
-          "max": 20,
-          "maxTime": 3,
-          "forceTime": false,
-          "rotateSpeed": 4.2,
-          "stopBeforeEdge": false,
-          "type": "MOVE_TO_DISTANCE"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "group": "trail",
-          "type": "CLEAR_EFFECTS"
-        }
-      ],
-      "invisible": true,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "group": "",
-      "type": "GENERIC",
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "NONE",
-        "shadow": 16,
-        "maxVel": 600,
-        "zGravityFactor": 0
-      }
-    },
-    "solarEruptionHilt": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "sheet": {
-          "src": "media/entity/effects/triblader/tri-misc.png",
-          "offX": 112,
-          "offY": 204,
-          "width": 30,
-          "height": 40
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "daybreakSparksSE"
-          },
-          "spriteFilter": [
-            1
-          ],
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "attrib": "hiltCenter",
-          "type": "TELEPORT_TO_ATTRIB_POS"
-        },
-        {
-          "kind": "PROXY_SRC",
-          "type": "SET_TEMP_TARGET"
-        },
-        {
-          "value": true,
-          "immediately": true,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "time": 5,
-          "type": "WAIT"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "group": "",
-      "type": "GENERIC",
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "NONE",
-        "zGravityFactor": 0
-      }
-    },
-    "solarEruptionHead": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": -4
-        },
-        "sheet": {
-          "src": "media/entity/effects/triblader/tri-misc.png",
-          "offX": 142,
-          "offY": 118,
-          "width": 30,
-          "height": 48
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "daybreakSparksSE"
-          },
-          "spriteFilter": [
-            1
-          ],
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "selectType": "PREV_ACTION_PROXY",
-          "type": "SET_PROXY_TEMP_TARGET"
-        },
-        {
-          "value": true,
-          "immediately": true,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "time": 0.1,
-          "type": "WAIT"
-        },
-        {
-          "align": "BOTTOM",
-          "centralAngle": 0,
-          "angleVary": 0,
-          "startDist": 40,
-          "startDistCollide": "NONE",
-          "random": false,
-          "count": 1,
-          "duration": 0.05,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": true,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "solarEruptionChainHitbox",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "time": 5,
-          "type": "WAIT"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "OWNER",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "group": "",
-      "type": "GENERIC",
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "NONE",
-        "zGravityFactor": 0
-      }
-    },
-    "solarEruptionChainHitbox": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "pivot": {
-          "x": 16,
-          "y": 25
-        },
-        "sheet": {
-          "src": "media/entity/effects/triblader/tri-misc.png",
-          "offX": 112,
-          "offY": 118,
-          "width": 30,
-          "height": 48
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "value": 3,
-          "type": "SET_ACCEL_SPEED"
-        },
-        {
-          "value": 2000,
-          "type": "SET_SPEED"
-        },
-        {
-          "selectType": "PREV_ACTION_PROXY",
-          "type": "SET_PROXY_TEMP_TARGET"
-        },
-        {
-          "kind": "PROXY_OWNER",
-          "type": "SET_TEMP_TARGET"
-        },
-        {
-          "immediately": true,
-          "value": false,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 16,
-          "yScale": 0,
-          "zHeight": 16,
-          "centralAngle": 1,
-          "duration": 3,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "HEAVY",
-            "element": "HEAT",
-            "damageFactor": 0.25,
-            "reverse": false,
-            "fly": "LIGHT",
-            "status": 0.5,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "min": 0,
-          "max": 12,
-          "maxTime": 0.15,
-          "forceTime": false,
-          "rotateSpeed": 2,
-          "stopBeforeEdge": false,
-          "type": "MOVE_TO_DISTANCE"
-        }
-      ],
-      "invisible": true,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "group": "",
-      "type": "GENERIC",
-      "timeBoni": null,
-      "behaviors": [],
-      "config": {
-        "collType": "NONE",
-        "maxVel": 4000,
-        "zGravityFactor": 0
-      }
-    },
     "subPierce": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
@@ -16902,8 +16039,12 @@
           0
         ]
       },
+      "killEffect": {
+        "sheet": "specials.heat",
+        "name": "flameGuardActivateLite"
+      },
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "ACTION",
       "action": [
         {
           "duration": -1,
@@ -17051,12 +16192,19 @@
         {
           "min": 0,
           "max": 64,
-          "maxTime": 1.4,
+          "maxTime": 1.3,
           "forceTime": true,
           "type": "MOVE_TO_DISTANCE"
         },
         {
           "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "min": 0,
+          "max": 64,
+          "maxTime": 0.1,
+          "forceTime": true,
+          "type": "MOVE_TO_DISTANCE"
         },
         {
           "type": "STOP_XY"
@@ -17067,6 +16215,10 @@
         {
           "kind": "PROXY_SRC",
           "type": "SET_TEMP_TARGET"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
         },
         {
           "duration": 0,
@@ -17214,15 +16366,11 @@
       "attack": {
         "type": "LIGHT",
         "element": "HEAT",
-        "damageFactor": 0.10,
+        "damageFactor": 0.12,
         "reverse": false,
         "spFactor": 0,
         "status": 1.1,
-        "stunSteps": [
-          {
-            "type": "START_LOCK"
-          }
-        ],
+        "stunSteps": [],
         "guardable": "",
         "skillBonus": "RANGED_DMG",
         "limiter": ""
@@ -19738,13 +18886,35 @@
           "type": "ADD_TARGET_STUN_LOCK"
         },
         {
-          "volume": 0.5,
-          "speed": 1,
-          "variance": 0.1,
           "global": false,
           "loop": false,
-          "sound": "media/sound/battle/triblader/smack.ogg",
-          "type": "PLAY_SOUND"
+          "sounds": [
+            {
+              "sound": "media/sound/battle/airon/close-combat-hit-hard1.ogg",
+              "volume": 1.1,
+              "variance": 0.075,
+              "speed": 1.5
+            },
+            {
+              "sound": "media/sound/battle/airon/close-combat-hit-hard2.ogg",
+              "volume": 1.1,
+              "variance": 0.075,
+              "speed": 1.5
+            },
+            {
+              "sound": "media/sound/battle/airon/close-combat-hit-hard3.ogg",
+              "volume": 1.1,
+              "variance": 0.075,
+              "speed": 1.5
+            },
+            {
+              "sound": "media/sound/battle/airon/close-combat-hit-hard4.ogg",
+              "volume": 1.1,
+              "variance": 0.075,
+              "speed": 1.5
+            }
+          ],
+          "type": "PLAY_RANDOM_SOUND"
         },
         {
           "duration": 1,
@@ -27061,6 +26231,79 @@
       },
       "config": {},
       "type": "GENERIC"
+    },
+    "doubleWhirlFlame": {
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "effects": "specials.heat",
+      "effectKeys": {
+        "wall": "flameKill"
+      },
+      "speed": 250,
+      "maxBounce": 0,
+      "timer": 0.8,
+      "trail": false,
+      "multiHit": true,
+      "light": "XL",
+      "noLightGlow": true,
+      "type": "BALL",
+      "effect": "ar",
+      "maxBounds": 0,
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "xCount": 6,
+          "offX": 0,
+          "offY": 0,
+          "width": 48,
+          "height": 48
+        },
+        "guiSprites": true,
+        "time": 0.07,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "attack": {
+        "type": "MEDIUM",
+        "element": "HEAT",
+        "damageFactor": 0.225,
+        "reverse": false,
+        "spFactor": 0,
+        "status": 0,
+        "stunSteps": [],
+        "guardable": "",
+        "skillBonus": "MELEE_DMG",
+        "limiter": ""
+      },
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 0.15,
+          "pause": 5,
+          "fadeIn": 0.2,
+          "startWait": 0.3,
+          "fadeOutVary": 0.15
+        }
+      ],
+      "timeBoni": null
     }
   },
   "actions": {
@@ -30989,6 +30232,7 @@
             "type": "CIRCLE_ATTACK",
             "attack": {
               "type": "HEAVY",
+              "fly": "MASSIVE",
               "element": "NEUTRAL",
               "damageFactor": 2.25,
               "reverse": false,
@@ -32513,14 +31757,14 @@
       },
       "ATTACK_SPECIAL2_A": {
         "name": {
-          "en_US": "Solar Eruption"
+          "en_US": "Double Whirl"
         },
         "description": {
-          "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
+          "en_US": "Two large spin attacks followed by a blast of fire from your sword."
         },
         "dmgType": "MELEE",
         "stunType": "",
-        "status": true,
+        "status": false,
         "steps": [
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
@@ -32532,71 +31776,11 @@
             }
           },
           {
-            "value": "MASSIVE",
+            "value": "MEDIUM",
             "type": "SET_HIT_STABLE"
           },
           {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "throwSpecial"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 8,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.heat",
-              "name": "flameGuardActivate2"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "align": "BOTTOM",
-            "centralAngle": 0.07,
-            "startAngle": 0.10,
-            "angleVary": 0,
-            "startDist": 0,
-            "startDistCollide": "NONE",
-            "random": false,
-            "duration": 0,
-            "clockwise": false,
-            "flipLeftFace": 0,
-            "circularArea": false,
-            "uniformDir": 0,
-            "delay": 0,
-            "repeat": false,
-            "count": 1,
-            "type": "SHOOT_PROXY_RANGE",
-            "proxy": "solarEruptionTipL",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 4
-            }
-          },
-          {
-            "value": 150,
-            "type": "SET_SPEED"
-          },
-          {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_BACKWARD"
-          },
-          {
-            "time": 0.3,
-            "type": "WAIT"
+            "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
             "wait": false,
@@ -32605,8 +31789,234 @@
             "anim": "attack2End"
           },
           {
+            "duration": 0.2,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "heatSpecialCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "time": 0.2,
             "type": "WAIT"
+          },
+          {
+            "followUp": "attack1End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinLongFast"
+          },
+          {
+            "duration": 0.5,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "doubleWhirlSweep"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": false,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 1.68,
+            "startAngle": 0.6,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "clockwise": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "HEAVY",
+              "damageFactor": 1.85,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": []
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": 250,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.2,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "followUp": "attack2End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinLongFastRev"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "doubleWhirlSweepRev"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": true,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 1.68,
+            "startAngle": 0.6,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "clockwise": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "HEAVY",
+              "damageFactor": 1.85,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": []
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": 250,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.2,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.10,
+            "type": "WAIT"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "heatSubChargeTriFast"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
             "wait": false,
@@ -32617,8 +32027,28 @@
           {
             "duration": 0,
             "align": "BOTTOM",
-            "rotateFace": 8,
-            "flipLeftFace": false,
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "stabHeat"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -32626,7 +32056,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "flameGuardActivate2"
+              "name": "doubleWhirlShoot"
             },
             "offset": {
               "x": 0,
@@ -32636,26 +32066,25 @@
           },
           {
             "align": "BOTTOM",
-            "centralAngle": 0.07,
-            "startAngle": -0.05,
+            "centralAngle": 0.2,
             "angleVary": 0,
-            "startDist": 0,
-            "startDistCollide": "NONE",
-            "random": false,
-            "duration": 0,
+            "startDist": 28,
+            "startDistCollide": "CLOSER",
+            "random": true,
+            "count": 24,
+            "duration": 0.4,
             "clockwise": false,
             "flipLeftFace": 0,
             "circularArea": false,
             "uniformDir": 0,
             "delay": 0,
             "repeat": false,
-            "count": 1,
             "type": "SHOOT_PROXY_RANGE",
-            "proxy": "solarEruptionTipR",
+            "proxy": "doubleWhirlFlame",
             "offset": {
               "x": 0,
               "y": 0,
-              "z": 4
+              "z": 8
             }
           },
           {
@@ -32663,12 +32092,16 @@
             "type": "SET_SPEED"
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_BACKWARD"
+            "value": 3,
+            "type": "SET_ACCEL_SPEED"
           },
           {
-            "time": 0.8,
+            "time": 0.1,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "time": 0.65,
             "type": "WAIT"
           }
         ]
@@ -34489,7 +33922,7 @@
           "en_US": "Throw a devastating spear forged from pure solar fragments. Sticks in enemies and deals damage over time."
         },
         "dmgType": "RANGED",
-        "stunType": "",
+        "stunType": "INTERRUPT",
         "status": true,
         "steps": [
           {
@@ -34550,12 +33983,6 @@
         "status": false,
         "steps": [
           {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "battleIdle"
-          },
-          {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
               "dash": 0,
@@ -34565,8 +33992,14 @@
             }
           },
           {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "battleIdle"
+          },
+          {
             "duration": -1,
-            "align": "BOTTOM",
+            "align": "CENTER",
             "rotateFace": 8,
             "flipLeftFace": false,
             "wait": false,
@@ -34575,13 +34008,13 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "specials.heat",
-              "name": "flameGuard"
+              "sheet": "combat.tribladerXPC",
+              "name": "recoilSlashGuard"
             },
             "offset": {
               "x": 0,
               "y": 0,
-              "z": 8
+              "z": 0
             }
           },
           {
@@ -34614,7 +34047,7 @@
                 "type": "HAS_BLOCKED_ENTITY"
               }
             ],
-            "withElse": true,
+            "withElse": false,
             "type": "COMBAT_IF",
             "thenStep": [
               {
@@ -34627,21 +34060,42 @@
                 }
               },
               {
+                "volume": 1,
+                "speed": 1,
+                "variance": 0.1,
+                "global": false,
+                "loop": false,
+                "sound": "media/sound/battle/enemies/samurai/sword-slash.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
                 "kind": "GUARDED_ATTACKER",
                 "type": "SET_TEMP_TARGET"
+              },
+              {
+                "type": "REMOVE_SHIELD",
+                "name": "counter"
               },
               {
                 "value": "MASSIVE",
                 "type": "SET_HIT_STABLE"
               },
               {
+                "factor": 0.8,
+                "time": 0.1,
+                "keepEntityStatic": false,
+                "inversAccelerate": true,
+                "type": "ADD_SLOW_MOTION"
+              },
+              {
+                "value": false,
+                "immediately": true,
+                "type": "FACE_TO_TARGET"
+              },
+              {
                 "selectType": "TARGET",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameGuardHit"
-                },
+                "align": "CENTER",
                 "hitDir": "AWAY",
-                "align": "BOTTOM",
                 "hitCount": 1,
                 "hitDelay": 0,
                 "type": "DIRECT_HIT",
@@ -34650,7 +34104,7 @@
                   "visualType": "HEAVY",
                   "element": "HEAT",
                   "fly": "HEAVY",
-                  "damageFactor": 0.75,
+                  "damageFactor": 0.2,
                   "reverse": false,
                   "stunSteps": [
                     {
@@ -34664,26 +34118,6 @@
                 }
               },
               {
-                "volume": 1,
-                "speed": 1,
-                "variance": 0.1,
-                "global": false,
-                "loop": false,
-                "sound": "media/sound/battle/enemies/samurai/sword-slash.ogg",
-                "type": "PLAY_SOUND"
-              },
-              {
-                "offsetX": 0,
-                "offsetY": 0,
-                "speed": "FASTEST",
-                "transition": "LINEAR",
-                "wait": false,
-                "waitSkip": 0,
-                "zoom": 1.35,
-                "focusType": "SELF",
-                "type": "FOCUS_CAMERA"
-              },
-              {
                 "zoomType": "LIGHT",
                 "fadeIn": 0,
                 "duration": 0.2,
@@ -34691,15 +34125,8 @@
                 "type": "SET_ZOOM_BLUR"
               },
               {
-                "factor": 0.1,
-                "time": 0,
-                "keepEntityStatic": true,
-                "inversAccelerate": false,
-                "type": "ADD_SLOW_MOTION"
-              },
-              {
                 "duration": 0,
-                "align": "BOTTOM",
+                "align": "CENTER",
                 "rotateFace": 8,
                 "flipLeftFace": false,
                 "wait": false,
@@ -34708,126 +34135,42 @@
                 "fixPos": false,
                 "type": "SHOW_EFFECT",
                 "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameGuardActivate"
+                  "sheet": "combat.tribladerXPC",
+                  "name": "flameGuardActivateTri"
                 },
                 "offset": {
                   "x": 0,
                   "y": 0,
-                  "z": 8
+                  "z": 0
                 }
+              },
+              {
+                "value": 150,
+                "type": "SET_SPEED"
               },
               {
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "spinShort"
+                "anim": "battleJump"
               },
               {
-                "type": "SET_JUMPING",
-                "value": false
+                "time": 0.12,
+                "stopBeforeEdge": true,
+                "type": "MOVE_BACKWARD"
               },
               {
-                "type": "SET_SPEED",
-                "value": 1000
-              },
-              {
-                "type": "SET_ACCEL_SPEED",
-                "value": 2
-              },
-              {
-                "type": "MOVE_BACKWARD",
-                "time": 0.1,
-                "stopBeforeEdge": true
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "attack2End"
               },
               {
                 "time": 0.1,
                 "type": "WAIT"
               },
               {
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "charge"
-              },
-              {
-                "time": 0.1,
-                "type": "WAIT"
-              },
-              {
-                "time": 0,
-                "removeEntityStatic": false,
-                "type": "CLEAR_SLOW_MOTION"
-              },
-              {
-                "name": "counter",
-                "type": "REMOVE_SHIELD"
-              },
-              {
-                "duration": 0.5,
-                "target": "TARGET",
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": true,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameDash"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0,
-                "target": "TARGET",
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": true,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameRingStrong"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0.5,
-                "target": "TARGET",
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": true,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "redTrail"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "value": true,
+                "value": false,
                 "immediately": true,
                 "type": "FACE_TO_TARGET"
               },
@@ -34837,6 +34180,78 @@
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
                 "anim": "spinShort"
+              },
+              {
+                "time": 0,
+                "removeEntityStatic": false,
+                "type": "CLEAR_SLOW_MOTION"
+              },
+              {
+                "volume": 1,
+                "global": false,
+                "loop": false,
+                "speed": 1.25,
+                "sound": "media/sound/battle/enemies/discharge.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "volume": 0.5,
+                "global": false,
+                "loop": false,
+                "speed": 1.25,
+                "sound": "media/sound/battle/dash-strong-1.ogg",
+                "type": "PLAY_SOUND"
+              },
+              {
+                "duration": 0.5,
+                "target": "TARGET",
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "recoilSlashEnemyTrail"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0.5,
+                "target": "TARGET",
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "recoilSlashEnemyTrail2"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "rumbleType": "RANDOM",
+                "name": "",
+                "duration": 0.2,
+                "power": "STRONGER",
+                "speed": "FASTER",
+                "fade": true,
+                "type": "RUMBLE_SCREEN"
               },
               {
                 "duration": -1,
@@ -34859,29 +34274,13 @@
                 }
               },
               {
-                "volume": 1,
-                "global": false,
-                "loop": false,
-                "speed": 1.25,
-                "sound": "media/sound/battle/enemies/discharge.ogg",
-                "type": "PLAY_SOUND"
-              },
-              {
-                "volume": 0.5,
-                "global": false,
-                "loop": false,
-                "speed": 1.25,
-                "sound": "media/sound/battle/dash-strong-1.ogg",
-                "type": "PLAY_SOUND"
-              },
-              {
                 "type": "CIRCLE_ATTACK",
-                "align": "CENTER",
+                "align": "BOTTOM",
                 "radius": 48,
                 "yScale": 0,
                 "zHeight": 24,
                 "centralAngle": 0,
-                "duration": 0.1,
+                "duration": 0.15,
                 "expandRadius": 0,
                 "alwaysFull": true,
                 "clockwise": false,
@@ -34894,12 +34293,20 @@
                 "attack": {
                   "type": "MASSIVE",
                   "element": "HEAT",
-                  "damageFactor": 6,
+                  "damageFactor": 5.25,
                   "fly": "MASSIVE++",
                   "spFactor": 0,
                   "status": 0,
                   "guardable": "",
-                  "skillBonus": "MELEE_DMG"
+                  "skillBonus": "MELEE_DMG",
+                  "stunSteps": [
+                    {
+                      "type": "END_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ]
                 },
                 "offset": {
                   "x": 0,
@@ -34908,16 +34315,8 @@
                 }
               },
               {
-                "type": "SET_JUMPING",
-                "value": false
-              },
-              {
-                "type": "SET_SPEED",
-                "value": 500
-              },
-              {
-                "type": "SET_ACCEL_SPEED",
-                "value": 2
+                "value": 500,
+                "type": "SET_SPEED"
               },
               {
                 "type": "MOVE_FORWARD",
@@ -34925,17 +34324,17 @@
                 "stopBeforeEdge": true
               },
               {
-                "rumbleType": "RANDOM",
-                "name": "",
-                "duration": 0.2,
-                "power": "STRONGER",
-                "speed": "FASTER",
-                "fade": true,
-                "type": "RUMBLE_SCREEN"
-              },
-              {
                 "value": "HEAVY",
                 "type": "SET_HIT_STABLE"
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": 0.2,
+                  "action": -1,
+                  "move": -1,
+                  "reaim": -1
+                }
               },
               {
                 "time": 0.45,
@@ -35178,10 +34577,6 @@
             "type": "CLEAR_EFFECTS"
           },
           {
-            "name": "counter",
-            "type": "REMOVE_SHIELD"
-          },
-          {
             "conditions": [
               {
                 "negated": false,
@@ -35207,6 +34602,10 @@
               {
                 "value": "MASSIVE",
                 "type": "SET_HIT_STABLE"
+              },
+              {
+                "name": "counter",
+                "type": "REMOVE_SHIELD"
               },
               {
                 "value": -1,
@@ -35256,6 +34655,31 @@
                 }
               },
               {
+                "selectType": "TARGET",
+                "align": "CENTER",
+                "hitDir": "AWAY",
+                "hitCount": 1,
+                "hitDelay": 0,
+                "type": "DIRECT_HIT",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "HEAVY",
+                  "element": "HEAT",
+                  "fly": "HEAVY",
+                  "damageFactor": 0.2,
+                  "reverse": false,
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "status": 0,
+                  "guardable": "NEVER",
+                  "skillBonus": "MELEE_DMG",
+                  "limiter": "NO_DAMAGE"
+                }
+              },
+              {
                 "value": true,
                 "immediately": true,
                 "type": "FACE_TO_TARGET"
@@ -35287,32 +34711,23 @@
                 "anim": "spinLong"
               },
               {
-                "selectType": "TARGET",
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
                 "effect": {
-                  "sheet": "specials.heat",
-                  "name": "flameGuardHit"
+                  "sheet": "combat.tribladerXPC",
+                  "name": "flameGuardActivateTri"
                 },
-                "hitDir": "AWAY",
-                "align": "BOTTOM",
-                "hitCount": 1,
-                "hitDelay": 0,
-                "type": "DIRECT_HIT",
-                "attack": {
-                  "type": "MASSIVE",
-                  "visualType": "HEAVY",
-                  "element": "HEAT",
-                  "fly": "HEAVY",
-                  "damageFactor": 0.75,
-                  "reverse": false,
-                  "stunSteps": [
-                    {
-                      "type": "START_LOCK"
-                    }
-                  ],
-                  "status": 1,
-                  "guardable": "NEVER",
-                  "skillBonus": "MELEE_DMG",
-                  "limiter": "NO_DAMAGE"
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
                 }
               },
               {
@@ -35321,17 +34736,6 @@
                 "keepEntityStatic": false,
                 "inversAccelerate": true,
                 "type": "ADD_SLOW_MOTION"
-              },
-              {
-                "offsetX": 0,
-                "offsetY": 0,
-                "speed": "FASTEST",
-                "transition": "EASE_IN_OUT",
-                "wait": false,
-                "waitSkip": 0,
-                "zoom": 1.5,
-                "focusType": "SELF",
-                "type": "FOCUS_CAMERA"
               },
               {
                 "align": "BOTTOM",
@@ -35425,8 +34829,8 @@
                 "startDist": 24,
                 "startDistCollide": "CLOSER",
                 "random": true,
-                "count": 20,
-                "duration": 0.75,
+                "count": 18,
+                "duration": 0.65,
                 "clockwise": false,
                 "flipLeftFace": 0,
                 "circularArea": false,
@@ -35442,7 +34846,7 @@
                 }
               },
               {
-                "time": 0.75,
+                "time": 0.70,
                 "type": "WAIT"
               },
               {
@@ -35632,7 +35036,7 @@
                 "attack": {
                   "type": "MASSIVE",
                   "element": "HEAT",
-                  "damageFactor": 2.2,
+                  "damageFactor": 2.75,
                   "fly": "MASSIVE+++",
                   "spFactor": 0,
                   "stunSteps": [
@@ -35656,11 +35060,19 @@
                 "type": "MOVE_FORWARD"
               },
               {
-                "name": "techShield ",
+                "name": "techShield",
                 "type": "REMOVE_SHIELD"
               },
               {
-                "time": 0.4,
+                "time": 0.1,
+                "type": "WAIT"
+              },
+              {
+                "group": "trail",
+                "type": "CLEAR_EFFECTS"
+              },
+              {
+                "time": 0.3,
                 "type": "WAIT"
               }
             ]
@@ -35675,7 +35087,7 @@
           "en_US": "Draw in enemies and then engulf them in lingering fires."
         },
         "dmgType": "MELEE",
-        "stunType": "INTERRUPT",
+        "stunType": "",
         "status": true,
         "steps": [
           {
@@ -35692,13 +35104,17 @@
             "type": "SET_WEIGHT"
           },
           {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
             "anim": "attack2End"
           },
           {
-            "duration": 0.3,
+            "duration": 0.5,
             "align": "BOTTOM",
             "rotateFace": 6,
             "flipLeftFace": true,
@@ -35715,22 +35131,6 @@
               "x": 0,
               "y": 0,
               "z": 0
-            }
-          },
-          {
-            "name": "techShield",
-            "actionDetached": true,
-            "type": "ADD_SHIELD",
-            "shield": {
-              "type": "DIRECTIONAL",
-              "settings": {
-                "baseFactor": 0.25,
-                "range": 1,
-                "hitResist": "MASSIVE",
-                "strength": "BLOCK_ALL",
-                "stableOverride": "MASSIVE",
-                "duration": 1.15
-              }
             }
           },
           {
@@ -35754,26 +35154,15 @@
             }
           },
           {
-            "strength": "DASH_ESCAPE",
+            "strength": "RUN_ESCAPE",
             "pull": true,
             "radius": 150,
             "fadeRadius": 0,
-            "minRadius": 0,
+            "minRadius": 32,
             "zHeight": 32,
             "duration": 0.5,
             "align": "BOTTOM",
             "type": "PUSH_PULL_FORCE"
-          },
-          {
-            "offsetX": 0,
-            "offsetY": 0,
-            "speed": "FASTEST",
-            "transition": "EASE_IN_OUT",
-            "wait": false,
-            "waitSkip": 0,
-            "zoom": 1.25,
-            "focusType": "SELF",
-            "type": "FOCUS_CAMERA"
           },
           {
             "time": 0.5,
@@ -35787,12 +35176,6 @@
               "move": -1,
               "reaim": -1
             }
-          },
-          {
-            "zoom": 1,
-            "duration": 0.5,
-            "transition": "EASE_OUT",
-            "type": "SET_CAMERA_ZOOM"
           },
           {
             "followUp": "attack1End",
@@ -35859,24 +35242,15 @@
             "fixPos": false,
             "checkCollision": true,
             "attack": {
-              "type": "MASSIVE",
+              "type": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 1.5,
+              "fly": "HEAVY",
+              "damageFactor": 2.5,
               "reverse": false,
               "guardable": "",
               "skillBonus": "MELEE_DMG",
               "limiter": "",
-              "stunSteps": [
-                {
-                  "type": "START_LOCK"
-                },
-                {
-                  "distance": 64,
-                  "speed": 200,
-                  "maxTime": 0.4,
-                  "type": "PULL"
-                }
-              ]
+              "stunSteps": []
             },
             "offset": {
               "x": 0,
@@ -35902,7 +35276,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "mediumSweep"
+              "name": "mediumSweepSmallerLight"
             },
             "offset": {
               "x": 0,
@@ -35934,7 +35308,7 @@
             "align": "BOTTOM",
             "centralAngle": 1,
             "angleVary": 0,
-            "startDist": 58,
+            "startDist": 50,
             "startDistCollide": "DROP",
             "random": false,
             "count": 6,
@@ -35958,15 +35332,16 @@
             "type": "SHOOT_PROXY_PLAYER"
           },
           {
-            "time": 0.5,
-            "type": "WAIT"
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.5,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
           },
           {
-            "name": "techShield",
-            "type": "REMOVE_SHIELD"
-          },
-          {
-            "time": 0.15,
+            "time": 0.65,
             "type": "WAIT"
           }
         ]
@@ -36718,7 +36093,7 @@
             "type": "WAIT"
           },
           {
-            "name": "techShield ",
+            "name": "techShield",
             "type": "REMOVE_SHIELD"
           },
           {
@@ -36946,7 +36321,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "mediumSweep"
+              "name": "mediumSweepSmallerLight"
             }
           },
           {

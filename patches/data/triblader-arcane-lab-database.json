@@ -19,5 +19,47 @@
       "offX": 120,
       "offY": 96
     }
+  },
+  "csTribladerCustom1HeatAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5'",
+    "name": {
+      "en_US": "\\i[class-tri] Solar Eruption"
+    },
+    "description": {
+      "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 144
+    }
+  },
+  "csTribladerCustom2HeatAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM2_TRIBLADER_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'triblader-lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Sunfury"
+    },
+    "description": {
+      "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 144
+    }
   }
 }

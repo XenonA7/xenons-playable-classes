@@ -20,6 +20,33 @@
       "offY": 96
     }
   },
+  "csTribladerCustom1HeatAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Flame Stab"
+    },
+    "description": {
+      "en_US": "A blazing thrust of fire piercing through enemies in front of you.",
+      "de_DE": "Ein Feuerstoß, der deine Feinde vor dir durchbohrt.",
+      "zh_CN": "使用一团猛烈的火焰攻击你前方的敌人，造成\\c[3]燃烧\\c[0]效果。<<A<<[CHANGED 2018/03/14]",
+      "ja_JP": "前方の敵を貫く、燃え盛る炎の攻撃。<<A<<[CHANGED 2018/03/14]",
+      "ko_KR": "눈앞에 있는 적을 관통하며 불에 태우는 공격입니다.<<A<<[CHANGED 2018/03/14]",
+      "langUid": 95,
+      "zh_TW": "使用一團猛烈的火焰攻擊你前方的敵人，造成\\c[3]燃燒\\c[0]效果。<<A<<[CHANGED 2018/03/14]"
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 72,
+      "offY": 144
+    }
+  },
   "csTribladerCustom1HeatAttack2A": {
     "list": [
       {

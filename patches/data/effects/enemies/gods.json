@@ -607,6 +607,79 @@
         "anim": "CIRCLE_SOURCE_HEAT_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
+    ],
+    "heatPierceSolarThrust": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.2,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 1,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/battle/airon/fire-generic-attack-1.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.1,
+        "global": false,
+        "loop": false,
+        "speed": 1.8,
+        "sound": "media/sound/battle/enemies/samurai/sword-slide.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "#1c0000",
+        "fadeIn": 0.1,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "type": "SCREEN_FLASH"
+      },
+      {
+        "rumbleType": "RANDOM",
+        "power": "STRONG",
+        "speed": "FAST",
+        "duration": 0.25,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0.1,
+        "startAngle": 0.05,
+        "random": true,
+        "startDist": 0,
+        "particleRotate": true,
+        "useTargetAngle": false,
+        "moveDist": 0,
+        "keySpline": "",
+        "collision": false,
+        "pAlpha": {
+          "init": 1
+        },
+         "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 12
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 12
+            },
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.2,
+        "anim": "CIRCLE_SOURCE_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

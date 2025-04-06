@@ -1117,24 +1117,21 @@
         "type": "PLAY_SOUND"
       },
       {
-        "time": 0.2,
-        "type": "WAIT"
-      },
-      {
-        "numParticles": 32,
+        "numParticles": 28,
         "duration": 0.3,
         "centralAngle": 1,
-        "startDist": 48,
+        "startDist": 56,
         "random": true,
         "moveDist": 128,
         "moveVariance": 16,
         "keySpline": "EASE_OUT",
+        "moveRotate": -0.3,
         "inverse": false,
         "collision": false,
         "pScale": {
           "init": {
-            "x": 1,
-            "y": 1
+            "x": 1.2,
+            "y": 1.2
           },
           "end": {
             "value": {
@@ -1152,7 +1149,10 @@
             "spline": ""
           }
         },
-        "particleDuration": 1.2,
+        "angleVary": 1,
+        "particleDuration": 1.0,
+        "particleDurVariance": 0.3,
+        "moveWithTarget": 0.35,
         "anim": "SNOWFLAKE1",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }

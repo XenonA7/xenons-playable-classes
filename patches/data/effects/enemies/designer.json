@@ -268,6 +268,97 @@
       {
         "type": "STOP_SOUNDS"
       }
+    ],
+    "heatRageAuraLight": [
+      {
+        "size": "XXXXL",
+        "fadeIn": 0.3,
+        "fadeOut": 3,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 5,
+            "y": 5
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 1.5,
+        "cancelable": true,
+        "anim": "SHOCKWAVE_BIG_HEAT",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.5,
+        "centralAngle": 1,
+        "startDist": 24,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "useTargetAngle": true,
+        "moveDist": 256,
+        "keySpline": "EASE_OUT",
+        "inverse": true,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.9,
+          "start": {
+            "value": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 1.4,
+        "cancelable": true,
+        "anim": "CIRCLE_SMALL_HEAT",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.5,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
     ]
   }
 }

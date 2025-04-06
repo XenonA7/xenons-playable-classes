@@ -3523,6 +3523,244 @@
       }
     },
     "HEAT": {
+      "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL1_B": {
+        "name": {
+          "en_US": "Flame Stab"
+        },
+        "description": {
+          "en_US": "A blazing thrust of fire piercing through enemies in front of you.",
+          "de_DE": "Ein Feuerstoß, der deine Feinde vor dir durchbohrt.",
+          "zh_CN": "使用一团猛烈的火焰攻击你前方的敌人，造成\\c[3]燃烧\\c[0]效果。<<A<<[CHANGED 2018/03/14]",
+          "ja_JP": "前方の敵を貫く、燃え盛る炎の攻撃。<<A<<[CHANGED 2018/03/14]",
+          "ko_KR": "눈앞에 있는 적을 관통하며 불에 태우는 공격입니다.<<A<<[CHANGED 2018/03/14]",
+          "langUid": 95,
+          "zh_TW": "使用一團猛烈的火焰攻擊你前方的敵人，造成\\c[3]燃燒\\c[0]效果。<<A<<[CHANGED 2018/03/14]"
+        },
+        "dmgType": "MELEE",
+        "stunType": "INTERRUPT",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 1.2,
+              "move": 1.2,
+              "reaim": 1.2
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "throwSpecial"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 600,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 3,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "stabHeat"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "flameJabSound"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 30,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.5,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "damageFactor": 1,
+              "spFactor": 0,
+              "status": 1,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 40,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.25,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "damageFactor": 1.15,
+              "reverse": false,
+              "spFactor": 0,
+              "status": 1,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 48,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.25,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "damageFactor": 1.35,
+              "reverse": false,
+              "spFactor": 0,
+              "status": 1,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 64,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.25,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MASSIVE",
+              "element": "HEAT",
+              "damageFactor": 1.7,
+              "reverse": false,
+              "spFactor": 0,
+              "status": 1,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          }
+        ]
+      },
       "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL2_A": {
         "name": {
           "en_US": "Solar Eruption"

@@ -1,3 +1,32 @@
+## 2.10.0 (04/05/2025)
+### New Content
+- New Triblader combat art: Solar Thrust (Heat Melee Lv.1B), Flame Stab converted to custom skill
+### Changes
+- Added sound effects to Flame Stab (was previously silent)
+- Improved effect for Flame Stab
+- Reduced screen flash intensity of effect doubleWhirlShoot
+- Added subtle screen shake to effects doubleWhirlSweep and doubleWhirlSweepRev
+- Improved effect tribladerSweepSmall
+- Added particleDurVariance to triangle particles in effect doubleWhirlShoot
+- Added weather particles to Flame Turbine
+- Improved Flame Turbine effect airSweepLoopTri
+- Flame Turbine now jumps back towards a marker placed at the start of the dash instead of blindly backwards
+- Improved hitbox vertical offset for proxies flameHitS and flameHitSWeak
+- Added snowflake trail to Frozen Rays
+- Improved effect snowSweepSpin
+- Snowstorm now grants IGNORE collType during melee attack
+### Fixes
+- Flame Turbine rework should fix all instances where it was previously possible to climb out of bounds
+- Fixed Trailblazer missing light source
+- Fixed Vermillion Firestorm effect light sources
+- Fixed Snowstorm hitbox zHeight
+### Balance
+- Scorching Rays overall damage slightly increased
+- PVP enemies only: Lava Sweep pull force strength increased from RUN_ESCAPE to DASH_ESCAPE
+- Frost Rupture delay between swings reduced by 0.8 seconds
+- Frozen Rays damage factor increased from 6.4x3 to 7x3
+- Snowstorm frozen stars now use startDistCollide DROP instead of CLOSER (won't spawn in walls)
+
 ## 2.9.0 (03/30/2025)
 ### New Content
 - New Triblader combat art: Double Whirl (Heat Melee Lv.2A), Solar Eruption converted to custom skill

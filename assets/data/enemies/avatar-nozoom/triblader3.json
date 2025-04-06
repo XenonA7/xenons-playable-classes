@@ -9844,6 +9844,46 @@
         }
       ]
     },
+    "turbineMarker": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "time": 10,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "turbineMarkerGroup",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 2
+      },
+      "type": "GENERIC"
+    },
     "turbineStunner": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
@@ -9927,6 +9967,57 @@
       "zVel": 0,
       "type": "GENERIC"
     },
+    "turbineWeatherController": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "NEVER",
+      "action": [
+        {
+          "particleType": "COAL_SPARKS_FAST",
+          "quantity": 40,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 1.8
+        },
+        {
+          "particleType": "COAL_SPARKS_FAST",
+          "quantity": 40,
+          "immediately": true,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 1.4
+        },
+        {
+          "particleType": "COAL_SPARKS_FAST",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.1
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
+    },
     "turbineController": {
       "copyOwnerAnims": false,
       "size": {
@@ -9940,6 +10031,26 @@
         "zGravityFactor": 0
       },
       "action": [
+        {
+          "duration": 2.2,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "turbineRisingLines"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
         {
           "type": "WAIT",
           "time": 0.1
@@ -10034,6 +10145,16 @@
           "speed": 1.0,
           "sound": "media/sound/scenes/swoosh-rise-long.ogg",
           "type": "PLAY_SOUND"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "turbineWeatherController",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
           "type": "WAIT",
@@ -11313,7 +11434,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "enemies.designer",
-            "name": "heatRageAura"
+            "name": "heatRageAuraLight"
           }
         },
         {
@@ -11525,7 +11646,7 @@
           "align": "BOTTOM",
           "radius": 16,
           "yScale": 0,
-          "zHeight": 16,
+          "zHeight": 32,
           "centralAngle": 1,
           "duration": 3,
           "expandRadius": 0,
@@ -11556,7 +11677,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -12372,6 +12493,26 @@
           }
         },
         {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "frozenRayTrail2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "value": 600,
           "type": "SET_SPEED"
         },
@@ -12400,7 +12541,7 @@
             "type": "MASSIVE",
             "element": "COLD",
             "fly": "HEAVY",
-            "damageFactor": 6.4,
+            "damageFactor": 7.0,
             "reverse": false,
             "status": 0.5,
             "guardable": "",
@@ -19710,7 +19851,7 @@
         }
       },
       {
-        "strength": "RUN_ESCAPE",
+        "strength": "DASH_ESCAPE",
         "pull": true,
         "radius": 150,
         "fadeRadius": 0,
@@ -21959,7 +22100,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "airSweepLoop"
+              "name": "airSweepLoopTri"
             },
             "offset": {
               "x": 0,
@@ -21971,7 +22112,7 @@
             "align": "BOTTOM",
             "radius": 32,
             "yScale": 0,
-            "zHeight": 24,
+            "zHeight": 32,
             "centralAngle": 3.5,
             "startAngle": -0.25,
             "duration": 0.7,
@@ -22120,9 +22261,34 @@
             "type": "SET_Z_VEL"
           },
           {
-            "time": 0.3,
-            "stopBeforeEdge": false,
-            "type": "MOVE_BACKWARD"
+            "kind": "ACTION_PROXY",
+            "key": "turbineMarkerGroup",
+            "type": "SET_TEMP_TARGET"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.hasTmpTarget",
+            "thenStep": [
+              {
+                "stopType": "LANDED",
+                "stopBeforeTime": 1.2,
+                "distance": 16,
+                "rotateSpeed": 5,
+                "adjustSpeedMax": 300,
+                "missileMode": 0,
+                "underEstimation": 0.5,
+                "cancelIfBelowFall": true,
+                "type": "JUMP_TARGET_MOVEMENT"
+              }
+            ],
+            "elseStep": [
+              {
+                "maxTime": 0.3,
+                "alsoBelowTarget": true,
+                "type": "WAIT_UNTIL_ON_GROUND"
+              }
+            ]
           },
           {
             "wait": false,
@@ -22131,9 +22297,29 @@
             "anim": "spinRepeat"
           },
           {
-            "time": 0.5,
-            "stopBeforeEdge": false,
-            "type": "MOVE_BACKWARD"
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.hasTmpTarget",
+            "thenStep": [
+              {
+                "stopType": "LANDED",
+                "stopBeforeTime": 0.05,
+                "distance": 16,
+                "rotateSpeed": 5,
+                "adjustSpeedMax": 300,
+                "missileMode": 0,
+                "underEstimation": 0.5,
+                "cancelIfBelowFall": true,
+                "type": "JUMP_TARGET_MOVEMENT"
+              }
+            ],
+            "elseStep": [
+              {
+                "maxTime": 0.5,
+                "alsoBelowTarget": true,
+                "type": "WAIT_UNTIL_ON_GROUND"
+              }
+            ]
           }
         ]
       },
@@ -22454,6 +22640,10 @@
         "type": "WAIT"
       },
       {
+        "value": "IGNORE",
+        "type": "SET_COLL_TYPE"
+      },
+      {
         "wait": false,
         "viaWalkConfig": false,
         "type": "SHOW_ANIMATION",
@@ -22466,7 +22656,7 @@
         "angleVary": 0,
         "startDist": 32,
         "startDistAdd": 80,
-        "startDistCollide": "CLOSER",
+        "startDistCollide": "DROP",
         "random": false,
         "count": 10,
         "duration": 0.35,
@@ -22524,7 +22714,7 @@
         "align": "BOTTOM",
         "radius": 100,
         "yScale": 0,
-        "zHeight": 0,
+        "zHeight": 32,
         "centralAngle": 2.5,
         "startAngle": -0.25,
         "duration": 0.5,
@@ -22599,7 +22789,15 @@
         "anim": "attack1End"
       },
       {
-        "time": 0.6,
+        "time": 0.25,
+        "type": "WAIT"
+      },
+      {
+        "value": "VIRTUAL",
+        "type": "SET_COLL_TYPE"
+      },
+      {
+        "time": 0.35,
         "type": "WAIT"
       }
     ],

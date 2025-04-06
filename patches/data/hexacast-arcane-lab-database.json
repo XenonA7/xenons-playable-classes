@@ -1475,6 +1475,27 @@
     "element": "HEAT",
     "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
     "name": {
+      "en_US": "\\i[class-tri] Solar Thrust"
+    },
+    "description": {
+      "en_US": "A quick slash followed by a powerful thrust against a single target."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 72,
+      "offY": 144
+    }
+  },
+  "csHexacastTribladerCustom1HeatAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
       "en_US": "\\i[class-tri] Flame Stab",
       "de_DE": "\\i[class-tri] Flame Stab",
       "zh_CN": "\\i[class-tri] 火焰猛击",

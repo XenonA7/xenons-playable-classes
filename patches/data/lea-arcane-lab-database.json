@@ -2356,6 +2356,27 @@
     "element": "SHOCK",
     "activeCondition": "player.entity.name == 'Lea'",
     "name": {
+      "en_US": "\\i[class-tri] Plasma Thrust"
+    },
+    "description": {
+      "en_US": "A short thrust that will hit enemies with lightning strikes."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 168,
+      "offY": 240
+    }
+  },
+  "csLeaTribladerCustom1ShockAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "SHOCK",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
       "en_US": "\\i[class-tri] Shadow Spark"
     },
     "description": {

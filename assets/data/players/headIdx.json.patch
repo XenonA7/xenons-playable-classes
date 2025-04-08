@@ -38,6 +38,14 @@
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
+      "id": "main.triblader-lea",
+      "img": "media/gui/severed-heads/triblader-lea.png",
+      "name": "triblader-lea"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
       "id": "hexacast.hexacast1",
       "img": "media/gui/severed-heads/hexacast1.png",
       "name": "hexacast1"

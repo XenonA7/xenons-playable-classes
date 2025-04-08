@@ -1,3 +1,28 @@
+## 2.11.0 (04/07/2025)
+### New Content
+- New Triblader combat art: Plasma Thrust (Shock Melee Lv.1B), Shadow Spark converted to custom skill
+- Added custom levelup animation to triblader-lea. Thanks to Krypek for code framework and HeartLychee for original animation.
+- Added a custom head icon and character file for triblader-lea
+### Changes
+- Recolored all triblader-lea spritesheets, changed the shades of green to be darker than Lychee's original
+- Made edits to Triblader2/3/4/5 menu portrait based on suggestions from Rioreur (long overdue)
+- Unified color palettes between Triblader4 menu and dialogue portraits
+- Updated character-specific custom skill totals listed in the hideout-east info sign
+- Spectral Swordsman and Spectral Legion no longer share proxy groups, now possible to use both at once
+- Reduced screen flash intensity for effect shockImpactSmall
+- Added new spawn effect for Spectral Swordsman
+### Fixes
+- Fixed proxy fireDaggerStuck rendering too high
+- Deleted unused _Shock_Close1Alt (Shadow Spark) from triblader pvp enemies
+- The backwards-moving part of Vortex Thrust no longer travels off ledges
+- Fixed Phase Jump landing hitbox zHeight and entity alignment
+### Balance
+- Added a SET_DAMAGE_CEILING to Scorching Rays due to its tendancy to be inconsistnet
+- Phase Jump landing damage factor increased from 3 to 8 with no critfactor (huge buff)
+- Verdant Infection greatly weakened pull force strength prior to exploding
+- Spectral Swordsman now deals quite a bit more damage
+- Spectral Swordsman now allows up to 2 active at a time
+
 ## 2.10.0 (04/05/2025)
 ### New Content
 - New Triblader combat art: Solar Thrust (Heat Melee Lv.1B), Flame Stab converted to custom skill

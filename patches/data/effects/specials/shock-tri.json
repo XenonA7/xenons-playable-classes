@@ -1585,17 +1585,17 @@
         "type": "RUMBLE"
       },
       {
-        "color": "#330033",
+        "color": "#1f001f",
         "fadeIn": 0.1,
         "fadeOut": 0.2,
         "duration": 0.1,
         "type": "SCREEN_FLASH"
       },
       {
-        "volume": 0.9,
+        "volume": 0.75,
         "global": false,
         "loop": false,
-        "speed": 1,
+        "speed": 1.2,
         "variance": 0.1,
         "sound": "media/sound/battle/airon/shock/hit-shock-hard3.ogg",
         "type": "PLAY_SOUND"
@@ -5361,6 +5361,347 @@
       },
       {
         "type": "LOOP_END"
+      }
+    ],
+    "plasmaThrustEnemyAura": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#f663f7",
+        "maxAlpha": 0.6,
+        "minAlpha": 0.3,
+        "blinkDuration": 0.6,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "volume": 0.3,
+        "global": false,
+        "loop": false,
+        "speed": 1.5,
+        "sound": "media/sound/puzzle/shock-charge.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0.35,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "particleRotate": true,
+        "moveDist": 48,
+        "moveVariance": 16,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": true,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.25,
+        "anim": "SHOCK_BALL_DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0.1,
+        "circular": false,
+        "xScale": 0.8,
+        "yScale": 0.8,
+        "moveZDist": 3,
+        "keySpline": "EASE_OUT",
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.3,
+        "angleVary": 1,
+        "anim": "SPARK2",
+        "type": "PLAY_ANIMS_OVER_ENTITY"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0.1,
+        "circular": false,
+        "xScale": 0.8,
+        "yScale": 0.8,
+        "moveZDist": 3,
+        "keySpline": "EASE_OUT",
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.05,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.3,
+        "angleVary": 1,
+        "anim": "SPARK4",
+        "type": "PLAY_ANIMS_OVER_ENTITY"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "boldPre2TriFast": [
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.2,
+            "y": 1.2
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.09,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.2,
+        "angleVary": 1,
+        "anim": "SHOCK_BIG_TRIANGLE",
+        "type": "PLAY_ANIM"
+      }
+    ],
+    "boldSmallPlasmaThrust": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": 0.2,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "variance": 0.2,
+        "sound": "media/sound/battle/heavy-thunder-2.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "rumbleType": "RANDOM",
+        "power": "MEDIUM",
+        "speed": "FAST",
+        "duration": 0.2,
+        "fade": true,
+        "type": "RUMBLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 1.6,
+              "y": 1.6
+            },
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.2,
+        "anim": "CIRCLE_BIG",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 8,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 4,
+        "uniformRandom": 0.9,
+        "particleRotate": true,
+        "moveDist": 24,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 1,
+        "particleDuration": 0.25,
+        "anim": "SHOCK_BALL_DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.3,
+          "start": {
+            "value": 0
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            },
+            "spline": ""
+          }
+        },
+        "cancelable": false,
+        "angleVary": 1,
+        "moveWithTarget": 1,
+        "particleDuration": 0.275,
+        "anim": "SHOCK_BIG_TRIANGLE",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "patternYCount": 1,
+        "animFrames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "frameTime": 0.05,
+        "shiftSpeed": 0,
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "particleDuration": 0.25,
+        "pattern": {
+          "src": "media/entity/effects/shock.png",
+          "xCount": 5,
+          "offX": 160,
+          "offY": 56,
+          "width": 24,
+          "height": 48
+        },
+        "type": "LASER_SPRITE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
       }
     ]
   }

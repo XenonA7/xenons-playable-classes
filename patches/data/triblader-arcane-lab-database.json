@@ -88,5 +88,26 @@
       "offX": 96,
       "offY": 144
     }
+  },
+  "csTribladerCustom1ShockAttack1B": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_TRIBLADER_ATTACK_SPECIAL1_B",
+        "actionCheckKey": "ATTACK_SPECIAL1"
+      }
+    ],
+    "element": "SHOCK",
+    "activeCondition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Shadow Spark"
+    },
+    "description": {
+      "en_US": "Strike an enemy with a quick thrust. If hit, three shadow sparks will surround and attack the enemy after some time."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 168,
+      "offY": 240
+    }
   }
 }

@@ -1852,7 +1852,7 @@
         "shapeType": "Y_FLAT",
         "offset": {
           "x": 0,
-          "y": 0,
+          "y": 12,
           "z": 0
         },
         "sheet": {
@@ -3028,6 +3028,25 @@
           "type": "SET_OWNER_REPLACE_TARGET"
         },
         {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "spectralSwordsmanAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -3266,7 +3285,7 @@
                 "type": "MEDIUM",
                 "fly": "HEAVY",
                 "element": "WAVE",
-                "damageFactor": 1.15,
+                "damageFactor": 1.55,
                 "spFactor": 0,
                 "reverse": false,
                 "guardable": "",
@@ -3360,7 +3379,7 @@
                 "type": "MEDIUM",
                 "fly": "HEAVY",
                 "element": "WAVE",
-                "damageFactor": 1.15,
+                "damageFactor": 1.55,
                 "spFactor": 0,
                 "reverse": false,
                 "guardable": "",
@@ -3453,7 +3472,7 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "WAVE",
-                "damageFactor": 1.4,
+                "damageFactor": 1.8,
                 "spFactor": 0,
                 "reverse": false,
                 "guardable": "",
@@ -3622,7 +3641,7 @@
       },
       "stickToSource": "NONE",
       "stickFaceAlign": false,
-      "group": "cloneGroup",
+      "group": "cloneGroupSS",
       "size": {
         "x": 16,
         "y": 16,
@@ -7109,7 +7128,7 @@
           }
         },
         {
-          "strength": "NO_ESCAPE",
+          "strength": "DASH_ESCAPE",
           "pull": true,
           "radius": 60,
           "fadeRadius": 0,
@@ -7120,7 +7139,7 @@
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "strength": "DASH_ESCAPE",
+          "strength": "RUN_ESCAPE",
           "pull": true,
           "radius": 250,
           "fadeRadius": 0,
@@ -8267,256 +8286,6 @@
         "collType": "NONE",
         "floatVariance": 0,
         "flyHeight": 1
-      },
-      "type": "GENERIC"
-    },
-    "circleBallShooter": {
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "type": "DETACH_TIME_PARENT"
-        },
-        {
-          "volume": 0.9,
-          "global": false,
-          "loop": false,
-          "speed": 1.2,
-          "variance": 0.1,
-          "type": "PLAY_SOUND",
-          "sound": "media/sound/designer/finger-snap.ogg"
-        },
-        {
-          "duration": -1,
-          "target": "TARGET",
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.shock",
-            "name": "interogationAura"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "align": "BOTTOM",
-          "dir": {
-            "x": 0,
-            "y": 1
-          },
-          "centralAngle": 0,
-          "angleVary": 0,
-          "startDist": 8,
-          "startDistCollide": false,
-          "random": false,
-          "count": 3,
-          "duration": 0.66,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": false,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "circleBall",
-          "offset": {
-            "x": -12,
-            "y": 0,
-            "z": 64
-          }
-        },
-        {
-          "time": 5,
-          "type": "WAIT"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "TARGET",
-      "stickFaceAlign": false,
-      "group": "",
-      "type": "GENERIC",
-      "size": {
-        "x": 24,
-        "y": 24,
-        "z": 32
-      },
-      "config": {
-        "collType": "NONE"
-      }
-    },
-    "circleBall": {
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "type": "DETACH_TIME_PARENT"
-        },
-        {
-          "duration": -1,
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "enemies.jungle",
-            "name": "shkBossBall"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "target": "TARGET",
-          "distance": 40,
-          "duration": 5,
-          "ccw": false,
-          "rotateTime": 1,
-          "distAdjustSpeed": 64,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "duration": 0.3,
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "enemies.jungle",
-            "name": "shkBossBallPre"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "target": "TARGET",
-          "distance": 40,
-          "duration": 0.3,
-          "ccw": false,
-          "rotateTime": 1,
-          "distAdjustSpeed": 64,
-          "zDistance": 12,
-          "waitTargetAlign": false,
-          "collision": false,
-          "type": "STICKY_CIRCLE_AROUND"
-        },
-        {
-          "value": false,
-          "immediately": true,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "value": 1,
-          "type": "SET_AIR_FRICTION"
-        },
-        {
-          "value": 4,
-          "type": "SET_ACCEL_SPEED"
-        },
-        {
-          "value": 0,
-          "type": "SET_Z_GRAVITY_FACTOR"
-        },
-        {
-          "value": 8,
-          "type": "SET_RELATIVE_SPEED"
-        },
-        {
-          "duration": -1,
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "enemies.jungle",
-            "name": "shkBossBallTrail"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "value": "PROJECTILE",
-          "type": "SET_COLL_TYPE"
-        },
-        {
-          "time": 0.5,
-          "cancelOnHit": true,
-          "collideCancel": 1,
-          "orthoDirFactor": 0,
-          "ignoreLastHit": false,
-          "collideSlip": false,
-          "type": "TACKLE",
-          "attack": {
-            "type": "HEAVY",
-            "element": "SHOCK",
-            "damageFactor": 2.5,
-            "reverse": false,
-            "status": 0,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": ""
-          }
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "group": "",
-      "startAnim": "",
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "effects": "",
-      "speed": 300,
-      "maxBounce": 0,
-      "timer": 0,
-      "trail": false,
-      "multiHit": false,
-      "noLightGlow": false,
-      "attack": {
-        "type": "NONE",
-        "element": "NEUTRAL",
-        "guardable": ""
-      },
-      "timeBoni": null,
-      "behaviors": null,
-      "config": {
-        "collType": "TRIGGER"
       },
       "type": "GENERIC"
     },
@@ -25747,221 +25516,6 @@
         "type": "WAIT"
       }
     ],
-    "_Shock_Close1Alt": [
-      {
-        "element": "SHOCK",
-        "skipEffect": false,
-        "type": "SET_ENEMY_ELEMENT_MODE"
-      },
-      {
-        "value": true,
-        "immediately": true,
-        "type": "FACE_TO_TARGET"
-      },
-      {
-        "value": 2,
-        "type": "FACE_TO_TARGET_SPEED"
-      },
-      {
-        "value": "MASSIVE",
-        "type": "SET_HIT_STABLE"
-      },
-      {
-        "followUp": "charge",
-        "wait": false,
-        "viaWalkConfig": false,
-        "type": "SHOW_ANIMATION",
-        "anim": "charge"
-      },
-      {
-        "element": "SHOCK",
-        "level": 1,
-        "type": "COMBAT_ART_CHARGE_NOZOOM"
-      },
-      {
-        "value": false,
-        "immediately": true,
-        "type": "FACE_TO_TARGET"
-      },
-      {
-        "wait": false,
-        "viaWalkConfig": false,
-        "type": "SHOW_ANIMATION",
-        "anim": "throwSpecial"
-      },
-      {
-        "value": false,
-        "type": "SET_JUMPING"
-      },
-      {
-        "value": 700,
-        "type": "SET_SPEED"
-      },
-      {
-        "value": 3,
-        "type": "SET_ACCEL_SPEED"
-      },
-      {
-        "time": 0.05,
-        "stopBeforeEdge": false,
-        "type": "MOVE_FORWARD"
-      },
-      {
-        "duration": 0,
-        "align": "BOTTOM",
-        "rotateFace": 6,
-        "rotOffset": {
-          "x": 0,
-          "y": -40
-        },
-        "flipLeftFace": false,
-        "wait": false,
-        "waitSkip": 0,
-        "actionDetached": true,
-        "fixPos": false,
-        "type": "SHOW_EFFECT",
-        "effect": {
-          "sheet": "specials.shock",
-          "name": "shockImpactSmall"
-        },
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 12
-        }
-      },
-      {
-        "duration": -1,
-        "align": "BOTTOM",
-        "rotateFace": 6,
-        "flipLeftFace": true,
-        "wait": false,
-        "group": "dummySword",
-        "waitSkip": 0,
-        "actionDetached": false,
-        "fixPos": false,
-        "type": "SHOW_EFFECT",
-        "effect": {
-          "sheet": "combat.tribladerXPC",
-          "name": "stabShock"
-        },
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      {
-        "align": "BOTTOM",
-        "radius": 30,
-        "yScale": 0,
-        "zHeight": 16,
-        "centralAngle": 0.5,
-        "duration": 0.05,
-        "expandRadius": 0,
-        "alwaysFull": true,
-        "clockwise": false,
-        "flipLeftFace": 0,
-        "rectangular": false,
-        "repeat": false,
-        "uniformHitDir": false,
-        "fixPos": false,
-        "checkCollision": true,
-        "type": "CIRCLE_ATTACK",
-        "attack": {
-          "type": "MASSIVE",
-          "element": "SHOCK",
-          "damageFactor": 0.5,
-          "spFactor": 0,
-          "status": 0,
-          "guardable": "",
-          "skillBonus": "MELEE_DMG"
-        },
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      {
-        "time": 0.05,
-        "type": "WAIT"
-      },
-      {
-        "type": "CLEAR_TEMP_TARGET"
-      },
-      {
-        "kind": "FIRST_HIT",
-        "type": "SET_TEMP_TARGET"
-      },
-      {
-        "align": "BOTTOM",
-        "radius": 30,
-        "yScale": 0,
-        "zHeight": 16,
-        "centralAngle": 0.5,
-        "duration": 0.05,
-        "expandRadius": 0,
-        "alwaysFull": true,
-        "clockwise": false,
-        "flipLeftFace": 0,
-        "rectangular": false,
-        "repeat": false,
-        "uniformHitDir": false,
-        "fixPos": false,
-        "checkCollision": true,
-        "type": "CIRCLE_ATTACK",
-        "attack": {
-          "type": "MASSIVE",
-          "element": "SHOCK",
-          "fly": "MASSIVE+",
-          "damageFactor": 2,
-          "spFactor": 0,
-          "status": 0,
-          "guardable": "",
-          "skillBonus": "MELEE_DMG"
-        },
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      {
-        "condition": "entity.target != null",
-        "type": "IF",
-        "thenStep": [
-          {
-            "posType": "TARGET",
-            "align": "CENTER",
-            "type": "SHOOT_PROXY",
-            "proxy": "circleBallShooter",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          }
-        ]
-      },
-      {
-        "type": "SET_PLAYER_ACTION_BLOCK",
-        "blockData": {
-          "dash": 0,
-          "action": -1,
-          "move": -1,
-          "reaim": -1
-        }
-      },
-      {
-        "time": 0.5,
-        "type": "WAIT"
-      },
-      {
-        "group": "dummySword",
-        "type": "CLEAR_EFFECTS"
-      }
-    ],
     "_Shock_Close2": [
       {
         "element": "SHOCK",
@@ -29032,7 +28586,7 @@
       },
       {
         "time": 0.20,
-        "stopBeforeEdge": false,
+        "stopBeforeEdge": true,
         "type": "MOVE_BACKWARD"
       },
       {
@@ -29863,10 +29417,10 @@
         }
       },
       {
-        "align": "CENTER",
+        "align": "BOTTOM",
         "radius": 96,
         "yScale": 0,
-        "zHeight": 0,
+        "zHeight": 16,
         "centralAngle": 0,
         "duration": 0.3,
         "expandRadius": 0,
@@ -29882,10 +29436,11 @@
         "attack": {
           "type": "MASSIVE",
           "element": "WAVE",
-          "damageFactor": 3.0,
+          "damageFactor": 8.0,
+          "critFactor": 0,
           "fly": "MASSIVE+",
           "reverse": false,
-          "status": 1,
+          "status": 0.5,
           "guardable": "",
           "skillBonus": "MELEE_DMG",
           "limiter": ""
@@ -30767,7 +30322,8 @@
         "type": "SET_COLL_TYPE"
       },
       {
-        "group": "cloneGroup",
+        "group": "cloneGroupSS",
+        "keepCount": 1,
         "type": "REMOVE_PROXIES"
       },
       {

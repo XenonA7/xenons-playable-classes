@@ -27,7 +27,7 @@ Install instructions can be found at the bottom of this page. The DLC is require
 ![triblader3](https://user-images.githubusercontent.com/105614278/168503467-896c5082-e2bc-4640-9a85-651c878634d2.gif)
 ![triblader4](https://user-images.githubusercontent.com/105614278/168503633-d4a825cb-7f82-4b6b-a6fc-4e471e74ad31.gif)
 ![triblader5](https://user-images.githubusercontent.com/105614278/168504082-661b6b87-e9b3-42ef-8192-603a01f0f1ca.gif)
-![triblader-lea](https://github.com/XenonA7/xenons-triblader-mod/assets/105614278/da027b4e-a16b-4eb3-8639-3c12ceaa92e7)
+![triblader-lea-new](https://github.com/user-attachments/assets/b6ff2e00-5c4a-41ee-94c5-6e28fe33e631)
 ![Hexacast1](https://github.com/user-attachments/assets/e083a9c0-6b50-4cba-8ab3-31bb22e5ef68)
 ![Hexacast2](https://github.com/user-attachments/assets/9c7f862b-c225-4935-a4d6-e99ef1381f5a)
 
@@ -51,8 +51,8 @@ Custom Skills can be accessed in the east room of the new Bergen Village area, a
 
 ![custom-skills](https://github.com/user-attachments/assets/a0cfce97-4635-40b1-b3c8-de6033fb64d7)
 
-### Recommended Arcane Lab version to use with XPC (optional):
-https://github.com/2hh8899/ArcaneLab/tree/20c24d5a72e46d08a067f5a17486533b672c707e
+### Recommended Arcane Lab version to use with XPC (optional): 0.1.8
+https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
 
 # **Special Thanks:**
 - **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations, help with Hexacast spritework

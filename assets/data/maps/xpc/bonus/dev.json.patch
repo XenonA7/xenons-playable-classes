@@ -87,7 +87,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,
@@ -112,7 +112,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Straight\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n* \\c[3]Straight\\c[0] charged shots\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,
@@ -137,7 +137,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Homing\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n* \\c[3]Homing\\c[0] charged shots\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,

@@ -87,7 +87,7 @@
                 },
                 {
                   "text": {
-                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
+                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n* Extensive custom skill support"
                   },
                   "center": false,
                   "autoContinue": false,
@@ -112,7 +112,7 @@
                 },
                 {
                   "text": {
-                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-tri]\nSpecial attributes: None"
+                    "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n* Custom sprites for Daybreak, Sunfury, and wave charged shot\n* Custom level-up animation"
                   },
                   "center": false,
                   "autoContinue": false,
@@ -237,7 +237,7 @@
                 },
                 {
                   "text": {
-                    "en_US": "\\s[1]Character: \\c[3]Triblader4\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n\\c[2]Faster melee speed\\c[0]\n\\c[2]Longer dash distance\\c[0]\n\\c[1]Lower standard melee damage\\c[0]"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader4\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n* Weaker melee attacks\n* Faster melee attacks\n* Faster and longer dash"
                   },
                   "center": false,
                   "autoContinue": false,
@@ -262,7 +262,7 @@
                 },
                 {
                   "text": {
-                    "en_US": "\\s[1]Character: \\c[3]Triblader5\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n\\c[2]* Steerable dash\\c[0]"
+                    "en_US": "\\s[1]Character: \\c[3]Triblader5\\c[0]\nClass: \\i[class-tri]\nSpecial attributes:\n* Steerable dash"
                   },
                   "center": false,
                   "autoContinue": false,
@@ -435,7 +435,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Lea\\c[0]\nClass: \\i[class-sphero]\nSpecial attributes:\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,
@@ -460,7 +460,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Straight\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast1\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n* \\c[3]Straight\\c[0] charged shots\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,
@@ -485,7 +485,7 @@
                 },
                 {
                   "text": {
-                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n\\c[3]* Homing\\c[0] charged VRPs\n\\c[2]* Custom skill support\\c[0]"
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast2\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n* \\c[3]Homing\\c[0] charged shots\n* Extensive custom skill support"
                 },
                   "center": false,
                   "autoContinue": false,

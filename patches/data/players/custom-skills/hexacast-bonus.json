@@ -6099,7 +6099,7 @@
           "offX": 160,
           "offY": 272
         },
-        "renderMode": "source-over",
+        "renderMode": "lighter",
         "time": 0.025,
         "repeat": false,
         "frames": [
@@ -7013,7 +7013,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.25,
+              "dash": 0.15,
               "action": -1,
               "move": -1,
               "reaim": -1

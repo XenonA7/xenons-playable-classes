@@ -1,3 +1,27 @@
+## 2.11.1 (05/02/2025)
+### Changes
+- Schneider's arena cup lowered to level 70 (closer to the point in the story where it is unlocked)
+- Updated Triblader-Lea gif on readme to use new sprites
+- Updated Arcane Lab recommended version on readme to 0.1.8
+- Chilling Thrust now cancels after the first frozen star if used to dash into a wall
+- Updated descriptions in XPC character change signs for triblader lea and characters with custom skills
+- Added dust effects to all Triblader neutral arts
+- Azure Charge starting effect now uses a triangle particle
+- Adjusted sound effect for Gleaming Surge enemy impact
+- Improved player trail effect for Heavy Slash
+- Removed art-testing-AL.json, which was a quick edit used for testing AL modifier cards
+- Removed art-testing-sound-test.json, which was only for a quick feature test in the past
+- Changed particles in effect triforceShatter to be renderMode lighter
+### Fixes
+- Fixed ability to shoot Spike Ball through narrow walls/fences by adding backwards recoil
+- Deleted unused legacy triblader proxies noSpikeDmgProxy3s, noSpikeDmgProxy6s, and noSpikeDmgProxy10s
+- Removed unused REMOVE_PROXIES references to legacy spikeDmgGroup proxies
+- Lea and Hexacasts now show the proper triblader guard animation when using Scattering Shards
+- Proxy sentryCardBullet now uses correct renderMode "lighter"
+- Fixed swapped "match point" messages in Schneider's arena duel
+### Balance
+- Hexacast Sentry Card dash action block reduced from 0.25 to 0.15
+
 ## 2.11.0 (04/07/2025)
 ### New Content
 - New Triblader combat art: Plasma Thrust (Shock Melee Lv.1B), Shadow Spark converted to custom skill

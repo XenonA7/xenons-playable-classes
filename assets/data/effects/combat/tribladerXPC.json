@@ -636,6 +636,23 @@
         ]
       },
       {
+        "name": "TRIFORCE_GUI_LIGHTER",
+        "sheet": {
+          "src": "media/entity/effects/triblader/tri-misc.png",
+          "offX": 0,
+          "offY": 100,
+          "width": 64,
+          "height": 54
+        },
+        "guiSprites": true,
+        "renderMode": "lighter",
+        "time": 1,
+        "flipX": false,
+        "frames": [
+          0
+        ]
+      },
+      {
         "name": "TELEPORT_RIPPLE",
         "sheet": {
           "src": "media/entity/effects/particles1.png  ",
@@ -24792,7 +24809,7 @@
         "particleDuration": 0.8,
         "particleDurVariance": 0.3,
         "angleVary": 1,
-        "anim": "TRIFORCE_GUI",
+        "anim": "TRIFORCE_GUI_LIGHTER",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
@@ -24837,7 +24854,7 @@
         "particleDuration": 0.8,
         "particleDurVariance": 0.3,
         "angleVary": 1,
-        "anim": "TRIFORCE_GUI",
+        "anim": "TRIFORCE_GUI_LIGHTER",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],

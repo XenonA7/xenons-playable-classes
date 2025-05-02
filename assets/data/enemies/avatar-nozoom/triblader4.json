@@ -16967,6 +16967,51 @@
         "type": "WAIT"
       },
       {
+        "duration": 0,
+        "align": "FACE",
+        "rotateFace": 6,
+        "rotOffset": {
+          "x": 0,
+          "y": 10
+        },
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "backMedium"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.15,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "group": "",
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
         "followUp": "attack1End",
         "wait": false,
         "viaWalkConfig": false,
@@ -17140,6 +17185,47 @@
         "type": "WAIT"
       },
       {
+        "duration": 0,
+        "align": "BOTTOM",
+        "rotateFace": 8,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": true,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "frontFlipped"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.2,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "group": "",
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
         "followUp": "attack1End",
         "wait": false,
         "viaWalkConfig": false,
@@ -17182,16 +17268,36 @@
       {
         "duration": 0.5,
         "align": "BOTTOM",
-        "rotateFace": 0,
-        "flipLeftFace": false,
+        "rotateFace": 6,
+        "flipLeftFace": true,
         "wait": false,
         "waitSkip": 0,
         "actionDetached": false,
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "trail",
-          "name": "whiteQuickest"
+          "sheet": "combat.tribladerXPC",
+          "name": "nTriangleTrail"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.5,
+        "align": "BOTTOM",
+        "rotateFace": 8,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "specials.neutral",
+          "name": "heavySlashTrail"
         },
         "offset": {
           "x": 0,
@@ -18013,6 +18119,40 @@
         "type": "SET_FACE_TARGET_PREDICT"
       },
       {
+        "duration": 0,
+        "align": "BOTTOM",
+
+        "rotateFace": -1,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "rotOffset": {
+          "x": 0,
+          "y": 28
+        },
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "frontMedium"
+        },
+        "offset": {
+          "x": 0,
+          "y": 2,
+          "z": 3
+        }
+      },
+      {
+        "value": 900,
+        "type": "SET_SPEED"
+      },
+      {
+        "time": 0.05,
+        "stopBeforeEdge": true,
+        "type": "MOVE_BACKWARD"
+      },
+      {
         "proxy": "neutralMegaTri",
         "type": "SHOOT_PROXY_PLAYER"
       },
@@ -18121,6 +18261,47 @@
       {
         "time": 0.3,
         "type": "WAIT"
+      },
+      {
+        "duration": 0,
+        "align": "BOTTOM",
+        "rotateFace": 8,
+        "flipLeftFace": true,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": true,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "frontFlipped"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "duration": 0.15,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "group": "",
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
       },
       {
         "value": false,
@@ -25011,7 +25192,13 @@
         "type": "SET_FACE_TARGET_PREDICT"
       },
       {
-        "time": 0.3,
+        "time": 0.1,
+        "stopBeforeEdge": false,
+        "type": "MOVE_FORWARD"
+      },
+      {
+        "time": 0.2,
+        "collideCancel": 1,
         "stopBeforeEdge": false,
         "type": "MOVE_FORWARD"
       },

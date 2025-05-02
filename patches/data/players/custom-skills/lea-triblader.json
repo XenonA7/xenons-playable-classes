@@ -27877,27 +27877,27 @@
           "sounds": [
             {
               "sound": "media/sound/battle/airon/close-combat-hit-hard1.ogg",
-              "volume": 1.1,
+              "volume": 1.0,
               "variance": 0.075,
-              "speed": 1.5
+              "speed": 2.25
             },
             {
               "sound": "media/sound/battle/airon/close-combat-hit-hard2.ogg",
-              "volume": 1.1,
+              "volume": 1.0,
               "variance": 0.075,
-              "speed": 1.5
+              "speed": 2.25
             },
             {
               "sound": "media/sound/battle/airon/close-combat-hit-hard3.ogg",
-              "volume": 1.1,
+              "volume": 1.0,
               "variance": 0.075,
-              "speed": 1.5
+              "speed": 2.25
             },
             {
               "sound": "media/sound/battle/airon/close-combat-hit-hard4.ogg",
-              "volume": 1.1,
+              "volume": 1.0,
               "variance": 0.075,
-              "speed": 1.5
+              "speed": 2.25
             }
           ],
           "type": "PLAY_RANDOM_SOUND"
@@ -32943,6 +32943,40 @@
             }
           },
           {
+            "duration": 0,
+            "align": "BOTTOM",
+
+            "rotateFace": -1,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "rotOffset": {
+              "x": 0,
+              "y": 28
+            },
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 2,
+              "z": 3
+            }
+          },
+          {
+            "value": 900,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
             "proxy": "tri-neutralMegaTri",
             "type": "SHOOT_PROXY_PLAYER"
           },
@@ -33227,6 +33261,47 @@
           {
             "time": 0.3,
             "type": "WAIT"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.15,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "volume": 1,
@@ -33825,6 +33900,51 @@
             "type": "WAIT"
           },
           {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "rotOffset": {
+              "x": 0,
+              "y": 10
+            },
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.15,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "followUp": "tri-attack1End",
             "wait": false,
             "viaWalkConfig": false,
@@ -33984,6 +34104,47 @@
           {
             "time": 0.3,
             "type": "WAIT"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.15,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "followUp": "tri-attack1End",
@@ -34457,6 +34618,47 @@
             "type": "WAIT"
           },
           {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.2,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "followUp": "tri-attack1End",
             "wait": false,
             "viaWalkConfig": false,
@@ -34499,16 +34701,36 @@
           {
             "duration": 0.5,
             "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
+            "rotateFace": 6,
+            "flipLeftFace": true,
             "wait": false,
             "waitSkip": 0,
-            "actionDetached": true,
+            "actionDetached": false,
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "trail",
-              "name": "whiteQuickest"
+              "sheet": "combat.tribladerXPC",
+              "name": "nTriangleTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.5,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "heavySlashTrail"
             },
             "offset": {
               "x": 0,
@@ -34764,6 +34986,47 @@
             "type": "WAIT"
           },
           {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.15,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "followUp": "tri-attack1End",
             "wait": false,
             "viaWalkConfig": false,
@@ -34952,7 +35215,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.neutral",
-              "name": "upwardHit"
+              "name": "azureChargeGround"
             },
             "offset": {
               "x": 0,
@@ -34976,6 +35239,30 @@
             "loop": false,
             "type": "PLAY_SOUND",
             "sound": "media/sound/battle/dash-3.ogg"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "rotOffset": {
+              "x": 0,
+              "y": 0
+            },
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "duration": -1,
@@ -35466,6 +35753,30 @@
             "type": "RUMBLE_SCREEN"
           },
           {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "rotOffset": {
+              "x": 0,
+              "y": 10
+            },
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "duration": 0.4,
             "align": "BOTTOM",
             "rotateFace": 8,
@@ -35477,7 +35788,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.neutral",
-              "name": "upwardHit"
+              "name": "gleamingSurgeGround"
             },
             "offset": {
               "x": 0,
@@ -36339,7 +36650,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "aim"
+            "anim": "tri-battleIdle"
           },
           {
             "sticking": false,
@@ -47211,7 +47522,13 @@
             }
           },
           {
-            "time": 0.3,
+            "time": 0.1,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "time": 0.2,
+            "collideCancel": 1,
             "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
           },
@@ -47888,10 +48205,6 @@
                 "type": "GOTO_LABEL"
               }
             ]
-          },
-          {
-            "group": "spikeDmgGroup",
-            "type": "REMOVE_PROXIES"
           },
           {
             "volume": 1.2,
@@ -48759,10 +49072,6 @@
                 "type": "GOTO_LABEL"
               }
             ]
-          },
-          {
-            "group": "spikeDmgGroup",
-            "type": "REMOVE_PROXIES"
           },
           {
             "volume": 1.2,
@@ -49714,10 +50023,6 @@
                 "type": "GOTO_LABEL"
               }
             ]
-          },
-          {
-            "group": "spikeDmgGroup",
-            "type": "REMOVE_PROXIES"
           },
           {
             "group": "stasis",

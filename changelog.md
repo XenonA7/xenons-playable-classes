@@ -1,3 +1,10 @@
+## 2.11.3 (05/17/2025)
+### New Content
+- Added triblader3-spam.json (not tracked in records)
+- Added option to fight against standard or spam AI in the 1v1 triblader training arena room
+### Changes
+- Changed Triblader3 in the "Ultimate PVP" map to be the spam variant
+
 ## 2.11.2 (05/17/2025)
 ### Changes
 - Modernized Spectral Legion clones to use SELECT_RANDOM steps instead of overcomplicated SET_RANDOM_VAR_NUMBER

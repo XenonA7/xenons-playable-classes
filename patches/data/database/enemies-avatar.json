@@ -279,12 +279,52 @@
     "itemDrops": [],
     "boss": false
   },
+  "avatar-nozoom.triblader3-spam": {
+    "name": {
+      "en_US": "Crossworlds Player (Spam)"
+    },
+    "track": false,
+    "order": 500006,
+    "kills": 1,
+    "area": "bergen",
+    "anim": "levelUpStand",
+    "descriptions": [
+      {
+        "text": {
+          "en_US": "A \\c[3]triblader\\c[0] player who likes to spam charged shots above all else."
+        },
+        "condition": ""
+      }
+    ],
+    "species": {
+      "en_US": "Quite obsessed with maximizing her \\c[3]scope\\c[0] modifier"
+    },
+    "category": "PLAYERS",
+    "level": 75,
+    "boostedLevel": 0,
+    "params": {
+      "hp": 4600,
+      "attack": 460,
+      "defense": 460,
+      "focus": 460,
+      "elemFactor": [
+        0.83,
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    "credit": 0,
+    "exp": 0,
+    "itemDrops": [],
+    "boss": false
+  },
   "avatar-nozoom.apollo-4": {
     "name": {
       "en_US": "Apollo 4 (nozoom variant)"
     },
     "track": false,
-    "order": 500006,
+    "order": 500007,
     "kills": 1,
     "area": "rhombus-sqr",
     "anim": "pointing",
@@ -345,7 +385,7 @@
       "en_US": "Lily (nozoom variant)"
     },
     "track": false,
-    "order": 500007,
+    "order": 500008,
     "kills": 1,
     "area": "rhombus-sqr",
     "anim": false,
@@ -406,7 +446,7 @@
       "en_US": "Shizuka (nozoom variant)"
     },
     "track": false,
-    "order": 500008,
+    "order": 500009,
     "kills": 1,
     "area": "rhombus-sqr",
     "anim": false,

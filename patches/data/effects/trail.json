@@ -1,6 +1,6 @@
 {
   "EFFECTS": {
-  	"blueQuick": [
+    "blueQuick": [
       {
         "color": "#003080",
         "noLighter": false,
@@ -20,6 +20,17 @@
     ],
     "blueQuickest": [
       {
+        "size": "XL",
+        "fadeIn": 0.05,
+        "fadeOut": 0.2,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
         "color": "#003080",
         "noLighter": false,
         "pAlpha": {
@@ -34,6 +45,9 @@
       {
         "time": 0.016,
         "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

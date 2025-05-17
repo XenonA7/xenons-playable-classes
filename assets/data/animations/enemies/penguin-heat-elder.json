@@ -2,7 +2,7 @@
   "DOCTYPE": "MULTI_DIR_ANIMATION",
   "namedSheets": {
     "move": {
-      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "src": "media/entity/enemy/penguin-heat-elder.png",
       "xCount": 10,
       "offX": 0,
       "offY": 0,
@@ -10,7 +10,7 @@
       "height": 32
     },
     "poses": {
-      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "src": "media/entity/enemy/penguin-heat-elder.png",
       "xCount": 10,
       "offX": 0,
       "offY": 192,
@@ -18,7 +18,7 @@
       "height": 32
     },
     "move2": {
-      "src": "media/entity/enemy/penguin-heat-alt.png",
+      "src": "media/entity/enemy/penguin-heat-elder.png",
       "xCount": 10,
       "offX": 0,
       "offY": 96,

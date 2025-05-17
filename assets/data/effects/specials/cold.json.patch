@@ -108,10 +108,9 @@
     "content": {
       "name": "SYMBOL_BLACK",
       "sheet": {
-        "src": "media/entity/effects/darkSwirl.png",
-        "xCount": 5,
-        "offX": 0,
-        "offY": 0,
+        "src": "media/entity/enemy/boss/god-symbol.png",
+        "offX": 128,
+        "offY": 40,
         "width": 40,
         "height": 40
       },

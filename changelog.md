@@ -1,3 +1,37 @@
+## 2.11.2 (05/17/2025)
+### Changes
+- Modernized Spectral Legion clones to use SELECT_RANDOM steps instead of overcomplicated SET_RANDOM_VAR_NUMBER
+- Added more triangles to Ether Bomb effects
+- Added pLight property to SNOWFLAKE1 particles in effect frozenRayTrail2
+- Added SHOCK_SHADOW particles to the rapid attacks in Amber Flurry
+- Deleted \media\entity\effects\darkSwirl.png, particle now uses DLC spritesheet via extension-asset-preloader
+- Renamed penguin-heat-alt.json to penguin-heat-elder.json
+- Renamed triblader2-freq-arts.json to triblader2-spam.json
+- "Frequent Combat Arts" arena cup renamed to "Trigger Happy"
+- PVP tribladers: removed unused dialogue variable from COUNTER_COUNTER reaction
+- PVP tribladers: changed optional wait at the end of throw action to be random between 0.2 and 0.5 but not optional
+- PVP tribladers now use full bastion shields when they guard with the cold element active
+- PVP tribladers can now use the ATTACK_GUARD reaction while throwing default VRPs
+- PVP tribladers now swap strategies after getting melee countered
+- PVP tribladers no longer move forward while doing ATTACK and ATTACK_REV if they are close enough
+### Fixes
+- Fixed missing or incorrect light sources for all remaining triblader cold/shock/wave effects
+- Fixed hideout-cheat tile data on area map
+- Added missing area map data for 2v2 triblader training arena
+- Added delay to the end of effect snowBallLandSmall to add delay when looped
+- Fixed typo in beekeeperCharge effect name
+- Fixed broken loop implementation for effect boldPreLight
+- PVP tribladers: fixed missing dust particles on some dodge and navigation actions
+- PVP tribladers: fixed rare issue of moving too fast while throwing standard VRPs
+- PVP tribladers no longer continue to face towards their target while doing an ATTACK_FINISHER
+### Balance
+- Vermillion Firestorm now has reversed knockback on the initial sweep
+- Ether Bomb explosion damage doubled from 4.0 to 8.0
+- Ether Bomb explosion now has critFactor 0.5
+- Ether Bomb status factor changed from 2 to 1
+- Enemy Vitality Curse HP absorb factor buffed from 0.05 to 0.075 (does not affect player version)
+- Enemy Vitality Curse projectile speed buffed from 300 to 400 (does not affect player version)
+
 ## 2.11.1 (05/02/2025)
 ### Changes
 - Schneider's arena cup lowered to level 70 (closer to the point in the story where it is unlocked)

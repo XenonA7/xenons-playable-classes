@@ -1022,6 +1022,14 @@
     ],
     "shockJab": [
       {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0.3,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
         "rumbleType": "RANDOM",
         "power": "MEDIUM",
         "speed": "FASTER",
@@ -1207,6 +1215,14 @@
     ],
     "overclockAura": [
       {
+        "size": "XL",
+        "fadeIn": 0.05,
+        "fadeOut": 0.3,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
         "type": "LOOP_START"
       },
       {
@@ -1292,6 +1308,14 @@
       }
     ],
     "swirlBigPerma": [
+      {
+        "size": "XXXXL",
+        "fadeIn": 0,
+        "fadeOut": 1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
       {
         "color": "#330033",
         "fadeIn": 0.1,
@@ -1491,11 +1515,11 @@
         "type": "SCREEN_FLASH"
       },
       {
-        "size": "L",
+        "size": "XL",
         "fadeIn": 0,
         "fadeOut": 0.2,
         "duration": -1,
-        "glow": true,
+        "glow": false,
         "type": "LIGHT"
       },
       {
@@ -3019,7 +3043,7 @@
     ],
     "shockLaserSource": [
       {
-        "size": "L",
+        "size": "XXL",
         "fadeIn": 0.2,
         "fadeOut": 0.05,
         "duration": -1,
@@ -4730,6 +4754,17 @@
     ],
     "boldPreLight": [
       {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.2,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
         "useTargetAngle": false,
         "keepAngleSync": false,
         "pAlpha": {
@@ -4782,6 +4817,13 @@
         "particleDuration": 0.25,
         "anim": "SHOCK_DOT1",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ],
     "slowMotion2Lite": [
@@ -5282,6 +5324,14 @@
     ],
     "slowMotionLite": [
       {
+        "size": "XXXXL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
         "volume": 0.7,
         "global": false,
         "loop": false,
@@ -5702,6 +5752,100 @@
       {
         "time": 0.1,
         "type": "WAIT"
+      }
+    ],
+    "shkBossBallTrailLight": [
+      {
+        "volume": 0.7,
+        "global": false,
+        "loop": false,
+        "speed": 1,
+        "sound": "media/sound/boss/turret/fast-shot.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": ""
+          }
+        },
+        "pLight": "L",
+        "anim": "SHOCK_EXPLODE2",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pLight": "L",
+        "anim": "SHOCK_EXPLODE2",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.75
+        },
+        "pLight": "L",
+        "anim": "SHOCK_EXPLODE2",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

@@ -29,13 +29,13 @@
   "rounds": [
     {
       "name": {
-        "en_US": "Frequent Combat Arts"
+        "en_US": "Trigger Happy"
       },
       "customCode": true,
       "platPoints": 75000,
       "coins": 0,
       "objective": {
-        "en_US": "This player likes to use combat arts very often rather than save up SP."
+        "en_US": "This player likes to spam charged shots above all else."
       },
       "mods": [
         "PVP_BATTLE"

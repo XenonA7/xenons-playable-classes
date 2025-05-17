@@ -239,9 +239,9 @@
     "itemDrops": [],
     "boss": false
   },
-  "avatar-nozoom.triblader2-freq-arts": {
+  "avatar-nozoom.triblader2-spam": {
     "name": {
-      "en_US": "Crossworlds Player (Freq. Arts)"
+      "en_US": "Crossworlds Player (Spam)"
     },
     "track": true,
     "order": 500005,
@@ -251,13 +251,13 @@
     "descriptions": [
       {
         "text": {
-          "en_US": "A \\c[3]triblader\\c[0] player who you dueled in the Rhombus Arena. This player likes to use combat arts frequently rather than save up SP."
+          "en_US": "A \\c[3]triblader\\c[0] player who you dueled in the Rhombus Arena. This player likes to spam charged shots above all else."
         },
         "condition": ""
       }
     ],
     "species": {
-      "en_US": "Quite obsessed with maximizing her FOC stat"
+      "en_US": "Quite obsessed with maximizing her \\c[3]scope\\c[0] modifier"
     },
     "category": "PLAYERS",
     "level": 75,

@@ -762,6 +762,7 @@
             "spline": ""
           }
         },
+        "pLight": "L",
         "particleDuration": 0.2,
         "anim": "CIRCLE_BIG_BACK",
         "type": "PLAY_ANIM"

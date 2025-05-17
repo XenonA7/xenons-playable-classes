@@ -1,12 +1,18 @@
 [
   {
     "type": "INCLUDE",
+    "src": "mod:patches/data/effects/specials/wave-tri.json"
+  },
+  {
+    "type": "INCLUDE",
     "src": "mod:patches/data/effects/specials/wave-hexa.json"
   },
   {
     "type": "INCLUDE",
     "src": "mod:patches/data/effects/specials/wave-custom.json"
   },
+
+
 
 
 
@@ -17,6 +23,85 @@
       "SUB"
     ]
   },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_BIG_TRIANGLE",
+      "pivot": {
+        "x": 48,
+        "y": 47
+      },
+      "sheet": {
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "WAVE_BIG_TRIANGLE_GUI",
+      "pivot": {
+        "x": 48,
+        "y": 47
+      },
+      "sheet": {
+        "src": "media/entity/effects/triblader/lighter-particle-big-triangle-sheet.png",
+        "offX": 384,
+        "offY": 0,
+        "width": 96,
+        "height": 80
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SOURCE_WAVE",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 192,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+
+
+
+
+
+
+
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,

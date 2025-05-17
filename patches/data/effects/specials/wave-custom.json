@@ -94,6 +94,7 @@
             "spline": "EASE_IN"
           }
         },
+        "pLight": "L",
         "moveWithTarget": 1,
         "particleDuration": 2.5,
         "anim": "SHOCKWAVE_B_WAVE_GUI",
@@ -158,6 +159,7 @@
             "spline": "EASE_IN"
           }
         },
+        "pLight": "L",
         "particleDuration": 0.7,
         "anim": "SHOCKWAVE_B_WAVE_GUI",
         "offsetRadius": 120,
@@ -420,6 +422,7 @@
             "spline": "EASE_IN"
           }
         },
+        "pLight": "L",
         "moveWithTarget": 1,
         "particleDuration": 2.5,
         "anim": "WAVE_BIG_HEXAGON_GUI",
@@ -484,6 +487,7 @@
             "spline": "EASE_IN"
           }
         },
+        "pLight": "L",
         "particleDuration": 0.7,
         "anim": "WAVE_BIG_HEXAGON_GUI",
         "offsetRadius": 120,

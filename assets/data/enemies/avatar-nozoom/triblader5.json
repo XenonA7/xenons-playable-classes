@@ -1121,7 +1121,7 @@
       "config": {
         "collType": "PROJECTILE",
         "airFriction": 1,
-        "maxVel": 300,
+        "maxVel": 400,
         "zGravityFactor": 0,
         "bounciness": 0.0001
       }
@@ -1220,7 +1220,7 @@
           }
         },
         {
-          "factor": 0.05,
+          "factor": 0.075,
           "type": "ABSORB_DAMAGE"
         },
         {
@@ -3778,49 +3778,33 @@
               "type": "FACE_TO_TARGET"
             },
             {
-              "type": "SET_RANDOM_VAR_NUMBER",
-              "varName": "tmp.playerRandom1",
-              "min": 1,
-              "max": 4
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 1",
-              "thenStep": [
+              "type": "SELECT_RANDOM",
+              "options": [
+                {
+                  "0": " ",
+                  "count": 4,
+                  "weight": 1
+                }
+              ],
+              "0_0": [
                 {
                   "name": "cloneMelee",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 2",
-              "thenStep": [
+              ],
+              "0_1": [
                 {
                   "name": "cloneSpecial",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 3",
-              "thenStep": [
+              ],
+              "0_2": [
                 {
                   "name": "cloneRanged",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 4",
-              "thenStep": [
+              ],
+              "0_3": [
                 {
                   "name": "cloneRanged",
                   "type": "GOTO_LABEL"
@@ -3937,16 +3921,15 @@
           "type": "FACE_TO_TARGET"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom2",
-          "min": 1,
-          "max": 3
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 3,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "value": 0.2,
               "type": "SET_INVINCIBLE"
@@ -3989,13 +3972,8 @@
               "time": 0.1,
               "type": "WAIT"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "group": "cloneDust",
               "type": "CLEAR_EFFECTS"
@@ -4022,13 +4000,8 @@
               "precise": false,
               "type": "NAVIGATE_SIDEWAYS_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 3",
-          "thenStep": [
+          ],
+          "0_2": [
             {
               "value": 0.2,
               "type": "SET_INVINCIBLE"
@@ -4228,16 +4201,15 @@
           "anim": "battleRun"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom3",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom3 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 2,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -4247,13 +4219,8 @@
               "targetType": "ENEMY",
               "type": "NAVIGATE_ESCAPE_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom3 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -5167,16 +5134,15 @@
           "anim": "battleRun"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom4",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom4 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 2,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -5186,13 +5152,8 @@
               "targetType": "ENEMY",
               "type": "NAVIGATE_ESCAPE_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom4 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -6286,7 +6247,7 @@
       },
       "effects": "specials.wave",
       "effectKeys": {
-        "trail": "waveGun",
+        "trail": "waveGunEtherBomb",
         "wall": "waveGunXplode",
         "air": "waveGunXplode"
       },
@@ -6295,7 +6256,8 @@
       "timer": 3.5,
       "trail": true,
       "multiHit": true,
-      "noLightGlow": false,
+      "noLightGlow": true,
+      "light": "XL",
       "bounceProxy": "waveBomb",
       "type": "BALL",
       "animation": {
@@ -6342,7 +6304,7 @@
         {
           "duration": 0,
           "align": "BOTTOM",
-          "rotateFace": 0,
+          "rotateFace": -1,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -6351,7 +6313,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "waveBigGunBounce"
+            "name": "waveBigGunBounceTri"
           },
           "offset": {
             "x": 0,
@@ -6360,7 +6322,7 @@
           }
         },
         {
-          "duration": 1,
+          "duration": 1.2,
           "align": "CENTER",
           "rotateFace": -1,
           "flipLeftFace": false,
@@ -6373,8 +6335,8 @@
           ],
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.last-dng",
-            "name": "chargeStrongWave"
+            "sheet": "specials.wave",
+            "name": "chargeStrongWaveTri"
           },
           "offset": {
             "x": 0,
@@ -6469,8 +6431,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.jungle",
-            "name": "wavBossBombXplode"
+            "sheet": "specials.wave",
+            "name": "etherBombExplode"
           },
           "offset": {
             "x": 0,
@@ -6498,10 +6460,11 @@
           "attack": {
             "type": "MASSIVE",
             "element": "WAVE",
-            "damageFactor": 4.0,
+            "damageFactor": 8.0,
+            "critFactor": 0.5,
             "fly": "MASSIVE+",
             "reverse": false,
-            "status": 2,
+            "status": 1,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": "",
@@ -7364,8 +7327,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "projectileWaveBig"
+            "sheet": "specials.wave",
+            "name": "projectileWaveBigLight"
           },
           "offset": {
             "x": 0,
@@ -7499,8 +7462,8 @@
           "fixPos": true,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.glitch-boss",
-            "name": "frobbitLand"
+            "sheet": "specials.wave",
+            "name": "frobbitLandLight"
           },
           "offset": {
             "x": 0,
@@ -12722,7 +12685,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.icicles",
-                "name": "icicleExplodeSmall"
+                "name": "icicleExplodeSmallLight"
               },
               "offset": {
                 "x": 0,
@@ -12754,7 +12717,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.icicles",
-                "name": "icicleExplodeSmall"
+                "name": "icicleExplodeSmallLight"
               },
               "offset": {
                 "x": 0,
@@ -14070,6 +14033,26 @@
         "type": "FACE_TO_TARGET"
       },
       {
+        "duration": 0.3,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
         "conditions": [
           {
             "negated": false,
@@ -14145,6 +14128,26 @@
       {
         "value": false,
         "type": "FACE_TO_TARGET"
+      },
+      {
+        "duration": 0.3,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
       },
       {
         "conditions": [
@@ -15238,6 +15241,26 @@
                 "type": "SET_HIT_STABLE"
               },
               {
+                "duration": 0.3,
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "dust",
+                  "name": "line"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
                 "followUp": "battleMove",
                 "wait": false,
                 "viaWalkConfig": false,
@@ -15342,6 +15365,10 @@
         "type": "SET_RELATIVE_SPEED"
       },
       {
+        "type": "ENABLE_REACTION",
+        "reaction": "ATTACK_GUARD"
+      },
+      {
         "name": "throwStart",
         "type": "LABEL"
       },
@@ -15381,14 +15408,19 @@
             "type": "SHOOT_PROXY_PLAYER"
           },
           {
+            "value": 0.35,
+            "type": "SET_RELATIVE_SPEED"
+          },
+          {
             "maxTime": 0.18,
             "forceTime": true,
-            "distance": 60,
-            "distVariance": 20,
+            "distance": 130,
+            "distVariance": 40,
             "keepDirection": true,
             "throwing": true,
             "planOnly": false,
             "precise": false,
+            "forceMinTargetDistance": 64,
             "type": "NAVIGATE_SIDEWAYS_TARGET"
           },
           {
@@ -15407,19 +15439,28 @@
             "type": "SHOOT_PROXY_PLAYER"
           },
           {
+            "value": 0.35,
+            "type": "SET_RELATIVE_SPEED"
+          },
+          {
             "maxTime": 0.18,
             "forceTime": true,
-            "distance": 60,
-            "distVariance": 20,
+            "distance": 130,
+            "distVariance": 40,
             "keepDirection": true,
             "throwing": true,
             "planOnly": false,
             "precise": false,
+            "forceMinTargetDistance": 64,
             "type": "NAVIGATE_SIDEWAYS_TARGET"
           },
           {
             "type": "DISABLE_REACTION",
             "reaction": "DOOOOOOODGE_THROW"
+          },
+          {
+            "type": "DISABLE_REACTION",
+            "reaction": "ATTACK_GUARD"
           },
           {
             "name": "throwStart",
@@ -20137,7 +20178,7 @@
           "element": "HEAT",
           "damageFactor": 1.5,
           "fly": "HEAVY",
-          "reverse": false,
+          "reverse": true,
           "guardable": "",
           "skillBonus": "MELEE_DMG",
           "limiter": "",
@@ -23012,11 +23053,11 @@
         "shield": {
           "type": "DIRECTIONAL",
           "settings": {
-            "baseFactor": 0.15,
-            "strength": "REGULAR",
+            "baseFactor": 0.5,
+            "strength": "BLOCK_ALL",
             "hitResist": "MASSIVE",
             "stableOverride": "HEAVY",
-            "range": 0.5,
+            "range": 1,
             "back": false
           }
         },
@@ -23036,7 +23077,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "guard",
-          "name": "neutral"
+          "name": "neutral_top"
         }
       },
       {
@@ -23212,11 +23253,11 @@
         "shield": {
           "type": "DIRECTIONAL",
           "settings": {
-            "baseFactor": 0.15,
-            "strength": "REGULAR",
+            "baseFactor": 0.5,
+            "strength": "BLOCK_ALL",
             "hitResist": "MASSIVE",
             "stableOverride": "HEAVY",
-            "range": 0.5,
+            "range": 1,
             "back": false
           }
         },
@@ -23236,7 +23277,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "guard",
-          "name": "neutral"
+          "name": "neutral_top"
         }
       },
       {
@@ -23654,11 +23695,11 @@
         "shield": {
           "type": "DIRECTIONAL",
           "settings": {
-            "baseFactor": 0.15,
-            "strength": "REGULAR",
+            "baseFactor": 0.5,
+            "strength": "BLOCK_ALL",
             "hitResist": "MASSIVE",
             "stableOverride": "HEAVY",
-            "range": 0.5,
+            "range": 1,
             "back": false
           }
         },
@@ -23678,7 +23719,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "guard",
-          "name": "neutral"
+          "name": "neutral_top"
         }
       },
       {
@@ -25560,7 +25601,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "combat.tribladerXPC",
-          "name": "beekeperCharge"
+          "name": "beekeeperCharge"
         },
         "offset": {
           "x": 0,
@@ -29513,7 +29554,7 @@
         "type": "SHOW_EFFECT",
         "effect": {
           "sheet": "specials.wave",
-          "name": "waveDashTrail"
+          "name": "waveDashTrailLight"
         },
         "offset": {
           "x": 0,
@@ -29594,8 +29635,8 @@
         "fixPos": false,
         "type": "SHOW_EFFECT",
         "effect": {
-          "sheet": "enemies.jungle",
-          "name": "wavBossBombXplode"
+          "sheet": "specials.wave",
+          "name": "etherBombExplode"
         },
         "offset": {
           "x": 0,
@@ -30117,7 +30158,7 @@
         "type": "COMBAT_ART_CHARGE_NOZOOM"
       },
       {
-        "projectileSpeed": 300,
+        "projectileSpeed": 400,
         "type": "SET_FACE_TARGET_PREDICT"
       },
       {
@@ -30936,6 +30977,26 @@
             "type": "SET_HIT_STABLE"
           },
           {
+            "duration": 0.3,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "followUp": "aimMove",
             "wait": false,
             "viaWalkConfig": false,
@@ -30998,6 +31059,26 @@
           {
             "value": "HEAVY",
             "type": "SET_HIT_STABLE"
+          },
+          {
+            "duration": 0.3,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "followUp": "aimMove",
@@ -31132,6 +31213,27 @@
         ]
       },
       {
+        "duration": 0.3,
+        "align": "BOTTOM",
+        "rotateFace": 0,
+        "flipLeftFace": false,
+        "wait": false,
+        "waitSkip": 0,
+        "group": "cloneDust",
+        "actionDetached": false,
+        "fixPos": false,
+        "type": "SHOW_EFFECT",
+        "effect": {
+          "sheet": "dust",
+          "name": "line"
+        },
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
         "withElse": true,
         "type": "IF",
         "condition": "entity.dodgeBlocked",
@@ -31157,26 +31259,6 @@
           }
         ],
         "elseStep": [
-          {
-            "duration": -1,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "dust",
-              "name": "line"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
           {
             "value": 0.2,
             "type": "SET_INVINCIBLE"
@@ -31483,37 +31565,85 @@
         "type": "SET_HIT_STABLE"
       },
       {
-        "name": "derp",
-        "actionDetached": false,
-        "shield": {
-          "type": "DIRECTIONAL",
-          "settings": {
-            "baseFactor": 0.15,
-            "strength": "REGULAR",
-            "hitResist": "MASSIVE",
-            "stableOverride": "HEAVY",
-            "range": 0.5,
-            "back": false
+        "conditions": [
+          {
+            "element": "COLD",
+            "negated": false,
+            "type": "ELEMENT_MODE"
           }
-        },
-        "perfectGuardTime": 0.1,
-        "type": "ADD_SHIELD"
-      },
-      {
-        "duration": -1,
-        "align": "BOTTOM",
-        "rotateFace": 0,
-        "flipLeftFace": false,
-        "wait": false,
-        "waitSkip": 0,
-        "group": "shieldFX",
-        "actionDetached": false,
-        "fixPos": false,
-        "type": "SHOW_EFFECT",
-        "effect": {
-          "sheet": "guard",
-          "name": "neutral"
-        }
+        ],
+        "withElse": true,
+        "type": "COMBAT_IF",
+        "thenStep": [
+          {
+            "name": "derp",
+            "actionDetached": false,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "baseFactor": 0.5,
+                "strength": "BLOCK_ALL",
+                "hitResist": "MASSIVE",
+                "stableOverride": "HEAVY",
+                "range": 1,
+                "back": false
+              }
+            },
+            "perfectGuardTime": 0.1,
+            "type": "ADD_SHIELD"
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "shieldFX",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "guard",
+              "name": "neutral_top"
+            }
+          }
+        ],
+        "elseStep": [
+          {
+            "name": "derp",
+            "actionDetached": false,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "baseFactor": 0.15,
+                "strength": "REGULAR",
+                "hitResist": "MASSIVE",
+                "stableOverride": "HEAVY",
+                "range": 0.5,
+                "back": false
+              }
+            },
+            "perfectGuardTime": 0.1,
+            "type": "ADD_SHIELD"
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "shieldFX",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "guard",
+              "name": "neutral"
+            }
+          }
+        ]
       },
       {
         "wait": false,
@@ -31546,6 +31676,10 @@
       {
         "time": 0.4,
         "type": "WAIT"
+      },
+      {
+        "type": "DO_ENEMY_ACTION",
+        "actionName": "Strat_Swap"
       }
     ],
     "weakStart": [
@@ -31581,12 +31715,6 @@
       }
     ],
     "CounterCounter": [
-      {
-        "changeType": "set",
-        "type": "CHANGE_VAR_BOOL",
-        "varName": "tmp.apolloCounterDodge",
-        "value": true
-      },
       {
         "group": "weak",
         "type": "CLEAR_EFFECTS"
@@ -31783,9 +31911,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -31916,9 +32064,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32050,9 +32218,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32117,7 +32305,7 @@
             ]
           },
           {
-            "value": true,
+            "value": false,
             "type": "FACE_TO_TARGET"
           },
           {
@@ -32292,9 +32480,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32425,9 +32633,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32559,9 +32787,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32626,7 +32874,7 @@
             ]
           },
           {
-            "value": true,
+            "value": false,
             "type": "FACE_TO_TARGET"
           },
           {
@@ -32801,9 +33049,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -32934,9 +33202,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33068,9 +33356,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33135,7 +33443,7 @@
             ]
           },
           {
-            "value": true,
+            "value": false,
             "type": "FACE_TO_TARGET"
           },
           {
@@ -33310,9 +33618,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33443,9 +33771,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33577,9 +33925,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33644,7 +34012,7 @@
             ]
           },
           {
-            "value": true,
+            "value": false,
             "type": "FACE_TO_TARGET"
           },
           {
@@ -33819,9 +34187,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -33952,9 +34340,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -34086,9 +34494,29 @@
             }
           },
           {
-            "time": 0.1,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
+            "conditions": [
+              {
+                "min": 0,
+                "max": 24,
+                "negated": false,
+                "type": "!TARGET_DISTANCE"
+              }
+            ],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": [
+              {
+                "time": 0.1,
+                "stopBeforeEdge": false,
+                "type": "MOVE_FORWARD"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              }
+            ]
           },
           {
             "baseStrength": 0.8,
@@ -34153,7 +34581,7 @@
             ]
           },
           {
-            "value": true,
+            "value": false,
             "type": "FACE_TO_TARGET"
           },
           {

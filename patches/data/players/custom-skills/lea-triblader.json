@@ -1232,7 +1232,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.cold",
-            "name": "coldPermaShoot"
+            "name": "coldPermaShootLight"
           },
           "offset": {
             "x": 0,
@@ -1633,7 +1633,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.icicles",
-                "name": "icicleExplodeSmall"
+                "name": "icicleExplodeSmallLight"
               },
               "offset": {
                 "x": 0,
@@ -1665,7 +1665,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.icicles",
-                "name": "icicleExplodeSmall"
+                "name": "icicleExplodeSmallLight"
               },
               "offset": {
                 "x": 0,
@@ -3542,6 +3542,26 @@
         },
         {
           "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "xpc-utility",
+            "name": "lightL"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
           "align": "BASE",
           "rotateFace": 0,
           "flipLeftFace": false,
@@ -3691,6 +3711,26 @@
       "action": [
         {
           "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "xpc-utility",
+            "name": "lightM"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
           "duration": -1,
@@ -11421,8 +11461,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.jungle",
-            "name": "shkBossBallTrail"
+            "sheet": "specials.shock",
+            "name": "shkBossBallTrailLight"
           },
           "offset": {
             "x": 0,
@@ -17654,8 +17694,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "projectileWave"
+            "sheet": "specials.wave",
+            "name": "projectileWaveLight"
           },
           "offset": {
             "x": 0,
@@ -18186,8 +18226,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "projectileWaveBig"
+            "sheet": "specials.wave",
+            "name": "projectileWaveBigLight"
           },
           "offset": {
             "x": 0,
@@ -18321,8 +18361,8 @@
           "fixPos": true,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.glitch-boss",
-            "name": "frobbitLand"
+            "sheet": "specials.wave",
+            "name": "frobbitLandLight"
           },
           "offset": {
             "x": 0,
@@ -18705,7 +18745,7 @@
       },
       "effects": "specials.wave",
       "effectKeys": {
-        "trail": "waveGun",
+        "trail": "waveGunEtherBomb",
         "wall": "waveGunXplode",
         "air": "waveGunXplode"
       },
@@ -18761,7 +18801,7 @@
         {
           "duration": 0,
           "align": "BOTTOM",
-          "rotateFace": 0,
+          "rotateFace": -1,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -18770,7 +18810,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "waveBigGunBounce"
+            "name": "waveBigGunBounceTri"
           },
           "offset": {
             "x": 0,
@@ -18779,7 +18819,7 @@
           }
         },
         {
-          "duration": 1,
+          "duration": 1.2,
           "align": "CENTER",
           "rotateFace": -1,
           "flipLeftFace": false,
@@ -18792,8 +18832,8 @@
           ],
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.last-dng",
-            "name": "chargeStrongWave"
+            "sheet": "specials.wave",
+            "name": "chargeStrongWaveTri"
           },
           "offset": {
             "x": 0,
@@ -18888,8 +18928,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.jungle",
-            "name": "wavBossBombXplode"
+            "sheet": "specials.wave",
+            "name": "etherBombExplode"
           },
           "offset": {
             "x": 0,
@@ -18917,10 +18957,11 @@
           "attack": {
             "type": "MASSIVE",
             "element": "WAVE",
-            "damageFactor": 4.0,
+            "damageFactor": 8.0,
+            "critFactor": 0.5,
             "fly": "MASSIVE+",
             "reverse": false,
-            "status": 2,
+            "status": 1,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "limiter": "",
@@ -20289,7 +20330,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "waveDashTrail"
+            "name": "waveDashTrailLight"
           },
           "offset": {
             "x": 0,
@@ -20712,7 +20753,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "waveDashTrail"
+            "name": "waveDashTrailLight"
           },
           "offset": {
             "x": 0,
@@ -22191,8 +22232,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.elephant",
-            "name": "waveBombTrail"
+            "sheet": "specials.wave",
+            "name": "waveBombTrailLight"
           },
           "offset": {
             "x": 0,
@@ -22531,49 +22572,33 @@
               "type": "FACE_TO_TARGET"
             },
             {
-              "type": "SET_RANDOM_VAR_NUMBER",
-              "varName": "tmp.playerRandom1",
-              "min": 1,
-              "max": 4
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 1",
-              "thenStep": [
+              "type": "SELECT_RANDOM",
+              "options": [
+                {
+                  "0": " ",
+                  "count": 4,
+                  "weight": 1
+                }
+              ],
+              "0_0": [
                 {
                   "name": "cloneMelee",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 2",
-              "thenStep": [
+              ],
+              "0_1": [
                 {
                   "name": "cloneSpecial",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 3",
-              "thenStep": [
+              ],
+              "0_2": [
                 {
                   "name": "cloneRanged",
                   "type": "GOTO_LABEL"
                 }
-              ]
-            },
-            {
-              "type": "IF",
-              "withElse": false,
-              "condition": "tmp.playerRandom1 == 4",
-              "thenStep": [
+              ],
+              "0_3": [
                 {
                   "name": "cloneRanged",
                   "type": "GOTO_LABEL"
@@ -22690,16 +22715,15 @@
           "type": "FACE_TO_TARGET"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom2",
-          "min": 1,
-          "max": 3
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 3,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "value": 0.2,
               "type": "SET_INVINCIBLE"
@@ -22742,13 +22766,8 @@
               "time": 0.1,
               "type": "WAIT"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "group": "cloneDust",
               "type": "CLEAR_EFFECTS"
@@ -22775,13 +22794,8 @@
               "precise": false,
               "type": "NAVIGATE_SIDEWAYS_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom2 == 3",
-          "thenStep": [
+          ],
+          "0_2": [
             {
               "value": 0.2,
               "type": "SET_INVINCIBLE"
@@ -22981,16 +22995,15 @@
           "anim": "tri-battleRun"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom3",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom3 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 2,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -23000,13 +23013,8 @@
               "targetType": "ENEMY",
               "type": "NAVIGATE_ESCAPE_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom3 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -23920,16 +23928,15 @@
           "anim": "tri-battleRun"
         },
         {
-          "type": "SET_RANDOM_VAR_NUMBER",
-          "varName": "tmp.playerRandom4",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom4 == 1",
-          "thenStep": [
+          "type": "SELECT_RANDOM",
+          "options": [
+            {
+              "0": " ",
+              "count": 2,
+              "weight": 1
+            }
+          ],
+          "0_0": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -23939,13 +23946,8 @@
               "targetType": "ENEMY",
               "type": "NAVIGATE_ESCAPE_TARGET"
             }
-          ]
-        },
-        {
-          "type": "IF",
-          "withElse": false,
-          "condition": "tmp.playerRandom4 == 2",
-          "thenStep": [
+          ],
+          "0_1": [
             {
               "maxTime": 2,
               "forceTime": false,
@@ -43468,7 +43470,7 @@
               "element": "HEAT",
               "damageFactor": 1.5,
               "fly": "HEAVY",
-              "reverse": false,
+              "reverse": true,
               "guardable": "",
               "skillBonus": "MELEE_DMG",
               "limiter": "",
@@ -51865,7 +51867,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "combat.tribladerXPC",
-              "name": "beekeperCharge"
+              "name": "beekeeperCharge"
             },
             "offset": {
               "x": 0,
@@ -54893,6 +54895,26 @@
                 }
               },
               {
+                "duration": 0,
+                "align": "BOTTOM",
+                "rotateFace": 6,
+                "flipLeftFace": true,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.tribladerXPC",
+                  "name": "slomoHit2Triangles"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                }
+              },
+              {
                 "align": "BOTTOM",
                 "radius": 32,
                 "yScale": 0,
@@ -54950,6 +54972,26 @@
                 "effect": {
                   "sheet": "specials.shock",
                   "name": "slomoHit1"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                }
+              },
+              {
+                "duration": 0,
+                "align": "BOTTOM",
+                "rotateFace": 6,
+                "flipLeftFace": true,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.tribladerXPC",
+                  "name": "slomoHit1Triangles"
                 },
                 "offset": {
                   "x": 0,
@@ -60810,7 +60852,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.wave",
-              "name": "waveDashTrail"
+              "name": "waveDashTrailLight"
             },
             "offset": {
               "x": 0,
@@ -60903,8 +60945,8 @@
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "enemies.jungle",
-              "name": "wavBossBombXplode"
+              "sheet": "specials.wave",
+              "name": "etherBombExplode"
             },
             "offset": {
               "x": 0,

@@ -49,7 +49,7 @@
     "x": 2,
     "y": 2
   },
-  "anims": "enemies.penguin-heat-alt",
+  "anims": "enemies.penguin-heat-elder",
   "defaultState": "IDLE",
   "walkConfigs": {
     "normal": {

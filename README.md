@@ -78,7 +78,8 @@ https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
 4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
    * Allows mods to load DLC assets properly
   
-## Install Instructions
+## Install Instructions (Manual)
+>**Note:** You can easily install the mod automatically using the in-game mod manager. These instructions are for the manual process!
 1. Back up your save files **\AppData\Local\CrossCode**
 
 ### Install the Mod Loader

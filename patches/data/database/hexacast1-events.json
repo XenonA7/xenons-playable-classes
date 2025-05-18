@@ -2,7 +2,7 @@
   "hexacast1-party-add": {
     "frequency": "ALWAYS",
     "repeat": "ONCE",
-    "condition": "",
+    "condition": "false",
     "eventType": "PARALLEL",
     "overrideSideMessage": false,
     "event": [

@@ -1,3 +1,9 @@
+## 2.11.4 (05/17/2025)
+### Fixes
+- Fixed a typo in hideout-west
+- Hexacast1 party member is now disabled. It was just a thing for testing purposes, I did not realize it was in the public release.
+  Older saves with Hexacast1 will retain them in the party menu fully functional but XPC will no longer add this character as a party member going forward.
+
 ## 2.11.3 (05/17/2025)
 ### New Content
 - Added triblader3-spam.json (not tracked in records)

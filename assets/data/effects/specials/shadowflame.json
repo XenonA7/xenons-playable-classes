@@ -429,6 +429,14 @@
     ]
   },
   "EFFECTS": {
+    "scale80": [
+      {
+        "scaleX": 0.8,
+        "scaleY": 0.8,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      }
+    ],
     "ssCharge1": [
       {
         "volume": 0.8,
@@ -3338,6 +3346,49 @@
             "value": {
               "x": 0.4,
               "y": 0.4
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "randFlip": true,
+        "moveWithTarget": 0,
+        "anim": "DARK_FIRE_SMALL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "darkFireKillSmall": [
+      {
+        "size": "L",
+        "fadeIn": 0.1,
+        "fadeOut": 0.2,
+        "duration": 0.2,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 1,
+        "uniformRandom": 1,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 6,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "start": {
+            "value": {
+              "x": 0.35,
+              "y": 0.35
             },
             "spline": "EASE_OUT"
           }

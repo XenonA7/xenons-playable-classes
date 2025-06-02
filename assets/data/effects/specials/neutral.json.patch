@@ -521,5 +521,54 @@
         0
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL_SLOWER",
+      "sheet": {
+        "src": "media/entity/effects/sweep2.png",
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.07,
+      "repeat": false,
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL2_SLOWER",
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "sheet": {
+        "src": "media/entity/effects/sweep2.png",
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.07,
+      "repeat": false,
+      "flipX": true,
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
   }
 ]

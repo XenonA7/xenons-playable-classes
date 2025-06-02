@@ -892,6 +892,27 @@
       "offY": 96
     }
   },
+  "csHexacastCustom1NeutralDash1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_DASH_SPECIAL1_A",
+        "actionCheckKey": "DASH_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Acceleration Mine"
+    },
+    "description": {
+      "en_US": "Dash and leave behind a mine that will deploy after a brief arming period. Deals heavy knockback."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 120,
+      "offY": 24
+    }
+  },
   "csHexacastSpheromancerNeutralDash2A": {
     "list": [
       {
@@ -1312,6 +1333,27 @@
       "offY": 0
     }
   },
+  "csHexacastCustom2HeatThrow1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM2_HEXACAST_THROW_SPECIAL1_A",
+        "actionCheckKey": "THROW_SPECIAL1"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Meteor Flare (Ranged)"
+    },
+    "description": {
+      "en_US": "Toss a RANGED damage version of Meteor Flare at your cursor position."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 0,
+      "offY": 72
+    }
+  },
   "csHexacastSpheromancerHeatThrow2A": {
     "list": [
       {
@@ -1364,6 +1406,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 24,
       "offY": 144
+    }
+  },
+  "csHexacastCustom1HeatThrow2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_THROW_SPECIAL2_A",
+        "actionCheckKey": "THROW_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Meteor Storm (Ranged)"
+    },
+    "description": {
+      "en_US": "Toss a RANGED damage version of Meteor Storm at your cursor position."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 24,
+      "offY": 72
     }
   },
   "csHexacastSpheromancerHeatAttack1A": {

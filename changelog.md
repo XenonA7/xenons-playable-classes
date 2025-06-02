@@ -1,3 +1,61 @@
+## 2.12.0 (06/01/2025)
+### New Content
+- New Hexacast combat art: Blade Curse (Neutral Dash Lv.1B)
+- New Hexacast combat art: Sorcerer's Sawmill (Neutral Dash Lv.2B)
+- New Hexacast custom skill: Acceleration Mine (Neutral Dash Lv.1)
+- New Hexacast custom skill: Meteor Flare (Ranged) (Heat Throw Lv.1) (shadowflame support)
+- New Hexacast custom skill: Meteor Storm (Ranged) (Heat Throw Lv.2) (shadowflame support)
+- Added a sign in the "unused content" room to add party member Hexacast1
+- Added shadowflame alt variant to Flame Mortar (improved radius, status inflict, and damage)
+### Changes
+- Acceleration Mine removed from main Hexacast player file, it is now a custom skill
+- Acceleration Mine never worked for directional knockback, description and effects are now updated to reflect that
+- Improved spritework for shadowflame particle DARK_BIG_HEXAGON
+- Improved spritework for shadowflame particle CIRCLE_STATIC
+- Reduced size of CIRCLE_STATIC particles in shadowflame alt effect ashenInfernoExplode
+- Replaced CIRCLE_STATIC particles in shadowflame alt effects meteorFinalExplode and meteorDebrisDiagonalBig
+- Meteor Flare reworked by removing initial chargeup, now tosses a card on the ground
+- Added BLINK_COLOR and FADE_COLOR steps to effect blueColdTrail
+- Proxy frigidFlurryCard now uses `"waitUntil": "entity.onGround"` to move forward
+- Proxy faeSpike (pentafist) now uses `"waitUntil": "entity.onGround"` to move forward
+- Proxy faeSpike (pentafist) now falls to the ground before exploding if the player is interrupted before spiking it
+- Improved trail effects for proxies frigidFlurryCard and blizzardRushCard
+- Blizzard Rush cards now travel faster, should now all explode before or during player final attack
+- Reduced snowflake particle count for effects ballWallKillIcyGust and ballAirKillIcyGust
+- Acceleration Mine now works using a TACKLE hit detection method rather than a targeting method
+- Horizontally flipped the icon sprite for Healing Burst
+- Adjusted sweep particle rotation in effect spellVolleySweep
+### Fixes
+- Fixed missing file \assets\data\maps\xpc\bonus\dev.json
+- Fixed Meteor Flare, Meteor Storm, and Calamity Beacon torch pillars bugging out when used directly against a wall
+- Fixed hitbox timing for Snow lance
+- Improved Icicile Lance knockback values to keep enemies inside more consistently
+- Fixed loop structure for effect blueColdTrail
+- Fixed proxy sprite z offset for all Hexacast spellcards that stick in the ground
+- Fixed proxy flameMini (Flame Mortar) not lasting long enough to play full animation
+- Fixed inconsistent MELEE/RANGED damage types in Meteor Storm
+### Balance
+- Meteor Flare reduced delay duration before meteor impact
+- Meteor Flare damageFactor decreased from 6.2 to 5.65
+- Meteor Flare (shadowflame variant) damageFactor decreased from 9 to 8
+- Meteor Storm initial charge time reduced from 0.75 seconds to 0.65 seconds
+- Meteor Storm meteors now come out faster after card lands
+- Ice Blitz damageFactor reduced from 1.75 to 1.25 for the first two sweeps
+- Ice Blitz damageFactor reduced from 2.15 to 1.85 for the final hit
+- Snow Lance overall damage increased
+- Added a DAMAGE_CEILING to Snow Lance, only really affects massive enemies that can be hit by all proxies at once
+- Icicle Lance overall damage increased
+- Icicle Lance proxy hitbox radius increased from 20 to 28
+- Frigid Flurry overall damage increased
+- Frigid Flurry spellcard travel time reduced
+- Frigid Flurry spellcard explosion radius reduced from 80 to 72 (should match the effect better)
+- Acceleration Mine now allows for 6 active at a time
+- Acceleration Mine damageFactor increased from 2.0 to 4.5
+- Flame Mortar status inflict reduced
+- Flame Mortar damage reduced
+- Spell Tag dash speed increased from 300 to 350
+- Shock Surge end lag (delay before player is actionable) reduced by 0.05 seconds
+
 ## 2.11.4 (05/17/2025)
 ### Fixes
 - Fixed a typo in hideout-west

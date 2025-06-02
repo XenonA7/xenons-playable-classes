@@ -196,7 +196,7 @@
           "condition": "entity.ownerAttrib.penta-spike"
         },
         {
-          "withElse": false,
+          "withElse": true,
           "type": "IF",
           "condition": "entity.ownerAttrib.penta-spike",
           "thenStep": [
@@ -287,13 +287,31 @@
               "type": "PLAYER_ADJUST_FACE"
             },
             {
-              "time": 0.12,
-              "stopBeforeEdge": false,
+              "time": 0,
+              "waitUntil": "entity.onGround",
               "collideCancel": 1,
               "type": "MOVE_FORWARD"
             },
             {
               "maxTime": 2,
+              "type": "WAIT_UNTIL_ON_GROUND"
+            }
+          ],
+          "elseStep": [
+            {
+              "value": 0,
+              "type": "SET_FLOAT_HEIGHT"
+            },
+            {
+              "value": 1.5,
+              "type": "SET_Z_GRAVITY_FACTOR"
+            },
+            {
+              "value": "IGNORE",
+              "type": "SET_COLL_TYPE"
+            },
+            {
+              "maxTime": 3,
               "type": "WAIT_UNTIL_ON_GROUND"
             }
           ]

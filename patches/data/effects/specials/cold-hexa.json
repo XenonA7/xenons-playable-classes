@@ -2500,6 +2500,18 @@
     ],
     "blueColdTrail": [
       {
+        "color": "#6893F8",
+        "maxAlpha": 0.8,
+        "minAlpha": 0.3,
+        "blinkDuration": 0.55,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
         "color": "#002b88",
         "noLighter": false,
         "pAlpha": {
@@ -2514,6 +2526,18 @@
       {
         "time": 0.05,
         "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "color": "#6893F8",
+        "alpha": 0.7,
+        "fadeIn": 0,
+        "fadeOut": 0.4,
+        "duration": 0,
+        "noLighter": false,
+        "type": "FADE_COLOR"
       }
     ],
     "coldSubChargeHex": [
@@ -7208,7 +7232,6 @@
         "anim": "SNOW_BURST_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 1,
         "duration": 0.4,
@@ -7326,7 +7349,6 @@
         "anim": "SNOW_BURST_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 1,
         "duration": 0.4,
@@ -7444,7 +7466,6 @@
         "anim": "SNOW_BURST_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 1,
         "duration": 0.4,
@@ -7562,7 +7583,6 @@
         "anim": "SNOW_BURST_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "time": 0.05,
         "type": "WAIT"
@@ -8351,6 +8371,147 @@
         "cancelable": true,
         "anim": "SNOWFLAKE1",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "frigidFlurryCardTrail": [
+      {
+        "color": "#aaccff",
+        "maxAlpha": 0.5,
+        "minAlpha": 0,
+        "blinkDuration": 0.1,
+        "blinkCount": -1,
+        "noLighter": true,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "size": "L",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "white",
+        "colorAlpha": "#00aaff",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.15,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.7,
+              "y": 0.7
+            },
+            "spline": ""
+          }
+        },
+        "offset": {
+          "x": 0,
+          "y": -3,
+          "z": -3
+        },
+        "particleDuration": 0.3,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "color": "white",
+        "colorAlpha": "#00aaff",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.15,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0.7,
+              "y": 0.7
+            },
+            "spline": ""
+          }
+        },
+        "offset": {
+          "x": 0,
+          "y": -3,
+          "z": -3
+        },
+        "particleDuration": 0.3,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 8,
+        "moveDist": 16,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.75,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "SNOWFLAKE1",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.016,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

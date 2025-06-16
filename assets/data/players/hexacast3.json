@@ -66249,7 +66249,7 @@
           },
           {
             "type": "WAIT",
-            "time": 1.25
+            "time": 1.3
           },
           {
             "poiFilter": {

@@ -1,3 +1,7 @@
+## 2.13.1 (06/15/2025)
+### Fixes
+- Fixed Stasis Storm trigger inconsistency when player has a timeflow buff
+
 ## 2.13.0 (06/15/2025)
 ### General
 - Hexacast litter mod updated to 2.1.1

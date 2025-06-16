@@ -44,7 +44,7 @@
           "z": 80
         },
         "moveWithTarget": 0,
-        "alongY": false,
+        "alongY": true,
         "anim": "SNOW_BURST",
         "type": "PLAY_ANIM_RANGE"
       },

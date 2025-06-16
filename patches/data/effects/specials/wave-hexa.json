@@ -1267,7 +1267,7 @@
         "useTargetAngle": false,
         "numParticles": 12,
         "duration": 0.3,
-        "alongY": false,
+        "alongY": true,
         "anim": "TELEPORT_RIPPLE",
         "type": "PLAY_ANIM_RANGE"
       },
@@ -13683,7 +13683,7 @@
         "useTargetAngle": false,
         "numParticles": 12,
         "duration": 0.3,
-        "alongY": false,
+        "alongY": true,
         "anim": "TELEPORT_RIPPLE",
         "type": "PLAY_ANIM_RANGE"
       },
@@ -15805,7 +15805,7 @@
         "useTargetAngle": false,
         "numParticles": 4,
         "duration": 1.2,
-        "alongY": false,
+        "alongY": true,
         "offset": {
           "x": 0,
           "y": 8,
@@ -15859,7 +15859,7 @@
         "useTargetAngle": false,
         "numParticles": 4,
         "duration": 1.2,
-        "alongY": false,
+        "alongY": true,
         "offset": {
           "x": 0,
           "y": 8,

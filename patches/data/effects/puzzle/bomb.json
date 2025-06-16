@@ -22,7 +22,7 @@
           "y": 32,
           "z": 32
         },
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 0.8
         },
@@ -53,7 +53,7 @@
           "y": 32,
           "z": 32
         },
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 0.8
         },

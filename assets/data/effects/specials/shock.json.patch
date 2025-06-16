@@ -398,6 +398,39 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
+      "name": "SHOCK_SWEEP_FAST",
+      "pivot": {
+        "x": 16,
+        "y": 28
+      },
+      "sheet": {
+        "src": "media/entity/effects/shock.png",
+        "offX": 0,
+        "offY": 0,
+        "width": 64,
+        "height": 56
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.020,
+      "repeat": false,
+      "flipX": false,
+      "tileOffset": 0,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
       "name": "SHOCK_SWEEP2_FAST",
       "pivot": {
         "x": 16,

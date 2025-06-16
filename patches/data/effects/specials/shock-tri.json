@@ -1556,7 +1556,7 @@
         "useTargetAngle": true,
         "numParticles": 12,
         "duration": 0.2,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -5090,7 +5090,7 @@
         "useTargetAngle": true,
         "numParticles": 12,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {

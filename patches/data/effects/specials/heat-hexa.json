@@ -778,7 +778,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -801,7 +801,7 @@
         "useTargetAngle": true,
         "numParticles": 2,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -3084,7 +3084,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -3107,7 +3107,7 @@
         "useTargetAngle": true,
         "numParticles": 2,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -8530,7 +8530,7 @@
           "y": -16,
           "z": -16
         },
-        "alongY": false,
+        "alongY": true,
         "pScale": {
           "init": {
             "x": 0.4,
@@ -9460,7 +9460,7 @@
           "y": -16,
           "z": -16
         },
-        "alongY": false,
+        "alongY": true,
         "pScale": {
           "init": {
             "x": 0.6,
@@ -10589,7 +10589,7 @@
           "y": -16,
           "z": -16
         },
-        "alongY": false,
+        "alongY": true,
         "pScale": {
           "init": {
             "x": 1.5,
@@ -11486,7 +11486,7 @@
           "y": -32,
           "z": -32
         },
-        "alongY": false,
+        "alongY": true,
         "pScale": {
           "init": {
             "x": 2.5,

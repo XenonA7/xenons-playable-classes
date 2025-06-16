@@ -562,7 +562,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "NEUTRAL",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "hints": [
@@ -660,7 +660,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "HEAT",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -760,7 +760,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "COLD",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -860,7 +860,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "SHOCK",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -960,7 +960,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "WAVE",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -20370,9 +20370,15 @@
       "breakType": "ACTION",
       "action": [
         {
-          "duration": 0.6,
-          "align": "CENTER",
-          "rotateFace": -1,
+          "changeType": "set",
+          "attribName": "stasisStormID",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 0
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -20391,9 +20397,9 @@
           }
         },
         {
-          "duration": 0.6,
-          "align": "CENTER",
-          "rotateFace": -1,
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -20413,7 +20419,10 @@
         },
         {
           "type": "WAIT",
-          "time": 0.6
+          "time": 1.2
+        },
+        {
+          "type": "CLEAR_EFFECTS"
         },
         {
           "duration": 0,
@@ -20439,7 +20448,7 @@
         {
           "duration": 0,
           "align": "BOTTOM",
-          "rotateFace": 8,
+          "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -20469,7 +20478,7 @@
         },
         {
           "align": "BOTTOM",
-          "radius": 100,
+          "radius": 88,
           "yScale": 0,
           "zHeight": 0,
           "centralAngle": 1,
@@ -20513,13 +20522,43 @@
           "type": "CLEAR_HIT_PROXY"
         },
         {
+          "kind": "FIRST_HIT",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "duration": -1,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "stasisStormSlowMo"
+              },
+              "offset": {
+                "x": 0,
+                "y": 2,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
           "type": "WAIT_UNTIL",
           "maxTime": 2,
           "condition": "entity.ownerAttrib.stasisStormHit"
-        },
-        {
-          "type": "WAIT",
-          "time": 1
         },
         {
           "withElse": false,
@@ -20529,61 +20568,71 @@
             {
               "align": "CENTER",
               "centralAngle": 1,
-              "angleVary": 0.2,
-              "startDist": 48,
+              "startAngle": 0,
+              "angleVary": 0,
+              "startDist": 120,
               "startDistCollide": "NONE",
-              "random": true,
-              "count": 1,
-              "duration": 0.4,
+              "random": false,
+              "count": 4,
+              "duration": 0,
               "clockwise": true,
               "flipLeftFace": 0,
               "circularArea": false,
               "uniformDir": 0,
               "delay": 0,
-              "repeat": true,
+              "repeat": false,
               "type": "SHOOT_PROXY_RANGE",
-              "proxy": "stasisStormDummy",
+              "proxy": "stasisStormCardBase",
               "offset": {
                 "z": 0
               }
             },
             {
-              "type": "WAIT",
-              "time": 0.2
-            },
-            {
-              "align": "CENTER",
-              "centralAngle": 1,
-              "angleVary": 0.2,
-              "startDist": 96,
-              "startDistCollide": "NONE",
-              "random": true,
-              "count": 1,
-              "duration": 0.4,
-              "clockwise": true,
-              "flipLeftFace": 0,
-              "circularArea": false,
-              "uniformDir": 0,
-              "delay": 0,
-              "repeat": true,
-              "type": "SHOOT_PROXY_RANGE",
-              "proxy": "stasisStormDummy",
-              "offset": {
-                "z": 0
-              }
-            },
-            {
-              "type": "WAIT",
-              "time": 3.2
-            },
-            {
-              "type": "STOP_REPEATING_FORCE"
+              "withElse": false,
+              "type": "IF",
+              "condition": "false",
+              "thenStep": [
+                {
+                  "time": 0.02,
+                  "type": "WAIT"
+                },
+                {
+                  "align": "CENTER",
+                  "centralAngle": 1,
+                  "startAngle": 0.166,
+                  "angleVary": 0,
+                  "startDist": 120,
+                  "startDistCollide": "NONE",
+                  "random": false,
+                  "count": 3,
+                  "duration": 0,
+                  "clockwise": false,
+                  "flipLeftFace": 0,
+                  "circularArea": false,
+                  "uniformDir": 0,
+                  "delay": 0,
+                  "repeat": false,
+                  "type": "SHOOT_PROXY_RANGE",
+                  "proxy": "stasisStormCardBase",
+                  "offset": {
+                    "z": 0
+                  }
+                }
+              ]
             }
           ]
         },
         {
+          "type": "WAIT_UNTIL",
+          "maxTime": 5,
+          "condition": "entity.ownerAttrib.stasisStormClearFX"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
           "type": "WAIT",
-          "time": 0.1
+          "time": 5
         }
       ],
       "invisible": false,
@@ -20605,7 +20654,7 @@
     },
     "stasisProxy2": {
       "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
+      "breakType": "ACTION",
       "action": [
         {
           "kind": "PART_TARGET_ROOT",
@@ -20646,7 +20695,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "stasisStart"
+            "name": "stasisStartLite"
           },
           "offset": {
             "x": 0,
@@ -20683,15 +20732,10 @@
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
-          "type": "WAIT_UNTIL",
-          "maxTime": 1.5,
-          "condition": "entity.ownerAttrib.stormStrideActivate"
-        },
-        {
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "maxTime": 7.2,
+          "maxTime": 10,
           "type": "WAIT_UNTIL_TARGET_DEFEATED"
         },
         {
@@ -28872,443 +28916,6 @@
         "collType": "NONE",
         "zGravityFactor": 1,
         "shadow": 16
-      },
-      "type": "GENERIC"
-    },
-    "stasisStormDummy": {
-      "copyOwnerAnims": true,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "poiFilter": {
-            "group": "stasisGroup2",
-            "type": "PROXY"
-          },
-          "distance": 600,
-          "type": "SET_POI_TEMP_TARGET"
-        },
-        {
-          "withElse": true,
-          "type": "COMBAT_IF",
-          "conditions": [
-            {
-              "max": 0.5,
-              "negated": false,
-              "type": "RANDOM"
-            }
-          ],
-          "thenStep": [
-            {
-              "name": "startPos",
-              "searchType": "RANDOM",
-              "distance": 48,
-              "centralAngle": 1,
-              "throwing": true,
-              "type": "SET_ATTRIB_CLOSE_TARGET_POS"
-            }
-          ],
-          "elseStep": [
-            {
-              "name": "startPos",
-              "searchType": "RANDOM",
-              "distance": 96,
-              "centralAngle": 1,
-              "throwing": true,
-              "type": "SET_ATTRIB_CLOSE_TARGET_POS"
-            }
-          ]
-        },
-        {
-          "attrib": "startPos",
-          "type": "TELEPORT_TO_ATTRIB_POS"
-        },
-        {
-          "value": false,
-          "immediately": true,
-          "type": "FACE_TO_TARGET"
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.shock",
-            "name": "dummyAura"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "withElse": true,
-          "type": "COMBAT_IF",
-          "conditions": [
-            {
-              "max": 0.5,
-              "negated": false,
-              "type": "RANDOM"
-            }
-          ],
-          "thenStep": [
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 0,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "target2": "SELF",
-              "target2Offset": {
-                "x": -100,
-                "y": 0,
-                "z": 600
-              },
-              "fixPos": true,
-              "type": "SHOW_EFFECT",
-              "effect": {
-                "sheet": "specials.shock",
-                "name": "ghostBoldHex"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            }
-          ],
-          "elseStep": [
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 0,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "target2": "SELF",
-              "target2Offset": {
-                "x": 100,
-                "y": 0,
-                "z": 600
-              },
-              "fixPos": true,
-              "type": "SHOW_EFFECT",
-              "effect": {
-                "sheet": "specials.shock",
-                "name": "ghostBoldHex"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            }
-          ]
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 32,
-          "yScale": 0,
-          "zHeight": 0,
-          "centralAngle": 0,
-          "duration": 0.1,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": false,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": true,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "HEAVY",
-            "element": "SHOCK",
-            "damageFactor": 1,
-            "reverse": false,
-            "status": 1,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "group": "trail",
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.shock",
-            "name": "stasisPlayerTrail"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": 0.2,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "dust",
-            "name": "line"
-          },
-          "offset": {
-            "x": 0,
-            "y": 3,
-            "z": 6
-          }
-        },
-        {
-          "value": 6,
-          "type": "SET_ACCEL_SPEED"
-        },
-        {
-          "value": 1,
-          "type": "SET_AIR_FRICTION"
-        },
-        {
-          "value": 450,
-          "type": "SET_SPEED"
-        },
-        {
-          "withElse": true,
-          "type": "COMBAT_IF",
-          "conditions": [
-            {
-              "max": 0.5,
-              "negated": false,
-              "type": "RANDOM"
-            }
-          ],
-          "thenStep": [
-            {
-              "followUp": "sweepRevEnd",
-              "wait": false,
-              "viaWalkConfig": false,
-              "type": "SHOW_ANIMATION",
-              "anim": "sweepRev"
-            },
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 8,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "fixPos": false,
-              "effect": {
-                "sheet": "combat.hexacastXPC",
-                "name": "stasisStormSweepHexagons"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 12
-              },
-              "type": "SHOW_EFFECT"
-            },
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 8,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "fixPos": false,
-              "type": "SHOW_EFFECT",
-              "effect": {
-                "sheet": "specials.shock",
-                "name": "stasisStormSweep"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 16
-              }
-            },
-            {
-              "align": "BOTTOM",
-              "radius": 64,
-              "yScale": 0,
-              "zHeight": 24,
-              "centralAngle": 0.5,
-              "startAngle": -0.2,
-              "duration": 0.15,
-              "expandRadius": 0,
-              "alwaysFull": false,
-              "clockwise": true,
-              "flipLeftFace": 0,
-              "rectangular": false,
-              "repeat": false,
-              "uniformHitDir": false,
-              "fixPos": false,
-              "checkCollision": true,
-              "type": "CIRCLE_ATTACK",
-              "attack": {
-                "type": "HEAVY",
-                "element": "SHOCK",
-                "damageFactor": 1.2,
-                "reverse": false,
-                "guardable": "",
-                "skillBonus": "MELEE_DMG",
-                "stunSteps": [],
-                "hints": [
-                  "NO_PUZZLE"
-                ],
-                "limiter": ""
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            }
-          ],
-          "elseStep": [
-            {
-              "followUp": "sweepEnd",
-              "wait": false,
-              "viaWalkConfig": false,
-              "type": "SHOW_ANIMATION",
-              "anim": "sweep"
-            },
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 8,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "fixPos": false,
-              "effect": {
-                "sheet": "combat.hexacastXPC",
-                "name": "stasisStormSweepHexagonsRev"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 12
-              },
-              "type": "SHOW_EFFECT"
-            },
-            {
-              "duration": 0,
-              "align": "BOTTOM",
-              "rotateFace": 8,
-              "flipLeftFace": false,
-              "wait": false,
-              "waitSkip": 0,
-              "actionDetached": false,
-              "fixPos": false,
-              "type": "SHOW_EFFECT",
-              "effect": {
-                "sheet": "specials.shock",
-                "name": "stasisStormSweepRev"
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 16
-              }
-            },
-            {
-              "align": "BOTTOM",
-              "radius": 64,
-              "yScale": 0,
-              "zHeight": 24,
-              "centralAngle": 0.5,
-              "startAngle": -0.2,
-              "duration": 0.15,
-              "expandRadius": 0,
-              "alwaysFull": false,
-              "clockwise": false,
-              "flipLeftFace": 0,
-              "rectangular": false,
-              "repeat": false,
-              "uniformHitDir": false,
-              "fixPos": false,
-              "checkCollision": true,
-              "type": "CIRCLE_ATTACK",
-              "attack": {
-                "type": "HEAVY",
-                "element": "SHOCK",
-                "damageFactor": 1.2,
-                "reverse": false,
-                "guardable": "",
-                "skillBonus": "MELEE_DMG",
-                "stunSteps": [],
-                "hints": [
-                  "NO_PUZZLE"
-                ],
-                "limiter": ""
-              },
-              "offset": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            }
-          ]
-        },
-        {
-          "time": 0.2,
-          "stopBeforeEdge": true,
-          "type": "MOVE_FORWARD"
-        },
-        {
-          "time": 0.5,
-          "type": "WAIT"
-        }
-      ],
-      "invisible": false,
-      "stickToSource": "NONE",
-      "stickFaceAlign": false,
-      "group": "",
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 24
-      },
-      "config": {
-        "zGravityFactor": 0,
-        "collType": "NONE",
-        "shadow": 32
       },
       "type": "GENERIC"
     },
@@ -46238,6 +45845,583 @@
         "zGravityFactor": 0,
         "shadow": 16
       },
+      "type": "GENERIC"
+    },
+    "stasisStormCardBase": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "shootNow",
+          "value": false
+        },
+        {
+          "attribName": "stasisStormID",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": {
+            "varName": "entity.srcAttrib.stasisStormID"
+          }
+        },
+        {
+          "attribName": "stasisStormID",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 2,
+          "condition": "entity.ownerAttrib.stasisStormThrow"
+        },
+        {
+          "minTime": 0,
+          "maxTime": 0.05,
+          "type": "WAIT_RANDOM"
+        },
+        {
+          "posEntity": "PROXY_OWNER",
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "startDistCollide": "NONE",
+          "startAngle": 0,
+          "angleVary": 0,
+          "startDist": 16,
+          "count": 1,
+          "duration": 0,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "stasisStormCard",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          }
+        },
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "value": false,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "time": 0,
+          "turn": 0.2,
+          "random": 1,
+          "type": "ROTATE_FACE"
+        },
+        {
+          "time": 0.7,
+          "type": "WAIT"
+        },
+        {
+          "name": "loop",
+          "type": "LABEL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.stasisStormID > 0",
+          "thenStep": [
+            {
+              "attribName": "stasisStormID",
+              "changeType": "sub",
+              "type": "SET_ATTRIB_NUMBER",
+              "value": 1
+            },
+            {
+              "time": 0.55,
+              "type": "WAIT"
+            },
+            {
+              "name": "loop",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "shootNow",
+          "value": true
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stasisStormLaserImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 48,
+          "centralAngle": 0,
+          "duration": 0.15,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "SHOCK",
+            "damageFactor": 0.25,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -24
+          }
+        },
+        {
+          "value": 0.25,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 275,
+          "type": "SET_SPEED"
+        },
+        {
+          "min": 0,
+          "max": 0,
+          "maxTime": 1.5,
+          "forceTime": true,
+          "rotateSpeed": 0.3,
+          "collideCancel": 0,
+          "stopBeforeEdge": false,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "stasisStormCard": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 192,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.03,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "ball-shock",
+        "name": "stasisStormCardDeath"
+      },
+      "action": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotating"
+        },
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stasisStormCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "stasisStormCardAuraFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stasisStormCardAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": false,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "value": 0.5,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "value": 450,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 450,
+          "type": "SET_SPEED"
+        },
+        {
+          "target": "TARGET",
+          "distance": 56,
+          "duration": 0.7,
+          "ccw": false,
+          "rotateTime": 2.5,
+          "distAdjustSpeed": 450,
+          "zDistance": 600,
+          "waitTargetAlign": false,
+          "collision": false,
+          "type": "STICKY_CIRCLE_AROUND"
+        },
+        {
+          "value": 0,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "value": 0,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stasisStormCardPulse"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 2,
+          "condition": "entity.srcAttrib.shootNow"
+        },
+        {
+          "group": "stasisStormCardAuraFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "target2": "TARGET",
+          "target2Key": "",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "dashLightningHeavy"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "shockLaserSource"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 10,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": null,
+      "label": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "config": {
+        "collType": "NONE",
+        "shadow": 16,
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "stasisStormFinalHitFX": {
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "duration": 0.7,
+          "align": "CENTER",
+          "target": "TARGET",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stasisEndEnemyTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 1,
+        "y": 1,
+        "z": 4
+      },
+      "shadow": 0,
+      "effects": "",
+      "maxBounce": 0,
+      "groundBounce": 0,
+      "speed": 300,
+      "zBounciness": 0,
+      "multiHit": false,
+      "noLightGlow": false,
+      "config": {},
+      "attack": {
+        "type": "NONE",
+        "element": "NEUTRAL",
+        "guardable": "",
+        "skillBonus": ""
+      },
+      "zVel": 0,
       "type": "GENERIC"
     }
   },
@@ -65950,33 +66134,28 @@
       },
       "ATTACK_SPECIAL3_A": {
         "name": {
-          "en_US": "Stasis Storm \\c[1](UNFINISHED)\\c[0]"
+          "en_US": "Stasis Storm"
         },
         "description": {
-          "en_US": "Freeze enemies in a big area in front of you and trap them in a big lightning storm."
+          "en_US": "Freeze enemies in a big area and trap them in a big lightning storm combo attack. Not affected by Stasis Rune cooldown."
         },
         "dmgType": "MIXED",
         "stunType": "LOCK",
-        "status": true,
+        "status": false,
         "steps": [
-          {
-            "text": {
-              "en_US": "Not Yet Implemented!"
-            },
-            "mode": "NO_LINE",
-            "color": "RED",
-            "actionDetached": true,
-            "hideOutsideOfScreen": false,
-            "type": "SHOW_AR_MSG",
-            "time": 1
-          },
-          {
-            "name": "stasisStormEnd",
-            "type": "GOTO_LABEL"
-          },
           {
             "type": "SET_ATTRIB_BOOL",
             "name": "stasisStormHit",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "stasisStormThrow",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "stasisStormClearFX",
             "value": false
           },
           {
@@ -66003,7 +66182,7 @@
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
-            "group": "trail",
+            "group": "stasisStormPlayerFX",
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
@@ -66034,32 +66213,8 @@
             "type": "MOVE_BACKWARD"
           },
           {
-            "value": "HEAVY",
+            "value": "MEDIUM",
             "type": "SET_HIT_STABLE"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": -1,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "effect": {
-              "sheet": "combat.hexacastXPC",
-              "name": "shootShock"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 12
-            },
-            "type": "SHOW_EFFECT"
-          },
-          {
-            "value": "FIXED",
-            "type": "SET_GROUND_CONNECTED"
           },
           {
             "value": -1,
@@ -66093,8 +66248,8 @@
             }
           },
           {
-            "time": 0.7,
-            "type": "WAIT"
+            "type": "WAIT",
+            "time": 1.25
           },
           {
             "poiFilter": {
@@ -66124,28 +66279,131 @@
                 }
               },
               {
-                "value": false,
-                "type": "SET_JUMPING"
-              },
-              {
-                "value": "NONE",
-                "type": "SET_COLL_TYPE"
-              },
-              {
                 "value": "MASSIVE",
                 "type": "SET_HIT_STABLE"
               },
               {
-                "factor": 0.05,
+                "value": "IGNORE",
+                "type": "SET_COLL_TYPE"
+              },
+              {
+                "time": 0.2,
+                "type": "WAIT"
+              },
+              {
+                "factor": 0.35,
                 "time": 1,
                 "keepEntityStatic": false,
                 "inversAccelerate": true,
                 "type": "ADD_SLOW_MOTION"
               },
               {
-                "time": 0.8,
+                "value": 400,
+                "type": "SET_SPEED"
+              },
+              {
+                "value": 3,
+                "type": "SET_ACCEL_SPEED"
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 6,
+                "flipLeftFace": true,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "hexaShootShock"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "BOTTOM",
+                "rotateFace": -1,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootShock"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "type": "SHOW_EFFECT"
+              },
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "stasisStormThrow",
+                "value": true
+              },
+              {
+                "time": 0.05,
+                "stopBeforeEdge": true,
+                "type": "MOVE_BACKWARD"
+              },
+              {
+                "followUp": "attackEndLoop",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "attackEnd"
+              },
+              {
+                "time": 0.5,
                 "type": "WAIT"
               },
+
+
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dashRev"
+              },
+              {
+                "duration": 0.6,
+                "align": "CENTER",
+                "rotateFace": -1,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "amberHexCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "value": 20,
+                "type": "SET_SPEED"
+              },
+              {
+                "time": 0.6,
+                "stopBeforeEdge": true,
+                "type": "MOVE_BACKWARD"
+              },
+
               {
                 "type": "CLEAR_TEMP_TARGET"
               },
@@ -66200,27 +66458,12 @@
                 }
               },
               {
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "dashLong"
-              },
-              {
-                "value": 300,
+                "value": 600,
                 "type": "SET_SPEED"
               },
               {
                 "value": 6,
                 "type": "SET_ACCEL_SPEED"
-              },
-              {
-                "time": 0.1,
-                "stopBeforeEdge": true,
-                "type": "MOVE_FORWARD"
-              },
-              {
-                "value": 600,
-                "type": "SET_SPEED"
               },
               {
                 "followUp": "sweepRevEnd",
@@ -66240,7 +66483,7 @@
                 "fixPos": false,
                 "effect": {
                   "sheet": "combat.hexacastXPC",
-                  "name": "stasisStormSweepHexagons"
+                  "name": "stasisStormHugeSweepHexagons"
                 },
                 "offset": {
                   "x": 0,
@@ -66251,7 +66494,7 @@
               },
               {
                 "duration": 0,
-                "align": "BOTTOM",
+                "align": "CENTER",
                 "rotateFace": 8,
                 "flipLeftFace": false,
                 "wait": false,
@@ -66261,17 +66504,17 @@
                 "type": "SHOW_EFFECT",
                 "effect": {
                   "sheet": "specials.shock",
-                  "name": "stasisStormSweep"
+                  "name": "stasisStormHugeSweep"
                 },
                 "offset": {
                   "x": 0,
                   "y": 0,
-                  "z": 16
+                  "z": 0
                 }
               },
               {
                 "align": "BOTTOM",
-                "radius": 64,
+                "radius": 120,
                 "yScale": 0,
                 "zHeight": 24,
                 "centralAngle": 0.5,
@@ -66288,13 +66531,19 @@
                 "checkCollision": true,
                 "type": "CIRCLE_ATTACK",
                 "attack": {
-                  "type": "HEAVY",
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "fly": "HEAVY",
                   "element": "SHOCK",
-                  "damageFactor": 1.2,
-                  "reverse": false,
+                  "damageFactor": 3,
+                  "reverse": true,
                   "guardable": "",
                   "skillBonus": "MELEE_DMG",
-                  "stunSteps": [],
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
                   "hints": [
                     "NO_PUZZLE"
                   ],
@@ -66307,18 +66556,445 @@
                 }
               },
               {
-                "time": 0.2,
+                "time": 0.1,
                 "stopBeforeEdge": true,
                 "type": "MOVE_FORWARD"
               },
               {
-                "time": 5,
+                "type": "WAIT",
+                "time": 0.3
+              },
+              {
+                "value": 125,
+                "type": "SET_SPEED"
+              },
+              {
+                "followUp": "sweepEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "duration": 0,
+                "align": "BOTTOM",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "stasisStormHugeSweepHexagonsRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "type": "SHOW_EFFECT"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "stasisStormHugeSweepRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 120,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 0.5,
+                "startAngle": -0.2,
+                "duration": 0.15,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "fly": "HEAVY",
+                  "element": "SHOCK",
+                  "damageFactor": 3,
+                  "reverse": true,
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG",
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "limiter": ""
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "time": 0.1,
+                "stopBeforeEdge": true,
+                "type": "MOVE_FORWARD"
+              },
+              {
+                "type": "WAIT",
+                "time": 0.5
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dashFast"
+              },
+              {
+                "value": 50,
+                "type": "SET_SPEED"
+              },
+              {
+                "value": false,
+                "immediately": true,
+                "type": "FACE_TO_TARGET"
+              },
+              {
+                "duration": 0.84,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "stasisStormHugeWhirlHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0.84,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "stasisStormHugeWhirl"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 90,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1,
+                "startAngle": 0,
+                "duration": 0.14,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": true,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "fly": "HEAVY",
+                  "element": "SHOCK",
+                  "damageFactor": 1.15,
+                  "reverse": true,
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG",
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "limiter": ""
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "time": 0.84,
+                "stopBeforeEdge": true,
+                "type": "MOVE_FORWARD"
+              },
+              {
+                "type": "STOP_REPEATING_FORCE"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweepEnd"
+              },
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "stasisStormClearFX",
+                "value": true
+              },
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "group": "charge",
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "stasisStormPlayerPulse"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                }
+              },
+              {
+                "duration": 0.6,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "group": "charge",
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "stasisStormFinalCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                }
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "exhale"
+              },
+              {
+                "face": "SOUTH",
+                "rotate": false,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+              },
+              {
+                "time": 0.3,
+                "removeEntityStatic": false,
+                "type": "CLEAR_SLOW_MOTION"
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
+              },
+              {
+                "group": "stasisStormGroup",
+                "type": "REMOVE_PROXIES"
+              },
+              {
+                "group": "stasisGroup2",
+                "type": "REMOVE_PROXIES"
+              },
+              {
+                "time": 0.02,
+                "type": "WAIT"
+              },
+              {
+                "posType": "TARGET",
+                "align": "BOTTOM",
+                "type": "SET_HIT_PROXY",
+                "proxy": "stasisStormFinalHitFX",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "followUp": "sweepEndFast",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dashFast"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "stasisStormFinisherHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shock",
+                  "name": "stasisStormFinisher"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 145,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1.5,
+                "startAngle": -0.25,
+                "duration": 0.25,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "element": "SHOCK",
+                  "damageFactor": 3.5,
+                  "fly": "MASSIVE++",
+                  "status": 0,
+                  "reverse": false,
+                  "spFactor": 0,
+                  "stunSteps": [
+                    {
+                      "type": "END_LOCK"
+                    }
+                  ],
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": 0.4,
+                  "action": -1,
+                  "move": -1,
+                  "reaim": -1
+                }
+              },
+              {
+                "time": 0.2,
+                "type": "WAIT"
+              },
+              {
+                "value": "MEDIUM",
+                "type": "SET_HIT_STABLE"
+              },
+              {
+                "type": "CLEAR_HIT_PROXY"
+              },
+              {
+                "group": "stasisStormPlayerFX",
+                "type": "CLEAR_EFFECTS"
+              },
+              {
+                "time": 0.6,
                 "type": "WAIT"
               }
             ],
             "elseStep": [
               {
-                "time": 1,
+                "time": 0.4,
                 "type": "WAIT"
               },
               {
@@ -66342,10 +67018,6 @@
               "move": 0,
               "reaim": 0
             }
-          },
-          {
-            "name": "stasisStormEnd",
-            "type": "LABEL"
           }
         ]
       },

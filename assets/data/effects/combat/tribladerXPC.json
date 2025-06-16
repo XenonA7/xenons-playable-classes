@@ -13933,7 +13933,7 @@
         "useTargetAngle": false,
         "numParticles": 12,
         "duration": 0.3,
-        "alongY": false,
+        "alongY": true,
         "anim": "TELEPORT_RIPPLE",
         "type": "PLAY_ANIM_RANGE"
       },
@@ -21620,7 +21620,7 @@
         "useTargetAngle": true,
         "numParticles": 1,
         "duration": 0,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {

@@ -1,3 +1,18 @@
+## 2.13.0 (06/15/2025)
+### General
+- Hexacast litter mod updated to 2.1.1
+### New Content
+- New Hexacast combat art: Stasis Storm (Shock Melee Lv.3A)
+- Added new Hexacast class tips to hideout-lobby
+### Changes
+- Updated all PLAY_ANIM_RANGE effect steps in the mod to use `"alongY": true`
+- Deleted unused proxy stasisStormDummy
+- Added randFlip property to all Hexacast CYBER_BOLT_SHOCK particles
+### Fixes
+- Fixed hoverText for Hexacast1 sign in unused-content
+### Balance
+- Hexacast2 homing charged shots damageFactor reduced to 1.0 (normal is 1.3)
+
 ## 2.12.0 (06/01/2025)
 ### New Content
 - New Hexacast combat art: Blade Curse (Neutral Dash Lv.1B)

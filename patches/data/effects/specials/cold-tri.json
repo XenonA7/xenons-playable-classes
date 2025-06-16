@@ -1506,7 +1506,7 @@
           "y": 80,
           "z": 80
         },
-        "alongY": false,
+        "alongY": true,
         "anim": "SNOW_BURST",
         "type": "PLAY_ANIM_RANGE"
       },

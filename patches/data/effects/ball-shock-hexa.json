@@ -1140,7 +1140,7 @@
         "useTargetAngle": true,
         "numParticles": 1,
         "duration": 0,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -1391,7 +1391,7 @@
         "useTargetAngle": true,
         "numParticles": 8,
         "duration": 0.2,
-        "alongY": false,
+        "alongY": true,
         "offset": {
           "x": 0,
           "y": 2,
@@ -2250,6 +2250,45 @@
       },
       {
         "type": "LOOP_END"
+      }
+    ],
+    "stasisStormCardDeath": [
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "random": true,
+        "zBounciness": 0,
+        "zGravityFactor": 1.1,
+        "collision": true,
+        "angleVary": 1,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 40,
+        "maxSpeed": 60,
+        "minZSpeed": 80,
+        "maxZSpeed": 100,
+        "minZVel": 25,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 2.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "HEXA_CARD_SHOCK"
       }
     ]
   }

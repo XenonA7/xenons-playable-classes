@@ -6087,7 +6087,7 @@
         "useTargetAngle": false,
         "numParticles": 14,
         "duration": 0.5,
-        "alongY": false,
+        "alongY": true,
         "offset": {
           "x": 0,
           "y": 8,

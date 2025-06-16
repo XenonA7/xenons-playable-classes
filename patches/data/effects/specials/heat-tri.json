@@ -196,7 +196,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -213,7 +213,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -279,7 +279,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -296,7 +296,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -2706,7 +2706,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {
@@ -2723,7 +2723,7 @@
         "useTargetAngle": true,
         "numParticles": 3,
         "duration": 0.1,
-        "alongY": false,
+        "alongY": true,
         "pAlpha": {
           "init": 1,
           "end": {

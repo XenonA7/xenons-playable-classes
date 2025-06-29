@@ -38742,7 +38742,7 @@
           }
         },
         {
-          "duration": 0,
+          "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
           "flipLeftFace": false,
@@ -38753,11 +38753,11 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "zirvitarChargeDone"
+            "name": "stormChaserCardAura"
           },
           "offset": {
             "x": 0,
-            "y": 10,
+            "y": 0,
             "z": 0
           }
         },
@@ -38773,7 +38773,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "magnetCardSparkle"
+            "name": "stormChaserCardActivate"
           },
           "offset": {
             "x": 0,
@@ -38782,7 +38782,7 @@
           }
         },
         {
-          "time": 0.6,
+          "time": 0.4,
           "type": "WAIT"
         },
         {
@@ -38799,51 +38799,6 @@
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
           "anim": "rotating"
-        },
-        {
-          "duration": 0,
-          "align": "BOTTOM",
-          "rotateFace": -1,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.shock",
-            "name": "thunderExplodeHex"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 4
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "target": "PROXY_OWNER",
-          "rotOffset": {
-            "x": 0,
-            "y": -12
-          },
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.shock",
-            "name": "shockLaserSource"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 4
-          }
         },
         {
           "duration": -1,
@@ -38866,53 +38821,112 @@
           }
         },
         {
-          "duration": -1,
+          "duration": 0,
           "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "thunderExplodeHex"
+          },
           "offset": {
             "x": 0,
             "y": 0,
             "z": 4
-          },
+          }
+        },
+        {
+          "target": "PROXY_OWNER",
+          "duration": -1,
+          "align": "CENTER",
           "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserPlayerAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "target": "PROXY_OWNER",
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "stormChaserAttractHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
           "target2": "PROXY_OWNER",
-          "target2Align": "CENTER",
+          "target2Key": "",
           "target2Offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": 12
           },
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "magnetCard2Lightning"
-          }
-        },
-        {
-          "align": "BOTTOM",
-          "centralAngle": 0.14,
-          "startAngle": -0.07,
-          "angleVary": 0,
-          "startDist": 0,
-          "count": 3,
-          "duration": 0.25,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": true,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "magnetDeckBoltHitbox",
+            "name": "stormChaserAttract"
+          },
           "offset": {
             "x": 0,
             "y": 0,
             "z": 4
           }
+        },
+        {
+          "zoomType": "LIGHTEST",
+          "fadeIn": 0.2,
+          "duration": -1,
+          "fadeOut": 0.2,
+          "name": "blur",
+          "type": "SET_ZOOM_BLUR"
+        },
+        {
+          "strength": "WALK_ESCAPE",
+          "pull": true,
+          "radius": 96,
+          "fadeRadius": 0,
+          "minRadius": 48,
+          "zHeight": 32,
+          "duration": -1,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
         },
         {
           "duration": -1,
@@ -38925,8 +38939,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "ball-shock",
-            "name": "magnetCard2Trail"
+            "sheet": "specials.shock",
+            "name": "stormChaserCenterImpact"
           },
           "offset": {
             "x": 0,
@@ -38936,11 +38950,11 @@
         },
         {
           "align": "BOTTOM",
-          "radius": 32,
+          "radius": 64,
           "yScale": 0,
-          "zHeight": 16,
+          "zHeight": 64,
           "centralAngle": 1,
-          "duration": 5,
+          "duration": 0.125,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
@@ -38949,13 +38963,14 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": true,
+          "checkCollision": false,
           "type": "CIRCLE_ATTACK",
           "attack": {
-            "type": "HEAVY",
+            "type": "MEDIUM",
+            "fly": "MEDIUM",
             "element": "SHOCK",
-            "damageFactor": 2.0,
-            "status": 0.65,
+            "damageFactor": 0.6,
+            "status": 0.4,
             "reverse": false,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
@@ -38966,7 +38981,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -32
           }
         },
         {
@@ -38974,17 +38989,29 @@
           "type": "SET_SPEED"
         },
         {
-          "volume": 1.5,
-          "global": false,
-          "loop": false,
-          "speed": 0.7,
-          "sound": "media/sound/puzzle/shock-short.ogg",
-          "type": "PLAY_SOUND"
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
         },
         {
           "min": 0,
           "max": 4,
-          "maxTime": 5,
+          "maxTime": 2,
           "forceTime": false,
           "rotateSpeed": 0.35,
           "missReactTime": 0,
@@ -39013,19 +39040,184 @@
           "type": "SET_SPEED"
         },
         {
-          "volume": 1.3,
-          "global": false,
-          "loop": false,
-          "speed": 0.9,
-          "sound": "media/sound/puzzle/shock-short.ogg",
-          "type": "PLAY_SOUND"
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "min": 0,
+          "max": 5,
+          "maxTime": 1,
+          "forceTime": false,
+          "rotateSpeed": 0.4,
+          "missReactTime": 0,
+          "collideCancel": 1,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "withElse": false,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "min": 0,
+              "max": 5,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "thenStep": [
+            {
+              "name": "contact",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "value": 180,
+          "type": "SET_SPEED"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "min": 0,
+          "max": 6,
+          "maxTime": 1,
+          "forceTime": false,
+          "rotateSpeed": 0.4,
+          "missReactTime": 0,
+          "collideCancel": 1,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "withElse": false,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "min": 0,
+              "max": 6,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "thenStep": [
+            {
+              "name": "contact",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "value": 200,
+          "type": "SET_SPEED"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "min": 0,
+          "max": 7,
+          "maxTime": 1,
+          "forceTime": false,
+          "rotateSpeed": 0.5,
+          "missReactTime": 0,
+          "collideCancel": 1,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "withElse": false,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "min": 0,
+              "max": 7,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "thenStep": [
+            {
+              "name": "contact",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "value": 250,
+          "type": "SET_SPEED"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
         },
         {
           "min": 0,
           "max": 8,
           "maxTime": 1,
           "forceTime": false,
-          "rotateSpeed": 0.4,
+          "rotateSpeed": 0.6,
           "missReactTime": 0,
           "collideCancel": 1,
           "type": "MOVE_TO_DISTANCE"
@@ -39048,78 +39240,28 @@
           ]
         },
         {
-          "value": 180,
-          "type": "SET_SPEED"
-        },
-        {
-          "min": 0,
-          "max": 12,
-          "maxTime": 1,
-          "forceTime": false,
-          "rotateSpeed": 0.4,
-          "missReactTime": 0,
-          "collideCancel": 1,
-          "type": "MOVE_TO_DISTANCE"
-        },
-        {
-          "withElse": false,
-          "type": "COMBAT_IF",
-          "conditions": [
-            {
-              "min": 0,
-              "max": 12,
-              "type": "TARGET_DISTANCE"
-            }
-          ],
-          "thenStep": [
-            {
-              "name": "contact",
-              "type": "GOTO_LABEL"
-            }
-          ]
-        },
-        {
-          "value": 200,
-          "type": "SET_SPEED"
-        },
-        {
-          "min": 0,
-          "max": 16,
-          "maxTime": 1,
-          "forceTime": false,
-          "rotateSpeed": 0.4,
-          "missReactTime": 0,
-          "collideCancel": 1,
-          "type": "MOVE_TO_DISTANCE"
-        },
-        {
-          "withElse": false,
-          "type": "COMBAT_IF",
-          "conditions": [
-            {
-              "min": 0,
-              "max": 16,
-              "type": "TARGET_DISTANCE"
-            }
-          ],
-          "thenStep": [
-            {
-              "name": "contact",
-              "type": "GOTO_LABEL"
-            }
-          ]
-        },
-        {
           "value": 300,
           "type": "SET_SPEED"
         },
         {
-          "volume": 1.3,
-          "global": false,
-          "loop": false,
-          "speed": 1,
-          "sound": "media/sound/puzzle/shock-short.ogg",
-          "type": "PLAY_SOUND"
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shock",
+            "name": "stormChaserUpgrade"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
         },
         {
           "min": 0,
@@ -39158,6 +39300,11 @@
         },
         {
           "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "fadeOut": 0.2,
+          "name": "blur",
+          "type": "FADE_OUT_ZOOM_BLUR"
         },
         {
           "value": 600,
@@ -39241,7 +39388,7 @@
         "z": 32
       },
       "config": {
-        "collType": "PROJECTILE",
+        "collType": "NONE",
         "maxVel": 600,
         "shadow": 16,
         "zGravityFactor": 0,
@@ -45976,7 +46123,7 @@
         {
           "duration": -1,
           "align": "BOTTOM",
-          "rotateFace": 0,
+          "rotateFace": -1,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
@@ -46008,7 +46155,7 @@
           "repeat": true,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": true,
+          "checkCollision": false,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "HEAVY",
@@ -46334,7 +46481,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
-            "name": "shockLaserSource"
+            "name": "stasisStormCardLaserSrc"
           },
           "offset": {
             "x": 0,
@@ -66954,6 +67101,9 @@
                       "type": "END_LOCK"
                     }
                   ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
                   "guardable": "",
                   "skillBonus": "MELEE_DMG"
                 },
@@ -67901,7 +68051,7 @@
           "en_US": "Storm Chaser"
         },
         "description": {
-          "en_US": "Dash and summon a much more powerful magnet card. It will damage all enemies on its path to reach you; run away to extend the duration."
+          "en_US": "Dash and summon a much more powerful magnet card that can travel through walls. It will damage all enemies on its path to reach you; run away to extend the duration."
         },
         "dmgType": "MIXED",
         "stunType": "",
@@ -68137,12 +68287,12 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 56,
+            "radius": 64,
             "yScale": 0,
             "zHeight": 8,
             "centralAngle": 1.5,
             "startAngle": -0.25,
-            "duration": 0.2,
+            "duration": 0.3,
             "expandRadius": 0,
             "alwaysFull": false,
             "clockwise": false,
@@ -68156,7 +68306,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "SHOCK",
-              "damageFactor": 4.25,
+              "damageFactor": 3.25,
               "fly": "MASSIVE+",
               "reverse": false,
               "spFactor": 0,
@@ -68272,7 +68422,7 @@
                 "value": true
               },
               {
-                "duration": 0.6,
+                "duration": 0.4,
                 "align": "BOTTOM",
                 "rotateFace": 8,
                 "flipLeftFace": false,

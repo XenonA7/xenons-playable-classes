@@ -10817,7 +10817,7 @@
     "stormChaserSweepHexagons": [
       {
         "numParticles": 30,
-        "duration": 0.275,
+        "duration": 0.375,
         "centralAngle": 1.5,
         "startAngle": -0.25,
         "startDist": 38,
@@ -12776,6 +12776,113 @@
         "particleDuration": 0.15,
         "anim": "HEXA_SHOCK_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "stormChaserAttractHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0.9,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 26,
+        "useTargetAngle": false,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.85,
+              "y": 0.85
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.3,
+            "spline": "LINEAR"
+          }
+        },
+        "moveWithTarget": 1,
+        "cancelable": true,
+        "particleDuration": 0.4,
+        "anim": "HEXA_SHOCK",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0.9,
+        "centralAngle": 1,
+        "startAngle": 0.5,
+        "startDist": 26,
+        "useTargetAngle": false,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.85,
+              "y": 0.85
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.3,
+            "spline": "LINEAR"
+          }
+        },
+        "moveWithTarget": 1,
+        "cancelable": true,
+        "particleDuration": 0.4,
+        "anim": "HEXA_SHOCK",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.9,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "type": "STOP_SOUNDS"
       }
     ]
   }

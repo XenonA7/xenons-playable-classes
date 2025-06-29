@@ -1,3 +1,12 @@
+## 2.14.0 (06/28/2025)
+### New Content
+- New Hexacast combat art: Storm Chaser (Shock Dash Lv.3A)
+### Changes
+- Cleaned up effect stasisStormLaserImpact
+- Improved laser src effect for proxy stasisStormCard
+### Fixes
+- Added missing NO_PUZZLE property to final melee hit of Stasis Storm
+
 ## 2.13.1 (06/15/2025)
 ### Fixes
 - Fixed Stasis Storm trigger inconsistency when player has a timeflow buff

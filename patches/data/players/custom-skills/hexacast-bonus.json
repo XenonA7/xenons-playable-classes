@@ -10087,6 +10087,1388 @@
     }
   },
   "actions": {
+    "BASE": {
+      "CS_HEXACAST_THROW_CHARGED_STRAIGHT": {
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.2,
+              "move": 0.3,
+              "reaim": 0.4
+            }
+          },
+          {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "tmp.onKeyPanel",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "elementProxy": "CHARGED",
+                "startDist": 20,
+                "type": "SHOOT_PROXY_PLAYER"
+              },
+              {
+                "name": "post-shoot",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootChargeBurst"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0,
+                "angleVary": 0,
+                "startDist": 20,
+                "startDistCollide": "CLOSER",
+                "random": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": false,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "duration": 0,
+                "proxy": "shadowflameCharged",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "count": 1,
+                "type": "SHOOT_PROXY_RANGE"
+              }
+            ],
+            "elseStep": [
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "thenStep": [
+                  {
+                    "searchType": "IN_VIEW",
+                    "ignoreCurrentTarget": false,
+                    "prevHitBehavior": "NONE",
+                    "type": "SET_CLOSE_TEMP_TARGET"
+                  }
+                ]
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 0",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedNeutral",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 1",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedHeat",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 2",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedCold",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 3",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedShock",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 4",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedWave",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "post-shoot",
+            "type": "LABEL"
+          },
+          {
+            "followUp": "attackEndLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attackEnd"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_TO_DIR"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          }
+        ]
+      },
+      "CS_HEXACAST_THROW_CHARGED_STRAIGHT_REV": {
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.2,
+              "move": 0.3,
+              "reaim": 0.4
+            }
+          },
+          {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "tmp.onKeyPanel",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "elementProxy": "CHARGED",
+                "startDist": 20,
+                "type": "SHOOT_PROXY_PLAYER"
+              },
+              {
+                "name": "post-shoot",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootChargeBurst"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0,
+                "angleVary": 0,
+                "startDist": 20,
+                "startDistCollide": "CLOSER",
+                "random": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": false,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "duration": 0,
+                "proxy": "shadowflameCharged",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "count": 1,
+                "type": "SHOOT_PROXY_RANGE"
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "thenStep": [
+                  {
+                    "searchType": "IN_VIEW",
+                    "ignoreCurrentTarget": false,
+                    "prevHitBehavior": "NONE",
+                    "type": "SET_CLOSE_TEMP_TARGET"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 0",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedNeutral",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 1",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedHeat",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 2",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedCold",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 3",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedShock",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 4",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedWave",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "post-shoot",
+            "type": "LABEL"
+          },
+          {
+            "followUp": "attackEndLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attackEnd"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_TO_DIR"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          }
+        ]
+      },
+      "CS_HEXACAST_THROW_CHARGED_HOMING": {
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.2,
+              "move": 0.3,
+              "reaim": 0.4
+            }
+          },
+          {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "tmp.onKeyPanel",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "elementProxy": "CHARGED",
+                "startDist": 20,
+                "type": "SHOOT_PROXY_PLAYER"
+              },
+              {
+                "name": "post-shoot",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootChargeBurst"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0,
+                "angleVary": 0,
+                "startDist": 20,
+                "startDistCollide": "CLOSER",
+                "random": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": false,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "duration": 0,
+                "proxy": "shadowflameCharged",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "count": 1,
+                "type": "SHOOT_PROXY_RANGE"
+              }
+            ],
+            "elseStep": [
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "thenStep": [
+                  {
+                    "searchType": "IN_VIEW",
+                    "ignoreCurrentTarget": false,
+                    "prevHitBehavior": "NONE",
+                    "type": "SET_CLOSE_TEMP_TARGET"
+                  }
+                ]
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 0",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedNeutralHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 1",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedHeatHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 2",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedColdHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 3",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedShockHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 4",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedWaveHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "post-shoot",
+            "type": "LABEL"
+          },
+          {
+            "followUp": "attackEndLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attackEnd"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_TO_DIR"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          }
+        ]
+      },
+      "CS_HEXACAST_THROW_CHARGED_HOMING_REV": {
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.2,
+              "move": 0.3,
+              "reaim": 0.4
+            }
+          },
+          {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "tmp.onKeyPanel",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "elementProxy": "CHARGED",
+                "startDist": 20,
+                "type": "SHOOT_PROXY_PLAYER"
+              },
+              {
+                "name": "post-shoot",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame",
+                  "name": "shootChargeBurst"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0,
+                "angleVary": 0,
+                "startDist": 20,
+                "startDistCollide": "CLOSER",
+                "random": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": false,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "duration": 0,
+                "proxy": "shadowflameCharged",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                },
+                "count": 1,
+                "type": "SHOOT_PROXY_RANGE"
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "shootCharge"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "thenStep": [
+                  {
+                    "searchType": "IN_VIEW",
+                    "ignoreCurrentTarget": false,
+                    "prevHitBehavior": "NONE",
+                    "type": "SET_CLOSE_TEMP_TARGET"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 0",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedNeutralHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 1",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedHeatHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 2",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedColdHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 3",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedShockHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "player.element == 4",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "centralAngle": 0,
+                    "angleVary": 0,
+                    "startDist": 20,
+                    "startDistCollide": "CLOSER",
+                    "random": false,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "circularArea": false,
+                    "uniformDir": 0,
+                    "delay": 0,
+                    "repeat": false,
+                    "duration": 0,
+                    "proxy": "chargedWaveHoming",
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 12
+                    },
+                    "count": 1,
+                    "type": "SHOOT_PROXY_RANGE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "post-shoot",
+            "type": "LABEL"
+          },
+          {
+            "followUp": "attackEndLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attackEnd"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "time": 0.1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_TO_DIR"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          }
+        ]
+      }
+    },
     "NEUTRAL": {
       "CS_CUSTOM1_HEXACAST_THROW_SPECIAL1_A": {
         "name": {

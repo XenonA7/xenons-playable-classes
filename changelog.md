@@ -1,3 +1,28 @@
+## 2.15.0 (07/06/2025)
+### New Content
+- New Hexacast combat art: Verdant Eruption (Wave Dash Lv.3A)
+- Added custom skills to Hexacast1/2 for homing/straight charged shots (opposite of their default)
+### Changes
+- Celestial Cohort changed from DASH_SPECIAL3_B to DASH_SPECIAL3_A
+- Reduced size of the second hexagon particle in effect stormChaserFlyActivate
+- Adjusted audio and added particles for Triblader effect shockLaserShoot (Prismatic Meltdown)
+- Shortened description for Shadowflame Sorcery
+- Improved wall decorations for enemy-testing map
+- Adjusted offset for effect dummyAuraEndHex
+- Increased size of effect stasisStormCardLaserSrc
+- Triblader effect triforceShatter now comes out in an arc instead of 360°
+- Increased light radius of effect rayLaserBeam
+- Added pLight property to effect rayGroundArrows
+- Improved alignment of effect groundIndicatorTiny for proxy iceCardSmall
+### Fixes
+- Schneider now uses the new Phase Jump landing effect added in XPC v2.11.2 for the ultimate pvp intro cutscene
+- Fixed Hexacast non-neutral uncharged VRPs inconsistent damageFactor (buffed to standard 0.6)
+### Balance
+- Shadowflame Sorcery movement speed buff decreased from +45% to +25%
+- Stand-alone trap version of Wave Detonation now has a 5-second delay before it arms itself
+- Stand-alone trap version of Wave Detonation damage increased
+- Wave Detonation (all variants) increased status inflict factor
+
 ## 2.14.0 (06/28/2025)
 ### New Content
 - New Hexacast combat art: Storm Chaser (Shock Dash Lv.3A)

@@ -310,7 +310,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "HEAT",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -361,7 +361,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "COLD",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "spFactor": 1,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
@@ -411,7 +411,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "SHOCK",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -462,7 +462,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "WAVE",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -2465,7 +2465,7 @@
             "name": "groundIndicatorTiny"
           },
           "offset": {
-            "x": 1.5,
+            "x": 1.0,
             "y": 3,
             "z": 0
           }
@@ -10502,7 +10502,7 @@
             "visualType": "LIGHT",
             "element": "WAVE",
             "damageFactor": 1.6,
-            "status": 0.3,
+            "status": 0.45,
             "fly": "LIGHT",
             "reverse": false,
             "stunSteps": [
@@ -10570,7 +10570,7 @@
             "type": "MASSIVE",
             "element": "WAVE",
             "damageFactor": 3.5,
-            "status": 0.3,
+            "status": 0.45,
             "fly": "MASSIVE++",
             "reverse": false,
             "stunSteps": [
@@ -10739,26 +10739,6 @@
           }
         },
         {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "waveCardSmallAura"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
@@ -10796,6 +10776,75 @@
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
           "anim": "stuck"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "waveDetonationTimer"
+          },
+          "offset": {
+            "x": 1.5,
+            "y": 2.5,
+            "z": 0
+          }
+        },
+        {
+          "time": 5,
+          "type": "WAIT"
+        },
+        {
+          "group": "timer",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveDetonationArmed"
+          },
+          "offset": {
+            "x": 1.5,
+            "y": 2.5,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveCardSmallAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
           "duration": -1,
@@ -11014,8 +11063,8 @@
                 "type": "MASSIVE",
                 "visualType": "LIGHT",
                 "element": "WAVE",
-                "damageFactor": 1.1,
-                "status": 0.2,
+                "damageFactor": 1.4,
+                "status": 0.45,
                 "fly": "LIGHT",
                 "reverse": false,
                 "stunSteps": [
@@ -11082,8 +11131,8 @@
               "attack": {
                 "type": "MASSIVE",
                 "element": "WAVE",
-                "damageFactor": 2.5,
-                "status": 0.2,
+                "damageFactor": 2.75,
+                "status": 0.45,
                 "fly": "MASSIVE++",
                 "reverse": false,
                 "stunSteps": [
@@ -24270,7 +24319,7 @@
         },
         {
           "target": "OWNER",
-          "moveXYScale": 1.45,
+          "moveXYScale": 1.25,
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
@@ -46570,6 +46619,1062 @@
       },
       "zVel": 0,
       "type": "GENERIC"
+    },
+    "eruptionController": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "ACTION",
+      "action": [
+        {
+          "changeType": "set",
+          "attribName": "eruptionDummyID",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 0
+        },
+        {
+          "time": 0,
+          "turn": 0.5,
+          "random": 0,
+          "type": "ROTATE_FACE"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "angleVary": 0,
+          "startDist": 0,
+          "startDistCollide": "CLOSER",
+          "random": false,
+          "count": 6,
+          "duration": 0.5,
+          "clockwise": true,
+          "flipLeftFace": 8,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "eruptionDummy",
+          "offset": {
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 0.25
+        },
+        {
+          "offsetX": 0,
+          "offsetY": -32,
+          "speed": "NORMAL",
+          "transition": "EASE_IN_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "zoom": 1.0,
+          "target": "SELF",
+          "focusType": "SELF",
+          "type": "FOCUS_CAMERA"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "eruptionChargeFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionChargeGroundHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "condition": "entity.ownerAttrib.eruptionChargeStart"
+        },
+        {
+          "duration": 0.6,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionChargeMain"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 0.6
+        },
+        {
+          "group": "eruptionChargeFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "zoomType": "LIGHTER",
+          "fadeIn": 0.1,
+          "duration": -1,
+          "fadeOut": 0.2,
+          "name": "blur",
+          "type": "SET_ZOOM_BLUR"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "eruptionBlastFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionCenterBlast"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 112,
+          "yScale": 0,
+          "zHeight": 600,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": true,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "visualType": "HEAVY",
+            "element": "WAVE",
+            "damageFactor": 1.15,
+            "fly": "MEDIUM",
+            "reverse": true,
+            "hitInvincible": true,
+            "stunSteps": [
+              {
+                "type": "START_LOCK"
+              }
+            ],
+            "status": 0.50,
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 1.2
+        },
+        {
+          "group": "eruptionBlastFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "fadeOut": 0.2,
+          "name": "blur",
+          "type": "FADE_OUT_ZOOM_BLUR"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionBlastEnd"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "changeType": "set",
+          "attribName": "jumpTriggerID",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "name": "loopStart",
+          "type": "LABEL"
+        },
+        {
+          "attribName": "jumpTriggerID",
+          "changeType": "add",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "time": 0.15,
+          "type": "WAIT"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.jumpTriggerID < entity.attrib.eruptionDummyID",
+          "thenStep": [
+            {
+              "name": "loopStart",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "time": 0.25,
+          "type": "WAIT"
+        },
+        {
+          "speed": "NORMAL",
+          "transition": "EASE_IN_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "type": "RESET_CAMERA"
+        },
+        {
+          "name": "eruptionPlayerJump",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_OWNER",
+          "value": true
+        },
+        {
+          "condition": "entity.ownerAttrib.eruptionPlayerLand",
+          "maxTime": 2,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "rayCardExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 72,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 0,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 3.0,
+            "fly": "MASSIVE+",
+            "reverse": false,
+            "status": 0.5,
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 0.02
+        },
+        {
+          "type": "CLEAR_STUN_LOCKED"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.3
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "eruptionControllerGroup",
+      "startAnim": "",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "eruptionDummy": {
+      "copyOwnerAnims": true,
+      "breakType": "ACTION",
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "dummyAuraEndHex"
+      },
+      "action": [
+        {
+          "attribName": "eruptionDummyID",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "changeType": "set",
+          "attribName": "eruptionDummyID",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": {
+            "varName": "entity.srcAttrib.eruptionDummyID"
+          }
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.eruptionDummyID == 1",
+          "thenStep": [
+            {
+              "clearKillEffect": true,
+              "type": "MOD_GENERIC_PROXY"
+            },
+            {
+              "name": "end",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionDummyFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "followUp": "sweepRevEnd",
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "dashRev"
+        },
+        {
+          "value": false,
+          "type": "SET_JUMPING"
+        },
+        {
+          "value": 350,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 2.5,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": "IGNORE",
+          "type": "SET_COLL_TYPE"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "eruptionDashFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveDashTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "eruptionDashFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionDashExplosionTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "verdantEruptionSweep"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "verdantEruptionSweepHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 56,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 0.5,
+          "startAngle": -0.2,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": true,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 1.55,
+            "fly": "HEAVY",
+            "reverse": true,
+            "spFactor": 0,
+            "guardable": "",
+            "stunSteps": [],
+            "skillBonus": "MELEE_DMG"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.3,
+          "collideCancel": 1,
+          "stopBeforeEdge": true,
+          "type": "MOVE_FORWARD"
+        },
+        {
+          "group": "eruptionDashFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "condition": "entity.ownerAttrib.eruptionChargeStart"
+        },
+        {
+          "time": 0,
+          "turn": 0.5,
+          "random": 0,
+          "type": "ROTATE_FACE"
+        },
+        {
+          "duration": 0.4,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": true,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionChargeIndividual"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "dashRev"
+        },
+        {
+          "time": 0.42,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionPlayerAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "eruptionIndividualHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "specialShoot",
+          "followUp": "specialLoop"
+        },
+        {
+          "value": 100,
+          "type": "SET_SPEED"
+        },
+        {
+          "time": 0.21,
+          "stopBeforeEdge": true,
+          "type": "MOVE_BACKWARD"
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 2,
+          "condition": "entity.srcAttrib.jumpTriggerID == entity.attrib.eruptionDummyID"
+        },
+        {
+          "posEntity": "PROXY_SRC",
+          "align": "BOTTOM",
+          "centralAngle": 1,
+          "startDist": 48,
+          "startDistCollide": "CLOSER",
+          "offsetArea": {
+            "x": 48,
+            "y": 48
+          },
+          "random": true,
+          "count": 1,
+          "duration": 0,
+          "clockwise": true,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "eruptionJumpHome",
+          "offset": {
+            "z": 0
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dummyAuraEndHex"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "end",
+          "type": "LABEL"
+        }
+      ],
+      "invisible": false,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "IGNORE"
+      },
+      "type": "GENERIC"
+    },
+    "eruptionJumpHome": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "minTime": 0,
+          "maxTime": 0.2,
+          "type": "WAIT_RANDOM"
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "eruptionJumpDummy",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "eruptionJumpDummy": {
+      "copyOwnerAnims": true,
+      "breakType": "COMBATANT",
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "dummyAuraEndHex"
+      },
+      "action": [
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "value": true,
+          "immediately": true,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "dashRev"
+        },
+        {
+          "volume": 1.3,
+          "global": false,
+          "loop": false,
+          "speed": 1.9,
+          "variance": 0.1,
+          "sound": "media/sound/battle/wave-swell.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "duration": 0,
+          "align": "FACE",
+          "rotateFace": 6,
+          "flipLeftFace": true,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "dust",
+            "name": "backMedium"
+          },
+          "offset": {
+            "x": 0,
+            "y": 3,
+            "z": 3
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionDummyFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "eruptionDashFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionJumpTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "groundIndicatorSmall"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 450,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 1.5,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "value": 4,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "stopType": "LANDED",
+          "distance": 0,
+          "rotateSpeed": 0,
+          "adjustSpeedMax": 550,
+          "maxSpeedChange": 550,
+          "missileMode": 0,
+          "cancelIfBelowFall": false,
+          "type": "JUMP_TARGET_MOVEMENT"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "eruptionJumpExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 54,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 0,
+          "duration": 0.3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 1.5,
+            "fly": "MASSIVE+",
+            "reverse": false,
+            "status": 0.5,
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "IGNORE",
+        "shadow": 24
+      },
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -59974,7 +61079,7 @@
           "en_US": "Shadowflame Sorcery"
         },
         "description": {
-          "en_US": "Call upon dark magic to enhance your agility and replace your standard melee and dash attacks with powerful alternatives. \\c[3]Firebrand\\c[0] and \\c[3]Augmented Flames\\c[0] will not work normally while active."
+          "en_US": "Call upon dark magic to enhance your agility and replace your standard attacks with powerful alternatives."
         },
         "dmgType": "MIXED",
         "stunType": "",
@@ -66513,8 +67618,6 @@
                 "time": 0.5,
                 "type": "WAIT"
               },
-
-
               {
                 "wait": false,
                 "viaWalkConfig": false,
@@ -66550,7 +67653,6 @@
                 "stopBeforeEdge": true,
                 "type": "MOVE_BACKWARD"
               },
-
               {
                 "type": "CLEAR_TEMP_TARGET"
               },
@@ -71808,7 +72910,7 @@
           }
         ]
       },
-      "DASH_SPECIAL3_B": {
+      "DASH_SPECIAL3_A": {
         "name": {
           "en_US": "Celestial Cohort"
         },
@@ -73252,6 +74354,530 @@
             ],
             "missed": []
           }
+        ]
+      },
+      "DASH_SPECIAL3_B": {
+        "name": {
+          "en_US": "Verdant Eruption"
+        },
+        "description": {
+          "en_US": "Dash away and cause a huge wave eruption that damages all enemies in an area."
+        },
+        "dmgType": "MELEE",
+        "stunType": "LOCK",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "eruptionChargeStart",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "eruptionPlayerJump",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "eruptionPlayerLand",
+            "value": false
+          },
+          {
+            "volume": 0.9,
+            "global": false,
+            "loop": false,
+            "type": "PLAY_SOUND",
+            "sound": "media/sound/battle/dash-3.ogg"
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "eruptionController",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "followUp": "sweepRevEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 350,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 2.5,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "eruptionDashFX",
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "waveDashTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "eruptionDashFX",
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionDashExplosionTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": 0.3,
+            "type": "SET_INVINCIBLE"
+          },
+          {
+            "factor": 0.5,
+            "time": 0.4,
+            "keepEntityStatic": false,
+            "inversAccelerate": true,
+            "type": "ADD_SLOW_MOTION"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "verdantEruptionSweep"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.hexacastXPC",
+              "name": "verdantEruptionSweepHexagons"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 56,
+            "yScale": 0,
+            "zHeight": 16,
+            "centralAngle": 0.5,
+            "startAngle": -0.2,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": true,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MASSIVE",
+              "element": "WAVE",
+              "damageFactor": 1.55,
+              "fly": "HEAVY",
+              "reverse": true,
+              "spFactor": 0,
+              "guardable": "",
+              "stunSteps": [],
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.3,
+            "collideCancel": 1,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "group": "eruptionDashFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "time": 0.7,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "eruptionChargeStart",
+            "value": true
+          },
+          {
+            "time": 0,
+            "turn": 0.5,
+            "random": 0,
+            "type": "ROTATE_FACE"
+          },
+          {
+            "duration": 0.4,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionChargeIndividual"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "time": 0.42,
+            "type": "WAIT"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "group": "eruptionPlayerFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionPlayerAura"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "group": "eruptionPlayerFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.hexacastXPC",
+              "name": "eruptionIndividualHexagons"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "specialShoot",
+            "followUp": "specialLoop"
+          },
+          {
+            "value": 100,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.21,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "type": "WAIT_UNTIL",
+            "maxTime": 3,
+            "condition": "entity.attrib.eruptionPlayerJump"
+          },
+          {
+            "time": 0.5,
+            "removeEntityStatic": false,
+            "type": "CLEAR_SLOW_MOTION"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "group": "eruptionPlayerFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "kind": "ACTION_PROXY",
+            "key": "eruptionControllerGroup",
+            "type": "SET_TEMP_TARGET"
+          },
+          {
+            "value": false,
+            "immediately": true,
+            "type": "FACE_TO_TARGET"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "volume": 1.75,
+            "global": false,
+            "loop": false,
+            "speed": 1.6,
+            "sound": "media/sound/battle/wave-swell.ogg",
+            "type": "PLAY_SOUND"
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "backMedium"
+            },
+            "offset": {
+              "x": 0,
+              "y": 3,
+              "z": 3
+            }
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "eruptionDashFX",
+            "fixPos": false,
+            "group": "eruptionPlayerFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionJumpTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": -1,
+            "align": "BASE",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "group": "eruptionPlayerFX",
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "groundIndicatorSmall"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": 450,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "value": 1.5,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "value": 4,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "stopType": "LANDED",
+            "distance": 0,
+            "rotateSpeed": 0,
+            "adjustSpeedMax": 550,
+            "maxSpeedChange": 550,
+            "missileMode": 0,
+            "cancelIfBelowFall": false,
+            "type": "JUMP_TARGET_MOVEMENT"
+          },
+          {
+            "type": "WAIT_UNTIL_ON_GROUND"
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "eruptionPlayerLand",
+            "value": true
+          },
+          {
+            "group": "eruptionPlayerFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "landOnGround"
+          },
+          {
+            "type": "STOP_XY"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.2,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "time": 0.8,
+            "type": "WAIT"
+          }          
         ]
       },
       "GUARD_SPECIAL1_A": {

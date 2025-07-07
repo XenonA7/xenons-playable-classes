@@ -73,6 +73,64 @@
       "offY": 0
     }
   },
+  "csHexacastBaseRangedStraight": {
+    "list": [
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_STRAIGHT",
+        "actionCheckKey": "THROW"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_STRAIGHT",
+        "actionCheckKey": "THROW_CHARGED"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_STRAIGHT_REV",
+        "actionCheckKey": "THROW_CHARGED_REV"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Hexacast Ranged (Straight)"
+    },
+    "description": {
+      "en_US": "The standard Hexacast ranged attacks."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 24,
+      "offY": 24
+    }
+  },
+  "csHexacastBaseRangedHoming": {
+    "list": [
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING",
+        "actionCheckKey": "THROW"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING",
+        "actionCheckKey": "THROW_CHARGED"
+      },
+      {
+        "replaceTo": "CS_HEXACAST_THROW_CHARGED_HOMING_REV",
+        "actionCheckKey": "THROW_CHARGED_REV"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Hexacast1'",
+    "name": {
+      "en_US": "\\i[class-hexa] Hexacast Ranged (Homing)"
+    },
+    "description": {
+      "en_US": "The \\c[3]homing\\c[0] Hexacast charged shots (less dmaage)."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 48,
+      "offY": 24
+    }
+  },
   "csHexacastSpheromancerBaseMelee": {
     "list": [
       {

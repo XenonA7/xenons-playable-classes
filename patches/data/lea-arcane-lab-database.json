@@ -62,7 +62,7 @@
     "element": "BASE",
     "activeCondition": "player.entity.name == 'Lea'",
     "name": {
-      "en_US": "\\i[class-hexa] Hexacast Ranged"
+      "en_US": "\\i[class-hexa] Hexacast Ranged (Straight)"
     },
     "description": {
       "en_US": "The standard Hexacast ranged attacks."
@@ -102,7 +102,7 @@
       "en_US": "\\i[class-hexa] Hexacast Ranged (Homing)"
     },
     "description": {
-      "en_US": "The \\c[3]homing\\c[0] Hexacast charged shots."
+      "en_US": "The \\c[3]homing\\c[0] Hexacast charged shots (less dmaage)."
     },
     "icon": {
       "src": "media/gui/custom-skills/base-icons.png",

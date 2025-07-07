@@ -1,3 +1,11 @@
+## 2.15.1 (07/06/2025)
+### Changes
+- Added new effect eruptionFinalPulse to the end of Verdant Eruption
+- Adjusted Verdant Eruption ACTION_BLOCK timings
+### Balance
+- Added a startup delay to Verdant Eruption
+- Increased duration of Verdant Eruption's "eruption" segment by 0.4 seconds
+
 ## 2.15.0 (07/06/2025)
 ### New Content
 - New Hexacast combat art: Verdant Eruption (Wave Dash Lv.3A)

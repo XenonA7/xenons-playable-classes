@@ -46821,7 +46821,7 @@
         },
         {
           "type": "WAIT",
-          "time": 1.2
+          "time": 1.6
         },
         {
           "group": "eruptionBlastFX",
@@ -74368,15 +74368,6 @@
         "status": true,
         "steps": [
           {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": -1,
-              "action": -1,
-              "move": -1,
-              "reaim": -1
-            }
-          },
-          {
             "type": "SET_ATTRIB_BOOL",
             "name": "eruptionChargeStart",
             "value": false
@@ -74392,6 +74383,66 @@
             "value": false
           },
           {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "sweepEndInstant"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionDashPre"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
             "volume": 0.9,
             "global": false,
             "loop": false,
@@ -74399,10 +74450,32 @@
             "sound": "media/sound/battle/dash-3.ogg"
           },
           {
-            "dir": {
-              "actorAttrib": "dashDir"
+            "volume": 0.65,
+            "global": false,
+            "loop": false,
+            "speed": 1.25,
+            "sound": "media/sound/battle/dash-strong-1.ogg",
+            "type": "PLAY_SOUND"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
             },
-            "type": "SET_FACE_TO_DIR"
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "align": "BOTTOM",
@@ -74572,6 +74645,15 @@
             "type": "MOVE_FORWARD"
           },
           {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
             "group": "eruptionDashFX",
             "type": "CLEAR_EFFECTS"
           },
@@ -74582,15 +74664,6 @@
           {
             "time": 0.7,
             "type": "WAIT"
-          },
-          {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": 0,
-              "action": -1,
-              "move": -1,
-              "reaim": -1
-            }
           },
           {
             "type": "SET_ATTRIB_BOOL",
@@ -74868,16 +74941,40 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.2,
+              "dash": 0.3,
               "action": -1,
               "move": -1,
               "reaim": -1
             }
           },
           {
-            "time": 0.8,
+            "time": 0.3,
             "type": "WAIT"
-          }          
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "eruptionFinalPulse"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          }
         ]
       },
       "GUARD_SPECIAL1_A": {

@@ -81,7 +81,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "HEAT",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -132,7 +132,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "COLD",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "spFactor": 1,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
@@ -182,7 +182,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "SHOCK",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -233,7 +233,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "WAVE",
-        "damageFactor": 0.5,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
         "guardable": "",
@@ -333,7 +333,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "NEUTRAL",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "hints": [
@@ -431,7 +431,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "HEAT",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -531,7 +531,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "COLD",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -631,7 +631,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "SHOCK",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,
@@ -731,7 +731,7 @@
       "attack": {
         "type": "HEAVY",
         "element": "WAVE",
-        "damageFactor": 1.3,
+        "damageFactor": 1.0,
         "reverse": false,
         "spFactor": 1,
         "status": 1,

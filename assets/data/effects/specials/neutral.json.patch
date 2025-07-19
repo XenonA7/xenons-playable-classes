@@ -489,6 +489,7 @@
         "x": 10,
         "y": 24
       },
+      "guiSprites": false,
       "time": 0.06,
       "repeat": false,
       "frames": [

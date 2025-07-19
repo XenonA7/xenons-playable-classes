@@ -1,3 +1,29 @@
+## 2.16.0 (07/19/2025)
+### New Content
+- New Hexacast combat art: Stunning Glare (Neutral Guard Lv.2A)
+### Changes
+- "Shine" renamed to "Shining Shield" to better conform to the naming convention
+- Added background hacking particles to first room in char-select.basement
+- Reworked first vanishing wall in char-select-basement so that it isn't solid while disappearing
+- Minor dialogue tweaks to char-select.interior
+- Adjusted audio during player initial dash in Verdant Eruption
+- Verdant Eruption can now be used off cliffs
+- Verdant Eruption main hitbox now extends -32 below ground
+- Adjusted audio for effect eruptionCenterBlast
+- Shortened particle spawn duration in effect eruptionBlastEnd
+- Edited particle pScale for effect eruptionFinalPulse
+- Overhauled audio settings for effect hexBarrierAura
+- Snow Lance reduced backwards player movement distance
+### Fixes
+- Fixed inconsistent damageFactor for Lea's custom skill Hexacast uncharged shots
+- Fixed Lea's custom skill Hexacast charged shots not having reduced damageFactor
+- Fixed Stasis Storm finisher hitbox being slightly too small
+- Fixed DUST_UP particles in neutral.json.patch being guiSprites (now it is false)
+### Balance
+- Verdant Eruption total damage reduced
+- Storm Chaser damageFactor increased from 0.6 to 0.65 per hit
+- Extended the length of Snow Lance
+
 ## 2.15.1 (07/06/2025)
 ### Changes
 - Added new effect eruptionFinalPulse to the end of Verdant Eruption

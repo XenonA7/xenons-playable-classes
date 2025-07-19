@@ -17611,7 +17611,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.8,
+        "volume": 0.65,
         "global": false,
         "loop": false,
         "speed": 1.35,
@@ -18169,7 +18169,7 @@
       },
       {
         "numParticles": 20,
-        "duration": 1.0,
+        "duration": 0.25,
         "centralAngle": 1,
         "startDist": 132,
         "random": true,
@@ -18243,6 +18243,7 @@
         "global": false,
         "loop": false,
         "variance": 0.1,
+        "speed": 1.1,
         "sound": "media/sound/boss/crab/robot-land.ogg",
         "type": "PLAY_SOUND"
       },
@@ -18251,6 +18252,7 @@
         "global": false,
         "loop": false,
         "variance": 0.1,
+        "speed": 1.1,
         "sound": "media/sound/battle/explosion-5.ogg",
         "type": "PLAY_SOUND"
       },
@@ -18259,6 +18261,7 @@
         "global": false,
         "loop": false,
         "variance": 0.1,
+        "speed": 1.1,
         "sound": "media/sound/battle/wave-hit-2.ogg",
         "type": "PLAY_SOUND"
       },
@@ -18854,13 +18857,13 @@
         },
         "pScale": {
           "init": {
-            "x": 1.15,
-            "y": 1.15
+            "x": 1.5,
+            "y": 1.75
           },
           "start": {
             "value": {
-              "x": 1.15,
-              "y": 1.15
+              "x": 1.5,
+              "y": 1.75
             },
             "time": 0.05,
             "spline": ""
@@ -18868,7 +18871,7 @@
           "end": {
             "value": {
               "x": 0,
-              "y": 1.15
+              "y": 1.75
             },
             "time": 0.4,
             "spline": "EASE_OUT"

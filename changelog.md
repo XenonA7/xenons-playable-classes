@@ -1,3 +1,16 @@
+## 2.17.0 (07/20/2025)
+### New Content
+- New Hexacast combat art: Glaring Shine (Neutral Guard Lv.2A)
+- New Hexacast custom skill: Gradual Hive Missile (Neutral Throw Lv.2)
+- Added hexacast animation dashRevFast
+### Changes
+- Stunning Glare removed from main Hexacast player file, it is now a custom skill
+- Added light source to effect glareFlash
+### Fixes
+- Fixed missing walkAnimSet definitions from XPC character files
+### Balance
+- Stunning Glare damageFactor reduced from 8.5 to 7.0
+
 ## 2.16.0 (07/19/2025)
 ### New Content
 - New Hexacast combat art: Stunning Glare (Neutral Guard Lv.2A)
@@ -16,7 +29,7 @@
 - Snow Lance reduced backwards player movement distance
 ### Fixes
 - Fixed inconsistent damageFactor for Lea's custom skill Hexacast uncharged shots
-- Fixed Lea's custom skill Hexacast charged shots not having reduced damageFactor
+- Fixed Lea's custom skill homing Hexacast charged shots not having reduced damageFactor
 - Fixed Stasis Storm finisher hitbox being slightly too small
 - Fixed DUST_UP particles in neutral.json.patch being guiSprites (now it is false)
 ### Balance

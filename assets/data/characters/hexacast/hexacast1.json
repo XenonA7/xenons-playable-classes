@@ -17,7 +17,10 @@
       "move": "walk",
       "run": "run",
       "jump": "jump",
-      "fall": "fall"
+      "fall": "fall",
+      "preIdle": "preIdle",
+      "damage": "damage",
+      "brake": "brake"
     },
     "sit": {
       "idle": "sit"

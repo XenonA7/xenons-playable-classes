@@ -16,7 +16,10 @@
     "normal": {
       "idle": "idle",
       "move": "walk",
-      "run": "run"
+      "run": "run",
+      "jump": "jump",
+      "fall": "fall",
+      "damage": "damage"
     },
     "sit": {
       "idle": "sit"

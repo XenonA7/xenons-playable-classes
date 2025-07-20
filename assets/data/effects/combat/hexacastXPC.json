@@ -13254,6 +13254,54 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "glareFinisherHexagons": [
+      {
+        "numParticles": 18,
+        "duration": 0.3,
+        "centralAngle": 1.5,
+        "startAngle": -0.25,
+        "startDist": 38,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": false,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            },
+            "time": 0.03,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.4,
+              "y": 0.4
+            },
+            "time": 0.075,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.15,
+        "anim": "HEXA_NEUTRAL_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

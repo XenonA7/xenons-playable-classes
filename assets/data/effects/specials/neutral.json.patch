@@ -571,5 +571,30 @@
         3
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL_LIGHTER",
+      "sheet": {
+        "src": "media/entity/effects/sweep2.png",
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.04,
+      "repeat": false,
+      "renderMode": "lighter",
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
   }
 ]

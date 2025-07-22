@@ -6982,11 +6982,11 @@
           }
         },
         {
-          "followUp": "sweepRevEnd",
+          "followUp": "sphero-sweepRevEnd",
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "sweepRev"
+          "anim": "sphero-sweepRev"
         },
         {
           "time": 0.05,
@@ -7017,11 +7017,11 @@
           }
         },
         {
-          "followUp": "sweepEnd",
+          "followUp": "sphero-sweepEnd",
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "sweep"
+          "anim": "sphero-sweep"
         },
         {
           "time": 0.05,
@@ -7181,7 +7181,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "dash"
+          "anim": "sphero-dash"
         },
         {
           "value": 2000,
@@ -10681,7 +10681,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "dash"
+          "anim": "sphero-dash"
         },
         {
           "value": 650,
@@ -10700,7 +10700,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "sweepEnd"
+          "anim": "sphero-sweepEnd"
         },
         {
           "value": 0.5,
@@ -10834,7 +10834,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "dash"
+          "anim": "sphero-dash"
         },
         {
           "min": 0,
@@ -10848,7 +10848,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "sweepEnd"
+          "anim": "sphero-sweepEnd"
         },
         {
           "withElse": false,
@@ -12208,11 +12208,11 @@
           "type": "FACE_TO_TARGET"
         },
         {
-          "followUp": "sweepEnd",
+          "followUp": "sphero-sweepEnd",
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "dash"
+          "anim": "sphero-dash"
         },
         {
           "value": 1,
@@ -12396,11 +12396,11 @@
                 "type": "SET_HIT_STABLE"
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweep"
+                "anim": "sphero-sweep"
               },
               {
                 "duration": 0,
@@ -13520,11 +13520,11 @@
                     }
                   },
                   {
-                    "followUp": "sweepEnd",
+                    "followUp": "sphero-sweepEnd",
                     "wait": false,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "sweep"
+                    "anim": "sphero-sweep"
                   },
                   {
                     "sweepType": "SPHEROMANCER",
@@ -13584,11 +13584,11 @@
                 "type": "SET_HIT_STABLE"
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "duration": 0,
@@ -14708,11 +14708,11 @@
                     }
                   },
                   {
-                    "followUp": "sweepRevEnd",
+                    "followUp": "sphero-sweepRevEnd",
                     "wait": false,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "sweepRev"
+                    "anim": "sphero-sweepRev"
                   },
                   {
                     "sweepType": "SPHEROMANCER",
@@ -14773,11 +14773,11 @@
                 "type": "SET_HIT_STABLE"
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "duration": 0,
@@ -15937,11 +15937,11 @@
                     }
                   },
                   {
-                    "followUp": "sweepEnd",
+                    "followUp": "sphero-sweepEnd",
                     "wait": false,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "dash"
+                    "anim": "sphero-dash"
                   },
                   {
                     "sweepType": "SPHEROMANCER_FINISHER",
@@ -16938,11 +16938,11 @@
                 "type": "LABEL"
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweep"
+                "anim": "sphero-sweep"
               },
               {
                 "value": 80,
@@ -17234,11 +17234,11 @@
                 "type": "LABEL"
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "value": 80,
@@ -17393,11 +17393,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "align": "BOTTOM",
@@ -17429,11 +17429,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "align": "BOTTOM",
@@ -17465,11 +17465,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "align": "BOTTOM",
@@ -17618,11 +17618,11 @@
             "type": "SET_CLOSE_TEMP_TARGET"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -17676,11 +17676,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "duration": 0,
@@ -17740,11 +17740,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -17804,11 +17804,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashFast"
+            "anim": "sphero-dashFast"
           },
           {
             "zoomType": "LIGHT",
@@ -17938,7 +17938,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -18005,7 +18005,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.49,
@@ -18284,7 +18284,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": -1,
@@ -18385,7 +18385,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.166,
@@ -18461,11 +18461,11 @@
             "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
+            "anim": "sphero-dashRev"
           },
           {
             "zoom": 1,
@@ -19029,7 +19029,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashFast"
+            "anim": "sphero-dashFast"
           },
           {
             "value": 1,
@@ -19050,7 +19050,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "zoomType": "LIGHT",
@@ -19384,7 +19384,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -19464,7 +19464,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -19556,7 +19556,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -19696,7 +19696,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.4,
@@ -19747,7 +19747,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -20018,7 +20018,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -20108,11 +20108,11 @@
             "type": "WAIT"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "align": "BOTTOM",
@@ -20299,7 +20299,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "offsetX": 0,
@@ -20370,11 +20370,11 @@
             "type": "WAIT"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "zoom": 1.5,
@@ -20990,11 +20990,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashLong"
+            "anim": "sphero-dashLong"
           },
           {
             "duration": 0.5,
@@ -21368,11 +21368,11 @@
             "type": "SET_SPEED"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "align": "BOTTOM",
@@ -21498,11 +21498,11 @@
             }
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -21605,7 +21605,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0.5,
@@ -21693,7 +21693,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "speed": "FAST",
@@ -22006,7 +22006,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashFast"
+            "anim": "sphero-dashFast"
           },
           {
             "duration": 0,
@@ -22118,7 +22118,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.15,
@@ -22128,11 +22128,11 @@
             "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -22387,11 +22387,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -22482,11 +22482,11 @@
             "type": "WAIT"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "duration": 0,
@@ -22614,7 +22614,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
+            "anim": "sphero-dashRev"
           },
           {
             "zoomType": "LIGHT",
@@ -24117,7 +24117,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -24227,7 +24227,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.2,
@@ -24370,7 +24370,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -24540,7 +24540,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "STOP_REPEATING_FORCE"
@@ -24771,7 +24771,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -24992,7 +24992,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "duration": -1,
@@ -26029,7 +26029,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "selectType": "TARGET",
@@ -26369,7 +26369,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "duration": 0.7,
@@ -26908,11 +26908,11 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "followUp": "specialLoop",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "specialShoot"
+            "anim": "sphero-sweep"
           },
           {
             "align": "BOTTOM",
@@ -27725,11 +27725,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -28237,7 +28237,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": "HEAVY",
@@ -28328,7 +28328,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.05,
@@ -28395,11 +28395,11 @@
             "type": "SET_ZOOM_BLUR"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
+            "anim": "sphero-dashRev"
           },
           {
             "duration": 0,
@@ -28695,11 +28695,11 @@
             "type": "SET_FACE_FIX"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "value": 250,
@@ -28882,11 +28882,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -28973,11 +28973,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
+            "anim": "sphero-dashRev"
           },
           {
             "duration": 0,
@@ -29064,11 +29064,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -29155,11 +29155,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -29249,7 +29249,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": "HEAVY",
@@ -29346,7 +29346,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRevEnd"
+            "anim": "sphero-sweepRevEnd"
           },
           {
             "time": 0.05,
@@ -29413,11 +29413,11 @@
             "type": "SET_ZOOM_BLUR"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": 0,
@@ -29554,7 +29554,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -29683,7 +29683,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "STOP_REPEATING_FORCE"
@@ -29737,7 +29737,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -29904,7 +29904,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "STOP_REPEATING_FORCE"
@@ -30644,18 +30644,18 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
+            "anim": "sphero-dashRev"
           },
           {
             "time": 0.25,
             "type": "WAIT"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "zoom": 1,
@@ -31269,11 +31269,11 @@
                 }
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "time": 0.05,
@@ -31456,11 +31456,11 @@
             "type": "STOP_REPEATING_FORCE"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "type": "CLEAR_EFFECTS"
@@ -32240,7 +32240,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashFast"
+            "anim": "sphero-dashFast"
           },
           {
             "duration": 0.8,
@@ -32323,7 +32323,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "time": 0.29,
@@ -32384,11 +32384,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "value": false,
@@ -32613,7 +32613,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashFast"
+            "anim": "sphero-dashFast"
           },
           {
             "duration": -1,
@@ -32718,7 +32718,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "CLEAR_EFFECTS"
@@ -32792,11 +32792,11 @@
             "type": "SET_ZOOM_BLUR"
           },
           {
-            "followUp": "sweepRevEnd",
+            "followUp": "sphero-sweepRevEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRev"
+            "anim": "sphero-sweepRev"
           },
           {
             "duration": 0,
@@ -32916,11 +32916,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "value": false,
@@ -33032,11 +33032,11 @@
                 }
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "time": 0.05,
@@ -33073,11 +33073,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweep"
+                "anim": "sphero-sweep"
               },
               {
                 "time": 0.05,
@@ -33248,7 +33248,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "type": "SET_PLAYER_ACTION_BLOCK",
@@ -33521,11 +33521,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "value": false,
@@ -33686,7 +33686,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "value": false,
@@ -33900,7 +33900,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRevEnd"
+                "anim": "sphero-sweepRevEnd"
               },
               {
                 "offsetX": 0,
@@ -34040,7 +34040,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "type": "SET_PLAYER_ACTION_BLOCK",
@@ -34113,7 +34113,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRevEnd"
+                "anim": "sphero-sweepRevEnd"
               },
               {
                 "selectType": "TARGET",
@@ -34214,11 +34214,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweep"
+                "anim": "sphero-sweep"
               },
               {
                 "time": 0.133,
@@ -34245,11 +34245,11 @@
                 }
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "time": 0.133,
@@ -34276,11 +34276,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweep"
+                "anim": "sphero-sweep"
               },
               {
                 "time": 0.133,
@@ -34307,11 +34307,11 @@
                 }
               },
               {
-                "followUp": "sweepRevEnd",
+                "followUp": "sphero-sweepRevEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepRev"
+                "anim": "sphero-sweepRev"
               },
               {
                 "time": 0.133,
@@ -34338,11 +34338,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "time": 0.3,
@@ -34924,7 +34924,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -35050,7 +35050,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -35158,7 +35158,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": -1,
@@ -35280,7 +35280,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepEnd"
+                "anim": "sphero-sweepEnd"
               },
               {
                 "factor": 0.2,
@@ -35424,7 +35424,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "name": "start",
@@ -35576,7 +35576,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepEnd"
+                "anim": "sphero-sweepEnd"
               },
               {
                 "type": "STOP_XY"
@@ -35718,7 +35718,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": 0.4,
@@ -35831,7 +35831,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -36026,7 +36026,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "duration": -1,
@@ -36163,7 +36163,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepEnd"
+                "anim": "sphero-sweepEnd"
               },
               {
                 "factor": 0.2,
@@ -36344,7 +36344,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "name": "start",
@@ -36414,7 +36414,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "sweepEnd"
+                "anim": "sphero-sweepEnd"
               },
               {
                 "time": 0.1,
@@ -36489,7 +36489,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "value": 180,
@@ -36534,11 +36534,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "time": 0.05,
@@ -36597,11 +36597,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "time": 0.05,
@@ -36660,11 +36660,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "time": 0.05,
@@ -36723,11 +36723,11 @@
                 }
               },
               {
-                "followUp": "sweepEnd",
+                "followUp": "sphero-sweepEnd",
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashFast"
+                "anim": "sphero-dashFast"
               },
               {
                 "time": 0.05,
@@ -36847,7 +36847,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dash"
+                "anim": "sphero-dash"
               },
               {
                 "value": 2000,
@@ -36892,7 +36892,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashRev"
+                "anim": "sphero-dashRev"
               },
               {
                 "stopType": "LANDED",
@@ -37067,7 +37067,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "dashRev"
+                "anim": "sphero-dashRev"
               },
               {
                 "zoom": 1.5,
@@ -37286,7 +37286,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": 0.4,
@@ -37321,7 +37321,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -37437,7 +37437,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": 0.4,
@@ -37553,7 +37553,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "value": "VIRTUAL",
@@ -38454,7 +38454,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepRevEnd"
+            "anim": "sphero-sweepRevEnd"
           },
           {
             "zoom": 1.5,
@@ -38505,11 +38505,11 @@
             "type": "SET_CAMERA_ZOOM"
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "value": false,
@@ -38785,11 +38785,11 @@
             }
           },
           {
-            "followUp": "sweepEnd",
+            "followUp": "sphero-sweepEnd",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweep"
+            "anim": "sphero-sweep"
           },
           {
             "value": 80,
@@ -39741,7 +39741,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -39927,7 +39927,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "CLEAR_EFFECTS"
@@ -40489,7 +40489,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "sphero-dash"
           },
           {
             "value": false,
@@ -40579,7 +40579,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sweepEnd"
+            "anim": "sphero-sweepEnd"
           },
           {
             "type": "CLEAR_EFFECTS"

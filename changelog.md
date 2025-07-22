@@ -1,3 +1,9 @@
+## 2.17.1 (07/21/2025)
+### New Content
+- Added proper chakram animations for Hexacasts when using Spheromancer custom skills
+### Changes
+- Glaring Shine renamed to Blinding Glare
+
 ## 2.17.0 (07/20/2025)
 ### New Content
 - New Hexacast combat art: Glaring Shine (Neutral Guard Lv.2A)

@@ -92,3 +92,12 @@ sc.STAT_CHANGE_SETTINGS["POISON_INFLICT-2"] = {
   icon: "stat-hack",
   grade: "stat-rank-3"
 };
+
+sc.STAT_CHANGE_SETTINGS["DEFENSE-MINUS-DECAY"] = {
+  change: sc.STAT_CHANGE_TYPE.STATS,
+  type: sc.STAT_PARAM_TYPE.DEFENSE,
+  value: 0.50,
+  negative: true,
+  icon: "stat-defense",
+  grade: "stat-rank-down-3"
+};

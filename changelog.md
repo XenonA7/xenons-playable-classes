@@ -1,3 +1,58 @@
+## 2.18.0 (08/03/2025)
+### General
+- Hexacast litter mod updated to 2.1.2
+### New Content
+- New Hexacast combat art: Ruinous Pulse (Neutral Guard Lv.2A)
+- Added new Hexacast sprite animations: handUpPre, handUpLoop, handUpPreAir, handUpLoopAir
+- Added some cheat skill icons although they are currently unused
+- Added \js\azure-lazuline\action-buff-timers.js (code by Azure Lazuline)
+- Added additional "class tips" dialogue for Hexacast in hideout-lobby
+### Changes
+- Ampere Cloak reworked to explode on contact rather than doing repeating damage
+- Blinding Glare will now only proceed if you hit at least one enemy with the initial hit
+- Blinding Glare description rewritten
+- Hexacast now uses handUp animation for Freeze Rays, Polar Pirouette, Ignite Embers, and Ragnarök
+- Improved Hexacast animation/effect alignment for Ragnarök
+- The enemy-testing map now has EXP gain disabled by default
+- Triblader League quest reward changed from neutral CP to 3 "One Up" items
+- Temporal Miasma's ally-targeting zone hitbox changed from limiter NO_DAMAGE to SIGNAL
+- Added custom effect freezeRaysPlayerPulse to the start of Freeze Rays
+- Adjusted the duration/movement of the SHOCK_EXPLODE particles in effect thunderJacketExplode
+### Fixes
+- Corrected some illegal colors in spritesheet hexacast2.png
+- All action buffs granted by XPC combat arts now have functional timers on the GUI (code by Azure Lazuline)
+- Fixed player Triblader ATTACK and ATTACK_REV actions having too short post-melee WAIT times for neutral versions
+- Player Triblader4 changed to have proper post-melee WAIT times, with speed now coming from shorter "attack" action block time
+- Fixed Spectral Swordsman first melee hit having wrong/low damageFactor
+- Fixed Spectral Swordsman/Legion not having checkCollision for melee attacks
+- Chilling Thrust no longer categorized as "INTERRUPT"
+- Fixed Fire Saw hitbox zHeight
+- Fixed Shining Shield using old name in Hexacast class tips dialogue
+- Fixed text formatting error in Hexacast class tip #29
+### Balance (Triblader)
+- Unified player triblader damageFactor values for default melee attacks across elements (1.05 standard, 0.925 for Triblader4)
+  * It was previously 1.05 for neutral, 1.15 for other elements
+- Enemy triblader non-finisher melee sweeps damageFactor reduced from 1.15 to 1.05
+- Player triblader ATTACK and ATTACK_REV "attack" action block reduced from 0.3 to 0.28
+- Player Triblader4 ATTACK and ATTACK_REV "attack" action block reduced from 0.3 to 0.24
+- Player Triblader4 ATTACK and ATTACK_REV damageFactor increased from 0.85 to 0.925
+- Trailblazer firePillar proxy removed initial spawn explosion hitbox
+- Trailblazer firePillar proxy increased contact damageFactor from 0.25 to 0.40
+- Trailblazer firePillar proxy status inflict factor increased from 1.0 to 2.5
+- Trailblazer dash hitbox damageFactor increased from 0.35 to 0.60
+- Trailblazer final spin attack damageFactor increased from 1.5 to 2.5
+- Trailblazer final spin attack knockback increased from HEAVY to MASSIVE
+- Double Whirl reduced delay after first sweep by 0.1 seconds
+- Spectral Swordsman hpFactor increased from 2.5 to 2.65 (will survive 2 charged shots now)
+- Chilling Thrust initial hitbox made smaller and reduced from MASSIVE to HEAVY
+- Fire Saw strength reduced from HEAVY to MEDIUM
+- Fire Saw knockback reduced from MEDIUM to HEAVY
+- Fire Saw damageFactor reduced from 2.7 to 2.25
+- Frost Rupture now grants MEDIUM hit stability during initial hits, MASSIVE stability during final thrust
+### Balance (Hexacast)
+- Shock Surge damageFactor increased from 3 to 5
+- Icicle Deck trigger delay reduced from 0.05 to 0.02 seconds
+
 ## 2.17.1 (07/21/2025)
 ### New Content
 - Added proper chakram animations for Hexacasts when using Spheromancer custom skills

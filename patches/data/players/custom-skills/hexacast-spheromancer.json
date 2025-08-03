@@ -22823,7 +22823,8 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "itemHold"
+            "anim": "handUpPreAir",
+            "followUp": "handUpLoopAir"
           },
           {
             "duration": -1,
@@ -22841,9 +22842,9 @@
               "name": "chargeBig"
             },
             "offset": {
-              "x": -14,
-              "y": 11,
-              "z": 24
+              "x": 4,
+              "y": 0,
+              "z": 32
             }
           },
           {
@@ -22854,17 +22855,7 @@
             "sound": "media/sound/battle/special/special-fall.ogg"
           },
           {
-            "time": 0.4,
-            "type": "WAIT"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "itemEffect"
-          },
-          {
-            "time": 0.2,
+            "time": 0.6,
             "type": "WAIT"
           },
           {
@@ -22888,6 +22879,7 @@
             },
             "offset": {
               "x": 6,
+              "y": 4,
               "z": 8
             }
           },
@@ -22895,7 +22887,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "spinRepeat"
+            "anim": "fall"
           },
           {
             "value": -600,
@@ -22910,13 +22902,6 @@
             "duration": 0.1,
             "transition": "EASE_OUT",
             "type": "SET_CAMERA_ZOOM"
-          },
-          {
-            "followUp": "specialHitDownImpact",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "specialHitDownImpactPre"
           },
           {
             "type": "WAIT_UNTIL_ON_GROUND"
@@ -26592,7 +26577,8 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "floatEyesClosed"
+                "anim": "handUpPreAir1Dir",
+                "followUp": "handUpLoopAir1Dir"
               },
               {
                 "min": 0,
@@ -26604,7 +26590,7 @@
               },
               {
                 "duration": -1,
-                "align": "BOTTOM",
+                "align": "CENTER",
                 "rotateFace": 0,
                 "flipLeftFace": false,
                 "wait": false,
@@ -26618,8 +26604,9 @@
                   "name": "chargeBig"
                 },
                 "offset": {
-                  "x": 0,
-                  "z": -20
+                  "x": 4,
+                  "y": 0,
+                  "z": 32
                 }
               },
               {
@@ -28778,10 +28765,16 @@
             }
           },
           {
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
+          },
+          {
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "itemHoldRev"
+            "anim": "handUpPre",
+            "followUp": "handUpLoop"
           },
           {
             "offsetX": 0,
@@ -28838,9 +28831,9 @@
               "name": "sweepingCharge"
             },
             "offset": {
-              "x": 14,
-              "y": -6,
-              "z": 0
+              "x": 4,
+              "y": 0,
+              "z": 28
             }
           },
           {
@@ -28854,6 +28847,9 @@
           {
             "group": "charge",
             "type": "CLEAR_EFFECTS"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
             "value": 0.3,

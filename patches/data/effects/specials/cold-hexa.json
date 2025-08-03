@@ -8631,6 +8631,118 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "freezeRaysPlayerPulse": [
+      {
+        "size": "XL",
+        "fadeIn": 0,
+        "fadeOut": 0.1,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#6b9aff",
+        "alpha": 0.8,
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "duration": 0.1,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "volume": 0.9,
+        "speed": 0.8,
+        "variance": 0,
+        "global": false,
+        "loop": false,
+        "sound": "media/sound/puzzle/ferro-barrier-break.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 20,
+        "duration": 0.5,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": true,
+        "moveDist": 64,
+        "moveVariance": 32,
+        "keySpline": "EASE_OUT_STRONG",
+        "normalMoveDist": 0,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.7,
+            "y": 0.7
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.2,
+            "spline": ""
+          }
+        },
+        "particleDuration": 1.5,
+        "anim": "SNOWFLAKE1",
+        "angleVary": 1,
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0.6,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.6,
+              "y": 1.6
+            },
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.35,
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "angleVary": 1,
+        "moveWithTarget": 0.2,
+        "particleDuration": 0.6,
+        "cancelable": false,
+        "anim": "COLD_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 2,
+        "type": "WAIT"
+      }
     ]
   }
 }

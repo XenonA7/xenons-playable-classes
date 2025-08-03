@@ -4220,6 +4220,7 @@
         {
           "target": "TARGET",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "DEFENSE-BLADEAURA"
           ]
@@ -7885,41 +7886,6 @@
           }
         },
         {
-          "align": "BOTTOM",
-          "radius": 32,
-          "yScale": 1,
-          "zHeight": 24,
-          "centralAngle": 1,
-          "duration": 0,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": false,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "HEAVY",
-            "element": "HEAT",
-            "damageFactor": 0.15,
-            "reverse": false,
-            "guardable": "",
-            "skillBonus": "MELEE_DMG",
-            "limiter": "",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -7983,10 +7949,10 @@
           "attack": {
             "type": "MEDIUM",
             "element": "HEAT",
-            "damageFactor": 0.25,
+            "damageFactor": 0.40,
             "reverse": false,
             "spFactor": 0,
-            "status": 1,
+            "status": 2.5,
             "guardable": "",
             "skillBonus": "MELEE_DMG"
           },
@@ -8826,6 +8792,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "ATTACK-SACRIFICE"
           ]
@@ -17464,6 +17431,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "ATTACK-MINUS-OVERCLOCK",
             "FOCUS-MINUS-OVERCLOCK"
@@ -21282,13 +21250,13 @@
               "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
-              "checkCollision": false,
+              "checkCollision": true,
               "type": "CIRCLE_ATTACK",
               "attack": {
                 "type": "MEDIUM",
                 "fly": "HEAVY",
                 "element": "WAVE",
-                "damageFactor": 1.15,
+                "damageFactor": 1.55,
                 "spFactor": 0,
                 "reverse": false,
                 "guardable": "",
@@ -21376,7 +21344,7 @@
               "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
-              "checkCollision": false,
+              "checkCollision": true,
               "type": "CIRCLE_ATTACK",
               "attack": {
                 "type": "MEDIUM",
@@ -21470,7 +21438,7 @@
               "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
-              "checkCollision": false,
+              "checkCollision": true,
               "type": "CIRCLE_ATTACK",
               "attack": {
                 "type": "MEDIUM",
@@ -21564,7 +21532,7 @@
               "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
-              "checkCollision": false,
+              "checkCollision": true,
               "type": "CIRCLE_ATTACK",
               "attack": {
                 "type": "HEAVY",
@@ -21731,7 +21699,7 @@
         }
       ],
       "invisible": false,
-      "hp": 2.5,
+      "hp": 2.65,
       "killEffect": {
         "sheet": "specials.wave",
         "name": "dummyAuraEnd"
@@ -23301,7 +23269,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
@@ -23548,7 +23516,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MEDIUM",
@@ -23642,7 +23610,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MEDIUM",
@@ -23736,7 +23704,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MEDIUM",
@@ -23830,7 +23798,7 @@
           "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
-          "checkCollision": false,
+          "checkCollision": true,
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "HEAVY",
@@ -28144,6 +28112,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "DEFENSE-BLADEAURA"
           ]
@@ -28519,6 +28488,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "DEFENSE-SHIELDS"
           ]
@@ -30320,7 +30290,7 @@
                     "type": "SET_PLAYER_ACTION_BLOCK",
                     "blockData": {
                       "dash": 0,
-                      "action": 0.3,
+                      "action": 0.28,
                       "move": 0.3,
                       "reaim": 0.4
                     }
@@ -30424,7 +30394,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "HEAT",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -30489,7 +30459,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "COLD",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -30554,7 +30524,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "SHOCK",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -30619,7 +30589,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "WAVE",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -30678,7 +30648,7 @@
                     "type": "SPAWN_ASSAULT"
                   },
                   {
-                    "time": 0.20,
+                    "time": 0.45,
                     "type": "WAIT"
                   }
                 ]
@@ -31826,7 +31796,7 @@
                     "type": "SET_PLAYER_ACTION_BLOCK",
                     "blockData": {
                       "dash": 0,
-                      "action": 0.3,
+                      "action": 0.28,
                       "move": 0.3,
                       "reaim": 0.4
                     }
@@ -31930,7 +31900,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "HEAT",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -31995,7 +31965,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "COLD",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -32060,7 +32030,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "SHOCK",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -32125,7 +32095,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "WAVE",
-                          "damageFactor": 1.15,
+                          "damageFactor": 1.05,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -32184,7 +32154,7 @@
                     "type": "SPAWN_ASSAULT"
                   },
                   {
-                    "time": 0.20,
+                    "time": 0.45,
                     "type": "WAIT"
                   }
                 ]
@@ -34909,7 +34879,7 @@
                     "type": "SET_PLAYER_ACTION_BLOCK",
                     "blockData": {
                       "dash": 0,
-                      "action": 0.3,
+                      "action": 0.24,
                       "move": 0.3,
                       "reaim": 0.4
                     }
@@ -34948,7 +34918,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "NEUTRAL",
-                          "damageFactor": 0.85,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -35013,7 +34983,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "HEAT",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -35078,7 +35048,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "COLD",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -35143,7 +35113,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "SHOCK",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -35208,7 +35178,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "WAVE",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -35267,7 +35237,7 @@
                     "type": "SPAWN_ASSAULT"
                   },
                   {
-                    "time": 0.15,
+                    "time": 0.45,
                     "type": "WAIT"
                   }
                 ]
@@ -36415,7 +36385,7 @@
                     "type": "SET_PLAYER_ACTION_BLOCK",
                     "blockData": {
                       "dash": 0,
-                      "action": 0.3,
+                      "action": 0.24,
                       "move": 0.3,
                       "reaim": 0.4
                     }
@@ -36454,7 +36424,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "NEUTRAL",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -36519,7 +36489,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "HEAT",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -36584,7 +36554,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "COLD",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -36649,7 +36619,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "SHOCK",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -36714,7 +36684,7 @@
                           "type": "MEDIUM",
                           "fly": "HEAVY",
                           "element": "WAVE",
-                          "damageFactor": 0.95,
+                          "damageFactor": 0.925,
                           "spFactor": 1,
                           "reverse": false,
                           "guardable": "",
@@ -45687,7 +45657,7 @@
             "type": "SET_COLL_TYPE"
           },
           {
-            "time": 0.3,
+            "time": 0.2,
             "type": "WAIT"
           },
           {
@@ -47865,7 +47835,7 @@
             "align": "BOTTOM",
             "radius": 48,
             "yScale": 0,
-            "zHeight": 0,
+            "zHeight": 24,
             "centralAngle": 0,
             "duration": 0.4,
             "expandRadius": 0,
@@ -47879,10 +47849,10 @@
             "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
-              "type": "HEAVY",
+              "type": "MEDIUM",
               "element": "HEAT",
-              "damageFactor": 2.7,
-              "fly": "MASSIVE",
+              "damageFactor": 2.25,
+              "fly": "HEAVY",
               "reverse": false,
               "spFactor": 0,
               "guardable": "",
@@ -48472,7 +48442,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 0.35,
+              "damageFactor": 0.60,
               "reverse": false,
               "status": 0,
               "guardable": "",
@@ -48577,7 +48547,8 @@
             "attack": {
               "type": "HEAVY",
               "element": "HEAT",
-              "damageFactor": 1.5,
+              "fly": "MASSIVE",
+              "damageFactor": 2.5,
               "reverse": false,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
@@ -53062,6 +53033,10 @@
             }
           },
           {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
             "followUp": "tri-attack1End",
             "wait": false,
             "viaWalkConfig": false,
@@ -53410,6 +53385,10 @@
               "y": 0,
               "z": 0
             }
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
           },
           {
             "value": 550,
@@ -54635,7 +54614,7 @@
           "en_US": "Lunge through enemies with an icy blade, leaving behind a trail of frozen stars."
         },
         "dmgType": "MELEE",
-        "stunType": "INTERRUPT",
+        "stunType": "",
         "status": true,
         "steps": [
           {
@@ -54738,12 +54717,12 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 20,
+            "radius": 32,
             "yScale": 1,
             "zHeight": 16,
             "centralAngle": 1,
             "duration": 0.1,
-            "expandRadius": 48,
+            "expandRadius": 0,
             "alwaysFull": true,
             "clockwise": false,
             "flipLeftFace": 0,
@@ -54754,7 +54733,7 @@
             "checkCollision": true,
             "type": "CIRCLE_ATTACK",
             "attack": {
-              "type": "MASSIVE",
+              "type": "HEAVY",
               "element": "COLD",
               "damageFactor": 1,
               "fly": "MASSIVE",
@@ -54762,7 +54741,7 @@
               "spFactor": 0,
               "status": 0.2,
               "guardable": "",
-              "skillBonus": "RANGED_DMG"
+              "skillBonus": "MELEE_DMG"
             },
             "offset": {
               "x": 0,

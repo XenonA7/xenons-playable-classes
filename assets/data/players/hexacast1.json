@@ -991,6 +991,7 @@
         {
           "target": "TARGET",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "HEAT-RES-3",
             "COLD-RES-3",
@@ -2126,7 +2127,7 @@
           }
         },
         {
-          "time": 0.05,
+          "time": 0.02,
           "type": "WAIT"
         },
         {
@@ -5991,7 +5992,8 @@
           "time": 0.1
         },
         {
-          "align": "BOTTOM",
+          "posEntity": "PROXY_OWNER",
+          "align": "TOP",
           "centralAngle": 1,
           "angleVary": 0,
           "startDist": 8,
@@ -6008,7 +6010,7 @@
           "type": "SHOOT_PROXY_RANGE",
           "proxy": "freezeRayCard",
           "offset": {
-            "z": 0
+            "z": 24
           }
         },
         {
@@ -12865,6 +12867,7 @@
         {
           "target": "TARGET",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "ATTACK-MINUS-VANISHING"
           ]
@@ -19997,6 +20000,7 @@
         {
           "target": "TARGET",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "DEFENSE-PLUS-STASIS"
           ]
@@ -26155,6 +26159,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "ampereOwnerFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
@@ -26165,6 +26170,12 @@
             "y": 0,
             "z": 0
           }
+        },
+        {
+          "changeType": "set",
+          "attribName": "ampereBallCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 2
         },
         {
           "align": "BOTTOM",
@@ -26201,10 +26212,12 @@
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "time": 8,
-          "type": "WAIT"
+          "type": "WAIT_UNTIL",
+          "maxTime": 8,
+          "condition": "entity.attrib.ampereBallCount <= 0"
         },
         {
+          "group": "ampereOwnerFX",
           "type": "CLEAR_EFFECTS"
         },
         {
@@ -26249,6 +26262,27 @@
       },
       "action": [
         {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "detonate",
+          "value": false
+        },
+        {
+          "changeType": "set",
+          "attribName": "stage",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 0
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "ampereBallTimer",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "value": 100,
           "type": "SET_SPEED"
         },
@@ -26273,18 +26307,41 @@
           }
         },
         {
+          "target": "PROXY_SRC",
+          "distance": 48,
+          "duration": 0.65,
+          "ccw": false,
+          "rotateTime": 1,
+          "distAdjustSpeed": 50,
+          "zDistance": 8,
+          "waitTargetAlign": false,
+          "collision": false,
+          "type": "STICKY_CIRCLE_AROUND"
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "ampereBallTrigger",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "align": "BOTTOM",
           "radius": 16,
           "yScale": 0,
           "zHeight": 8,
           "centralAngle": 1,
-          "duration": 0.1,
+          "duration": 8,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
           "flipLeftFace": 6,
           "rectangular": false,
-          "repeat": true,
+          "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
           "checkCollision": false,
@@ -26298,6 +26355,7 @@
             "reverse": false,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
+            "limiter": "NO_DAMAGE",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -26311,32 +26369,126 @@
         {
           "target": "PROXY_SRC",
           "distance": 48,
-          "duration": 7.5,
           "ccw": false,
           "rotateTime": 1,
           "distAdjustSpeed": 50,
           "zDistance": 8,
           "waitTargetAlign": false,
           "collision": false,
+          "waitUntil": "entity.attrib.detonate || entity.attrib.stage == 1",
           "type": "STICKY_CIRCLE_AROUND"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.detonate",
+          "thenStep": [
+            {
+              "name": "explode",
+              "type": "GOTO_LABEL"
+            }
+          ]
         },
         {
           "target": "PROXY_SRC",
           "distance": 0,
-          "duration": 0.5,
           "ccw": false,
           "rotateTime": 1,
           "distAdjustSpeed": 150,
           "zDistance": 8,
           "waitTargetAlign": false,
           "collision": false,
+          "waitUntil": "entity.attrib.detonate || entity.attrib.stage == 2",
           "type": "STICKY_CIRCLE_AROUND"
         },
         {
-          "type": "STOP_REPEATING_FORCE"
+          "name": "explode",
+          "type": "LABEL"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
         },
         {
           "type": "CLEAR_EFFECTS"
+        },
+        {
+          "attribName": "ampereBallCount",
+          "changeType": "sub",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.detonate",
+          "thenStep": [
+            {
+              "clearKillEffect": true,
+              "type": "MOD_GENERIC_PROXY"
+            },
+            {
+              "align": "BOTTOM",
+              "radius": 20,
+              "yScale": 0,
+              "zHeight": 16,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": true,
+              "flipLeftFace": 8,
+              "rectangular": false,
+              "repeat": false,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": false,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "HEAVY",
+                "element": "SHOCK",
+                "damageFactor": 2.1,
+                "critFactor": 0,
+                "fly": "MASSIVE",
+                "reverse": false,
+                "status": 0,
+                "stunSteps": [],
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "duration": 0,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": true,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.shock",
+                "name": "ampereCloakExplode"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
         },
         {
           "time": 0.05,
@@ -26362,6 +26514,76 @@
         "zGravityFactor": 0,
         "shadow": 16
       }
+    },
+    "ampereBallTrigger": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_SOURCE",
+          "name": "detonate",
+          "value": true
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "ampereBallTimer": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "time": 7.5,
+          "type": "WAIT"
+        },
+        {
+          "attribName": "stage",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        {
+          "attribName": "stage",
+          "changeType": "add",
+          "changeConnected": "PROXY_SOURCE",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
     },
     "meteorSmallController1": {
       "animation": {
@@ -43641,7 +43863,7 @@
             "reverse": false,
             "guardable": "",
             "skillBonus": "",
-            "limiter": "NO_DAMAGE",
+            "limiter": "SIGNAL",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -47674,6 +47896,249 @@
         "collType": "IGNORE",
         "shadow": 24
       },
+      "type": "GENERIC"
+    },
+    "ruinousCards": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 384,
+              "width": 24,
+              "height": 32
+            },
+            "guiSprites": false,
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": false,
+                "time": 0.1,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "killEffect": {
+        "sheet": "specials.neutral",
+        "name": "neutralCardTripleDeath"
+      },
+      "action": [
+        {
+          "value": 40,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "accel": 2,
+          "variance": 3,
+          "speed": 800,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "ruinousCardFX1"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.65,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "ruinousCardFX2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 24
+      },
+      "type": "GENERIC"
+    },
+    "ruinousDefDebuff": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "target": "TARGET",
+          "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
+          "stats": [
+            "DEFENSE-MINUS-DECAY"
+          ]
+        },
+        {
+          "duration": 0,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "ruinousDebuffStartHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "ruinousDebuffAuraHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "ruinousDebuffFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 8,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "stickFaceAlign": false,
+      "group": "ruinousDebuffGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE"
+      },
+      "type": "GENERIC"
+    },
+    "blindingGlareTrigger": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "time": 2,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "blindingGlareTriggerGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
       "type": "GENERIC"
     }
   },
@@ -56278,7 +56743,7 @@
           "en_US": "Blinding Glare"
         },
         "description": {
-          "en_US": "Instantly knock back enemies before drawing them back in for a finisher attack."
+          "en_US": "Perform an instant melee strike before drawing enemies back in for a finisher attack."
         },
         "dmgType": "MELEE",
         "stunType": "LOCK",
@@ -56292,6 +56757,11 @@
               "move": -1,
               "reaim": -1
             }
+          },
+          {
+            "name": "glareFailed",
+            "type": "SET_ATTRIB_BOOL",
+            "value": false
           },
           {
             "value": "MASSIVE",
@@ -56368,6 +56838,17 @@
             }
           },
           {
+            "posType": "TARGET",
+            "align": "BOTTOM",
+            "type": "SET_HIT_PROXY",
+            "proxy": "blindingGlareTrigger",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "align": "BOTTOM",
             "radius": 48,
             "yScale": 0,
@@ -56414,12 +56895,42 @@
             "type": "WAIT"
           },
           {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
             "value": "MEDIUM",
             "type": "SET_HIT_STABLE"
           },
           {
             "time": 0.10,
             "type": "WAIT"
+          },
+          {
+            "poiFilter": {
+              "group": "blindingGlareTriggerGroup",
+              "type": "PROXY"
+            },
+            "distance": 600,
+            "type": "SET_POI_TEMP_TARGET"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "!entity.hasTmpTarget",
+            "thenStep": [
+              {
+                "name": "glareFailed",
+                "type": "SET_ATTRIB_BOOL",
+                "value": true
+              },
+              {
+                "name": "end",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "type": "CLEAR_TEMP_TARGET"
           },
           {
             "wait": true,
@@ -56878,6 +57389,10 @@
             "type": "SET_HIT_STABLE"
           },
           {
+            "name": "end",
+            "type": "LABEL"
+          },
+          {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
               "dash": 0,
@@ -56889,6 +57404,240 @@
           {
             "time": 0.4,
             "type": "WAIT"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.glareFailed",
+            "thenStep": [
+              {
+                "followUp": "idle",
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "postShootSlow"
+              }
+            ]
+          }
+        ]
+      },
+      "GUARD_SPECIAL2_B": {
+        "name": {
+          "en_US": "Ruinous Pulse"
+        },
+        "description": {
+          "en_US": "Emit an expanding pulse that applies a temporary \\c[1]-50%\\c[0] DEF debuff to everything it hits, including yourself."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "idle"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "handUpPre",
+            "followUp": "handUpLoop"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "ruinousPlayerFX1"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "ruinousCards",
+            "offset": {
+              "x": 4,
+              "y": 0,
+              "z": 40
+            }
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "zoomType": "LIGHTER",
+            "align": "CENTER",
+            "fadeIn": 0.5,
+            "duration": 0,
+            "fadeOut": 0.6,
+            "name": "blur",
+            "type": "SET_ZOOM_BLUR"
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "fadeOut": 0.6,
+            "name": "blur",
+            "type": "FADE_OUT_ZOOM_BLUR"
+          },
+          {
+            "group": "ruinousDebuffGroup",
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "duration": 0.8,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "ruinousPlayerFX2"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "posType": "TARGET",
+            "align": "BOTTOM",
+            "type": "SET_HIT_PROXY",
+            "proxy": "ruinousDefDebuff",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "target": "PROXY_OWNER",
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.neutral",
+              "name": "ruinousPulse"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "posEntity": "PROXY_OWNER",
+            "radius": 1,
+            "yScale": 0,
+            "zHeight": 64,
+            "centralAngle": 1,
+            "duration": 0.8,
+            "expandRadius": 127,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": true,
+            "fixPos": false,
+            "checkCollision": false,
+            "type": "CIRCLE_ATTACK",
+            "party": "OTHER",
+            "attack": {
+              "type": "NONE",
+              "element": "NEUTRAL",
+              "damageFactor": 0,
+              "reverse": false,
+              "guardable": "NEVER",
+              "skillBonus": "",
+              "limiter": "SIGNAL",
+              "hints": [
+                "NO_PUZZLE"
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -32
+            }
+          },
+          {
+            "time": 0.8,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
+            }
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       }
@@ -65475,11 +66224,11 @@
             "type": "REMOVE_PROXIES"
           },
           {
-            "followUp": "specialShoot",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dash"
+            "anim": "handUpPre",
+            "followUp": "handUpLoop"
           },
           {
             "volume": 2.5,
@@ -65522,7 +66271,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.cold",
-              "name": "brittleBarrierGlow"
+              "name": "freezeRaysPlayerPulse"
             },
             "offset": {
               "x": 0,
@@ -65531,19 +66280,8 @@
             }
           },
           {
-            "value": 60,
-            "type": "SET_SPEED"
-          },
-          {
             "time": 0.2,
-            "stopBeforeEdge": true,
-            "type": "MOVE_BACKWARD"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "specialLoop"
+            "type": "WAIT"
           },
           {
             "volume": 1.2,
@@ -65565,7 +66303,7 @@
             }
           },
           {
-            "time": 0.5,
+            "time": 0.65,
             "type": "WAIT"
           },
           {
@@ -65573,7 +66311,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "preIdle"
           },
           {
             "time": 0.2,
@@ -69210,7 +69948,8 @@
               "type": "HEAVY",
               "element": "SHOCK",
               "fly": "MASSIVE",
-              "damageFactor": 3,
+              "damageFactor": 5,
+              "critFactor": 0.5,
               "reverse": false,
               "status": 0,
               "guardable": "",
@@ -70878,7 +71617,7 @@
           "en_US": "Ampere Cloak"
         },
         "description": {
-          "en_US": "Activate an electrifying aura, spawning two orbiting shock orbs that damage enemies."
+          "en_US": "Summon two orbiting shock orbs that explode on enemy contact."
         },
         "dmgType": "RANGED",
         "stunType": "",

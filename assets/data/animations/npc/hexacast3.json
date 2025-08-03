@@ -153,6 +153,14 @@
       "width": 32,
       "height": 40
     },
+    "handUp": {
+      "src": "media/entity/npc/hexacast3.png",
+      "xCount": 6,
+      "offX": 352,
+      "offY": 800,
+      "width": 32,
+      "height": 40
+    },
     "tri-battleWalk": {
       "src": "media/entity/npc/hexacast3-triblader.png",
       "xCount": 8,
@@ -4115,6 +4123,112 @@
               7,
               6
             ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "handUp",
+      "dirs": "2",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "handUpPre",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "handUpLoop",
+          "time": 0.07,
+          "repeat": true,
+          "frames": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "handUpPreAir",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            6,
+            7
+          ]
+        },
+        {
+          "name": "handUpLoopAir",
+          "time": 0.07,
+          "repeat": true,
+          "frames": [
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "handUp",
+      "dirs": "1",
+      "flipX": [
+        0
+      ],
+      "tileOffsets": [
+        0
+      ],
+      "SUB": [
+        {
+          "name": "handUpPre1Dir",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "handUpLoop1Dir",
+          "time": 0.07,
+          "repeat": true,
+          "frames": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "handUpPreAir1Dir",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            6,
+            7
+          ]
+        },
+        {
+          "name": "handUpLoopAir1Dir",
+          "time": 0.07,
+          "repeat": true,
+          "frames": [
+            8,
+            9,
+            10,
+            11
           ]
         }
       ]

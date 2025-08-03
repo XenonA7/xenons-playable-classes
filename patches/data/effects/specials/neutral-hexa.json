@@ -9504,7 +9504,6 @@
         "anim": "SHINE_SPARKLE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 10,
         "duration": 0.5,
@@ -11278,6 +11277,1275 @@
         "cancelable": false,
         "anim": "DUST_UP",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "neutralCardTripleDeath": [
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 0,
+        "random": false,
+        "zBounciness": 0,
+        "collision": true,
+        "angleVary": 1,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 15,
+        "maxSpeed": 35,
+        "minZSpeed": 60,
+        "maxZSpeed": 80,
+        "minZVel": 20,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "particleDuration": 1.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "HEXA_CARD_NEUTRAL"
+      }
+    ],
+    "ruinousCardFX1": [
+      {
+        "size": "L",
+        "fadeIn": 0.3,
+        "fadeOut": 0.6,
+        "duration": 0.3,
+        "glow": true,
+        "type": "LIGHT"
+      },
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0,
+        "scaleY": 0,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 0.85,
+        "scaleY": 0.85,
+        "duration": 0.3,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.3,
+        "duration": 0.1,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "volume": 0.4,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/boss/gynthar/spear-sparkle.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.4,
+        "global": false,
+        "loop": false,
+        "speed": 0.8,
+        "sound": "media/sound/battle/enemies/charge-05s.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.5,
+            "spline": "EASE_IN_STRONG"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 2.5,
+            "y": 2.5
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_IN_STRONG"
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 1.0,
+            "spline": "EASE_IN_STRONG"
+          }
+        },
+        "angleVary": 1,
+        "moveWithTarget": 1,
+        "particleDuration": 0.65,
+        "cancelable": true,
+        "anim": "NEUTRAL_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": -1,
+          "y": 12,
+          "z": 22
+        },
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.80,
+            "time": 0.4,
+            "spline": "EASE_IN"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.85,
+              "y": 0.85
+            },
+            "time": 0.3,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": true,
+        "cancelable": true,
+        "particleDuration": -1,
+        "anim": "TRIPLE_CARD_FIRE_NEUTRAL1",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.4,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 16,
+        "moveDist": 24,
+        "moveVariance": 16,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0.2,
+            "time": 0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.5,
+        "angleVary": 0,
+        "cancelable": false,
+        "anim": "GOD_HEXAGON_NEUTRAL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 0.1,
+        "particleRotate": true,
+        "moveDist": 42,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0.1,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 4
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.3,
+        "anim": "CIRCLE_SMALL_NEUTRAL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 16,
+        "uniformRandom": 0.1,
+        "particleRotate": true,
+        "moveDist": 24,
+        "keySpline": "EASE_OUT",
+        "moveRotate": -0.1,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 2.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.3,
+        "anim": "CIRCLE_SMALL_NEUTRAL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "pAlpha": {
+          "init": 0.75,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.5
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.9,
+              "y": 0.9
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.2,
+        "moveWithTarget": 1,
+        "anim": "NEUTRAL_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "color": "#bfbfbf",
+        "maxAlpha": 0.4,
+        "minAlpha": 0.1,
+        "blinkDuration": 0.35,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "moveDist": 16,
+        "moveVariance": 8,
+        "normalMoveDist": 64,
+        "particleRotate": false,
+        "keySpline": "EASE_OUT_STRONG",
+        "collision": false,
+        "moveRotate": -0.05,
+        "inverse": false,
+        "pAlpha": {
+          "init": 0.7,
+          "end": {
+            "value": 0
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.05,
+            "spline": "LINEAR"
+          }
+        },
+        "moveWithTarget": 1,
+        "angleVary": 1,
+        "cancelable": true,
+        "particleDuration": 0.4,
+        "particleDurVariance": 0.15,
+        "anim": "RHOMBUS_DOT",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousCardFX2": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": true,
+        "moveDist": 48,
+        "moveVariance": 24,
+        "particleRotate": false,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "moveRotate": 0.05,
+        "inverse": false,
+        "pAlpha": {
+          "init": 0.7,
+          "end": {
+            "value": 0
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "moveWithTarget": 1,
+        "angleVary": 1,
+        "cancelable": true,
+        "particleDuration": 0.3,
+        "anim": "DARK_PUFF",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 3,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 24,
+        "uniformRandom": 0.8,
+        "particleRotate": true,
+        "moveDist": 56,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "rotateWithTime": true,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0.075,
+            "y": 0.1
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 1.25
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.3,
+        "anim": "DARK_BALL_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousPlayerFX1Dark": [
+      {
+        "size": "XXXL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "fadeIn": 0.6,
+        "fadeOut": 1.2,
+        "duration": 0.6,
+        "intensity": 0.6,
+        "type": "DARKNESS"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.05,
+        "centralAngle": 1,
+        "clockwise": false,
+        "startDist": 20,
+        "random": true,
+        "uniformRandom": 0.3,
+        "flipRightParticles": true,
+        "moveDist": 4,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -12
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          }
+        },
+        "moveWithTarget": 0,
+        "cancelable": false,
+        "anim": "DUST_UP",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "black",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.7,
+          "start": {
+            "value": 0,
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            }
+          }
+        },
+        "particleDuration": 0.6,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.50,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousPlayerFX1": [
+      {
+        "size": "XXXL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "fadeIn": 0.6,
+        "fadeOut": 1.2,
+        "duration": 0.6,
+        "intensity": 0.6,
+        "type": "DARKNESS"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.05,
+        "centralAngle": 1,
+        "clockwise": false,
+        "startDist": 20,
+        "random": true,
+        "uniformRandom": 0.3,
+        "flipRightParticles": true,
+        "moveDist": 4,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -12
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          }
+        },
+        "moveWithTarget": 0,
+        "cancelable": false,
+        "anim": "DUST_UP",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "white",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.7,
+          "start": {
+            "value": 0,
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            }
+          }
+        },
+        "particleDuration": 0.6,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.50,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousPlayerFX2": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": -12
+        },
+        "pAlpha": {
+          "init": 0.2,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.65,
+              "y": 1.65
+            },
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "cancelable": false,
+        "anim": "NEUTRAL_BIG_HEXAGON",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.3,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousPulse": [
+      {
+        "size": "XXXXL",
+        "fadeIn": 0.6,
+        "fadeOut": 1,
+        "duration": 0.8,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.25,
+        "global": false,
+        "loop": false,
+        "speed": 0.75,
+        "sound": "media/sound/battle/new-rank.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.65,
+        "global": false,
+        "loop": false,
+        "speed": 0.5,
+        "variance": 0.025,
+        "sound": "media/sound/scenes/car-dissappear.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.15,
+            "y": 0.15
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": true,
+        "anim": "GOD_HEXAGON_NEUTRAL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.20,
+            "y": 0.20
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": true,
+        "anim": "GOD_HEXAGON_NEUTRAL",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "SHINE_SPARKLE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 14,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "SHINE_SPARKLE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 48,
+        "duration": 0,
+        "clockwise": false,
+        "centralAngle": 1,
+        "startDist": 0,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "rotOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 120,
+        "keySpline": "LINEAR",
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.15,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.4,
+            "y": 1.4
+          }
+        },
+        "pRotate": {
+          "init": 0.05
+        },
+        "cancelable": true,
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "anim": "SWEEP_NEUTRAL_DECAY_1",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ruinousPulseDark": [
+      {
+        "size": "XXXXL",
+        "fadeIn": 0.6,
+        "fadeOut": 1,
+        "duration": 0.8,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "volume": 0.25,
+        "global": false,
+        "loop": false,
+        "speed": 0.75,
+        "sound": "media/sound/battle/new-rank.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.65,
+        "global": false,
+        "loop": false,
+        "speed": 0.5,
+        "variance": 0.025,
+        "sound": "media/sound/scenes/car-dissappear.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "DARK_SHINE_SPARKLE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 14,
+        "duration": 0.033,
+        "centralAngle": 1,
+        "startDist": 4,
+        "moveDist": 140,
+        "moveVariance": 4,
+        "keySpline": "LINEAR",
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveRotate": 0.15,
+        "inverse": false,
+        "collision": false,
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "DARK_SHINE_SPARKLE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 48,
+        "duration": 0,
+        "clockwise": false,
+        "centralAngle": 1,
+        "startDist": 0,
+        "particleRotate": true,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "rotOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "moveDist": 120,
+        "keySpline": "LINEAR",
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.25,
+          "end": {
+            "value": 0,
+            "time": 0.15,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.4,
+            "y": 1.4
+          }
+        },
+        "pRotate": {
+          "init": 0.05
+        },
+        "cancelable": true,
+        "moveWithTarget": 0,
+        "particleDuration": 0.8,
+        "anim": "SWEEP_NEUTRAL_DECAY_2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ruinousDebuffFX": [
+      {
+        "size": "XL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.3,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#a7e4f4",
+        "maxAlpha": 0.8,
+        "minAlpha": 0.5,
+        "blinkDuration": 0.75,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "volume": 1.0,
+        "global": false,
+        "loop": false,
+        "speed": 0.65,
+        "variance": 0.025,
+        "sound": "media/sound/environment/train-cube-hide.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "#a7e4f4",
+        "fadeColor": "black",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.4,
+          "start": {
+            "value": 0,
+            "spline": "LINEAR"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 3,
+              "y": 3
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "particleDuration": 0.75,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "#a7e4f4",
+        "fadeColor": "black",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.3,
+          "start": {
+            "value": 0,
+            "spline": "LINEAR"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousDebuffFXDark": [
+      {
+        "size": "XL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.3,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "black",
+        "maxAlpha": 0.8,
+        "minAlpha": 0.5,
+        "blinkDuration": 0.75,
+        "blinkCount": -1,
+        "noLighter": true,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "volume": 1.0,
+        "global": false,
+        "loop": false,
+        "speed": 0.7,
+        "variance": 0.025,
+        "sound": "media/sound/environment/train-cube-hide.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "color": "black",
+        "noLighter": true,
+        "pAlpha": {
+          "init": 0.4,
+          "start": {
+            "value": 0,
+            "spline": "LINEAR"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 3,
+              "y": 3
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "particleDuration": 0.75,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "color": "black",
+        "noLighter": true,
+        "pAlpha": {
+          "init": 0.3,
+          "start": {
+            "value": 0,
+            "spline": "LINEAR"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 1.5,
+              "y": 1.5
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.15,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

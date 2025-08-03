@@ -1,6 +1,7 @@
 import "./js/azure-lazuline/hexacast-throw-fix.js";
 import "./js/azure-lazuline/wave-recall-combat-clear.js";
 import "./js/azure-lazuline/azure-action-steps.js";
+import "./js/azure-lazuline/action-buff-timers.js";
 
 import "./js/krypek/custom-levelups.js";
 import "./js/krypek/doormat-spawn-fix.js";

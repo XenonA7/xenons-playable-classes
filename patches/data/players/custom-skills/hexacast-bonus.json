@@ -5577,6 +5577,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "POISON_INFLICT-1"
           ]
@@ -7042,6 +7043,7 @@
         {
           "target": "PROXY_OWNER",
           "type": "ADD_ACTION_BUFF",
+          "hasBuffTimer": true,
           "stats": [
             "POISON_INFLICT-2"
           ]

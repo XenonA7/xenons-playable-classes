@@ -208,10 +208,12 @@
         "exp": 150,
         "bonus": 0
       },
-      "cp": {
-        "amount": 1,
-        "element": "NEUTRAL"
-      },
+      "items": [
+        {
+          "id": "346",
+          "amount": 3
+        }
+      ],
       "money": 50000
     },
     "area": "rhombus-sqr"

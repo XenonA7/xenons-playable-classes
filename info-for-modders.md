@@ -14,17 +14,20 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
 * For duels with multiple opponents, renders the enemy healthbars in a list rather than overlapping
 * Party members will no longer eat consumables if they are in a PVP duel
 
-## Modded Action Steps
+## Modified Vanilla Action Steps
+* ADD_ACTION_BUFF (new optional attribute "hasBuffTimer". If true, makes the yellow timer GUI functional assuming the action buff is granted by a simple proxy with a basic WAIT step following the ADD_ACTION_BUFF)
+
+## Custom Action Steps
 * DISABLE_HEALTHBAR (allows hiding the player health/status bar temporarily to enhance invisibility effects)
 * DISABLE_SPIKEDMG (allows temporarily disabling the player's "pin body" modifier)
 * COMBAT_ART_CHARGE_NOZOOM (identical to COMBAT_ART_CHARGE but does not zoom the camera)
 * WAIT_WHILE_AIMING (adjust face towards cursor while waiting)
-* RESET_GUARD_COMBO (resets all internal tracking of guard combo values) 
+* RESET_GUARD_COMBO (resets all internal tracking of guard combo values)
 
-## Modded Event Steps
+## Custom Event Steps
 * SET_PARTY_MEMBER_LEVEL_VAR (a copied version of SET_PARTY_MEMBER_LEVEL that accepts a NumberExpression for "level")
 
-## Modded Combat Conditions
+## Custom Combat Conditions
 * TARGET_HAS_BLOCKED_DAMAGE
 * TARGET_HAS_BLOCKED_HITS
 

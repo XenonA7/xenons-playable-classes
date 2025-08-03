@@ -60,11 +60,6 @@
       ]
     }
   },
-
-  
-
-
-
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
@@ -388,6 +383,31 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
+      "name": "DARK_PUFF_SLOW",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "width": 8,
+        "height": 8,
+        "offY": 112,
+        "offX": 96
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.075,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
       "name": "SHINE_PRE",
       "sheet": {
         "src": "media/entity/effects/hexacast/hexa-misc.png",
@@ -594,6 +614,133 @@
         1,
         2,
         3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TRIPLE_CARD_FIRE_NEUTRAL1",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 0,
+        "offY": 320,
+        "width": 32,
+        "height": 64
+      },
+      "renderMode": "lighter",
+      "guiSprites": false,
+      "repeat": true,
+      "time": 0.066,
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "TRIPLE_CARD_FIRE_NEUTRAL2",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 144,
+        "offY": 320,
+        "width": 32,
+        "height": 64
+      },
+      "renderMode": "lighter",
+      "guiSprites": false,
+      "repeat": true,
+      "time": 0.075,
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL_DECAY_1",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 480,
+        "offY": 128,
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.04,
+      "repeat": false,
+      "renderMode": "lighter",
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_NEUTRAL_DECAY_2",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 480,
+        "offY": 160,
+        "width": 32,
+        "height": 32
+      },
+      "time": 0.04,
+      "repeat": false,
+      "renderMode": "source-over",
+      "pivot": {
+        "x": 16,
+        "y": 16
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_SHINE_SPARKLE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 1,
+        "offX": 256,
+        "offY": 144,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        1
       ]
     }
   }

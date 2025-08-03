@@ -7895,7 +7895,6 @@
         "anim": "HEXA_SHOCK_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 24,
         "duration": 0.7,
@@ -8026,9 +8025,6 @@
         "anim": "HEXA_SHOCK_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
-
-
       {
         "numParticles": 20,
         "duration": 0.7,
@@ -8159,7 +8155,6 @@
         "anim": "HEXA_SHOCK_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 20,
         "duration": 0.7,
@@ -11526,7 +11521,7 @@
     ],
     "cohortDashHexagons": [
       {
-          "type": "LOOP_START"
+        "type": "LOOP_START"
       },
       {
         "numParticles": 40,
@@ -11627,12 +11622,12 @@
         "type": "WAIT"
       },
       {
-          "type": "LOOP_END"
+        "type": "LOOP_END"
       }
     ],
     "miasmaDashPreHexagons": [
       {
-          "type": "LOOP_START"
+        "type": "LOOP_START"
       },
       {
         "numParticles": 20,
@@ -11733,7 +11728,7 @@
         "type": "WAIT"
       },
       {
-          "type": "LOOP_END"
+        "type": "LOOP_END"
       }
     ],
     "miasmaDashHexagons": [
@@ -13150,7 +13145,6 @@
         "anim": "HEXA_NEUTRAL_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
-
       {
         "numParticles": 40,
         "duration": 1.5,
@@ -13301,6 +13295,224 @@
         "particleDuration": 0.15,
         "anim": "HEXA_NEUTRAL_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ruinousDebuffStartHexagons": [
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": false,
+        "moveDist": 40,
+        "keySpline": "EASE_OUT_STRONG",
+        "particleRotate": false,
+        "moveRotate": 0.5,
+        "normalMoveDist": 0,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.25,
+              "y": 1.25
+            },
+            "time": 0.3,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.8,
+        "anim": "HEXA_NEUTRAL_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ruinousDebuffStartHexagonsDark": [
+      {
+        "numParticles": 12,
+        "duration": 0,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": false,
+        "moveDist": 40,
+        "keySpline": "EASE_OUT_STRONG",
+        "particleRotate": false,
+        "moveRotate": 0.5,
+        "normalMoveDist": 0,
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.25,
+              "y": 1.25
+            },
+            "time": 0.3,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.8,
+        "anim": "HEXA_BLACK_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ruinousDebuffAuraHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 6,
+        "duration": 1,
+        "circular": false,
+        "xScale": 0.6,
+        "yScale": 0.6,
+        "moveZDist": 20,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "pAlpha": {
+          "init": 0.9
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.75,
+              "y": 0.75
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.4,
+            "spline": "EASE_IN"
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 0.25,
+        "particleDuration": 0.5,
+        "anim": "HEXA_NEUTRAL_GUI",
+        "type": "PLAY_ANIMS_OVER_ENTITY"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ruinousDebuffAuraHexagonsDark": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 6,
+        "duration": 1,
+        "circular": false,
+        "xScale": 0.6,
+        "yScale": 0.6,
+        "moveZDist": 20,
+        "offset": {
+          "x": 0,
+          "y": 32,
+          "z": 32
+        },
+        "pAlpha": {
+          "init": 0.9
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.75,
+              "y": 0.75
+            },
+            "time": 0.1,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.4,
+            "spline": "EASE_IN"
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 0.25,
+        "particleDuration": 0.5,
+        "anim": "HEXA_BLACK_GUI",
+        "type": "PLAY_ANIMS_OVER_ENTITY"
+      },
+      {
+        "time": 1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

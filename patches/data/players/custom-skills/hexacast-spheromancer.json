@@ -22816,7 +22816,7 @@
             }
           },
           {
-            "time": 0.3,
+            "time": 0.1,
             "type": "WAIT"
           },
           {
@@ -22825,6 +22825,10 @@
             "type": "SHOW_ANIMATION",
             "anim": "handUpPreAir",
             "followUp": "handUpLoopAir"
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
           },
           {
             "duration": -1,

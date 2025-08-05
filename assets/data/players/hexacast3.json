@@ -47,7 +47,9 @@
       "run": "run",
       "jump": "jump",
       "fall": "fall",
-      "damage": "damage"
+      "damage": "damage",
+      "hover": "hover",
+      "hoverMove": "hover"
     }
   },
   "autoequip": [
@@ -39802,15 +39804,15 @@
           "type": "SET_Z_GRAVITY_FACTOR"
         },
         {
-          "value": 150,
+          "value": 175,
           "type": "SET_Z_VEL"
         },
         {
           "type": "SET_RELATIVE_SPEED",
-          "value": 0.4
+          "value": 0.90
         },
         {
-          "time": 0.3,
+          "time": 0.2,
           "stopBeforeEdge": false,
           "type": "MOVE_FORWARD"
         },
@@ -55378,7 +55380,7 @@
             "type": "SET_JUMPING"
           },
           {
-            "value": 350,
+            "value": 325,
             "type": "SET_SPEED"
           },
           {

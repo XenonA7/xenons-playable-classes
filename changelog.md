@@ -1,3 +1,20 @@
+## 2.18.1 (08/04/2025)
+### (not)New Content
+- Split all Hexacast postShoot animations into distinct 1-handed and 2-handed versions (new sprites)
+- This exacerbates the issue caused by the game's forced aim->preidle->idle animation performed after any throw art or throw attack
+- As a result, added the original postShoot animations back while keeping the new ones as unused
+### Changes
+- Adjusted animation timing for Hexacast Ragnarök (visual only)
+- Improved effect scorchingSwirlHexagons2
+- Proxy spellTagCard now appears further away from its target before attacking
+- Repositioned floatEC sheet within Hexacast spritesheet
+- Added hover and hoverMove walkAnim definitions to Hexacast player/character files
+### Fixes
+- Fixed particle pScale timings for effects spiritBlastHexagons and spiritBlastHexagonsRev
+- Deleted redundant "hovering" sheet in Hexacast animation files
+### Balance
+- Spell Tag dash speed decreased from 350 to 325
+
 ## 2.18.0 (08/03/2025)
 ### General
 - Hexacast litter mod updated to 2.1.2
@@ -46,7 +63,7 @@
 - Spectral Swordsman hpFactor increased from 2.5 to 2.65 (will survive 2 charged shots now)
 - Chilling Thrust initial hitbox made smaller and reduced from MASSIVE to HEAVY
 - Fire Saw strength reduced from HEAVY to MEDIUM
-- Fire Saw knockback reduced from MEDIUM to HEAVY
+- Fire Saw knockback reduced from MASSIVE to HEAVY
 - Fire Saw damageFactor reduced from 2.7 to 2.25
 - Frost Rupture now grants MEDIUM hit stability during initial hits, MASSIVE stability during final thrust
 ### Balance (Hexacast)

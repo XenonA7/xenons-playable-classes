@@ -20,6 +20,8 @@
       "fall": "fall",
       "preIdle": "preIdle",
       "damage": "damage",
+      "hover": "hover",
+      "hoverMove": "hover",
       "brake": "brake"
     },
     "sit": {

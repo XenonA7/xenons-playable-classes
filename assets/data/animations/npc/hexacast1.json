@@ -11,7 +11,7 @@
     },
     "combat": {
       "src": "media/entity/npc/hexacast1.png",
-      "xCount": 8,
+      "xCount": 12,
       "offX": 32,
       "offY": 400,
       "width": 32,
@@ -81,14 +81,6 @@
       "width": 32,
       "height": 40
     },
-    "hovering": {
-      "src": "media/entity/npc/hexacast1.png",
-      "xCount": 3,
-      "offX": 96,
-      "offY": 600,
-      "width": 32,
-      "height": 40
-    },
     "crateChest": {
       "src": "media/entity/npc/hexacast1.png",
       "xCount": 11,
@@ -140,8 +132,8 @@
     "floatEC": {
       "src": "media/entity/npc/hexacast1.png",
       "xCount": 3,
-      "offX": 288,
-      "offY": 480,
+      "offX": 352,
+      "offY": 880,
       "width": 32,
       "height": 40
     },
@@ -331,10 +323,10 @@
       ],
       "tileOffsets": [
         0,
-        8,
-        16,
-        16,
-        8,
+        12,
+        24,
+        24,
+        12,
         0
       ],
       "SUB": [
@@ -380,7 +372,7 @@
           ]
         },
         {
-          "name": "postShoot",
+          "name": "postShoot1H",
           "time": 0.05,
           "repeat": false,
           "frames": [
@@ -389,12 +381,48 @@
           ]
         },
         {
-          "name": "postShootSlow",
+          "name": "postShoot1HSlow",
           "time": 0.075,
           "repeat": false,
           "frames": [
             6,
             7
+          ]
+        },
+        {
+          "name": "postShoot2H",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "postShoot2HSlow",
+          "time": 0.075,
+          "repeat": false,
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "postShoot",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            10,
+            11
+          ]
+        },
+        {
+          "name": "postShootSlow",
+          "time": 0.075,
+          "repeat": false,
+          "frames": [
+            10,
+            11
           ]
         }
       ]
@@ -1359,43 +1387,6 @@
             11,
             12,
             13
-          ]
-        }
-      ]
-    },
-    {
-      "sheet": "hovering",
-      "dirs": "8",
-      "flipX": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ],
-      "tileOffsets": [
-        0,
-        3,
-        6,
-        9,
-        12,
-        9,
-        6,
-        3
-      ],
-      "SUB": [
-        {
-          "name": "hover",
-          "time": 0.2,
-          "repeat": true,
-          "frames": [
-            0,
-            1,
-            2,
-            1
           ]
         }
       ]

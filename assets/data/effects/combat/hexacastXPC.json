@@ -7411,7 +7411,7 @@
               "x": 1,
               "y": 1
             },
-            "time": 0.10,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
@@ -7419,7 +7419,7 @@
               "x": 0.25,
               "y": 0.25
             },
-            "time": 0.66,
+            "time": 0.15,
             "spline": "EASE_IN"
           }
         },
@@ -7459,15 +7459,15 @@
               "x": 1,
               "y": 1
             },
-            "time": 0.10,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.66,
+            "time": 0.15,
             "spline": "EASE_IN"
           }
         },
@@ -8759,7 +8759,7 @@
         "duration": 0.21,
         "centralAngle": 1,
         "startAngle": -0.25,
-        "startDist": 20,
+        "startDist": 21,
         "useTargetAngle": true,
         "moveDist": 0,
         "clockwise": true,
@@ -8769,7 +8769,7 @@
           "init": 1,
           "end": {
             "value": 0,
-            "time": 0.1,
+            "time": 0.075,
             "spline": ""
           }
         },
@@ -8783,16 +8783,16 @@
               "x": 1,
               "y": 1
             },
-            "time": 0.02,
+            "time": 0.025,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.07,
-            "spline": ""
+            "time": 0.105,
+            "spline": "EASE_IN"
           }
         },
         "moveWithTarget": 1,

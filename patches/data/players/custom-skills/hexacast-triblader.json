@@ -30279,7 +30279,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -30650,6 +30650,12 @@
                   {
                     "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -31785,7 +31791,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -32156,6 +32162,12 @@
                   {
                     "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -33331,7 +33343,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -33721,15 +33733,10 @@
                     "type": "WAIT"
                   },
                   {
-                    "followUp": "idle",
-                    "wait": false,
+                    "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
                     "anim": "preIdle"
-                  },
-                  {
-                    "time": 0.05,
-                    "type": "WAIT"
                   }
                 ]
               }
@@ -34868,7 +34875,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -35239,6 +35246,12 @@
                   {
                     "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -36374,7 +36387,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -36743,8 +36756,14 @@
                     "type": "SPAWN_ASSAULT"
                   },
                   {
-                    "time": 0.15,
+                    "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -37920,7 +37939,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -38310,15 +38329,10 @@
                     "type": "WAIT"
                   },
                   {
-                    "followUp": "idle",
-                    "wait": false,
+                    "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
                     "anim": "preIdle"
-                  },
-                  {
-                    "time": 0.05,
-                    "type": "WAIT"
                   }
                 ]
               }
@@ -38435,7 +38449,7 @@
               {
                 "wait": false,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot1H",
                 "type": "SHOW_ANIMATION"
               },
               {
@@ -38650,6 +38664,16 @@
               },
               {
                 "time": 0.4,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
                 "type": "WAIT"
               }
             ]
@@ -38765,7 +38789,7 @@
               {
                 "wait": false,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot1H",
                 "type": "SHOW_ANIMATION"
               },
               {
@@ -38981,6 +39005,16 @@
               {
                 "time": 0.4,
                 "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
+                "type": "WAIT"
               }
             ]
           }
@@ -39083,7 +39117,7 @@
               {
                 "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot2H",
                 "type": "SHOW_ANIMATION"
               }
             ],
@@ -39277,6 +39311,16 @@
               {
                 "time": 0.4,
                 "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
+                "type": "WAIT"
               }
             ]
           }
@@ -39379,7 +39423,7 @@
               {
                 "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot2H",
                 "type": "SHOW_ANIMATION"
               }
             ],
@@ -39572,6 +39616,16 @@
               },
               {
                 "time": 0.4,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
                 "type": "WAIT"
               }
             ]
@@ -51596,11 +51650,14 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -51930,11 +51987,11 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
           },
           {
             "type": "CLEAR_ANIMATION"
@@ -52012,14 +52069,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -64601,7 +64654,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "aim"
+            "anim": "tri-battleIdle"
           },
           {
             "sticking": false,

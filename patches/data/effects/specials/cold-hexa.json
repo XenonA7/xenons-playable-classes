@@ -539,11 +539,11 @@
     "brittleBarrierGlow": [
       {
         "color": "#3366de",
-        "maxAlpha": 0.6,
+        "maxAlpha": 0.8,
         "minAlpha": 0,
         "blinkDuration": 1,
         "blinkCount": 1,
-        "noLighter": true,
+        "noLighter": false,
         "type": "BLINK_COLOR"
       },
       {

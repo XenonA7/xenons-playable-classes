@@ -10030,11 +10030,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -10328,11 +10332,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -11377,11 +11385,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -12532,11 +12544,14 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -12647,11 +12662,14 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -13329,11 +13347,11 @@
                 }
               },
               {
-                "followUp": "idle",
+                "followUp": "preIdle",
                 "wait": true,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "postShootSlow"
+                "anim": "postShoot1HSlow"
               },
               {
                 "type": "CLEAR_ANIMATION"
@@ -13354,11 +13372,14 @@
                 }
               },
               {
-                "followUp": "idle",
+                "followUp": "preIdle",
                 "wait": true,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "postShootSlow"
+                "anim": "postShoot1HSlow"
+              },
+              {
+                "type": "CLEAR_ANIMATION"
               }
             ]
           }
@@ -13572,11 +13593,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -13668,11 +13693,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -13868,13 +13897,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
+            "time": 0.05,
             "type": "WAIT"
           }
         ]
@@ -13957,6 +13987,16 @@
           {
             "time": 0.52,
             "type": "WAIT"
+          },
+          {
+            "followUp": "preIdle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -14036,6 +14076,16 @@
           {
             "time": 0.52,
             "type": "WAIT"
+          },
+          {
+            "followUp": "preIdle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -14228,6 +14278,16 @@
           {
             "time": 0.52,
             "type": "WAIT"
+          },
+          {
+            "followUp": "preIdle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },

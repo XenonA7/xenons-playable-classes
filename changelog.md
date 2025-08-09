@@ -1,7 +1,27 @@
+## 2.18.2 (08/09/2025)
+### New Content
+- Added \js\azure-lazuline\postshoot-delay.js (code by Azure Lazuline)
+### Changes
+- Re-sprited Hexacast east postShoot1H animation
+- Split all 128 instances of Hexacast postShoot animations into 1-handed and 2-handed versions to improve animation flow
+- Added preIdle ending animation to most Hexacast arts not ending in postShoot
+- Increased player flash color brightness for effects brittleBarrierGlow and healCardGlow
+- Removed preIdle animation step from the end of Lea Hexacast base throwing custom skills to fix animation glitch
+- Changed Icicle Lance ending animation to preIdle instead of postShoot
+- Increased action wait time for Thunder Jacket to improve animation alignment (no affect on casting time)
+- Added a 0.1 second animation delay after the end of Celestial Cohort's final hit
+- Meteor Storm (ranged edition) now spawns the projectile card at startDist offset -48 instead of 0
+- Hexacast now uses triblader battleIdle animation for Overclock
+### Fixes
+- Fixed the "aim" animation glitch which occurs after Hexacast throw attacks/arts (code by Azure Lazuline)
+### Balance
+- Frozen Fortress first attack knockback changed from reverse MEDIUM to straight MASSIVE
+
 ## 2.18.1 (08/04/2025)
 ### (not)New Content
 - Split all Hexacast postShoot animations into distinct 1-handed and 2-handed versions (new sprites)
 - This exacerbates the issue caused by the game's forced aim->preidle->idle animation performed after any throw art or throw attack
+  * https://github.com/XenonA7/xenons-playable-classes/issues/25
 - As a result, added the original postShoot animations back while keeping the new ones as unused
 ### Changes
 - Adjusted animation timing for Hexacast Ragnarök (visual only)

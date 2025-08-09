@@ -57,7 +57,7 @@
     }
   },
   "proxies": {
-  	"chargedNeutralSph": {
+    "chargedNeutralSph": {
       "effects": "ball",
       "speed": 600,
       "maxBounce": 3,
@@ -397,7 +397,7 @@
       }
     ],
     "_ThrowSph": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -445,29 +445,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowTri": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -515,29 +515,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowQua": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -585,29 +585,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowPen": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -655,29 +655,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowHex": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -725,29 +725,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowHexBubble": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -815,29 +815,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowHexStar": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -905,29 +905,29 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ],
     "_ThrowHexSteam": [
-     {
+      {
         "charged": true,
         "type": "SHOW_THROW_FX"
       },
@@ -995,25 +995,25 @@
         "type": "SHOOT_PROXY_RANGE"
       },
       {
-	    "followUp": "attackEndLoop",
-	    "wait": false,
-	    "viaWalkConfig": false,
-	    "type": "SHOW_ANIMATION",
-	    "anim": "attackEnd"
-	  },
+        "followUp": "attackEndLoop",
+        "wait": false,
+        "viaWalkConfig": false,
+        "type": "SHOW_ANIMATION",
+        "anim": "attackEnd"
+      },
       {
         "time": 0.4,
         "type": "WAIT"
       },
       {
-        "wait": false,
+        "followUp": "preIdle",
+        "wait": true,
         "viaWalkConfig": false,
-        "anim": "postShoot",
-        "type": "SHOW_ANIMATION"
+        "type": "SHOW_ANIMATION",
+        "anim": "postShoot1HSlow"
       },
       {
-        "time": 0.1,
-        "type": "WAIT"
+        "type": "CLEAR_ANIMATION"
       }
     ]
   },

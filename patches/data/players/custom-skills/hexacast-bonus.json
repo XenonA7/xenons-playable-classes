@@ -8527,18 +8527,27 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "kind": "PROXY_OWNER",
-          "type": "SET_TEMP_TARGET"
-        },
-        {
           "withElse": true,
           "type": "IF",
           "condition": "entity.ownerAttrib.shadowflameActive",
           "thenStep": [
             {
-              "posType": "TARGET",
               "align": "BOTTOM",
-              "type": "SHOOT_PROXY",
+              "centralAngle": 1,
+              "angleVary": 0,
+              "startDist": -48,
+              "startDistCollide": "CLOSER",
+              "random": false,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": true,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "posEntity": "PROXY_OWNER",
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
               "proxy": "ss-meteorStormRangedCard",
               "offset": {
                 "x": 0,
@@ -8549,9 +8558,22 @@
           ],
           "elseStep": [
             {
-              "posType": "TARGET",
               "align": "BOTTOM",
-              "type": "SHOOT_PROXY",
+              "centralAngle": 1,
+              "angleVary": 0,
+              "startDist": -48,
+              "startDistCollide": "CLOSER",
+              "random": false,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": true,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "posEntity": "PROXY_OWNER",
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
               "proxy": "meteorStormRangedCard",
               "offset": {
                 "x": 0,
@@ -10923,7 +10945,7 @@
           {
             "wait": false,
             "viaWalkConfig": false,
-            "anim": "postShoot",
+            "anim": "postShoot1H",
             "type": "SHOW_ANIMATION"
           },
           {
@@ -11268,7 +11290,7 @@
           {
             "wait": false,
             "viaWalkConfig": false,
-            "anim": "postShoot",
+            "anim": "postShoot1H",
             "type": "SHOW_ANIMATION"
           },
           {
@@ -11613,7 +11635,7 @@
           {
             "wait": false,
             "viaWalkConfig": false,
-            "anim": "postShoot",
+            "anim": "postShoot1H",
             "type": "SHOW_ANIMATION"
           },
           {
@@ -11958,7 +11980,7 @@
           {
             "wait": false,
             "viaWalkConfig": false,
-            "anim": "postShoot",
+            "anim": "postShoot1H",
             "type": "SHOW_ANIMATION"
           },
           {
@@ -12075,6 +12097,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -12149,15 +12181,14 @@
             }
           },
           {
-            "followUp": "idle",
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.2,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -12281,15 +12312,14 @@
             }
           },
           {
-            "followUp": "idle",
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.2,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -12460,11 +12490,11 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
           },
           {
             "type": "CLEAR_ANIMATION"
@@ -12695,6 +12725,12 @@
           {
             "time": 0.2,
             "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       },
@@ -12925,7 +12961,10 @@
             }
           },
           {
-            "type": "CLEAR_ANIMATION"
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       },
@@ -13185,6 +13224,12 @@
           {
             "time": 0.55,
             "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       }
@@ -13354,6 +13399,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -13520,6 +13575,16 @@
           },
           {
             "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
             "type": "WAIT"
           }
         ]
@@ -13786,6 +13851,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       }
@@ -13896,6 +13971,16 @@
           },
           {
             "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
             "type": "WAIT"
           }
         ]
@@ -14019,11 +14104,15 @@
             "type": "CLEAR_EFFECTS"
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       }
@@ -14135,6 +14224,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -14180,11 +14279,10 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -14243,11 +14341,10 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -14424,6 +14521,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -14533,6 +14640,16 @@
           {
             "time": 0.6,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -14625,20 +14742,16 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
       "CS_CUSTOM1_HEXACAST_THROW_SPECIAL2_A": {
         "name": {
-          "en_US": "Blaster Sentry"
+          "en_US": "Blaster Sentry (Static)"
         },
         "description": {
           "en_US": "Fire a more powerful laser and leave a lingering sentry card which continues to fire at enemies."
@@ -14753,14 +14866,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -14869,6 +14978,16 @@
           },
           {
             "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
             "type": "WAIT"
           }
         ]
@@ -15001,14 +15120,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -15115,13 +15230,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           },
           {
-            "time": 0.2,
+            "time": 0.05,
             "type": "WAIT"
           }
         ]
@@ -15282,14 +15398,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           },
           {
-            "type": "CLEAR_ANIMATION"
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       }

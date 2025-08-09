@@ -3039,7 +3039,7 @@
         "minAlpha": 0,
         "blinkDuration": 1,
         "blinkCount": 1,
-        "noLighter": true,
+        "noLighter": false,
         "type": "BLINK_COLOR"
       },
       {

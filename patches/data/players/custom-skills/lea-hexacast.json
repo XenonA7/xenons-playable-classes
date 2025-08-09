@@ -4815,12 +4815,6 @@
           {
             "time": 0.3,
             "type": "WAIT"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       },
@@ -5156,12 +5150,6 @@
           {
             "time": 0.3,
             "type": "WAIT"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       },
@@ -5695,12 +5683,6 @@
           {
             "time": 0.5,
             "type": "PLAYER_ADJUST_FACE"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       },
@@ -6234,12 +6216,6 @@
           {
             "time": 0.5,
             "type": "PLAYER_ADJUST_FACE"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       },
@@ -6575,12 +6551,6 @@
           {
             "time": 0.3,
             "type": "WAIT"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       },
@@ -6916,12 +6886,6 @@
           {
             "time": 0.3,
             "type": "WAIT"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "anim": "preIdle",
-            "type": "SHOW_ANIMATION"
           }
         ]
       }

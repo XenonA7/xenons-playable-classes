@@ -13503,7 +13503,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -13556,6 +13556,12 @@
                   {
                     "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -14691,7 +14697,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -14744,6 +14750,12 @@
                   {
                     "time": 0.45,
                     "type": "WAIT"
+                  },
+                  {
+                    "wait": true,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "preIdle"
                   }
                 ]
               }
@@ -15919,7 +15931,7 @@
                     "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
-                    "anim": "postShootSlow"
+                    "anim": "postShoot1HSlow"
                   },
                   {
                     "type": "CLEAR_ANIMATION"
@@ -15992,15 +16004,10 @@
                     "type": "WAIT"
                   },
                   {
-                    "followUp": "idle",
-                    "wait": false,
+                    "wait": true,
                     "viaWalkConfig": false,
                     "type": "SHOW_ANIMATION",
                     "anim": "preIdle"
-                  },
-                  {
-                    "time": 0.05,
-                    "type": "WAIT"
                   }
                 ]
               }
@@ -16117,7 +16124,7 @@
               {
                 "wait": false,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot1H",
                 "type": "SHOW_ANIMATION"
               },
               {
@@ -16332,6 +16339,16 @@
               },
               {
                 "time": 0.4,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "anim": "postShoot1H",
+                "type": "SHOW_ANIMATION"
+              },
+              {
+                "time": 0.1,
                 "type": "WAIT"
               }
             ]
@@ -16447,7 +16464,7 @@
               {
                 "wait": false,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot1H",
                 "type": "SHOW_ANIMATION"
               },
               {
@@ -16663,6 +16680,16 @@
               {
                 "time": 0.4,
                 "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "anim": "postShoot1H",
+                "type": "SHOW_ANIMATION"
+              },
+              {
+                "time": 0.1,
+                "type": "WAIT"
               }
             ]
           }
@@ -16765,7 +16792,7 @@
               {
                 "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot2H",
                 "type": "SHOW_ANIMATION"
               }
             ],
@@ -16959,6 +16986,16 @@
               {
                 "time": 0.4,
                 "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
+                "type": "WAIT"
               }
             ]
           }
@@ -17061,7 +17098,7 @@
               {
                 "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
+                "anim": "postShoot2H",
                 "type": "SHOW_ANIMATION"
               }
             ],
@@ -17255,6 +17292,16 @@
               {
                 "time": 0.4,
                 "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              },
+              {
+                "time": 0.02,
+                "type": "WAIT"
               }
             ]
           }
@@ -17348,11 +17395,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -18237,13 +18283,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
+            "time": 0.05,
             "type": "WAIT"
           }
         ]
@@ -21312,13 +21359,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
+            "time": 0.05,
             "type": "WAIT"
           }
         ]
@@ -25323,13 +25371,14 @@
                 }
               },
               {
-                "wait": false,
+                "followUp": "preIdle",
+                "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
-                "type": "SHOW_ANIMATION"
+                "type": "SHOW_ANIMATION",
+                "anim": "postShoot2HSlow"
               },
               {
-                "time": 0.1,
+                "time": 0.05,
                 "type": "WAIT"
               }
             ]
@@ -25416,11 +25465,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -25719,7 +25772,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "postShoot"
+                "anim": "postShoot2H"
               },
               {
                 "time": 0.1,
@@ -25824,14 +25877,15 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           },
           {
-            "type": "CLEAR_ANIMATION"
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -26740,7 +26794,7 @@
                 "wait": false,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "postShoot"
+                "anim": "postShoot2H"
               },
               {
                 "time": 0.1,
@@ -26852,11 +26906,15 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       }
@@ -26942,14 +27000,14 @@
             }
           },
           {
-            "followUp": "idle",
-            "wait": true,
+            "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "preIdle"
           },
           {
-            "type": "CLEAR_ANIMATION"
+            "time": 0.02,
+            "type": "WAIT"
           }
         ]
       },
@@ -27031,11 +27089,14 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -27117,11 +27178,14 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -27203,14 +27267,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
-          },
-          {
-            "type": "CLEAR_ANIMATION"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -27671,14 +27731,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           },
           {
-            "type": "CLEAR_ANIMATION"
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -28183,11 +28244,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -30123,13 +30188,14 @@
                 }
               },
               {
-                "wait": false,
+                "followUp": "preIdle",
+                "wait": true,
                 "viaWalkConfig": false,
-                "anim": "postShoot",
-                "type": "SHOW_ANIMATION"
+                "type": "SHOW_ANIMATION",
+                "anim": "postShoot1HSlow"
               },
               {
-                "time": 0.1,
+                "time": 0.05,
                 "type": "WAIT"
               }
             ]
@@ -30304,11 +30370,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },
@@ -30553,11 +30623,15 @@
                 }
               },
               {
-                "followUp": "idle",
+                "followUp": "preIdle",
                 "wait": true,
                 "viaWalkConfig": false,
                 "type": "SHOW_ANIMATION",
-                "anim": "postShootSlow"
+                "anim": "postShoot2HSlow"
+              },
+              {
+                "time": 0.05,
+                "type": "WAIT"
               }
             ]
           }
@@ -31754,14 +31828,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -31842,11 +31916,10 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -31929,14 +32002,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -32019,11 +32092,10 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -32106,14 +32178,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -32196,11 +32268,10 @@
             "type": "WAIT"
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -38132,14 +38203,14 @@
             "type": "WAIT"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -38248,11 +38319,10 @@
             }
           },
           {
-            "followUp": "idle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
           }
         ]
       },
@@ -38333,14 +38403,14 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "wait": false,
+            "followUp": "preIdle",
+            "wait": true,
             "viaWalkConfig": false,
-            "anim": "postShoot",
-            "type": "SHOW_ANIMATION"
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
           },
           {
-            "time": 0.1,
-            "type": "WAIT"
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },
@@ -38577,18 +38647,7 @@
             }
           },
           {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "followUp": "idle",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "preIdle"
-          },
-          {
-            "time": 0.05,
+            "time": 0.65,
             "type": "WAIT"
           },
           {
@@ -38601,7 +38660,13 @@
             }
           },
           {
-            "time": 0.1,
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
             "type": "WAIT"
           }
         ]
@@ -39389,11 +39454,15 @@
             }
           },
           {
-            "followUp": "idle",
+            "followUp": "preIdle",
             "wait": true,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "postShootSlow"
+            "anim": "postShoot2HSlow"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           }
         ]
       },

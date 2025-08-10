@@ -3493,7 +3493,6 @@
       "noLightGlow": false,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -12097,7 +12096,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -16186,7 +16184,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -20823,7 +20820,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -22881,8 +22877,7 @@
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
-      "effect": "ar",
-      "maxBounds": 0
+      "effect": "ar"
     },
     "icePlatform": {
       "animation": {
@@ -24260,7 +24255,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -26043,7 +26037,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {

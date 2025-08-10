@@ -460,7 +460,6 @@
       "noMoveRotate": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -567,7 +566,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "LIGHT",
         "element": "NEUTRAL",
@@ -4443,7 +4441,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -4518,7 +4515,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -6546,7 +6542,6 @@
       "light": "S",
       "noLightGlow": false,
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -6999,7 +6994,6 @@
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {

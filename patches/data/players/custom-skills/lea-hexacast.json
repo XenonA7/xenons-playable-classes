@@ -880,7 +880,6 @@
       "light": "L",
       "noLightGlow": true,
       "destroyProxy": "hexa-shadowflameChargedExplosion",
-      "maxBounds": 0,
       "attack": {
         "type": "HEAVY",
         "element": "HEAT",
@@ -999,7 +998,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {

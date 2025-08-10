@@ -11,7 +11,6 @@
       "noMoveRotate": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -118,7 +117,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "LIGHT",
         "element": "NEUTRAL",

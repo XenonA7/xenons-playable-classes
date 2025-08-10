@@ -1,3 +1,12 @@
+## 2.19.0 (08/09/2025)
+### New Content
+- New Hexacast combat art: Kindling Dance (Heat Guard Lv.1B)
+- New sprites for shadowflame "fireballSmall" bullets (Fire Hand, etc)
+### Changes
+- Added preIdle ending animation to Flame Tackle (on hit)
+### Fixes
+- Deleted all inert "maxBounds" proxy properties in all player/enemy files (artifact from vanilla Lea code)
+
 ## 2.18.2 (08/09/2025)
 ### New Content
 - Added \js\azure-lazuline\postshoot-delay.js (code by Azure Lazuline)

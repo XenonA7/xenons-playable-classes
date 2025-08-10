@@ -1478,7 +1478,6 @@
       "noLightGlow": false,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -7221,8 +7220,7 @@
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
-      "effect": "ar",
-      "maxBounds": 0
+      "effect": "ar"
     },
     "tri-heatPierce": {
       "copyOwnerAnims": false,
@@ -9238,7 +9236,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -11582,7 +11579,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -13001,7 +12997,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -15382,7 +15377,6 @@
       "noLightGlow": true,
       "type": "GENERIC",
       "effect": "ar",
-      "maxBounds": 0,
       "attack": {
         "type": "MEDIUM",
         "element": "SHOCK",
@@ -27495,7 +27489,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -28757,7 +28750,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {

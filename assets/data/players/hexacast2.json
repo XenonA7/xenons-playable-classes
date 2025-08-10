@@ -3781,16 +3781,15 @@
       ],
       "trail": false,
       "multiHit": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "ss-fireballSmall": {
       "animation": {
         "name": "default",
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 112,
-          "offY": 320,
+          "offX": 0,
+          "offY": 528,
           "width": 16,
           "height": 32
         },
@@ -3828,8 +3827,7 @@
       ],
       "trail": false,
       "multiHit": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "fireballSmallAce": {
       "animation": {
@@ -3885,16 +3883,15 @@
       ],
       "trail": false,
       "multiHit": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "ss-fireballSmallAce": {
       "animation": {
         "name": "default",
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 112,
-          "offY": 320,
+          "offX": 0,
+          "offY": 528,
           "width": 16,
           "height": 32
         },
@@ -3942,8 +3939,7 @@
       ],
       "trail": false,
       "multiHit": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "joltHexCard": {
       "effects": "ball-shock",
@@ -8687,16 +8683,15 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "ss-fireballSmallStraight": {
       "animation": {
         "name": "default",
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 112,
-          "offY": 320,
+          "offX": 0,
+          "offY": 528,
           "width": 16,
           "height": 32
         },
@@ -8729,8 +8724,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": true,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "fireballSmallStraight2": {
       "animation": {
@@ -8772,16 +8766,15 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "ss-fireballSmallStraight2": {
       "animation": {
         "name": "default",
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 112,
-          "offY": 320,
+          "offX": 0,
+          "offY": 528,
           "width": 16,
           "height": 32
         },
@@ -8815,8 +8808,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": true,
-      "type": "BALL",
-      "maxBounds": 0
+      "type": "BALL"
     },
     "fireballBig": {
       "size": {
@@ -8834,7 +8826,6 @@
       "noLightGlow": false,
       "destroyProxy": "heatExplosionSmall",
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "pivot": {
@@ -8892,7 +8883,6 @@
       "noLightGlow": false,
       "destroyProxy": "ss-heatExplosionSmall",
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "pivot": {
@@ -9116,7 +9106,6 @@
       "noLightGlow": false,
       "destroyProxy": "",
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "pivot": {
@@ -9173,7 +9162,6 @@
       "noLightGlow": true,
       "destroyProxy": "",
       "type": "BALL",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "pivot": {
@@ -19597,7 +19585,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -19670,7 +19657,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -19744,7 +19730,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -19819,7 +19804,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -24775,7 +24759,6 @@
       "light": "L",
       "noLightGlow": true,
       "destroyProxy": "shadowflameChargedExplosion",
-      "maxBounds": 0,
       "attack": {
         "type": "HEAVY",
         "element": "HEAT",
@@ -25002,7 +24985,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {
         "name": "default",
         "sheet": {
@@ -41080,7 +41062,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {},
       "attack": {
         "type": "LIGHT",
@@ -41128,7 +41109,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {},
       "attack": {
         "type": "LIGHT",
@@ -41176,7 +41156,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {},
       "attack": {
         "type": "LIGHT",
@@ -41224,7 +41203,6 @@
       "noLightGlow": true,
       "type": "BALL",
       "effect": "ar",
-      "maxBounds": 0,
       "animation": {},
       "attack": {
         "type": "LIGHT",
@@ -48142,6 +48120,221 @@
       },
       "config": {},
       "type": "GENERIC"
+    },
+    "KDTargetAimProxy": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "searchType": "IN_VIEW",
+          "ignoreCurrentTarget": false,
+          "prevHitBehavior": "NONE",
+          "distance": 800,
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.shadowflameActive",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0,
+              "angleVary": 0,
+              "startDist": 0,
+              "startDistCollide": "CLOSER",
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "ss-fireballSmallKD",
+              "offset": {
+                "z": 0
+              }
+            }
+          ],
+          "elseStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0,
+              "angleVary": 0,
+              "startDist": 0,
+              "startDistCollide": "CLOSER",
+              "random": false,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "fireballSmallKD",
+              "offset": {
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 0
+      },
+      "type": "GENERIC"
+    },
+    "fireballSmallKD": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "offX": 368,
+          "offY": 0,
+          "width": 16,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "effects": "ball-heat",
+      "light": "M",
+      "speed": 400,
+      "maxBounce": 0,
+      "timer": 2.0,
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": false,
+      "type": "BALL",
+      "attack": {
+        "type": "MEDIUM",
+        "element": "HEAT",
+        "damageFactor": 0.55,
+        "reverse": false,
+        "status": 0.85,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "steerDegree": 0.20,
+          "adjustTime": 0.6,
+          "type": "FOLLOW_TARGET"
+        },
+        {
+          "speedFactor": 0.05,
+          "startWait": 0,
+          "fadeOut": 0.02,
+          "fadeOutVary": 0,
+          "pause": 0.1,
+          "pauseVary": 0,
+          "fadeIn": 1,
+          "type": "SLOW_DOWN"
+        }
+      ]
+    },
+    "ss-fireballSmallKD": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/shadowflame.png",
+          "offX": 0,
+          "offY": 528,
+          "width": 16,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "effects": "specials.shadowflame-alts",
+      "light": "M",
+      "speed": 400,
+      "maxBounce": 0,
+      "timer": 2.0,
+      "trail": false,
+      "multiHit": false,
+      "noLightGlow": true,
+      "type": "BALL",
+      "attack": {
+        "type": "MEDIUM",
+        "element": "HEAT",
+        "damageFactor": 0.70,
+        "reverse": false,
+        "status": 0.85,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "steerDegree": 0.20,
+          "adjustTime": 0.6,
+          "type": "FOLLOW_TARGET"
+        },
+        {
+          "speedFactor": 0.05,
+          "startWait": 0,
+          "fadeOut": 0.02,
+          "fadeOutVary": 0,
+          "pause": 0.1,
+          "pauseVary": 0,
+          "fadeIn": 1,
+          "type": "SLOW_DOWN"
+        }
+      ]
     }
   },
   "actions": {
@@ -60593,6 +60786,12 @@
               {
                 "time": 0.6,
                 "type": "WAIT"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
               }
             ],
             "missed": []
@@ -62105,6 +62304,307 @@
                 "anim": "preIdle"
               }
             ]
+          }
+        ]
+      },
+      "GUARD_SPECIAL1_B": {
+        "name": {
+          "en_US": "Kindling Dance"
+        },
+        "description": {
+          "en_US": "Push enemies away while shooting out two rings of fireballs in all directions."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "value": 6,
+                "forwardToProxies": true,
+                "type": "SET_DAMAGE_CEILING"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": 4,
+                "forwardToProxies": true,
+                "type": "SET_DAMAGE_CEILING"
+              }
+            ]
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "strength": "DASH_ESCAPE",
+            "pull": false,
+            "radius": 32,
+            "fadeRadius": 48,
+            "minRadius": 0,
+            "faceDist": 0,
+            "zHeight": 32,
+            "duration": 1.1,
+            "align": "BOTTOM",
+            "type": "PUSH_PULL_FORCE"
+          },
+          {
+            "strength": "RUN_ESCAPE",
+            "pull": false,
+            "radius": 80,
+            "fadeRadius": 64,
+            "minRadius": 0,
+            "faceDist": 0,
+            "zHeight": 32,
+            "duration": 1.1,
+            "align": "BOTTOM",
+            "type": "PUSH_PULL_FORCE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 1.1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": true,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "kindlingDancePushArea"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 1.1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": true,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "kindlingDancePushArea"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "followUp": "sweepRevEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "kindlingDanceHexagonsRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "kindlingDanceHexagonsRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 1,
+            "startAngle": 0.30,
+            "angleVary": 0,
+            "startDist": 14,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "duration": 0.21,
+            "clockwise": true,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "count": 16,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "KDTargetAimProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "time": 0.45,
+            "type": "WAIT"
+          },
+          {
+            "followUp": "sweepEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "kindlingDanceHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "kindlingDanceHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 1,
+            "startAngle": 0.30,
+            "angleVary": 0,
+            "startDist": 14,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "duration": 0.21,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "count": 16,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "KDTargetAimProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 12
+            }
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.55,
+              "move": 0.55,
+              "reaim": 0.55
+            }
+          },
+          {
+            "time": 0.65,
+            "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       },

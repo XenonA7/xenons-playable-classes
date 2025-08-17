@@ -67,7 +67,7 @@ https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
 
 # Install Instructions
 ## Video Walkthrough
-https://youtu.be/7oBYnF_xMvU?t=20
+How to install mods using the in-game mod manager: https://youtu.be/7oBYnF_xMvU?t=20
 
 ## Written Install Instructions
 1. Back up your save files **\AppData\Local\CrossCode**
@@ -94,10 +94,10 @@ https://youtu.be/7oBYnF_xMvU?t=20
 3. In the options menu, there is now a **"mods"** button at the top. This brings up the in-game mod manager.  
     <img width="826" height="447" alt="modButton" src="https://github.com/user-attachments/assets/0e7f9420-e7b4-44d3-9c49-997d5be746c2" />
 
-    Search for "Xenon's Playable Classes" and download it. The mod manager will automatically install all your dependency mods.  
+    Search for "Xenon's Playable Classes" and install it. The mod manager will automatically install all the dependency mods too.  
    <img width="460" height="296" alt="Screenshot 2025-08-17 122252" src="https://github.com/user-attachments/assets/cf7f6055-b21f-4c66-a7f1-c12353606380" />
 
-    Now you're done!  
+    Now you're done! Just restart the game and you are good to go!  
    >**Note:** All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.
 
 

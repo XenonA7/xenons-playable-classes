@@ -53,6 +53,7 @@ Custom Skills can be accessed in the east room of the new Bergen Village area, a
 
 ### Recommended Arcane Lab version to use with XPC (optional): 0.1.8
 https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
+>**Note:** It is much easier to just install Arcane Lab using the in-game mod manager!
 
 # **Special Thanks:**
 - **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations, help with Hexacast spritework

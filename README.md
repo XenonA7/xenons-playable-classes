@@ -65,10 +65,46 @@ https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
 - **Orco Pixelado**: Triblader menu portrait artwork
 - **Laz**: Gameplay testing, created music used for XPC hideout area
 
-# Install Info
-### **Mod Loader Required (CCLoader2)**
-* https://github.com/CCDirectLink/CCLoader/releases
-### **Required Dependency Mods**
+# Install Instructions
+## Video Walkthrough
+https://youtu.be/7oBYnF_xMvU?t=20
+
+## Written Install Instructions
+1. Back up your save files **\AppData\Local\CrossCode**
+
+2. Install the mod loader if this is your first time modding Crosscode.
+   
+    A. Download CCloader2 from https://github.com/CCDirectLink/CCLoader/releases
+    >**Note:** Always download the latest version, the screenshot below is probably outdated.
+
+    ![image](https://user-images.githubusercontent.com/105614278/179910752-49fb02fd-87d4-43fb-8853-c1794925c223.png)
+
+    B. Extract the files.  
+   ![image](https://user-images.githubusercontent.com/105614278/179910853-0a511c33-a559-4e85-82ee-83e210ee3d83.png)
+
+    C. Locate these files from the extracted directory.  
+   ![image](https://user-images.githubusercontent.com/105614278/179910937-8c62ce97-f062-41c0-90b0-685c483e3de9.png)
+
+    D. Copy the files into your Crosscode game directory. Replace when asked.  
+   ![image](https://user-images.githubusercontent.com/105614278/179911026-a895f1f7-7dfa-406a-8e94-8d4fc9e5bc62.png)
+
+    E. Launch the game to verify it is installed. You will see the CCLoader version in the bottom-right of the screen.  
+    ![image](https://user-images.githubusercontent.com/105614278/179911121-3f74421f-251a-462a-8172-aae6314d840f.png)
+
+3. In the options menu, there is now a **"mods"** button at the top. This brings up the in-game mod manager.  
+    <img width="826" height="447" alt="modButton" src="https://github.com/user-attachments/assets/0e7f9420-e7b4-44d3-9c49-997d5be746c2" />
+
+    Search for "Xenon's Playable Classes" and download it. The mod manager will automatically install all your dependency mods.  
+   <img width="460" height="296" alt="Screenshot 2025-08-17 122252" src="https://github.com/user-attachments/assets/cf7f6055-b21f-4c66-a7f1-c12353606380" />
+
+    Now you're done!  
+   >**Note:** All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.
+
+
+
+
+# **XPC Dependency Mods**
+>**Note:** This list is just for reference. You don't need to manually install these! The mod manager will automatically handle that.
 1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
 2. **cc-alybox:** https://github.com/lexisother/cc-alybox
@@ -77,55 +113,3 @@ https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
    * Library mod needed for modded menu portraits
 4. **crosscode-extension-asset-preloader:** https://github.com/elluminance/crosscode-extension-asset-preloader/releases
    * Allows mods to load DLC assets properly
-  
-## Install Instructions (Manual)
->**Note:** You can easily install the mod automatically using the in-game mod manager. These instructions are for the manual process!
-1. Back up your save files **\AppData\Local\CrossCode**
-
-### Install the Mod Loader
-2. Download CCloader2 from https://github.com/CCDirectLink/CCLoader/releases
->**Note:** Always download the latest version, the screenshot below is probably outdated.
-
-![image](https://user-images.githubusercontent.com/105614278/179910752-49fb02fd-87d4-43fb-8853-c1794925c223.png)
-
-3. Extract the files  
-![image](https://user-images.githubusercontent.com/105614278/179910853-0a511c33-a559-4e85-82ee-83e210ee3d83.png)
-
-4. Locate these files from the extracted directory  
-![image](https://user-images.githubusercontent.com/105614278/179910937-8c62ce97-f062-41c0-90b0-685c483e3de9.png)
-
-5. Copy the files into your Crosscode game directory  
-![image](https://user-images.githubusercontent.com/105614278/179911026-a895f1f7-7dfa-406a-8e94-8d4fc9e5bc62.png)
-
-6. Launch the game to verify it is installed. You will see the CCLoader version in the bottom-right of the screen.  
-![image](https://user-images.githubusercontent.com/105614278/179911121-3f74421f-251a-462a-8172-aae6314d840f.png)
-
-### Install Mods
-1. Download and extract XPC and its dependencies
-- (XPC Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
-- (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
-- (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
-- (Required) menu-ui-replacer: https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
-- (Required) crosscode-extension-asset-preloader: https://github.com/elluminance/crosscode-extension-asset-preloader/releases
-
-2. Place extracted mod folders inside **\CrossCode\assets\mods**  
-
-   ![image](https://github.com/user-attachments/assets/7c4bf606-5e2b-40fe-b3c9-685e13392a1b)
-
->**Note:** Note that if you click on any of these installed mods, there should be a file called **package.json** or **ccmod.json** directly inside those folders. If not, CCLoader won't be able to find the mods.
-
-3. Launch the game. Go into the options menu and there will be a new tab with a hammer icon for mods (CCLoader adds this). It should look like this:  
-   ![image](https://github.com/user-attachments/assets/3b3a0108-9bed-4c52-be08-23ecc9b44f82)
-
-
-If your mods don't appear here, make sure you don't have "folders inside folders". The mod folders need **package.json** or **ccmod.json** directly inside in order to be recognized. If your mods appear in-game, you are good to go.
-
-# How to Update to a New Version
-1. Delete your old folder entirely.  
-![image](https://github.com/user-attachments/assets/b1ad2d8b-7e84-434d-847f-d5bf43bf7d5a)
-
-2. Install the new version where the old one used to be.
-
-* You can't just override the old version because if a new version removes old files or renames certain files then overriding will mess it up.
-
-* All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.

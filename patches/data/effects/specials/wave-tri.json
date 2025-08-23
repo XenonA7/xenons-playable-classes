@@ -458,7 +458,7 @@
             "spline": "EASE_OUT"
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0,
         "particleDuration": 0.4,
         "anim": "WAVE_BIG_TRIANGLE_GUI",
         "type": "PLAY_ANIM"
@@ -508,7 +508,7 @@
             "spline": "EASE_OUT"
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0,
         "particleDuration": 0.4,
         "anim": "WAVE_BIG_TRIANGLE_GUI",
         "type": "PLAY_ANIM"
@@ -558,7 +558,7 @@
             "spline": "EASE_OUT"
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0,
         "particleDuration": 0.4,
         "anim": "WAVE_BIG_TRIANGLE_GUI",
         "type": "PLAY_ANIM"
@@ -608,7 +608,7 @@
             "spline": "EASE_OUT"
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0,
         "particleDuration": 0.4,
         "anim": "WAVE_BIG_TRIANGLE_GUI",
         "type": "PLAY_ANIM"

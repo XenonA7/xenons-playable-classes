@@ -29375,8 +29375,8 @@
       {
         "duration": 0,
         "align": "BOTTOM",
-        "rotateFace": 8,
-        "flipLeftFace": true,
+        "rotateFace": 0,
+        "flipLeftFace": false,
         "wait": false,
         "waitSkip": 0,
         "actionDetached": false,
@@ -29413,7 +29413,7 @@
         "offset": {
           "x": 0,
           "y": -5,
-          "z": 150
+          "z": 175
         },
         "type": "SET_ATTRIB_POS"
       },
@@ -29439,7 +29439,7 @@
       },
       {
         "duration": 0,
-        "align": "BOTTOM",
+        "align": "CENTER",
         "rotateFace": 0,
         "flipLeftFace": false,
         "wait": false,

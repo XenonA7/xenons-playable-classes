@@ -1,3 +1,42 @@
+## 2.20.0 (08/23/2025)
+### New Content
+- New Hexacast combat art: Heal Battery (Wave Guard Lv.2B)
+- Added a teleporter to LPC's new dev room in hideout-southwest (only if the LPC mod is detected as installed)
+### Changes
+- Ethereal Stance removed from main Hexacast player file (replaced by Heal Battery), it is now a custom skill
+- Updated install instructions in README.md
+- Proxy slowDebuffProxy renamed to etherealSlowDebuffProxy
+- Map hideout-hexa now has a "guard rail" system to prevent enemy navigation going off the edge when platform is up
+- Re-ordered some teleporter positions in hideout-southwest
+- Improved animation/effect implementation of Hexacast Sphere Storm
+- Proxy beamBlasterLaser split into beamBlasterHitbox and beamBlasterTelegraph to improve hit reliability
+- Beam Blaster now uses two effect instances of beamBlasterLaserSource and one of beamBlasterLaser
+- Added some additional particles to Beam Blaster
+- Made pScale end more gradual for effect spiritBlastFinalHexagons
+- Improved effect waveTeleportTrail (used by Triblader Phase Jump)
+- Improved effect waveCircleJump (used by Triblader Phase Jump)
+- Added effect freezeRayLaserGroundHexagons to Freeze Rays
+- Reduced audio volume for effect freezeRayLaser
+- Re-worded Blaster Sentry description
+- Triblader Warp Decoy reworked from being inert with HP factor 1.5 to explode on death with HP factor 0.05
+- Triblader Warp Decoy updated description
+- Triblader Warp Decoy added as Lea custom skill
+- Triblader Warp Decoy added as Hexacast custom skill and separated from spheromancer Warp Decoy custom skill
+- Hexacast THROW_NORMAL_REV now shoots clockwise
+- Added a pRotate to effect ruinousDebuffStartHexagons
+### Fixes
+- Fixed party members not being allowed in 2v2 Triblader training map
+- Fixed Triblader2/3/4/5 NE jump/fall sprite frame offset
+- Fixed triblader effect etherBombExplode to use moveWithTarget 0 for all particles
+### Balance
+- Kindling Dance fireball damageFactor decreased from 0.55 to 0.50
+- Arcane Volley initial projectile speeds increased from 300/400 to 375/475 (travels further)
+- Storm Chaser speed progression changed from 140-160-180-200-250-300-600 to 120-130-150-180-250-300-600
+- Stasis Rune target DEF buff increased from +150% to +200%
+- Blaster Sentry (and static custom skill variant) now has a 0.5 second delay before the first shot is fired
+- Freeze Rays rotateTime decreased from 1.7 to 1.5 (rotates faster around player)
+- Triblader Warp Decoy is now slightly nerfed due to the rework (can be more easily destroyed)
+
 ## 2.19.0 (08/09/2025)
 ### New Content
 - New Hexacast combat art: Kindling Dance (Heat Guard Lv.1B)

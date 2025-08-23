@@ -159,6 +159,22 @@
           }
         },
         {
+          "volume": 0.65,
+          "global": false,
+          "loop": false,
+          "speed": 1.4,
+          "sound": "media/sound/battle/enemies/discharge.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "volume": 0.75,
+          "global": false,
+          "loop": false,
+          "speed": 0.3,
+          "sound": "media/sound/puzzle/wave-short-2.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -187,6 +203,54 @@
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
           "anim": "default"
+        },
+        {
+          "time": 0.20,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "sentryCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "sentryAimingBeam"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.30,
+          "type": "WAIT"
         },
         {
           "duration": 0,
@@ -10599,6 +10663,130 @@
       "timeBoni": null,
       "behaviors": [],
       "type": "GENERIC"
+    },
+    "etherealInvisibilityController": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "PROXY_OWNER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.35,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "PROXY_OWNER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "etherealSlowDebuffProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "duration": 6,
+          "target": "PROXY_OWNER",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "slowDebuff"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "target": "OWNER",
+          "timeScale": 0.85,
+          "logicTimeScale": 1,
+          "moveXYScale": 1,
+          "type": "ADD_TEMP_INFLUENCE"
+        },
+        {
+          "time": 4.5,
+          "type": "WAIT"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "slowDebuffGroup",
+      "size": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "config": {},
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -15401,6 +15589,512 @@
           {
             "time": 0.05,
             "type": "WAIT"
+          }
+        ]
+      },
+      "CS_CUSTOM1_HEXACAST_GUARD_SPECIAL2_A": {
+        "name": {
+          "en_US": "\\c[2]Ethereal Stance\\c[0]"
+        },
+        "description": {
+          "en_US": "Enter an ethereal state to recover \\c[2]+20%\\c[0] of your HP and heal status conditions. This process will leave you \\c[1]slowed\\c[0] for a period afterwards."
+        },
+        "dmgType": "MELEE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "sticking": false,
+            "group": "pushAura",
+            "ignoreSelf": false,
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": -1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "sticking": false,
+            "group": "slowDebuffGroup",
+            "ignoreSelf": false,
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "type": "STOP_XY"
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "charge"
+          },
+          {
+            "volume": 0.8,
+            "global": false,
+            "loop": false,
+            "speed": 1,
+            "sound": "media/sound/designer/designer-appear.ogg",
+            "type": "PLAY_SOUND"
+          },
+          {
+            "volume": 0.8,
+            "speed": 1.2,
+            "variance": 0,
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/wave-charge-2.ogg",
+            "type": "PLAY_SOUND"
+          },
+          {
+            "duration": -1,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "group": "trail",
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "waveDashTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.5,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "group": "trail",
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "npc",
+              "name": "shake"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "name": "soulPoint",
+            "target": "SELF",
+            "align": "BOTTOM",
+            "faceDistance": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SET_ATTRIB_POS"
+          },
+          {
+            "value": 0,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "type": "HEAL_STATUS"
+          },
+          {
+            "entity": "SELF",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "vanishInstant"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "target2": "ATTRIB_POINT",
+            "target2Key": "soulPoint",
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "soulTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "volume": 0.90,
+            "global": false,
+            "loop": true,
+            "type": "PLAY_SOUND",
+            "sound": "media/sound/upgrade/floating.ogg"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
+          },
+          {
+            "name": "etherealShield",
+            "actionDetached": false,
+            "shield": {
+              "type": "DIRECTIONAL",
+              "settings": {
+                "neutralize": true,
+                "hitResist": "MASSIVE",
+                "strength": "BLOCK_ALL",
+                "duration": -1,
+                "range": 1,
+                "back": false
+              }
+            },
+            "type": "ADD_SHIELD"
+          },
+          {
+            "duration": 3.2,
+            "align": "CENTER",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "etherealHealing"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "true || entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "align": "BOTTOM",
+                "posType": "SELF",
+                "type": "SHOOT_PROXY",
+                "proxy": "etherealInvisibilityController",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "attribName": "loops",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 8
+          },
+          {
+            "name": "loopStart",
+            "type": "LABEL"
+          },
+          {
+            "attribName": "loops",
+            "changeType": "sub",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "value": 0.025,
+            "target": "SELF",
+            "hideNumbers": false,
+            "type": "REGEN_HP"
+          },
+          {
+            "duration": 0.4,
+            "type": "DISABLE_HEALTHBAR"
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.loops > 0",
+            "thenStep": [
+              {
+                "name": "loopStart",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "target2": "ATTRIB_POINT",
+            "target2Key": "soulPoint",
+            "target2Offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "soulReform"
+            },
+            "offset": {
+              "x": 48,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.65,
+            "type": "DISABLE_HEALTHBAR"
+          },
+          {
+            "time": 0.65,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "damage"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "drops",
+              "name": "healing"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "STOP_SOUNDS"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "puzzle.wave-teleport",
+              "name": "show"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "puzzle.wave-teleport",
+              "name": "appear"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "name": "ss_immune",
+            "type": "REMOVE_SHIELD"
+          },
+          {
+            "value": 2,
+            "type": "SET_Z_GRAVITY_FACTOR"
+          },
+          {
+            "value": 1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 300,
+            "type": "SET_Z_VEL"
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": true,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "etherealStanceExplode"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 64,
+            "yScale": 0,
+            "zHeight": 32,
+            "centralAngle": 1,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": true,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": false,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "HEAVY",
+              "element": "WAVE",
+              "damageFactor": 2,
+              "fly": "MASSIVE",
+              "reverse": false,
+              "status": 0,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "hints": []
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "rumbleType": "RANDOM",
+            "name": "",
+            "duration": 0.2,
+            "power": "STRONGER",
+            "speed": "FASTER",
+            "fade": true,
+            "type": "RUMBLE_SCREEN"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "slowDebuffProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "WAIT",
+            "time": 0.1
+          },
+          {
+            "type": "WAIT_UNTIL_ON_GROUND"
+          },
+          {
+            "fadeOut": 0,
+            "type": "FADE_OUT_ZOOM_BLUR"
+          },
+          {
+            "type": "WAIT",
+            "time": 0.05
           }
         ]
       }

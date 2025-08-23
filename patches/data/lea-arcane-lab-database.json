@@ -3119,6 +3119,27 @@
       "offY": 288
     }
   },
+  "csLeaTribladerWaveDash1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_B",
+        "actionCheckKey": "DASH_SPECIAL1"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Warp Decoy"
+    },
+    "description": {
+      "en_US": "Dash away and leave behind a decoy. Distracts your foes until destroyed, causing it to explode."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 216,
+      "offY": 288
+    }
+  },
   "csLeaTribladerWaveDash2A": {
     "list": [
       {

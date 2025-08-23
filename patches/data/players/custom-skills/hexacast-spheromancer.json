@@ -18933,11 +18933,10 @@
             "type": "STOP_Z_ZENITH"
           },
           {
-            "followUp": "specialLoop",
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "specialShoot"
+            "anim": "tri-throwSpecial"
           },
           {
             "duration": 0.6,
@@ -18953,10 +18952,14 @@
               "sheet": "specials.neutral",
               "name": "biggerSweepLoop"
             },
+              "rotOffset": {
+              "x": 0,
+              "y": -12
+            },
             "offset": {
               "x": 0,
               "y": 0,
-              "z": 0
+              "z": 16
             }
           },
           {

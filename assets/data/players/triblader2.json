@@ -2031,9 +2031,24 @@
           "type": "SET_OWNER_REPLACE_TARGET"
         },
         {
-          "searchType": "CLOSE_RANGE",
-          "distance": 512,
-          "type": "SET_CLOSE_TEMP_TARGET"
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "waveDummyListener",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "battleIdle"
         },
         {
           "duration": -1,
@@ -2056,10 +2071,22 @@
           }
         },
         {
-          "wait": false,
-          "viaWalkConfig": false,
-          "type": "SHOW_ANIMATION",
-          "anim": "battleIdle"
+          "changeType": "set",
+          "attribName": "loopCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 3
+        },
+        {
+          "name": "loop",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 128,
+          "type": "SET_CLOSE_TEMP_TARGET"
         },
         {
           "withElse": false,
@@ -2073,12 +2100,29 @@
           ]
         },
         {
-          "time": 3,
-          "type": "WAIT"
+          "type": "WAIT",
+          "time": 1
+        },
+        {
+          "changeType": "sub",
+          "attribName": "loopCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.loopCount > 0",
+          "thenStep": [
+            {
+              "name": "loop",
+              "type": "GOTO_LABEL"
+            }
+          ]
         }
       ],
       "invisible": false,
-      "hp": 1.5,
+      "hp": 0.05,
       "killEffect": {
         "sheet": "specials.wave",
         "name": "dummyAuraEnd"
@@ -2092,9 +2136,132 @@
         "z": 24
       },
       "config": {
-        "collType": "IGNORE"
+        "collType": "VIRTUAL"
       },
       "type": "GENERIC"
+    },
+    "waveDummyListener": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 2.95,
+          "condition": "entity.src.destroyed"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.src.destroyed",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "type": "SHOOT_PROXY",
+              "proxy": "waveDummyExplosion",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "type": "GENERIC",
+      "config": {}
+    },
+    "waveDummyExplosion": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 1,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0.15,
+          "expandRadius": 16,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "WAVE",
+            "damageFactor": 3.0,
+            "fly": "MASSIVE",
+            "status": 0,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.ele-pillars",
+            "name": "waveBoom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
     },
     "waveDummy2": {
       "copyOwnerAnims": true,
@@ -53900,8 +54067,8 @@
           {
             "duration": 0,
             "align": "BOTTOM",
-            "rotateFace": 8,
-            "flipLeftFace": true,
+            "rotateFace": 0,
+            "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -53938,7 +54105,7 @@
             "offset": {
               "x": 0,
               "y": -5,
-              "z": 150
+              "z": 175
             },
             "type": "SET_ATTRIB_POS"
           },
@@ -53964,7 +54131,7 @@
           },
           {
             "duration": 0,
-            "align": "BOTTOM",
+            "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
             "wait": false,
@@ -54840,15 +55007,9 @@
           "zh_TW": "扭曲圈套"
         },
         "description": {
-          "en_US": "Dash away and leave behind a decoy, distracting your foes.",
-          "de_DE": "Dashe dich in Sicherheit und hinterlasse einen Lockvogel, der deine Feinde ablenkt.",
-          "zh_CN": "冲刺离开，并留下一个可以误导敌人的诱饵。<<A<<[CHANGED 2018/09/02]",
-          "ja_JP": "ダッシュで離脱しつつ、敵の注意を引く残像を残す。<<A<<[CHANGED 2018/09/02]",
-          "ko_KR": "대시로 도망간 뒤 적을 교란하는 미끼를 남깁니다.<<A<<[CHANGED 2018/09/02]",
-          "langUid": 149,
-          "zh_TW": "衝刺離開，並留下一個可以誤導敵人的誘餌。<<A<<[CHANGED 2018/09/02]"
+          "en_US": "Dash away and leave behind a decoy. Distracts your foes until destroyed, causing it to explode."
         },
-        "dmgType": "NONE",
+        "dmgType": "MELEE",
         "stunType": "",
         "status": false,
         "steps": [

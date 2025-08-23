@@ -904,7 +904,7 @@
     ],
     "freezeRayLaser": [
       {
-        "volume": 0.9,
+        "volume": 0.75,
         "global": false,
         "loop": false,
         "variance": 0.05,
@@ -912,7 +912,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.725,
+        "volume": 0.625,
         "global": false,
         "speed": 0.75,
         "variance": 0.05,
@@ -921,7 +921,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.65,
+        "volume": 0.55,
         "global": false,
         "loop": true,
         "fadeDuration": 0.6,
@@ -1195,6 +1195,55 @@
       },
       {
         "time": 0.4,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "freezeRayLaserGroundHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "useTargetAngle": true,
+        "particleRotate": true,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "pAlpha": {
+          "init": 0.20,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "particleDuration": 0.45,
+        "moveWithTarget": 0,
+        "anim": "COLD_BIG_HEXAGON",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.12,
         "type": "WAIT"
       },
       {

@@ -1,0 +1,42 @@
+[
+  {
+    "type": "ENTER",
+    "index": "entities"
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'lqm-joern-mod')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 548,
+          "y": 916,
+          "level": 1,
+          "settings": {
+            "size": {
+              "x": 16,
+              "y": 16
+            },
+            "mapId": 139,
+            "name": "xpc-teleporter",
+            "dir": "SOUTH",
+            "map": "bergen.hideout-southwest",
+            "marker": "lpc-dev",
+            "teleportLabel": {
+              "en_US": "To: XPC Modding Hideout",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "longTelCond": "false",
+            "gfxType": "AR"
+          }
+        }
+      }
+    ]
+  }
+]

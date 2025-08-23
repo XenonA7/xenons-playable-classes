@@ -11,7 +11,7 @@
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
           "type": "TeleportField",
-          "x": 403,
+          "x": 515,
           "y": 297,
           "level": 0,
           "settings": {
@@ -58,7 +58,7 @@
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
           "type": "TeleportField",
-          "x": 403,
+          "x": 515,
           "y": 297,
           "level": 0,
           "settings": {
@@ -90,7 +90,7 @@
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
           "type": "TeleportField",
-          "x": 515,
+          "x": 291,
           "y": 297,
           "level": 0,
           "settings": {
@@ -100,7 +100,7 @@
             "map": "project-red.dev.xenona7-dev",
             "marker": "entrance",
             "teleportLabel": {
-              "en_US": "To: \\c[1]Project Red\\c[0] dev room",
+              "en_US": "To: \\c[1]Project Red\\c[0] - dev room",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",
@@ -126,7 +126,7 @@
               {
                 "type": "SHOW_BOARD_MSG",
                 "text": {
-                  "en_US": "(This mod hasn't been announced yet, so it's currently impossible to obtain).",
+                  "en_US": "(This mod hasn't been announced yet, nor will it be available for a while).",
                   "de_DE": "",
                   "ja_JP": "",
                   "ko_KR": "",
@@ -149,7 +149,7 @@
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
           "type": "TeleportField",
-          "x": 515,
+          "x": 291,
           "y": 297,
           "level": 0,
           "settings": {
@@ -159,7 +159,7 @@
             "map": "project-red.dev.xenona7-dev",
             "marker": "entrance",
             "teleportLabel": {
-              "en_US": "To: \\c[1]Project Red\\c[0] dev room",
+              "en_US": "To: \\c[1]Project Red\\c[0] - dev room",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",
@@ -191,7 +191,7 @@
             "map": "guildac.center",
             "marker": "teleporter",
             "teleportLabel": {
-              "en_US": "To: \\c[3]Arcane Lab\\c[0] main lobby",
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] - main lobby",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",
@@ -238,7 +238,7 @@
             "map": "guildac.center",
             "marker": "teleporter",
             "teleportLabel": {
-              "en_US": "To: \\c[3]Arcane Lab\\c[0] main lobby",
+              "en_US": "To: \\c[3]Arcane Lab\\c[0] - main lobby",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",
@@ -476,6 +476,85 @@
             "marker": "back",
             "teleportLabel": {
               "en_US": "To: \\c[3]Vermillion Training Facility\\c[0] - cave entrance",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'lqm-joern-mod')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 403,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 316,
+            "name": "lpc-dev",
+            "dir": "SOUTH",
+            "map": "heat.lpc-lab.room-1",
+            "marker": "xpc-teleporter",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Lubkuluk's Playable Classes\\c[0] - dev room",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "gfxType": "AR",
+            "longTelCond": "false",
+            "blockEventCondition": "true",
+            "blockEvent": [
+              {
+                "type": "SHOW_BOARD_MSG",
+                "text": {
+                  "en_US": "The \\c[3]Lubkuluk's Playable Classes\\c[0] mod is required to enter.",
+                  "de_DE": "",
+                  "ja_JP": "",
+                  "ko_KR": "",
+                  "zh_CN": "",
+                  "zh_TW": ""
+                },
+                "center": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'lqm-joern-mod')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 403,
+          "y": 297,
+          "level": 0,
+          "settings": {
+            "mapId": 316,
+            "name": "lpc-dev",
+            "dir": "SOUTH",
+            "map": "heat.lpc-lab.room-1",
+            "marker": "xpc-teleporter",
+            "teleportLabel": {
+              "en_US": "To: \\c[3]Lubkuluk's Playable Classes\\c[0] - dev room",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",

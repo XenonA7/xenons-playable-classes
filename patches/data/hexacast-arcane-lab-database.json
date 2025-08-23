@@ -6180,13 +6180,13 @@
     "element": "WAVE",
     "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
     "name": {
-      "en_US": "\\i[class-sphero]\\i[class-tri] Warp Decoy",
-      "de_DE": "\\i[class-sphero]\\i[class-tri] Warp Decoy",
-      "zh_CN": "\\i[class-sphero]\\i[class-tri] 扭曲圈套",
-      "ja_JP": "\\i[class-sphero]\\i[class-tri] ワープデコイ",
-      "ko_KR": "\\i[class-sphero]\\i[class-tri] 워프 미끼",
+      "en_US": "\\i[class-sphero] Warp Decoy",
+      "de_DE": "\\i[class-sphero] Warp Decoy",
+      "zh_CN": "\\i[class-sphero] 扭曲圈套",
+      "ja_JP": "\\i[class-sphero] ワープデコイ",
+      "ko_KR": "\\i[class-sphero] 워프 미끼",
       "langUid": 148,
-      "zh_TW": "\\i[class-sphero]\\i[class-tri] 扭曲圈套"
+      "zh_TW": "\\i[class-sphero] 扭曲圈套"
     },
     "description": {
       "en_US": "Dash away and leave behind a decoy, distracting your foes.",
@@ -6221,6 +6221,27 @@
     "icon": {
       "src": "media/gui/circuit-icons.png",
       "offX": 192,
+      "offY": 288
+    }
+  },
+  "csHexacastTribladerWaveDash1B": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_DASH_SPECIAL1_B",
+        "actionCheckKey": "DASH_SPECIAL1"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-tri] Warp Decoy"
+    },
+    "description": {
+      "en_US": "Dash away and leave behind a decoy. Distracts your foes until destroyed, causing it to explode."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 216,
       "offY": 288
     }
   },
@@ -6675,6 +6696,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 168,
       "offY": 312
+    }
+  },
+  "csHexacastCustom1WaveGuard2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_GUARD_SPECIAL2_A",
+        "actionCheckKey": "GUARD_SPECIAL2"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] \\c[2]Ethereal Stance\\c[0]"
+    },
+    "description": {
+      "en_US": "Enter an ethereal state to recover \\c[2]+20%\\c[0] of your HP and heal status conditions. This process will leave you \\c[1]slowed\\c[0] for a period afterwards."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 48,
+      "offY": 72
     }
   },
   "csHexacastSpheromancerWaveGuard3A": {

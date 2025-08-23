@@ -2261,6 +2261,31 @@
           9,
           9
         ]
+      },
+      {
+        "name": "DUST_UP_FAST",
+        "sheet": {
+          "src": "media/entity/effects/dust.png",
+          "width": 24,
+          "height": 32,
+          "offY": 32
+        },
+        "pivot": {
+          "x": 10,
+          "y": 24
+        },
+        "guiSprites": false,
+        "time": 0.03,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ]
   },
@@ -13938,15 +13963,135 @@
         "type": "PLAY_ANIM_RANGE"
       },
       {
-        "duration": 0.2,
+        "duration": 0.35,
         "numParticles": 20,
         "flyType": "FLY_ARC",
         "inverse": true,
         "offRadiusZScale": 0,
         "rotateMoveDir": "NONE",
-        "particleDuration": 0.3,
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 1.45,
+              "y": 1.45
+            },
+            "spline": "EASE",
+            "time": 0.05
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE",
+            "time": 0.05
+          }
+        },
+        "particleDuration": 0.55,
         "anim": "TELEPORT_DOT1",
         "offsetRadius": 16,
+        "offsetAngle": 1,
+        "phaseDurations": [
+          0
+        ],
+        "type": "SHOOT_HOMING_PARTICLE"
+      },
+      {
+        "duration": 0.12,
+        "numParticles": 2,
+        "flyType": "FLY_ARC",
+        "inverse": true,
+        "offRadiusZScale": 0,
+        "rotateMoveDir": "NONE",
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.15,
+              "y": 0.15
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE",
+            "time": 0.10
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.6,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.60,
+        "angleVary": 1,
+        "anim": "WAVE_BIG_TRIANGLE",
+        "offsetRadius": 4,
+        "offsetAngle": 1,
+        "phaseDurations": [
+          0
+        ],
+        "type": "SHOOT_HOMING_PARTICLE"
+      },
+      {
+        "duration": 0.15,
+        "numParticles": 3,
+        "flyType": "FLY_ARC",
+        "inverse": true,
+        "offRadiusZScale": 0,
+        "rotateMoveDir": "NONE",
+        "pAlpha": {
+          "init": 0.8
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.08,
+              "y": 0.08
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "EASE",
+            "time": 0.10
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.6,
+            "spline": ""
+          }
+        },
+        "particleDuration": 0.60,
+        "angleVary": 1,
+        "anim": "WAVE_BIG_TRIANGLE",
+        "offsetRadius": 10,
         "offsetAngle": 1,
         "phaseDurations": [
           0
@@ -13974,7 +14119,7 @@
         "fadeIn": 0,
         "fadeOut": 0.1,
         "duration": 0.3,
-        "glow": true,
+        "glow": false,
         "type": "LIGHT"
       },
       {
@@ -13991,7 +14136,7 @@
           "z": 0
         },
         "pAlpha": {
-          "init": 0.6,
+          "init": 0.4,
           "start": {
             "value": 0,
             "spline": ""
@@ -14004,15 +14149,44 @@
           },
           "start": {
             "value": {
-              "x": 1,
-              "y": 1
+              "x": 1.2,
+              "y": 1.2
             },
             "spline": "EASE_OUT"
           }
         },
-        "particleDuration": 0.4,
-        "anim": "SHOCKWAVE_B_WAVE",
+        "moveWithTarget": 0,
+        "particleDuration": 0.35,
+        "anim": "WAVE_BIG_TRIANGLE",
         "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 7,
+        "duration": 0.05,
+        "centralAngle": 1,
+        "clockwise": false,
+        "startDist": 24,
+        "random": true,
+        "uniformRandom": 0.3,
+        "flipRightParticles": true,
+        "moveDist": 4,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          }
+        },
+        "moveWithTarget": 0,
+        "cancelable": false,
+        "anim": "DUST_UP_FAST",
+        "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],
     "soulTrail": [

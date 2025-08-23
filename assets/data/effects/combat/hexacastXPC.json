@@ -7509,20 +7509,20 @@
               "x": 0.85,
               "y": 0.85
             },
-            "time": 0.1,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.08,
+            "time": 0.275,
             "spline": "EASE_IN"
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 0.275,
+        "particleDuration": 0.325,
         "anim": "HEXA_WAVE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
@@ -7554,20 +7554,20 @@
               "x": 0.85,
               "y": 0.85
             },
-            "time": 0.1,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.08,
+            "time": 0.275,
             "spline": "EASE_IN"
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 0.275,
+        "particleDuration": 0.325,
         "anim": "HEXA_WAVE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
@@ -13314,7 +13314,7 @@
           "init": 1,
           "end": {
             "value": 0,
-            "time": 0.3,
+            "time": 0.05,
             "spline": ""
           }
         },
@@ -13341,7 +13341,11 @@
           }
         },
         "pRotate": {
-          "init": 0.25
+          "init": 0,
+          "start": {
+            "value": 0.30,
+            "spline": "EASE_IN_OUT"
+          }
         },
         "moveWithTarget": 1,
         "particleDuration": 0.8,
@@ -13366,7 +13370,7 @@
           "init": 1,
           "end": {
             "value": 0,
-            "time": 0.3,
+            "time": 0.05,
             "spline": ""
           }
         },
@@ -13393,7 +13397,11 @@
           }
         },
         "pRotate": {
-          "init": 0.25
+          "init": 0,
+          "start": {
+            "value": 0.30,
+            "spline": "EASE_IN_OUT"
+          }
         },
         "moveWithTarget": 1,
         "particleDuration": 0.8,
@@ -13655,6 +13663,170 @@
         "particleDuration": 0.4,
         "anim": "HEXA_HEAT_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "healBatteryTimer": [
+      {
+        "numParticles": 14,
+        "duration": 8,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 14,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": -0.3,
+          "start": {
+            "value": 0,
+            "time": 0.2,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.15,
+            "y": 0.15
+          },
+          "start": {
+            "value": {
+              "x": 0.4,
+              "y": 0.4
+            },
+            "time": 0.15,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 8.5,
+        "cancelable": true,
+        "anim": "HEXA_WAVE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "healBatteryTriggerZone": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 18,
+        "duration": 1,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "clockwise": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 2,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.75,
+              "y": 0.75
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.3,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.4,
+        "cancelable": true,
+        "anim": "HEXA_WAVE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 18,
+        "duration": 1,
+        "centralAngle": 1,
+        "startAngle": 0.5,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "clockwise": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 2,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.75,
+              "y": 0.75
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.3,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.4,
+        "cancelable": true,
+        "anim": "HEXA_WAVE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 1.0,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

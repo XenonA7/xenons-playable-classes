@@ -1946,62 +1946,6 @@
       },
       "type": "GENERIC"
     },
-    "slowDebuffProxy": {
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "duration": 6,
-          "target": "PROXY_OWNER",
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "slowDebuff"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "target": "OWNER",
-          "timeScale": 0.85,
-          "logicTimeScale": 1,
-          "moveXYScale": 1,
-          "type": "ADD_TEMP_INFLUENCE"
-        },
-        {
-          "time": 4.5,
-          "type": "WAIT"
-        },
-        {
-          "type": "STOP_REPEATING_FORCE"
-        },
-        {
-          "type": "CLEAR_EFFECTS"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "OWNER",
-      "stickFaceAlign": false,
-      "group": "slowDebuffGroup",
-      "size": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "config": {},
-      "type": "GENERIC"
-    },
     "iceCardSmallHome": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
@@ -6284,7 +6228,7 @@
           "distance": 72,
           "duration": 0.675,
           "ccw": true,
-          "rotateTime": 1.7,
+          "rotateTime": 1.5,
           "distAdjustSpeed": 400,
           "zDistance": 0,
           "waitTargetAlign": false,
@@ -6310,6 +6254,26 @@
           "effect": {
             "sheet": "specials.cold",
             "name": "freezeRayLaserTrailGround"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "freezeRayLaserGroundHexagons"
           },
           "offset": {
             "x": 0,
@@ -6378,7 +6342,7 @@
           "distance": 72,
           "duration": 3,
           "ccw": true,
-          "rotateTime": 1.7,
+          "rotateTime": 1.5,
           "distAdjustSpeed": 400,
           "zDistance": 0,
           "waitTargetAlign": false,
@@ -13060,7 +13024,7 @@
         "wall": "neutralCardWallDeath",
         "air": "neutralCardAirDeath"
       },
-      "speed": 400,
+      "speed": 475,
       "maxBounce": 0,
       "timer": 1,
       "trail": true,
@@ -13138,7 +13102,7 @@
         "wall": "neutralCardWallDeath",
         "air": "neutralCardAirDeath"
       },
-      "speed": 300,
+      "speed": 375,
       "maxBounce": 0,
       "timer": 1,
       "trail": true,
@@ -17858,6 +17822,11 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
+          "name": "beamBlasterStart",
+          "type": "SET_ATTRIB_BOOL",
+          "value": false
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -17943,7 +17912,7 @@
           "delay": 0,
           "repeat": false,
           "type": "SHOOT_PROXY_RANGE",
-          "proxy": "beamBlasterLaser",
+          "proxy": "beamBlasterTelegraph",
           "offset": {
             "x": 0,
             "y": 0,
@@ -17951,7 +17920,106 @@
           }
         },
         {
-          "time": 1.0,
+          "type": "WAIT_UNTIL",
+          "condition": "entity.attrib.beamBlasterStart",
+          "maxTime": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.beamBlasterStart",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0,
+              "startDistCollide": "CLOSER",
+              "startAngle": 0,
+              "angleVary": 0,
+              "startDist": 0,
+              "count": 1,
+              "duration": 0,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": false,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "beamBlasterHitbox",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "duration": 0,
+              "align": "BOTTOM",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "beamBlasterDotBurst1"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "duration": 0,
+              "align": "BOTTOM",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "beamBlasterDotBurst2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "duration": 0,
+              "align": "BOTTOM",
+              "rotOffset": {
+                "x": 0,
+                "y": -64
+              },
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "beamBlasterDotBurst2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "time": 0.4,
           "type": "WAIT"
         }
       ],
@@ -17972,7 +18040,7 @@
         "shadow": 16
       }
     },
-    "beamBlasterLaser": {
+    "beamBlasterTelegraph": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -18046,9 +18114,14 @@
           "type": "CLEAR_EFFECTS"
         },
         {
-          "duration": 0.4,
+          "name": "beamBlasterStart",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_SOURCE",
+          "value": true
+        },
+        {
+          "duration": 0.45,
           "align": "BOTTOM",
-          "target": "PROXY_SRC",
           "rotOffset": {
             "x": 0,
             "y": -12
@@ -18071,13 +18144,29 @@
           }
         },
         {
-          "value": 0.0001,
-          "type": "SET_BOUNCINESS"
-        },
-        {
-          "value": false,
-          "immediately": true,
-          "type": "FACE_TO_TARGET"
+          "duration": 0.45,
+          "align": "BOTTOM",
+          "target": "PROXY_SRC",
+          "rotOffset": {
+            "x": 0,
+            "y": -12
+          },
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "beamBlasterLaserSource"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
           "duration": 0.4,
@@ -18106,6 +18195,41 @@
           }
         },
         {
+          "time": 0.4,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "config": {
+        "collType": "IGNORE",
+        "airFriction": 1,
+        "maxVel": 3500,
+        "zGravityFactor": 0,
+        "bounciness": 0.0001
+      },
+      "type": "GENERIC"
+    },
+    "beamBlasterHitbox": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 3500,
+          "type": "SET_SPEED"
+        },
+        {
           "align": "BOTTOM",
           "radius": 20,
           "yScale": 0,
@@ -18126,7 +18250,7 @@
             "type": "HEAVY",
             "element": "WAVE",
             "damageFactor": 3,
-            "reverse": true,
+            "reverse": false,
             "status": 0.7,
             "fly": "MASSIVE",
             "spFactor": 0,
@@ -18143,24 +18267,10 @@
           }
         },
         {
-          "value": 4000,
-          "type": "SET_SPEED"
-        },
-        {
-          "min": 0,
-          "max": 12,
-          "maxTime": 1,
-          "forceTime": false,
-          "rotateSpeed": 0,
+          "time": 1,
           "stopBeforeEdge": false,
-          "type": "MOVE_TO_DISTANCE"
-        },
-        {
-          "type": "STOP_XY"
-        },
-        {
-          "time": 0.05,
-          "type": "WAIT"
+          "collideCancel": 1,
+          "type": "MOVE_FORWARD"
         }
       ],
       "invisible": false,
@@ -25633,6 +25743,22 @@
           }
         },
         {
+          "volume": 0.65,
+          "global": false,
+          "loop": false,
+          "speed": 1.4,
+          "sound": "media/sound/battle/enemies/discharge.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "volume": 0.75,
+          "global": false,
+          "loop": false,
+          "speed": 0.3,
+          "sound": "media/sound/puzzle/wave-short-2.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
           "duration": -1,
           "align": "CENTER",
           "rotateFace": 0,
@@ -25661,6 +25787,54 @@
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
           "anim": "default"
+        },
+        {
+          "time": 0.20,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "sentryCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "sentryAimingBeam"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.30,
+          "type": "WAIT"
         },
         {
           "duration": 0,
@@ -37486,74 +37660,6 @@
       },
       "timeBoni": null
     },
-    "etherealInvisibilityController": {
-      "copyOwnerAnims": false,
-      "breakType": "ACTION",
-      "action": [
-        {
-          "duration": 0,
-          "align": "BOTTOM",
-          "target": "PROXY_OWNER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": true,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "vanishInstant"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "time": 0.35,
-          "type": "WAIT"
-        },
-        {
-          "duration": 0,
-          "align": "BOTTOM",
-          "target": "PROXY_OWNER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": true,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "combat.tribladerXPC",
-            "name": "vanishInstant"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "time": 0.1,
-          "type": "WAIT"
-        }
-      ],
-      "invisible": false,
-      "hp": 0,
-      "stickToSource": "OWNER",
-      "stickFaceAlign": false,
-      "group": "",
-      "size": {
-        "x": 16,
-        "y": 16,
-        "z": 16
-      },
-      "config": {},
-      "type": "GENERIC"
-    },
     "rayCard1": {
       "animation": {
         "shapeType": "Y_FLAT",
@@ -39240,7 +39346,7 @@
           }
         },
         {
-          "value": 140,
+          "value": 120,
           "type": "SET_SPEED"
         },
         {
@@ -39291,7 +39397,7 @@
           ]
         },
         {
-          "value": 160,
+          "value": 130,
           "type": "SET_SPEED"
         },
         {
@@ -39342,7 +39448,7 @@
           ]
         },
         {
-          "value": 180,
+          "value": 150,
           "type": "SET_SPEED"
         },
         {
@@ -39393,7 +39499,7 @@
           ]
         },
         {
-          "value": 200,
+          "value": 180,
           "type": "SET_SPEED"
         },
         {
@@ -48253,7 +48359,7 @@
       "attack": {
         "type": "MEDIUM",
         "element": "HEAT",
-        "damageFactor": 0.55,
+        "damageFactor": 0.50,
         "reverse": false,
         "status": 0.85,
         "guardable": "",
@@ -48335,6 +48441,806 @@
           "type": "SLOW_DOWN"
         }
       ]
+    },
+    "healBatteryTimer": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "healBatteryCard",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1.0,
+          "type": "WAIT"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "time": 54,
+          "type": "WAIT"
+        },
+        {
+          "kind": "ACTION_PROXY",
+          "key": "healBatteryCardGroup",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "target": "TARGET",
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryFading"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 6,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "healBatteryGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "healBatteryCard": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 12,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 256,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "flipping",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  5,
+                  6,
+                  7,
+                  7,
+                  6,
+                  5
+                ],
+                "flipY": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "healCardDeath"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "batteryTrigger",
+          "value": false
+        },
+        {
+          "value": 42,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "accel": 2,
+          "variance": 5,
+          "speed": 800,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "beamBlasterCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveCardSmallAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1.0,
+          "type": "WAIT"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "accel": 0.5,
+          "variance": 5,
+          "speed": 800,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "value": 14,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryTimer"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1.0,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryHoverFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -4
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "accel": 1,
+          "variance": 2,
+          "speed": 300,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "time": 6.8,
+          "type": "WAIT"
+        },
+        {
+          "name": "batteryCharged",
+          "type": "LABEL"
+        },
+        {
+          "group": "timer",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotating"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryReady"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "chargedFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryFull"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "chargedFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "healBatteryTriggerZone"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "healBatteryTrigger",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 32,
+          "yScale": 0,
+          "zHeight": 48,
+          "centralAngle": 1,
+          "duration": 100.2,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "party": "ENEMY",
+          "attack": {
+            "type": "NONE",
+            "visualType": "NONE",
+            "element": "WAVE",
+            "damageFactor": 0,
+            "reverse": false,
+            "guardable": "NEVER",
+            "skillBonus": "",
+            "limiter": "SIGNAL",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "condition": "entity.attrib.batteryTrigger",
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "group": "chargedFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "batteryTrigger",
+          "value": false
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "healBatteryHealProxy",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryHealPulse"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 1,
+          "yScale": 0,
+          "zHeight": 48,
+          "centralAngle": 1,
+          "duration": 0.6,
+          "expandRadius": 63,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "party": "ENEMY",
+          "attack": {
+            "type": "NONE",
+            "element": "WAVE",
+            "damageFactor": 0,
+            "reverse": false,
+            "guardable": "NEVER",
+            "skillBonus": "",
+            "limiter": "SIGNAL",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.6,
+          "type": "WAIT"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryTimer"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 8,
+          "type": "WAIT"
+        },
+        {
+          "name": "batteryCharged",
+          "type": "GOTO_LABEL"
+        }
+      ],
+      "invisible": false,
+      "hp": 1.75,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "healBatteryCardGroup",
+      "type": "GENERIC",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "collType": "IGNORE",
+        "zGravityFactor": 0,
+        "shadow": 16
+      }
+    },
+    "healBatteryTrigger": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "name": "batteryTrigger",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_SOURCE",
+          "value": true
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "frigidFlurryTriggerGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "healBatteryInitialHealProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 0.050,
+          "target": "TARGET",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "TARGET",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healingCustom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "healBatteryHealProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 0.040,
+          "target": "TARGET",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "TARGET",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healingCustom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -68957,7 +69863,7 @@
           "en_US": "Stasis Rune"
         },
         "description": {
-          "en_US": "Hit a single enemy to freeze them in time. Grants \\c[3]+150%\\c[0] DEF to enemy while active and does not deal any damage. Has its own cooldown, during which this art will backfire and become \\c[3]Throttle Hex\\c[0]."
+          "en_US": "Hit a single enemy to freeze them in time. Grants \\c[3]+200%\\c[0] DEF to enemy while active and does not deal any damage. Has its own cooldown, during which this art will backfire and become \\c[3]Throttle Hex\\c[0]."
         },
         "dmgType": "NONE",
         "stunType": "LOCK",
@@ -72745,7 +73651,7 @@
           "en_US": "Blaster Sentry"
         },
         "description": {
-          "en_US": "Fire a more powerful laser and leave a lingering sentry card which continues to fire at enemies."
+          "en_US": "Deploy a lingering sentry card which shoots a powerful laser before automatically continuing to fire at enemies."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -78217,405 +79123,32 @@
       },
       "GUARD_SPECIAL2_B": {
         "name": {
-          "en_US": "\\c[2]Ethereal Stance\\c[0]"
+          "en_US": "\\c[2]Heal Battery\\c[0]"
         },
         "description": {
-          "en_US": "Enter an ethereal state to recover \\c[2]+20%\\c[0] of your HP and heal status conditions. This process will leave you \\c[1]slowed\\c[0] for a period afterwards."
+          "en_US": "Deploy a stationary healing spell card. Walk up to it while it's charged to receive healing, after which it will recharge."
         },
-        "dmgType": "MELEE",
+        "dmgType": "NONE",
         "stunType": "",
         "status": false,
         "steps": [
           {
             "sticking": false,
-            "group": "pushAura",
+            "group": "healBatteryGroup",
             "ignoreSelf": false,
             "type": "REMOVE_PROXIES"
           },
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0.25,
               "action": -1,
               "move": -1,
               "reaim": -1
             }
           },
           {
-            "sticking": false,
-            "group": "slowDebuffGroup",
-            "ignoreSelf": false,
-            "type": "REMOVE_PROXIES"
-          },
-          {
-            "type": "STOP_XY"
-          },
-          {
             "value": -1,
-            "type": "SET_WEIGHT"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "charge"
-          },
-          {
-            "volume": 0.8,
-            "global": false,
-            "loop": false,
-            "speed": 1,
-            "sound": "media/sound/designer/designer-appear.ogg",
-            "type": "PLAY_SOUND"
-          },
-          {
-            "volume": 0.8,
-            "speed": 1.2,
-            "variance": 0,
-            "global": false,
-            "loop": false,
-            "sound": "media/sound/battle/wave-charge-2.ogg",
-            "type": "PLAY_SOUND"
-          },
-          {
-            "duration": -1,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "group": "trail",
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.wave",
-              "name": "waveDashTrail"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0.5,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "group": "trail",
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "npc",
-              "name": "shake"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
-          },
-          {
-            "value": "IGNORE",
-            "type": "SET_COLL_TYPE"
-          },
-          {
-            "name": "soulPoint",
-            "target": "SELF",
-            "align": "BOTTOM",
-            "faceDistance": 0,
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "type": "SET_ATTRIB_POS"
-          },
-          {
-            "value": 0,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "type": "HEAL_STATUS"
-          },
-          {
-            "entity": "SELF",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "combat.tribladerXPC",
-              "name": "vanishInstant"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "target2": "ATTRIB_POINT",
-            "target2Key": "soulPoint",
-            "fixPos": true,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.wave",
-              "name": "soulTrail"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "volume": 0.90,
-            "global": false,
-            "loop": true,
-            "type": "PLAY_SOUND",
-            "sound": "media/sound/upgrade/floating.ogg"
-          },
-          {
-            "time": 0.02,
-            "type": "WAIT"
-          },
-          {
-            "name": "etherealShield",
-            "actionDetached": false,
-            "shield": {
-              "type": "DIRECTIONAL",
-              "settings": {
-                "neutralize": true,
-                "hitResist": "MASSIVE",
-                "strength": "BLOCK_ALL",
-                "duration": -1,
-                "range": 1,
-                "back": false
-              }
-            },
-            "type": "ADD_SHIELD"
-          },
-          {
-            "duration": 3.2,
-            "align": "CENTER",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.wave",
-              "name": "etherealHealing"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "withElse": false,
-            "type": "IF",
-            "condition": "true || entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "align": "BOTTOM",
-                "posType": "SELF",
-                "type": "SHOOT_PROXY",
-                "proxy": "etherealInvisibilityController",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ]
-          },
-          {
-            "attribName": "loops",
-            "changeType": "set",
-            "type": "SET_ATTRIB_NUMBER",
-            "value": 8
-          },
-          {
-            "name": "loopStart",
-            "type": "LABEL"
-          },
-          {
-            "attribName": "loops",
-            "changeType": "sub",
-            "type": "SET_ATTRIB_NUMBER",
-            "value": 1
-          },
-          {
-            "value": 0.025,
-            "target": "SELF",
-            "hideNumbers": false,
-            "type": "REGEN_HP"
-          },
-          {
-            "duration": 0.4,
-            "type": "DISABLE_HEALTHBAR"
-          },
-          {
-            "time": 0.4,
-            "type": "WAIT"
-          },
-          {
-            "withElse": false,
-            "type": "IF",
-            "condition": "entity.attrib.loops > 0",
-            "thenStep": [
-              {
-                "name": "loopStart",
-                "type": "GOTO_LABEL"
-              }
-            ]
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "target2": "ATTRIB_POINT",
-            "target2Key": "soulPoint",
-            "target2Offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "fixPos": true,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.wave",
-              "name": "soulReform"
-            },
-            "offset": {
-              "x": 48,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0.65,
-            "type": "DISABLE_HEALTHBAR"
-          },
-          {
-            "time": 0.65,
-            "type": "WAIT"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "damage"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "drops",
-              "name": "healing"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "type": "STOP_SOUNDS"
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "puzzle.wave-teleport",
-              "name": "show"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "duration": 0,
-            "align": "BOTTOM",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "puzzle.wave-teleport",
-              "name": "appear"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "name": "ss_immune",
-            "type": "REMOVE_SHIELD"
-          },
-          {
-            "value": 2,
-            "type": "SET_Z_GRAVITY_FACTOR"
-          },
-          {
-            "value": 1,
             "type": "SET_WEIGHT"
           },
           {
@@ -78623,12 +79156,56 @@
             "type": "SET_HIT_STABLE"
           },
           {
-            "value": false,
-            "type": "SET_JUMPING"
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
           },
           {
-            "value": 300,
-            "type": "SET_Z_VEL"
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "idle"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "handUpPre",
+            "followUp": "handUpLoop"
+          },
+          {
+            "group": "healBatteryGroup",
+            "keepCount": 0,
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "healBatteryTimer",
+            "offset": {
+              "x": 4,
+              "y": 0,
+              "z": 42
+            }
+          },
+          {
+            "posType": "TARGET",
+            "align": "BOTTOM",
+            "type": "SET_HIT_PROXY",
+            "proxy": "healBatteryInitialHealProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
           },
           {
             "duration": 0,
@@ -78638,11 +79215,11 @@
             "wait": false,
             "waitSkip": 0,
             "actionDetached": true,
-            "fixPos": true,
+            "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.wave",
-              "name": "etherealStanceExplode"
+              "name": "healBatteryInitialHealPulse"
             },
             "offset": {
               "x": 0,
@@ -78652,12 +79229,12 @@
           },
           {
             "align": "BOTTOM",
-            "radius": 64,
+            "radius": 1,
             "yScale": 0,
-            "zHeight": 32,
+            "zHeight": 48,
             "centralAngle": 1,
-            "duration": 0.2,
-            "expandRadius": 0,
+            "duration": 0.6,
+            "expandRadius": 63,
             "alwaysFull": true,
             "clockwise": false,
             "flipLeftFace": 0,
@@ -78667,17 +79244,18 @@
             "fixPos": false,
             "checkCollision": false,
             "type": "CIRCLE_ATTACK",
+            "party": "ENEMY",
             "attack": {
-              "type": "HEAVY",
+              "type": "NONE",
               "element": "WAVE",
-              "damageFactor": 2,
-              "fly": "MASSIVE",
+              "damageFactor": 0,
               "reverse": false,
-              "status": 0,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG",
-              "limiter": "",
-              "hints": []
+              "guardable": "NEVER",
+              "skillBonus": "",
+              "limiter": "SIGNAL",
+              "hints": [
+                "NO_PUZZLE"
+              ]
             },
             "offset": {
               "x": 0,
@@ -78686,38 +79264,30 @@
             }
           },
           {
-            "rumbleType": "RANDOM",
-            "name": "",
-            "duration": 0.2,
-            "power": "STRONGER",
-            "speed": "FASTER",
-            "fade": true,
-            "type": "RUMBLE_SCREEN"
+            "time": 0.6,
+            "type": "WAIT"
           },
           {
-            "align": "BOTTOM",
-            "type": "SHOOT_PROXY",
-            "proxy": "slowDebuffProxy",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
             }
           },
           {
-            "type": "WAIT",
-            "time": 0.1
-          },
-          {
-            "type": "WAIT_UNTIL_ON_GROUND"
-          },
-          {
-            "fadeOut": 0,
-            "type": "FADE_OUT_ZOOM_BLUR"
-          },
-          {
-            "type": "WAIT",
-            "time": 0.05
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
           }
         ]
       },

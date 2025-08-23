@@ -29142,6 +29142,249 @@
         "collType": "NONE"
       },
       "type": "GENERIC"
+    },
+    "tri-waveDummy": {
+      "copyOwnerAnims": true,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "type": "SET_OWNER_REPLACE_TARGET"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "tri-waveDummyListener",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "tri-battleIdle"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "waveDummyAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "changeType": "set",
+          "attribName": "loopCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 3
+        },
+        {
+          "name": "loop",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "searchType": "CLOSE_RANGE",
+          "distance": 128,
+          "type": "SET_CLOSE_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "value": true,
+              "type": "FACE_TO_TARGET"
+            }
+          ]
+        },
+        {
+          "type": "WAIT",
+          "time": 1
+        },
+        {
+          "changeType": "sub",
+          "attribName": "loopCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.loopCount > 0",
+          "thenStep": [
+            {
+              "name": "loop",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        }
+      ],
+      "invisible": false,
+      "hp": 0.05,
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "dummyAuraEnd"
+      },
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 24
+      },
+      "config": {
+        "collType": "VIRTUAL"
+      },
+      "type": "GENERIC"
+    },
+    "tri-waveDummyListener": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "WAIT_UNTIL",
+          "maxTime": 2.95,
+          "condition": "entity.src.destroyed"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.src.destroyed",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "type": "SHOOT_PROXY",
+              "proxy": "tri-waveDummyExplosion",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "type": "GENERIC",
+      "config": {}
+    },
+    "tri-waveDummyExplosion": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 1,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0.15,
+          "expandRadius": 16,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "WAVE",
+            "damageFactor": 3.0,
+            "fly": "MASSIVE",
+            "status": 0,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "enemies.ele-pillars",
+            "name": "waveBoom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
     }
   },
   "actions": {
@@ -59024,6 +59267,118 @@
           }
         ]
       },
+      "CS_TRIBLADER_DASH_SPECIAL1_B": {
+        "name": {
+          "en_US": "Warp Decoy",
+          "de_DE": "Warp Decoy",
+          "zh_CN": "扭曲圈套",
+          "ja_JP": "ワープデコイ",
+          "ko_KR": "워프 미끼",
+          "langUid": 148,
+          "zh_TW": "扭曲圈套"
+        },
+        "description": {
+          "en_US": "Dash away and leave behind a decoy. Distracts your foes until destroyed, causing it to explode."
+        },
+        "dmgType": "MELEE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.15,
+              "action": 0.3,
+              "move": 0.3,
+              "reaim": 0.3
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "tri-waveDummy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "tri-battleRun"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "value": 400,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 2,
+            "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "value": true,
+            "type": "SET_FACE_FIX"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "waveDashTrail"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.2,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "idle"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "time": 0.4,
+            "type": "WAIT"
+          }
+        ]
+      },
       "CS_TRIBLADER_DASH_SPECIAL2_A": {
         "name": {
           "en_US": "Soul Shatter"
@@ -60635,7 +60990,7 @@
           {
             "duration": 0,
             "align": "BOTTOM",
-            "rotateFace": 8,
+            "rotateFace": 0,
             "flipLeftFace": true,
             "wait": false,
             "waitSkip": 0,
@@ -60673,7 +61028,7 @@
             "offset": {
               "x": 0,
               "y": -5,
-              "z": 150
+              "z": 175
             },
             "type": "SET_ATTRIB_POS"
           },
@@ -60699,7 +61054,7 @@
           },
           {
             "duration": 0,
-            "align": "BOTTOM",
+            "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
             "wait": false,

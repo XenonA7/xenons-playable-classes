@@ -48442,6 +48442,248 @@
         }
       ]
     },
+    "healBatteryPrimer": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 12,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 256,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "flipping",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  5,
+                  6,
+                  7,
+                  7,
+                  6,
+                  5
+                ],
+                "flipY": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "healCardDeath"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "value": 42,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "accel": 2,
+          "variance": 5,
+          "speed": 800,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "beamBlasterCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveCardSmallAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.75,
+          "type": "WAIT"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "healBatteryTimer",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "type": "GENERIC",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 16
+      }
+    },
     "healBatteryTimer": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
@@ -48457,7 +48699,7 @@
           }
         },
         {
-          "time": 1.0,
+          "time": 0.25,
           "type": "WAIT"
         },
         {
@@ -48648,24 +48890,8 @@
           "type": "SET_FLOAT_PARAMS"
         },
         {
-          "duration": 0,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "beamBlasterCardAppear"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
+          "kind": "PROXY_OWNER",
+          "type": "SET_TEMP_TARGET"
         },
         {
           "duration": -1,
@@ -48708,7 +48934,7 @@
           }
         },
         {
-          "time": 1.0,
+          "time": 0.25,
           "type": "WAIT"
         },
         {
@@ -48729,6 +48955,10 @@
         {
           "value": 14,
           "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "value": "IGNORE",
+          "type": "SET_COLL_TYPE"
         },
         {
           "duration": 0,
@@ -48849,6 +49079,42 @@
             "y": 0,
             "z": 0
           }
+        },
+        {
+          "withElse": false,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "min": 0,
+              "max": 200,
+              "type": "!TARGET_DISTANCE"
+            }
+          ],
+          "thenStep": [
+            {
+              "duration": 0,
+              "target": "SELF",
+              "align": "BOTTOM",
+              "rotateFace": -1,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "target2": "PROXY_OWNER",
+              "target2Align": "CENTER",
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "batteryChargeIndicator"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
         },
         {
           "duration": -1,
@@ -48997,6 +49263,10 @@
           }
         },
         {
+          "value": "NONE",
+          "type": "SET_COLL_TYPE"
+        },
+        {
           "align": "BASE",
           "radius": 1,
           "yScale": 0,
@@ -49039,11 +49309,20 @@
         {
           "type": "CLEAR_HIT_PROXY"
         },
+
         {
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
           "anim": "default"
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "value": "IGNORE",
+          "type": "SET_COLL_TYPE"
         },
         {
           "duration": 0,
@@ -49108,7 +49387,7 @@
         "z": 8
       },
       "config": {
-        "collType": "IGNORE",
+        "collType": "NONE",
         "zGravityFactor": 0,
         "shadow": 16
       }
@@ -49199,7 +49478,7 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "value": 0.040,
+          "value": 0.060,
           "target": "TARGET",
           "hideNumbers": false,
           "type": "REGEN_HP"
@@ -79141,7 +79420,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.25,
+              "dash": 0.9,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -79189,7 +79468,7 @@
           {
             "align": "BOTTOM",
             "type": "SHOOT_PROXY",
-            "proxy": "healBatteryTimer",
+            "proxy": "healBatteryPrimer",
             "offset": {
               "x": 4,
               "y": 0,

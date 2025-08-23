@@ -2137,7 +2137,7 @@
         "z": 24
       },
       "config": {
-        "collType": "VIRTUAL"
+        "collType": "IGNORE"
       },
       "type": "GENERIC"
     },

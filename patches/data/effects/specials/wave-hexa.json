@@ -20293,6 +20293,41 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "batteryChargeIndicator": [
+      {
+        "duration": 0.6,
+        "numParticles": 4,
+        "flyType": "FLY_ARC",
+        "inverse": false,
+        "offRadiusZScale": 1.5,
+        "rotateMoveDir": "MOVE_DIR",
+        "particleDuration": 0.45,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0,
+            "time": 0.05,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.5,
+            "y": 2
+          }
+        },
+        "anim": "WAVE_DOT1",
+        "offsetRadius": 8,
+        "offsetAngle": 1,
+        "phaseDurations": [],
+        "type": "SHOOT_HOMING_PARTICLE"
+      }
     ]
   }
 }

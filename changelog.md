@@ -1,3 +1,14 @@
+## 2.20.1 (08/23/2025)
+### Changes
+- Heal Battery now shows an indicator effect if it charges while over distance 200 from the player
+### Fixes
+- Fixed Triblader Warp Decoy wrong collision type
+- Minimized proxy healBatteryCard's signal hitbox visual damage effect issue with new manual collType management
+### Balance
+- Heal Battery is now interruptible during the first 0.75 seconds of casting
+- Heal Battery dash cancel delay increased from 0.25 to 0.9
+- Heal Battery subsequent heal strength increased from 4% to 6% (initial heal is 5%)
+
 ## 2.20.0 (08/23/2025)
 ### New Content
 - New Hexacast combat art: Heal Battery (Wave Guard Lv.2B)
@@ -22,7 +33,6 @@
 - Triblader Warp Decoy updated description
 - Triblader Warp Decoy added as Lea custom skill
 - Triblader Warp Decoy added as Hexacast custom skill and separated from spheromancer Warp Decoy custom skill
-- Hexacast THROW_NORMAL_REV now shoots clockwise
 - Added a pRotate to effect ruinousDebuffStartHexagons
 ### Fixes
 - Fixed party members not being allowed in 2v2 Triblader training map

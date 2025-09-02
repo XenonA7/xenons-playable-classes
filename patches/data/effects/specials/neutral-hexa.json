@@ -12112,7 +12112,7 @@
         "particleDuration": 0.8,
         "particleDurVariance": 0.2,
         "angleVary": 1,
-        "cancelable": false,
+        "cancelable": true,
         "anim": "SHINE_SPARKLE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
@@ -12154,7 +12154,7 @@
         "particleDuration": 0.8,
         "particleDurVariance": 0.2,
         "angleVary": 1,
-        "cancelable": false,
+        "cancelable": true,
         "anim": "SHINE_SPARKLE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },

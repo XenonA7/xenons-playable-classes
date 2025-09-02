@@ -12963,8 +12963,8 @@
       {
         "size": "XXL",
         "fadeIn": 0,
-        "fadeOut": 0.3,
-        "duration": -1,
+        "fadeOut": 0.5,
+        "duration": 1.1,
         "glow": false,
         "type": "LIGHT"
       },

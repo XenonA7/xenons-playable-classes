@@ -1,3 +1,25 @@
+## 2.21.0 (09/01/2025)
+### New Content
+- New Hexacast combat art: Lateral Sublimation (Cold Melee Lv.3A)
+- Added three new Hexacast tips in hideout-lobby
+### Changes
+- Darkened north exit shadows for maps dark-passage-1 and dark-passage-2 to increased visibility
+- Icicle Lance will now fail and refund SP if you use it too close to a wall such that no proxies actually spawn
+- Ruinous Pulse hitbox is now handled by a controller proxy to allow the full pulse to continue after the art is canceled mid-pulse
+- Proxy healBatteryPrimer now uses new effect healBatteryCardAppear instead of beamBlasterCardAppear
+- Reduced screen flash intensity for effect coldExplodeBigHexagon
+### Fixes
+- Heal Battery signal hitbox height reduced from 48 to 32 to prevent harvesting plants on cliffs
+- Removed offset from effect healBatteryTriggerZone
+- Fixed light source duration for effect kindlingDancePushArea (and shadowflame alt effect)
+- Fixed light source duration for effect healBatteryInitialHealPulse
+- Fixed Phase Jump proxy exploTrail not having DETACH_TIME_PARENT
+### Balance
+- Heal Battery recharge time reduced from 8 seconds to 6 seconds
+- Heal Battery subsequent heal strength increased from 6% to 7.5% (initial heal is 5%)
+- Heal Battery lifetime decreased from 60 seconds to 50 seconds
+- Ruinous Pulse now has a 0.5 second window where it cannot be canceled starting when the pulse begins
+
 ## 2.20.1 (08/23/2025)
 ### Changes
 - Heal Battery now shows an indicator effect if it charges while over distance 200 from the player

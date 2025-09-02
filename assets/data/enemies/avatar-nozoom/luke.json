@@ -10290,6 +10290,9 @@
       "breakType": "COMBATANT",
       "action": [
         {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
           "value": 300,
           "type": "SET_SPEED"
         },

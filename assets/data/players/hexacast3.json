@@ -3954,10 +3954,9 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "group": "throttleGroup",
-          "ignoreSelf": true,
-          "keepCount": 1,
-          "type": "REMOVE_PROXIES"
+          "entity": "TARGET",
+          "group": "throttleEnemyAuraFX",
+          "type": "CLEAR_EFFECTS"
         },
         {
           "volume": 2.2,
@@ -4024,6 +4023,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "throttleEnemyAuraFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
@@ -4066,6 +4066,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "throttleEnemyAuraFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
@@ -4085,7 +4086,7 @@
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
-          "time": 8,
+          "time": 10,
           "type": "WAIT"
         },
         {
@@ -4119,10 +4120,9 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "group": "throttleGroup",
-          "ignoreSelf": true,
-          "keepCount": 1,
-          "type": "REMOVE_PROXIES"
+          "entity": "TARGET",
+          "group": "throttleEnemyAuraFX",
+          "type": "CLEAR_EFFECTS"
         },
         {
           "volume": 2.2,
@@ -4189,6 +4189,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "throttleEnemyAuraFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
@@ -4231,6 +4232,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "throttleEnemyAuraFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.shock",
@@ -4250,7 +4252,7 @@
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
-          "time": 8,
+          "time": 10,
           "type": "WAIT"
         },
         {
@@ -72274,7 +72276,7 @@
           "en_US": "Throttle Hex"
         },
         "description": {
-          "en_US": "Hit an enemy with a hex that causes minor lightning strikes and slows the target's time flow by \\c[3]-15%\\c[0] for a short time. Only one Throttle Hex can be active at a time. Stacks with the Chill status."
+          "en_US": "Hit an enemy with a hex that causes minor lightning strikes and slows the target's time flow by \\c[3]-15%\\c[0] for a short time. Stacks with the Chill status."
         },
         "dmgType": "MELEE",
         "stunType": "Interrupt",
@@ -81813,17 +81815,17 @@
                 "type": "MOVE_BACKWARD"
               },
               {
-                "time": 0.3,
-                "type": "WAIT"
-              },
-              {
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0,
-                  "move": 0,
-                  "reaim": 0
+                  "action": 0.3,
+                  "move": 0.3,
+                  "reaim": 0.3
                 }
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
               },
               {
                 "followUp": "preIdle",

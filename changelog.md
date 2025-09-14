@@ -1,3 +1,13 @@
+## 2.22.1 (09/14/2025)
+### New Content
+- Added a new Hexacast tip in hideout-lobby
+### Changes
+- Throttle Hex description updated.
+### Balance
+- Throttle Hex can now be used on an unlimited number of different enemies simultaneously, although multiple cannot stack on the same enemy.
+- Throttle Hex duration increased from 8 seconds to 10 seconds
+- Reduced delay before dash cancel is allowed for Wave Detonation trap variant
+
 ## 2.22.0 (09/13/2025)
 ### New Content
 - New Hexacast combat art: Flaming Tempest (Heat Guard Lv.2B)
@@ -8,7 +18,7 @@
 - Lateral Sublimation will now place individual icicles on lower elevations (instead of floating) if the line extends off a cliff
 - This means Lateral Sublimation will no longer work over bottomless pits
 - Proxy sublimationCard initial travel time reduced from 2s to 1s; this is to cover cases where it is shot offscreen with no walls
-- Triforce Slash: removed unused triforceSolidTarget check when piking teleport positions
+- Triforce Slash: removed unused triforceSolidTarget check when picking teleport positions
 - Lea/Hexacast custom skill Triforce Slash attrib teleportPre renamed to tri-teleportPre
 - Triforce Slash now has stopBeforeEdge when moving back to charge the final hit
 - Minor edit/fix to Triblader2/3/4/5 menu portraits

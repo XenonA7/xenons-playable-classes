@@ -114,7 +114,7 @@
         "width": 40,
         "height": 40
       },
-      "guiSprites": true,
+      "guiSprites": false,
       "renderMode": "source-over",
       "time": 0.033,
       "repeat": false,

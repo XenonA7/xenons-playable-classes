@@ -46820,6 +46820,18 @@
             "type": "WAIT"
           },
           {
+            "name": "TSplayerPos",
+            "target": "SELF",
+            "align": "BOTTOM",
+            "faceDistance": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SET_ATTRIB_POS"
+          },
+          {
             "duration": -1,
             "target": "TARGET",
             "align": "BASE",
@@ -46946,35 +46958,33 @@
             }
           },
           {
-            "withElse": true,
+            "name": "teleportPre",
+            "searchType": "RANDOM",
+            "distance": 48,
+            "centralAngle": 1,
+            "throwing": false,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SET_ATTRIB_CLOSE_TARGET_POS"
+          },
+          {
+            "withElse": false,
             "type": "IF",
-            "condition": "entity.attrib.triforceSolidTarget",
+            "condition": "entity.attrib.teleportPre.z == -96 && entity.attrib.TSplayerPos.z == 0",
             "thenStep": [
               {
                 "name": "teleportPre",
                 "searchType": "RANDOM",
-                "distance": 48,
+                "distance": 64,
                 "centralAngle": 1,
                 "throwing": false,
                 "offset": {
                   "x": 0,
                   "y": 0,
-                  "z": 0
-                },
-                "type": "SET_ATTRIB_CLOSE_TARGET_POS"
-              }
-            ],
-            "elseStep": [
-              {
-                "name": "teleportPre",
-                "searchType": "RANDOM",
-                "distance": 48,
-                "centralAngle": 1,
-                "throwing": false,
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
+                  "z": 96
                 },
                 "type": "SET_ATTRIB_CLOSE_TARGET_POS"
               }
@@ -47302,6 +47312,26 @@
             "type": "SET_ATTRIB_CLOSE_TARGET_POS"
           },
           {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.teleport.z == -96 && entity.attrib.TSplayerPos.z == 0",
+            "thenStep": [
+              {
+                "name": "teleport",
+                "searchType": "RANDOM",
+                "distance": 64,
+                "centralAngle": 1,
+                "throwing": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 96
+                },
+                "type": "SET_ATTRIB_CLOSE_TARGET_POS"
+              }
+            ]
+          },
+          {
             "attrib": "teleport",
             "type": "TELEPORT_TO_ATTRIB_POS"
           },
@@ -47510,7 +47540,7 @@
           },
           {
             "time": 0.3,
-            "stopBeforeEdge": false,
+            "stopBeforeEdge": true,
             "type": "MOVE_BACKWARD"
           },
           {

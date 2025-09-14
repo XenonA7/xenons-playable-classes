@@ -8859,8 +8859,8 @@
         },
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 240,
-          "offY": 320,
+          "offX": 64,
+          "offY": 528,
           "width": 24,
           "height": 40
         },
@@ -9138,8 +9138,8 @@
         },
         "sheet": {
           "src": "media/entity/effects/hexacast/shadowflame.png",
-          "offX": 240,
-          "offY": 320,
+          "offX": 64,
+          "offY": 528,
           "width": 24,
           "height": 40
         },
@@ -9756,8 +9756,8 @@
             "type": "MASSIVE",
             "visualType": "LIGHT",
             "element": "SHOCK",
-            "damageFactor": 0.55,
-            "status": 0.45,
+            "damageFactor": 0.5,
+            "status": 0.85,
             "reverse": false,
             "stunSteps": [
               {
@@ -9863,13 +9863,13 @@
           "yScale": 0,
           "zHeight": 0,
           "centralAngle": 0,
-          "duration": 0.1,
+          "duration": 0.15,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
           "flipLeftFace": 0,
           "rectangular": false,
-          "repeat": true,
+          "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
           "checkCollision": true,
@@ -9880,7 +9880,7 @@
             "element": "SHOCK",
             "damageFactor": 1,
             "reverse": false,
-            "status": 0.8,
+            "status": 1.0,
             "guardable": "",
             "skillBonus": "MELEE_DMG",
             "stunSteps": [
@@ -10013,7 +10013,7 @@
             "visualType": "LIGHT",
             "element": "SHOCK",
             "damageFactor": 0.75,
-            "status": 0.6,
+            "status": 0.60,
             "reverse": false,
             "stunSteps": [
               {
@@ -10072,13 +10072,13 @@
           "yScale": 0,
           "zHeight": 0,
           "centralAngle": 1,
-          "duration": 0.1,
+          "duration": 0.15,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
           "flipLeftFace": 0,
           "rectangular": false,
-          "repeat": true,
+          "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
           "checkCollision": false,
@@ -10087,7 +10087,7 @@
             "type": "MASSIVE",
             "element": "SHOCK",
             "damageFactor": 3.2,
-            "status": 0.5,
+            "status": 0.70,
             "fly": "MASSIVE+",
             "reverse": false,
             "stunSteps": [
@@ -10707,6 +10707,10 @@
         {
           "value": 2,
           "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
         },
         {
           "type": "WAIT_UNTIL_ON_GROUND"
@@ -31979,7 +31983,7 @@
           }
         },
         {
-          "time": 6.0,
+          "time": 5.5,
           "type": "WAIT"
         },
         {
@@ -32473,7 +32477,7 @@
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "time": 2,
+          "time": 1.5,
           "type": "WAIT"
         },
         {
@@ -33040,7 +33044,7 @@
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "time": 2,
+          "time": 1.5,
           "type": "WAIT"
         },
         {
@@ -34916,7 +34920,7 @@
             "type": "MASSIVE",
             "element": "HEAT",
             "fly": "MASSIVE++",
-            "damageFactor": 6.5,
+            "damageFactor": 9.5,
             "critFactor": 0,
             "reverse": false,
             "status": 0,
@@ -35003,7 +35007,7 @@
             "type": "MASSIVE",
             "element": "HEAT",
             "fly": "MASSIVE++",
-            "damageFactor": 6.5,
+            "damageFactor": 9.5,
             "critFactor": 0,
             "reverse": false,
             "status": 0,
@@ -35216,7 +35220,7 @@
         },
         {
           "type": "WAIT",
-          "time": 2.75
+          "time": 2.25
         },
         {
           "particleType": "COAL_SPARKS_FAST",
@@ -43880,7 +43884,7 @@
           }
         },
         {
-          "time": 8.5,
+          "time": 10.5,
           "type": "WAIT"
         },
         {
@@ -43961,7 +43965,7 @@
           }
         },
         {
-          "time": 20,
+          "time": 99,
           "type": "WAIT"
         }
       ],
@@ -49678,7 +49682,7 @@
         },
         {
           "duration": -1,
-          "align": "BOTTOM",
+          "align": "BASE",
           "rotateFace": 8,
           "flipLeftFace": false,
           "wait": false,
@@ -49933,7 +49937,7 @@
         },
         {
           "align": "BOTTOM",
-          "radius": 40,
+          "radius": 48,
           "yScale": 0,
           "zHeight": 150,
           "centralAngle": 1,
@@ -50002,7 +50006,7 @@
         },
         {
           "align": "BOTTOM",
-          "radius": 40,
+          "radius": 48,
           "yScale": 0,
           "zHeight": 150,
           "centralAngle": 1,
@@ -50062,7 +50066,7 @@
       },
       "config": {
         "collType": "NONE",
-        "zGravityFactor": 0
+        "zGravityFactor": 4
       },
       "type": "GENERIC"
     },
@@ -50079,6 +50083,7 @@
           "type": "WAIT"
         },
         {
+          "posEntity": "PROXY_OWNER",
           "align": "BOTTOM",
           "centralAngle": 1,
           "startAngle": 0.25,
@@ -50382,7 +50387,7 @@
           "align": "BOTTOM",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 32,
+          "zHeight": 48,
           "centralAngle": 1,
           "startAngle": 0,
           "duration": 0.07,
@@ -50421,7 +50426,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -50581,7 +50586,7 @@
           "align": "BOTTOM",
           "radius": 80,
           "yScale": 0,
-          "zHeight": 32,
+          "zHeight": 48,
           "centralAngle": 1,
           "duration": 0.2,
           "expandRadius": 0,
@@ -50644,6 +50649,442 @@
         "shadow": 16
       },
       "type": "GENERIC"
+    },
+    "fireballBigTempest": {
+      "animation": {
+        "pivot": {
+          "x": 12,
+          "y": 12
+        },
+        "gfxOffset": {
+          "x": 0,
+          "y": 8
+        },
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "offX": 256,
+          "offY": 224,
+          "width": 24,
+          "height": 40
+        },
+        "faceRotate": true,
+        "SUB": [
+          {
+            "name": "default",
+            "time": 0.05,
+            "repeat": false,
+            "frames": [
+              -1
+            ]
+          },
+          {
+            "name": "default2",
+            "time": 0.05,
+            "repeat": true,
+            "frames": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.heat",
+        "name": "fireballTempestKill"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "xpc-utility",
+            "name": "lightL"
+          },
+          "offset": {
+            "x": 0,
+            "y": -4,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fireballTempestAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "kind": "PROXY_OWNER",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "immediately": true,
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "value": 300,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 0.15,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 0.0001,
+          "type": "SET_BOUNCINESS"
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default2"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 0,
+          "duration": 99,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "HEAT",
+            "damageFactor": 0.25,
+            "reverse": false,
+            "status": 0.4,
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -4
+          }
+        },
+        {
+          "min": 0,
+          "max": 16,
+          "maxTime": 2,
+          "forceTime": false,
+          "rotateSpeed": 5,
+          "missReactTime": 0,
+          "collideCancel": 0,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "target": "PROXY_OWNER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fireballTempestPlayerImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "type": "STOP_XY"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "size": {
+        "x": 24,
+        "y": 24,
+        "z": 24
+      },
+      "group": "",
+      "type": "GENERIC",
+      "timeBoni": null,
+      "behaviors": [],
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 20
+      }
+    },
+    "ss-fireballBigTempest": {
+      "animation": {
+        "pivot": {
+          "x": 12,
+          "y": 12
+        },
+        "gfxOffset": {
+          "x": 0,
+          "y": 8
+        },
+        "sheet": {
+          "src": "media/entity/effects/hexacast/shadowflame.png",
+          "offX": 64,
+          "offY": 528,
+          "width": 24,
+          "height": 40
+        },
+        "faceRotate": true,
+        "SUB": [
+          {
+            "name": "default",
+            "time": 0.05,
+            "repeat": false,
+            "frames": [
+              -1
+            ]
+          },
+          {
+            "name": "default2",
+            "time": 0.05,
+            "repeat": true,
+            "frames": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.shadowflame-alts",
+        "name": "fireballTempestKill"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "xpc-utility",
+            "name": "lightL"
+          },
+          "offset": {
+            "x": 0,
+            "y": -4,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shadowflame-alts",
+            "name": "fireballTempestAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "kind": "PROXY_OWNER",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "immediately": true,
+          "value": false,
+          "type": "FACE_TO_TARGET"
+        },
+        {
+          "value": 300,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 0.15,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "value": 0.0001,
+          "type": "SET_BOUNCINESS"
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default2"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 0,
+          "duration": 99,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "HEAT",
+            "damageFactor": 0.4,
+            "reverse": false,
+            "status": 0.4,
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": ""
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -4
+          }
+        },
+        {
+          "min": 0,
+          "max": 16,
+          "maxTime": 2,
+          "forceTime": false,
+          "rotateSpeed": 5,
+          "missReactTime": 0,
+          "collideCancel": 0,
+          "type": "MOVE_TO_DISTANCE"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "target": "PROXY_OWNER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fireballTempestPlayerImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "type": "STOP_XY"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "size": {
+        "x": 24,
+        "y": 24,
+        "z": 24
+      },
+      "group": "",
+      "type": "GENERIC",
+      "timeBoni": null,
+      "behaviors": [],
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 20
+      }
     }
   },
   "actions": {
@@ -62202,7 +62643,7 @@
             ]
           },
           {
-            "time": 2.5,
+            "time": 2.0,
             "type": "WAIT"
           },
           {
@@ -65299,6 +65740,514 @@
           }
         ]
       },
+      "GUARD_SPECIAL2_B": {
+        "name": {
+          "en_US": "Flaming Tempest"
+        },
+        "description": {
+          "en_US": "Draw in enemies with a vortex of fireballs and a firey aura before performing a powerful melee attack."
+        },
+        "dmgType": "MIXED",
+        "stunType": "",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "followUp": "sweepRevEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "sweepRev"
+          },
+          {
+            "strength": "WALK_ESCAPE",
+            "pull": true,
+            "radius": 80,
+            "fadeRadius": 48,
+            "minRadius": 24,
+            "faceDist": 0,
+            "zHeight": 32,
+            "duration": 1.6,
+            "align": "BOTTOM",
+            "type": "PUSH_PULL_FORCE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": -1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "group": "tempestAuraFX",
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "tempestPullArea"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 2.0,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "tempestAuraHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": -1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "group": "tempestAuraFX",
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "tempestPlayerAura"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 48,
+                "yScale": 0,
+                "zHeight": 32,
+                "centralAngle": 1,
+                "duration": 0.15,
+                "expandRadius": 0,
+                "alwaysFull": true,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": true,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MEDIUM",
+                  "visualType": "MEDIUM",
+                  "fly": "LIGHT",
+                  "element": "HEAT",
+                  "damageFactor": 0.9,
+                  "status": 0.9,
+                  "spFactor": 0,
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 1,
+                "angleVary": 0,
+                "startDist": 300,
+                "startDistCollide": "NONE",
+                "random": true,
+                "duration": 0.55,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": true,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "count": 16,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "ss-fireballBigTempest",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": -1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "group": "tempestAuraFX",
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "tempestPullArea"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 2.0,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "tempestAuraHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": -1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "group": "tempestAuraFX",
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "tempestPlayerAura"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 32,
+                "yScale": 0,
+                "zHeight": 32,
+                "centralAngle": 1,
+                "duration": 0.15,
+                "expandRadius": 0,
+                "alwaysFull": true,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": true,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MEDIUM",
+                  "visualType": "MEDIUM",
+                  "fly": "LIGHT",
+                  "element": "HEAT",
+                  "damageFactor": 0.70,
+                  "status": 0.9,
+                  "spFactor": 0,
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "centralAngle": 1,
+                "angleVary": 0,
+                "startDist": 300,
+                "startDistCollide": "NONE",
+                "random": true,
+                "duration": 0.55,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "circularArea": true,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "count": 16,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "fireballBigTempest",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 12
+                }
+              }
+            ]
+          },
+          {
+            "time": 1.58,
+            "type": "WAIT"
+          },
+          {
+            "type": "STOP_REPEATING_FORCE"
+          },
+          {
+            "group": "tempestAuraFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "factor": 0.2,
+            "time": 0.1,
+            "keepEntityStatic": false,
+            "inversAccelerate": true,
+            "type": "ADD_SLOW_MOTION"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "time": 0.42,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.4,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "time": 0.1,
+            "removeEntityStatic": false,
+            "type": "CLEAR_SLOW_MOTION"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "followUp": "sweepEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "tempestSweepHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "tempestSweep"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "tempestSweepHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "tempestSweep"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "align": "BOTTOM",
+            "radius": 88,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 1.5,
+            "startAngle": -0.25,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "type": "CIRCLE_ATTACK",
+            "attack": {
+              "type": "MASSIVE",
+              "element": "HEAT",
+              "damageFactor": 2,
+              "fly": "MASSIVE+",
+              "status": 0.6,
+              "reverse": false,
+              "spFactor": 0,
+              "stunSteps": [
+                {
+                  "type": "END_LOCK"
+                }
+              ],
+              "guardable": "",
+              "skillBonus": "MELEE_DMG"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": 200,
+            "type": "SET_SPEED"
+          },
+          {
+            "time": 0.2,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "value": "LIGHT",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "time": 0.45,
+            "type": "WAIT"
+          },
+          {
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          }
+        ]
+      },
       "GUARD_SPECIAL3_A": {
         "name": {
           "en_US": "Shadowflame Sorcery"
@@ -67586,7 +68535,7 @@
             ]
           },
           {
-            "time": 0.5,
+            "time": 0.45,
             "type": "WAIT"
           },
           {
@@ -67611,6 +68560,16 @@
               "move": -1,
               "reaim": -1
             }
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "idle"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
           },
           {
             "wait": false,
@@ -67717,8 +68676,8 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "dashRev",
-            "followUp": "sweepRevEnd"
+            "anim": "dash",
+            "followUp": "sweepEnd"
           },
           {
             "name": "sublimationTrigger2",
@@ -71453,7 +72412,7 @@
             "attack": {
               "type": "MASSIVE",
               "element": "SHOCK",
-              "damageFactor": 2.25,
+              "damageFactor": 4.0,
               "fly": "MASSIVE+",
               "reverse": false,
               "stunSteps": [],
@@ -80600,7 +81559,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0,
+              "dash": 0.15,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -80620,6 +81579,13 @@
                 "value": true,
                 "immediately": true,
                 "type": "FACE_TO_TARGET"
+              },
+              {
+                "followUp": "attackEndLoop",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "attackEnd"
               },
               {
                 "time": 0.1,
@@ -80644,13 +81610,6 @@
                   "y": 0,
                   "z": 0
                 }
-              },
-              {
-                "followUp": "attackEndLoop",
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "attackEnd"
               },
               {
                 "duration": 0,
@@ -80730,6 +81689,13 @@
                 "type": "FACE_TO_TARGET"
               },
               {
+                "followUp": "attackEndLoop",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "attackEnd"
+              },
+              {
                 "time": 0.1,
                 "type": "WAIT"
               },
@@ -80752,13 +81718,6 @@
                   "y": 0,
                   "z": 0
                 }
-              },
-              {
-                "followUp": "attackEndLoop",
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "attackEnd"
               },
               {
                 "duration": 0,

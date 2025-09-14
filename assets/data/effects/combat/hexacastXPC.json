@@ -8783,7 +8783,7 @@
               "x": 1,
               "y": 1
             },
-            "time": 0.025,
+            "time": 0.01,
             "spline": "EASE_OUT"
           },
           "end": {
@@ -8791,7 +8791,7 @@
               "x": 0,
               "y": 0
             },
-            "time": 0.105,
+            "time": 0.12,
             "spline": "EASE_IN"
           }
         },
@@ -14123,6 +14123,169 @@
       },
       {
         "type": "LOOP_END"
+      }
+    ],
+    "tempestAuraHexagons": [
+      {
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "duration": -1,
+        "intensity": 0.4,
+        "type": "DARKNESS"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 48,
+        "duration": 1.5,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 96,
+        "useTargetAngle": false,
+        "moveDist": 0,
+        "inverse": true,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.9,
+              "y": 0.9
+            },
+            "time": 0.15,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.15,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.4,
+        "cancelable": true,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 48,
+        "duration": 1.5,
+        "centralAngle": 1,
+        "startAngle": 0.5,
+        "startDist": 96,
+        "useTargetAngle": false,
+        "moveDist": 0,
+        "inverse": true,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 0.9,
+              "y": 0.9
+            },
+            "time": 0.15,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.15,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.4,
+        "cancelable": true,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 1.5,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "tempestSweepHexagons": [
+      {
+        "numParticles": 22,
+        "duration": 0.4,
+        "centralAngle": 1.5,
+        "startAngle": -0.25,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": false,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1.33,
+              "y": 1.33
+            },
+            "time": 0.025,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.175,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.2,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ]
   }

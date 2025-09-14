@@ -3637,6 +3637,27 @@
       "offY": 216
     }
   },
+  "csHexacastCustom1ColdAttack3A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_ATTACK_SPECIAL3_A",
+        "actionCheckKey": "ATTACK_SPECIAL3"
+      }
+    ],
+    "element": "COLD",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] \\c[2]Frontal Sublimation\\c[0]"
+    },
+    "description": {
+      "en_US": "Lateral Sublimation except it's front/back."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 72,
+      "offY": 72
+    }
+  },
   "csAlHexsummonerColdAttack3A": {
     "list": [
       {

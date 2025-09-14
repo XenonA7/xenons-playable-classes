@@ -1,9 +1,50 @@
+## 2.22.0 (09/13/2025)
+### New Content
+- New Hexacast combat art: Flaming Tempest (Heat Guard Lv.2B)
+- New Hexacast custom skill: Frontal Sublimation (Cold Melee Lv.3)
+- New sprites for shadowflame "fireballBig" bullets (Fire Barrage, etc)
+- New sprites for shadowflame "KILL" particle (when small fireballs hit a wall)
+### Changes
+- Lateral Sublimation will now place individual icicles on lower elevations (instead of floating) if the line extends off a cliff
+- This means Lateral Sublimation will no longer work over bottomless pits
+- Proxy sublimationCard initial travel time reduced from 2s to 1s; this is to cover cases where it is shot offscreen with no walls
+- Triforce Slash: removed unused triforceSolidTarget check when piking teleport positions
+- Lea/Hexacast custom skill Triforce Slash attrib teleportPre renamed to tri-teleportPre
+- Triforce Slash now has stopBeforeEdge when moving back to charge the final hit
+- Minor edit/fix to Triblader2/3/4/5 menu portraits
+- Proxy sublimationCard is now shot from PROXY_OWNER instead of controller
+- Reduced moveWithTarget duration for effect sublimationCardSweep from 0.35 to 0.25
+- Final dash/sweep animation of Lateral Sublimation changed from rev to normal
+- Removed guisprites property from SYMBOL_BLACK particles used by Triblader/Hexacast
+- Added a SYMBOL_BLACK particle to effect sublimationIcicleMelt
+- Added a -16 Z offset to proxy sublimationCard's hitbox
+- Added an "idle" animation frame to Lateral Sublimation's steps
+- Improved particle pScale timings for effect scorchingSwirlHexagons2
+- Fixed the CIRCLE_SMALL_DARK particle centralAngle in the shadowflame version of effect scorchingSwirlSweep2
+### Fixes
+- Fixed Triblader Triforce Slash glitching out when used against the Whale boss
+- Fixed inconsistent particle duration in effect healBatteryCardAppear
+- Fixed proxy waveDetonationTrap activating mid-air when used from a z=-16 map layer
+- Deleted unused sheet extraCrateChest from Hexacast1/2/3 animation files
+- Fixed first 0.1 seconds of Wave Detonation (remote version) being "idle" animation
+- Fixed repeating final hitbox on Static Discharge and Static Field
+- Fixed missing particleRotate property in effect fireHandCardAppear
+### Balance
+- Increased sublimationProxy "melt" hitbox radius from 40 to 48 (matches initial icicle hitbox size)
+- Temporal Miasma duration increased from 8.5 seconds to 10.5 seconds
+- Calamity Beacon pre-jump segment duration decreased from 2.5 seconds to 2 seconds
+- Calamity Beacon final explosion damageFactor increased from 6.5 to 9.5
+- Added a 0.15 second delay before Wave Detonation can be dash-canceled (prevents accidentally wasting the art)
+- Static Discharge repeating damageFactor reduced from 0.55 to 0.5
+- Static Discharge and Static Field status inflict increased to non-negligible levels
+- Throttle Hex melee impact damageFactor increased from 2.25 to 4.0 (Stasis Rune on cooldown still does 0)
+
 ## 2.21.0 (09/01/2025)
 ### New Content
 - New Hexacast combat art: Lateral Sublimation (Cold Melee Lv.3A)
 - Added three new Hexacast tips in hideout-lobby
 ### Changes
-- Darkened north exit shadows for maps dark-passage-1 and dark-passage-2 to increased visibility
+- Darkened north exit shadows for maps dark-passage-1 and dark-passage-2 to increase visibility
 - Icicle Lance will now fail and refund SP if you use it too close to a wall such that no proxies actually spawn
 - Ruinous Pulse hitbox is now handled by a controller proxy to allow the full pulse to continue after the art is canceled mid-pulse
 - Proxy healBatteryPrimer now uses new effect healBatteryCardAppear instead of beamBlasterCardAppear

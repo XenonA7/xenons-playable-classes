@@ -190,5 +190,27 @@
         2
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SYMBOL_BLACK",
+      "sheet": {
+        "src": "media/entity/enemy/boss/god-symbol.png",
+        "offX": 128,
+        "offY": 40,
+        "width": 40,
+        "height": 40
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 0.033,
+      "repeat": false,
+      "tileOffset": 0,
+      "frames": [
+        0
+      ]
+    }
   }
 ]

@@ -20395,7 +20395,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": -2,
+        "particleDuration": 0.65,
         "anim": "CIRCLE_SMALL_WAVE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
@@ -20429,7 +20429,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": -2,
+        "particleDuration": 0.65,
         "anim": "CIRCLE_SMALL_WAVE",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },

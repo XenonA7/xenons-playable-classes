@@ -3358,6 +3358,55 @@
         "type": "PLAY_SOUND"
       },
       {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 0.8,
+            "time": 0.2,
+            "spline": ""
+          },
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.85,
+            "y": 1.85
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 1,
+            "spline": "EASE_IN_STRONG"
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 3,
+            "time": 8,
+            "spline": ""
+          }
+        },
+        "angleVary": 1,
+        "particleDuration": 1.5,
+        "cancelable": true,
+        "anim": "SYMBOL_BLACK",
+        "type": "PLAY_ANIM"
+      },
+      {
         "type": "LOOP_START"
       },
       {
@@ -3596,7 +3645,7 @@
         "type": "RUMBLE"
       },
       {
-        "volume": 1,
+        "volume": 0.8,
         "global": false,
         "loop": false,
         "speed": 0.9,

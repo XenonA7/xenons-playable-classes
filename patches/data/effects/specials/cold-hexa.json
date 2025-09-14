@@ -9636,7 +9636,7 @@
             "spline": ""
           }
         },
-        "moveWithTarget": 0.35,
+        "moveWithTarget": 0.25,
         "anim": "SWEEP_COLD_INV",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },

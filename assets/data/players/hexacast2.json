@@ -8105,7 +8105,7 @@
           "centralAngle": 0.5,
           "startAngle": -0.25,
           "angleVary": 0,
-          "startDist": 24,
+          "startDist": 27.6,
           "startDistCollide": "NONE",
           "random": false,
           "count": 2,
@@ -8131,7 +8131,7 @@
           "centralAngle": 0.5,
           "startAngle": -0.5,
           "angleVary": 0,
-          "startDist": 24,
+          "startDist": 27.6,
           "startDistCollide": "NONE",
           "random": false,
           "count": 2,
@@ -8153,28 +8153,87 @@
           "type": "WAIT"
         },
         {
-          "align": "BOTTOM",
-          "centralAngle": 0,
-          "angleVary": 0,
-          "startDist": 0,
-          "startDistCollide": "NONE",
-          "random": false,
-          "count": 1,
           "duration": 0,
-          "clockwise": true,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": false,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "hexingBlastMed",
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "hexingBlastBigPre"
+          },
           "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "hexingBlastBigExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          }
+        },
+        {
+          "time": 0.15,
+          "type": "WAIT"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 44,
+          "yScale": 0,
+          "zHeight": 16,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "NEUTRAL",
+            "fly": "HEAVY",
+            "damageFactor": 1.85,
+            "reverse": false,
+            "stunSteps": [],
+            "hints": [
+              "NO_PUZZLE"
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
             "z": 0
           }
         },
         {
-          "time": 0.4,
+          "time": 0.3,
           "type": "WAIT"
         }
       ],
@@ -8243,7 +8302,7 @@
         },
         {
           "align": "BOTTOM",
-          "radius": 16,
+          "radius": 18.4,
           "yScale": 0,
           "zHeight": 16,
           "centralAngle": 1,
@@ -8573,7 +8632,7 @@
           "attack": {
             "type": "HEAVY",
             "element": "NEUTRAL",
-            "damageFactor": 1.6,
+            "damageFactor": 3.6,
             "fly": "MASSIVE+",
             "reverse": false,
             "stunSteps": [],
@@ -12844,7 +12903,7 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "time": 6,
+          "time": 8,
           "type": "WAIT"
         }
       ],
@@ -19547,7 +19606,7 @@
               "centralAngle": 0.3,
               "clockwise": true,
               "angleVary": 0.07,
-              "startDist": 16,
+              "startDist": 12,
               "startDistCollide": "CLOSER",
               "posEntity": "PROXY_OWNER",
               "random": false,
@@ -19557,7 +19616,7 @@
               "delay": 0,
               "repeat": false,
               "duration": 0.4,
-              "count": 16,
+              "count": 8,
               "yScale": 2,
               "type": "SHOOT_PROXY_RANGE",
               "proxy": "flameWeak",
@@ -19582,7 +19641,7 @@
               "delay": 0,
               "repeat": false,
               "duration": 0.4,
-              "count": 16,
+              "count": 8,
               "yScale": 2,
               "type": "SHOOT_PROXY_RANGE",
               "proxy": "flameWeak",
@@ -19804,7 +19863,7 @@
       "attack": {
         "type": "LIGHT",
         "element": "HEAT",
-        "damageFactor": 0.04,
+        "damageFactor": 0.05,
         "reverse": false,
         "spFactor": 0,
         "status": 1.45,
@@ -21583,7 +21642,7 @@
             "type": "HEAVY",
             "element": "HEAT",
             "fly": "MASSIVE",
-            "damageFactor": 3.0,
+            "damageFactor": 3.35,
             "reverse": false,
             "status": 0,
             "stunSteps": [],
@@ -21898,7 +21957,7 @@
             "damageFactor": 1.3,
             "reverse": false,
             "guardable": "",
-            "skillBonus": "RANGED_DMG",
+            "skillBonus": "MELEE_DMG",
             "limiter": "",
             "hints": [
               "NO_PUZZLE"
@@ -24451,13 +24510,19 @@
         },
         {
           "particleType": "DARK_DUST",
-          "quantity": 25,
+          "quantity": 4,
           "immediately": false,
           "type": "SET_ENV_PARTICLES"
         },
         {
           "particleType": "SPOOKY_DUST",
-          "quantity": 10,
+          "quantity": 3,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COAL_SPARKS",
+          "quantity": 20,
           "immediately": false,
           "type": "SET_ENV_PARTICLES"
         },
@@ -24625,6 +24690,11 @@
         {
           "particleType": "SPOOKY_DUST",
           "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COAL_SPARKS",
+          "immediately": true,
           "type": "CLEAR_ENV_PARTICLES"
         }
       ],
@@ -28202,7 +28272,7 @@
               "align": "BOTTOM",
               "radius": 32,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -28231,7 +28301,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -28240,7 +28310,7 @@
               "align": "BOTTOM",
               "radius": 32,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -28269,7 +28339,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -28460,7 +28530,7 @@
               "align": "BOTTOM",
               "radius": 32,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -28489,7 +28559,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -28498,7 +28568,7 @@
               "align": "BOTTOM",
               "radius": 32,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -28527,7 +28597,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -30989,7 +31059,7 @@
               "align": "BOTTOM",
               "radius": 48,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31019,7 +31089,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -31028,7 +31098,7 @@
               "align": "BOTTOM",
               "radius": 48,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31058,7 +31128,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -31229,7 +31299,7 @@
               "align": "BOTTOM",
               "radius": 56,
               "yScale": 0,
-              "zHeight": 32,
+              "zHeight": 48,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31258,7 +31328,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -31267,7 +31337,7 @@
               "align": "BOTTOM",
               "radius": 56,
               "yScale": 0,
-              "zHeight": 32,
+              "zHeight": 48,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31296,7 +31366,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -31471,7 +31541,7 @@
               "align": "BOTTOM",
               "radius": 48,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31500,7 +31570,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -31509,7 +31579,7 @@
               "align": "BOTTOM",
               "radius": 48,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 32,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31538,7 +31608,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -31713,7 +31783,7 @@
               "align": "BOTTOM",
               "radius": 56,
               "yScale": 0,
-              "zHeight": 32,
+              "zHeight": 48,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31742,7 +31812,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ],
@@ -31751,7 +31821,7 @@
               "align": "BOTTOM",
               "radius": 56,
               "yScale": 0,
-              "zHeight": 32,
+              "zHeight": 48,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -31780,7 +31850,7 @@
               "offset": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -16
               }
             }
           ]
@@ -33347,7 +33417,7 @@
           "align": "BOTTOM",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 32,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -33376,7 +33446,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -33542,7 +33612,7 @@
           "align": "BOTTOM",
           "radius": 56,
           "yScale": 0,
-          "zHeight": 32,
+          "zHeight": 48,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -33571,7 +33641,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -34263,7 +34333,7 @@
           "align": "BOTTOM",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 48,
           "centralAngle": 1,
           "duration": 0.2,
           "expandRadius": 16,
@@ -34292,7 +34362,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -34438,7 +34508,7 @@
           "align": "BOTTOM",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 48,
           "centralAngle": 1,
           "duration": 0.2,
           "expandRadius": 16,
@@ -34467,7 +34537,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -34905,7 +34975,7 @@
           "align": "BOTTOM",
           "radius": 160,
           "yScale": 0,
-          "zHeight": 64,
+          "zHeight": 80,
           "centralAngle": 0,
           "duration": 0.3,
           "expandRadius": 0,
@@ -34941,7 +35011,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -34992,7 +35062,7 @@
           "align": "BOTTOM",
           "radius": 160,
           "yScale": 0,
-          "zHeight": 64,
+          "zHeight": 80,
           "centralAngle": 0,
           "duration": 0.3,
           "expandRadius": 0,
@@ -35028,7 +35098,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -41181,7 +41251,7 @@
         "damageFactor": 0.12,
         "reverse": false,
         "spFactor": 0,
-        "status": 1.45,
+        "status": 2.0,
         "stunSteps": [],
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -41228,7 +41298,7 @@
         "damageFactor": 0.17,
         "reverse": false,
         "spFactor": 0,
-        "status": 0.88,
+        "status": 1.0,
         "stunSteps": [],
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -41275,7 +41345,7 @@
         "damageFactor": 0.17,
         "reverse": false,
         "spFactor": 0,
-        "status": 0.88,
+        "status": 1.0,
         "stunSteps": [],
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -41322,7 +41392,7 @@
         "damageFactor": 0.17,
         "reverse": false,
         "spFactor": 0,
-        "status": 0.88,
+        "status": 1.0,
         "stunSteps": [],
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -54659,7 +54729,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -55213,7 +55283,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -55790,7 +55860,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -56155,7 +56225,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -63624,39 +63694,6 @@
               "x": 0,
               "y": 3,
               "z": 6
-            }
-          },
-          {
-            "align": "BOTTOM",
-            "radius": 24,
-            "yScale": 0,
-            "zHeight": 0,
-            "centralAngle": 0,
-            "duration": 0.2,
-            "expandRadius": 0,
-            "alwaysFull": true,
-            "clockwise": false,
-            "flipLeftFace": 0,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": true,
-            "type": "CIRCLE_ATTACK",
-            "attack": {
-              "type": "HEAVY",
-              "element": "HEAT",
-              "damageFactor": 1.0,
-              "reverse": true,
-              "spFactor": 0,
-              "status": 0,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
             }
           },
           {

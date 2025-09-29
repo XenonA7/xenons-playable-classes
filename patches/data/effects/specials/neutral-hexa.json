@@ -519,7 +519,7 @@
         "duration": 0.5,
         "centralAngle": 1,
         "random": true,
-        "startDist": 8,
+        "startDist": 9.2,
         "moveDist": 18,
         "moveVariance": 8,
         "keySpline": "EASE_OUT",
@@ -528,8 +528,8 @@
         "collision": false,
         "pScale": {
           "init": {
-            "x": 0.8,
-            "y": 0.8
+            "x": 1.0,
+            "y": 1.0
           },
           "end": {
             "value": {
@@ -613,8 +613,8 @@
           },
           "start": {
             "value": {
-              "x": 1.5,
-              "y": 1.5
+              "x": 1.725,
+              "y": 1.725
             },
             "spline": "EASE_OUT"
           }
@@ -643,8 +643,8 @@
           },
           "start": {
             "value": {
-              "x": 0.8,
-              "y": 0.8
+              "x": 0.92,
+              "y": 0.92
             },
             "spline": "EASE_OUT"
           }
@@ -657,7 +657,7 @@
         "numParticles": 6,
         "duration": 0.1,
         "centralAngle": 1,
-        "startDist": 4,
+        "startDist": 4.6,
         "uniformRandom": 0.3,
         "particleRotate": false,
         "offset": {
@@ -667,8 +667,8 @@
         },
         "pScale": {
           "init": {
-            "x": 0.5,
-            "y": 0.5
+            "x": 0.575,
+            "y": 0.575
           }
         },
         "moveDist": 8,
@@ -690,7 +690,7 @@
         "numParticles": 12,
         "duration": 0,
         "centralAngle": 1,
-        "startDist": 8,
+        "startDist": 9.2,
         "uniformRandom": 0.9,
         "particleRotate": false,
         "offset": {
@@ -700,8 +700,8 @@
         },
         "pScale": {
           "init": {
-            "x": 0.5,
-            "y": 0.5
+            "x": 0.575,
+            "y": 0.575
           }
         },
         "moveDist": 12,
@@ -739,8 +739,8 @@
           },
           "start": {
             "value": {
-              "x": 0.8,
-              "y": 0.8
+              "x": 0.92,
+              "y": 0.92
             },
             "spline": "EASE_OUT"
           }

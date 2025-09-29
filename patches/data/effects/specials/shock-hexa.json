@@ -19361,8 +19361,8 @@
       },
       {
         "rumbleType": "RANDOM",
-        "power": "MEDIUM",
-        "speed": "FASTEST",
+        "power": "STRONG",
+        "speed": "FASTER",
         "duration": 0.2,
         "fade": true,
         "type": "RUMBLE"
@@ -19495,6 +19495,61 @@
         "particleDuration": 0.275,
         "anim": "SHOCK_BIG_HEXAGON",
         "type": "PLAY_ANIM"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 16,
+        "moveDist": 32,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0.2,
+            "time": 0.6,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.6,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.6,
+        "particleDurVariance": 0.2,
+        "angleVary": 0,
+        "cancelable": false,
+        "anim": "GOD_HEXAGON_SHOCK",
+        "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],
     "stasisStartLite": [

@@ -62,7 +62,76 @@
                   "en_US": "The following mods are required to enter:"
                 },
                 "text": {
-                  "en_US": "\\c[3]Arcane Lab\\c[0]\n\\c[3]Lubkuluk's Joern Mod\\c[0]\n\\c[3]Qine\\c[0]"
+                  "en_US": "\\c[3]Arcane Lab\\c[0]\n\\c[3]Lubkuluk's Playable Classes\\c[0]\n\\c[3]Qine\\c[0]"
+                },
+                "type": "SHOW_CENTER_MSG"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "activeMods.find(e => e.name === 'lqm-joern-mod')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 196,
+          "y": 436,
+          "level": 1,
+          "settings": {
+            "mapId": 125,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "xpc.bonus.training-apollo-5",
+            "marker": "entrance",
+            "name": "apollo5-training",
+            "teleportLabel": {
+              "en_US": "To: Apollo 5 Training"
+            },
+            "longTelCond": "false",
+            "blockEventCondition": "",
+            "spawnCondition": "!tmp.blockExit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "IF",
+    "cond": "!activeMods.find(e => e.name === 'lqm-joern-mod')",
+    "thenSteps": [
+      {
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+          "type": "TeleportField",
+          "x": 196,
+          "y": 436,
+          "level": 1,
+          "settings": {
+            "mapId": 125,
+            "gfxType": "AR",
+            "dir": "SOUTH",
+            "map": "xpc.bonus.training-apollo-5",
+            "marker": "entrance",
+            "name": "apollo5-training",
+            "teleportLabel": {
+              "en_US": "To: Apollo 5 Training"
+            },
+            "longTelCond": "false",
+            "blockEventCondition": "",
+            "spawnCondition": "!tmp.blockExit",
+            "blockEvent": [
+              {
+                "titleText": {
+                  "en_US": "The following mod is required to enter:"
+                },
+                "text": {
+                  "en_US": "\\c[3]Lubkuluk's Playable Classes\\c[0]"
                 },
                 "type": "SHOW_CENTER_MSG"
               }

@@ -487,6 +487,40 @@
           "sound": "media/sound/battle/airon/fire-hit-hard3.ogg"
         },
         {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "HEAT",
+            "damageFactor": 0,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_HIT_PROXY_NO_DAMAGE",
+            "hints": []
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "posType": "TARGET",
           "align": "CENTER",
           "type": "SET_HIT_PROXY",
@@ -800,6 +834,40 @@
           "spriteFilter": [
             1
           ],
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "HEAT",
+            "damageFactor": 0,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_HIT_PROXY_NO_DAMAGE",
+            "hints": []
+          },
           "offset": {
             "x": 0,
             "y": 0,
@@ -6417,6 +6485,47 @@
           "effect": {
             "sheet": "combat.tribladerXPC",
             "name": "daybreakSparksLiteTravel"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "volume": 0.9,
+          "global": false,
+          "loop": false,
+          "type": "PLAY_SOUND",
+          "sound": "media/sound/battle/airon/fire-hit-hard3.ogg"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 0,
+          "zHeight": 4,
+          "centralAngle": 0,
+          "duration": 1.5,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "element": "HEAT",
+            "damageFactor": 0,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "NO_HIT_PROXY_NO_DAMAGE",
+            "hints": []
           },
           "offset": {
             "x": 0,

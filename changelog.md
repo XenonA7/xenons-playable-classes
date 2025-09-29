@@ -1,3 +1,31 @@
+## 2.23.0 (09/28/2025)
+### New Content
+- Added a teleporter in hideout-northwest to fight Apollo5 in a modified Hexacast training arena map (LPC must be installed)
+- Added code features from Azure Lazuline:
+  * guarding-variable.js
+  * puzzle-aim-detection.js
+- Hexacast throws now automatically disable homing when aimed at a puzzle element (feature by Azure Lazuline)
+- Added custom-attack-limiters.js along with the limiter NO_HIT_PROXY_NO_DAMAGE
+### Changes
+- Shadowflame Sorcery DARK_DUST and SPOOKY_DUST environment particles reduced, added COAL_SPARKS particles
+- Improved Thundering Sparks effect boldSmallTS (more particles, screen shake)
+- Minor tweak to icon.png
+### Fixes
+- Added WAIT_UNTIL_ON_GROUND conditions to pvpBrake and pvpEnd in xpc/bonus/training-apollo-5 and ultimate-pvp
+- Fixed shadowflame Ashen Hex to do MELEE_DMG instead of RANGED_DMG
+- Fixed all Hexacast meteor hitbox zHeight settings (changed from 0 to 32 with Z=-16 offset)
+- Fixed Triblader Molten Daggers and Daybreak not able to melt ice (added NO_HIT_PROXY_NO_DAMAGE hitbox)
+### Balance
+- Increased overall size of Hexing Blast by 15% (updated proxy hexingBlastSmall and its effects)
+- Increased damage of Hex Vortex (proxy hexingBlastHuge damageFactor increased from 1.6 to 3.6)
+- Ashen Hex no longer does melee contact damage during the dash
+- Ashen Hex damageFactor increased from 3.0 to 3.35 (shadowflame version unchanged)
+- Icy Gust status factor increased from 1.45 to 2.0
+- Reciprocal Gale wind status factor increased from 0.88 to 1.0
+- Curse of Vanishing debuff duration increased from 6 to 8 seconds
+- Augmented Flames uncharged throw proxy count reduced from 16x2 to 8x2 per action
+- Augmented Flames uncharged throw proxy flameWeak damageFactor increased from 0.04 to 0.05
+
 ## 2.22.1 (09/14/2025)
 ### New Content
 - Added a new Hexacast tip in hideout-lobby

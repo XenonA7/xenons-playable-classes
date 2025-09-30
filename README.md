@@ -99,7 +99,9 @@ How to install mods using the in-game mod manager: https://youtu.be/7oBYnF_xMvU?
    <img width="460" height="296" alt="Screenshot 2025-08-17 122252" src="https://github.com/user-attachments/assets/cf7f6055-b21f-4c66-a7f1-c12353606380" />
 
     Now you're done! Just restart the game and you are good to go!  
-   >**Note:** All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.
+   >**Note 1:** The mod can be added to any existing save file you have. You don't need to start a new game to play XPC.
+   
+   >**Note 2:** All new versions of XPC are save-compatible with previous versions unless otherwise stated in the changelog.
 
 
 

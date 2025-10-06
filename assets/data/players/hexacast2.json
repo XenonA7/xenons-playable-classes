@@ -15954,7 +15954,7 @@
           "align": "BOTTOM",
           "radius": 24,
           "yScale": 0,
-          "zHeight": 32,
+          "zHeight": 48,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -15985,7 +15985,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -16
           }
         },
         {
@@ -73487,7 +73487,7 @@
               },
               {
                 "align": "BOTTOM",
-                "radius": 120,
+                "radius": 140,
                 "yScale": 0,
                 "zHeight": 24,
                 "centralAngle": 0.5,
@@ -73590,7 +73590,7 @@
               },
               {
                 "align": "BOTTOM",
-                "radius": 120,
+                "radius": 140,
                 "yScale": 0,
                 "zHeight": 24,
                 "centralAngle": 0.5,

@@ -451,6 +451,48 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
+      "name": "HEAT_DOT1_NO_GUI",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 160,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAT_DOT2_NO_GUI",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 160,
+        "offY": 24,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.4,
+      "flipY": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
       "name": "EXPLOSION_BIG_FAST",
       "sheet": {
         "src": "media/entity/effects/heat.png",

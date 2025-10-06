@@ -101,3 +101,12 @@ sc.STAT_CHANGE_SETTINGS["DEFENSE-MINUS-DECAY"] = {
   icon: "stat-defense",
   grade: "stat-rank-down-3"
 };
+
+sc.STAT_CHANGE_SETTINGS["FOCUS-MINUS-EMBRITTLEMENT"] = {
+  change: sc.STAT_CHANGE_TYPE.STATS,
+  type: sc.STAT_PARAM_TYPE.FOCUS,
+  value: 0.05,
+  negative: true,
+  icon: "stat-focus",
+  grade: "stat-rank-down-2"
+};

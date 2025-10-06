@@ -1,3 +1,18 @@
+## 2.24.0 (10/05/2025)
+### General
+- Hexacast litter mod updated to 2.1.4
+### New Content
+- New Hexacast custom skill: Embrittlement (Cold Throw Lv.2)
+- New Hexacast custom skill: Kindling Mine (Heat Dash Lv.1)
+- New Hexacast custom skill: Mundane Scatter (Neutral Throw Lv.1)
+- New Hexacast custom skill: Ancient Power (Neutral Throw Lv.2)
+### Changes
+- Changed BGM option 21 in training-apollo-5 to use MEDIUM instead of IMMEDIATELY
+### Fixes
+- Fixed Ice Mortar explosion hitbox zHeight
+- Extended joltHexProxy hitbox zHeight to Z=-16 offset
+- Increased Stasis Storm "stasisStormHugeSweep" hitbox sizes from 120 to 140 to better match the effect
+
 ## 2.23.0 (09/28/2025)
 ### New Content
 - Added a teleporter in hideout-northwest to fight Apollo5 in a modified Hexacast training arena map (LPC must be installed)

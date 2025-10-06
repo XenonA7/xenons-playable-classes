@@ -743,5 +743,187 @@
         1
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ROCK_CRATER_MED",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 272,
+        "offY": 304,
+        "width": 32,
+        "height": 32
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ROCK_CRATER_SMALL",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 272,
+        "offY": 336,
+        "width": 22,
+        "height": 22
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DIRT_SMALL1",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 64,
+        "offY": 16,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DIRT_SMALL2",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 64,
+        "offY": 16,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DIRT_BIG1",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 64,
+        "offY": 24,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DIRT_BIG2",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 64,
+        "offY": 40,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CROSSHAIR",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png ",
+        "offX": 208,
+        "offY": 32,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.033,
+      "repeat": true,
+      "frames": [
+        0,
+        0
+      ],
+      "framesAlpha": [
+        1,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ROCK_SMALL1",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 32,
+        "offY": 0,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "ROCK_SMALL2",
+      "sheet": {
+        "src": "media/entity/enemy/heat-projectile.png",
+        "offX": 32,
+        "offY": 8,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "frames": [
+        0
+      ]
+    }
   }
 ]

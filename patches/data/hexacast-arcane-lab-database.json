@@ -443,6 +443,27 @@
       "offY": 48
     }
   },
+  "csHexacastCustom3NeutralThrow1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM3_HEXACAST_THROW_SPECIAL1_A",
+        "actionCheckKey": "THROW_SPECIAL1"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Mundane Scatter"
+    },
+    "description": {
+      "en_US": "Shoot a wide arc of unenchanted spell cards."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 24,
+      "offY": 96
+    }
+  },
   "csHexacastSpheromancerNeutralThrow2A": {
     "list": [
       {
@@ -591,6 +612,27 @@
       "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
       "offX": 120,
       "offY": 48
+    }
+  },
+  "csHexacastCustom3NeutralThrow2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM3_HEXACAST_THROW_SPECIAL2_A",
+        "actionCheckKey": "THROW_SPECIAL2"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Ancient Power"
+    },
+    "description": {
+      "en_US": "Use an ancient magic to throw rocks at your cursor position."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 48,
+      "offY": 96
     }
   },
   "csHexacastSpheromancerNeutralAttack1A": {
@@ -2172,6 +2214,27 @@
       "offY": 144
     }
   },
+  "csHexacastCustom1HeatDash1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_DASH_SPECIAL1_A",
+        "actionCheckKey": "DASH_SPECIAL1"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Kindling Mine"
+    },
+    "description": {
+      "en_US": "Place a mine with a wide trigger and attack radius."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 96,
+      "offY": 72
+    }
+  },
   "csAlSpheroknightHeatDash1A": {
     "list": [
       {
@@ -3040,6 +3103,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 72,
       "offY": 192
+    }
+  },
+  "csHexacastCustom1ColdThrow2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_THROW_SPECIAL2_A",
+        "actionCheckKey": "THROW_SPECIAL2"
+      }
+    ],
+    "element": "COLD",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Embrittlement"
+    },
+    "description": {
+      "en_US": "Hit an enemy to apply \\c[1]-95%\\c[0] focus, causing vulnerability to crits and status buildup."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 0,
+      "offY": 96
     }
   },
   "csAlSpheroknightColdThrow2A": {

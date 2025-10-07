@@ -545,5 +545,25 @@
         0
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_SLOW",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 16,
+        "height": 16
+      },
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
   }
 ]

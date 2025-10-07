@@ -3118,7 +3118,7 @@
       "en_US": "\\i[class-hexa] Embrittlement"
     },
     "description": {
-      "en_US": "Hit an enemy to apply \\c[1]-95%\\c[0] focus, causing vulnerability to crits and status buildup."
+      "en_US": "Hit enemies to apply \\c[1]-95%\\c[0] focus, causing vulnerability to crits and status buildup."
     },
     "icon": {
       "src": "media/gui/custom-skills/hexacast-bonus-skills.png",

@@ -1,3 +1,24 @@
+## 2.24.1 (10/07/2025)
+### Changes
+- Updated info-for-modders.md with new Azure features from 2.23.0
+- Improved Hexacast effects recallTeleportTrail and cohortTeleportTrail
+- Snow Lance hitbox zHeight increased from 16 to 24
+- Adjusted SHOW_EFFECT offset for blasterSentryHexagons (in both Blaster Sentry and Celestial Cohort)
+- Increased visibility of mundaneScatterCard's trail effect
+- Reduced rock hover time from 1.8 to 1.3 seconds when Ancient Power is interrupted
+- Split mireProxy attack into two separate hitboxes for damage and debuff application
+### Balance
+- Ice Blitz now applies a stun lock
+- waveDetonatoinRemote status factor increased from 0.45 to 0.575
+- waveDetonationTrap status factor increased from 0.45 to 0.525
+- Meteor Storm offsetArea reduced from 192x192 to 96x96
+- Meteor Storm meteors now have reversed knockback
+- Meteor Storm meteor damageFactor reduced from 6.2/4.25 to 5.0/3.75 (shadowflame versions unchanged)
+- Embrittlement now has a non-bouncing piercing projectile, able to hit multiple enemies
+- Giga Drain projectile impact damageFactor increased from 0.5 to 2.5
+- Toxic Mire proxy damage tick speed increased from 0.25 to 0.4 seconds
+- Toxic Mire dash length slightly extended, proxies are more spread out
+
 ## 2.24.0 (10/05/2025)
 ### General
 - Hexacast litter mod updated to 2.1.4

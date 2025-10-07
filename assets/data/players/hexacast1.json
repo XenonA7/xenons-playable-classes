@@ -10519,7 +10519,7 @@
             "visualType": "LIGHT",
             "element": "WAVE",
             "damageFactor": 1.6,
-            "status": 0.45,
+            "status": 0.575,
             "fly": "LIGHT",
             "reverse": false,
             "stunSteps": [
@@ -10587,7 +10587,7 @@
             "type": "MASSIVE",
             "element": "WAVE",
             "damageFactor": 3.5,
-            "status": 0.45,
+            "status": 0.575,
             "fly": "MASSIVE++",
             "reverse": false,
             "stunSteps": [
@@ -11085,7 +11085,7 @@
                 "visualType": "LIGHT",
                 "element": "WAVE",
                 "damageFactor": 1.4,
-                "status": 0.45,
+                "status": 0.525,
                 "fly": "LIGHT",
                 "reverse": false,
                 "stunSteps": [
@@ -11153,7 +11153,7 @@
                 "type": "MASSIVE",
                 "element": "WAVE",
                 "damageFactor": 2.75,
-                "status": 0.45,
+                "status": 0.525,
                 "fly": "MASSIVE++",
                 "reverse": false,
                 "stunSteps": [
@@ -21123,6 +21123,45 @@
             "status": 0.75,
             "guardable": "",
             "skillBonus": "",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 28,
+          "yScale": 0,
+          "zHeight": 32,
+          "centralAngle": 1,
+          "duration": 0.4,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "NONE",
+            "visualType": "LIGHT",
+            "element": "WAVE",
+            "damageFactor": 0.10,
+            "reverse": true,
+            "spFactor": 0,
+            "status": 0.75,
+            "guardable": "",
+            "skillBonus": "",
+            "limiter": "NO_HIT_PROXY",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -25850,7 +25889,7 @@
           },
           "offset": {
             "x": 0,
-            "y": 0,
+            "y": 1.5,
             "z": 0
           }
         },
@@ -28713,7 +28752,7 @@
         "type": "HEAVY",
         "visualType": "MASSIVE",
         "element": "WAVE",
-        "damageFactor": 0.5,
+        "damageFactor": 2.5,
         "reverse": false,
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -28845,6 +28884,39 @@
           "effect": {
             "sheet": "specials.wave",
             "name": "gigaDrainFly"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "strength": "RUN_ESCAPE",
+          "pull": true,
+          "radius": 100,
+          "fadeRadius": 48,
+          "minRadius": 24,
+          "faceDist": 0,
+          "zHeight": 32,
+          "duration": 0,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "gigaDrainPullAreaDISABLED"
           },
           "offset": {
             "x": 0,
@@ -30237,8 +30309,8 @@
           "clockwise": false,
           "flipLeftFace": 0,
           "offsetArea": {
-            "x": 192,
-            "y": 192
+            "x": 96,
+            "y": 96
           },
           "circularArea": true,
           "uniformDir": 0,
@@ -30585,8 +30657,8 @@
           "clockwise": false,
           "flipLeftFace": 0,
           "offsetArea": {
-            "x": 192,
-            "y": 192
+            "x": 96,
+            "y": 96
           },
           "circularArea": true,
           "uniformDir": 0,
@@ -31076,8 +31148,8 @@
                 "type": "HEAVY",
                 "element": "HEAT",
                 "fly": "MEDIUM",
-                "damageFactor": 6.2,
-                "reverse": false,
+                "damageFactor": 5.0,
+                "reverse": true,
                 "status": 0,
                 "hints": [
                   "NO_PUZZLE"
@@ -31115,8 +31187,8 @@
                 "type": "HEAVY",
                 "element": "HEAT",
                 "fly": "MEDIUM",
-                "damageFactor": 6.2,
-                "reverse": false,
+                "damageFactor": 5.0,
+                "reverse": true,
                 "status": 0,
                 "hints": [
                   "NO_PUZZLE"
@@ -31317,7 +31389,7 @@
                 "element": "HEAT",
                 "fly": "LIGHT",
                 "damageFactor": 4.5,
-                "reverse": false,
+                "reverse": true,
                 "guardable": "",
                 "skillBonus": "RANGED_DMG",
                 "limiter": "",
@@ -31355,7 +31427,7 @@
                 "element": "HEAT",
                 "fly": "LIGHT",
                 "damageFactor": 4.5,
-                "reverse": false,
+                "reverse": true,
                 "guardable": "",
                 "skillBonus": "MELEE_DMG",
                 "limiter": "",
@@ -31557,8 +31629,8 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "HEAT",
-                "damageFactor": 4.25,
-                "reverse": false,
+                "damageFactor": 3.75,
+                "reverse": true,
                 "status": 0,
                 "hints": [
                   "NO_PUZZLE"
@@ -31595,8 +31667,8 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "HEAT",
-                "damageFactor": 4.25,
-                "reverse": false,
+                "damageFactor": 3.75,
+                "reverse": true,
                 "status": 0,
                 "hints": [
                   "NO_PUZZLE"
@@ -31801,7 +31873,7 @@
                 "element": "HEAT",
                 "fly": "LIGHT",
                 "damageFactor": 4.5,
-                "reverse": false,
+                "reverse": true,
                 "guardable": "",
                 "skillBonus": "RANGED_DMG",
                 "limiter": "",
@@ -31839,7 +31911,7 @@
                 "element": "HEAT",
                 "fly": "LIGHT",
                 "damageFactor": 4.5,
-                "reverse": false,
+                "reverse": true,
                 "guardable": "",
                 "skillBonus": "MELEE_DMG",
                 "limiter": "",
@@ -43595,7 +43667,7 @@
           },
           "offset": {
             "x": 0,
-            "y": 0,
+            "y": 1.5,
             "z": 0
           }
         },
@@ -67089,7 +67161,7 @@
             "align": "BOTTOM",
             "radius": 128,
             "yScale": 0,
-            "zHeight": 16,
+            "zHeight": 24,
             "centralAngle": 0.1,
             "duration": 0.2,
             "expandRadius": 0,
@@ -67130,7 +67202,7 @@
             "align": "BOTTOM",
             "radius": 128,
             "yScale": 0,
-            "zHeight": 16,
+            "zHeight": 24,
             "centralAngle": 0.1,
             "duration": 0.2,
             "expandRadius": 0,
@@ -67174,7 +67246,7 @@
             "align": "BOTTOM",
             "radius": 128,
             "yScale": 0,
-            "zHeight": 16,
+            "zHeight": 24,
             "centralAngle": 0.1,
             "duration": 0,
             "expandRadius": 0,
@@ -67245,7 +67317,7 @@
           "en_US": "Attack with a rapid flurry of short-ranged slashes."
         },
         "dmgType": "MELEE",
-        "stunType": "",
+        "stunType": "LOCK",
         "status": false,
         "steps": [
           {
@@ -67341,7 +67413,11 @@
               "fly": "HEAVY",
               "guardable": "",
               "skillBonus": "MELEE_DMG",
-              "stunSteps": [],
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ],
               "limiter": ""
             },
             "offset": {
@@ -67444,7 +67520,11 @@
               "fly": "LIGHT",
               "guardable": "",
               "skillBonus": "MELEE_DMG",
-              "stunSteps": [],
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ],
               "limiter": ""
             },
             "offset": {
@@ -67559,7 +67639,11 @@
                   "damageFactor": 1.85,
                   "reverse": false,
                   "spFactor": 0,
-                  "stunSteps": [],
+                  "stunSteps": [
+                    {
+                      "type": "END_LOCK"
+                    }
+                  ],
                   "guardable": "",
                   "skillBonus": "MELEE_DMG",
                   "limiter": ""
@@ -77702,7 +77786,7 @@
             "angleVary": 0,
             "startDistCollide": "NONE",
             "random": false,
-            "duration": 0.12,
+            "duration": 0.15,
             "clockwise": false,
             "flipLeftFace": 0,
             "circularArea": false,
@@ -77725,7 +77809,7 @@
             "type": "SET_FACE_TO_DIR"
           },
           {
-            "value": 0.4,
+            "value": 0.475,
             "type": "SET_INVINCIBLE"
           },
           {
@@ -77762,7 +77846,7 @@
             }
           },
           {
-            "time": 0.4,
+            "time": 0.475,
             "collideCancel": 1,
             "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"

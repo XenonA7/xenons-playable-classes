@@ -1378,59 +1378,107 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
-        "duration": 0.18,
-        "numParticles": 7,
+        "duration": 0.08,
+        "numParticles": 2,
         "flyType": "FLY_ARC",
         "inverse": true,
         "offRadiusZScale": 0,
         "rotateMoveDir": "NONE",
-        "particleDuration": 0.4,
-        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "pAlpha": {
+          "init": 0.8
+        },
         "pScale": {
           "init": {
-            "x": 0.10,
-            "y": 0.10
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 0.225,
+              "y": 0.225
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": "EASE",
+            "time": 0.025
           }
         },
-        "pAlpha": {
-          "init": 0.4
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
         },
-        "offsetRadius": 24,
-        "offsetAngle": 1,
+        "pLight": "L",
+        "particleDuration": 0.40,
         "angleVary": 1,
+        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "offsetRadius": 4,
+        "offsetAngle": 1,
         "phaseDurations": [
           0
         ],
         "type": "SHOOT_HOMING_PARTICLE"
       },
       {
-        "duration": 0.18,
-        "numParticles": 5,
+        "duration": 0.15,
+        "numParticles": 4,
         "flyType": "FLY_ARC",
         "inverse": true,
         "offRadiusZScale": 0,
         "rotateMoveDir": "NONE",
-        "particleDuration": 0.4,
-        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "pAlpha": {
+          "init": 0.8
+        },
         "pScale": {
           "init": {
-            "x": 0.13,
-            "y": 0.13
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 0.15,
+              "y": 0.15
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": "EASE",
+            "time": 0.025
           }
         },
-        "pAlpha": {
-          "init": 0.4
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": ""
+          }
         },
-        "offsetRadius": 24,
-        "offsetAngle": 1,
+        "pLight": "M",
+        "particleDuration": 0.40,
         "angleVary": 1,
+        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "offsetRadius": 12,
+        "offsetAngle": 1,
         "phaseDurations": [
           0
         ],
         "type": "SHOOT_HOMING_PARTICLE"
       },
       {
-        "duration": 0.2,
+        "duration": 0.25,
         "numParticles": 20,
         "flyType": "FLY_ARC",
         "inverse": true,
@@ -1438,6 +1486,22 @@
         "rotateMoveDir": "NONE",
         "particleDuration": 0.4,
         "anim": "TELEPORT_DOT1",
+        "offsetRadius": 24,
+        "offsetAngle": 1,
+        "phaseDurations": [
+          0
+        ],
+        "type": "SHOOT_HOMING_PARTICLE"
+      },
+      {
+        "duration": 0.25,
+        "numParticles": 8,
+        "flyType": "FLY_ARC",
+        "inverse": true,
+        "offRadiusZScale": 0,
+        "rotateMoveDir": "NONE",
+        "particleDuration": 0.4,
+        "anim": "TELEPORT_RIPPLE",
         "offsetRadius": 24,
         "offsetAngle": 1,
         "phaseDurations": [
@@ -13754,59 +13818,107 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
-        "duration": 0.18,
-        "numParticles": 7,
+        "duration": 0,
+        "numParticles": 1,
         "flyType": "FLY_ARC",
         "inverse": true,
         "offRadiusZScale": 0,
         "rotateMoveDir": "NONE",
-        "particleDuration": 0.2,
-        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "pAlpha": {
+          "init": 0.8
+        },
         "pScale": {
           "init": {
-            "x": 0.10,
-            "y": 0.10
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 0.225,
+              "y": 0.225
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": "EASE",
+            "time": 0.025
           }
         },
-        "pAlpha": {
-          "init": 0.4
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
         },
-        "offsetRadius": 24,
-        "offsetAngle": 1,
+        "pLight": "L",
+        "particleDuration": 0.20,
         "angleVary": 1,
+        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "offsetRadius": 4,
+        "offsetAngle": 1,
         "phaseDurations": [
           0
         ],
         "type": "SHOOT_HOMING_PARTICLE"
       },
       {
-        "duration": 0.18,
-        "numParticles": 5,
+        "duration": 0.12,
+        "numParticles": 3,
         "flyType": "FLY_ARC",
         "inverse": true,
         "offRadiusZScale": 0,
         "rotateMoveDir": "NONE",
-        "particleDuration": 0.2,
-        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "pAlpha": {
+          "init": 0.8
+        },
         "pScale": {
           "init": {
-            "x": 0.13,
-            "y": 0.13
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 0.15,
+              "y": 0.15
+            },
+            "spline": "EASE",
+            "time": 0.10
+          },
+          "end": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "spline": "EASE",
+            "time": 0.025
           }
         },
-        "pAlpha": {
-          "init": 0.4
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": -0.4,
+            "spline": ""
+          }
         },
-        "offsetRadius": 24,
-        "offsetAngle": 1,
+        "pLight": "M",
+        "particleDuration": 0.20,
         "angleVary": 1,
+        "anim": "WAVE_BIG_HEXAGON_GUI",
+        "offsetRadius": 12,
+        "offsetAngle": 1,
         "phaseDurations": [
           0
         ],
         "type": "SHOOT_HOMING_PARTICLE"
       },
       {
-        "duration": 0.2,
+        "duration": 0.25,
         "numParticles": 20,
         "flyType": "FLY_ARC",
         "inverse": true,
@@ -13814,6 +13926,22 @@
         "rotateMoveDir": "NONE",
         "particleDuration": 0.2,
         "anim": "TELEPORT_DOT1",
+        "offsetRadius": 24,
+        "offsetAngle": 1,
+        "phaseDurations": [
+          0
+        ],
+        "type": "SHOOT_HOMING_PARTICLE"
+      },
+      {
+        "duration": 0.25,
+        "numParticles": 10,
+        "flyType": "FLY_ARC",
+        "inverse": true,
+        "offRadiusZScale": 0,
+        "rotateMoveDir": "NONE",
+        "particleDuration": 0.2,
+        "anim": "TELEPORT_RIPPLE",
         "offsetRadius": 24,
         "offsetAngle": 1,
         "phaseDurations": [
@@ -20496,6 +20624,93 @@
         },
         "anim": "GREEN_GLOW",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "gigaDrainPullArea": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startDist": 24,
+        "uniformRandom": 0.7,
+        "particleRotate": true,
+        "moveDist": 112,
+        "moveVariance": 32,
+        "keySpline": "EASE_IN",
+        "moveRotate": 0,
+        "inverse": true,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.85,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 2.2
+          }
+        },
+        "moveWithTarget": 1,
+        "cancelable": true,
+        "particleDuration": 0.5,
+        "particleDurVariance": 0.1,
+        "anim": "WAVE_DOT2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startDist": 32,
+        "uniformRandom": 0.8,
+        "particleRotate": true,
+        "moveDist": 108,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT_STRONG",
+        "moveRotate": 0,
+        "inverse": true,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0.3,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.2,
+            "y": 1.2
+          }
+        },
+        "moveWithTarget": 0,
+        "cancelable": true,
+        "randFlip": true,
+        "angleVary": 1,
+        "particleDuration": 0.9,
+        "particleDurVariance": 0.3,
+        "anim": "DUST_SLOW",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
       }
     ]
   }

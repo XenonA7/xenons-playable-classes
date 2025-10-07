@@ -37,6 +37,8 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
 * tmp.pvp_ENTITY_NAME_defeated (allows tracking deaths of specific enemy PVP combatants, used for death effects in multi-opponent duels)
 * tmp.speedUpBlock (disables the feature that speeds up pvp when player is dead but party members are alive)
 * tmp.onKeyPanel (true if player is standing on a KeyPanel entity, needed if character charged throws don't use SHOOT_PROXY_PLAYER)
+* combat.facingPuzzle (true if the player is facing towards a puzzle element, this is used to disable Hexacast homing shots)
+* combat.guarding (true if the player is currently guarding)
 
 ### Quest Variables
 * quest.xpc-heat-penguins.[started/task.#/solved]

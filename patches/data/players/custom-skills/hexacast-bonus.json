@@ -10836,7 +10836,7 @@
       },
       "type": "GENERIC"
     },
-    "embrittlementCard": {
+    "embrittlementCardOld": {
       "effects": "ball-cold",
       "effectKeys": {
         "trail": "embrittlementCardTrail",
@@ -10870,6 +10870,76 @@
         "repeat": false,
         "frames": [
           0
+        ]
+      },
+      "attack": {
+        "type": "LIGHT",
+        "visualType": "MEDIUM",
+        "element": "COLD",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": "NO_DAMAGE",
+        "hints": [
+          "CHARGED"
+        ]
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 0.8,
+          "pause": 5,
+          "fadeIn": 0,
+          "startWait": 0.6,
+          "fadeOutVary": 0
+        }
+      ]
+    },
+    "embrittlementCard": {
+      "effects": "ball-cold",
+      "effectKeys": {
+        "trail": "embrittlementCardTrail",
+        "wall": "coldCardWallDeath",
+        "air": "coldCardAirDeath"
+      },
+      "speed": 475,
+      "maxBounce": 0,
+      "timer": 1.4,
+      "trail": true,
+      "multiHit": true,
+      "noLightGlow": false,
+      "type": "BALL",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 12
+      },
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/hexa-cards.png",
+          "offX": 0,
+          "offY": 128,
+          "width": 24,
+          "height": 32
+        },
+        "guiSprites": false,
+        "renderMode": "source-over",
+        "faceRotate": true,
+        "time": 0.03,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15
         ]
       },
       "attack": {
@@ -12099,7 +12169,7 @@
     "mundaneScatterCard": {
       "effects": "ball",
       "effectKeys": {
-        "trail": "mundaneCardTrail",
+        "trail": "mundaneScatterCardTrail",
         "wall": "neutralCardWallDeathShort",
         "air": "neutralCardAirDeathShort"
       },
@@ -12339,7 +12409,7 @@
         },
         {
           "condition": "entity.ownerAttrib.ancientPowerShoot",
-          "maxTime": 1.8,
+          "maxTime": 1.3,
           "type": "WAIT_UNTIL"
         },
         {
@@ -12695,7 +12765,7 @@
         },
         {
           "condition": "entity.ownerAttrib.ancientPowerShoot",
-          "maxTime": 1.8,
+          "maxTime": 1.3,
           "type": "WAIT_UNTIL"
         },
         {
@@ -17088,7 +17158,7 @@
           "en_US": "Embrittlement"
         },
         "description": {
-          "en_US": "Hit an enemy to apply \\c[1]-95%\\c[0] focus, causing vulnerability to crits and status buildup."
+          "en_US": "Hit enemies to apply \\c[1]-95%\\c[0] focus, causing vulnerability to crits and status buildup."
         },
         "dmgType": "NONE",
         "stunType": "",

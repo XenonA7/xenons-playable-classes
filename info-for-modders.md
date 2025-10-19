@@ -6,6 +6,7 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
 * Adds new text icons including class logos (see \js\custom-font-icons.js)
 * Adds the "default2" OneTimeSwitch type which has the default appearance but properly supports being hidden
 * Adds the "forest-dng" map style
+* Adds the "noHomingWhenAimingAtThis" config {} field option for generic proxies, will disable Hexacast homing while player is aiming at a proxy with this set to true
 
 ## PVP Features
 * Speeds up the game when player dies in PVP but has party members remaining (can be disabled with tmp.speedUpBlock)

@@ -24,7 +24,7 @@
 	},
 	"repository": "https://github.com/XenonA7/xenons-playable-classes",
 	"tags": ["player character", "party member", "pvp duel", "arena", "combat arts"],
-	"authors": ["XenonA7", "HeartLychee", "krypek"],
+	"authors": ["XenonA7", "HeartLychee", "krypek", "Azure Lazuline"],
 	"prestart": "prestart.js",
 	"poststart": "poststart.js",
 	"dependencies": {

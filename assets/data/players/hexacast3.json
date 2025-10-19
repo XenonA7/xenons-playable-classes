@@ -55286,7 +55286,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -55840,7 +55840,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -56417,7 +56417,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -56782,7 +56782,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -67266,7 +67266,7 @@
                   "type": "MASSIVE",
                   "visualType": "MASSIVE",
                   "element": "HEAT",
-                  "damageFactor": 1.25,
+                  "damageFactor": 1.75,
                   "fly": "MEDIUM",
                   "status": 0.35,
                   "reverse": true,
@@ -67469,7 +67469,7 @@
                   "type": "MASSIVE",
                   "visualType": "MASSIVE",
                   "element": "HEAT",
-                  "damageFactor": 1.25,
+                  "damageFactor": 1.75,
                   "fly": "LIGHT",
                   "status": 0.35,
                   "reverse": true,
@@ -67863,7 +67863,7 @@
                     "attack": {
                       "type": "HEAVY",
                       "element": "HEAT",
-                      "damageFactor": 0.35,
+                      "damageFactor": 0.45,
                       "fly": "LIGHT",
                       "reverse": false,
                       "hitInvincible": true,
@@ -68338,7 +68338,7 @@
                           "type": "MASSIVE",
                           "element": "HEAT",
                           "fly": "HEAVY",
-                          "damageFactor": 3.25,
+                          "damageFactor": 4.5,
                           "reverse": false,
                           "status": 0.2,
                           "stunSteps": [

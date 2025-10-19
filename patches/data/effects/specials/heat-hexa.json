@@ -16489,8 +16489,8 @@
       {
         "scaleX": 1.0,
         "scaleY": 1.0,
-        "duration": 0.3,
-        "spline": "EASE_OUT",
+        "duration": 0.45,
+        "spline": "EASE_OUT_STRONG",
         "type": "CHANGE_SCALE"
       },
       {

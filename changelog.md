@@ -1,3 +1,13 @@
+## 2.25.1 (10/19/2025)
+### Changes
+- Hexacast homing fixes and improvements by Azure Lazuline
+- Hexacast player files (and Lea custom skill) now only checks for !combat.facingPuzzle, element turret exception moved to JS
+- Updated info-for-modders.md documentation for noHomingWhenAimingAtThis
+- Added "Azure Lazuline" to author list
+- Changed the CHANGE_SCALE to EASE_OUT_STRONG in effect fajroDeckAppear and increased duration from 0.3 seconds to 0.45 seconds
+### Balance
+- Major buff to shadowflame version of Faj'ro Flush, it should roughly do double the damage as the normal version now
+
 ## 2.25.0 (10/19/2025)
 ### General
 - Hexacast litter mod updated to 2.1.6

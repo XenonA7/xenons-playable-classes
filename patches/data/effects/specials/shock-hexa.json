@@ -5634,18 +5634,18 @@
         "type": "SCREEN_FLASH"
       },
       {
-        "volume": 1,
+        "volume": 0.9,
         "global": false,
         "loop": true,
-        "speed": 0.5,
+        "speed": 0.6,
         "sound": "media/sound/boss/turret/long-charge.ogg",
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 1,
+        "volume": 0.8,
         "global": false,
         "loop": true,
-        "speed": 0.66,
+        "speed": 0.75,
         "sound": "media/sound/battle/enemies/charge-2s.ogg",
         "type": "PLAY_SOUND"
       },
@@ -5708,7 +5708,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 3,
+        "particleDuration": 2.5,
         "angleVary": 1,
         "cancelable": true,
         "anim": "SHOCK_BIG_HEXAGON_GUI",
@@ -19497,7 +19497,7 @@
         "type": "PLAY_ANIM"
       },
       {
-        "numParticles": 2,
+        "numParticles": 1,
         "duration": 0,
         "centralAngle": 1,
         "random": true,
@@ -19546,7 +19546,62 @@
         "moveWithTarget": 0,
         "particleDuration": 0.6,
         "particleDurVariance": 0.2,
-        "angleVary": 0,
+        "angleVary": 1,
+        "cancelable": false,
+        "anim": "GOD_HEXAGON_SHOCK",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 1,
+        "random": true,
+        "startDist": 16,
+        "moveDist": 32,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": 0.2,
+            "time": 0.6,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 0.3,
+              "y": 0.3
+            },
+            "time": 0.05,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.6,
+            "spline": "EASE_OUT"
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.6,
+        "particleDurVariance": 0.2,
+        "angleVary": 1,
         "cancelable": false,
         "anim": "GOD_HEXAGON_SHOCK",
         "type": "OFFSET_PARTICLE_CIRCLE"
@@ -22197,7 +22252,7 @@
         "pRotate": {
           "init": 0,
           "start": {
-            "value": 0.3,
+            "value": -0.3,
             "spline": "EASE_OUT_STRONG"
           }
         },

@@ -3109,7 +3109,7 @@
         "type": "LIGHT"
       },
       {
-        "volume": 0.8,
+        "volume": 0.6,
         "global": false,
         "loop": false,
         "speed": 1.0,

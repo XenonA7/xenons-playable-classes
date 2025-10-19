@@ -1,3 +1,41 @@
+## 2.25.0 (10/19/2025)
+### General
+- Hexacast litter mod updated to 2.1.6
+### New Content
+- New Hexacast combat art: Faj'ro Flush (Heat Guard Lv.3B)
+- Added a new Hexacast tip in hideout-lobby
+- Added hexa-vrp font icon
+### Changes
+- All Hexacast homing is now disabled if there are any bergen monk turrets present in the current map (cold.turret-monks-invinc)
+- Removed the "repeat" property from ss-meteorMedFirst and ss-meteorMed (it didn't wait long enough for multiple hits anyway)
+- Added a 0.80 CHANGE_SCALE to effect embrittlementCardTrail
+- Toxic Mire dash hitbox changed from full duration non-repeating to 0.04 duration repeating
+- Toxic Mire dash hitbox no longer has reversed knockback
+- Toxic Mire now has a SET_DAMAGE_CEILING value of 4
+- Further improved Thundering Sparks effect boldSmallTS
+- Shining Shield audio volume decreased from 0.8 to 0.6
+- Lowered audio volume of effect lightningHexChargeup
+- Proxy meteorFinalExplosionOnly hitbox z offset changed from -16 to -32
+- Renamed EXPLOSION_BIG_FAST to DARK_EXPLOSION_BIG_FAST in shadowflame-alts for consistency
+- Increased CIRCLE_STATIC startDist in shadowflame version of effect meteorFinalExplode
+### Fixes
+- Fixed big hexagon particle rotation direction in effect stasisStormFinisher
+- Removed unused proxy group for healBatteryTrigger
+### Balance
+- Hexacast uncharged default shots now have a statusFactor of 0.55 (previously had none)
+- Freeze Rays: damageFactor increased from 0.30 to 0.40 (big damage increase)
+- Freeze Rays: status factor decreased from 1.5 to 1.25
+- Toxic Mire dash duration reverted back to 0.4 seconds
+- Toxic Mire now deals all damage during the dash, the lingering mire now only applies the slowness debuff
+- Toxic Mortar no longer deals any damage
+- Toxic Mortar overall radius increased by 8 (mire proxies are spawned slightly farther out)
+- Twin Spirit damageFactor increased from 1.55 to 1.75
+- Temporal Miasma duration increased from 10.5 seconds to 14 seconds
+- Blizzard Rush chargeup time reduced from 0.7 seconds to 0.4 seconds
+- Giga Drain absorption factor reduced from 0.08 to 0.05
+- Lightning Hex charge time reduced from 3 seconds to 2.5 seconds
+- Fire Barrage loop count reduced from 10 to 8 (less fireballs), total loop duration increased from 0.1 to 0.12
+
 ## 2.24.1 (10/07/2025)
 ### Changes
 - Updated info-for-modders.md with new Azure features from 2.23.0

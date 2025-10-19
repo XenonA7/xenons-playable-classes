@@ -315,6 +315,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -365,6 +366,7 @@
         "element": "COLD",
         "damageFactor": 0.6,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -416,6 +418,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -467,6 +470,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -6324,9 +6328,9 @@
             "type": "HEAVY",
             "element": "COLD",
             "fly": "LIGHT",
-            "damageFactor": 0.30,
+            "damageFactor": 0.40,
             "reverse": false,
-            "status": 1.5,
+            "status": 1.25,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
             "hints": [
@@ -16184,7 +16188,7 @@
           }
         },
         {
-          "duration": 3,
+          "duration": 2.5,
           "align": "CENTER",
           "rotateFace": 0,
           "flipLeftFace": false,
@@ -16221,7 +16225,7 @@
           "fadeRadius": 32,
           "minRadius": 0,
           "zHeight": 32,
-          "duration": 2.9,
+          "duration": 2.4,
           "align": "BOTTOM",
           "type": "PUSH_PULL_FORCE"
         },
@@ -16230,7 +16234,7 @@
           "type": "WAIT"
         },
         {
-          "time": 2.4,
+          "time": 1.9,
           "type": "PLAYER_ADJUST_FACE"
         },
         {
@@ -21054,6 +21058,21 @@
       "type": "GENERIC"
     },
     "mireProxy": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -21115,7 +21134,6 @@
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "NONE",
-            "visualType": "LIGHT",
             "element": "WAVE",
             "damageFactor": 0.075,
             "reverse": true,
@@ -21124,44 +21142,6 @@
             "guardable": "",
             "skillBonus": "",
             "limiter": "NO_DAMAGE",
-            "hints": [
-              "NO_PUZZLE"
-            ]
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "align": "BOTTOM",
-          "radius": 28,
-          "yScale": 0,
-          "zHeight": 32,
-          "centralAngle": 1,
-          "duration": 0.4,
-          "expandRadius": 0,
-          "alwaysFull": true,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "rectangular": false,
-          "repeat": true,
-          "uniformHitDir": false,
-          "fixPos": false,
-          "checkCollision": false,
-          "type": "CIRCLE_ATTACK",
-          "attack": {
-            "type": "NONE",
-            "visualType": "LIGHT",
-            "element": "WAVE",
-            "damageFactor": 0.10,
-            "reverse": true,
-            "spFactor": 0,
-            "status": 0.75,
-            "guardable": "",
-            "skillBonus": "",
-            "limiter": "NO_HIT_PROXY",
             "hints": [
               "NO_PUZZLE"
             ]
@@ -29024,7 +29004,7 @@
           }
         },
         {
-          "factor": 0.08,
+          "factor": 0.05,
           "type": "ABSORB_DAMAGE"
         },
         {
@@ -31379,7 +31359,7 @@
               "clockwise": false,
               "flipLeftFace": 0,
               "rectangular": false,
-              "repeat": true,
+              "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
               "checkCollision": false,
@@ -31417,7 +31397,7 @@
               "clockwise": false,
               "flipLeftFace": 0,
               "rectangular": false,
-              "repeat": true,
+              "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
               "checkCollision": false,
@@ -31863,7 +31843,7 @@
               "clockwise": false,
               "flipLeftFace": 0,
               "rectangular": false,
-              "repeat": true,
+              "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
               "checkCollision": false,
@@ -31901,7 +31881,7 @@
               "clockwise": false,
               "flipLeftFace": 0,
               "rectangular": false,
-              "repeat": true,
+              "repeat": false,
               "uniformHitDir": false,
               "fixPos": false,
               "checkCollision": false,
@@ -35083,7 +35063,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": -16
+            "z": -32
           }
         },
         {
@@ -35170,7 +35150,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": -16
+            "z": -32
           }
         },
         {
@@ -40862,7 +40842,7 @@
           "attack": {
             "type": "HEAVY",
             "element": "WAVE",
-            "damageFactor": 1.55,
+            "damageFactor": 1.75,
             "fly": "MASSIVE",
             "reverse": false,
             "spFactor": 0,
@@ -44028,7 +44008,7 @@
           }
         },
         {
-          "time": 10.5,
+          "time": 14,
           "type": "WAIT"
         },
         {
@@ -49676,7 +49656,7 @@
       "invisible": false,
       "hp": 0,
       "stickToSource": "TARGET",
-      "group": "frigidFlurryTriggerGroup",
+      "group": "",
       "size": {
         "x": 16,
         "y": 16,
@@ -51229,6 +51209,511 @@
         "zGravityFactor": 0,
         "shadow": 20
       }
+    },
+    "fajroDeck": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 24,
+              "offY": 96,
+              "width": 48,
+              "height": 32
+            },
+            "guiSprites": false,
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": false,
+                "time": 0.1,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "blur",
+                "faceRotate": false,
+                "time": 0.1,
+                "repeat": false,
+                "frames": [
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "killEffect": {
+        "sheet": "specials.heat",
+        "name": "heatCardDeckDeath"
+      },
+      "action": [
+        {
+          "value": 120,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "variance": 4,
+          "accel": 2,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fajroDeckAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "fajroDeckChargeFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fajroDeckCharging"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "fajroDeckChargeFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "fajroDeckChargeHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1.5,
+          "type": "WAIT"
+        },
+        {
+          "group": "fajroDeckChargeFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "condition": "entity.ownerAttrib.fajroSpike",
+          "maxTime": 1,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "blur"
+        },
+        {
+          "duration": -1,
+          "align": "TOP",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fajroDeckSpikeImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 0,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "value": -400,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "name": "fajroFinalExplode",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_OWNER",
+          "value": true
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 24
+      },
+      "type": "GENERIC"
+    },
+    "ss-fajroDeck": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 24,
+              "offY": 352,
+              "width": 48,
+              "height": 32
+            },
+            "guiSprites": false,
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": false,
+                "time": 0.1,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "blur",
+                "faceRotate": false,
+                "time": 0.1,
+                "repeat": false,
+                "frames": [
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "killEffect": {
+        "sheet": "specials.shadowflame-alts",
+        "name": "heatCardDeckDeath"
+      },
+      "action": [
+        {
+          "value": 120,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "variance": 4,
+          "accel": 2,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shadowflame-alts",
+            "name": "fajroDeckAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "fajroDeckChargeFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shadowflame-alts",
+            "name": "fajroDeckCharging"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "fajroDeckChargeFX",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shadowflame-alts",
+            "name": "fajroDeckChargeHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 1.5,
+          "type": "WAIT"
+        },
+        {
+          "group": "fajroDeckChargeFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "condition": "entity.ownerAttrib.fajroSpike",
+          "maxTime": 1,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "blur"
+        },
+        {
+          "duration": -1,
+          "align": "TOP",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.shadowflame-alts",
+            "name": "fajroDeckSpikeImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "value": 0,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "value": -400,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "name": "fajroFinalExplode",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_OWNER",
+          "value": true
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 24
+      },
+      "type": "GENERIC"
+    },
+    "fajroTrigger": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "name": "fajroHit",
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_OWNER",
+          "value": true
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -54801,7 +55286,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -55355,7 +55840,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -55932,7 +56417,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -56297,7 +56782,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -64208,7 +64693,7 @@
                 "changeType": "set",
                 "attribName": "loopCount",
                 "type": "SET_ATTRIB_NUMBER",
-                "value": 10
+                "value": 8
               },
               {
                 "name": "loop",
@@ -64221,7 +64706,7 @@
                 "value": 1
               },
               {
-                "time": 0.05,
+                "time": 0.06,
                 "type": "PLAYER_ADJUST_FACE"
               },
               {
@@ -64290,7 +64775,7 @@
                     "uniformDir": 0,
                     "delay": 0.05,
                     "repeat": false,
-                    "duration": 0.1,
+                    "duration": 0.12,
                     "count": 2,
                     "type": "SHOOT_PROXY_RANGE",
                     "proxy": "fireballSmallStraight2",
@@ -64326,7 +64811,7 @@
                 ]
               },
               {
-                "time": 0.05,
+                "time": 0.06,
                 "stopBeforeEdge": true,
                 "type": "MOVE_BACKWARD"
               },
@@ -66581,6 +67066,1619 @@
           {
             "name": "ssEnd",
             "type": "LABEL"
+          }
+        ]
+      },
+      "GUARD_SPECIAL3_B": {
+        "name": {
+          "en_US": "Faj'ro Flush"
+        },
+        "description": {
+          "en_US": "Attack enemies with a massive fire vortex before unleashing a full hand of heat spell cards."
+        },
+        "dmgType": "MELEE",
+        "stunType": "LOCK",
+        "status": true,
+        "steps": [
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "fajroHit",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "fajroSpike",
+            "value": false
+          },
+          {
+            "type": "SET_ATTRIB_BOOL",
+            "name": "fajroFinalExplode",
+            "value": false
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": -1,
+            "type": "SET_WEIGHT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "exhale"
+          },
+          {
+            "face": "NORTH",
+            "rotate": false,
+            "rotateSpeed": 3,
+            "type": "SET_FACE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "fajroPre"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "fajroPre"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "time": 0.35,
+            "type": "WAIT"
+          },
+          {
+            "posType": "TARGET",
+            "align": "BOTTOM",
+            "type": "SET_HIT_PROXY",
+            "proxy": "fajroTrigger",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "followUp": "sweepEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dash"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "fajroSweepHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "fajroSweep"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 180,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1.5,
+                "startAngle": -0.25,
+                "duration": 0.25,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "element": "HEAT",
+                  "damageFactor": 1.25,
+                  "fly": "MEDIUM",
+                  "status": 0.35,
+                  "reverse": true,
+                  "spFactor": 0,
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "fajroSweepHexagons"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "fajroSweep"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 180,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1.5,
+                "startAngle": -0.25,
+                "duration": 0.25,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "element": "HEAT",
+                  "damageFactor": 1.0,
+                  "fly": "MEDIUM",
+                  "status": 0.35,
+                  "reverse": true,
+                  "spFactor": 0,
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.4,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "time": 0.5,
+            "type": "WAIT"
+          },
+          {
+            "face": "SOUTH",
+            "rotate": false,
+            "rotateSpeed": 3,
+            "type": "SET_FACE"
+          },
+          {
+            "followUp": "sweepRevEnd",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.shadowflameActive",
+            "thenStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "fajroSweepHexagonsRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.shadowflame-alts",
+                  "name": "fajroSweepRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 180,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1.5,
+                "startAngle": -0.25,
+                "duration": 0.25,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": true,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "element": "HEAT",
+                  "damageFactor": 1.25,
+                  "fly": "LIGHT",
+                  "status": 0.35,
+                  "reverse": true,
+                  "spFactor": 0,
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ],
+            "elseStep": [
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "fajroSweepHexagonsRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "fajroSweepRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "align": "BOTTOM",
+                "radius": 180,
+                "yScale": 0,
+                "zHeight": 24,
+                "centralAngle": 1.5,
+                "startAngle": -0.25,
+                "duration": 0.25,
+                "expandRadius": 0,
+                "alwaysFull": false,
+                "clockwise": true,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": false,
+                "fixPos": false,
+                "checkCollision": true,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "MASSIVE",
+                  "visualType": "MASSIVE",
+                  "element": "HEAT",
+                  "damageFactor": 1.0,
+                  "fly": "LIGHT",
+                  "status": 0.35,
+                  "reverse": true,
+                  "spFactor": 0,
+                  "stunSteps": [
+                    {
+                      "type": "START_LOCK"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ],
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.4,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.fajroHit",
+            "thenStep": [
+              {
+                "align": "BOTTOM",
+                "type": "SHOOT_PROXY",
+                "proxy": "calamityWeatherController1",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": -1,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "group": "fajroVortexFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "fajroRisingLines"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": -1,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "group": "fajroVortexFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "fajroRisingLines"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": -1,
+                  "action": -1,
+                  "move": -1,
+                  "reaim": -1
+                }
+              },
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": -1,
+                    "align": "CENTER",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "group": "fajroAuraFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "calamityJumpTrail"
+                    }
+                  },
+                  {
+                    "duration": -1,
+                    "align": "CENTER",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "group": "jumpTrailFX",
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "fajroCopyTrail"
+                    }
+                  },
+                  {
+                    "duration": 0,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "fajroJump1"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": -1,
+                    "align": "CENTER",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "group": "fajroAuraFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "calamityJumpTrail"
+                    }
+                  },
+                  {
+                    "duration": -1,
+                    "align": "CENTER",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "group": "jumpTrailFX",
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "fajroCopyTrail"
+                    }
+                  },
+                  {
+                    "duration": 0,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "fajroJump1"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "jump"
+              },
+              {
+                "value": 380,
+                "type": "SET_Z_VEL"
+              },
+              {
+                "value": 1,
+                "type": "SET_Z_GRAVITY_FACTOR"
+              },
+              {
+                "time": 0.25,
+                "type": "WAIT"
+              },
+              {
+                "zoomType": "LIGHTER",
+                "fadeIn": 0.5,
+                "duration": -1,
+                "fadeOut": 0.2,
+                "name": "blur",
+                "type": "SET_ZOOM_BLUR"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": -1,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "group": "fajroVortexFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "fajroUpdraft"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  },
+                  {
+                    "align": "BASE",
+                    "radius": 164,
+                    "yScale": 0,
+                    "zHeight": 632,
+                    "centralAngle": 1,
+                    "duration": 0.1,
+                    "expandRadius": 0,
+                    "alwaysFull": true,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "rectangular": false,
+                    "repeat": true,
+                    "uniformHitDir": true,
+                    "fixPos": false,
+                    "checkCollision": false,
+                    "type": "CIRCLE_ATTACK",
+                    "attack": {
+                      "type": "HEAVY",
+                      "element": "HEAT",
+                      "damageFactor": 0.35,
+                      "fly": "LIGHT",
+                      "reverse": false,
+                      "hitInvincible": true,
+                      "status": 0.8,
+                      "guardable": "",
+                      "skillBonus": "MELEE_DMG",
+                      "limiter": "",
+                      "stunSteps": [
+                        {
+                          "type": "START_LOCK"
+                        },
+                        {
+                          "type": "BLOCK_XY"
+                        },
+                        {
+                          "accel": 3,
+                          "offZ": 64,
+                          "maxTime": 0,
+                          "maxSpeed": 50,
+                          "type": "Z_PULL"
+                        }
+                      ],
+                      "hints": [
+                        "NO_PUZZLE"
+                      ]
+                    },
+                    "offset": {
+                      "x": -32,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": -1,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "group": "fajroVortexFX",
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "fajroUpdraft"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  },
+                  {
+                    "align": "BASE",
+                    "radius": 164,
+                    "yScale": 0,
+                    "zHeight": 632,
+                    "centralAngle": 1,
+                    "duration": 0.1,
+                    "expandRadius": 0,
+                    "alwaysFull": true,
+                    "clockwise": false,
+                    "flipLeftFace": 0,
+                    "rectangular": false,
+                    "repeat": true,
+                    "uniformHitDir": true,
+                    "fixPos": false,
+                    "checkCollision": false,
+                    "type": "CIRCLE_ATTACK",
+                    "attack": {
+                      "type": "HEAVY",
+                      "element": "HEAT",
+                      "damageFactor": 0.3,
+                      "fly": "LIGHT",
+                      "reverse": false,
+                      "hitInvincible": true,
+                      "status": 0.8,
+                      "guardable": "",
+                      "skillBonus": "MELEE_DMG",
+                      "limiter": "",
+                      "stunSteps": [
+                        {
+                          "type": "START_LOCK"
+                        },
+                        {
+                          "type": "BLOCK_XY"
+                        },
+                        {
+                          "accel": 3,
+                          "offZ": 64,
+                          "maxTime": 0,
+                          "maxSpeed": 50,
+                          "type": "Z_PULL"
+                        }
+                      ],
+                      "hints": [
+                        "NO_PUZZLE"
+                      ]
+                    },
+                    "offset": {
+                      "x": -32,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "time": 0.25,
+                "type": "WAIT"
+              },
+              {
+                "value": 0,
+                "type": "SET_Z_GRAVITY_FACTOR"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "hover"
+              },
+              {
+                "value": 72,
+                "type": "SET_FLOAT_HEIGHT"
+              },
+              {
+                "variance": 8,
+                "accel": 2,
+                "type": "SET_FLOAT_PARAMS"
+              },
+              {
+                "group": "jumpTrailFX",
+                "type": "CLEAR_EFFECTS"
+              },
+              {
+                "time": 0.2,
+                "type": "WAIT"
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "handUpPreAir",
+                "followUp": "handUpLoopAir"
+              },
+              {
+                "time": 0.2,
+                "type": "WAIT"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "align": "BOTTOM",
+                    "type": "SHOOT_PROXY",
+                    "proxy": "ss-fajroDeck",
+                    "offset": {
+                      "x": 4,
+                      "y": 0,
+                      "z": 48
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "align": "BOTTOM",
+                    "type": "SHOOT_PROXY",
+                    "proxy": "fajroDeck",
+                    "offset": {
+                      "x": 4,
+                      "y": 0,
+                      "z": 48
+                    }
+                  }
+                ]
+              },
+              {
+                "time": 1.5,
+                "type": "WAIT"
+              },
+              {
+                "type": "STOP_REPEATING_FORCE"
+              },
+              {
+                "fadeOut": 0.3,
+                "name": "blur",
+                "type": "FADE_OUT_ZOOM_BLUR"
+              },
+              {
+                "group": "fajroVortexFX",
+                "type": "CLEAR_EFFECTS"
+              },
+              {
+                "align": "BASE",
+                "radius": 164,
+                "yScale": 0,
+                "zHeight": 632,
+                "centralAngle": 1,
+                "duration": 0.1,
+                "expandRadius": 0,
+                "alwaysFull": true,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "rectangular": false,
+                "repeat": false,
+                "uniformHitDir": true,
+                "fixPos": false,
+                "checkCollision": false,
+                "type": "CIRCLE_ATTACK",
+                "attack": {
+                  "type": "HEAVY",
+                  "element": "HEAT",
+                  "damageFactor": 0.3,
+                  "fly": "LIGHT",
+                  "reverse": false,
+                  "hitInvincible": true,
+                  "status": 0.8,
+                  "guardable": "",
+                  "skillBonus": "MELEE_DMG",
+                  "limiter": "",
+                  "stunSteps": [
+                    {
+                      "type": "Z_VEL",
+                      "value": -30
+                    },
+                    {
+                      "type": "Z_BOUNCINESS",
+                      "value": 0.3
+                    },
+                    {
+                      "distance": 32,
+                      "speed": 80,
+                      "maxTime": 1,
+                      "type": "PULL"
+                    }
+                  ],
+                  "hints": [
+                    "NO_PUZZLE"
+                  ]
+                },
+                "offset": {
+                  "x": -32,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "value": 0,
+                "type": "SET_FLOAT_HEIGHT"
+              },
+              {
+                "value": 450,
+                "type": "SET_Z_VEL"
+              },
+              {
+                "value": 1.5,
+                "type": "SET_Z_GRAVITY_FACTOR"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": 0,
+                    "align": "BOTTOM",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "fajroJump2"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": 0,
+                    "align": "BOTTOM",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": true,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "fajroJump2"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "jump"
+              },
+              {
+                "minWait": 0.1,
+                "type": "STOP_Z_ZENITH"
+              },
+              {
+                "value": 0.4,
+                "type": "SET_Z_GRAVITY_FACTOR"
+              },
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "fajroSpike",
+                "value": true
+              },
+              {
+                "followUp": "sweepEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "godThrowHeatFast"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "godThrowHeatFast"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
+              },
+              {
+                "group": "fajroAuraFX",
+                "type": "CLEAR_EFFECTS"
+              },
+              {
+                "type": "WAIT_UNTIL",
+                "maxTime": 0.3,
+                "condition": "entity.attrib.fajroFinalExplode"
+              },
+              {
+                "withElse": false,
+                "type": "IF",
+                "condition": "entity.attrib.fajroFinalExplode",
+                "thenStep": [
+                  {
+                    "withElse": true,
+                    "type": "IF",
+                    "condition": "entity.attrib.shadowflameActive",
+                    "thenStep": [
+                      {
+                        "duration": 0,
+                        "align": "BASE",
+                        "rotateFace": 0,
+                        "flipLeftFace": false,
+                        "wait": false,
+                        "waitSkip": 0,
+                        "actionDetached": true,
+                        "fixPos": false,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                          "sheet": "specials.shadowflame-alts",
+                          "name": "explosiveHeatDeckDeath"
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "duration": 0,
+                        "align": "BASE",
+                        "rotateFace": 0,
+                        "flipLeftFace": false,
+                        "wait": false,
+                        "waitSkip": 0,
+                        "actionDetached": true,
+                        "fixPos": false,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                          "sheet": "specials.shadowflame-alts",
+                          "name": "fajroFinalExplode"
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "type": "CLEAR_STUN_LOCKED"
+                      },
+                      {
+                        "align": "BASE",
+                        "radius": 164,
+                        "yScale": 0,
+                        "zHeight": 80,
+                        "centralAngle": 0,
+                        "duration": 0.3,
+                        "expandRadius": 0,
+                        "alwaysFull": true,
+                        "clockwise": false,
+                        "flipLeftFace": 0,
+                        "rectangular": false,
+                        "repeat": false,
+                        "uniformHitDir": false,
+                        "fixPos": false,
+                        "checkCollision": false,
+                        "type": "CIRCLE_ATTACK",
+                        "attack": {
+                          "type": "MASSIVE",
+                          "element": "HEAT",
+                          "fly": "HEAVY",
+                          "damageFactor": 3.25,
+                          "reverse": false,
+                          "status": 0.2,
+                          "stunSteps": [
+                            {
+                              "type": "END_LOCK"
+                            }
+                          ],
+                          "hints": [
+                            "NO_PUZZLE"
+                          ],
+                          "guardable": "",
+                          "skillBonus": "MELEE_DMG",
+                          "limiter": ""
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": -32
+                        }
+                      },
+                      {
+                        "time": 0.2,
+                        "type": "WAIT"
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0.167,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0.333,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0.5,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0.667,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "align": "BASE",
+                        "duration": 0.3,
+                        "clockwise": true,
+                        "centralAngle": 0.2,
+                        "startAngle": 0.833,
+                        "angleVary": 0,
+                        "startDist": 32,
+                        "startDistAdd": 128,
+                        "startDistCollide": "DROP",
+                        "random": false,
+                        "flipLeftFace": 0,
+                        "circularArea": false,
+                        "uniformDir": 0,
+                        "delay": 0,
+                        "repeat": false,
+                        "count": 7,
+                        "type": "SHOOT_PROXY_RANGE",
+                        "proxy": "darkFireGround",
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      }
+                    ],
+                    "elseStep": [
+                      {
+                        "duration": 0,
+                        "align": "BASE",
+                        "rotateFace": 0,
+                        "flipLeftFace": false,
+                        "wait": false,
+                        "waitSkip": 0,
+                        "actionDetached": true,
+                        "fixPos": false,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                          "sheet": "specials.heat",
+                          "name": "explosiveHeatDeckDeath"
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "duration": 0,
+                        "align": "BASE",
+                        "rotateFace": 0,
+                        "flipLeftFace": false,
+                        "wait": false,
+                        "waitSkip": 0,
+                        "actionDetached": true,
+                        "fixPos": false,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                          "sheet": "specials.heat",
+                          "name": "fajroFinalExplode"
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        }
+                      },
+                      {
+                        "type": "CLEAR_STUN_LOCKED"
+                      },
+                      {
+                        "align": "BASE",
+                        "radius": 164,
+                        "yScale": 0,
+                        "zHeight": 80,
+                        "centralAngle": 0,
+                        "duration": 0.3,
+                        "expandRadius": 0,
+                        "alwaysFull": true,
+                        "clockwise": false,
+                        "flipLeftFace": 0,
+                        "rectangular": false,
+                        "repeat": false,
+                        "uniformHitDir": false,
+                        "fixPos": false,
+                        "checkCollision": false,
+                        "type": "CIRCLE_ATTACK",
+                        "attack": {
+                          "type": "MASSIVE",
+                          "element": "HEAT",
+                          "fly": "MASSIVE++",
+                          "damageFactor": 3,
+                          "reverse": false,
+                          "status": 0.2,
+                          "stunSteps": [
+                            {
+                              "type": "END_LOCK"
+                            }
+                          ],
+                          "hints": [
+                            "NO_PUZZLE"
+                          ],
+                          "guardable": "",
+                          "skillBonus": "MELEE_DMG",
+                          "limiter": ""
+                        },
+                        "offset": {
+                          "x": 0,
+                          "y": 0,
+                          "z": -32
+                        }
+                      },
+                      {
+                        "time": 0.2,
+                        "type": "WAIT"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "fall"
+              },
+              {
+                "type": "WAIT_UNTIL_ON_GROUND"
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": 0,
+                  "action": 0,
+                  "move": 0,
+                  "reaim": 0
+                }
+              },
+              {
+                "value": "LIGHT",
+                "type": "SET_HIT_STABLE"
+              },
+              {
+                "duration": 0,
+                "align": "BASE",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.heat",
+                  "name": "fajroLandingDust"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "landOnGround"
+              },
+              {
+                "time": 0.45,
+                "type": "WAIT"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              }
+            ],
+            "elseStep": [
+              {
+                "time": 0.45,
+                "type": "WAIT"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
+              }
+            ]
           }
         ]
       }
@@ -68886,7 +70984,7 @@
             "anim": "dashRev"
           },
           {
-            "duration": 0.70,
+            "duration": 0.40,
             "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
@@ -68906,7 +71004,7 @@
             }
           },
           {
-            "time": 0.70,
+            "time": 0.40,
             "type": "WAIT"
           },
           {
@@ -77710,6 +79808,10 @@
             "type": "REMOVE_PROXIES"
           },
           {
+            "value": 4,
+            "type": "SET_DAMAGE_CEILING"
+          },
+          {
             "volume": 0.9,
             "global": false,
             "loop": false,
@@ -77786,7 +79888,7 @@
             "angleVary": 0,
             "startDistCollide": "NONE",
             "random": false,
-            "duration": 0.15,
+            "duration": 0.12,
             "clockwise": false,
             "flipLeftFace": 0,
             "circularArea": false,
@@ -77809,7 +79911,7 @@
             "type": "SET_FACE_TO_DIR"
           },
           {
-            "value": 0.475,
+            "value": 0.40,
             "type": "SET_INVINCIBLE"
           },
           {
@@ -77818,13 +79920,13 @@
             "yScale": 0,
             "zHeight": 0,
             "centralAngle": 1,
-            "duration": 0.4,
+            "duration": 0.04,
             "expandRadius": 0,
             "alwaysFull": true,
             "clockwise": false,
             "flipLeftFace": 0,
             "rectangular": false,
-            "repeat": false,
+            "repeat": true,
             "uniformHitDir": false,
             "fixPos": false,
             "checkCollision": true,
@@ -77832,10 +79934,10 @@
             "attack": {
               "type": "MEDIUM",
               "element": "WAVE",
-              "damageFactor": 1,
-              "reverse": true,
+              "damageFactor": 0.35,
+              "reverse": false,
               "spFactor": 0,
-              "status": 1,
+              "status": 0.75,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
             },
@@ -77846,7 +79948,7 @@
             }
           },
           {
-            "time": 0.475,
+            "time": 0.40,
             "collideCancel": 1,
             "stopBeforeEdge": false,
             "type": "MOVE_FORWARD"
@@ -78046,7 +80148,7 @@
             "attack": {
               "type": "HEAVY",
               "element": "WAVE",
-              "damageFactor": 1.55,
+              "damageFactor": 1.75,
               "fly": "MASSIVE",
               "reverse": false,
               "spFactor": 0,

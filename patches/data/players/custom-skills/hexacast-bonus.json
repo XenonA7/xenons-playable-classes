@@ -5024,7 +5024,7 @@
           "align": "BOTTOM",
           "centralAngle": 1,
           "angleVary": 0,
-          "startDist": 48,
+          "startDist": 56,
           "startDistCollide": "DROP",
           "random": false,
           "duration": 0,
@@ -18128,7 +18128,7 @@
         "description": {
           "en_US": "Toss a toxic mire spell card aimed at your cursor position."
         },
-        "dmgType": "RANGED",
+        "dmgType": "NONE",
         "stunType": "",
         "status": true,
         "steps": [

@@ -700,5 +700,140 @@
         5
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_HEAT_FAST",
+      "pivot": {
+        "x": 40,
+        "y": 32
+      },
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 96,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": true,
+      "time": 0.020,
+      "repeat": false,
+      "flipX": false,
+      "flipY": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SWEEP_HEAT_FAST_INV",
+      "pivot": {
+        "x": 40,
+        "y": 32
+      },
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "xCount": 6,
+        "offX": 0,
+        "offY": 96,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": true,
+      "time": 0.020,
+      "repeat": false,
+      "flipX": true,
+      "flipY": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "EXPLOSION_BIG_SLOW",
+      "sheet": {
+        "src": "media/entity/effects/heat.png",
+        "width": 48,
+        "height": 48,
+        "xCount": 6
+      },
+      "time": 0.07,
+      "repeat": false,
+      "pivot": {
+        "x": 24,
+        "y": 24
+      },
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SOURCE_HEAT_GUI",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 48,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
   }
 ]

@@ -1967,6 +1967,12 @@
     ],
     "embrittlementCardTrail": [
       {
+        "scaleX": 0.80,
+        "scaleY": 0.80,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
         "color": "#aaccff",
         "maxAlpha": 0.5,
         "minAlpha": 0,

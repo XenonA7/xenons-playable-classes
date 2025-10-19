@@ -84,6 +84,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -134,6 +135,7 @@
         "element": "COLD",
         "damageFactor": 0.6,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -185,6 +187,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -236,6 +239,7 @@
         "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 1,
+        "status": 0.55,
         "guardable": "",
         "skillBonus": "RANGED_DMG"
       },
@@ -4605,7 +4609,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -4940,7 +4944,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -5252,7 +5256,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -5785,7 +5789,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -6341,7 +6345,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -6676,7 +6680,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && combat.cnt.cold.turret-monks-invinc < 1 && !combat.facingPuzzle",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",

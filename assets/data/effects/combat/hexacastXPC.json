@@ -14748,6 +14748,378 @@
       {
         "type": "LOOP_END"
       }
+    ],
+    "ashenFrenzyHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 32,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0.25,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": false,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.45,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 32,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0.75,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": false,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.45,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ashenFrenzyHexagonsRev": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 32,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0.25,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.45,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 32,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0.75,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.45,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ashenFrenzyTargetHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 14,
+        "duration": 0.8,
+        "centralAngle": 1,
+        "startAngle": 0.5,
+        "startDist": 24,
+        "useTargetAngle": true,
+        "clockwise": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.35,
+            "y": 0.35
+          },
+          "start": {
+            "value": {
+              "x": 0.80,
+              "y": 0.80
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.35,
+              "y": 0.35
+            },
+            "time": 0.3,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.4,
+        "cancelable": true,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.8,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "ashenFrenzyCardSweepHexagons": [
+      {
+        "numParticles": 16,
+        "duration": 0.4,
+        "centralAngle": 1.2,
+        "startAngle": -0.1,
+        "startDist": 20,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.225,
+            "y": 0.225
+          },
+          "start": {
+            "value": {
+              "x": 0.85,
+              "y": 0.85
+            },
+            "time": 0.025,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.125,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.15,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "ashenFrenzyCardSweepHexagonsRev": [
+      {
+        "numParticles": 16,
+        "duration": 0.4,
+        "centralAngle": 1.2,
+        "startAngle": -0.1,
+        "startDist": 20,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": false,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.225,
+            "y": 0.225
+          },
+          "start": {
+            "value": {
+              "x": 0.85,
+              "y": 0.85
+            },
+            "time": 0.025,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.125,
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.15,
+        "anim": "HEXA_HEAT_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

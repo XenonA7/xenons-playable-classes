@@ -941,7 +941,7 @@
           "width": 32,
           "height": 32
         },
-        "guiSprites": false,
+        "guiSprites": true,
         "renderMode": "source-over",
         "repeat": false,
         "time": 0.1,
@@ -958,7 +958,7 @@
           "width": 48,
           "height": 48
         },
-        "guiSprites": false,
+        "guiSprites": true,
         "renderMode": "source-over",
         "repeat": false,
         "time": 0.1,
@@ -6340,54 +6340,23 @@
         "type": "COPY_SPRITE"
       },
       {
-        "numParticles": 20,
+        "numParticles": 10,
         "duration": 0.2,
         "centralAngle": 1,
         "startDist": 16,
         "random": true,
+        "particleRotate": true,
         "moveDist": 48,
         "keySpline": "EASE_OUT",
         "collision": false,
         "anim": "DARK_FLAME2",
-        "moveWithTarget": 1,
-        "type": "OFFSET_PARTICLE_CIRCLE"
-      },
-      {
-        "numParticles": 11,
-        "duration": 1.1,
-        "centralAngle": 0.55,
-        "startAngle": 0,
-        "startDist": 24,
-        "clockwise": false,
-        "uniformRandom": 0.3,
-        "flipRightParticles": true,
-        "moveDist": 4,
-        "keySpline": "EASE_OUT",
-        "collision": false,
-        "pAlpha": {
-          "init": 0.6
+        "pScale": {
+          "init": {
+            "x": 1.25,
+            "y": 1.25
+          }
         },
         "moveWithTarget": 1,
-        "anim": "DUST_UP",
-        "type": "OFFSET_PARTICLE_CIRCLE"
-      },
-      {
-        "numParticles": 11,
-        "duration": 1.1,
-        "centralAngle": 0.55,
-        "startAngle": 0.51,
-        "startDist": 24,
-        "clockwise": false,
-        "uniformRandom": 0.3,
-        "flipRightParticles": true,
-        "moveDist": 4,
-        "keySpline": "EASE_OUT",
-        "collision": false,
-        "pAlpha": {
-          "init": 0.6
-        },
-        "moveWithTarget": 1,
-        "anim": "DUST_UP",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
@@ -8749,7 +8718,7 @@
         "type": "PLAY_ANIM_RANGE"
       },
       {
-        "time": 0.075,
+        "time": 0.12,
         "type": "WAIT"
       },
       {
@@ -8875,7 +8844,7 @@
         "type": "PLAY_ANIM_RANGE"
       },
       {
-        "time": 0.05,
+        "time": 0.1,
         "type": "WAIT"
       },
       {
@@ -12677,7 +12646,7 @@
         "volume": 0.4,
         "global": false,
         "loop": false,
-        "speed": 1.0,
+        "speed": 1.5,
         "variance": 0,
         "sound": "media/sound/battle/enemies/charge-2s.ogg",
         "type": "PLAY_SOUND"
@@ -12947,10 +12916,10 @@
         "type": "PLAY_SOUND"
       },
       {
-        "numParticles": 20,
+        "numParticles": 28,
         "duration": 0.4,
         "centralAngle": 1,
-        "startDist": 24,
+        "startDist": 28,
         "particleRotate": true,
         "moveRotate": 0.10,
         "random": true,
@@ -12977,10 +12946,10 @@
           },
           "start": {
             "value": {
-              "x": 0.9,
-              "y": 0.9
+              "x": 1.1,
+              "y": 1.1
             },
-            "time": 0.1,
+            "time": 0.05,
             "spline": ""
           },
           "end": {
@@ -12988,14 +12957,13 @@
               "x": 0.4,
               "y": 0.4
             },
-            "time": 0.1,
+            "time": 0.05,
             "spline": ""
           }
         },
         "randFlip": true,
         "moveWithTarget": 1,
-        "particleDuration": 0.6,
-        "anim": "DARK_FIRE_SMALL",
+        "anim": "DARK_FIRE_SMALL_SLOW",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
@@ -13003,7 +12971,7 @@
         "duration": 0.4,
         "centralAngle": 1,
         "random": true,
-        "startDist": 16,
+        "startDist": 28,
         "moveDist": 32,
         "moveVariance": 16,
         "keySpline": "EASE_OUT",
@@ -14502,7 +14470,7 @@
         "fadeIn": 0.3,
         "fadeOut": 0.2,
         "duration": -1,
-        "glow": true,
+        "glow": false,
         "type": "LIGHT"
       },
       {
@@ -14521,8 +14489,8 @@
         "type": "CHANGE_SCALE"
       },
       {
-        "scaleX": 1.0,
-        "scaleY": 1.0,
+        "scaleX": 0.9,
+        "scaleY": 0.9,
         "duration": 0.45,
         "spline": "EASE_OUT_STRONG",
         "type": "CHANGE_SCALE"
@@ -14730,6 +14698,49 @@
       },
       {
         "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0.2,
+        "centralAngle": 1,
+        "startDist": 10,
+        "flipRightParticles": false,
+        "random": true,
+        "moveDist": 20,
+        "moveVariance": 8,
+        "normalMoveDist": 24,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 4
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.6,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.9,
+            "y": 0.9
+          },
+          "start": {
+            "value": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "time": 0.4,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0.1,
+        "particleDuration": 0.8,
+        "anim": "DARK_FLAME2",
+        "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
         "time": 0.2,
@@ -16282,6 +16293,41 @@
     ],
     "fajroRisingLines": [
       {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "pAlpha": {
+          "init": 0.25,
+          "start": {
+            "value": 0.1
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "start": {
+            "value": {
+              "x": 3.9,
+              "y": 3.9
+            },
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "pRotate": {
+          "init": 0.25
+        },
+        "moveWithTarget": 1,
+        "cancelable": true,
+        "particleDuration": 1.2,
+        "anim": "DARK_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
         "size": "XXXXL",
         "fadeIn": 0.05,
         "fadeOut": 0.6,
@@ -16758,8 +16804,8 @@
         "collision": false,
         "pScale": {
           "init": {
-            "x": 1.3,
-            "y": 1.3
+            "x": 1.15,
+            "y": 1.15
           },
           "end": {
             "value": {
@@ -16946,8 +16992,8 @@
       {
         "rumbleType": "RANDOM",
         "power": "MEGA",
-        "speed": "FASTEST",
-        "duration": 0.5,
+        "speed": "FASTER",
+        "duration": 0.75,
         "fade": true,
         "type": "RUMBLE"
       },

@@ -1,3 +1,42 @@
+## 2.26.0 (11/09/2025)
+### New Content
+- New Hexacast combat art: Ashen Frenzy (Heat Dash Lv.3A)
+  * Shadowflame support not implemented yet
+### Changes
+- Moved /js/azure-lazuline/wave-recall-combat-clear.js import to postStart.js, only loads if cc-multibakery is not installed
+- Added FLAME2 particles to improve effect fajroDeckAppear
+- Removed light glow from effect fajroDeckAppear
+- Reduced the size of DARK_FIRE particles from pScale 1.3 to 1.15 in shadowflame effect fajroUpdraft
+- Proxy fajroDeck scaling changed from 1.0 to 0.9 (in effect fajroDeckAppear)
+- Copied Faj'ro Flush's action steps for ground landing to the end of Shadowflame Sorcery and Calamity Beacon (visual only)
+- Increased FLAME2 size and density for effect tempestPlayerAura
+- Reduced screen flash intensity and increased darkness fadeout time for effect blizzardRushCharge
+- Removed screen flash from effect blizzardRushSweep1
+- Minor audio adjustments to effects fajroSweep and fajroSweepRev
+- Increased RUMBLE duration for effect fajroFinalExplode
+- Replaced GOD_HEXAGON_SHOCK particles with SPARK particles in Thundering Sparks effect boldSmallTS
+- Increased sound effect volume for effect stasisStormHugeWhirl
+- Added a HEAT_BIG_HEXAGON_GUI particle to the start of effect fajroRisingLines
+- Performance improvements for Calamity Beacon (and shadowflame version):
+  * Reduced particle count of effect calamityShootArc
+  * Removed dust particles from effect calamityShootArc
+  * Increased effect meteorTrailDiagonal loop time from 0.075 seconds to 0.12 seconds
+  * Increased effect meteorTrailDiagonalBig loop time from 0.05 seconds to 0.1 seconds
+  * Particle effects METEOR_MED and METEOR_BIG changed to guisprites
+- Replaced all Hexacast usage of vanilla effect dotExplode with custom effect dotExplodeHexa
+### Fixes
+- Fixed Ancient Power when used on the edge of a cliff - proxies are now spawned with BASE alignment instead of BOTTOM
+- Toxic Mire damageFactor (NO_DAMAGE limiter) changed from 0.075 to 0 to fix it being able to break enemies
+- Fixed Toxic Mire outdated description
+- Fixed arid.element-turret entry in puzzle-aim-detection.js
+- Fixed hitbox duration in Hexacast proxies scorchingSwirlController and heatExplosionSmall
+### Balance
+- Flaming Tempest duration reduced by 0.5 seconds, damage increased to compensate
+- Flaming Tempest aura melee radius increased from 32 to 48
+- Thundering Sparks delay between shots increased by 0.65 seconds
+- Thundering Sparks laser hitbox damageFactor reduced from 0.45 to 0.165 (huge nerf)
+- Thundering Sparks laser hitbox status factor increased from 1.0 to 1.35
+
 ## 2.25.1 (10/19/2025)
 ### Changes
 - Hexacast homing fixes and improvements by Azure Lazuline

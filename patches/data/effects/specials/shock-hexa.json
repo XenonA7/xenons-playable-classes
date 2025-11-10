@@ -20823,7 +20823,7 @@
         "type": "LOOP_START"
       },
       {
-        "volume": 0.65,
+        "volume": 0.80,
         "global": false,
         "loop": false,
         "speed": 1.25,
@@ -20832,7 +20832,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.5,
+        "volume": 0.65,
         "global": false,
         "loop": false,
         "variance": 0.1,
@@ -20847,22 +20847,22 @@
         "sounds": [
           {
             "sound": "media/sound/battle/airon/shock/close-combat-shock-sweep-1.ogg",
-            "volume": 1.0,
+            "volume": 1.15,
             "variance": 0.1
           },
           {
             "sound": "media/sound/battle/airon/shock/close-combat-shock-sweep-2.ogg",
-            "volume": 1.0,
+            "volume": 1.15,
             "variance": 0.1
           },
           {
             "sound": "media/sound/battle/airon/shock/close-combat-shock-sweep-3.ogg",
-            "volume": 1.0,
+            "volume": 1.15,
             "variance": 0.1
           },
           {
             "sound": "media/sound/battle/airon/shock/close-combat-shock-sweep-4.ogg",
-            "volume": 1.0,
+            "volume": 1.15,
             "variance": 0.1
           }
         ],

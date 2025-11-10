@@ -15365,7 +15365,7 @@
             "followUp": "handUpLoop"
           },
           {
-            "align": "BOTTOM",
+            "align": "BASE",
             "centralAngle": 2,
             "startAngle": -0.15,
             "angleVary": 0,
@@ -15390,7 +15390,7 @@
             }
           },
           {
-            "align": "BOTTOM",
+            "align": "BASE",
             "centralAngle": -2,
             "startAngle": 0.5,
             "angleVary": 0,

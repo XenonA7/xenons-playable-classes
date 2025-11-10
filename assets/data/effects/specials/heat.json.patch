@@ -555,7 +555,7 @@
         "width": 32,
         "height": 32
       },
-      "guiSprites": false,
+      "guiSprites": true,
       "renderMode": "source-over",
       "repeat": false,
       "time": 0.1,
@@ -576,7 +576,7 @@
         "width": 48,
         "height": 48
       },
-      "guiSprites": false,
+      "guiSprites": true,
       "renderMode": "source-over",
       "repeat": false,
       "time": 0.1,

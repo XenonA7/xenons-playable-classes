@@ -381,6 +381,106 @@
         "type": "DEBRIS_CIRCLE",
         "anim": "HEXA_CARD_HEAT"
       }
+    ],
+    "fireballAshenFrenzyTrail": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 1,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 4,
+        "random": true,
+        "moveDist": 8,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "particleRotate": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 4
+        },
+        "pScale": {
+          "init": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.3,
+        "particleDurVariance": 0.1,
+        "anim": "CIRCLE_SMALL_HEAT",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 4,
+        "random": true,
+        "moveDist": 8,
+        "moveVariance": 4,
+        "keySpline": "EASE_OUT",
+        "particleRotate": true,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 4
+        },
+        "pScale": {
+          "init": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pAlpha": {
+          "init": 1,
+          "start": {
+            "value": 0.4,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 0,
+        "particleDuration": 0.3,
+        "particleDurVariance": 0.1,
+        "anim": "CIRCLE_SMALL_HEAT",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.1,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
     ]
   }
 }

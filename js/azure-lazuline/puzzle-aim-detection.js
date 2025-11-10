@@ -23,7 +23,7 @@ sc.Combat.inject({
       {
         if (entity != null && !entity._killed && !entity._hidden)
         {
-          if (entity.enemyName == "arid.elementTurret") return true; //no homing in the mini turret puzzle rooms
+          if (entity.enemyName == "arid.element-turret") return true; //no homing in the mini turret puzzle rooms
           if (entity.enemyName == "cold.turret-monks-invinc") return true; //no homing in the bergen monk trials
           if (entity.enemyName == "boss.elephant") return true; //no homing if any elephant at all
           

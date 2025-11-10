@@ -4127,10 +4127,10 @@
     ],
     "blizzardRushCharge": [
       {
-        "color": "#004",
-        "fadeIn": 2,
-        "fadeOut": 0.2,
-        "duration": -1,
+        "color": "#000026",
+        "fadeIn": 0.4,
+        "fadeOut": 0.6,
+        "duration": 0.2,
         "type": "SCREEN_FLASH"
       },
       {
@@ -4151,7 +4151,7 @@
       },
       {
         "fadeIn": 0.5,
-        "fadeOut": 0.2,
+        "fadeOut": 0.6,
         "duration": -1,
         "intensity": 0.7,
         "type": "DARKNESS"
@@ -4369,13 +4369,6 @@
         "duration": -1,
         "glow": false,
         "type": "LIGHT"
-      },
-      {
-        "color": "#000833",
-        "fadeIn": 0,
-        "fadeOut": 0.6,
-        "duration": 0.1,
-        "type": "SCREEN_FLASH"
       },
       {
         "rumbleType": "RANDOM",

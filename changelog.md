@@ -1,3 +1,9 @@
+## 2.26.1 (11/11/2025)
+### Changes
+- Unfinished code entry for Hexacast Cold Guard Lv.3B
+### Balance
+- Hexacast homing shots steerDegree reduced from 0.6 to 0.3
+
 ## 2.26.0 (11/09/2025)
 ### New Content
 - New Hexacast combat art: Ashen Frenzy (Heat Dash Lv.3A)

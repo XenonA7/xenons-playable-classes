@@ -581,7 +581,7 @@
       "timeBoni": null,
       "behaviors": [
         {
-          "steerDegree": 0.30,
+          "steerDegree": 0.35,
           "adjustTime": 0,
           "type": "FOLLOW_TARGET"
         }
@@ -681,7 +681,7 @@
       "timeBoni": null,
       "behaviors": [
         {
-          "steerDegree": 0.30,
+          "steerDegree": 0.35,
           "adjustTime": 0,
           "type": "FOLLOW_TARGET"
         }
@@ -781,7 +781,7 @@
       "timeBoni": null,
       "behaviors": [
         {
-          "steerDegree": 0.30,
+          "steerDegree": 0.35,
           "adjustTime": 0,
           "type": "FOLLOW_TARGET"
         }
@@ -881,7 +881,7 @@
       "timeBoni": null,
       "behaviors": [
         {
-          "steerDegree": 0.30,
+          "steerDegree": 0.35,
           "adjustTime": 0,
           "type": "FOLLOW_TARGET"
         }
@@ -981,7 +981,7 @@
       "timeBoni": null,
       "behaviors": [
         {
-          "steerDegree": 0.30,
+          "steerDegree": 0.35,
           "adjustTime": 0,
           "type": "FOLLOW_TARGET"
         }

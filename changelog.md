@@ -1,3 +1,7 @@
+## 2.26.2 (11/11/2025)
+### Balance
+- Hexacast homing shots steerDegree increased from 0.3 to 0.35
+
 ## 2.26.1 (11/11/2025)
 ### Changes
 - Unfinished code entry for Hexacast Cold Guard Lv.3B

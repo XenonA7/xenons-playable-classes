@@ -24,12 +24,19 @@ sc.PartyModel.inject({
     },
 })
 
+function isMultiplayerPvpOn() {
+    /* cc-multibakery */
+    return sc.pvp.multiplayerPvp
+}
+
 // @ts-expect-error
 sc.PVP_MESSAGE.COMBATANT_DEFEATED = 4
 // @ts-expect-error
 sc.PVP_MESSAGE.ROUND_START = 5
 sc.PvpModel.inject({
     onPvpCombatantDefeat(combatant) {
+        if (isMultiplayerPvpOn()) return this.parent(combatant)
+
         const name = combatant ? (combatant == ig.game.playerEntity ? 'player' : combatant.name) : ''
         ig.vars.set('tmp.pvp_' + name + '_defeated', true)
         sc.Model.notifyObserver(this, sc.PVP_MESSAGE.COMBATANT_DEFEATED, combatant)
@@ -42,6 +49,8 @@ sc.PvpModel.inject({
         return this.parent(combatant)
     },
     startNextRound(autoContinue) {
+        if (isMultiplayerPvpOn()) return this.parent(autoContinue)
+
         ig.system.skipMode = false
         this.parent(autoContinue)
         sc.Model.notifyObserver(this, sc.PVP_MESSAGE.ROUND_START, null)
@@ -64,12 +73,16 @@ sc.SUB_HP_EDITOR.PVP.rearrangeAll = function () {
 sc.SUB_HP_EDITOR.PVP.inject({
     init(enemy) {
         this.parent(enemy)
+        if (isMultiplayerPvpOn()) return
+
         this.order = sc.SUB_HP_EDITOR.PVP.orderGlobal++
         sc.SUB_HP_EDITOR.PVP.hpBars.push(this)
         sc.SUB_HP_EDITOR.PVP.rearrangeAll()
     },
     remove(immediately) {
         this.parent(immediately)
+        if (isMultiplayerPvpOn()) return
+
         sc.SUB_HP_EDITOR.PVP.hpBars.erase(this)
         sc.SUB_HP_EDITOR.PVP.rearrangeAll()
     },
@@ -77,29 +90,34 @@ sc.SUB_HP_EDITOR.PVP.inject({
 
 ig.GUI.StatusBar.inject({
     init(combatant) {
+        if (isMultiplayerPvpOn()) return this.parent(combatant)
+
         if (!ig.vars.get("tmp.playerOppose")) {
-        sc.Model.addObserver(sc.pvp, this)
-        this.parent(combatant)
-    }
+            sc.Model.addObserver(sc.pvp, this)
+            this.parent(combatant)
+        }
     },
     modelChanged(model, message, data) {
+        if (isMultiplayerPvpOn()) return this.parent(model, message, data)
+
         if (!ig.vars.get("tmp.playerOppose")) {
             this.parent(model, message, data)
-        if (model == sc.pvp) {
-            if (message == sc.PVP_MESSAGE.COMBATANT_DEFEATED) {
-                if (sc.pvp.enemies.length > 1 && this.target instanceof ig.ENTITY.Combatant && this.target.isDefeated()) {
-                    this.subHpHandler && this.subHpHandler.remove()
-                    this.doStateTransition('HIDDEN', false, true)
-                }
-            } else if (message == sc.PVP_MESSAGE.ROUND_START) {
-                if (this.target instanceof ig.ENTITY.Combatant && this.hook.currentStateName == 'HIDDEN') {
-                    // @ts-expect-error
-                    this.subHpType = 'forceUpdateSubHpHandlerBySettingThisVariableToNonsense'
-                    this.updateSubHpHandler()
-                    this.doStateTransition('DEFAULT')
+
+            if (model == sc.pvp) {
+                if (message == sc.PVP_MESSAGE.COMBATANT_DEFEATED) {
+                    if (sc.pvp.enemies.length > 1 && this.target instanceof ig.ENTITY.Combatant && this.target.isDefeated()) {
+                        this.subHpHandler && this.subHpHandler.remove()
+                        this.doStateTransition('HIDDEN', false, true)
+                    }
+                } else if (message == sc.PVP_MESSAGE.ROUND_START) {
+                    if (this.target instanceof ig.ENTITY.Combatant && this.hook.currentStateName == 'HIDDEN') {
+                        // @ts-expect-error
+                        this.subHpType = 'forceUpdateSubHpHandlerBySettingThisVariableToNonsense'
+                        this.updateSubHpHandler()
+                        this.doStateTransition('DEFAULT')
+                    }
                 }
             }
-        }
         }
     },
 })
@@ -111,6 +129,8 @@ sc.CombatUpperHud.inject({
     },
     modelChanged(model, message, data) {
         this.parent && this.parent(model, message, data)
+        if (isMultiplayerPvpOn()) return
+
         if (model == sc.pvp) {
             if (message == sc.PVP_MESSAGE.STARTED) {
                 const winPointsLen = sc.pvp.winPoints * 10

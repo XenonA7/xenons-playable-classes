@@ -748,6 +748,27 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
+      "name": "ROCK_CRATER_SMALL",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 272,
+        "offY": 336,
+        "width": 22,
+        "height": 22
+      },
+      "guiSprites": false,
+      "renderMode": "source-over",
+      "time": 1,
+      "repeat": false,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
       "name": "ROCK_CRATER_MED",
       "sheet": {
         "src": "media/entity/effects/hexacast/hexa-misc.png",
@@ -769,13 +790,13 @@
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
     "content": {
-      "name": "ROCK_CRATER_SMALL",
+      "name": "ROCK_CRATER_BIG",
       "sheet": {
         "src": "media/entity/effects/hexacast/hexa-misc.png",
-        "offX": 272,
-        "offY": 336,
-        "width": 22,
-        "height": 22
+        "offX": 336,
+        "offY": 304,
+        "width": 48,
+        "height": 48
       },
       "guiSprites": false,
       "renderMode": "source-over",

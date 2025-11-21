@@ -212,5 +212,34 @@
         0
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DUST_UP",
+      "sheet": {
+        "src": "media/entity/effects/dust.png",
+        "width": 24,
+        "height": 32,
+        "offY": 32
+      },
+      "pivot": {
+        "x": 10,
+        "y": 24
+      },
+      "guiSprites": false,
+      "time": 0.06,
+      "repeat": false,
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
   }
 ]

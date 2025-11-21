@@ -1,3 +1,17 @@
+## 2.26.3 (11/20/2025)
+### Changes
+- Unfinished progress on Hexacast Cold Guard Lv.3B
+- Hexacast standard attack logic now uses the ELEMENT_MODE combat condition instead of player.element
+- Calamity Beacon initial card throw now respects polarityThrowType
+- Increased size and visibility of effects waveDetonationTimer and kindlingMineTimer
+- Freeze Rays now uses proper recolored laser sprites instead of neutral laser sprites
+### Fixes
+- Fixed properties of proxy waveDetonationTrap's initial stunning hitbox and all hitbox zHeight settings
+- Fixed waveDetonationRemote hitbox zHeight properties
+### Balance
+- Ashen Frenzy dash attacks damageFactor reduced from 3.5 to 2.5
+- Ashen Frenzy card spin attack damageFactor reduced from 0.75 to 0.60
+
 ## 2.26.2 (11/11/2025)
 ### Balance
 - Hexacast homing shots steerDegree increased from 0.3 to 0.35

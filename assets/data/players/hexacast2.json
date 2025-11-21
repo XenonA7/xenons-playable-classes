@@ -10505,7 +10505,7 @@
           "align": "BOTTOM",
           "radius": 45,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 24,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -10574,7 +10574,7 @@
           "align": "BOTTOM",
           "radius": 45,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 24,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -10934,7 +10934,7 @@
               "align": "BOTTOM",
               "radius": 48,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 24,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -10948,12 +10948,12 @@
               "checkCollision": false,
               "type": "CIRCLE_ATTACK",
               "attack": {
-                "type": "HEAVY",
+                "type": "MASSIVE",
                 "visualType": "LIGHT",
                 "element": "WAVE",
                 "damageFactor": 0.5,
-                "fly": "LIGHT",
-                "reverse": false,
+                "fly": "HEAVY",
+                "reverse": true,
                 "stunSteps": [
                   {
                     "type": "BLOCK_XY"
@@ -10962,7 +10962,7 @@
                     "type": "START_LOCK"
                   }
                 ],
-                "guardable": "NEVER",
+                "guardable": "",
                 "skillBonus": "",
                 "limiter": "NO_DAMAGE",
                 "hints": [
@@ -11071,7 +11071,7 @@
               "align": "BOTTOM",
               "radius": 45,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 24,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -11140,7 +11140,7 @@
               "align": "BOTTOM",
               "radius": 45,
               "yScale": 0,
-              "zHeight": 0,
+              "zHeight": 24,
               "centralAngle": 1,
               "duration": 0.1,
               "expandRadius": 0,
@@ -52258,7 +52258,7 @@
             "type": "HEAVY",
             "visualType": "MASSIVE",
             "element": "HEAT",
-            "damageFactor": 0.75,
+            "damageFactor": 0.60,
             "fly": "MASSIVE+",
             "reverse": false,
             "spFactor": 0,
@@ -52646,6 +52646,1602 @@
       "group": "",
       "startAnim": "",
       "type": "GENERIC"
+    },
+    "cataclysmHome": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "startDistCollide": "CLOSER",
+          "startAngle": 0,
+          "angleVary": 0,
+          "startDist": 12,
+          "count": 1,
+          "duration": 0,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "posEntity": "PROXY_OWNER",
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "cataclysmCard",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 12
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "cataclysmCard": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 128,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.cold",
+        "name": "hailCard1Death"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "detonateAuto",
+          "value": false
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "preGround",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmCardTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "group": "preGround",
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "frigidFlurryCardBase"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "volume": 0.7,
+          "global": false,
+          "loop": false,
+          "variance": 0.1,
+          "speed": 0.7,
+          "sound": "media/sound/boss/gynthar/card-stuck.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "value": 0,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "value": 2,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "value": 200,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 1,
+          "type": "SET_AIR_FRICTION"
+        },
+        {
+          "stopType": "LANDED",
+          "stopBeforeTime": 0,
+          "distance": 0,
+          "rotateSpeed": 0.5,
+          "adjustSpeedMax": 700,
+          "missileMode": 0,
+          "cancelIfBelowFall": true,
+          "type": "JUMP_TARGET_MOVEMENT"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "group": "preGround",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "stuck"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.icicles",
+            "name": "cataclysmCardLand"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 3.0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "group": "timer",
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "cataclysmTimer"
+          },
+          "offset": {
+            "x": 0,
+            "y": -1.5,
+            "z": 0
+          }
+        },
+        {
+          "strength": "EASY_ESCAPE",
+          "pull": true,
+          "radius": 160,
+          "fadeRadius": 40,
+          "minRadius": 16,
+          "zHeight": 32,
+          "duration": 3.0,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "maxTime": 1.8,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "time": 0.45,
+              "type": "WAIT"
+            },
+            {
+              "name": "manualDeath",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "volume": 0.50,
+          "global": false,
+          "loop": false,
+          "speed": 0.7,
+          "sound": "media/sound/designer/ball-gong-charge.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "maxTime": 1.2,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "time": 0.45,
+              "type": "WAIT"
+            },
+            {
+              "name": "manualDeath",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmArmed"
+          },
+          "offset": {
+            "x": 0,
+            "y": -1.5,
+            "z": 0
+          }
+        },
+        {
+          "withElse": true,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "max": 0.50,
+              "negated": false,
+              "type": "RANDOM"
+            }
+          ],
+          "thenStep": [
+            {
+              "duration": -1,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "group": "kindlingMineActiveFX",
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.cold",
+                "name": "cataclysmActiveCW"
+              },
+              "offset": {
+                "x": 0,
+                "y": -1.5,
+                "z": 0
+              }
+            }
+          ],
+          "elseStep": [
+            {
+              "duration": -1,
+              "align": "BOTTOM",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "group": "kindlingMineActiveFX",
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.cold",
+                "name": "cataclysmActiveCCW"
+              },
+              "offset": {
+                "x": 0,
+                "y": -1.5,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "cataclysmAutoTrigger",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 40,
+          "yScale": 0,
+          "zHeight": 48,
+          "centralAngle": 1,
+          "duration": 1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 6,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "LIGHT",
+            "visualType": "LIGHT",
+            "element": "HEAT",
+            "damageFactor": 0,
+            "status": 0,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "SIGNAL",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": -1.5,
+            "z": -16
+          }
+        },
+        {
+          "condition": "entity.attrib.detonateAuto || entity.ownerAttrib.cataclysmManualReserved",
+          "maxTime": 24,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "time": 0.45,
+              "type": "WAIT"
+            },
+            {
+              "name": "manualDeath",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.detonateAuto && !entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "name": "autoExplode",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healBatteryFading"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "condition": "entity.attrib.detonateAuto || entity.ownerAttrib.cataclysmManualReserved",
+          "maxTime": 6,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "time": 0.45,
+              "type": "WAIT"
+            },
+            {
+              "name": "manualDeath",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.detonateAuto && !entity.ownerAttrib.cataclysmManualReserved",
+          "thenStep": [
+            {
+              "name": "autoExplode",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "type": "GOTO_LABEL"
+        },
+        {
+          "name": "autoExplode",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "cataclysmExplosionAuto",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "manualDeath",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "name": "end",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "cataclysmCardGroup",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "IGNORE",
+        "zGravityFactor": 1,
+        "shadow": 16
+      },
+      "type": "GENERIC"
+    },
+    "cataclysmAutoTrigger": {
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "changeConnected": "PROXY_SOURCE",
+          "name": "detonateAuto",
+          "value": true
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "cataclysmExplosionAuto": {
+      "copyOwnerAnims": false,
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 128,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "breakType": "COMBATANT",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 12,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotating"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "reciprocalGaleCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmCardAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0.2,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "visualType": "MEDIUM",
+            "element": "COLD",
+            "damageFactor": 0.5,
+            "fly": "HEAVY",
+            "reverse": true,
+            "stunSteps": [
+              {
+                "type": "START_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmTriggered"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.icicles",
+            "name": "cataclysmTriggerIceDebris"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "strength": "RUN_ESCAPE",
+          "pull": true,
+          "radius": 48,
+          "fadeRadius": 0,
+          "minRadius": 16,
+          "zHeight": 32,
+          "duration": -1,
+          "align": "BASE",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "zoomType": "SLOW_INTENSE",
+          "fadeIn": 0.1,
+          "duration": -1,
+          "fadeOut": 0.5,
+          "name": "blur",
+          "type": "SET_ZOOM_BLUR"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "rockCraterBig"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "boom",
+          "target2": "SELF",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 1000
+          },
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmLaser"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 112,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "HEAVY",
+            "element": "COLD",
+            "damageFactor": 0.8,
+            "status": 0.5,
+            "fly": "LIGHT",
+            "reverse": false,
+            "stunSteps": [
+              {
+                "type": "BLOCK_XY"
+              },
+              {
+                "type": "START_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -32
+          }
+        },
+        {
+          "time": 2.0,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "fadeOut": 0.5,
+          "name": "blur",
+          "type": "FADE_OUT_ZOOM_BLUR"
+        },
+        {
+          "speed": "NORMAL",
+          "transition": "EASE_IN_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "type": "RESET_CAMERA"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 48,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 2.75,
+            "status": 0.525,
+            "fly": "MASSIVE++",
+            "reverse": false,
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "killEffect": {
+            "sheet": "specials.wave",
+            "name": "recallCardDeath"
+          },
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 1,
+        "shadow": 16
+      },
+      "type": "GENERIC"
+    },
+    "cataclysmExplosionManual": {
+      "copyOwnerAnims": false,
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 128,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "breakType": "COMBATANT",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "action": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "time": 0.35,
+          "type": "WAIT"
+        },
+        {
+          "group": "cataclysmCardGroup",
+          "type": "REMOVE_PROXIES"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotating"
+        },
+        {
+          "duration": 0.3,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "detonationCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "waveCardSmallAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        },
+        {
+          "value": 12,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "accel": 0.5,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "detonationCharge"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "duration": 1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "detonationPreHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "strength": "DASH_ESCAPE",
+          "pull": true,
+          "radius": 48,
+          "fadeRadius": 0,
+          "minRadius": 16,
+          "zHeight": 32,
+          "duration": -1,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "strength": "RUN_ESCAPE",
+          "pull": true,
+          "radius": 164,
+          "fadeRadius": 0,
+          "minRadius": 16,
+          "zHeight": 32,
+          "duration": -1,
+          "align": "BOTTOM",
+          "type": "PUSH_PULL_FORCE"
+        },
+        {
+          "time": 0.7,
+          "type": "WAIT"
+        },
+        {
+          "zoomType": "LIGHT",
+          "fadeIn": 0.1,
+          "duration": 0.5,
+          "fadeOut": 0.75,
+          "name": "blur",
+          "type": "SET_ZOOM_BLUR"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "boom",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "detonationBoom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 45,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": true,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "visualType": "LIGHT",
+            "element": "WAVE",
+            "damageFactor": 1.6,
+            "status": 0.575,
+            "fly": "LIGHT",
+            "reverse": false,
+            "stunSteps": [
+              {
+                "type": "BLOCK_XY"
+              },
+              {
+                "type": "START_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.7,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "speed": "NORMAL",
+          "transition": "EASE_IN_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "type": "RESET_CAMERA"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 45,
+          "yScale": 0,
+          "zHeight": 0,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 3.5,
+            "status": 0.575,
+            "fly": "MASSIVE++",
+            "reverse": false,
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "recallCardDeath"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.3,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 1,
+        "shadow": 16
+      },
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -52860,8 +54456,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -53044,8 +54646,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -53228,8 +54836,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -53412,8 +55026,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -53596,8 +55216,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -53992,8 +55618,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -54176,8 +55808,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -54360,8 +55998,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -54544,8 +56188,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -54728,8 +56378,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -55164,8 +56820,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -55348,8 +57010,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -55532,8 +57200,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -55716,8 +57390,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -55900,8 +57580,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56234,8 +57920,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56316,8 +58008,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56398,8 +58096,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56480,8 +58184,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56562,8 +58272,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56788,8 +58504,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56870,8 +58592,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -56952,8 +58680,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -57034,8 +58768,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -57116,8 +58856,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "duration": 0,
@@ -57381,8 +59127,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57411,8 +59163,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57441,8 +59199,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57471,8 +59235,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57501,8 +59271,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57726,8 +59502,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57756,8 +59538,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57786,8 +59574,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57816,8 +59610,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57846,8 +59646,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -57863,7 +59669,7 @@
                     "delay": 0,
                     "repeat": false,
                     "duration": 0,
-                    "proxy": "chargedWaveHoming",
+                    "proxy": "chargedWave",
                     "offset": {
                       "x": 0,
                       "y": 0,
@@ -63888,58 +65694,133 @@
             }
           },
           {
-            "followUp": "sweepEnd",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "sweep"
-          },
-          {
             "withElse": true,
             "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
+            "condition": "entity.attrib.polarityThrowType",
             "thenStep": [
               {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": 8,
-                "flipLeftFace": false,
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": false
+              },
+              {
+                "followUp": "sweepEnd",
                 "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "godThrowHeatFast"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "godThrowHeatFast"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "godThrowHeatFast"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
               }
             ],
             "elseStep": [
               {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": 8,
-                "flipLeftFace": false,
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": true
+              },
+              {
+                "followUp": "sweepRevEnd",
                 "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "godThrowHeatFast"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweepRev"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.shadowflameActive",
+                "thenStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.shadowflame-alts",
+                      "name": "godThrowHeatFastRev"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.heat",
+                      "name": "godThrowHeatFastRev"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -66274,7 +68155,7 @@
               "type": "HEAVY",
               "visualType": "MASSIVE",
               "element": "HEAT",
-              "damageFactor": 3.5,
+              "damageFactor": 2.5,
               "reverse": true,
               "spFactor": 0,
               "guardable": "",
@@ -66479,7 +68360,7 @@
               "type": "HEAVY",
               "visualType": "MASSIVE",
               "element": "HEAT",
-              "damageFactor": 3.5,
+              "damageFactor": 2.5,
               "reverse": true,
               "spFactor": 0,
               "guardable": "",
@@ -74464,609 +76345,31 @@
         "steps": [
           {
             "type": "SET_ATTRIB_BOOL",
-            "name": "meteorDrop",
-            "value": false
-          },
-          {
-            "type": "SET_ATTRIB_BOOL",
-            "name": "meteorStunRelease",
+            "name": "cataclysmManualReserved",
             "value": false
           },
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0,
+              "dash": 0.1,
               "action": -1,
               "move": -1,
               "reaim": -1
             }
           },
           {
-            "followUp": "sweepEnd",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "sweep"
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "godThrowHeatFast"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ],
-            "elseStep": [
-              {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "godThrowHeatFast"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ]
-          },
-          {
-            "value": "HEAVY",
-            "type": "SET_HIT_STABLE"
-          },
-          {
-            "value": -1,
-            "type": "SET_WEIGHT"
-          },
-          {
-            "value": false,
-            "type": "SET_JUMPING"
-          },
-          {
-            "value": 150,
-            "type": "SET_SPEED"
-          },
-          {
-            "value": 3,
-            "type": "SET_ACCEL_SPEED"
-          },
-          {
-            "time": 0.05,
-            "stopBeforeEdge": true,
-            "type": "MOVE_BACKWARD"
-          },
-          {
-            "align": "BOTTOM",
-            "centralAngle": 0,
-            "startDist": 60,
-            "startDistCollide": "CLOSER",
-            "random": false,
-            "count": 1,
             "duration": 0,
-            "clockwise": false,
-            "flipLeftFace": 8,
-            "delay": 0,
-            "repeat": false,
-            "type": "SHOOT_PROXY_RANGE",
-            "proxy": "calamityControllerTarget",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "time": 0.45,
-            "type": "WAIT"
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": -1,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "aceOfFlamesCharge"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ],
-            "elseStep": [
-              {
-                "duration": 0,
-                "align": "CENTER",
-                "rotateFace": -1,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "aceOfFlamesCharge"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ]
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "dash"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "specialShoot",
-            "followUp": "specialLoop"
-          },
-          {
-            "align": "BOTTOM",
-            "type": "SHOOT_PROXY",
-            "proxy": "calamityWeatherController1",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "align": "BOTTOM",
-                "centralAngle": 0.15,
-                "angleVary": 0,
-                "startDist": 24,
-                "startDistCollide": "CLOSER",
-                "random": true,
-                "count": 15,
-                "duration": 0.52,
-                "clockwise": false,
-                "flipLeftFace": 0,
-                "circularArea": false,
-                "uniformDir": 0,
-                "delay": 0,
-                "repeat": true,
-                "type": "SHOOT_PROXY_RANGE",
-                "proxy": "ss-flameWeakMelee",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              },
-              {
-                "duration": -1,
-                "align": "BOTTOM",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "group": "calamityShootFX",
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "fireBarrageHexagons"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              },
-              {
-                "duration": -1,
-                "align": "BOTTOM",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "group": "calamityShootFX",
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "calamityShootArc"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              }
-            ],
-            "elseStep": [
-              {
-                "align": "BOTTOM",
-                "centralAngle": 0.15,
-                "angleVary": 0,
-                "startDist": 24,
-                "startDistCollide": "CLOSER",
-                "random": true,
-                "count": 15,
-                "duration": 0.52,
-                "clockwise": false,
-                "flipLeftFace": 0,
-                "circularArea": false,
-                "uniformDir": 0,
-                "delay": 0,
-                "repeat": true,
-                "type": "SHOOT_PROXY_RANGE",
-                "proxy": "flameWeakMelee",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              },
-              {
-                "duration": -1,
-                "align": "BOTTOM",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "group": "calamityShootFX",
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "combat.hexacastXPC",
-                  "name": "fireBarrageHexagons"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              },
-              {
-                "duration": -1,
-                "align": "BOTTOM",
-                "rotateFace": 8,
-                "flipLeftFace": false,
-                "group": "calamityShootFX",
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "calamityShootArc"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 8
-                }
-              }
-            ]
-          },
-          {
-            "time": 2.0,
-            "type": "WAIT"
-          },
-          {
-            "type": "STOP_REPEATING_FORCE"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "dash"
-          },
-          {
-            "face": "SOUTH",
-            "rotate": false,
-            "rotateSpeed": 3,
-            "type": "SET_FACE"
-          },
-          {
-            "group": "calamityShootFX",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "duration": -1,
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "group": "calamityAuraFX",
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "calamityJumpTrail"
-                }
-              }
-            ],
-            "elseStep": [
-              {
-                "duration": -1,
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": false,
-                "group": "calamityAuraFX",
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "calamityJumpTrail"
-                }
-              }
-            ]
-          },
-          {
-            "time": 0.4,
-            "type": "WAIT"
-          },
-          {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": -1,
-              "action": -1,
-              "move": -1,
-              "reaim": -1
-            }
-          },
-          {
-            "align": "BOTTOM",
-            "type": "SHOOT_PROXY",
-            "proxy": "calamityWeatherController2",
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "duration": -1,
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "group": "copyTrailFX",
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "calamityCopyTrail"
-                }
-              },
-              {
-                "duration": 0,
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": true,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame-alts",
-                  "name": "calamityCardPulse"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0,
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": true,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.shadowflame",
-                  "name": "darkFireBoomSmall"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ],
-            "elseStep": [
-              {
-                "duration": -1,
-                "align": "CENTER",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "group": "copyTrailFX",
-                "actionDetached": false,
-                "fixPos": false,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "calamityCopyTrail"
-                }
-              },
-              {
-                "duration": 0,
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": true,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "specials.heat",
-                  "name": "calamityCardPulse"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              {
-                "duration": 0,
-                "align": "BOTTOM",
-                "rotateFace": 0,
-                "flipLeftFace": false,
-                "wait": false,
-                "waitSkip": 0,
-                "actionDetached": false,
-                "fixPos": true,
-                "type": "SHOW_EFFECT",
-                "effect": {
-                  "sheet": "enemies.raid-enemies",
-                  "name": "boomHeat"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            ]
-          },
-          {
-            "volume": 1.5,
-            "global": false,
-            "loop": false,
-            "speed": 1.1,
-            "sound": "media/sound/battle/explosion-1.ogg",
-            "type": "PLAY_SOUND"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "jump"
-          },
-          {
-            "value": 1600,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "value": 1.25,
-            "type": "SET_Z_GRAVITY_FACTOR"
-          },
-          {
-            "time": 1,
-            "type": "WAIT"
-          },
-          {
-            "value": 0,
-            "type": "SET_Z_GRAVITY_FACTOR"
-          },
-          {
-            "value": 0,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "group": "copyTrailFX",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "dashRev"
-          },
-          {
-            "duration": -1,
-            "align": "BOTTOM",
-            "rotateFace": 0,
+            "align": "CENTER",
+            "rotateFace": 8,
             "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
             "fixPos": false,
-            "group": "offsetFX",
             "type": "SHOW_EFFECT",
             "effect": {
-              "sheet": "xpc-utility",
-              "name": "zOffset8"
+              "sheet": "specials.cold",
+              "name": "cataclysmPlayerPulse"
             },
             "offset": {
               "x": 0,
@@ -75075,17 +76378,88 @@
             }
           },
           {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "specialShoot",
-            "followUp": "specialLoop"
+            "kind": "PROXY",
+            "key": "cataclysmCardGroup",
+            "type": "SET_TEMP_TARGET"
           },
           {
             "withElse": true,
             "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
+            "condition": "entity.hasTmpTarget",
             "thenStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "cataclysmManualReserved",
+                "value": true
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": 0.4,
+                  "action": -1,
+                  "move": -1,
+                  "reaim": -1
+                }
+              },
+              {
+                "value": true,
+                "immediately": true,
+                "type": "FACE_TO_TARGET"
+              },
+              {
+                "followUp": "attackEndLoop",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "attackEnd"
+              },
+              {
+                "time": 0.1,
+                "type": "WAIT"
+              },
+              {
+                "duration": 0,
+                "align": "FACE",
+                "rotateFace": 6,
+                "flipLeftFace": true,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.cold",
+                  "name": "hexaShootCold"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 0,
+                "target": "TARGET",
+                "align": "BOTTOM",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": true,
+                "target2": "SELF",
+                "target2Align": "FACE",
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "combat.hexacastXPC",
+                  "name": "cataclysmFlyActivate"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
               {
                 "align": "BOTTOM",
                 "centralAngle": 0,
@@ -75093,198 +76467,182 @@
                 "startDist": 0,
                 "startDistCollide": "NONE",
                 "random": false,
-                "count": 1,
-                "duration": 0,
                 "clockwise": false,
                 "flipLeftFace": 0,
                 "circularArea": false,
                 "uniformDir": 0,
                 "delay": 0,
                 "repeat": false,
+                "posEntity": "TARGET",
+                "duration": 0,
                 "type": "SHOOT_PROXY_RANGE",
-                "proxy": "ss-meteorFinal",
+                "proxy": "cataclysmExplosionManual",
                 "offset": {
                   "x": 0,
                   "y": 0,
-                  "z": -32
+                  "z": 0
+                },
+                "count": 1
+              },
+              {
+                "time": 0.2,
+                "type": "WAIT"
+              },
+              {
+                "time": 0.3,
+                "type": "WAIT"
+              },
+              {
+                "type": "SET_PLAYER_ACTION_BLOCK",
+                "blockData": {
+                  "dash": 0,
+                  "action": 0,
+                  "move": 0,
+                  "reaim": 0
                 }
+              },
+              {
+                "followUp": "preIdle",
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "postShoot1HSlow"
+              },
+              {
+                "time": 0.05,
+                "type": "WAIT"
               }
             ],
             "elseStep": [
               {
+                "withElse": true,
+                "type": "IF",
+                "condition": "entity.attrib.polarityThrowType",
+                "thenStep": [
+                  {
+                    "type": "SET_ATTRIB_BOOL",
+                    "name": "polarityThrowType",
+                    "value": false
+                  },
+                  {
+                    "followUp": "sweepEnd",
+                    "wait": false,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "sweep"
+                  },
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.cold",
+                      "name": "godThrowCold"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ],
+                "elseStep": [
+                  {
+                    "type": "SET_ATTRIB_BOOL",
+                    "name": "polarityThrowType",
+                    "value": true
+                  },
+                  {
+                    "followUp": "sweepRevEnd",
+                    "wait": false,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "sweepRev"
+                  },
+                  {
+                    "duration": 0,
+                    "align": "CENTER",
+                    "rotateFace": 8,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": false,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.cold",
+                      "name": "godThrowColdRev"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              },
+              {
+                "value": -1,
+                "type": "SET_WEIGHT"
+              },
+              {
+                "value": false,
+                "type": "SET_JUMPING"
+              },
+              {
+                "value": 150,
+                "type": "SET_SPEED"
+              },
+              {
+                "value": 3,
+                "type": "SET_ACCEL_SPEED"
+              },
+              {
+                "time": 0.05,
+                "stopBeforeEdge": true,
+                "type": "MOVE_BACKWARD"
+              },
+              {
                 "align": "BOTTOM",
                 "centralAngle": 0,
-                "angleVary": 0,
-                "startDist": 0,
-                "startDistCollide": "NONE",
+                "startDist": 60,
+                "startDistCollide": "CLOSER",
                 "random": false,
                 "count": 1,
                 "duration": 0,
                 "clockwise": false,
-                "flipLeftFace": 0,
-                "circularArea": false,
-                "uniformDir": 0,
+                "flipLeftFace": 8,
                 "delay": 0,
                 "repeat": false,
                 "type": "SHOOT_PROXY_RANGE",
-                "proxy": "meteorFinal",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": -32
-                }
-              }
-            ]
-          },
-          {
-            "time": 1.8,
-            "type": "WAIT"
-          },
-          {
-            "type": "SET_ATTRIB_BOOL",
-            "name": "meteorDrop",
-            "value": true
-          },
-          {
-            "zoomType": "LIGHT",
-            "fadeIn": 0.1,
-            "duration": -1,
-            "fadeOut": 0.1,
-            "name": "blur",
-            "type": "SET_ZOOM_BLUR"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "landOnGround"
-          },
-          {
-            "value": 1.5,
-            "type": "SET_Z_GRAVITY_FACTOR"
-          },
-          {
-            "type": "WAIT_UNTIL",
-            "maxTime": 3,
-            "condition": "entity.attrib.meteorStunRelease"
-          },
-          {
-            "group": "calamityAuraFX",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "withElse": true,
-            "type": "IF",
-            "condition": "entity.attrib.shadowflameActive",
-            "thenStep": [
-              {
-                "align": "BASE",
-                "type": "SHOOT_PROXY",
-                "proxy": "ss-meteorFinalExplosionOnly",
+                "proxy": "cataclysmHome",
                 "offset": {
                   "x": 0,
                   "y": 0,
                   "z": 0
                 }
-              }
-            ],
-            "elseStep": [
+              },
               {
-                "align": "BASE",
-                "type": "SHOOT_PROXY",
-                "proxy": "meteorFinalExplosionOnly",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
+                "time": 0.55,
+                "type": "WAIT"
+              },
+              {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preIdle"
               }
             ]
-          },
-          {
-            "fadeOut": 0.3,
-            "name": "blur",
-            "type": "FADE_OUT_ZOOM_BLUR"
-          },
-          {
-            "value": 1,
-            "type": "SET_Z_GRAVITY_FACTOR"
-          },
-          {
-            "value": 250,
-            "type": "SET_Z_VEL"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "jump"
-          },
-          {
-            "time": 0.5,
-            "type": "WAIT"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "fall"
-          },
-          {
-            "type": "WAIT_UNTIL_ON_GROUND"
-          },
-          {
-            "group": "offsetFX",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
-            "type": "SET_PLAYER_ACTION_BLOCK",
-            "blockData": {
-              "dash": 0,
-              "action": 0,
-              "move": 0,
-              "reaim": 0
-            }
-          },
-          {
-            "value": "LIGHT",
-            "type": "SET_HIT_STABLE"
-          },
-          {
-            "duration": 0,
-            "align": "BASE",
-            "rotateFace": 0,
-            "flipLeftFace": false,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": true,
-            "fixPos": false,
-            "type": "SHOW_EFFECT",
-            "effect": {
-              "sheet": "specials.heat",
-              "name": "fajroLandingDust"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            }
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "landOnGround"
-          },
-          {
-            "time": 0.45,
-            "type": "WAIT"
-          },
-          {
-            "wait": true,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "preIdle"
           }
         ]
       }

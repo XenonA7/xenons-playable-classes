@@ -204,9 +204,6 @@
       ]
     }
   },
-
-
-
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
@@ -315,8 +312,8 @@
     "content": {
       "name": "LASER_END",
       "sheet": {
-        "src": "media/entity/effects/neutral.png",
-        "offX": 320,
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 608,
         "offY": 48,
         "width": 32,
         "height": 32
@@ -379,6 +376,72 @@
       "time": 0.4,
       "frames": [
         2
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "SNOWFLAKE1_NO_GUI",
+      "sheet": {
+        "src": "media/entity/effects/particles1.png",
+        "offX": 224,
+        "offY": 32,
+        "width": 8,
+        "height": 8
+      },
+      "guiSprites": false,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CIRCLE_SOURCE_COLD_GUI",
+      "sheet": {
+        "src": "media/entity/effects/lighter-particle.png",
+        "offX": 0,
+        "offY": 96,
+        "width": 48,
+        "height": 48
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.05,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "CYBER_CIRCLE_COLD",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "offX": 608,
+        "offY": 80,
+        "width": 96,
+        "height": 96
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "repeat": false,
+      "frames": [
+        0
       ]
     }
   }

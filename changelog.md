@@ -8,6 +8,7 @@
 ### Fixes
 - Fixed properties of proxy waveDetonationTrap's initial stunning hitbox and all hitbox zHeight settings
 - Fixed waveDetonationRemote hitbox zHeight properties
+- Fix pvp bar duplication when using cc-multibakery (Fix by Krypek in pvp-gui-fix.js)
 ### Balance
 - Ashen Frenzy dash attacks damageFactor reduced from 3.5 to 2.5
 - Ashen Frenzy card spin attack damageFactor reduced from 0.75 to 0.60

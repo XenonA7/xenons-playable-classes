@@ -12763,7 +12763,7 @@
           },
           "end": {
             "value": 0,
-            "time": 0.5,
+            "time": 1.0,
             "spline": ""
           }
         },
@@ -12775,7 +12775,43 @@
         },
         "randFlip": true,
         "moveWithTarget": 0,
-        "particleDuration": 12,
+        "particleDuration": 14,
+        "cancelable": false,
+        "anim": "ROCK_CRATER_BIG",
+        "type": "PLAY_ANIM"
+      }
+    ],
+    "rockCraterBigger": [
+      {
+        "useTargetAngle": false,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": 0,
+            "time": 1.0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.5,
+            "y": 1.5
+          }
+        },
+        "randFlip": true,
+        "moveWithTarget": 0,
+        "particleDuration": 14,
         "cancelable": false,
         "anim": "ROCK_CRATER_BIG",
         "type": "PLAY_ANIM"

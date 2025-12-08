@@ -1,3 +1,21 @@
+## 2.27.0 (12/07/2025)
+### New Content
+- New Hexacast combat art: Glacial Cataclysm (Cold Guard Lv.3B)
+- Added new ENV particles:
+  * COLD_CRYSTALS_RISING
+  * COLD_CRYSTALS_RISING_FAST
+  * SNOW_FLAKES_RISING
+  * SNOW_FLAKES_RISING_FAST
+### Changes
+- Tweaked descriptions for Freeze Rays, Frigid Flurry, Magic Missile, Frozen Fortress, Brittle Barrier, Shock Surge, Magnet Deck
+### Fixes
+- Updated all weather controller proxies (Triblader, Hexacast) to be invisible: true
+- Throttle Hex dmgType label updated to MIXED
+### Balance
+- Added a short, interruptible delay to the start of Ashen Frenzy
+- Throttle Hex contact damageFactor reduced from 4.0 to 3.0
+- Throttle Hex proxy thunderSmallWeak damageFactor reduced from 0.8 to 0.65
+
 ## 2.26.3 (11/20/2025)
 ### Changes
 - Unfinished progress on Hexacast Cold Guard Lv.3B

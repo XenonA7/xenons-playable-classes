@@ -4585,7 +4585,7 @@
           "attack": {
             "type": "LIGHT",
             "element": "SHOCK",
-            "damageFactor": 0.8,
+            "damageFactor": 0.65,
             "reverse": true,
             "status": 0,
             "hints": [
@@ -7264,7 +7264,7 @@
           "time": 0.1
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,
@@ -35356,7 +35356,7 @@
           "time": 0.1
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,
@@ -35397,7 +35397,7 @@
           "time": 0.1
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,
@@ -50289,7 +50289,7 @@
           "time": 0.1
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,
@@ -53013,7 +53013,7 @@
           ]
         },
         {
-          "volume": 0.50,
+          "volume": 0.40,
           "global": false,
           "loop": false,
           "speed": 0.7,
@@ -53299,15 +53299,15 @@
           "type": "SET_SHADOW"
         },
         {
+          "time": 0.02,
+          "type": "WAIT"
+        },
+        {
           "name": "end",
           "type": "LABEL"
         },
         {
           "type": "CLEAR_HIT_PROXY"
-        },
-        {
-          "time": 0.1,
-          "type": "WAIT"
         }
       ],
       "invisible": false,
@@ -53375,7 +53375,7 @@
             "SUB": [
               {
                 "name": "default",
-                "faceRotate": true,
+                "faceRotate": false,
                 "time": 0.016,
                 "repeat": false,
                 "frames": [
@@ -53396,6 +53396,22 @@
                   13,
                   14,
                   15
+                ]
+              },
+              {
+                "name": "rotatingRev",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  15,
+                  14,
+                  13,
+                  4,
+                  3,
+                  2,
+                  1
                 ]
               },
               {
@@ -53443,6 +53459,10 @@
           }
         ]
       },
+      "killEffect": {
+        "sheet": "specials.cold",
+        "name": "hailCard1Death"
+      },
       "breakType": "COMBATANT",
       "size": {
         "x": 16,
@@ -53461,7 +53481,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "rotating"
+          "anim": "default"
         },
         {
           "duration": 0,
@@ -53475,7 +53495,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.cold",
-            "name": "reciprocalGaleCardAppear"
+            "name": "cataclysmCardAppear"
           },
           "offset": {
             "x": 0,
@@ -53502,6 +53522,11 @@
             "y": 0,
             "z": 0
           }
+        },
+        {
+          "factor": 0.85,
+          "time": 0.1,
+          "type": "ADD_SLOW_MOTION"
         },
         {
           "align": "BASE",
@@ -53552,12 +53577,12 @@
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
-          "actionDetached": false,
+          "actionDetached": true,
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.cold",
-            "name": "cataclysmTriggered"
+            "name": "cataclysmTriggeredAuto"
           },
           "offset": {
             "x": 0,
@@ -53577,7 +53602,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.icicles",
-            "name": "cataclysmTriggerIceDebris"
+            "name": "cataclysmTriggerIceDebrisAuto"
           },
           "offset": {
             "x": 0,
@@ -53586,9 +53611,49 @@
           }
         },
         {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmPostTriggerChargeAuto"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "cataclysmWeatherControllerAuto",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.6,
+          "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotatingRev"
+        },
+        {
           "strength": "RUN_ESCAPE",
           "pull": true,
-          "radius": 48,
+          "radius": 64,
           "fadeRadius": 0,
           "minRadius": 16,
           "zHeight": 32,
@@ -53597,7 +53662,7 @@
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "zoomType": "SLOW_INTENSE",
+          "zoomType": "LIGHTEST",
           "fadeIn": 0.1,
           "duration": -1,
           "fadeOut": 0.5,
@@ -53636,7 +53701,7 @@
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
-          "group": "boom",
+          "group": "cataclysmLaserFX",
           "target2": "SELF",
           "target2Offset": {
             "x": 0,
@@ -53647,7 +53712,70 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.cold",
-            "name": "cataclysmLaser"
+            "name": "cataclysmLaserAuto"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "cataclysmLaserFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.icicles",
+            "name": "cataclysmLaserIceDebrisAuto"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "cataclysmLaserFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "freezeRayImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "cataclysmLaserFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "cataclysmLaserHexagons"
           },
           "offset": {
             "x": 0,
@@ -53659,7 +53787,7 @@
           "align": "BASE",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 112,
+          "zHeight": 250,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -53676,7 +53804,7 @@
             "type": "HEAVY",
             "visualType": "HEAVY",
             "element": "COLD",
-            "damageFactor": 0.8,
+            "damageFactor": 0.85,
             "status": 0.5,
             "fly": "LIGHT",
             "reverse": false,
@@ -53686,6 +53814,13 @@
               },
               {
                 "type": "START_LOCK"
+              },
+              {
+                "accel": 3,
+                "offZ": 160,
+                "maxTime": 0,
+                "maxSpeed": 70,
+                "type": "Z_PULL"
               }
             ],
             "guardable": "",
@@ -53702,19 +53837,23 @@
           }
         },
         {
-          "time": 2.0,
+          "time": 1.5,
           "type": "WAIT"
         },
         {
-          "wait": false,
-          "viaWalkConfig": false,
-          "type": "SHOW_ANIMATION",
-          "anim": "hidden"
+          "time": 1.0,
+          "removeEntityStatic": false,
+          "type": "CLEAR_SLOW_MOTION"
+        },
+        {
+          "time": 1.05,
+          "type": "WAIT"
         },
         {
           "type": "STOP_REPEATING_FORCE"
         },
         {
+          "group": "cataclysmLaserFX",
           "type": "CLEAR_EFFECTS"
         },
         {
@@ -53723,19 +53862,32 @@
           "type": "FADE_OUT_ZOOM_BLUR"
         },
         {
-          "speed": "NORMAL",
-          "transition": "EASE_IN_OUT",
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
-          "type": "RESET_CAMERA"
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmLaserExplodeAuto"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
-          "align": "BOTTOM",
+          "align": "BASE",
           "radius": 48,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 250,
           "centralAngle": 1,
-          "duration": 0.1,
+          "duration": 0.2,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
@@ -53748,14 +53900,22 @@
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
-            "element": "WAVE",
+            "visualType": "MASSIVE",
+            "element": "COLD",
             "damageFactor": 2.75,
             "status": 0.525,
-            "fly": "MASSIVE++",
+            "fly": "MASSIVE",
             "reverse": false,
             "stunSteps": [
               {
                 "type": "END_LOCK"
+              },
+              {
+                "accel": 3,
+                "offZ": -200,
+                "maxTime": 0,
+                "maxSpeed": 200,
+                "type": "Z_PULL"
               }
             ],
             "guardable": "",
@@ -53768,18 +53928,11 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -32
           }
         },
         {
-          "killEffect": {
-            "sheet": "specials.wave",
-            "name": "recallCardDeath"
-          },
-          "type": "MOD_GENERIC_PROXY"
-        },
-        {
-          "time": 0.1,
+          "time": 0.25,
           "type": "WAIT"
         }
       ],
@@ -53790,7 +53943,7 @@
       "config": {
         "collType": "NONE",
         "zGravityFactor": 1,
-        "shadow": 16
+        "shadow": 24
       },
       "type": "GENERIC"
     },
@@ -53815,7 +53968,7 @@
             "SUB": [
               {
                 "name": "default",
-                "faceRotate": true,
+                "faceRotate": false,
                 "time": 0.016,
                 "repeat": false,
                 "frames": [
@@ -53836,6 +53989,22 @@
                   13,
                   14,
                   15
+                ]
+              },
+              {
+                "name": "rotatingRev",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  15,
+                  14,
+                  13,
+                  4,
+                  3,
+                  2,
+                  1
                 ]
               },
               {
@@ -53883,6 +54052,10 @@
           }
         ]
       },
+      "killEffect": {
+        "sheet": "specials.cold",
+        "name": "hailCard1Death"
+      },
       "breakType": "COMBATANT",
       "size": {
         "x": 16,
@@ -53908,90 +54081,125 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "wait": false,
-          "viaWalkConfig": false,
-          "type": "SHOW_ANIMATION",
-          "anim": "rotating"
-        },
-        {
-          "duration": 0.3,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "detonationCardAppear"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "waveCardSmallAura"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "duration": -1,
-          "align": "BOTTOM",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": false,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "combat.hexacastXPC",
-            "name": "scale85"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "time": 0.1,
-          "type": "WAIT"
-        },
-        {
-          "value": 12,
+          "value": 24,
           "type": "SET_FLOAT_HEIGHT"
         },
         {
-          "accel": 0.5,
-          "type": "SET_FLOAT_PARAMS"
-        },
-        {
-          "time": 0.2,
-          "type": "WAIT"
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
         },
         {
           "duration": 0,
           "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmCardAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmCardAura"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "factor": 0.70,
+          "time": 0.1,
+          "type": "ADD_SLOW_MOTION"
+        },
+        {
+          "align": "BASE",
+          "radius": 72,
+          "yScale": 0,
+          "zHeight": 64,
+          "centralAngle": 1,
+          "duration": 0.2,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "visualType": "MEDIUM",
+            "element": "COLD",
+            "damageFactor": 0.5,
+            "fly": "HEAVY",
+            "reverse": true,
+            "stunSteps": [
+              {
+                "type": "START_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "",
+            "limiter": "NO_DAMAGE",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -32
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmTriggeredManual"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
           "rotateFace": 8,
           "flipLeftFace": false,
           "wait": false,
@@ -54000,18 +54208,18 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.wave",
-            "name": "detonationCharge"
+            "sheet": "specials.icicles",
+            "name": "cataclysmTriggerIceDebrisManual"
           },
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 4
+            "z": 0
           }
         },
         {
-          "duration": 1,
-          "align": "BOTTOM",
+          "duration": 1.2,
+          "align": "CENTER",
           "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
@@ -54020,13 +54228,55 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "combat.hexacastXPC",
-            "name": "detonationPreHexagons"
+            "sheet": "specials.cold",
+            "name": "cataclysmPostTriggerChargeManual"
           },
           "offset": {
             "x": 0,
+            "y": 2,
+            "z": 0
+          }
+        },
+        {
+          "duration": 1.45,
+          "align": "CENTER",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "cataclysmManualChargeHexagons"
+          },
+          "offset": {
+            "x": 0,
+            "y": 2,
+            "z": 0
+          },
+          "type": "SHOW_EFFECT"
+        },
+        {
+          "offsetX": 0,
+          "offsetY": -64,
+          "speed": "SLOW",
+          "transition": "EASE_IN_OUT",
+          "wait": false,
+          "waitSkip": 0,
+          "zoom": 1.0,
+          "target": "SELF",
+          "focusType": "SELF",
+          "type": "FOCUS_CAMERA"
+        },
+        {
+          "align": "BOTTOM",
+          "type": "SHOOT_PROXY",
+          "proxy": "cataclysmWeatherControllerManual",
+          "offset": {
+            "x": 0,
             "y": 0,
-            "z": 4
+            "z": 0
           }
         },
         {
@@ -54034,36 +54284,31 @@
           "type": "WAIT"
         },
         {
-          "strength": "DASH_ESCAPE",
-          "pull": true,
-          "radius": 48,
-          "fadeRadius": 0,
-          "minRadius": 16,
-          "zHeight": 32,
-          "duration": -1,
-          "align": "BOTTOM",
-          "type": "PUSH_PULL_FORCE"
-        },
-        {
           "strength": "RUN_ESCAPE",
           "pull": true,
-          "radius": 164,
-          "fadeRadius": 0,
+          "radius": 112,
+          "fadeRadius": 64,
           "minRadius": 16,
           "zHeight": 32,
           "duration": -1,
-          "align": "BOTTOM",
+          "align": "BASE",
           "type": "PUSH_PULL_FORCE"
         },
         {
-          "time": 0.7,
+          "time": 1.2,
           "type": "WAIT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "rotatingRev"
         },
         {
           "zoomType": "LIGHT",
           "fadeIn": 0.1,
-          "duration": 0.5,
-          "fadeOut": 0.75,
+          "duration": -1,
+          "fadeOut": 0.5,
           "name": "blur",
           "type": "SET_ZOOM_BLUR"
         },
@@ -54072,31 +54317,99 @@
           "type": "WAIT"
         },
         {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "rockCraterBigger"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
           "duration": -1,
-          "align": "BOTTOM",
+          "align": "BASE",
           "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
           "actionDetached": false,
-          "group": "boom",
+          "group": "cataclysmLaserFX",
+          "target2": "SELF",
+          "target2Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 1000
+          },
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.wave",
-            "name": "detonationBoom"
+            "sheet": "specials.cold",
+            "name": "cataclysmLaserManual1"
           },
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 4
+            "z": 0
           }
         },
         {
-          "align": "BOTTOM",
-          "radius": 45,
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "cataclysmLaserFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmLaserManual2"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BASE",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "cataclysmLaserFX",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.icicles",
+            "name": "cataclysmLaserIceDebrisManual"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 56,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 250,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -54111,10 +54424,10 @@
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
-            "visualType": "LIGHT",
-            "element": "WAVE",
-            "damageFactor": 1.6,
-            "status": 0.575,
+            "visualType": "MASSIVE",
+            "element": "COLD",
+            "damageFactor": 1.9,
+            "status": 0.5,
             "fly": "LIGHT",
             "reverse": false,
             "stunSteps": [
@@ -54123,6 +54436,13 @@
               },
               {
                 "type": "START_LOCK"
+              },
+              {
+                "accel": 3,
+                "offZ": 160,
+                "maxTime": 0,
+                "maxSpeed": 70,
+                "type": "Z_PULL"
               }
             ],
             "guardable": "",
@@ -54135,39 +54455,68 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -32
           }
         },
         {
-          "time": 0.7,
+          "time": 1.5,
           "type": "WAIT"
         },
         {
-          "wait": false,
-          "viaWalkConfig": false,
-          "type": "SHOW_ANIMATION",
-          "anim": "hidden"
+          "time": 1.0,
+          "removeEntityStatic": false,
+          "type": "CLEAR_SLOW_MOTION"
+        },
+        {
+          "time": 1.05,
+          "type": "WAIT"
         },
         {
           "type": "STOP_REPEATING_FORCE"
         },
         {
-          "type": "CLEAR_EFFECTS"
-        },
-        {
-          "speed": "NORMAL",
+          "speed": "SLOW",
           "transition": "EASE_IN_OUT",
           "wait": false,
           "waitSkip": 0,
           "type": "RESET_CAMERA"
         },
         {
-          "align": "BOTTOM",
-          "radius": 45,
+          "group": "cataclysmLaserFX",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "fadeOut": 0.5,
+          "name": "blur",
+          "type": "FADE_OUT_ZOOM_BLUR"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.cold",
+            "name": "cataclysmLaserExplodeManual"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BASE",
+          "radius": 56,
           "yScale": 0,
-          "zHeight": 0,
+          "zHeight": 250,
           "centralAngle": 1,
-          "duration": 0.1,
+          "duration": 0.2,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
@@ -54180,14 +54529,22 @@
           "type": "CIRCLE_ATTACK",
           "attack": {
             "type": "MASSIVE",
-            "element": "WAVE",
-            "damageFactor": 3.5,
-            "status": 0.575,
-            "fly": "MASSIVE++",
+            "visualType": "MASSIVE",
+            "element": "COLD",
+            "damageFactor": 3,
+            "status": 0.525,
+            "fly": "MASSIVE",
             "reverse": false,
             "stunSteps": [
               {
                 "type": "END_LOCK"
+              },
+              {
+                "accel": 3,
+                "offZ": -200,
+                "maxTime": 0,
+                "maxSpeed": 200,
+                "type": "Z_PULL"
               }
             ],
             "guardable": "",
@@ -54200,35 +54557,11 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -32
           }
         },
         {
-          "time": 0.1,
-          "type": "WAIT"
-        },
-        {
-          "duration": 0,
-          "align": "CENTER",
-          "rotateFace": 0,
-          "flipLeftFace": false,
-          "wait": false,
-          "waitSkip": 0,
-          "actionDetached": true,
-          "fixPos": false,
-          "type": "SHOW_EFFECT",
-          "effect": {
-            "sheet": "specials.wave",
-            "name": "recallCardDeath"
-          },
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        },
-        {
-          "time": 0.3,
+          "time": 0.25,
           "type": "WAIT"
         }
       ],
@@ -54239,9 +54572,179 @@
       "config": {
         "collType": "NONE",
         "zGravityFactor": 1,
-        "shadow": 16
+        "shadow": 24
       },
       "type": "GENERIC"
+    },
+    "cataclysmWeatherControllerAuto": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING",
+          "quantity": 8,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING_FAST",
+          "quantity": 4,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING",
+          "quantity": 16,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING_FAST",
+          "quantity": 8,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 1.8
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING_FAST",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING_FAST",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.1
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
+    },
+    "cataclysmWeatherControllerManual": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING",
+          "quantity": 8,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING_FAST",
+          "quantity": 4,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING",
+          "quantity": 16,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING_FAST",
+          "quantity": 8,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.8
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING_FAST",
+          "quantity": 12,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING_FAST",
+          "quantity": 16,
+          "immediately": false,
+          "type": "SET_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 2.2
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "COLD_CRYSTALS_RISING_FAST",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "particleType": "SNOW_FLAKES_RISING_FAST",
+          "immediately": false,
+          "type": "CLEAR_ENV_PARTICLES"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.1
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "OWNER",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      }
     }
   },
   "actions": {
@@ -59669,7 +60172,7 @@
                     "delay": 0,
                     "repeat": false,
                     "duration": 0,
-                    "proxy": "chargedWave",
+                    "proxy": "chargedWaveHoming",
                     "offset": {
                       "x": 0,
                       "y": 0,
@@ -60255,7 +60758,7 @@
           "en_US": "Magic Missile"
         },
         "description": {
-          "en_US": "Shoot a single enemy to hex them with a lingering explosion. Nearby enemies take collateral damage."
+          "en_US": "Hit an enemy to inflict them with a lingering explosion."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -67982,6 +68485,55 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "dir": {
+              "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "sweepRevEndInstant"
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "ashenFrenzyCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.25,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
               "dash": -1,
               "action": -1,
               "move": -1,
@@ -67994,10 +68546,10 @@
             "type": "REMOVE_PROXIES"
           },
           {
-            "dir": {
-              "actorAttrib": "dashDir"
-            },
-            "type": "SET_FACE_TO_DIR"
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
           },
           {
             "followUp": "sweepEnd",
@@ -73502,7 +74054,7 @@
           "en_US": "Frigid Flurry"
         },
         "description": {
-          "en_US": "A sweeping ice attack. If an enemy is hit, follow up with a combo."
+          "en_US": "A sweeping ice attack. If an enemy is hit, follow up with an explosive spell card combo."
         },
         "dmgType": "MIXED",
         "stunType": "INTERRUPT",
@@ -75574,7 +76126,7 @@
           "en_US": "Brittle Barrier"
         },
         "description": {
-          "en_US": "Cast a protective barrier of ice spikes that deal contact damage and block light projectiles. Any remaining ice will shoot ourwards when the barrier expires."
+          "en_US": "Cast a protective barrier of ice spikes that deal contact damage and block light projectiles."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -75823,7 +76375,7 @@
           "en_US": "Frozen Fortress"
         },
         "description": {
-          "en_US": "Knock back enemies with a series of spin attacks, summoning sturdy hail barriers in the process. Barriers will block projectiles and deal contact damage."
+          "en_US": "Knock back enemies with a series of spin attacks, summoning sturdy hail barriers in the process. Barriers will block light projectiles and deal contact damage."
         },
         "dmgType": "MIXED",
         "stunType": "",
@@ -76110,7 +76662,7 @@
           "en_US": "Freeze Rays"
         },
         "description": {
-          "en_US": "Call down two rotating laser beams that devastate an area around where they were cast."
+          "en_US": "Call down two orbiting laser beams that devastate enemies around you."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -76337,9 +76889,9 @@
           "en_US": "Glacial Cataclysm"
         },
         "description": {
-          "en_US": "Place a powerful mine that explodes when an enemy comes into contact with it. Use it again for an even more powerful explosion."
+          "en_US": "Place a powerful mine that explodes when an enemy comes into contact with it. While active, use it again for a super-charged detonation."
         },
-        "dmgType": "MIXED",
+        "dmgType": "MELEE",
         "stunType": "LOCK",
         "status": true,
         "steps": [
@@ -78241,7 +78793,7 @@
         "description": {
           "en_US": "Hit an enemy with a hex that causes minor lightning strikes and slows the target's time flow by \\c[3]-15%\\c[0] for a short time. Stacks with the Chill status."
         },
-        "dmgType": "MELEE",
+        "dmgType": "MIXED",
         "stunType": "Interrupt",
         "status": false,
         "steps": [
@@ -78377,7 +78929,7 @@
             "attack": {
               "type": "MASSIVE",
               "element": "SHOCK",
-              "damageFactor": 4.0,
+              "damageFactor": 3.0,
               "fly": "MASSIVE+",
               "reverse": false,
               "stunSteps": [],
@@ -80096,7 +80648,7 @@
           "en_US": "\\c[1]Shock Surge\\c[0]"
         },
         "description": {
-          "en_US": "An \\c[3]intangible\\c[0] dash ending in a lightning strike. Weak as an attack but useful for dodging. Deals \\c[1]-5%\\c[0] of your total HP in self-damage."
+          "en_US": "An \\c[3]intangible\\c[0] dash ending in a lightning strike. Able to dodge a wider variety of enemy attacks than standard dash arts. Deals \\c[1]-5%\\c[0] of your total HP in self-damage."
         },
         "dmgType": "MELEE",
         "stunType": "",
@@ -80330,7 +80882,7 @@
           "en_US": "Magnet Deck"
         },
         "description": {
-          "en_US": "Dash three times to leave behind magnet cards. They will connect a beam between enemies and yourself, damaging all enemies caught in the middle."
+          "en_US": "Dash three times to leave behind magnet cards. They will each connect a beam to you, damaging all enemies caught in the middle."
         },
         "dmgType": "MIXED",
         "stunType": "",

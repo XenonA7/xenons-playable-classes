@@ -444,5 +444,48 @@
         0
       ]
     }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_BALL",
+      "shapeType": "Z_FLAT",
+      "sheet": {
+        "src": "media/entity/effects/designer-magic.png",
+        "offX": 192,
+        "offY": 64,
+        "width": 64,
+        "height": 64
+      },
+      "renderMode": "source-over",
+      "wallY": 1,
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "DARK_BALL_GUI",
+      "shapeType": "Z_FLAT",
+      "sheet": {
+        "src": "media/entity/effects/designer-magic.png",
+        "offX": 192,
+        "offY": 64,
+        "width": 64,
+        "height": 64
+      },
+      "guiSprites": true,
+      "renderMode": "source-over",
+      "wallY": 1,
+      "time": 0.4,
+      "frames": [
+        0
+      ]
+    }
   }
 ]

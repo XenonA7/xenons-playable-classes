@@ -7778,7 +7778,7 @@
           "type": "WAIT"
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,
@@ -9805,7 +9805,7 @@
           "time": 0.1
         }
       ],
-      "invisible": false,
+      "invisible": true,
       "hp": 0,
       "stickToSource": "OWNER",
       "stickFaceAlign": false,

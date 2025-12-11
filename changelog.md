@@ -1,3 +1,23 @@
+## 2.27.1 (12/11/2025)
+### New Content
+- Added shadowflame support for Ashen Frenzy
+### Changes
+- Made the COPY_SPRITE more prominent in effect ashenFrenzyCharge
+- Reduced pAlpha for DARK_BALL_GUI particles (rising lines) in effect cataclysmLaserManual1
+- Increased startDist for initial CIRCLE_SOURCE_COLD_GUI particles in effect cataclysmLaserManual1
+- Extended initial trigger hitbox of proxy cataclysmExplosionAuto to Z=-32 to match the beam hitboxes
+- Tweaked audio settigns for effect ssActivate
+- Added pLight property to DARK_FIRE_SMALL particles in effect ssActivate
+- Proxy mireSlowDebuff duration increased from 0.25 to 0.50 to smooth out debuff refreshing
+### Fixes
+- Fixed Ashen Frenzy being unable to shoot fireballs at enemies with solid collision or at multi-part bosses
+- Fixed all shadowflame "fireballBig" proxies to have the noLightGlow property
+- Reworked mireProxy and mireSlowDebuff to improve seamless debuff refresh, although still not perfect
+- Increased zHeight for miasmaProxy and miasmaProxy2 from 32 to 64 (to accomodate Shadowflame Sorcery casting)
+### Balance
+- Toxic Mire proxy radius increased from 28 to 34
+- Hive Missile card impact damageFactor increased from 1.5 to 4.5
+
 ## 2.27.0 (12/07/2025)
 ### New Content
 - New Hexacast combat art: Glacial Cataclysm (Cold Guard Lv.3B)

@@ -19685,32 +19685,6 @@
         "type": "FADE_COLOR"
       },
       {
-        "color": "#ff3300",
-        "noLighter": false,
-        "pAlpha": {
-          "init": 0.8,
-          "start": {
-            "value": 0,
-            "spline": ""
-          }
-        },
-        "pScale": {
-          "init": {
-            "x": 1,
-            "y": 1
-          },
-          "start": {
-            "value": {
-              "x": 1.5,
-              "y": 1.5
-            },
-            "spline": ""
-          }
-        },
-        "particleDuration": 0.3,
-        "type": "COPY_SPRITE"
-      },
-      {
         "volume": 1,
         "global": false,
         "loop": false,
@@ -19826,7 +19800,42 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
-        "time": 0.3,
+        "time": 0.05,
+        "type": "WAIT"
+      },
+      {
+        "color": "#ff3300",
+        "noLighter": false,
+        "offset": {
+          "x": 0,
+          "y": -4,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 2.5,
+              "y": 2.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.4,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "time": 0.25,
         "type": "WAIT"
       }
     ]

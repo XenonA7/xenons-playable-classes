@@ -13725,7 +13725,7 @@
         "numParticles": 6,
         "duration": 0,
         "centralAngle": 1,
-        "startDist": 88,
+        "startDist": 130,
         "particleRotate": true,
         "moveDist": 128,
         "keySpline": "EASE_OUT",
@@ -14263,7 +14263,7 @@
         "inverse": false,
         "collision": false,
         "pAlpha": {
-          "init": 0.55
+          "init": 0.45
         },
         "pScale": {
           "init": {

@@ -54,3 +54,6 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
 * plot.xpc.enemyTestBlock
 * plot.xpc.csRoomEntered
 * plot.xpc.cheatsUnlocked
+
+### Control Variables
+* tmp.xpcDisableHoming (when true, disables Hexacast homing on THROW_NORMAL, THROW_CHARGED, and Kindling Dance)

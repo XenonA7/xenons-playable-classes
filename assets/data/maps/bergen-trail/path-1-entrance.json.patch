@@ -969,34 +969,7 @@
                     "en_US": "\\c[1]Note about modded party members:\\c[0]"
                   },
                   "text": {
-                    "en_US": "The game does not properly manage modded party members in story cutscenes.\\. For example, if you have a modded party member before an Apollo duel, they will accompany you into the duel and team up against Apollo."
-                  },
-                  "type": "SHOW_CENTER_MSG"
-                },
-                {
-                  "titleText": {
-                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
-                  },
-                  "text": {
-                    "en_US": "This is mostly harmless, although there are a few cutscenes where glitches or problems can result from having a modded party member in your party."
-                  },
-                  "type": "SHOW_CENTER_MSG"
-                },
-                {
-                  "titleText": {
-                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
-                  },
-                  "text": {
-                    "en_US": "If you encounter any specific cutscenes where a modded party member causes serious problems, please report the issue to the mod creator and proceed without the party member until that cutscene is over."
-                  },
-                  "type": "SHOW_CENTER_MSG"
-                },
-                {
-                  "titleText": {
-                    "en_US": "\\c[1]Note about modded party members:\\c[0]"
-                  },
-                  "text": {
-                    "en_US": "Individual cutscenes with reported problems will be patched in future mod versions, although there should mostly not be problems using modded party members throughout the game."
+                    "en_US": "\\s[0]Be aware that the game isn't aware of modded party members and won't manage them for story cutscenes.\nFor example, if you have a modded party member present for an Apollo duel, they will accompany you into the duel and team up against Apollo.\nThis is mostly harmless although there could be a few unforeseen problems."
                   },
                   "type": "SHOW_CENTER_MSG"
                 },

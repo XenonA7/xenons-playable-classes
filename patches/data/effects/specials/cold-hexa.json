@@ -12195,6 +12195,35 @@
         "type": "FADE_COLOR"
       }
     ],
+    "cataclysmCardAppearFast": [
+      {
+        "alpha": 1,
+        "duration": 0,
+        "type": "CHANGE_ALPHA"
+      },
+      {
+        "scaleX": 0.5,
+        "scaleY": 0.5,
+        "duration": 0,
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "scaleX": 0.85,
+        "scaleY": 0.85,
+        "duration": 0.025,
+        "spline": "EASE_OUT",
+        "type": "CHANGE_SCALE"
+      },
+      {
+        "color": "white",
+        "alpha": 1,
+        "fadeIn": 0,
+        "fadeOut": 0.025,
+        "duration": 0.025,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      }
+    ],
     "cataclysmPostTriggerChargeAuto": [
       {
         "volume": 1.25,
@@ -13697,10 +13726,10 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 1.0,
+        "volume": 1.4,
         "global": false,
         "loop": false,
-        "speed": 0.8,
+        "speed": 0.7,
         "sound": "media/sound/designer/hurt-elephant.ogg",
         "type": "PLAY_SOUND"
       },
@@ -13719,6 +13748,24 @@
         "speed": 0.85,
         "fadeDuration": 0.6,
         "sound": "media/sound/battle/freeze-breeze.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.45,
+        "global": false,
+        "loop": true,
+        "speed": 0.6,
+        "fadeDuration": 0.6,
+        "sound": "media/sound/boss/gynthar/gynthar-chant.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 0.9,
+        "global": false,
+        "loop": true,
+        "speed": 1.5,
+        "fadeDuration": 0.6,
+        "sound": "media/sound/scenes/designer-float.ogg",
         "type": "PLAY_SOUND"
       },
       {

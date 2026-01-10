@@ -49,7 +49,7 @@
       "width": 32,
       "height": 40
     },
-    "poses": {
+    "sitting": {
       "src": "media/entity/npc/triblader2.png",
       "xCount": 3,
       "offX": 0,
@@ -57,16 +57,9 @@
       "width": 32,
       "height": 40
     },
-    "poses2": {
+    "poses": {
       "src": "media/entity/npc/triblader2.png",
       "offX": 0,
-      "offY": 400,
-      "width": 32,
-      "height": 40
-    },
-    "poses3": {
-      "src": "media/entity/npc/triblader2.png",
-      "offX": 416,
       "offY": 400,
       "width": 32,
       "height": 40
@@ -89,13 +82,6 @@
       "src": "media/entity/npc/triblader2extra.png",
       "offX": 0,
       "offY": 0,
-      "width": 32,
-      "height": 40
-    },
-    "extra2": {
-      "src": "media/entity/npc/triblader2extra.png",
-      "offX": 0,
-      "offY": 40,
       "width": 32,
       "height": 40
     },
@@ -926,7 +912,7 @@
       ]
     },
     {
-      "sheet": "poses",
+      "sheet": "sitting",
       "dirs": "4",
       "flipX": [
         0,
@@ -936,13 +922,35 @@
       ],
       "tileOffsets": [
         0,
-        3,
-        6,
-        3
+        1,
+        2,
+        1
       ],
       "SUB": [
         {
           "name": "sit",
+          "time": 1,
+          "repeat": false,
+          "frames": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "poses",
+      "dirs": "2",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "sitGround",
           "time": 1,
           "repeat": false,
           "frames": [
@@ -964,139 +972,13 @@
           "frames": [
             2
           ]
-        }
-      ]
-    },
-    {
-      "sheet": "poses2",
-      "dirs": "2",
-      "flipX": [
-        0,
-        1
-      ],
-      "tileOffsets": [
-        0,
-        0
-      ],
-      "SUB": [
+        },
         {
-          "name": "sitGround",
+          "name": "floatLab",
           "time": 1,
-          "repeat": false,
-          "frames": [
-            0
-          ]
-        },
-        {
-          "name": "sitGroundHeadBack",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            1
-          ]
-        },
-        {
-          "name": "shock",
-          "time": 0.3,
-          "repeat": false,
-          "frames": [
-            2
-          ]
-        },
-        {
-          "name": "lookBack",
-          "time": 0.3,
           "repeat": false,
           "frames": [
             3
-          ]
-        },
-        {
-          "name": "sitGroundLookBack",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            4
-          ]
-        },
-        {
-          "name": "jumpFar",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            5
-          ]
-        },
-        {
-          "name": "landFar",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            6
-          ]
-        },
-        {
-          "name": "airGrip",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            7
-          ]
-        },
-        {
-          "name": "captive",
-          "time": 0.1,
-          "repeat": true,
-          "frames": [
-            8,
-            9,
-            8,
-            9,
-            8,
-            8,
-            8,
-            8,
-            8,
-            8
-          ]
-        }
-      ]
-    },
-    {
-      "sheet": "poses3",
-      "dirs": "1",
-      "flipX": [
-        0
-      ],
-      "tileOffsets": [
-        0
-      ],
-      "SUB": [
-        {
-          "name": "floating",
-          "time": 0.2,
-          "repeat": true,
-          "frames": [
-            0,
-            1,
-            2,
-            1
-          ]
-        },
-        {
-          "name": "landFront",
-          "time": 0.2,
-          "repeat": false,
-          "frames": [
-            3
-          ]
-        },
-        {
-          "name": "floatingBack",
-          "time": 0.2,
-          "repeat": true,
-          "frames": [
-            4
           ]
         }
       ]
@@ -1309,109 +1191,6 @@
           "repeat": false,
           "frames": [
             12
-          ]
-        }
-      ]
-    },
-    {
-      "sheet": "extra2",
-      "dirs": 1,
-      "flipX": [
-        0
-      ],
-      "tileOffsets": [
-        0
-      ],
-      "SUB": [
-        {
-          "name": "floored",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "time": 0.1,
-          "repeat": false,
-          "frames": [
-            0
-          ]
-        },
-        {
-          "name": "kneeShake",
-          "offset": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-          },
-          "time": 0.05,
-          "repeat": true,
-          "frames": [
-            1,
-            1,
-            2,
-            3,
-            3,
-            2
-          ]
-        },
-        {
-          "name": "kneeShakeLong",
-          "offset": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-          },
-          "time": 0.05,
-          "repeat": false,
-          "frames": [
-            1,
-            1,
-            2,
-            3,
-            3,
-            2,
-            1,
-            1,
-            2,
-            3,
-            3,
-            2,
-            1,
-            1,
-            2,
-            3,
-            3,
-            2,
-            1,
-            1,
-            2
-          ]
-        },
-        {
-          "name": "kneeStay",
-          "offset": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-          },
-          "time": 0.2,
-          "repeat": false,
-          "frames": [
-            2
-          ]
-        },
-        {
-          "name": "kneeWhy",
-          "offset": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-          },
-          "time": 0.2,
-          "repeat": false,
-          "frames": [
-            4,
-            5
           ]
         }
       ]

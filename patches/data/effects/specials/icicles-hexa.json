@@ -299,6 +299,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -351,6 +352,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -478,6 +480,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -530,6 +533,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -890,6 +894,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -942,6 +947,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -1188,6 +1194,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -1240,6 +1247,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -1454,6 +1462,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -1507,6 +1516,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -1689,6 +1699,7 @@
           }
         },
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -1744,6 +1755,7 @@
           }
         },
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -2128,6 +2140,7 @@
           }
         },
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 2.0,
         "particleDurVariance": 0.5,
         "anim": "ICE_SHARD6",
@@ -2183,6 +2196,7 @@
           }
         },
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 2.0,
         "particleDurVariance": 0.5,
         "anim": "ICE_SHARD3",
@@ -2786,6 +2800,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -2838,6 +2853,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -4116,6 +4132,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -4168,6 +4185,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -4366,6 +4384,7 @@
         },
         "shadowSize": 0,
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 2.5,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -4424,6 +4443,7 @@
         },
         "shadowSize": 0,
         "angleVary": 1,
+        "randFlip": true,
         "particleDuration": 2.5,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -4627,6 +4647,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.7,
         "particleDurVariance": 0.2,
         "anim": "ICE_SHARD3",
@@ -4681,6 +4702,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.7,
         "particleDurVariance": 0.2,
         "anim": "ICE_SHARD6",
@@ -4737,6 +4759,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -4791,6 +4814,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -4847,6 +4871,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -4901,6 +4926,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -4955,6 +4981,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -5009,6 +5036,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.2,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -5068,6 +5096,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -5122,6 +5151,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",
@@ -5188,6 +5218,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD3",
@@ -5242,6 +5273,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 1.0,
         "particleDurVariance": 0.3,
         "anim": "ICE_SHARD6",

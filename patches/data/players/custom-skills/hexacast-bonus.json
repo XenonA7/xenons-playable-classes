@@ -13274,7 +13274,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -13669,7 +13669,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -14024,7 +14024,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -14419,7 +14419,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "combat.cnt.arid/element-turret < 1 && combat.cnt.jungle/special/aircon < 1 && !combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",

@@ -4699,7 +4699,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -5064,7 +5064,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -5406,7 +5406,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -5969,7 +5969,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -6555,7 +6555,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",
@@ -6920,7 +6920,7 @@
               {
                 "withElse": false,
                 "type": "IF",
-                "condition": "!combat.facingPuzzle",
+                "condition": "!combat.facingPuzzle && !tmp.xpcDisableHoming",
                 "thenStep": [
                   {
                     "searchType": "IN_VIEW",

@@ -93,6 +93,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -145,6 +146,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"
@@ -580,6 +582,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD3",
         "type": "DEBRIS_CIRCLE"
@@ -632,6 +635,7 @@
             "spline": ""
           }
         },
+        "randFlip": true,
         "particleDuration": 0.8,
         "anim": "ICE_SHARD6",
         "type": "DEBRIS_CIRCLE"

@@ -1304,48 +1304,6 @@
       "offY": 120
     }
   },
-  "csHexacastTribladerNeutralGuard2A": {
-    "list": [
-      {
-        "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
-        "actionCheckKey": "GUARD_SPECIAL2"
-      }
-    ],
-    "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
-    "name": {
-      "en_US": "\\i[class-tri] Deploy Shields"
-    },
-    "description": {
-      "en_US": "Places temporary shields to block weak projectiles. Also increases your defense by \\c[3]+50%\\c[0] while active."
-    },
-    "icon": {
-      "src": "media/gui/circuit-icons.png",
-      "offX": 96,
-      "offY": 120
-    }
-  },
-  "csHexacastCustom1NeutralGuard2A": {
-    "list": [
-      {
-        "replaceTo": "CS_CUSTOM1_HEXACAST_GUARD_SPECIAL2_A",
-        "actionCheckKey": "GUARD_SPECIAL2"
-      }
-    ],
-    "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
-    "name": {
-      "en_US": "\\i[class-hexa] Stunning Glare"
-    },
-    "description": {
-      "en_US": "Draw enemies in before stunning them with a blinding attack."
-    },
-    "icon": {
-      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
-      "offX": 0,
-      "offY": 48
-    }
-  },
   "csHexacastSpheromancerNeutralGuard2B": {
     "list": [
       {
@@ -1379,6 +1337,27 @@
       "offY": 120
     }
   },
+  "csHexacastTribladerNeutralGuard2A": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_GUARD_SPECIAL2_A",
+        "actionCheckKey": "GUARD_SPECIAL2"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-tri] Deploy Shields"
+    },
+    "description": {
+      "en_US": "Places temporary shields to block weak projectiles. Also increases your defense by \\c[3]+50%\\c[0] while active."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 120
+    }
+  },
   "csHexacastTribladerNeutralGuard2B": {
     "list": [
       {
@@ -1398,6 +1377,27 @@
       "src": "media/gui/circuit-icons.png",
       "offX": 120,
       "offY": 120
+    }
+  },
+  "csHexacastCustom1NeutralGuard2A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_GUARD_SPECIAL2_A",
+        "actionCheckKey": "GUARD_SPECIAL2"
+      }
+    ],
+    "element": "NEUTRAL",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Stunning Glare"
+    },
+    "description": {
+      "en_US": "Draw enemies in before stunning them with a blinding attack."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 0,
+      "offY": 48
     }
   },
   "csHexacastSpheromancerHeatThrow1A": {

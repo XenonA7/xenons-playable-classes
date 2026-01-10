@@ -1,3 +1,42 @@
+## 2.28.0 (01/10/2026)
+### New Content
+- New Hexacast combat art: Branding Blaze (Heat Melee Lv.3A)
+- Added "tmp.xpcDisableHoming" to allow homing being disabled on THROW_NORMAL, THROW_CHARGED, and Kindling Dance
+  * Unused by default, this is only for certain scenarios like Multibakery pvp
+### Changes
+- Minor audio tweaks to effect cataclysmLaserManual1
+- Removed some unused animations from Triblader2/3/4/5/Lea animation files
+- Removed some unused frames from Triblader2/3/4/5/Lea sprite sheets
+- Shortened and revised Triblader2 disclaimer about modded party members
+- Minor dialogue edit to npcModder in hideout-lobby
+- Added hacking effects to PRD teleporter in hideout-southwest
+- Added SHOW_AR_MSG to art-testing light switch
+- Added additional particles to Hexacast Ki Thrust and Spirit Blast
+- Reduced screen flash intensity of Hexacast effect wavePunch2Hex (Spirit Blast)
+- Removed particleDuration setting from FLAME1 particles in effects firebrandAura1 and firebrandAura2
+- Added randFlip to FLAME1 particles in effects firebrandAura1 and firebrandAura2
+- Increased WAIT timing from 0.45 to 0.60 when Faj'ro Flush doesn't hit anything
+- Slightly improved effect hiveMissileImpact
+- Amber Hex shockShot effect now moves with target
+- Scorching Swirl first hitbox zHeight increased from 16 to 24
+- Increased pAlpha of GOD_HEXAGON_HEAT particles in effect tempestSweep from 0.6 to 0.8
+- Added randFlip to ICE_SHARD, DEBRISHEAT, DIRT, and ROCK_SMALL particles in all XPC effects
+### Fixes
+- Fixed menu order of Hexacast neutral guard Lv.2 custom skills
+- Fixed extra hailCard1Death effect when using cataclysmExplosionManual
+- Fixed a typo in triblader2-events
+- Fixed FLAME2 particles in effect fajroFinalExplode missing particleRotate property
+- Added the Z_FLAT shapeType to all ROCK_CRATER particles
+- Removed unused duplicate effect cataclysmLaserHexagons
+- Removed old combat.cnt conditions from Hexacast default throw custom skills
+### Balance
+- Kindling Dance fireball steerDegree reduced from 0.20 to 0.08 (shadowflame version unchanged)
+- Hive Missile charge time reduced from 0.4 to 0.19 seconds
+- Triblader Celestial Constellation ccBullet/ccBullet2 lifetime increased from 1.8/2.0 to 2.4/2.8 seconds
+- Calamity Beacon proxy flameWeakMelee damageFactor reduced from 0.12 to 0.06 (shadowflame variant 0.12 to 0.10)
+- Calamity Beacon controller proxy ground impact damageFactor reduced from 3.5 to 1.5
+- Faj'ro Flush reduced delay after second sweep by 0.15 seconds before jump
+
 ## 2.27.1 (12/11/2025)
 ### New Content
 - Added shadowflame support for Ashen Frenzy

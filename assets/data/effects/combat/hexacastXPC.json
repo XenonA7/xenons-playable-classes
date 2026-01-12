@@ -16217,6 +16217,13 @@
     ],
     "brandingFloorHexagons2": [
       {
+        "color": "#1f0000",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": 1.5,
+        "type": "SCREEN_FLASH"
+      },
+      {
         "rumbleType": "RANDOM",
         "power": "WEAKER",
         "speed": "FAST",
@@ -16681,6 +16688,334 @@
       },
       {
         "type": "LOOP_END"
+      }
+    ],
+    "virulentDashHexagons": [
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 36,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 36,
+        "duration": 0.6,
+        "centralAngle": 1,
+        "startAngle": 0.5,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "moveDist": 0,
+        "clockwise": true,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "time": 0.2,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.05,
+            "spline": "EASE_OUT"
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": "EASE_IN"
+          }
+        },
+        "cancelable": false,
+        "moveWithTarget": 0,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "virulentHexagons": [
+      {
+        "color": "#4affb1",
+        "alpha": 0.6,
+        "fadeIn": 1.0,
+        "fadeOut": 0.4,
+        "duration": 0.02,
+        "noLighter": false,
+        "type": "FADE_COLOR"
+      },
+      {
+        "color": "#00aa77",
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1,
+            "y": 1
+          },
+          "start": {
+            "value": {
+              "x": 4,
+              "y": 4
+            },
+            "spline": "EASE_IN"
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.6,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0.5,
+        "centralAngle": 0.5,
+        "startAngle": 0.5,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "clockwise": false,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.75,
+          "end": {
+            "value": 0,
+            "time": 0.04,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 10,
+        "duration": 0.5,
+        "centralAngle": 0.5,
+        "startAngle": 0,
+        "startDist": 32,
+        "useTargetAngle": true,
+        "clockwise": false,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.75,
+          "end": {
+            "value": 0,
+            "time": 0.04,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0.5,
+        "centralAngle": 0.5,
+        "startAngle": 0.25,
+        "startDist": 56,
+        "useTargetAngle": true,
+        "clockwise": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.75,
+          "end": {
+            "value": 0,
+            "time": 0.04,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 16,
+        "duration": 0.5,
+        "centralAngle": 0.5,
+        "startAngle": 0.75,
+        "startDist": 56,
+        "useTargetAngle": true,
+        "clockwise": true,
+        "moveDist": 0,
+        "keySpline": "EASE_IN_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.75,
+          "end": {
+            "value": 0,
+            "time": 0.04,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "start": {
+            "value": {
+              "x": 1,
+              "y": 1
+            },
+            "time": 0.1,
+            "spline": ""
+          },
+          "end": {
+            "value": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "moveWithTarget": 1,
+        "particleDuration": 0.35,
+        "anim": "HEXA_WAVE_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ]
   }

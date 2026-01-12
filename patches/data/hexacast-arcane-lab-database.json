@@ -6587,6 +6587,27 @@
       "offY": 312
     }
   },
+  "csHexacastCustom1WaveDash1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM1_HEXACAST_DASH_SPECIAL3_A",
+        "actionCheckKey": "DASH_SPECIAL3"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-hexa] Celestial Cohort"
+    },
+    "description": {
+      "en_US": "Charge up before aiming a dash attack. If an enemy is hit, perform a devastating attack."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 72,
+      "offY": 96
+    }
+  },
   "csHexacastSpheromancerWaveGuard1A": {
     "list": [
       {

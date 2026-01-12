@@ -2517,6 +2517,84 @@
         "type": "LIGHT"
       },
       {
+        "numParticles": 6,
+        "duration": 0.3,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "moveDist": 32,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.7,
+          "end": {
+            "value": 0
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "LINEAR"
+          }
+        },
+        "moveWithTarget": 0.2,
+        "particleDuration": 0.3,
+        "anim": "DARK_BALL_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 6,
+        "duration": 0.3,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "moveDist": 32,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "pAlpha": {
+          "init": 0.7,
+          "end": {
+            "value": 0
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.2,
+            "y": 0.2
+          },
+          "start": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "spline": "LINEAR"
+          }
+        },
+        "moveWithTarget": 0.2,
+        "particleDuration": 0.3,
+        "anim": "DARK_BALL_GUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "witheringSlashAirOld": [
+      {
+        "size": "XXL",
+        "fadeIn": 0,
+        "fadeOut": 0.5,
+        "duration": 0.3,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
         "volume": 0.5,
         "global": false,
         "loop": false,

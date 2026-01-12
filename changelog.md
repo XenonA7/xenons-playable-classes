@@ -1,3 +1,19 @@
+## 2.29.0 (01/12/2026)
+### New Content
+- New Hexacast combat art: Virulent Corruption (Wave Dash Lv.3A)
+- Added a custom skill icon for Celestial Cohort
+### Changes
+- Celestial Cohort removed from main Hexacast player file, it is now a custom skill
+- Reduced startDist from 48 to 32 for GOD_HEXAGON_HEAT particles in effect brandingGroundImpact
+- Increased pScale of GOD_HEXAGON_HEAT particles in effect brandingUpdraft
+- Added a SCREEN_FLASH to effect brandingFloorHexagons2
+- Changed effect brandingSweep3 to incrementally speed up s2tsa1700 sound effects and reduced variance from 0.25 to 0.075
+- Increased FADE_COLOR time for effect cohortWavePunch
+### Fixes
+- Fixed Verdant Blast (Lily custom skill) data classification to be dmgType MELEE
+- Fixed effect witheringSlashAir not showing properly
+- Fixed cohortWavePunch SHOW_EFFECT to use actionDetached: false
+
 ## 2.28.0 (01/10/2026)
 ### New Content
 - New Hexacast combat art: Branding Blaze (Heat Melee Lv.3A)

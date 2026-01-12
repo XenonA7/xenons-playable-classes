@@ -20002,6 +20002,13 @@
     ],
     "brandingFloorHexagons2": [
       {
+        "color": "#1f0000",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": 1.5,
+        "type": "SCREEN_FLASH"
+      },
+      {
         "rumbleType": "RANDOM",
         "power": "WEAKER",
         "speed": "FAST",
@@ -21141,8 +21148,8 @@
         "volume": 0.5,
         "global": false,
         "loop": false,
-        "speed": 1.5,
-        "variance": 0.25,
+        "speed": 1.0,
+        "variance": 0.075,
         "sound": "media/sound/battle/special/shizuka-2-triple-spin-attack-1700.ogg",
         "type": "PLAY_SOUND"
       },
@@ -21428,8 +21435,8 @@
         "volume": 0.5,
         "global": false,
         "loop": false,
-        "speed": 1.5,
-        "variance": 0.25,
+        "speed": 1.25,
+        "variance": 0.075,
         "sound": "media/sound/battle/special/shizuka-2-triple-spin-attack-1700.ogg",
         "type": "PLAY_SOUND"
       },
@@ -21482,7 +21489,7 @@
         "global": false,
         "loop": false,
         "speed": 1.5,
-        "variance": 0.25,
+        "variance": 0.075,
         "sound": "media/sound/battle/special/shizuka-2-triple-spin-attack-1700.ogg",
         "type": "PLAY_SOUND"
       },
@@ -22526,7 +22533,7 @@
         "duration": 0.4,
         "centralAngle": 1,
         "random": true,
-        "startDist": 48,
+        "startDist": 32,
         "moveDist": 48,
         "moveVariance": 24,
         "keySpline": "EASE_OUT",
@@ -22580,7 +22587,7 @@
         "duration": 0.4,
         "centralAngle": 1,
         "random": true,
-        "startDist": 48,
+        "startDist": 32,
         "moveDist": 48,
         "moveVariance": 24,
         "keySpline": "EASE_OUT",
@@ -22776,8 +22783,8 @@
         "collision": false,
         "pScale": {
           "init": {
-            "x": 0.2,
-            "y": 0.2
+            "x": 0.25,
+            "y": 0.25
           },
           "start": {
             "value": {
@@ -22813,8 +22820,8 @@
         "collision": false,
         "pScale": {
           "init": {
-            "x": 0.3,
-            "y": 0.3
+            "x": 0.35,
+            "y": 0.35
           },
           "start": {
             "value": {

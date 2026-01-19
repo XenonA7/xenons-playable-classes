@@ -1,3 +1,22 @@
+## 3.0.0 (01/18/2026)
+### General
+- Hexacast moveset is now complete!
+- Hexacast litter mod updated to 2.1.7
+### New Content
+- New Hexacast combat art: Furious Dissonance (Wave Throw Lv.3B)
+- Added two new Hexacast tips to hideout-lobby
+### Changes
+- Shifted Hexacast "fanPre" and "fanLoop" spritesheet frame offsets to match "groundClosed"
+- Added new effect virulentSparkle to Virulent Corruption
+- Player collision now changes back to VIRTUAL after landing on the ground during Virulent Corruption
+- Proxies cataclysmCard, iceCardSmall, kindlingMineCard, and waveDetonationTrap are now considered a "threat" once armed
+- Adjusted pScale parameters of HEXA_SHOCK particles in effect sparkStreamHexagons to shrink more gradually
+- Renamed custom particle CIRCLE_BIG_WAVE_GUI to CIRCLE_BIG_WAVE_NOGUI
+### Fixes
+- Fixed typo with some EASE_IN_OUT spline valies in wave-hexa.json
+- Fixed incorrect moveDist for GOD_HEXAGON particles in all godThrow___Rev effects
+- Fixed Gradual Hive Missile to use effect hiveMissileChargeOld
+
 ## 2.29.0 (01/12/2026)
 ### New Content
 - New Hexacast combat art: Virulent Corruption (Wave Dash Lv.3A)

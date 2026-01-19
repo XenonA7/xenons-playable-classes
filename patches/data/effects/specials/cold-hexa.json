@@ -2252,7 +2252,7 @@
         "centralAngle": 0.3,
         "startDist": 24,
         "useTargetAngle": true,
-        "moveDist": 32,
+        "moveDist": 16,
         "keySpline": "EASE_IN_OUT",
         "collision": false,
         "pAlpha": {

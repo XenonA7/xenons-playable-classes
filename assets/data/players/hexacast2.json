@@ -2287,6 +2287,10 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
+          "threat": "true",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
           "volume": 0.8,
           "global": false,
           "loop": false,
@@ -10830,6 +10834,10 @@
         {
           "group": "timer",
           "type": "CLEAR_EFFECTS"
+        },
+        {
+          "threat": "true",
+          "type": "MOD_GENERIC_PROXY"
         },
         {
           "duration": 0,
@@ -51911,6 +51919,10 @@
           ]
         },
         {
+          "threat": "true",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
           "posType": "TARGET",
           "align": "BOTTOM",
           "type": "SET_HIT_PROXY",
@@ -54294,6 +54306,1410 @@
         "z": 4
       },
       "config": {},
+      "type": "GENERIC"
+    },
+    "dissonanceCard": {
+      "effects": "ball-wave",
+      "effectKeys": {
+        "trail": "dissonanceCardTrail",
+        "wall": "dissonanceCardWallDeath",
+        "air": "dissonanceCardAirDeath"
+      },
+      "speed": 1000,
+      "maxBounce": 0,
+      "timer": 1.2,
+      "trail": true,
+      "multiHit": false,
+      "light": "L",
+      "noLightGlow": true,
+      "type": "BALL",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 12
+      },
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/hexa-cards.png",
+          "offX": 0,
+          "offY": 256,
+          "width": 24,
+          "height": 32
+        },
+        "guiSprites": false,
+        "renderMode": "source-over",
+        "time": 0.4,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "HEAVY",
+        "visualType": "HEAVY",
+        "fly": "LIGHT",
+        "element": "WAVE",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": "NO_DAMAGE",
+        "hints": [
+          "CHARGED"
+        ]
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 1.0,
+          "pause": 5,
+          "fadeIn": 0,
+          "startWait": 0.2,
+          "fadeOutVary": 0
+        }
+      ]
+    },
+    "dissonanceCardExplosion": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "!entity.srcAttrib.doNotSpawnTarget",
+          "thenStep": [
+            {
+              "posType": "TARGET",
+              "align": "BOTTOM",
+              "type": "SET_HIT_PROXY",
+              "proxy": "dissonanceTarget",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "duration": 0,
+          "align": "FACE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "ball-wave",
+            "name": "waveCardDeathFar"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceCardExplode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 0,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0.2,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": true,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "visualType": "HEAVY",
+            "fly": "LIGHT",
+            "element": "WAVE",
+            "damageFactor": 0.80,
+            "reverse": false,
+            "status": 0,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -12
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "type": "GENERIC"
+    },
+    "dissonanceDummy": {
+      "copyOwnerAnims": true,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "vanishInstant"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "doNotSpawnTarget",
+          "type": "SET_ATTRIB_BOOL",
+          "value": true
+        },
+        {
+          "value": 24,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "face": "SOUTH",
+          "rotate": false,
+          "type": "SET_FACE"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "floatEyesClosed"
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.dissonanceTracker == 1",
+          "thenStep": [
+            {
+              "type": "SET_ATTRIB_BOOL",
+              "name": "firstClone",
+              "value": true
+            }
+          ],
+          "elseStep": [
+            {
+              "type": "SET_ATTRIB_BOOL",
+              "name": "firstClone",
+              "value": false
+            }
+          ]
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "cohortDummyFXLoop"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceDummyAppear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "target": "SELF",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "group": "flyFX",
+          "actionDetached": false,
+          "target2": "PROXY_OWNER",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceFly"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        {
+          "value": 0,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "fall"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "hp": 2,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "landOnGround"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fajroLandingDust"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        },
+        {
+          "type": "PLAYER_ADJUST_FACE"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "aim"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.firstClone",
+          "thenStep": [
+            {
+              "condition": "entity.ownerAttrib.dissonanceTracker == 2",
+              "maxTime": 2,
+              "type": "WAIT_UNTIL"
+            }
+          ]
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "!entity.attrib.firstClone",
+          "thenStep": [
+            {
+              "condition": "entity.ownerAttrib.dissonanceTracker == 3",
+              "maxTime": 2,
+              "type": "WAIT_UNTIL"
+            }
+          ]
+        },
+        {
+          "value": 100,
+          "type": "SET_SPEED"
+        },
+        {
+          "attribName": "dissonanceLoopCount",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 3
+        },
+        {
+          "time": 0.07,
+          "type": "WAIT"
+        },
+        {
+          "posType": "TARGET",
+          "align": "FACE",
+          "type": "SET_HIT_PROXY",
+          "proxy": "dissonanceCardExplosion",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "CLONE_LOOP",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_TEMP_TARGET"
+        },
+        {
+          "poiFilter": {
+            "conditions": [
+              {
+                "sticking": false,
+                "group": "dissonanceTargetGroup",
+                "negated": false,
+                "type": "HAS_PROXY"
+              }
+            ],
+            "type": "ACTIVE_ENEMIES"
+          },
+          "distance": 600,
+          "type": "SET_POI_TEMP_TARGET"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "!entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "name": "solidTarget",
+              "type": "LABEL"
+            },
+            {
+              "poiFilter": {
+                "group": "dissonanceTargetGroup",
+                "type": "PROXY"
+              },
+              "distance": 600,
+              "type": "SET_POI_TEMP_TARGET"
+            }
+          ]
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "projectileSpeed": 1000,
+              "type": "SET_FACE_TARGET_PREDICT"
+            }
+          ],
+          "elseStep": [
+            {
+              "time": 0,
+              "type": "PLAYER_ADJUST_FACE"
+            }
+          ]
+        },
+        {
+          "withElse": true,
+          "type": "IF",
+          "condition": "entity.attrib.polarityThrowType",
+          "thenStep": [
+            {
+              "type": "SET_ATTRIB_BOOL",
+              "name": "polarityThrowType",
+              "value": false
+            },
+            {
+              "followUp": "sweepEnd",
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "sweep"
+            },
+            {
+              "duration": 0,
+              "align": "CENTER",
+              "rotateFace": 8,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "godThrowDissonance"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+
+          ],
+          "elseStep": [
+            {
+              "type": "SET_ATTRIB_BOOL",
+              "name": "polarityThrowType",
+              "value": true
+            },
+            {
+              "followUp": "sweepRevEnd",
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "sweepRev"
+            },
+            {
+              "duration": 0,
+              "align": "CENTER",
+              "rotateFace": 8,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "godThrowDissonanceRev"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "time": 0.05,
+          "stopBeforeEdge": true,
+          "type": "MOVE_BACKWARD"
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0.01,
+          "angleVary": 0.02,
+          "startDist": 24,
+          "startDistCollide": "CLOSER",
+          "random": false,
+          "count": 2,
+          "duration": 0.14,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "dissonanceCard",
+          "offset": {
+            "z": 12
+          }
+        },
+        {
+          "time": 0.21,
+          "type": "WAIT"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.hasTmpTarget",
+          "thenStep": [
+            {
+              "value": false,
+              "immediately": true,
+              "type": "FACE_TO_TARGET"
+            }
+          ]
+        },
+        {
+          "changeType": "sub",
+          "attribName": "dissonanceLoopCount",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.dissonanceLoopCount > 0",
+          "thenStep": [
+            {
+              "name": "CLONE_LOOP",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.firstClone",
+          "thenStep": [
+            {
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "fanPre",
+              "followUp": "groundClosed"
+            }
+          ]
+        },
+        {
+          "condition": "entity.ownerAttrib.dissonanceTracker == 4",
+          "maxTime": 5,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "duration": 0.5,
+          "align": "BOTTOM",
+          "rotateFace": 8,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceDummyDisappear"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "target": "PROXY_OWNER",
+          "align": "TOP",
+          "offset": {
+            "x": 4,
+            "y": 0,
+            "z": 24
+          },
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "group": "flyFX",
+          "actionDetached": false,
+          "target2": "SELF",
+          "target2Align": "CENTER",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceFly"
+          }
+        },
+        {
+          "attribName": "dissonanceBuffCount",
+          "changeType": "add",
+          "changeConnected": "PROXY_OWNER",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "time": 0.5,
+          "type": "WAIT"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "time": 0.02,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "dummyAuraEndHex"
+      },
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 24
+      },
+      "config": {
+        "collType": "IGNORE",
+        "jumpingEnabled": true,
+        "shadow": 16
+      },
+      "type": "GENERIC"
+    },
+    "dissonanceTarget": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "sticking": false,
+          "group": "dissonanceTargetGroup",
+          "target": "TARGET",
+          "type": "REMOVE_PROXIES"
+        },
+        {
+          "type": "CONNECT_PROXY_TO_TARGET"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "duration": -1,
+          "target": "TARGET",
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "ashenFrenzyCrosshairDISABLED"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "time": 0.4,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "stickFaceAlign": false,
+      "group": "dissonanceTargetGroup",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {},
+      "type": "GENERIC"
+    },
+    "dissonanceFinalCard": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": -4,
+              "z": -4
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 256,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "killEffect": {
+        "sheet": "specials.wave",
+        "name": "healCardDeath"
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "value": 40,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "accel": 2,
+          "variance": 3,
+          "speed": 800,
+          "type": "SET_FLOAT_PARAMS"
+        },
+        {
+          "duration": -1,
+          "align": "CENTER",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceFinalCardFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 3
+          }
+        },
+        {
+          "time": 0.25,
+          "type": "WAIT"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.dissonanceBuffCount >= 1",
+          "thenStep": [
+            {
+              "duration": -1,
+              "align": "CENTER",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "dissonanceFinalCardCharge1"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.ownerAttrib.dissonanceBuffCount >= 2",
+          "thenStep": [
+            {
+              "duration": -1,
+              "align": "CENTER",
+              "rotateFace": 0,
+              "flipLeftFace": false,
+              "wait": false,
+              "waitSkip": 0,
+              "actionDetached": false,
+              "fixPos": false,
+              "type": "SHOW_EFFECT",
+              "effect": {
+                "sheet": "specials.wave",
+                "name": "dissonanceFinalCardCharge2"
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        },
+        {
+          "condition": "entity.ownerAttrib.dissonanceTracker == 5",
+          "maxTime": 5,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "value": 12,
+          "type": "SET_FLOAT_HEIGHT"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "condition": "entity.ownerAttrib.dissonanceTracker == 6",
+          "maxTime": 2,
+          "type": "WAIT_UNTIL"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "hidden"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "clearKillEffect": true,
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
+          "type": "PLAYER_ADJUST_FACE"
+        },
+        {
+          "duration": 0,
+          "align": "CENTER",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceFinalShoot"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 3
+          }
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "timeBoni": null,
+      "behaviors": null,
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0,
+        "shadow": 24
+      },
+      "type": "GENERIC"
+    },
+    "dissonanceCard2": {
+      "effects": "ball-wave",
+      "effectKeys": {
+        "trail": "dissonanceCardTrail2",
+        "wall": "dissonanceCardWallDeath",
+        "air": "dissonanceCardAirDeath"
+      },
+      "speed": 1000,
+      "maxBounce": 0,
+      "timer": 1.2,
+      "trail": true,
+      "multiHit": false,
+      "light": "L",
+      "noLightGlow": true,
+      "type": "BALL",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 12
+      },
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/hexa-cards.png",
+          "offX": 0,
+          "offY": 256,
+          "width": 24,
+          "height": 32
+        },
+        "guiSprites": false,
+        "renderMode": "source-over",
+        "time": 0.4,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "HEAVY",
+        "visualType": "HEAVY",
+        "fly": "MEDIUM",
+        "element": "WAVE",
+        "damageFactor": 0.5,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": "NO_DAMAGE",
+        "hints": [
+          "CHARGED"
+        ]
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "SLOW_DOWN",
+          "speedFactor": 0,
+          "fadeOut": 1.0,
+          "pause": 5,
+          "fadeIn": 0,
+          "startWait": 0.2,
+          "fadeOutVary": 0
+        }
+      ]
+    },
+    "dissonanceCardExplosion2": {
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "duration": 0,
+          "align": "FACE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "ball-wave",
+            "name": "waveCardDeathFar"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceFinalImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "zoomType": "LIGHT",
+          "fadeIn": 0.1,
+          "duration": 0.6,
+          "fadeOut": 0.75,
+          "name": "blur",
+          "type": "SET_ZOOM_BLUR"
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "boom",
+          "fixPos": true,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "dissonanceDetonationBoom"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "0": [
+            {
+              "align": "BOTTOM",
+              "radius": 24,
+              "yScale": 0,
+              "zHeight": 24,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": true,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": true,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "MASSIVE",
+                "visualType": "LIGHT",
+                "element": "WAVE",
+                "damageFactor": 0.90,
+                "status": 0,
+                "fly": "LIGHT",
+                "reverse": false,
+                "stunSteps": [
+                  {
+                    "type": "START_LOCK"
+                  },
+                  {
+                    "type": "BLOCK_XY"
+                  }
+                ],
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "limiter": "",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+              }
+            }
+          ],
+          "1": [
+            {
+              "align": "BOTTOM",
+              "radius": 24,
+              "yScale": 0,
+              "zHeight": 24,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": true,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": true,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "MASSIVE",
+                "visualType": "LIGHT",
+                "element": "WAVE",
+                "damageFactor": 1.35,
+                "status": 0,
+                "fly": "LIGHT",
+                "reverse": false,
+                "stunSteps": [
+                  {
+                    "type": "START_LOCK"
+                  },
+                  {
+                    "type": "BLOCK_XY"
+                  }
+                ],
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "limiter": "",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+              }
+            }
+          ],
+          "2": [
+            {
+              "align": "BOTTOM",
+              "radius": 24,
+              "yScale": 0,
+              "zHeight": 24,
+              "centralAngle": 1,
+              "duration": 0.1,
+              "expandRadius": 0,
+              "alwaysFull": true,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "rectangular": false,
+              "repeat": true,
+              "uniformHitDir": false,
+              "fixPos": false,
+              "checkCollision": true,
+              "type": "CIRCLE_ATTACK",
+              "attack": {
+                "type": "MASSIVE",
+                "visualType": "LIGHT",
+                "element": "WAVE",
+                "damageFactor": 1.8,
+                "status": 0,
+                "fly": "LIGHT",
+                "reverse": false,
+                "stunSteps": [
+                  {
+                    "type": "START_LOCK"
+                  },
+                  {
+                    "type": "BLOCK_XY"
+                  }
+                ],
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "limiter": "",
+                "hints": [
+                  "NO_PUZZLE"
+                ]
+              },
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+              }
+            }
+          ],
+          "type": "SELECT_FIRST",
+          "options": [
+            "entity.ownerAttrib.dissonanceBuffCount == 0",
+            "entity.ownerAttrib.dissonanceBuffCount == 1",
+            "entity.ownerAttrib.dissonanceBuffCount == 2"
+          ]
+        },
+        {
+          "time": 0.7,
+          "type": "WAIT"
+        },
+        {
+          "type": "STOP_REPEATING_FORCE"
+        },
+        {
+          "group": "boom",
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 0,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0.1,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MASSIVE",
+            "element": "WAVE",
+            "damageFactor": 4.5,
+            "status": 0,
+            "fly": "MASSIVE++",
+            "reverse": false,
+            "stunSteps": [
+              {
+                "type": "END_LOCK"
+              }
+            ],
+            "guardable": "",
+            "skillBonus": "MELEE_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -12
+          }
+        },
+        {
+          "time": 0.2,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
       "type": "GENERIC"
     }
   },
@@ -84811,6 +86227,637 @@
           }
         ]
       },
+      "THROW_SPECIAL3_B": {
+        "name": {
+          "en_US": "Furious Dissonance"
+        },
+        "description": {
+          "en_US": "Shoot together with clones to unleash a barrage of explosive spell cards."
+        },
+        "dmgType": "RANGED",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "attribName": "dissonanceBuffCount",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 0
+          },
+          {
+            "attribName": "dissonanceTracker",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 0
+          },
+          {
+            "sticking": false,
+            "group": "dissonanceTargetGroup",
+            "type": "REMOVE_PROXIES"
+          },
+          {
+            "duration": -1,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "group": "dissonancePlayerFX",
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.hexacastXPC",
+              "name": "dissonancePlayerAura"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "posType": "TARGET",
+            "align": "FACE",
+            "type": "SET_HIT_PROXY",
+            "proxy": "dissonanceCardExplosion",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "name": "DISSONANCE_SHOOT",
+            "type": "LABEL"
+          },
+          {
+            "attribName": "dissonanceTracker",
+            "changeType": "add",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": 100,
+            "type": "SET_SPEED"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.dissonanceTracker == 1",
+            "thenStep": [
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0.15,
+                "startAngle": 0.175,
+                "angleVary": 0,
+                "startDist": 56,
+                "startDistCollide": "ALT_DIR",
+                "random": true,
+                "count": 1,
+                "duration": 0,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "dissonanceDummy",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 24
+                }
+              }
+            ]
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.dissonanceTracker == 2",
+            "thenStep": [
+              {
+                "align": "BOTTOM",
+                "centralAngle": 0.15,
+                "startAngle": 0.675,
+                "angleVary": 0,
+                "startDist": 56,
+                "startDistCollide": "ALT_DIR",
+                "random": true,
+                "count": 1,
+                "duration": 0,
+                "clockwise": false,
+                "flipLeftFace": 0,
+                "uniformDir": 0,
+                "delay": 0,
+                "repeat": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "proxy": "dissonanceDummy",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 24
+                }
+              }
+            ]
+          },
+          {
+            "attribName": "dissonanceLoopCount",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 3
+          },
+          {
+            "name": "DISSONANCE_LOOP",
+            "type": "LABEL"
+          },
+          {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.polarityThrowType",
+            "thenStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": false
+              },
+              {
+                "followUp": "sweepEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowDissonance"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+
+            ],
+            "elseStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": true
+              },
+              {
+                "followUp": "sweepRevEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweepRev"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowDissonanceRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.01,
+            "angleVary": 0.02,
+            "startDist": 24,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "count": 2,
+            "duration": 0.14,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "dissonanceCard",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.21,
+            "type": "WAIT"
+          },
+          {
+            "changeType": "sub",
+            "attribName": "dissonanceLoopCount",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.dissonanceLoopCount > 0",
+            "thenStep": [
+              {
+                "name": "DISSONANCE_LOOP",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "value": "MEDIUM",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "withElse": false,
+            "type": "IF",
+            "condition": "entity.attrib.dissonanceTracker == 3",
+            "thenStep": [
+              {
+                "name": "DISSONANCE_FINAL",
+                "type": "GOTO_LABEL"
+              }
+            ]
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": 225,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": 0.2,
+            "type": "SET_INVINCIBLE"
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.polarityThrowType",
+            "thenStep": [
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dash"
+              }
+            ],
+            "elseStep": [
+              {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "dashRev"
+              }
+            ]
+          },
+          {
+            "duration": 0.2,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
+            "offset": {
+              "x": 0,
+              "y": 3,
+              "z": 6
+            }
+          },
+          {
+            "time": 0.21,
+            "collideCancel": 0,
+            "stopBeforeEdge": true,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "name": "DISSONANCE_SHOOT",
+            "type": "GOTO_LABEL"
+          },
+          {
+            "name": "DISSONANCE_FINAL",
+            "type": "LABEL"
+          },
+          {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "face": "SOUTH",
+            "rotate": false,
+            "type": "SET_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "idle"
+          },
+          {
+            "time": 0.05,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "handUpPre",
+            "followUp": "handUpLoop"
+          },
+          {
+            "align": "BOTTOM",
+            "type": "SHOOT_PROXY",
+            "proxy": "dissonanceFinalCard",
+            "offset": {
+              "x": 4,
+              "y": 0,
+              "z": 40
+            }
+          },
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "attribName": "dissonanceTracker",
+            "changeType": "add",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "attribName": "dissonanceTracker",
+            "changeType": "add",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "dashRev"
+          },
+          {
+            "value": 80,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": true,
+            "type": "SET_FACE_FIX"
+          },
+          {
+            "duration": 0.42,
+            "align": "CENTER",
+            "rotateFace": 8,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "dissonanceFinalCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.42,
+            "stopBeforeEdge": true,
+            "type": "MOVE_BACKWARD"
+          },
+          {
+            "value": false,
+            "type": "SET_FACE_FIX"
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "attribName": "dissonanceTracker",
+            "changeType": "add",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "entity.attrib.polarityThrowType",
+            "thenStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": false
+              },
+              {
+                "followUp": "sweepEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweep"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowDissonance"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+
+            ],
+            "elseStep": [
+              {
+                "type": "SET_ATTRIB_BOOL",
+                "name": "polarityThrowType",
+                "value": true
+              },
+              {
+                "followUp": "sweepRevEnd",
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "sweepRev"
+              },
+              {
+                "duration": 0,
+                "align": "CENTER",
+                "rotateFace": 8,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "godThrowDissonanceRev"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            ]
+          },
+          {
+            "posType": "TARGET",
+            "align": "FACE",
+            "type": "SET_HIT_PROXY",
+            "proxy": "dissonanceCardExplosion2",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0,
+            "startDist": 24,
+            "startDistCollide": "CLOSER",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": false,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "dissonanceCard2",
+            "offset": {
+              "z": 12
+            }
+          },
+
+          {
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "type": "CLEAR_HIT_PROXY"
+          },
+          {
+            "group": "dissonancePlayerFX",
+            "type": "CLEAR_EFFECTS"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0.2,
+              "move": 0.2,
+              "reaim": 0.2
+            }
+          },
+          {
+            "time": 0.6,
+            "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "preIdle"
+          },
+          {
+            "time": 0.02,
+            "type": "WAIT"
+          }
+        ]
+      },
       "ATTACK_SPECIAL1_A": {
         "name": {
           "en_US": "Ki Thrust",
@@ -86905,6 +88952,10 @@
                 "type": "SET_Z_GRAVITY_FACTOR"
               },
               {
+                "value": "VIRTUAL",
+                "type": "SET_COLL_TYPE"
+              },
+              {
                 "value": false,
                 "type": "SET_FACE_FIX"
               },
@@ -86938,6 +88989,26 @@
                 "effect": {
                   "sheet": "specials.heat",
                   "name": "fajroLandingDust"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              {
+                "duration": 1,
+                "align": "CENTER",
+                "rotateFace": 0,
+                "flipLeftFace": false,
+                "wait": false,
+                "waitSkip": 0,
+                "actionDetached": false,
+                "fixPos": false,
+                "type": "SHOW_EFFECT",
+                "effect": {
+                  "sheet": "specials.wave",
+                  "name": "virulentSparkle"
                 },
                 "offset": {
                   "x": 0,

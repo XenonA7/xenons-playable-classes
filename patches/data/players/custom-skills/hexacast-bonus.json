@@ -11278,6 +11278,10 @@
           "type": "CLEAR_EFFECTS"
         },
         {
+          "threat": "true",
+          "type": "MOD_GENERIC_PROXY"
+        },
+        {
           "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
@@ -17395,7 +17399,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.neutral",
-              "name": "hiveMissileCharge"
+              "name": "hiveMissileChargeOld"
             },
             "offset": {
               "x": 0,

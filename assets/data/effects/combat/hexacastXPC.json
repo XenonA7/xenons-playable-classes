@@ -10108,15 +10108,15 @@
               "x": 0.85,
               "y": 0.85
             },
-            "time": 0.15,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.15,
+            "time": 0.2,
             "spline": "EASE_IN"
           }
         },
@@ -10153,15 +10153,15 @@
               "x": 0.85,
               "y": 0.85
             },
-            "time": 0.15,
+            "time": 0.05,
             "spline": "EASE_OUT"
           },
           "end": {
             "value": {
-              "x": 0.25,
-              "y": 0.25
+              "x": 0,
+              "y": 0
             },
-            "time": 0.15,
+            "time": 0.2,
             "spline": "EASE_IN"
           }
         },
@@ -17016,6 +17016,162 @@
         "particleDuration": 0.35,
         "anim": "HEXA_WAVE_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      }
+    ],
+    "dissonancePlayerAura": [
+      {
+        "size": "XL",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": -1,
+        "glow": false,
+        "type": "LIGHT"
+      },
+      {
+        "color": "#00aa77",
+        "maxAlpha": 0.8,
+        "minAlpha": 0.4,
+        "blinkDuration": 0.25,
+        "blinkCount": -1,
+        "noLighter": false,
+        "type": "BLINK_COLOR"
+      },
+      {
+        "type": "LOOP_START"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0.8,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "particleRotate": true,
+        "moveRotate": 0,
+        "moveDist": 24,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "spline": "",
+            "time": 0.1
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0.5
+            },
+            "time": 0.3,
+            "spline": "LINEAR"
+          }
+        },
+        "pRotate": {
+          "init": 0.35,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pLight": "M",
+        "angleVary": 1,
+        "moveWithTarget": 0,
+        "particleDuration": 0.4,
+        "particleDurVariance": 0.1,
+        "cancelable": false,
+        "anim": "HEXA_WAVE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.2,
+        "type": "WAIT"
+      },
+      {
+        "numParticles": 2,
+        "duration": 0.8,
+        "centralAngle": 1,
+        "startDist": 16,
+        "random": true,
+        "particleRotate": true,
+        "moveRotate": 0,
+        "moveDist": 24,
+        "moveVariance": 8,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 1,
+          "end": {
+            "value": 0,
+            "spline": "",
+            "time": 0.1
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0.5
+            },
+            "time": 0.3,
+            "spline": "LINEAR"
+          }
+        },
+        "pRotate": {
+          "init": -0.35,
+          "end": {
+            "value": 0,
+            "time": 0.3,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pLight": "M",
+        "angleVary": 1,
+        "moveWithTarget": 0,
+        "particleDuration": 0.4,
+        "particleDurVariance": 0.1,
+        "cancelable": false,
+        "anim": "HEXA_WAVE",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.6,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      },
+      {
+        "color": "#00aa77",
+        "alpha": 0.6,
+        "fadeIn": 0,
+        "fadeOut": 0.8,
+        "duration": 0.01,
+        "noLighter": false,
+        "type": "FADE_COLOR"
       }
     ]
   }

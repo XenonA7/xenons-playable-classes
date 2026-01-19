@@ -1,3 +1,13 @@
+## 3.0.1 (01/19/2026)
+### General
+- Hexacast litter mod updated to 2.1.8
+### Changes
+- Added pAlpha fadeout to WAVE_SPARKLE particles in effect dissonanceFinalCardFX
+- Changed the WAVE_BIG_HEXAGON_GUI particle in effect dissonanceFinalImpact to be much faster and larger
+- Proxy dissonanceCard2 now uses new death effects dissonanceCard2WallDeath and dissonanceCard2AirDeath
+### Balance
+- Furious Dissonance reduced delay before final sequence by 0.15 seconds
+
 ## 3.0.0 (01/18/2026)
 ### General
 - Hexacast moveset is now complete!

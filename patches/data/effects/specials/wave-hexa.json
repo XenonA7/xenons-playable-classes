@@ -23472,7 +23472,12 @@
         "inverse": false,
         "collision": false,
         "pAlpha": {
-          "init": 0.8
+          "init": 0.8,
+          "end": {
+            "value": 0,
+            "time": 0.4,
+            "spline": "EASE_OUT"
+          }
         },
         "pScale": {
           "init": {
@@ -23484,7 +23489,7 @@
               "x": 0.2,
               "y": 0.2
             },
-            "spline": "EASE_IN_STRONG"
+            "spline": "EASE_IN"
           }
         },
         "pRotate": {
@@ -24617,7 +24622,7 @@
           "z": 64
         },
         "pAlpha": {
-          "init": 0.75,
+          "init": 0.5,
           "start": {
             "value": 0,
             "spline": ""
@@ -24630,8 +24635,8 @@
           },
           "start": {
             "value": {
-              "x": 2,
-              "y": 2
+              "x": 3,
+              "y": 3
             },
             "spline": "EASE_OUT"
           }
@@ -24645,7 +24650,7 @@
         },
         "angleVary": 1,
         "moveWithTarget": 1,
-        "particleDuration": 0.6,
+        "particleDuration": 0.3,
         "anim": "WAVE_BIG_HEXAGON_GUI",
         "type": "PLAY_ANIM"
       },

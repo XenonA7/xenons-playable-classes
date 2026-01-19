@@ -55351,8 +55351,8 @@
       "effects": "ball-wave",
       "effectKeys": {
         "trail": "dissonanceCardTrail2",
-        "wall": "dissonanceCardWallDeath",
-        "air": "dissonanceCardAirDeath"
+        "wall": "dissonanceCard2WallDeath",
+        "air": "dissonanceCard2AirDeath"
       },
       "speed": 1000,
       "maxBounce": 0,
@@ -86602,7 +86602,7 @@
             "type": "CLEAR_HIT_PROXY"
           },
           {
-            "time": 0.2,
+            "time": 0.05,
             "type": "WAIT"
           },
           {

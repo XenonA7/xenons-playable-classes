@@ -9,7 +9,7 @@ Install instructions can be found at the bottom of this page. The DLC is require
 >**Note:** Additional addon mods created by me and others can be found on the Discord server.
 
 # **Mod Content:**
-1. Playable Triblader and Hexacast characters with all new combat arts (Hexacast is only 77% done but still playable)
+1. Playable Triblader and Hexacast characters with all new combat arts
 2. Generic Triblader party member
 3. Updated Schneider/Luke movesets
 4. New area in Bergen Village containing various maps and content

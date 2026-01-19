@@ -1,3 +1,10 @@
+## 3.0.2 (01/19/2026)
+### Changes
+- Added SCREEN_FLASH to effect dissonanceDetonationBoom for explosion duration
+### Fixes
+- Updated README.md to remote Hexacast WIP note
+- Proxy dissonanceTarget lifetime increased from 0.4 to 0.8 seconds
+
 ## 3.0.1 (01/19/2026)
 ### General
 - Hexacast litter mod updated to 2.1.8

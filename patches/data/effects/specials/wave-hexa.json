@@ -24966,6 +24966,13 @@
         "type": "LIGHT"
       },
       {
+        "color": "#000d0a",
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "duration": 0.7,
+        "type": "SCREEN_FLASH"
+      },
+      {
         "type": "LOOP_START"
       },
       {

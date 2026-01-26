@@ -5325,7 +5325,7 @@
         },
         {
           "time": 0.6,
-          "cancelOnHit": false,
+          "cancelOnHit": true,
           "withBranches": false,
           "collideCancel": 1,
           "orthoDirFactor": 0,
@@ -5337,6 +5337,7 @@
             "fly": "LIGHT",
             "element": "COLD",
             "damageFactor": 0.5,
+            "limiter": "NO_DAMAGE",
             "reverse": false,
             "guardable": "",
             "hints": [
@@ -5349,7 +5350,50 @@
           "type": "STOP_REPEATING_FORCE"
         },
         {
+          "type": "STOP_XY"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
           "type": "CLEAR_EFFECTS"
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 24,
+          "yScale": 1,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": false,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "HEAVY",
+            "element": "COLD",
+            "damageFactor": 3.5,
+            "status": 0.5,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
         },
         {
           "duration": 0,
@@ -5358,12 +5402,12 @@
           "flipLeftFace": false,
           "wait": false,
           "waitSkip": 0,
-          "actionDetached": true,
+          "actionDetached": false,
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.icicles",
-            "name": "icicleExplodeTiny"
+            "sheet": "specials.cold",
+            "name": "coldExplodeSmallHex"
           },
           "offset": {
             "x": 0,
@@ -5550,6 +5594,17 @@
               }
             },
             {
+              "posType": "TARGET",
+              "align": "BOTTOM",
+              "type": "SET_HIT_PROXY",
+              "proxy": "hailBullet2Explosion",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
               "align": "BOTTOM",
               "type": "SHOOT_PROXY",
               "proxy": "hailBullet2",
@@ -5562,6 +5617,9 @@
             {
               "time": 0.02,
               "type": "WAIT"
+            },
+            {
+              "type": "CLEAR_HIT_PROXY"
             },
             {
               "value": "NONE",
@@ -5681,7 +5739,7 @@
       "maxBounce": 0,
       "timer": 1.5,
       "trail": true,
-      "multiHit": true,
+      "multiHit": false,
       "noLightGlow": false,
       "shadow": 16,
       "type": "BALL",
@@ -5710,12 +5768,96 @@
         "status": 0.6,
         "guardable": "",
         "skillBonus": "RANGED_DMG",
-        "limiter": "",
+        "limiter": "NO_DAMAGE",
         "hints": [
           "CHARGED"
         ]
       },
       "timeBoni": null
+    },
+    "hailBullet2Explosion": {
+      "copyOwnerAnims": false,
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "breakType": "COMBATANT",
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
+      "action": [
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.icicles",
+            "name": "hailBullet2Explode"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 16,
+          "yScale": 1,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 0,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "attack": {
+            "type": "MEDIUM",
+            "visualType": "HEAVY",
+            "fly": "LIGHT",
+            "element": "COLD",
+            "damageFactor": 1.6,
+            "status": 0.55,
+            "reverse": false,
+            "guardable": "",
+            "skillBonus": "RANGED_DMG",
+            "limiter": "",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT",
+          "time": 1
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "startAnim": "",
+      "type": "GENERIC"
     },
     "hexBarrierController": {
       "copyOwnerAnims": false,

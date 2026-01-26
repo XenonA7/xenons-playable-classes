@@ -1,3 +1,12 @@
+## 3.1.0 (01/26/2026)
+### New Content
+- Added Hexacast level-up action
+### Changes
+- Increased the GOD_HEXAGON_WAVE pScale end time from 0.5 to 0.8 in effect dissonanceDetonationBoom
+### Balance
+- Hail Spears rework: No longer pierces enemies, causes small explosions on hit
+- Hail Spears overall damage increased by roughly 20%
+
 ## 3.0.2 (01/19/2026)
 ### Changes
 - Added SCREEN_FLASH to effect dissonanceDetonationBoom for explosion duration

@@ -35715,7 +35715,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "floatEyesClosed"
+          "anim": "floatEyeClosed"
         },
         {
           "duration": 4,
@@ -54683,7 +54683,7 @@
           "wait": false,
           "viaWalkConfig": false,
           "type": "SHOW_ANIMATION",
-          "anim": "floatEyesClosed"
+          "anim": "floatEyeClosed"
         },
         {
           "withElse": true,
@@ -73839,7 +73839,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "floatEyesClosed"
+            "anim": "floatEyeClosed"
           },
           {
             "time": 1.5,

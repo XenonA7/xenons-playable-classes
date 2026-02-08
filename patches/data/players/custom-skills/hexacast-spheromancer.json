@@ -41180,7 +41180,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "floatEyesClosed"
+            "anim": "floatEyeClosed"
           },
           {
             "type": "SET_PLAYER_ACTION_BLOCK",

@@ -316,6 +316,39 @@
     }
   },
   {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 12,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5'",
+      "thenStep": [
+        {
+          "entity": {
+            "player": true
+          },
+          "action": [
+            {
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "battleDamage"
+            },
+            {
+              "type": "WAIT",
+              "time": -1
+            }
+          ],
+          "repeating": false,
+          "wait": false,
+          "keepState": true,
+          "immediately": false,
+          "type": "DO_ACTION"
+        }
+      ]
+    }
+  },
+  {
     "type": "EXIT"
   },
   {

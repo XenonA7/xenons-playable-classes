@@ -94,7 +94,7 @@
                 "thenStep": [
                   {
                     "type": "SHOW_ANIMATION",
-                    "anim": "hover"
+                    "anim": "floatSword"
                   },
                   {
                     "name": "END",
@@ -108,7 +108,7 @@
                 "thenStep": [
                   {
                     "type": "SHOW_ANIMATION",
-                    "anim": "floatEyesClosed"
+                    "anim": "floatEyeClosed"
                   },
                   {
                     "name": "END",
@@ -331,7 +331,7 @@
                 "thenStep": [
                   {
                     "type": "SHOW_ANIMATION",
-                    "anim": "chestFrame1"
+                    "anim": "landOnGround"
                   },
                   {
                     "name": "END",

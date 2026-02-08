@@ -1,3 +1,11 @@
+## 3.2.1 (02/08/2026)
+### New Content
+- Added floatEyeClosed animation for Triblader2/3/4/5 and Triblader-Lea (for vanilla cutscenes)
+### Changes
+- Renamed Hexacast animation floatEyesClosed to floatEyeClosed to match vanilla standard
+- Changed Triblader2/3/4/5 animations in element unlock map patches to use floatSword and landOnGround
+- Triblader2/3/4/5 now shows battleDamage animation in event arena-player-death-pre
+
 ## 3.2.0 (02/07/2026)
 ### New Content
 - Added \js\azure-lazuline\extern-anim-fix.js, code by Azure Lazuline

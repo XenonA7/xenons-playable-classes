@@ -223,11 +223,11 @@ sc.PlayerLevelNotifier.inject({
                               anim: "jump"
                             },
                             {
-                              value: 0.5,
+                              value: 0.25,
                               type: "SET_Z_GRAVITY_FACTOR"
                             },
                             {
-                              value: 200,
+                              value: 100,
                               type: "SET_Z_VEL"
                             },
                             {
@@ -251,10 +251,180 @@ sc.PlayerLevelNotifier.inject({
                               }
                             },
                             {
+                              withElse: true,
+                              type: "IF",
+                              condition: "entity.attrib.shadowflameActive",
+                              thenStep: [
+                                {
+                                  duration: -1,
+                                  align: "BASE",
+                                  rotateFace: 8,
+                                  flipLeftFace: true,
+                                  wait: false,
+                                  waitSkip: 0,
+                                  actionDetached: false,
+                                  fixPos: false,
+                                  group: "levelUpRisingFX",
+                                  type: "SHOW_EFFECT",
+                                  effect: {
+                                    sheet: "specials.shadowflame-alts",
+                                    name: "levelUpRisingShadowflame"
+                                  }
+                                }
+                              ],
+                              elseStep: [
+                                {
+                                  withElse: false,
+                                  type: "COMBAT_IF",
+                                  conditions: [
+                                    {
+                                      element: "NEUTRAL",
+                                      negated: false,
+                                      type: "ELEMENT_MODE"
+                                    }
+                                  ],
+                                  thenStep: [
+                                    {
+                                      duration: -1,
+                                      align: "BASE",
+                                      rotateFace: 8,
+                                      flipLeftFace: true,
+                                      wait: false,
+                                      waitSkip: 0,
+                                      actionDetached: false,
+                                      fixPos: false,
+                                      group: "levelUpRisingFX",
+                                      type: "SHOW_EFFECT",
+                                      effect: {
+                                        sheet: "combat.hexacastXPC",
+                                        name: "levelUpRisingNeutral"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  withElse: false,
+                                  type: "COMBAT_IF",
+                                  conditions: [
+                                    {
+                                      element: "HEAT",
+                                      negated: false,
+                                      type: "ELEMENT_MODE"
+                                    }
+                                  ],
+                                  thenStep: [
+                                    {
+                                      duration: -1,
+                                      align: "BASE",
+                                      rotateFace: 8,
+                                      flipLeftFace: true,
+                                      wait: false,
+                                      waitSkip: 0,
+                                      actionDetached: false,
+                                      fixPos: false,
+                                      group: "levelUpRisingFX",
+                                      type: "SHOW_EFFECT",
+                                      effect: {
+                                        sheet: "combat.hexacastXPC",
+                                        name: "levelUpRisingHeat"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  withElse: false,
+                                  type: "COMBAT_IF",
+                                  conditions: [
+                                    {
+                                      element: "COLD",
+                                      negated: false,
+                                      type: "ELEMENT_MODE"
+                                    }
+                                  ],
+                                  thenStep: [
+                                    {
+                                      duration: -1,
+                                      align: "BASE",
+                                      rotateFace: 8,
+                                      flipLeftFace: true,
+                                      wait: false,
+                                      waitSkip: 0,
+                                      actionDetached: false,
+                                      fixPos: false,
+                                      group: "levelUpRisingFX",
+                                      type: "SHOW_EFFECT",
+                                      effect: {
+                                        sheet: "combat.hexacastXPC",
+                                        name: "levelUpRisingCold"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  withElse: false,
+                                  type: "COMBAT_IF",
+                                  conditions: [
+                                    {
+                                      element: "SHOCK",
+                                      negated: false,
+                                      type: "ELEMENT_MODE"
+                                    }
+                                  ],
+                                  thenStep: [
+                                    {
+                                      duration: -1,
+                                      align: "BASE",
+                                      rotateFace: 8,
+                                      flipLeftFace: true,
+                                      wait: false,
+                                      waitSkip: 0,
+                                      actionDetached: false,
+                                      fixPos: false,
+                                      group: "levelUpRisingFX",
+                                      type: "SHOW_EFFECT",
+                                      effect: {
+                                        sheet: "combat.hexacastXPC",
+                                        name: "levelUpRisingShock"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  withElse: false,
+                                  type: "COMBAT_IF",
+                                  conditions: [
+                                    {
+                                      element: "WAVE",
+                                      negated: false,
+                                      type: "ELEMENT_MODE"
+                                    }
+                                  ],
+                                  thenStep: [
+                                    {
+                                      duration: -1,
+                                      align: "BASE",
+                                      rotateFace: 8,
+                                      flipLeftFace: true,
+                                      wait: false,
+                                      waitSkip: 0,
+                                      actionDetached: false,
+                                      fixPos: false,
+                                      group: "levelUpRisingFX",
+                                      type: "SHOW_EFFECT",
+                                      effect: {
+                                        sheet: "combat.hexacastXPC",
+                                        name: "levelUpRisingWave"
+                                      }
+                                    }
+                                  ]
+                                }                                
+                              ]
+                            },
+                            {
                               type: "WAIT_UNTIL_Z_ZENITH"
                             },
                             {
-                              value: 0.25,
+                              value: 0.125,
                               type: "SET_Z_GRAVITY_FACTOR"
                             },
                             {
@@ -266,12 +436,12 @@ sc.PlayerLevelNotifier.inject({
                               time: 0.21
                             },
                             {
-                              value: 32,
+                              value: 16,
                               type: "SET_FLOAT_HEIGHT"
                             },
                             {
-                              variance: 8,
-                              accel: 2,
+                              variance: 4,
+                              accel: 1,
                               type: "SET_FLOAT_PARAMS"
                             },
                             {
@@ -487,6 +657,10 @@ sc.PlayerLevelNotifier.inject({
                             {
                               type: "SHOW_ANIMATION",
                               anim: "fall"
+                            },
+                            {
+                              group: "levelUpRisingFX",
+                              type: "CLEAR_EFFECTS"
                             },
                             {
                               value: 0,

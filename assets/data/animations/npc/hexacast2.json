@@ -73,19 +73,11 @@
       "width": 32,
       "height": 40
     },
-    "level": {
-      "src": "media/entity/npc/hexacast2.png",
-      "xCount": 14,
-      "offX": 0,
-      "offY": 560,
-      "width": 32,
-      "height": 40
-    },
     "crateChest": {
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 11,
       "offX": 0,
-      "offY": 800,
+      "offY": 760,
       "width": 32,
       "height": 40
     },
@@ -93,7 +85,7 @@
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 15,
       "offX": 0,
-      "offY": 600,
+      "offY": 560,
       "width": 32,
       "height": 40
     },
@@ -125,7 +117,7 @@
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 16,
       "offX": 0,
-      "offY": 920,
+      "offY": 880,
       "width": 32,
       "height": 40
     },
@@ -133,7 +125,7 @@
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 3,
       "offX": 352,
-      "offY": 880,
+      "offY": 840,
       "width": 32,
       "height": 40
     },
@@ -141,7 +133,7 @@
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 14,
       "offX": 0,
-      "offY": 960,
+      "offY": 920,
       "width": 32,
       "height": 40
     },
@@ -149,7 +141,7 @@
       "src": "media/entity/npc/hexacast2.png",
       "xCount": 6,
       "offX": 352,
-      "offY": 800,
+      "offY": 760,
       "width": 32,
       "height": 40
     },
@@ -2530,6 +2522,15 @@
         {
           "name": "fanPre",
           "time": 0.1,
+          "repeat": false,
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "fanPreFast",
+          "time": 0.05,
           "repeat": false,
           "frames": [
             8,

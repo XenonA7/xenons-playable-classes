@@ -23471,6 +23471,18 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
+        "time": 2,
+        "type": "WAIT"
+      },
+      {
+        "type": "LOOP_END"
+      }
+    ],
+    "levelUpRisingShadowflame": [
+      {
+        "type": "LOOP_START"
+      },
+      {
         "numParticles": 8,
         "duration": 2,
         "centralAngle": 0,
@@ -23484,10 +23496,10 @@
         "offset": {
           "x": 0,
           "y": 0,
-          "z": -24
+          "z": 0
         },
         "pAlpha": {
-          "init": 0.5,
+          "init": 0.3,
           "start": {
             "value": 0,
             "spline": "EASE_OUT"
@@ -23513,6 +23525,46 @@
         "particleDuration": 0.4,
         "cancelable": true,
         "anim": "DARK_BIG_HEXAGON",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 8,
+        "duration": 2,
+        "centralAngle": 1,
+        "startDist": 8,
+        "random": true,
+        "particleRotate": true,
+        "moveDist": 32,
+        "moveVariance": 12,
+        "keySpline": "EASE_OUT_STRONG",
+        "moveRotate": 0,
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "pAlpha": {
+          "init": 0.3,
+          "end": {
+            "value": 0,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.2,
+            "y": 1.2
+          }
+        },
+        "moveWithTarget": 0,
+        "randFlip": true,
+        "angleVary": 1,
+        "particleDuration": 0.9,
+        "particleDurVariance": 0.3,
+        "anim": "DUST_SLOW",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {

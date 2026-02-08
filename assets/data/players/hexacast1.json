@@ -38897,7 +38897,7 @@
                 "type": "BLOCK_XY"
               }
             ],
-            "status": 0.4,
+            "status": 0.55,
             "hints": [
               "NO_PUZZLE"
             ],
@@ -54601,7 +54601,7 @@
             "visualType": "HEAVY",
             "fly": "LIGHT",
             "element": "WAVE",
-            "damageFactor": 0.80,
+            "damageFactor": 0.90,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -55098,6 +55098,31 @@
           "type": "CLEAR_EFFECTS"
         },
         {
+          "withElse": false,
+          "type": "IF",
+          "condition": "false",
+          "thenStep": [
+            {
+              "text": {
+                "en_US": "Add buff"
+              },
+              "mode": "NO_LINE",
+              "color": "GREEN",
+              "actionDetached": true,
+              "hideOutsideOfScreen": false,
+              "type": "SHOW_AR_MSG",
+              "time": 2
+            }
+          ]
+        },
+        {
+          "attribName": "dissonanceBuffCount",
+          "changeType": "add",
+          "changeConnected": "PROXY_OWNER",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
           "duration": 0.5,
           "align": "BOTTOM",
           "rotateFace": 8,
@@ -55140,13 +55165,6 @@
             "sheet": "specials.wave",
             "name": "dissonanceFly"
           }
-        },
-        {
-          "attribName": "dissonanceBuffCount",
-          "changeType": "add",
-          "changeConnected": "PROXY_OWNER",
-          "type": "SET_ATTRIB_NUMBER",
-          "value": 1
         },
         {
           "time": 0.5,
@@ -55353,6 +55371,24 @@
         {
           "withElse": false,
           "type": "IF",
+          "condition": "false",
+          "thenStep": [
+            {
+              "text": {
+                "en_US": "\\s[0]entity.ownerAttrib.dissonanceBuffCount: \\c[3]\\v[entity.ownerAttrib.dissonanceBuffCount]\\c[0]"
+              },
+              "mode": "NO_LINE",
+              "color": "RED",
+              "actionDetached": true,
+              "hideOutsideOfScreen": false,
+              "type": "SHOW_AR_MSG",
+              "time": 2
+            }
+          ]
+        },
+        {
+          "withElse": false,
+          "type": "IF",
           "condition": "entity.ownerAttrib.dissonanceBuffCount >= 1",
           "thenStep": [
             {
@@ -55376,6 +55412,10 @@
               }
             }
           ]
+        },
+        {
+          "time": 0.15,
+          "type": "WAIT"
         },
         {
           "withElse": false,
@@ -55652,7 +55692,7 @@
                 "type": "MASSIVE",
                 "visualType": "LIGHT",
                 "element": "WAVE",
-                "damageFactor": 0.90,
+                "damageFactor": 1.0,
                 "status": 0,
                 "fly": "LIGHT",
                 "reverse": false,
@@ -55700,7 +55740,7 @@
                 "type": "MASSIVE",
                 "visualType": "LIGHT",
                 "element": "WAVE",
-                "damageFactor": 1.35,
+                "damageFactor": 1.50,
                 "status": 0,
                 "fly": "LIGHT",
                 "reverse": false,
@@ -55748,7 +55788,7 @@
                 "type": "MASSIVE",
                 "visualType": "LIGHT",
                 "element": "WAVE",
-                "damageFactor": 1.8,
+                "damageFactor": 2.0,
                 "status": 0,
                 "fly": "LIGHT",
                 "reverse": false,

@@ -85,6 +85,13 @@
       "width": 32,
       "height": 40
     },
+    "extra2": {
+      "src": "media/entity/npc/triblader2extra.png",
+      "offX": 0,
+      "offY": 40,
+      "width": 32,
+      "height": 40
+    },
     "extraHover": {
       "src": "media/entity/npc/triblader2extra.png",
       "xCount": 6,
@@ -1191,6 +1198,37 @@
           "repeat": false,
           "frames": [
             12
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "extra2",
+      "dirs": 2,
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "defeatPre",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "defeat",
+          "time": 1,
+          "repeat": true,
+          "frames": [
+            2
           ]
         }
       ]

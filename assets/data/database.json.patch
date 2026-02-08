@@ -69,5 +69,259 @@
   },
   {
     "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": ["commonEvents", "arena-player-death", "event"]
+  },
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 1
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name != 'Schneider' && player.entity.name != 'Luke' && player.entity.name != 'triblader-lea'",
+      "thenStep": [
+        {
+          "ignoreSlowDown": false,
+          "type": "WAIT",
+          "time": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "type": "ENTER",
+    "index": [5, "action"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 2,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "sitGroundHeadBack"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 3,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'triblader-lea'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "floored"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.heat",
+            "name": "fajroLandingDust"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "volume": 1.0,
+          "global": false,
+          "loop": false,
+          "speed": 1.0,
+          "variance": 0,
+          "sound": "media/sound/battle/thud-4.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "rumbleType": "RANDOM",
+          "duration": 0.2,
+          "power": "STRONGER",
+          "speed": "FASTER",
+          "fade": true,
+          "type": "RUMBLE_SCREEN"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 5,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "fanPreFast",
+          "followUp": "groundClosed"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 6,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "defeatPre",
+          "followUp": "defeat"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 8,
+    "content": {
+      "name": "END",
+      "type": "LABEL"
+    }
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": ["commonEvents", "arena-player-death-pre", "event"]
+  },
+  {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 11
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 11,
+    "content": {
+      "withElse": true,
+      "type": "IF",
+      "condition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader-lea'",
+      "thenStep": [
+        {
+          "entity": {
+            "player": true
+          },
+          "action": [
+            {
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "damage"
+            },
+            {
+              "align": "CENTER",
+              "centralAngle": 1,
+              "startDist": 4,
+              "startDistCollide": "ALT_DIR",
+              "random": true,
+              "delay": 0,
+              "repeat": false,
+              "duration": 0,
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "deathSword",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            {
+              "type": "WAIT",
+              "time": -1
+            }
+          ],
+          "repeating": false,
+          "wait": false,
+          "keepState": true,
+          "immediately": false,
+          "type": "DO_ACTION"
+        }
+      ],
+      "elseStep": [
+        {
+          "ignoreSlowDown": true,
+          "type": "WAIT",
+          "time": 1.3
+        }
+      ]
+    }
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
   }
 ]

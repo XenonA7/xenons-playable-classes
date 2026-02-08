@@ -4,6 +4,7 @@ import "./js/azure-lazuline/action-buff-timers.js";
 import "./js/azure-lazuline/postshoot-delay.js";
 import "./js/azure-lazuline/guarding-variable.js";
 import "./js/azure-lazuline/puzzle-aim-detection.js";
+import "./js/azure-lazuline/extern-anim-fix.js";
 
 import "./js/krypek/custom-levelups.js";
 import "./js/krypek/doormat-spawn-fix.js";

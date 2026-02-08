@@ -27891,6 +27891,45 @@
         "anim": "SHOCK_SHADOW2",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
+    ],
+    "deathSwordGroundImpact": [
+      {
+        "volume": 0.8,
+        "global": false,
+        "loop": false,
+        "speed": 1.2,
+        "sound": "media/sound/environment/plant-hit.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "numParticles": 4,
+        "duration": 0,
+        "centralAngle": 1,
+        "startAngle": 0,
+        "startDist": 32,
+        "uniformRandom": 0.3,
+        "flipRightParticles": true,
+        "moveDist": 4,
+        "keySpline": "EASE_OUT",
+        "collision": false,
+        "moveWithTarget": 1,
+        "pAlpha": {
+          "init": 0,
+          "start": {
+            "value": 1,
+            "time": 0.1,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.1,
+            "y": 1.1
+          }
+        },
+        "anim": "DUST_UP",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      }
     ]
   }
 }

@@ -1,3 +1,28 @@
+## 3.2.0 (02/07/2026)
+### New Content
+- Added \js\azure-lazuline\extern-anim-fix.js, code by Azure Lazuline
+  * Adds SHOW_EXTERN_ANIM support for non-Lea characters if their main animation file contains an animation by the same name
+  * Hexacast1/2, Triblader2/3/4/5, and Triblader Lea now support "access denied" gate cutscenes among others
+- Added arena defeat animation support for Hexacast1/2/3, Schneider, Luke, Triblader2/3/4/5, and Triblader Lea
+- Added Triblader2/3/4/5 animation defeatPre and defeat (thanks to V1tr4 and Orco for spritework help)
+- Added Triblader2/3/4/5 south landOnGround sprite
+- Added Hexacast animation definition fanPreFast
+### Changes
+- New replacement sprites for Triblader Lea east battleRun/battleJump/battleFall animations
+- Condensed Hexacast1/2/3 main spritesheets to remove unused levelUp placeholder row
+- Extended triblader-lea-extra.png to include landOnGround animation
+- Deleted unused "level" animation sheet from Hexacast1/2/3
+- Reduced audio volume for Hexacast levelUpFX___ effects
+- Split Hexacast levelUp effects into levelUpFX___ and levelUpRising___, added DUST_SLOW particles
+- Hexacast level-up hover height and float params reduced
+### Fixes
+- Fixed proxy dissonanceFinalCard not showing effect dissonanceFinalCardCharge2 (timing issue)
+- Fixed Triblader Lea east chest opening animations having wrong eye color
+### Balance
+- Proxy dissonanceCardExplosion damageFactor increased from 0.80 to 0.90
+- Proxy dissonanceCardExplosion2 progressive repeating damageFactor increased from 0.90/1.35/1.80 to 1.0/1.50/2.0
+- Ray of G'oni laser status factor increased from 0.4 to 0.55 (better at inflicting status)
+
 ## 3.1.0 (01/26/2026)
 ### New Content
 - Added Hexacast level-up action

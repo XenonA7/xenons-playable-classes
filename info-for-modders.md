@@ -1,7 +1,8 @@
 # XPC Technical Information
-Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping with some JS features.
+Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping with JS features.
 
 ## Misc JS Features
+* SHOW_EXTERN_ANIM will support non-Lea characters if said character has an animation by the same name in their main animation file
 * Door entities will now hide their doormat (if the map style defines one) when their spawnCondition is false
 * Adds new text icons including class logos (see \js\custom-font-icons.js)
 * Adds the "default2" OneTimeSwitch type which has the default appearance but properly supports being hidden

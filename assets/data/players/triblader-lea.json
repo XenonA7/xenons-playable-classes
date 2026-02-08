@@ -26714,6 +26714,243 @@
         "collType": "NONE"
       },
       "type": "GENERIC"
+    },
+    "deathSword": {
+      "faceAnims": {
+        "DOCTYPE": "MULTI_DIR_ANIMATION",
+        "shapeType": "Y_FLAT",
+        "namedSheets": {
+          "air": {
+            "src": "media/entity/effects/triblader/tri-misc.png",
+            "offX": 71,
+            "offY": 0,
+            "width": 9,
+            "height": 19
+          },
+          "ground": {
+            "src": "media/entity/effects/triblader/tri-misc.png",
+            "offX": 240,
+            "offY": 79,
+            "width": 16,
+            "height": 17
+          }
+        },
+        "SUB": [
+          {
+            "sheet": "air",
+            "dirs": 1,
+            "tileOffsets": [
+              0
+            ],
+            "flipX": [
+              0
+            ],
+            "guiSprites": false,
+            "SUB": [
+              {
+                "name": "default",
+                "time": 1,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.020,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  11.25,
+                  22.5,
+                  33.75,
+                  45,
+                  56.25,
+                  67.5,
+                  78.75,
+                  90,
+                  101.25,
+                  112.5,
+                  123.75,
+                  135,
+                  146.25,
+                  157.5,
+                  168.75,
+                  191.25,
+                  202.5,
+                  213.75,
+                  225,
+                  236.25,
+                  247.5,
+                  258.75,
+                  270,
+                  281.25,
+                  292.5,
+                  303.75,
+                  315,
+                  326.25,
+                  337.5,
+                  348.75,
+                  360
+                ]
+              }
+            ]
+          },
+          {
+            "sheet": "ground",
+            "dirs": 2,
+            "tileOffsets": [
+              0,
+              0
+            ],
+            "flipX": [
+              0,
+              1
+            ],
+            "guiSprites": false,
+            "SUB": [
+              {
+                "name": "ground",
+                "time": 1,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "spinning"
+        },
+        {
+          "volume": 0.6,
+          "global": false,
+          "loop": false,
+          "speed": 1.2,
+          "sound": "media/sound/battle/enemies/samurai/sword-slash.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "value": 250,
+          "type": "SET_Z_VEL"
+        },
+        {
+          "value": 60,
+          "type": "SET_SPEED"
+        },
+        {
+          "time": 0,
+          "waitUntil": "entity.onGround",
+          "stopBeforeEdge": false,
+          "collideCancel": 1,
+          "type": "MOVE_FORWARD"
+        },
+        {
+          "type": "WAIT_UNTIL_ON_GROUND"
+        },
+        {
+          "type": "STOP_XY"
+        },
+        {
+          "value": 0,
+          "type": "SET_SPEED"
+        },
+        {
+          "value": 1,
+          "type": "SET_Z_GRAVITY_FACTOR"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "ground"
+        },
+        {
+          "size": 0,
+          "type": "SET_SHADOW"
+        },
+        {
+          "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.tribladerXPC",
+            "name": "deathSwordGroundImpact"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "condition": "false"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "collType": "IGNORE",
+        "shadow": 16,
+        "zGravityFactor": 0.75
+      },
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -27545,7 +27782,6 @@
           {
             "duration": 0,
             "align": "BOTTOM",
-
             "rotateFace": -1,
             "flipLeftFace": true,
             "wait": false,
@@ -32436,7 +32672,7 @@
               "type": "MASSIVE",
               "element": "HEAT",
               "damageFactor": 2.75,
-              "status": 0.75,
+              "status": 1,
               "reverse": false,
               "fly": "MASSIVE+",
               "spFactor": 0,
@@ -32445,7 +32681,6 @@
                   "type": "START_LOCK"
                 }
               ],
-              "status": 1,
               "guardable": "",
               "skillBonus": "MELEE_DMG"
             },
@@ -32573,7 +32808,6 @@
             "duration": 0.3,
             "expandRadius": 0,
             "alwaysFull": false,
-            "clockwise": false,
             "flipLeftFace": 6,
             "rectangular": false,
             "repeat": false,
@@ -32655,7 +32889,7 @@
           },
           {
             "align": "BOTTOM",
-            "clockwise": true,
+            "clockwise": false,
             "radius": 72,
             "yScale": 0,
             "zHeight": 24,
@@ -32664,7 +32898,6 @@
             "duration": 0.3,
             "expandRadius": 0,
             "alwaysFull": false,
-            "clockwise": false,
             "flipLeftFace": 6,
             "rectangular": false,
             "repeat": false,

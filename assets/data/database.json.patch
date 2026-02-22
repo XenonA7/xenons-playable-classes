@@ -356,5 +356,251 @@
   },
   {
     "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": ["commonEvents", "arena-end-round", "event", 12, "action"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'triblader-lea'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "tri-levelUpPre",
+          "followUp": "tri-levelUpStand"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.1
+        },
+        {
+          "volume": 0.5,
+          "global": false,
+          "loop": false,
+          "speed": 1.4,
+          "sound": "media/sound/battle/triblader/blade1.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.5
+        },
+        {
+          "volume": 0.9,
+          "global": false,
+          "loop": false,
+          "speed": 1.2,
+          "sound": "media/sound/battle/enemies/samurai/sword-slide.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke'",
+      "thenStep": [
+        {
+          "face": "SOUTH",
+          "rotate": false,
+          "type": "SET_FACE"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "battleIdle"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 3,
+    "content": {
+      "name": "END",
+      "type": "LABEL"
+    }
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "ENTER",
+    "index": ["commonEvents", "arena-new-record", "event", 2, "action"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke'",
+      "thenStep": [
+        {
+          "face": "SOUTH",
+          "rotate": false,
+          "type": "SET_FACE"
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "battleIdle"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3'",
+      "thenStep": [
+        {
+          "face": "SOUTH_EAST",
+          "rotate": false,
+          "type": "SET_FACE"
+        },
+        {
+          "volume": 1.5,
+          "global": true,
+          "loop": false,
+          "variance": 0.05,
+          "speed": 0.8,
+          "sound": "media/sound/boss/gynthar/cards-unfold.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "wait": true,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "shuffle2"
+        },
+        {
+          "face": "SOUTH",
+          "rotate": false,
+          "type": "SET_FACE"
+        },
+        {
+          "followUp": "levelUpStand",
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "levelUpPre"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 6,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "player.entity.name == 'triblader-lea'",
+      "thenStep": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "tri-levelUpPre",
+          "followUp": "tri-levelUpStand"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.1
+        },
+        {
+          "volume": 0.5,
+          "global": false,
+          "loop": false,
+          "speed": 1.4,
+          "sound": "media/sound/battle/triblader/blade1.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.5
+        },
+        {
+          "volume": 0.9,
+          "global": false,
+          "loop": false,
+          "speed": 1.2,
+          "sound": "media/sound/battle/enemies/samurai/sword-slide.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "name": "END",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  },
+  
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 8,
+    "content": {
+      "name": "END",
+      "type": "LABEL"
+    }
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
+  },
+  {
+    "type": "EXIT"
   }
 ]

@@ -1156,7 +1156,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 175,
                 "type": "SET_SPEED"
               },
               {
@@ -2317,7 +2317,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 175,
                 "type": "SET_SPEED"
               },
               {
@@ -3509,7 +3509,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 250,
                 "type": "SET_SPEED"
               },
               {

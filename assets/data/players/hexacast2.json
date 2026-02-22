@@ -1645,7 +1645,7 @@
               "attack": {
                 "type": "MASSIVE",
                 "element": "WAVE",
-                "damageFactor": 5.5,
+                "damageFactor": 6.0,
                 "fly": "MASSIVE+",
                 "reverse": false,
                 "guardable": "",
@@ -1709,7 +1709,7 @@
               "attack": {
                 "type": "MASSIVE",
                 "element": "WAVE",
-                "damageFactor": 4.5,
+                "damageFactor": 5.0,
                 "fly": "MASSIVE+",
                 "reverse": false,
                 "guardable": "",
@@ -3135,7 +3135,7 @@
         "type": "LIGHT",
         "visualType": "MEDIUM",
         "element": "WAVE",
-        "damageFactor": 0.5,
+        "damageFactor": 2.75,
         "reverse": false,
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -16291,6 +16291,13 @@
           "anim": "default"
         },
         {
+          "factor": 0.35,
+          "time": 0.5,
+          "keepEntityStatic": false,
+          "inversAccelerate": true,
+          "type": "ADD_SLOW_MOTION"
+        },
+        {
           "time": 0.5,
           "type": "WAIT"
         },
@@ -16468,6 +16475,11 @@
             "y": 0,
             "z": 0
           }
+        },
+        {
+          "time": 0.3,
+          "removeEntityStatic": false,
+          "type": "CLEAR_SLOW_MOTION"
         },
         {
           "time": 0.1,
@@ -55016,7 +55028,7 @@
         },
         {
           "align": "BOTTOM",
-          "centralAngle": 0.01,
+          "centralAngle": 0.005,
           "angleVary": 0.02,
           "startDist": 24,
           "startDistCollide": "CLOSER",
@@ -56032,7 +56044,7 @@
                 }
               },
               {
-                "value": 125,
+                "value": 175,
                 "type": "SET_SPEED"
               },
               {
@@ -57194,7 +57206,7 @@
                 }
               },
               {
-                "value": 125,
+                "value": 175,
                 "type": "SET_SPEED"
               },
               {
@@ -58387,7 +58399,7 @@
                 }
               },
               {
-                "value": 200,
+                "value": 250,
                 "type": "SET_SPEED"
               },
               {
@@ -75785,7 +75797,7 @@
           "en_US": "Hail Spears"
         },
         "description": {
-          "en_US": "Shoot a more powerful row of hail spears that pierce multiple enemies."
+          "en_US": "Shoot a more powerful row of hail spears that explode on hit."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -81772,7 +81784,7 @@
           "en_US": "Throttle Hex"
         },
         "description": {
-          "en_US": "Hit an enemy with a hex that causes minor lightning strikes and slows the target's time flow by \\c[3]-15%\\c[0] for a short time. Stacks with the Chill status."
+          "en_US": "Hit an enemy with a hex that causes minor lightning strikes and slows the target's timeflow by \\c[3]-15%\\c[0] for a short time. Stacks with the Chill status."
         },
         "dmgType": "MIXED",
         "stunType": "Interrupt",
@@ -82116,7 +82128,7 @@
           "en_US": "Stasis Rune"
         },
         "description": {
-          "en_US": "Hit a single enemy to freeze them in time. Grants \\c[3]+200%\\c[0] DEF to enemy while active and does not deal any damage. Has its own cooldown, during which this art will backfire and become \\c[3]Throttle Hex\\c[0]."
+          "en_US": "Hit a single enemy to freeze them in time. Grants \\c[3]+200%\\c[0] DEF to enemy and does not deal any damage. Has its own cooldown, during which this art will backfire and become \\c[3]Throttle Hex\\c[0]."
         },
         "dmgType": "NONE",
         "stunType": "LOCK",
@@ -86651,7 +86663,7 @@
           },
           {
             "align": "BOTTOM",
-            "centralAngle": 0.01,
+            "centralAngle": 0.005,
             "angleVary": 0.02,
             "startDist": 24,
             "startDistCollide": "CLOSER",
@@ -88759,7 +88771,7 @@
         "description": {
           "en_US": "Dash and inflict an enemy with lingering damage before you follow with a massive blast."
         },
-        "dmgType": "MIXED",
+        "dmgType": "MELEE",
         "stunType": "LOCK",
         "status": false,
         "steps": [
@@ -88965,7 +88977,7 @@
               "reverse": false,
               "status": 0,
               "guardable": "",
-              "skillBonus": "",
+              "skillBonus": "MELEE_DMG",
               "limiter": "NO_HIT_PROXY",
               "hints": [
                 "NO_PUZZLE"
@@ -90026,7 +90038,7 @@
           "en_US": "\\c[1]Wave Recall\\c[0]"
         },
         "description": {
-          "en_US": "Place a recall point on first use. On subsequent uses, place a new recall point and teleport back to your previous one, causing an explosion upon arrival and dealing \\c[1]-5%\\c[0] of your total HP in self-damage."
+          "en_US": "Place a recall point on first use. On subsequent uses, place a new recall point and teleport back to your previous one, causing an explosion and dealing \\c[1]-5%\\c[0] of your total HP in self-damage."
         },
         "dmgType": "MELEE",
         "stunType": "",
@@ -90642,7 +90654,7 @@
           "en_US": "\\c[2]Heal Card  \\i[mark]\\v[entity.attrib.healCount]\\c[0]"
         },
         "description": {
-          "en_US": "Deal a healing card which will replenish up to \\c[2]+25%\\c[0] of your HP over \\c[2]15\\c[0] ticks. Repeated uses have a chance to reduce the total ticks (resets on map exit). The card is fragile and will break with enemy attacks."
+          "en_US": "Orbiting card heals up to \\c[2]+25%\\c[0] of your HP over \\c[2]15\\c[0] ticks. Repeat uses have a chance to reduce the total ticks (resets on map exit). The card is fragile and will break with enemy attacks."
         },
         "dmgType": "NONE",
         "stunType": "",

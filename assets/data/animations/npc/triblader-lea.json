@@ -964,7 +964,7 @@
       ],
       "SUB": [
         {
-          "name": "sitGround",
+          "name": "sitFaceUpRight",
           "time": 1,
           "repeat": false,
           "frames": [
@@ -972,7 +972,7 @@
           ]
         },
         {
-          "name": "sitFaceUpRight",
+          "name": "sitFaceDownLeft",
           "time": 1,
           "repeat": false,
           "frames": [
@@ -980,19 +980,11 @@
           ]
         },
         {
-          "name": "sitFaceDownLeft",
-          "time": 1,
-          "repeat": false,
-          "frames": [
-            2
-          ]
-        },
-        {
           "name": "floatLab",
           "time": 1,
           "repeat": false,
           "frames": [
-            3
+            2
           ]
         }
       ]

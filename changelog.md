@@ -1,3 +1,26 @@
+## 3.3.0 (02/22/2026)
+### New Content
+- Added inaccessible SHOW_SIDE_MSG event in art-testing map file
+- Added sprites for Triblader-Lea animations: sit, sitFaceUpRight, sitFaceDownLeft, floatLab
+- Added Triblader-Lea, Schneider, Luke, Hexacast1/2/3 support for events arena-end-round, arena-new-record
+- Added Hexacast1/2/3 new animations for levelUpPre, levelUpStand (for arena victory only)
+- Added Hexacast1/2/3 new animations for levelUpPreJump, levelUpJump (used only in a few vanilla cutscenes) 
+### Changes
+- Shortened Wave Recall, Heal Card, and Stasis Rune descriptions to make them fit inside the status screen textbox
+- Added CIRCLE_BIG_WAVE_NOGUI particles to effect dissonanceDetonationBoom
+- Added sword to Triblader-Lea battleDamage animation frames (used for Bruning Sacrifice)
+- Shadowflame Sorcery standard melee attacks now travel further forward to match knockback on enemies (speed 125 to 175)
+- Shadowflame Sorcery standard melee finisher move speed increased from 200 to 250
+### Fixes
+- Fixed outdated Hail Spears description
+- Fixed typo in hideout-lobby NPC dialogue
+- Virulent Corruption now properly has MELEE_DMG label and skillBonus for all damage sources
+### Balance
+- Furious Dissonance cone of fire reduced from 0.01 to 0.005 (it is now twice as accurate)
+- Essence Steal card impact damageFactor increased from 0.5 to 2.75
+- Lightning Hex now activates slow motion for everyone except itself and the player while charging
+- Ether Singularity damageFactor increased from 5.5/4.5 to 6.0/5.0
+
 ## 3.2.1 (02/08/2026)
 ### New Content
 - Added floatEyeClosed animation for Triblader2/3/4/5 and Triblader-Lea (for vanilla cutscenes)

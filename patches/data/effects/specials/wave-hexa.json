@@ -25292,6 +25292,62 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
+        "numParticles": 12,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 2,
+        "random": true,
+        "particleRotate": false,
+        "moveRotate": 0,
+        "moveDist": 32,
+        "moveVariance": 16,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 0.9,
+          "end": {
+            "value": 0,
+            "spline": "",
+            "time": 0.05
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.2,
+            "spline": "LINEAR"
+          }
+        },
+        "pRotate": {
+          "init": 0.35,
+          "end": {
+            "value": 0,
+            "time": 0.10,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pLight": "M",
+        "moveWithTarget": 0,
+        "particleDuration": 0.7,
+        "particleDurVariance": 0.2,
+        "cancelable": false,
+        "anim": "CIRCLE_BIG_WAVE_NOGUI",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
         "numParticles": 4,
         "duration": 0,
         "centralAngle": 1,

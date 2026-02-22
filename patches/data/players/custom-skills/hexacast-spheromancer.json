@@ -12385,8 +12385,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },
@@ -13579,8 +13579,8 @@
                 "type": "SET_PLAYER_ACTION_BLOCK",
                 "blockData": {
                   "dash": 0,
-                  "action": 0.3,
-                  "move": 0.3,
+                  "action": 0.25,
+                  "move": 0.25,
                   "reaim": 0.4
                 }
               },

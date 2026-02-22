@@ -1,3 +1,8 @@
+## 3.3.1 (02/22/2026)
+### Fixes
+- Fixed Shadowflame Sorcery standard melee attacks SET_PLAYER_ACTION_BLOCK inconsistencies among custom skill melee variants
+- Fixed Github release issue
+
 ## 3.3.0 (02/22/2026)
 ### New Content
 - Added inaccessible SHOW_SIDE_MSG event in art-testing map file

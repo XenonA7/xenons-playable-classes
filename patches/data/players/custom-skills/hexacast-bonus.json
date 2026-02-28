@@ -12413,7 +12413,7 @@
         },
         {
           "condition": "entity.ownerAttrib.ancientPowerShoot",
-          "maxTime": 1.3,
+          "maxTime": 0.8,
           "type": "WAIT_UNTIL"
         },
         {
@@ -12769,7 +12769,7 @@
         },
         {
           "condition": "entity.ownerAttrib.ancientPowerShoot",
-          "maxTime": 1.3,
+          "maxTime": 0.8,
           "type": "WAIT_UNTIL"
         },
         {
@@ -17559,7 +17559,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": -1,
+              "dash": 0.15,
               "action": -1,
               "move": -1,
               "reaim": -1
@@ -17730,7 +17730,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.25,
+              "dash": 0.15,
               "action": -1,
               "move": -1,
               "reaim": -1

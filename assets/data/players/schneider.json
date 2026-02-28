@@ -35338,8 +35338,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "levelUpPre",
-            "followUp": "battleDamage"
+            "anim": "spinRepeat"
           },
           {
             "duration": 0.5,
@@ -35364,6 +35363,12 @@
           {
             "time": 0.50,
             "type": "WAIT"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "battleDamage"
           },
           {
             "duration": -1,
@@ -36548,7 +36553,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "floatSword"
+            "anim": "battleJump"
           },
           {
             "value": 64,

@@ -1,3 +1,16 @@
+## 3.3.2 (02/27/2026)
+### Changes
+- Hexacast art Furious Dissonance renamed to Aberrant Dissonance
+- Minor tweaks to Hexacast levelUpStand sprites
+- Ancient Power is now dash-cancelable after 0.15 seconds (rocks will fall back down)
+- Ancient Power ACTION_BLOCK dash delay during final shoot reduced from 0.25 to 0.15 seconds
+- AncientRockSmall/AncientRockMed trigger wait time reduced from 1.3 to 0.8 seconds
+- Removed the Triblader2 placeholder animation from Schneider/Luke Burning Sacrifice, Vermillion Firestorm
+- Removed Schneider/Luke animation sheets extra1, extra2, extra3
+- Deleted schneiderExtra.png, lukeExtra.png
+### Fixes
+- "Trigger Happy" arena triblader duel is now properly set to level 75 rather than scaling to the player's level
+
 ## 3.3.1 (02/22/2026)
 ### Fixes
 - Fixed Shadowflame Sorcery standard melee attacks SET_PLAYER_ACTION_BLOCK inconsistencies among custom skill melee variants

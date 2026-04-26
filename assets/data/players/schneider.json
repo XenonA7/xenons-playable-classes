@@ -5259,6 +5259,7 @@
         },
         {
           "type": "WAIT_UNTIL",
+          "maxTime": 1.5,
           "condition": "entity.srcAttrib.cloneActivate"
         },
         {
@@ -28730,8 +28731,21 @@
             }
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "dir": {
@@ -29303,8 +29317,21 @@
             }
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "dir": {
@@ -37236,7 +37263,7 @@
             "type": "SET_COLL_TYPE"
           },
           {
-            "value": "MASSIVE",
+            "value": "HEAVY",
             "type": "SET_HIT_STABLE"
           },
           {
@@ -37764,8 +37791,21 @@
             "type": "REMOVE_PROXIES"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "dir": {
@@ -39884,8 +39924,21 @@
             }
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "value": 550,
@@ -40274,8 +40327,21 @@
             "type": "SET_COLL_TYPE"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "wait": false,
@@ -41085,6 +41151,17 @@
           {
             "value": 3,
             "type": "SET_ACCEL_SPEED"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "!combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "time": 0.15,
@@ -55675,10 +55752,6 @@
             "type": "SET_INVINCIBLE"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
-          },
-          {
             "posType": "TARGET",
             "align": "CENTER",
             "type": "SET_HIT_PROXY",
@@ -56228,7 +56301,7 @@
             "sound": "media/sound/battle/enemies/charge-1s.ogg"
           },
           {
-            "value": "MASSIVE",
+            "value": "HEAVY",
             "type": "SET_HIT_STABLE"
           },
           {
@@ -56383,6 +56456,23 @@
           {
             "value": 0.4,
             "type": "SET_INVINCIBLE"
+          },
+          {
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "wait": false,

@@ -21543,8 +21543,21 @@
             }
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "wait": false,

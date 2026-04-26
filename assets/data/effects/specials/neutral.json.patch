@@ -756,6 +756,10 @@
         "width": 22,
         "height": 22
       },
+      "gfxOffset": {
+        "x": 0,
+        "y": 8
+      },
       "shapeType": "Z_FLAT",
       "guiSprites": false,
       "renderMode": "source-over",
@@ -778,6 +782,10 @@
         "width": 32,
         "height": 32
       },
+      "gfxOffset": {
+        "x": 0,
+        "y": 16
+      },
       "shapeType": "Z_FLAT",
       "guiSprites": false,
       "renderMode": "source-over",
@@ -799,6 +807,10 @@
         "offY": 304,
         "width": 48,
         "height": 48
+      },
+      "gfxOffset": {
+        "x": 0,
+        "y": 32
       },
       "shapeType": "Z_FLAT",
       "guiSprites": false,

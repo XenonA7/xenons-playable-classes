@@ -3759,6 +3759,7 @@
         },
         {
           "type": "WAIT_UNTIL",
+          "maxTime": 1.5,
           "condition": "entity.srcAttrib.cloneActivate"
         },
         {
@@ -21489,7 +21490,7 @@
         "type": "SET_COLL_TYPE"
       },
       {
-        "value": "MASSIVE",
+        "value": "HEAVY",
         "type": "SET_HIT_STABLE"
       },
       {
@@ -23111,6 +23112,17 @@
       {
         "value": 3,
         "type": "SET_ACCEL_SPEED"
+      },
+      {
+        "withElse": true,
+        "type": "IF",
+        "condition": "!combat.cnt.arid/element-turret < 1",
+        "thenStep": [
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          }
+        ]
       },
       {
         "time": 0.15,
@@ -30796,7 +30808,7 @@
         "sound": "media/sound/battle/enemies/charge-1s.ogg"
       },
       {
-        "value": "MASSIVE",
+        "value": "HEAVY",
         "type": "SET_HIT_STABLE"
       },
       {
@@ -30922,6 +30934,23 @@
       {
         "value": 0.4,
         "type": "SET_INVINCIBLE"
+      },
+      {
+        "withElse": true,
+        "type": "IF",
+        "condition": "combat.cnt.arid/element-turret < 1",
+        "thenStep": [
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+          }
+        ],
+        "elseStep": [
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          }
+        ]
       },
       {
         "wait": false,

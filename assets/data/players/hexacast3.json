@@ -3462,28 +3462,61 @@
           "type": "WAIT_RANDOM"
         },
         {
-          "align": "BOTTOM",
-          "centralAngle": 0.08,
-          "startAngle": 0.25,
-          "angleVary": 0,
-          "startDist": 8,
-          "startDistCollide": "CLOSER",
-          "random": true,
-          "duration": 0.1,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": true,
-          "count": 1,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "fireballSmall",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
+          "withElse": true,
+          "type": "IF",
+          "condition": "tmp.xpcDisableHoming",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0.08,
+              "startAngle": 0.25,
+              "angleVary": 0,
+              "startDist": 8,
+              "startDistCollide": "CLOSER",
+              "random": true,
+              "duration": 0.1,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": true,
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "fireballSmallMultibakery",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ],
+          "elseStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0.08,
+              "startAngle": 0.25,
+              "angleVary": 0,
+              "startDist": 8,
+              "startDistCollide": "CLOSER",
+              "random": true,
+              "duration": 0.1,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": true,
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "fireballSmall",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
         },
         {
           "time": 0.6,
@@ -3628,28 +3661,61 @@
           "type": "WAIT_RANDOM"
         },
         {
-          "align": "BOTTOM",
-          "centralAngle": 0.08,
-          "startAngle": 0.25,
-          "angleVary": 0,
-          "startDist": 8,
-          "startDistCollide": "CLOSER",
-          "random": true,
-          "duration": 0.1,
-          "clockwise": false,
-          "flipLeftFace": 0,
-          "circularArea": false,
-          "uniformDir": 0,
-          "delay": 0,
-          "repeat": true,
-          "count": 1,
-          "type": "SHOOT_PROXY_RANGE",
-          "proxy": "ss-fireballSmall",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
+          "withElse": true,
+          "type": "IF",
+          "condition": "tmp.xpcDisableHoming",
+          "thenStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0.08,
+              "startAngle": 0.25,
+              "angleVary": 0,
+              "startDist": 8,
+              "startDistCollide": "CLOSER",
+              "random": true,
+              "duration": 0.1,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": true,
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "ss-fireballSmallMultibakery",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ],
+          "elseStep": [
+            {
+              "align": "BOTTOM",
+              "centralAngle": 0.08,
+              "startAngle": 0.25,
+              "angleVary": 0,
+              "startDist": 8,
+              "startDistCollide": "CLOSER",
+              "random": true,
+              "duration": 0.1,
+              "clockwise": false,
+              "flipLeftFace": 0,
+              "circularArea": false,
+              "uniformDir": 0,
+              "delay": 0,
+              "repeat": true,
+              "count": 1,
+              "type": "SHOOT_PROXY_RANGE",
+              "proxy": "ss-fireballSmall",
+              "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
         },
         {
           "time": 0.6,
@@ -3775,6 +3841,98 @@
         {
           "type": "FOLLOW_TARGET",
           "steerDegree": 0.55
+        }
+      ],
+      "trail": false,
+      "multiHit": false,
+      "type": "BALL"
+    },
+    "fireballSmallMultibakery": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/heat.png",
+          "offX": 368,
+          "offY": 0,
+          "width": 16,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "effects": "ball-heat",
+      "light": "M",
+      "noLightGlow": false,
+      "speed": 300,
+      "maxBounce": 0,
+      "timer": 1.5,
+      "attack": {
+        "type": "LIGHT",
+        "element": "HEAT",
+        "damageFactor": 0.17,
+        "reverse": false,
+        "status": 0.75,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "FOLLOW_TARGET",
+          "steerDegree": 0.30
+        }
+      ],
+      "trail": false,
+      "multiHit": false,
+      "type": "BALL"
+    },
+    "ss-fireballSmallMultibakery": {
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/hexacast/shadowflame.png",
+          "offX": 0,
+          "offY": 528,
+          "width": 16,
+          "height": 32
+        },
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "effects": "specials.shadowflame-alts",
+      "light": "M",
+      "noLightGlow": true,
+      "speed": 300,
+      "maxBounce": 0,
+      "timer": 1.5,
+      "attack": {
+        "type": "LIGHT",
+        "element": "HEAT",
+        "damageFactor": 0.21,
+        "reverse": false,
+        "status": 0.75,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": [
+        {
+          "type": "FOLLOW_TARGET",
+          "steerDegree": 0.30
         }
       ],
       "trail": false,
@@ -4876,11 +5034,11 @@
           "attack": {
             "type": "LIGHT",
             "element": "COLD",
-            "damageFactor": 0.08,
+            "damageFactor": 0.10,
             "reverse": false,
             "status": 0,
             "guardable": "",
-            "skillBonus": "",
+            "skillBonus": "RANGED_DMG",
             "limiter": "",
             "hints": [
               "NO_PUZZLE"
@@ -5076,7 +5234,7 @@
       "attack": {
         "type": "MEDIUM",
         "element": "COLD",
-        "damageFactor": 0.4,
+        "damageFactor": 0.6,
         "reverse": false,
         "spFactor": 0,
         "status": 0,
@@ -15046,7 +15204,7 @@
             "type": "MEDIUM",
             "element": "COLD",
             "fly": "LIGHT",
-            "damageFactor": 0.12,
+            "damageFactor": 0.225,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -15347,7 +15505,7 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "COLD",
-                "damageFactor": 1,
+                "damageFactor": 1.5,
                 "reverse": false,
                 "guardable": "",
                 "skillBonus": "RANGED_DMG",
@@ -27944,7 +28102,7 @@
           ]
         },
         {
-          "volume": 0.55,
+          "volume": 0.3,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -28090,7 +28248,7 @@
           ]
         },
         {
-          "volume": 0.55,
+          "volume": 0.3,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -30920,7 +31078,7 @@
           ]
         },
         {
-          "volume": 0.3,
+          "volume": 0.2,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -30929,7 +31087,7 @@
           "sound": "media/sound/battle/hexacast/mc-exp.ogg"
         },
         {
-          "volume": 0.55,
+          "volume": 0.40,
           "global": false,
           "loop": false,
           "speed": 0.95,
@@ -31071,7 +31229,7 @@
           ]
         },
         {
-          "volume": 0.3,
+          "volume": 0.2,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -31080,7 +31238,7 @@
           "sound": "media/sound/battle/hexacast/mc-exp.ogg"
         },
         {
-          "volume": 0.55,
+          "volume": 0.40,
           "global": false,
           "loop": false,
           "speed": 0.95,
@@ -31772,7 +31930,7 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "HEAT",
-                "damageFactor": 3.75,
+                "damageFactor": 4.25,
                 "reverse": true,
                 "status": 0,
                 "hints": [
@@ -31810,7 +31968,7 @@
               "attack": {
                 "type": "HEAVY",
                 "element": "HEAT",
-                "damageFactor": 3.75,
+                "damageFactor": 4.25,
                 "reverse": true,
                 "status": 0,
                 "hints": [
@@ -32015,7 +32173,7 @@
                 "type": "MEDIUM",
                 "element": "HEAT",
                 "fly": "LIGHT",
-                "damageFactor": 4.5,
+                "damageFactor": 5.25,
                 "reverse": true,
                 "guardable": "",
                 "skillBonus": "RANGED_DMG",
@@ -32053,7 +32211,7 @@
                 "type": "MEDIUM",
                 "element": "HEAT",
                 "fly": "LIGHT",
-                "damageFactor": 4.5,
+                "damageFactor": 5.25,
                 "reverse": true,
                 "guardable": "",
                 "skillBonus": "MELEE_DMG",
@@ -35168,6 +35326,26 @@
       "action": [
         {
           "duration": 0,
+          "align": "BASE",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.neutral",
+            "name": "rockCraterBigger"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": 0,
           "align": "BOTTOM",
           "rotateFace": 0,
           "flipLeftFace": false,
@@ -35770,7 +35948,7 @@
           }
         },
         {
-          "time": 3.2,
+          "time": 2.7,
           "type": "WAIT"
         },
         {
@@ -37584,7 +37762,7 @@
           "attack": {
             "type": "MASSIVE",
             "element": "COLD",
-            "damageFactor": 4.75,
+            "damageFactor": 8.5,
             "fly": "MEDIUM",
             "reverse": true,
             "guardable": "",
@@ -37672,11 +37850,16 @@
           "type": "WAIT"
         },
         {
+          "name": "crystalCarnageHailActive",
+          "type": "SET_ATTRIB_BOOL",
+          "value": true
+        },
+        {
           "speed": "SLOW",
           "type": "REMOVE_PLAYER_CAMERA_TARGET"
         },
         {
-          "time": 1.8,
+          "time": 1.2,
           "type": "WAIT"
         },
         {
@@ -54470,6 +54653,7 @@
         "air": "dissonanceCardAirDeath"
       },
       "speed": 1000,
+      "timeConnect": true,
       "maxBounce": 0,
       "timer": 1.2,
       "trail": true,
@@ -54530,9 +54714,6 @@
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
-        {
-          "type": "DETACH_TIME_PARENT"
-        },
         {
           "withElse": false,
           "type": "IF",
@@ -54613,7 +54794,7 @@
             "visualType": "HEAVY",
             "fly": "LIGHT",
             "element": "WAVE",
-            "damageFactor": 0.90,
+            "damageFactor": 1.10,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -69524,6 +69705,26 @@
             ]
           },
           {
+            "duration": 0,
+            "align": "BASE",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "calamityJumpDust"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
             "volume": 1.5,
             "global": false,
             "loop": false,
@@ -71312,8 +71513,21 @@
             "anim": "dashLong"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "value": "IGNORE",
@@ -71641,10 +71855,6 @@
             "type": "SET_HIT_STABLE"
           },
           {
-            "group": "cosmicTrailFX",
-            "type": "CLEAR_EFFECTS"
-          },
-          {
             "type": "CLEAR_STUN_LOCKED"
           },
           {
@@ -71659,8 +71869,21 @@
             "anim": "dashLongRev"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "value": "IGNORE",
@@ -75187,6 +75410,26 @@
                 "condition": "entity.attrib.fajroFinalExplode",
                 "thenStep": [
                   {
+                    "duration": 0,
+                    "align": "BASE",
+                    "rotateFace": 0,
+                    "flipLeftFace": false,
+                    "wait": false,
+                    "waitSkip": 0,
+                    "actionDetached": true,
+                    "fixPos": false,
+                    "type": "SHOW_EFFECT",
+                    "effect": {
+                      "sheet": "specials.neutral",
+                      "name": "rockCraterBig"
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  },
+                  {
                     "withElse": true,
                     "type": "IF",
                     "condition": "entity.attrib.shadowflameActive",
@@ -77925,8 +78168,21 @@
             "type": "WAIT"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              }
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "followUp": "sweepRevEnd",
@@ -78052,6 +78308,10 @@
             "time": 0.05,
             "stopBeforeEdge": true,
             "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
           },
           {
             "time": 0.2,
@@ -78521,6 +78781,17 @@
               {
                 "value": 375,
                 "type": "SET_SPEED"
+              },
+              {
+                "withElse": true,
+                "type": "IF",
+                "condition": "!combat.cnt.arid/element-turret < 1",
+                "thenStep": [
+                  {
+                    "value": "HEAVY",
+                    "type": "SET_HIT_STABLE"
+                  }
+                ]
               },
               {
                 "time": 0.35,
@@ -83656,28 +83927,41 @@
             "type": "SET_WEIGHT"
           },
           {
-            "value": "MASSIVE",
-            "type": "SET_HIT_STABLE"
-          },
-          {
             "value": 0.15,
             "type": "SET_INVINCIBLE"
           },
           {
-            "name": "shockSurgeShield",
-            "actionDetached": false,
-            "shield": {
-              "type": "DIRECTIONAL",
-              "settings": {
-                "neutralize": true,
-                "hitResist": "MASSIVE",
-                "strength": "BLOCK_ALL",
-                "duration": 0.15,
-                "range": 1,
-                "back": false
+            "withElse": true,
+            "type": "IF",
+            "condition": "combat.cnt.arid/element-turret < 1",
+            "thenStep": [
+              {
+                "value": "MASSIVE",
+                "type": "SET_HIT_STABLE"
+              },
+              {
+                "name": "shockSurgeShield",
+                "actionDetached": false,
+                "shield": {
+                  "type": "DIRECTIONAL",
+                  "settings": {
+                    "neutralize": true,
+                    "hitResist": "MASSIVE",
+                    "strength": "BLOCK_ALL",
+                    "duration": 0.15,
+                    "range": 1,
+                    "back": false
+                  }
+                },
+                "type": "ADD_SHIELD"
               }
-            },
-            "type": "ADD_SHIELD"
+            ],
+            "elseStep": [
+              {
+                "value": "HEAVY",
+                "type": "SET_HIT_STABLE"
+              }
+            ]
           },
           {
             "duration": 0.15,
@@ -85044,7 +85328,7 @@
             }
           },
           {
-            "duration": 0.5,
+            "duration": 0.4,
             "align": "CENTER",
             "rotateFace": 0,
             "flipLeftFace": false,
@@ -85064,11 +85348,7 @@
             }
           },
           {
-            "time": 0.2,
-            "type": "WAIT"
-          },
-          {
-            "time": 0.3,
+            "time": 0.4,
             "type": "WAIT"
           },
           {
@@ -85166,11 +85446,15 @@
             }
           },
           {
+            "time": 0.6,
+            "type": "WAIT"
+          },
+          {
             "value": 115,
             "type": "SET_SPEED"
           },
           {
-            "time": 1.1,
+            "time": 0.5,
             "rotateSpeed": 10,
             "stopBeforeEdge": true,
             "allowStop": true,
@@ -85219,7 +85503,7 @@
             }
           },
           {
-            "time": 3.0,
+            "time": 2.5,
             "rotateSpeed": 10,
             "stopBeforeEdge": true,
             "allowStop": true,
@@ -86491,6 +86775,13 @@
             }
           },
           {
+            "factor": 0.6,
+            "time": 0.2,
+            "keepEntityStatic": false,
+            "inversAccelerate": true,
+            "type": "ADD_SLOW_MOTION"
+          },
+          {
             "name": "DISSONANCE_SHOOT",
             "type": "LABEL"
           },
@@ -86844,6 +87135,11 @@
             "changeType": "add",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
+          },
+          {
+            "time": 0.4,
+            "removeEntityStatic": false,
+            "type": "CLEAR_SLOW_MOTION"
           },
           {
             "time": 0.6,

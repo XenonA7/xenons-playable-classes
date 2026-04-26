@@ -1,3 +1,55 @@
+## 3.3.3 (04/25/2026)
+### New Content
+- Patches a return teleporter to XPC's hideout at the entrance of Autumn's Terminus if Autumn's Genesis is installed
+- Added multibakery slower, weaker version of Hexacast fireballSmall proxy with steerDegree of 0.30 instead of 0.55, used during multiplayer pvp (tmp.xpcDisableHoming)
+- Added a sign option to spawn an element turret in the XPC art testing room
+### Changes
+- XPC mod teleporter to Autumn's Terminus now links to XPC TeleportField instead of the map entrance
+- Added the timeConnect property to proxy dissonanceCard
+- Removed DETATCH_TIME_PARENT from proxy dissonanceCardExplosion
+- Added rock crater effects to Faj'ro Flush and Calamity Beacon
+- Brittle Barrier contact damage now categorized as RANGED_DMG (previously was uncategorized)
+- Reduced crystalCarnageCard suction duration from 1.8 to 1.2
+- Effect crystalCarnageSuction loop timing adjusted
+- Reduced Zir'vitar Strike delay after initial dash by 0.1 second
+- Added ground dust effects to Calamity Beacon's jump
+- Reduced audio volume of mc-exp/mc-hit sound effects in Meteor Flare and Meteor Storm
+- Added a maxTime failsafe to Spectral Legion waveDummy3 activation in case the player dash is interrupted
+- Improved effect stormChaserCardActivate
+- Increased darkness fadeIn duration for effect stormChaserCenterImpact
+- Edited rock crater sprites to be slightly more transparent
+### Fixes
+- Fixed missing crystalCarnageHailActive trigger, hailSeeker3 proxies should activate sooner in Crystal Carnage
+- Fixed all rock crater particles being able to render in front of entities by adding the gfxOffset property
+- Fixed broken SCREEN_FLASH in effect stormChaserCardActivate
+- Fixed Triblader Soul Shatter having extra SET_HIT_STABLE: MASSIVE, now it just uses the HEAVY step at the start
+- Shock Surge no longer grants the neutralization property when combat.cnt.arid/element-turret >= 1
+- Combat arts able to bypass element turrets downgraded from MASSIVE hit stability to HEAVY when combat.cnt.arid/element-turret >= 1
+  * Blizzard Rush
+  * Ashen Frenzy
+  * Shock Surge
+  * Celestial Cohort
+  * Azure Charge (includes custom skill variants)
+  * Gleaming Surge (includes custom skill variants)
+  * Frost Rupture (includes custom skill variants)
+  * Frigid Hurricane (includes custom skill and enemy variants)
+  * Avalanche Assault (includes custom skill variants)
+  * Trailblazer (includes custom skill variants)
+  * Spectral Legion (includes custom skill and enemy variants)
+### Balance
+- Aberrant Dissonance now applies a 60% speed slow motion effect (player unaffected) during the first three volleys
+- Proxy dissonanceCardExplosion damageFactor increased from 0.9 to 1.10
+- Brittle Barrier expiration projectiles (hailBullet1Weak) damageFactor increased from 0.4 to 0.6
+- Brittle Barrier proxy brittleBarrierHail contact damageFactor increased from 0.08 to 0.10
+- Frozen Fortress proxy fortressHail contact damageFactor increased from 0.12 to 0.225
+- Frozen Fortress ending hail explosion damageFactor increased from 1.0 to 1.5
+- Crystal Carnage explosion when hitting a wall or timing out damageFactor increased from 4.75 to 8.5
+- Meteor Storm proxy meteorMed damageFactor increased from 3.75 to 4.25, shadowflame version increased from 4.5 to 5.25
+- Triblader Fire Saw hit stability downgraded from MASSIVE to HEAVY
+- Triblader Spectral Legion hit stability downgraded from MASSIVE to HEAVY during initial chargeup
+- Zir'vitar Strike: reduced grace period where player could move before the target appears from 1.1 seconds to 0.5 seconds (must wait for 0.6 first)
+- Zir'vitar Strike: targeting time reduced by 0.5 seconds
+
 ## 3.3.2 (02/27/2026)
 ### Changes
 - Hexacast art Furious Dissonance renamed to Aberrant Dissonance

@@ -268,7 +268,7 @@
             "name": "ag-dungeon",
             "dir": "SOUTH",
             "map": "autumn-dng.entrance",
-            "marker": "start",
+            "marker": "xpc-teleporter",
             "teleportLabel": {
               "en_US": "To: \\c[3]Autumn's Genesis\\c[0] - Autumn's Terminus",
               "de_DE": "",
@@ -315,7 +315,7 @@
             "name": "ag-dungeon",
             "dir": "SOUTH",
             "map": "autumn-dng.entrance",
-            "marker": "start",
+            "marker": "xpc-teleporter",
             "teleportLabel": {
               "en_US": "To: \\c[3]Autumn's Genesis\\c[0] - Autumn's Terminus",
               "de_DE": "",

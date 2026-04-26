@@ -5971,7 +5971,7 @@
       },
       {
         "numParticles": 3,
-        "duration": 0.5,
+        "duration": 0.4,
         "centralAngle": 1,
         "random": true,
         "startDist": 24,
@@ -6007,7 +6007,7 @@
       },
       {
         "numParticles": 4,
-        "duration": 0.5,
+        "duration": 0.4,
         "clockwise": false,
         "centralAngle": 1,
         "startDist": 24,
@@ -6048,7 +6048,7 @@
       },
       {
         "numParticles": 4,
-        "duration": 0.5,
+        "duration": 0.4,
         "clockwise": false,
         "centralAngle": 1,
         "startDist": 24,
@@ -6120,15 +6120,15 @@
           }
         },
         "cancelable": true,
-        "particleDuration": 0.7,
+        "particleDuration": 0.6,
         "anim": "COLD_BIG_HEXAGON_GUI",
         "type": "PLAY_ANIM"
       },
       {
         "radius": 64,
         "useTargetAngle": false,
-        "numParticles": 14,
-        "duration": 0.5,
+        "numParticles": 12,
+        "duration": 0.4,
         "alongY": true,
         "offset": {
           "x": 0,
@@ -6153,7 +6153,7 @@
         "type": "PLAY_ANIM_RANGE"
       },
       {
-        "time": 0.5,
+        "time": 0.4,
         "type": "WAIT"
       },
       {

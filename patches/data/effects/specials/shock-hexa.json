@@ -13087,7 +13087,7 @@
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.45,
+        "volume": 0.4,
         "global": false,
         "loop": false,
         "speed": 1.2,
@@ -13130,7 +13130,7 @@
           }
         },
         "moveWithTarget": 1,
-        "particleDuration": 0.475,
+        "particleDuration": 0.38,
         "angleVary": 1,
         "cancelable": false,
         "anim": "SHOCK_BIG_HEXAGON_GUI",
@@ -13667,15 +13667,15 @@
         "volume": 0.8,
         "global": false,
         "loop": true,
-        "speed": 0.45,
+        "speed": 0.55,
         "sound": "media/sound/boss/turret/long-charge.ogg",
         "type": "PLAY_SOUND"
       },
       {
-        "volume": 0.6,
+        "volume": 0.5,
         "global": false,
         "loop": true,
-        "speed": 0.65,
+        "speed": 0.75,
         "sound": "media/sound/battle/enemies/charge-2s.ogg",
         "type": "PLAY_SOUND"
       },
@@ -13683,7 +13683,7 @@
         "volume": 0.85,
         "global": false,
         "loop": false,
-        "speed": 0.70,
+        "speed": 0.80,
         "sound": "media/sound/scenes/swoosh-rise-long.ogg",
         "type": "PLAY_SOUND"
       },
@@ -22744,17 +22744,17 @@
     "stormChaserCardActivate": [
       {
         "rumbleType": "RANDOM",
-        "power": "STRONGEST",
-        "speed": "FASTER",
-        "duration": 0.4,
+        "power": "MEGA",
+        "speed": "FASTEST",
+        "duration": 0.5,
         "fade": true,
         "type": "RUMBLE"
       },
       {
-        "color": "#120212",
-        "fadeIn": 0.1,
-        "fadeOut": 0.1,
-        "duration": 0,
+        "color": "#4b125e",
+        "fadeIn": 0,
+        "fadeOut": 0.8,
+        "duration": 0.1,
         "type": "SCREEN_FLASH"
       },
       {
@@ -22797,6 +22797,14 @@
         "loop": false,
         "speed": 0.3,
         "sound": "media/sound/puzzle/wave-short-4.ogg",
+        "type": "PLAY_SOUND"
+      },
+      {
+        "volume": 1.25,
+        "global": false,
+        "loop": false,
+        "speed": 1.0,
+        "sound": "media/sound/battle/heavy-thunder.ogg",
         "type": "PLAY_SOUND"
       },
       {
@@ -22860,8 +22868,8 @@
           },
           "start": {
             "value": {
-              "x": 3.0,
-              "y": 3.0
+              "x": 4.5,
+              "y": 4.5
             },
             "spline": "EASE_OUT"
           }
@@ -22878,7 +22886,7 @@
         "startDist": 12,
         "random": true,
         "particleRotate": true,
-        "moveDist": 72,
+        "moveDist": 96,
         "moveVariance": 48,
         "keySpline": "EASE_OUT",
         "moveRotate": 0,
@@ -22894,19 +22902,19 @@
         },
         "pScale": {
           "init": {
-            "x": 1,
-            "y": 1
+            "x": 2,
+            "y": 2
           },
           "end": {
             "value": {
               "x": 0,
-              "y": 1
+              "y": 2
             },
             "time": 0.1,
             "spline": ""
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0.2,
         "particleDuration": 0.65,
         "anim": "SHOCK_BALL_DOT2",
         "type": "OFFSET_PARTICLE_CIRCLE"
@@ -22943,7 +22951,7 @@
             "spline": "EASE_IN"
           }
         },
-        "moveWithTarget": 1,
+        "moveWithTarget": 0.2,
         "particleDuration": 0.6,
         "particleDurVariance": 0.25,
         "cancelable": true,
@@ -22998,11 +23006,59 @@
             "spline": "EASE_OUT"
           }
         },
-        "moveWithTarget": 0,
+        "moveWithTarget": 0.2,
         "particleDuration": 0.6,
         "angleVary": 0,
         "cancelable": false,
         "anim": "GOD_HEXAGON_SHOCK",
+        "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "numParticles": 5,
+        "duration": 0.1,
+        "centralAngle": 1,
+        "startDist": 2,
+        "random": true,
+        "particleRotate": false,
+        "moveRotate": 0,
+        "moveDist": 48,
+        "moveVariance": 24,
+        "keySpline": "EASE_OUT",
+        "inverse": false,
+        "collision": false,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 3
+        },
+        "pAlpha": {
+          "init": 0.9,
+          "end": {
+            "value": 0,
+            "spline": "",
+            "time": 0.05
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "end": {
+            "value": {
+              "x": 0,
+              "y": 0
+            },
+            "time": 0.15,
+            "spline": "LINEAR"
+          }
+        },
+        "pLight": "M",
+        "moveWithTarget": 0.2,
+        "particleDuration": 0.4,
+        "particleDurVariance": 0.1,
+        "cancelable": false,
+        "anim": "CIRCLE_SOURCE_SHOCK_GUI",
         "type": "OFFSET_PARTICLE_CIRCLE"
       },
       {
@@ -23145,6 +23201,46 @@
         "moveWithTarget": 0.2,
         "anim": "SHOCK_DOT2",
         "type": "OFFSET_PARTICLE_CIRCLE"
+      },
+      {
+        "time": 0.125,
+        "type": "WAIT"
+      },
+      {
+        "useTargetAngle": true,
+        "keepAngleSync": false,
+        "offset": {
+          "x": 0,
+          "y": 128,
+          "z": 128
+        },
+        "pAlpha": {
+          "init": 0.5,
+          "start": {
+            "value": 0,
+            "spline": ""
+          }
+        },
+        "pRotate": {
+          "init": 0.5
+        },
+        "pScale": {
+          "init": {
+            "x": 0,
+            "y": 0
+          },
+          "start": {
+            "value": {
+              "x": 4.5,
+              "y": 4.5
+            },
+            "spline": "EASE_OUT"
+          }
+        },
+        "particleDuration": 0.6,
+        "moveWithTarget": 1,
+        "anim": "SHOCK_BIG_HEXAGON_GUI",
+        "type": "PLAY_ANIM"
       }
     ],
     "stormChaserCardAura": [
@@ -23614,7 +23710,7 @@
         "type": "LIGHT"
       },
       {
-        "fadeIn": 0.2,
+        "fadeIn": 0.6,
         "fadeOut": 0.4,
         "duration": -1,
         "intensity": 0.6,

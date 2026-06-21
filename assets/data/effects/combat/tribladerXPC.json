@@ -6186,7 +6186,8 @@
         "type": "RUMBLE"
       },
       {
-        "volume": 0.75,
+        "volume": 1.0,
+        "variance": 0.075,
         "global": false,
         "loop": false,
         "type": "PLAY_SOUND",
@@ -25815,6 +25816,14 @@
         "loop": false,
         "type": "PLAY_SOUND",
         "sound": "media/sound/battle/ball-bounce-1.ogg"
+      },
+      {
+        "volume": 0.7,
+        "speed": 3.25,
+        "global": false,
+        "loop": false,
+        "type": "PLAY_SOUND",
+        "sound": "media/sound/battle/big-swipe-1.ogg"
       },
       {
         "numParticles": 5,

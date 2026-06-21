@@ -7355,7 +7355,7 @@
       },
       "type": "GENERIC"
     },
-    "bounceOrb": {
+    "arcingFae": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "animation": {
@@ -7457,8 +7457,8 @@
               "fixPos": true,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "enemies.elephant",
-                "name": "fingerShootWLand"
+                "sheet": "specials.wave",
+                "name": "arcingFaeBounce"
               },
               "offset": {
                 "x": 0,
@@ -7533,7 +7533,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "frobbitLandLight"
+            "name": "arcingFaeFinalExplode"
           },
           "offset": {
             "x": 0,
@@ -30431,7 +30431,7 @@
         "anim": "throwSpecial"
       },
       {
-        "proxy": "bounceOrb",
+        "proxy": "arcingFae",
         "type": "SHOOT_PROXY_PLAYER"
       },
       {

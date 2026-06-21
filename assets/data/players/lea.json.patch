@@ -5,6 +5,10 @@
     "thenSteps": [
       {
         "type": "INCLUDE",
+        "src": "mod:patches/data/players/custom-skills/lea-bonus.json"
+      },
+      {
+        "type": "INCLUDE",
         "src": "mod:patches/data/players/custom-skills/lea-arcanelab.json"
       },
       {

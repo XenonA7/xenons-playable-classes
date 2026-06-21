@@ -17858,8 +17858,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "waveBoom"
+            "sheet": "specials.wave",
+            "name": "waveMortarExplode"
           },
           "offset": {
             "x": 0,
@@ -18255,7 +18255,7 @@
       "behaviors": [],
       "config": {}
     },
-    "tri-bounceOrb": {
+    "tri-arcingFae": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "animation": {
@@ -18357,8 +18357,8 @@
               "fixPos": true,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "enemies.elephant",
-                "name": "fingerShootWLand"
+                "sheet": "specials.wave",
+                "name": "arcingFaeBounce"
               },
               "offset": {
                 "x": 0,
@@ -18433,7 +18433,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "frobbitLandLight"
+            "name": "arcingFaeFinalExplode"
           },
           "offset": {
             "x": 0,
@@ -29525,8 +29525,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29590,8 +29596,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29655,8 +29667,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29720,8 +29738,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29785,8 +29809,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29894,8 +29924,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -29959,8 +29995,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30024,8 +30066,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30089,8 +30137,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30154,8 +30208,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30264,8 +30324,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30328,8 +30394,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30392,8 +30464,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30456,8 +30534,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30520,8 +30604,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30663,8 +30753,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30728,8 +30824,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30793,8 +30895,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30858,8 +30966,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -30923,8 +31037,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31032,8 +31152,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31097,8 +31223,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31162,8 +31294,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31227,8 +31365,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31292,8 +31436,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31402,8 +31552,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31466,8 +31622,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31530,8 +31692,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31594,8 +31762,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31658,8 +31832,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -31824,8 +32004,14 @@
             "elseStep": [
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -31854,8 +32040,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -31884,8 +32076,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -31914,8 +32112,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -31944,8 +32148,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32049,8 +32259,14 @@
             "elseStep": [
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 0",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "NEUTRAL",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32079,8 +32295,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 1",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "HEAT",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32109,8 +32331,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 2",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "COLD",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32139,8 +32367,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 3",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "SHOCK",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32169,8 +32403,14 @@
               },
               {
                 "withElse": false,
-                "type": "IF",
-                "condition": "player.element == 4",
+                "type": "COMBAT_IF",
+                "conditions": [
+                  {
+                    "element": "WAVE",
+                    "negated": false,
+                    "type": "ELEMENT_MODE"
+                  }
+                ],
                 "thenStep": [
                   {
                     "align": "BOTTOM",
@@ -32245,8 +32485,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32275,8 +32521,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32305,8 +32557,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32335,8 +32593,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32365,8 +32629,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32439,8 +32709,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 0",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "NEUTRAL",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32469,8 +32745,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 1",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "HEAT",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32499,8 +32781,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 2",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "COLD",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32529,8 +32817,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 3",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "SHOCK",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -32559,8 +32853,14 @@
           },
           {
             "withElse": false,
-            "type": "IF",
-            "condition": "player.element == 4",
+            "type": "COMBAT_IF",
+            "conditions": [
+              {
+                "element": "WAVE",
+                "negated": false,
+                "type": "ELEMENT_MODE"
+              }
+            ],
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -50941,7 +51241,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.5,
+              "dash": 0.4,
               "action": 0.8,
               "move": 0.92,
               "reaim": 1.02
@@ -58325,7 +58625,7 @@
             "anim": "tri-throwSpecial"
           },
           {
-            "proxy": "tri-bounceOrb",
+            "proxy": "tri-arcingFae",
             "type": "SHOOT_PROXY_PLAYER"
           },
           {

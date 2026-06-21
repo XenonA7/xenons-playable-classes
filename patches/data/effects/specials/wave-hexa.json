@@ -22466,7 +22466,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceCardExplode": [
+    "aberrantCardExplode": [
       {
         "size": "XL",
         "fadeIn": 0,
@@ -23063,7 +23063,7 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],
-    "dissonanceDummyAppear": [
+    "aberrantDummyAppear": [
       {
         "size": "XL",
         "fadeIn": 0.2,
@@ -23253,7 +23253,7 @@
         "type": "WIPE_PARTICLES"
       }
     ],
-    "dissonanceFly": [
+    "aberrantFly": [
       {
         "duration": 0.4,
         "numParticles": 4,
@@ -23372,7 +23372,7 @@
         "type": "SHOOT_HOMING_PARTICLE"
       }
     ],
-    "dissonanceFinalCardFX": [
+    "aberrantFinalCardFX": [
       {
         "size": "L",
         "fadeIn": 0.3,
@@ -23798,7 +23798,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceDummyDisappear": [
+    "aberrantDummyDisappear": [
       {
         "size": "XL",
         "fadeIn": 0.2,
@@ -23980,7 +23980,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceFinalCharge": [
+    "aberrantFinalCharge": [
       {
         "size": "XL",
         "fadeIn": 0.1,
@@ -24141,7 +24141,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceFinalShoot": [
+    "aberrantFinalShoot": [
       {
         "size": "XXL",
         "fadeIn": 0,
@@ -24382,7 +24382,7 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],
-    "dissonanceFinalCardCharge1": [
+    "aberrantFinalCardCharge1": [
       {
         "size": "XL",
         "fadeIn": 0.1,
@@ -24498,7 +24498,7 @@
         "type": "WAIT"
       }
     ],
-    "dissonanceFinalCardCharge2": [
+    "aberrantFinalCardCharge2": [
       {
         "type": "LOOP_START"
       },
@@ -24555,7 +24555,7 @@
         "type": "WAIT"
       }
     ],
-    "dissonanceFinalImpact": [
+    "aberrantFinalImpact": [
       {
         "size": "XXL",
         "fadeIn": 0,
@@ -24941,7 +24941,7 @@
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
     ],
-    "dissonanceDetonationBoom": [
+    "aberrantDetonationBoom": [
       {
         "volume": 0.8,
         "global": false,

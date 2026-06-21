@@ -748,7 +748,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceCardTrail": [
+    "aberrantCardTrail": [
       {
         "color": "#ffffff",
         "maxAlpha": 1,
@@ -876,7 +876,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceCardAirDeath": [
+    "aberrantCardAirDeath": [
       {
         "size": "L",
         "fadeIn": 0,
@@ -958,7 +958,7 @@
         "type": "PLAY_ANIM"
       }
     ],
-    "dissonanceCardWallDeath": [
+    "aberrantCardWallDeath": [
       {
         "size": "L",
         "fadeIn": 0,
@@ -1119,7 +1119,7 @@
         "type": "PLAY_ANIM"
       }
     ],
-    "dissonanceCardTrail2": [
+    "aberrantCardTrail2": [
       {
         "color": "#ffffff",
         "maxAlpha": 0.5,
@@ -1303,7 +1303,7 @@
         "type": "LOOP_END"
       }
     ],
-    "dissonanceCard2WallDeath": [
+    "aberrantCard2WallDeath": [
       {
         "size": "L",
         "fadeIn": 0,
@@ -1590,7 +1590,7 @@
         "type": "WAIT"
       }
     ],
-    "dissonanceCard2AirDeath": [
+    "aberrantCard2AirDeath": [
       {
         "size": "L",
         "fadeIn": 0,

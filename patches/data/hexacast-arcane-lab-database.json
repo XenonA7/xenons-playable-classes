@@ -36,6 +36,43 @@
       "offY": 0
     }
   },
+  "csHexacastBouncyBaseRanged": {
+    "list": [
+      {
+        "replaceTo": "CS_BOUNCY_THROW_CHARGED",
+        "actionCheckKey": "THROW"
+      },
+      {
+        "replaceTo": "CS_BOUNCY_THROW_CHARGED",
+        "actionCheckKey": "THROW_CHARGED"
+      },
+      {
+        "replaceTo": "CS_BOUNCY_THROW_CHARGED_REV",
+        "actionCheckKey": "THROW_CHARGED_REV"
+      },
+      {
+        "replaceTo": "CS_BOUNCY_THROW_NORMAL",
+        "actionCheckKey": "THROW_NORMAL"
+      },
+      {
+        "replaceTo": "CS_BOUNCY_THROW_NORMAL_REV",
+        "actionCheckKey": "THROW_NORMAL_REV"
+      }
+    ],
+    "element": "BASE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "name": {
+      "en_US": "\\i[class-sphero] Spheromancer Ranged (Bouncy)"
+    },
+    "description": {
+      "en_US": "Silly bouncy balls."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/base-icons.png",
+      "offX": 72,
+      "offY": 24
+    }
+  },
   "csHexacastTribladerBaseRanged": {
     "list": [
       {

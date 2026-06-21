@@ -5204,32 +5204,134 @@
                   "condition": "combat.cnt.arid/element-turret < 1",
                   "thenStep": [
                     {
-                      "position": {
-                        "x": 168,
-                        "y": 296,
-                        "lvl": "0"
-                      },
-                      "targetPlayer": false,
-                      "type": "SPAWN_ENEMY",
-                      "enemyInfo": {
-                        "group": "",
-                        "party": "",
-                        "face": "WEST",
-                        "startEffect": {
-                          "sheet": "scene.designer",
-                          "name": "spawnShredder"
-                        },
-                        "targetOnSpawn": true,
-                        "type": "arid.element-turret",
-                        "level": {
-                          "varName": "player.level"
-                        },
-                        "attribs": {
-                        	"shoot": "LINE",
-                        	"element": "HEAT",
-                        	"permaShoot": true
+                      "type": "SELECT_RANDOM",
+                      "options": [
+                        {
+                          "0": " ",
+                          "count": 4,
+                          "weight": 1
                         }
-                      }
+                      ],
+                      "0_0": [
+                        {
+                          "position": {
+                            "x": 168,
+                            "y": 296,
+                            "lvl": "0"
+                          },
+                          "targetPlayer": false,
+                          "type": "SPAWN_ENEMY",
+                          "enemyInfo": {
+                            "group": "",
+                            "party": "",
+                            "face": "WEST",
+                            "startEffect": {
+                              "sheet": "scene.designer",
+                              "name": "spawnShredder"
+                            },
+                            "targetOnSpawn": true,
+                            "type": "arid.element-turret",
+                            "level": {
+                              "varName": "player.level"
+                            },
+                            "attribs": {
+                              "shoot": "LINE",
+                              "element": "HEAT",
+                              "permaShoot": true
+                            }
+                          }
+                        }
+                      ],
+                      "0_1": [
+                        {
+                          "position": {
+                            "x": 168,
+                            "y": 296,
+                            "lvl": "0"
+                          },
+                          "targetPlayer": false,
+                          "type": "SPAWN_ENEMY",
+                          "enemyInfo": {
+                            "group": "",
+                            "party": "",
+                            "face": "WEST",
+                            "startEffect": {
+                              "sheet": "scene.designer",
+                              "name": "spawnShredder"
+                            },
+                            "targetOnSpawn": true,
+                            "type": "arid.element-turret",
+                            "level": {
+                              "varName": "player.level"
+                            },
+                            "attribs": {
+                              "shoot": "LINE",
+                              "element": "COLD",
+                              "permaShoot": true
+                            }
+                          }
+                        }
+                      ],
+                      "0_2": [
+                        {
+                          "position": {
+                            "x": 168,
+                            "y": 296,
+                            "lvl": "0"
+                          },
+                          "targetPlayer": false,
+                          "type": "SPAWN_ENEMY",
+                          "enemyInfo": {
+                            "group": "",
+                            "party": "",
+                            "face": "WEST",
+                            "startEffect": {
+                              "sheet": "scene.designer",
+                              "name": "spawnShredder"
+                            },
+                            "targetOnSpawn": true,
+                            "type": "arid.element-turret",
+                            "level": {
+                              "varName": "player.level"
+                            },
+                            "attribs": {
+                              "shoot": "LINE",
+                              "element": "SHOCK",
+                              "permaShoot": true
+                            }
+                          }
+                        }
+                      ],
+                      "0_3": [
+                        {
+                          "position": {
+                            "x": 168,
+                            "y": 296,
+                            "lvl": "0"
+                          },
+                          "targetPlayer": false,
+                          "type": "SPAWN_ENEMY",
+                          "enemyInfo": {
+                            "group": "",
+                            "party": "",
+                            "face": "WEST",
+                            "startEffect": {
+                              "sheet": "scene.designer",
+                              "name": "spawnShredder"
+                            },
+                            "targetOnSpawn": true,
+                            "type": "arid.element-turret",
+                            "level": {
+                              "varName": "player.level"
+                            },
+                            "attribs": {
+                              "shoot": "LINE",
+                              "element": "WAVE",
+                              "permaShoot": true
+                            }
+                          }
+                        }
+                      ]
                     }
                   ],
                   "elseStep": [

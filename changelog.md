@@ -1,3 +1,24 @@
+## 3.3.4 (06/20/2026)
+### New Content
+- Added map \xpc\bonus\map-editor-thumbnail to unused content room
+- Added "bouncy" joke base throwing attack as Lea/Hexacast custom skill
+### Changes
+- Hexacast art Aberrant Dissonance renamed to Aberrant Onslaught
+- The "spawn element turret" option in the art-testing map now spawns it with a random element
+- Added triangle particles to the projectile trail effect for Arcing Fae and Wave Mortar
+- Added triangle shockwave effects to the explosions of Arcing Fae and Wave Mortar
+- Added a sound effect to Triblader effect spikeBallShoot
+- Increased sound volume and variance for effect triProjetileBounce
+- Renamed proxy bounceOrb to arcingFae
+- Renamed effect frobbitLandLight to arcingFaeFinalExplode
+- Replaced all player.element conditions in base throw/melee custom skills with ELEMENT_MODE combat conditions
+- Added Z=-8 offset to amberCard2 hitboxes
+### Balance
+- Triblader Lightning Strike can now be dash-canceled after 0.4 seconds instead of 0.5
+- Proxy aberrantCardExplosion damageFactor reduced from 1.10 to 1.0
+- Crystal Carnage proxy hailSeeker3 random delay before shooting hailBullet3 increased fro 0-0.75 to 0-1
+- Amber Hex proxy amberCard2 looping hitbox damageFactor increased from 1.0 to 1.1
+
 ## 3.3.3 (04/25/2026)
 ### New Content
 - Patches a return teleporter to XPC's hideout at the entrance of Autumn's Terminus if Autumn's Genesis is installed

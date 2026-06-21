@@ -9656,7 +9656,7 @@
       "config": {},
       "type": "GENERIC"
     },
-    "bounceOrb": {
+    "arcingFae": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "animation": {
@@ -9758,8 +9758,8 @@
               "fixPos": true,
               "type": "SHOW_EFFECT",
               "effect": {
-                "sheet": "enemies.elephant",
-                "name": "fingerShootWLand"
+                "sheet": "specials.wave",
+                "name": "arcingFaeBounce"
               },
               "offset": {
                 "x": 0,
@@ -9834,7 +9834,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "frobbitLandLight"
+            "name": "arcingFaeFinalExplode"
           },
           "offset": {
             "x": 0,
@@ -15566,8 +15566,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "enemies.ele-pillars",
-            "name": "waveBoom"
+            "sheet": "specials.wave",
+            "name": "waveMortarExplode"
           },
           "offset": {
             "x": 0,
@@ -48074,7 +48074,7 @@
           {
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
-              "dash": 0.5,
+              "dash": 0.4,
               "action": 0.8,
               "move": 0.92,
               "reaim": 1.02
@@ -53588,7 +53588,7 @@
             "anim": "throwSpecial"
           },
           {
-            "proxy": "bounceOrb",
+            "proxy": "arcingFae",
             "type": "SHOOT_PROXY_PLAYER"
           },
           {

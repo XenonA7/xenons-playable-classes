@@ -14404,7 +14404,7 @@
           "align": "CENTER",
           "radius": 8,
           "yScale": 0,
-          "zHeight": 16,
+          "zHeight": 24,
           "centralAngle": 1,
           "duration": 0.075,
           "expandRadius": 0,
@@ -14421,8 +14421,8 @@
             "type": "MEDIUM",
             "visualType": "HEAVY",
             "element": "SHOCK",
-            "damageFactor": 1,
-            "status": 0.50,
+            "damageFactor": 1.1,
+            "status": 0.5,
             "spFactor": 0,
             "guardable": "",
             "skillBonus": "RANGED_DMG",
@@ -14438,7 +14438,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -8
           }
         },
         {
@@ -14480,7 +14480,7 @@
           "align": "CENTER",
           "radius": 8,
           "yScale": 0,
-          "zHeight": 16,
+          "zHeight": 24,
           "centralAngle": 1,
           "duration": 0.1,
           "expandRadius": 0,
@@ -14513,7 +14513,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": -8
           }
         },
         {
@@ -38039,7 +38039,7 @@
         },
         {
           "minTime": 0,
-          "maxTime": 0.75,
+          "maxTime": 1.0,
           "type": "WAIT_RANDOM"
         },
         {
@@ -54645,12 +54645,12 @@
       "config": {},
       "type": "GENERIC"
     },
-    "dissonanceCard": {
+    "aberrantCard": {
       "effects": "ball-wave",
       "effectKeys": {
-        "trail": "dissonanceCardTrail",
-        "wall": "dissonanceCardWallDeath",
-        "air": "dissonanceCardAirDeath"
+        "trail": "aberrantCardTrail",
+        "wall": "aberrantCardWallDeath",
+        "air": "aberrantCardAirDeath"
       },
       "speed": 1000,
       "timeConnect": true,
@@ -54710,7 +54710,7 @@
         }
       ]
     },
-    "dissonanceCardExplosion": {
+    "aberrantCardExplosion": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -54723,7 +54723,7 @@
               "posType": "TARGET",
               "align": "BOTTOM",
               "type": "SET_HIT_PROXY",
-              "proxy": "dissonanceTarget",
+              "proxy": "aberrantTarget",
               "offset": {
                 "x": 0,
                 "y": 0,
@@ -54764,7 +54764,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceCardExplode"
+            "name": "aberrantCardExplode"
           },
           "offset": {
             "x": 0,
@@ -54794,7 +54794,7 @@
             "visualType": "HEAVY",
             "fly": "LIGHT",
             "element": "WAVE",
-            "damageFactor": 1.10,
+            "damageFactor": 1.0,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -54830,7 +54830,7 @@
       },
       "type": "GENERIC"
     },
-    "dissonanceDummy": {
+    "aberrantDummy": {
       "copyOwnerAnims": true,
       "breakType": "ACTION",
       "action": [
@@ -54881,7 +54881,7 @@
         {
           "withElse": true,
           "type": "IF",
-          "condition": "entity.ownerAttrib.dissonanceTracker == 1",
+          "condition": "entity.ownerAttrib.aberrantTracker == 1",
           "thenStep": [
             {
               "type": "SET_ATTRIB_BOOL",
@@ -54929,7 +54929,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceDummyAppear"
+            "name": "aberrantDummyAppear"
           },
           "offset": {
             "x": 0,
@@ -54953,7 +54953,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceFly"
+            "name": "aberrantFly"
           },
           "offset": {
             "x": 0,
@@ -55027,7 +55027,7 @@
           "condition": "entity.attrib.firstClone",
           "thenStep": [
             {
-              "condition": "entity.ownerAttrib.dissonanceTracker == 2",
+              "condition": "entity.ownerAttrib.aberrantTracker == 2",
               "maxTime": 2,
               "type": "WAIT_UNTIL"
             }
@@ -55039,7 +55039,7 @@
           "condition": "!entity.attrib.firstClone",
           "thenStep": [
             {
-              "condition": "entity.ownerAttrib.dissonanceTracker == 3",
+              "condition": "entity.ownerAttrib.aberrantTracker == 3",
               "maxTime": 2,
               "type": "WAIT_UNTIL"
             }
@@ -55050,7 +55050,7 @@
           "type": "SET_SPEED"
         },
         {
-          "attribName": "dissonanceLoopCount",
+          "attribName": "aberrantLoopCount",
           "changeType": "set",
           "type": "SET_ATTRIB_NUMBER",
           "value": 3
@@ -55063,7 +55063,7 @@
           "posType": "TARGET",
           "align": "FACE",
           "type": "SET_HIT_PROXY",
-          "proxy": "dissonanceCardExplosion",
+          "proxy": "aberrantCardExplosion",
           "offset": {
             "x": 0,
             "y": 0,
@@ -55082,7 +55082,7 @@
             "conditions": [
               {
                 "sticking": false,
-                "group": "dissonanceTargetGroup",
+                "group": "aberrantTargetGroup",
                 "negated": false,
                 "type": "HAS_PROXY"
               }
@@ -55103,7 +55103,7 @@
             },
             {
               "poiFilter": {
-                "group": "dissonanceTargetGroup",
+                "group": "aberrantTargetGroup",
                 "type": "PROXY"
               },
               "distance": 600,
@@ -55223,7 +55223,7 @@
           "delay": 0,
           "repeat": false,
           "type": "SHOOT_PROXY_RANGE",
-          "proxy": "dissonanceCard",
+          "proxy": "aberrantCard",
           "offset": {
             "z": 12
           }
@@ -55246,14 +55246,14 @@
         },
         {
           "changeType": "sub",
-          "attribName": "dissonanceLoopCount",
+          "attribName": "aberrantLoopCount",
           "type": "SET_ATTRIB_NUMBER",
           "value": 1
         },
         {
           "withElse": false,
           "type": "IF",
-          "condition": "entity.attrib.dissonanceLoopCount > 0",
+          "condition": "entity.attrib.aberrantLoopCount > 0",
           "thenStep": [
             {
               "name": "CLONE_LOOP",
@@ -55283,7 +55283,7 @@
           ]
         },
         {
-          "condition": "entity.ownerAttrib.dissonanceTracker == 4",
+          "condition": "entity.ownerAttrib.aberrantTracker == 4",
           "maxTime": 5,
           "type": "WAIT_UNTIL"
         },
@@ -55309,7 +55309,7 @@
           ]
         },
         {
-          "attribName": "dissonanceBuffCount",
+          "attribName": "aberrantBuffCount",
           "changeType": "add",
           "changeConnected": "PROXY_OWNER",
           "type": "SET_ATTRIB_NUMBER",
@@ -55327,7 +55327,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceDummyDisappear"
+            "name": "aberrantDummyDisappear"
           },
           "offset": {
             "x": 0,
@@ -55356,7 +55356,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceFly"
+            "name": "aberrantFly"
           }
         },
         {
@@ -55393,13 +55393,13 @@
       },
       "type": "GENERIC"
     },
-    "dissonanceTarget": {
+    "aberrantTarget": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
         {
           "sticking": false,
-          "group": "dissonanceTargetGroup",
+          "group": "aberrantTargetGroup",
           "target": "TARGET",
           "type": "REMOVE_PROXIES"
         },
@@ -55439,7 +55439,7 @@
       "hp": 0,
       "stickToSource": "TARGET",
       "stickFaceAlign": false,
-      "group": "dissonanceTargetGroup",
+      "group": "aberrantTargetGroup",
       "size": {
         "x": 8,
         "y": 8,
@@ -55448,7 +55448,7 @@
       "config": {},
       "type": "GENERIC"
     },
-    "dissonanceFinalCard": {
+    "aberrantFinalCard": {
       "animation": {
         "shapeType": "Y_FLAT",
         "SUB": [
@@ -55549,7 +55549,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceFinalCardFX"
+            "name": "aberrantFinalCardFX"
           },
           "offset": {
             "x": 0,
@@ -55568,7 +55568,7 @@
           "thenStep": [
             {
               "text": {
-                "en_US": "\\s[0]entity.ownerAttrib.dissonanceBuffCount: \\c[3]\\v[entity.ownerAttrib.dissonanceBuffCount]\\c[0]"
+                "en_US": "\\s[0]entity.ownerAttrib.aberrantBuffCount: \\c[3]\\v[entity.ownerAttrib.aberrantBuffCount]\\c[0]"
               },
               "mode": "NO_LINE",
               "color": "RED",
@@ -55582,7 +55582,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "entity.ownerAttrib.dissonanceBuffCount >= 1",
+          "condition": "entity.ownerAttrib.aberrantBuffCount >= 1",
           "thenStep": [
             {
               "duration": -1,
@@ -55596,7 +55596,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.wave",
-                "name": "dissonanceFinalCardCharge1"
+                "name": "aberrantFinalCardCharge1"
               },
               "offset": {
                 "x": 0,
@@ -55613,7 +55613,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "entity.ownerAttrib.dissonanceBuffCount >= 2",
+          "condition": "entity.ownerAttrib.aberrantBuffCount >= 2",
           "thenStep": [
             {
               "duration": -1,
@@ -55627,7 +55627,7 @@
               "type": "SHOW_EFFECT",
               "effect": {
                 "sheet": "specials.wave",
-                "name": "dissonanceFinalCardCharge2"
+                "name": "aberrantFinalCardCharge2"
               },
               "offset": {
                 "x": 0,
@@ -55638,7 +55638,7 @@
           ]
         },
         {
-          "condition": "entity.ownerAttrib.dissonanceTracker == 5",
+          "condition": "entity.ownerAttrib.aberrantTracker == 5",
           "maxTime": 5,
           "type": "WAIT_UNTIL"
         },
@@ -55653,7 +55653,7 @@
           "anim": "spinning"
         },
         {
-          "condition": "entity.ownerAttrib.dissonanceTracker == 6",
+          "condition": "entity.ownerAttrib.aberrantTracker == 6",
           "maxTime": 2,
           "type": "WAIT_UNTIL"
         },
@@ -55689,7 +55689,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceFinalShoot"
+            "name": "aberrantFinalShoot"
           },
           "offset": {
             "x": 0,
@@ -55722,12 +55722,12 @@
       },
       "type": "GENERIC"
     },
-    "dissonanceCard2": {
+    "aberrantCard2": {
       "effects": "ball-wave",
       "effectKeys": {
-        "trail": "dissonanceCardTrail2",
-        "wall": "dissonanceCard2WallDeath",
-        "air": "dissonanceCard2AirDeath"
+        "trail": "aberrantCardTrail2",
+        "wall": "aberrantCard2WallDeath",
+        "air": "aberrantCard2AirDeath"
       },
       "speed": 1000,
       "maxBounce": 0,
@@ -55786,7 +55786,7 @@
         }
       ]
     },
-    "dissonanceCardExplosion2": {
+    "aberrantCardExplosion2": {
       "copyOwnerAnims": false,
       "breakType": "COMBATANT",
       "action": [
@@ -55825,7 +55825,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceFinalImpact"
+            "name": "aberrantFinalImpact"
           },
           "offset": {
             "x": 0,
@@ -55854,7 +55854,7 @@
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
-            "name": "dissonanceDetonationBoom"
+            "name": "aberrantDetonationBoom"
           },
           "offset": {
             "x": 0,
@@ -56009,9 +56009,9 @@
           ],
           "type": "SELECT_FIRST",
           "options": [
-            "entity.ownerAttrib.dissonanceBuffCount == 0",
-            "entity.ownerAttrib.dissonanceBuffCount == 1",
-            "entity.ownerAttrib.dissonanceBuffCount == 2"
+            "entity.ownerAttrib.aberrantBuffCount == 0",
+            "entity.ownerAttrib.aberrantBuffCount == 1",
+            "entity.ownerAttrib.aberrantBuffCount == 2"
           ]
         },
         {
@@ -86707,7 +86707,7 @@
       },
       "THROW_SPECIAL3_B": {
         "name": {
-          "en_US": "Aberrant Dissonance"
+          "en_US": "Aberrant Onslaught"
         },
         "description": {
           "en_US": "Shoot together with clones to unleash a barrage of explosive spell cards."
@@ -86726,20 +86726,20 @@
             }
           },
           {
-            "attribName": "dissonanceBuffCount",
+            "attribName": "aberrantBuffCount",
             "changeType": "set",
             "type": "SET_ATTRIB_NUMBER",
             "value": 0
           },
           {
-            "attribName": "dissonanceTracker",
+            "attribName": "aberrantTracker",
             "changeType": "set",
             "type": "SET_ATTRIB_NUMBER",
             "value": 0
           },
           {
             "sticking": false,
-            "group": "dissonanceTargetGroup",
+            "group": "aberrantTargetGroup",
             "type": "REMOVE_PROXIES"
           },
           {
@@ -86750,12 +86750,12 @@
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
-            "group": "dissonancePlayerFX",
+            "group": "aberrantPlayerFX",
             "fixPos": false,
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "combat.hexacastXPC",
-              "name": "dissonancePlayerAura"
+              "name": "aberrantPlayerAura"
             },
             "offset": {
               "x": 0,
@@ -86767,7 +86767,7 @@
             "posType": "TARGET",
             "align": "FACE",
             "type": "SET_HIT_PROXY",
-            "proxy": "dissonanceCardExplosion",
+            "proxy": "aberrantCardExplosion",
             "offset": {
               "x": 0,
               "y": 0,
@@ -86786,7 +86786,7 @@
             "type": "LABEL"
           },
           {
-            "attribName": "dissonanceTracker",
+            "attribName": "aberrantTracker",
             "changeType": "add",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
@@ -86802,7 +86802,7 @@
           {
             "withElse": false,
             "type": "IF",
-            "condition": "entity.attrib.dissonanceTracker == 1",
+            "condition": "entity.attrib.aberrantTracker == 1",
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -86820,7 +86820,7 @@
                 "delay": 0,
                 "repeat": false,
                 "type": "SHOOT_PROXY_RANGE",
-                "proxy": "dissonanceDummy",
+                "proxy": "aberrantDummy",
                 "offset": {
                   "x": 0,
                   "y": 0,
@@ -86832,7 +86832,7 @@
           {
             "withElse": false,
             "type": "IF",
-            "condition": "entity.attrib.dissonanceTracker == 2",
+            "condition": "entity.attrib.aberrantTracker == 2",
             "thenStep": [
               {
                 "align": "BOTTOM",
@@ -86850,7 +86850,7 @@
                 "delay": 0,
                 "repeat": false,
                 "type": "SHOOT_PROXY_RANGE",
-                "proxy": "dissonanceDummy",
+                "proxy": "aberrantDummy",
                 "offset": {
                   "x": 0,
                   "y": 0,
@@ -86860,7 +86860,7 @@
             ]
           },
           {
-            "attribName": "dissonanceLoopCount",
+            "attribName": "aberrantLoopCount",
             "changeType": "set",
             "type": "SET_ATTRIB_NUMBER",
             "value": 3
@@ -86968,7 +86968,7 @@
             "delay": 0,
             "repeat": false,
             "type": "SHOOT_PROXY_RANGE",
-            "proxy": "dissonanceCard",
+            "proxy": "aberrantCard",
             "offset": {
               "z": 12
             }
@@ -86979,14 +86979,14 @@
           },
           {
             "changeType": "sub",
-            "attribName": "dissonanceLoopCount",
+            "attribName": "aberrantLoopCount",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
           },
           {
             "withElse": false,
             "type": "IF",
-            "condition": "entity.attrib.dissonanceLoopCount > 0",
+            "condition": "entity.attrib.aberrantLoopCount > 0",
             "thenStep": [
               {
                 "name": "DISSONANCE_LOOP",
@@ -87005,7 +87005,7 @@
           {
             "withElse": false,
             "type": "IF",
-            "condition": "entity.attrib.dissonanceTracker == 3",
+            "condition": "entity.attrib.aberrantTracker == 3",
             "thenStep": [
               {
                 "name": "DISSONANCE_FINAL",
@@ -87119,7 +87119,7 @@
           {
             "align": "BOTTOM",
             "type": "SHOOT_PROXY",
-            "proxy": "dissonanceFinalCard",
+            "proxy": "aberrantFinalCard",
             "offset": {
               "x": 4,
               "y": 0,
@@ -87131,7 +87131,7 @@
             "type": "WAIT"
           },
           {
-            "attribName": "dissonanceTracker",
+            "attribName": "aberrantTracker",
             "changeType": "add",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
@@ -87146,7 +87146,7 @@
             "type": "WAIT"
           },
           {
-            "attribName": "dissonanceTracker",
+            "attribName": "aberrantTracker",
             "changeType": "add",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
@@ -87180,7 +87180,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.wave",
-              "name": "dissonanceFinalCharge"
+              "name": "aberrantFinalCharge"
             },
             "offset": {
               "x": 0,
@@ -87201,7 +87201,7 @@
             "type": "PLAYER_ADJUST_FACE"
           },
           {
-            "attribName": "dissonanceTracker",
+            "attribName": "aberrantTracker",
             "changeType": "add",
             "type": "SET_ATTRIB_NUMBER",
             "value": 1
@@ -87284,7 +87284,7 @@
             "posType": "TARGET",
             "align": "FACE",
             "type": "SET_HIT_PROXY",
-            "proxy": "dissonanceCardExplosion2",
+            "proxy": "aberrantCardExplosion2",
             "offset": {
               "x": 0,
               "y": 0,
@@ -87306,7 +87306,7 @@
             "delay": 0,
             "repeat": false,
             "type": "SHOOT_PROXY_RANGE",
-            "proxy": "dissonanceCard2",
+            "proxy": "aberrantCard2",
             "offset": {
               "z": 12
             }
@@ -87320,7 +87320,7 @@
             "type": "CLEAR_HIT_PROXY"
           },
           {
-            "group": "dissonancePlayerFX",
+            "group": "aberrantPlayerFX",
             "type": "CLEAR_EFFECTS"
           },
           {

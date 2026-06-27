@@ -1,3 +1,23 @@
+## 3.4.0 (06/27/2026)
+### New Content
+- New Triblader combat art: Flaming Flurry (Heat Melee Lv.2A), Double Whirl converted to custom skill
+### Changes
+- Triblader pvp enemies now use Flaming Flurry instead of Double Whirl
+- Triblader pvp enemies now have a chance to follow up default throws with melee arts if target is close during rangedSpecial strats
+- Increased FADE_COLOR fadeIn duration for effect heatSubChargeTriFast
+- Slightly increased SCREEN_FLASH intensity of effect doubleWhirlShoot
+- Added SCREEN_FLASH to effects ca-sweep and ca-sweepRev
+- Lightning Strike proxy shockSpecial now uses fixPos for the shockBolt effect
+- Slightly increased audio volume of mc-exp/mc-hit sound effects in Meteor Flare and Meteor Storm
+- Triblader Fire Whirl now uses custom effect fireWhirlSweepTri instead of vanilla effect mediumSweep
+- Increased HEAT_SHADOW particle size in combat.tribladerXPC effect fireWhirl
+### Balance
+- Lightning Strike ending delay reduced from 0.72 seconds to 0.55 seconds
+- Scorching Rays multi-hit segment damageFactor increased from 0.58 to 0.8
+- Scorching Rays multi-hit segment status factor increased from 0 to 0.6
+- Scorching Rays multi-hit segment strength increased from LIGHT to MEDIUM
+- Scorching Rays initial TACKLE hit damageFactor increased from 2.0 to 4.0
+
 ## 3.3.4 (06/20/2026)
 ### New Content
 - Added map \xpc\bonus\map-editor-thumbnail to unused content room

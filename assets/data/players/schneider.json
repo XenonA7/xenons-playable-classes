@@ -3395,7 +3395,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "target2": "SELF",
-          "fixPos": false,
+          "fixPos": true,
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "enemies.ele-pillars",
@@ -32349,7 +32349,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.heat",
-              "name": "mediumSweep"
+              "name": "fireWhirlSweepTri"
             }
           },
           {
@@ -32739,13 +32739,13 @@
       },
       "ATTACK_SPECIAL2_A": {
         "name": {
-          "en_US": "Double Whirl"
+          "en_US": "Flaming Flurry"
         },
         "description": {
-          "en_US": "Two large spin attacks followed by a blast of fire from your sword."
+          "en_US": "A flurry of large flame slashes followed by a blast of fire from your sword."
         },
         "dmgType": "MELEE",
-        "stunType": "",
+        "stunType": "LOCK",
         "status": false,
         "steps": [
           {
@@ -32762,7 +32762,236 @@
             "type": "SET_HIT_STABLE"
           },
           {
+            "followUp": "attack1End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinShort"
+          },
+          {
+            "duration": 0.4,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "sweepHeat"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "flamingFlurrySweep"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": false,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 0.6,
+            "startAngle": -0.375,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "HEAVY",
+              "damageFactor": 2.0,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": 550,
+            "type": "SET_SPEED"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.3,
+            "type": "WAIT"
+          },
+          {
             "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "followUp": "attack2End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinShortRev"
+          },
+          {
+            "duration": 0.4,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "sweepHeatRev"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "flamingFlurrySweepRev"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": true,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 0.6,
+            "startAngle": -0.375,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "HEAVY",
+              "damageFactor": 2.0,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "factor": 0.2,
+            "time": 0.1,
+            "keepEntityStatic": false,
+            "inversAccelerate": true,
+            "type": "ADD_SLOW_MOTION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
           },
           {
             "wait": false,
@@ -32771,7 +33000,7 @@
             "anim": "attack2End"
           },
           {
-            "duration": 0.2,
+            "duration": 0.3,
             "align": "BOTTOM",
             "rotateFace": 6,
             "flipLeftFace": true,
@@ -32789,189 +33018,6 @@
               "y": 0,
               "z": 0
             }
-          },
-          {
-            "time": 0.2,
-            "type": "WAIT"
-          },
-          {
-            "followUp": "attack1End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "spinLongFast"
-          },
-          {
-            "duration": 0.5,
-            "align": "CENTER",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "effect": {
-              "sheet": "combat.tribladerXPC",
-              "name": "doubleWhirlSweep"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "type": "SHOW_EFFECT"
-          },
-          {
-            "align": "BOTTOM",
-            "clockwise": false,
-            "radius": 72,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 1.68,
-            "startAngle": 0.6,
-            "duration": 0.3,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": true,
-            "attack": {
-              "type": "HEAVY",
-              "element": "HEAT",
-              "fly": "HEAVY",
-              "damageFactor": 1.85,
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG",
-              "limiter": "",
-              "stunSteps": []
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "type": "CIRCLE_ATTACK"
-          },
-          {
-            "value": 250,
-            "type": "SET_SPEED"
-          },
-          {
-            "value": "IGNORE",
-            "type": "SET_COLL_TYPE"
-          },
-          {
-            "value": false,
-            "type": "SET_JUMPING"
-          },
-          {
-            "time": 0.2,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
-          },
-          {
-            "value": "VIRTUAL",
-            "type": "SET_COLL_TYPE"
-          },
-          {
-            "time": 0.2,
-            "type": "WAIT"
-          },
-          {
-            "type": "PLAYER_ADJUST_MOVE_DIR"
-          },
-          {
-            "followUp": "attack2End",
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "spinLongFastRev"
-          },
-          {
-            "duration": 0,
-            "align": "CENTER",
-            "rotateFace": 6,
-            "flipLeftFace": true,
-            "wait": false,
-            "waitSkip": 0,
-            "actionDetached": false,
-            "fixPos": false,
-            "effect": {
-              "sheet": "combat.tribladerXPC",
-              "name": "doubleWhirlSweepRev"
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "type": "SHOW_EFFECT"
-          },
-          {
-            "align": "BOTTOM",
-            "clockwise": true,
-            "radius": 72,
-            "yScale": 0,
-            "zHeight": 24,
-            "centralAngle": 1.68,
-            "startAngle": 0.6,
-            "duration": 0.3,
-            "expandRadius": 0,
-            "alwaysFull": false,
-            "clockwise": false,
-            "flipLeftFace": 6,
-            "rectangular": false,
-            "repeat": false,
-            "uniformHitDir": false,
-            "fixPos": false,
-            "checkCollision": true,
-            "attack": {
-              "type": "HEAVY",
-              "element": "HEAT",
-              "fly": "HEAVY",
-              "damageFactor": 1.85,
-              "reverse": false,
-              "guardable": "",
-              "skillBonus": "MELEE_DMG",
-              "limiter": "",
-              "stunSteps": []
-            },
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "type": "CIRCLE_ATTACK"
-          },
-          {
-            "value": 250,
-            "type": "SET_SPEED"
-          },
-          {
-            "value": "IGNORE",
-            "type": "SET_COLL_TYPE"
-          },
-          {
-            "value": false,
-            "type": "SET_JUMPING"
-          },
-          {
-            "time": 0.2,
-            "stopBeforeEdge": false,
-            "type": "MOVE_FORWARD"
-          },
-          {
-            "value": "VIRTUAL",
-            "type": "SET_COLL_TYPE"
-          },
-          {
-            "time": 0.10,
-            "type": "WAIT"
           },
           {
             "duration": 0,
@@ -32998,7 +33044,413 @@
             "type": "WAIT"
           },
           {
+            "time": 0.2,
+            "removeEntityStatic": false,
+            "type": "CLEAR_SLOW_MOTION"
+          },
+          {
+            "value": "HEAVY",
+            "type": "SET_HIT_STABLE"
+          },
+          {
+            "value": 425,
+            "type": "SET_SPEED"
+          },
+          {
             "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "followUp": "attack1End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinShort"
+          },
+          {
+            "duration": 0.2,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "sweepHeat"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "flamingFlurrySweepFastTriangles"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": false,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 0.6,
+            "startAngle": -0.375,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "MEDIUM",
+              "damageFactor": 1.6,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "followUp": "attack2End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinShortRev"
+          },
+          {
+            "duration": 0.2,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "sweepHeatRev"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "flamingFlurrySweepRevFastTriangles"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": true,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 0.6,
+            "startAngle": -0.375,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "MEDIUM",
+              "damageFactor": 1.6,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "followUp": "attack1End",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinShort"
+          },
+          {
+            "duration": 0.25,
+            "align": "BOTTOM",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "sweepHeat"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "effect": {
+              "sheet": "combat.tribladerXPC",
+              "name": "flamingFlurrySweepFastTriangles"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "align": "BOTTOM",
+            "clockwise": false,
+            "radius": 72,
+            "yScale": 0,
+            "zHeight": 24,
+            "centralAngle": 0.6,
+            "startAngle": -0.375,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "alwaysFull": false,
+            "flipLeftFace": 6,
+            "rectangular": false,
+            "repeat": false,
+            "uniformHitDir": false,
+            "fixPos": false,
+            "checkCollision": true,
+            "attack": {
+              "type": "HEAVY",
+              "element": "HEAT",
+              "fly": "MEDIUM",
+              "damageFactor": 1.6,
+              "reverse": false,
+              "guardable": "",
+              "skillBonus": "MELEE_DMG",
+              "limiter": "",
+              "stunSteps": [
+                {
+                  "type": "START_LOCK"
+                }
+              ]
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "CIRCLE_ATTACK"
+          },
+          {
+            "value": "IGNORE",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "value": false,
+            "type": "SET_JUMPING"
+          },
+          {
+            "time": 0.05,
+            "stopBeforeEdge": false,
+            "type": "MOVE_FORWARD"
+          },
+          {
+            "value": "VIRTUAL",
+            "type": "SET_COLL_TYPE"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "factor": 0.5,
+            "time": 0.1,
+            "keepEntityStatic": false,
+            "inversAccelerate": true,
+            "type": "ADD_SLOW_MOTION"
+          },
+          {
+            "time": 0.1,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_MOVE_DIR"
+          },
+          {
+            "value": 100,
+            "type": "SET_SPEED"
+          },
+          {
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "spinLong"
+          },
+          {
+            "duration": 0,
+            "align": "CENTER",
+            "rotateFace": -1,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.heat",
+              "name": "flamingFlurryFinalCharge"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "strength": "RUN_ESCAPE",
+            "pull": true,
+            "radius": 100,
+            "fadeRadius": 50,
+            "minRadius": 0,
+            "faceDist": 12,
+            "zHeight": 32,
+            "duration": 0.3,
+            "align": "BOTTOM",
+            "type": "PUSH_PULL_FORCE"
+          },
+          {
+            "time": 0.3,
+            "removeEntityStatic": false,
+            "type": "CLEAR_SLOW_MOTION"
+          },
+          {
+            "time": 0.32,
+            "stopBeforeEdge": false,
+            "type": "MOVE_BACKWARD"
           },
           {
             "wait": false,
@@ -33083,7 +33535,14 @@
             "type": "MOVE_FORWARD"
           },
           {
-            "time": 0.65,
+            "time": 0.2,
+            "type": "WAIT"
+          },
+          {
+            "type": "CLEAR_STUN_LOCKED"
+          },
+          {
+            "time": 0.45,
             "type": "WAIT"
           }
         ]
@@ -33192,7 +33651,7 @@
             "attack": {
               "type": "MASSIVE",
               "element": "HEAT",
-              "damageFactor": 2.0,
+              "damageFactor": 4.0,
               "fly": "MASSIVE+",
               "reverse": false,
               "stunSteps": [
@@ -33341,9 +33800,9 @@
                 "hitDelay": 0.1,
                 "type": "DIRECT_HIT",
                 "attack": {
-                  "type": "LIGHT",
+                  "type": "MEDIUM",
                   "element": "HEAT",
-                  "damageFactor": 0.58,
+                  "damageFactor": 0.8,
                   "reverse": false,
                   "stunSteps": [
                     {
@@ -33356,7 +33815,7 @@
                       "type": "BLOCK_XY"
                     }
                   ],
-                  "status": 0,
+                  "status": 0.6,
                   "guardable": "",
                   "skillBonus": "MELEE_DMG"
                 }
@@ -48274,9 +48733,9 @@
             "type": "SET_PLAYER_ACTION_BLOCK",
             "blockData": {
               "dash": 0.4,
-              "action": 0.8,
-              "move": 0.92,
-              "reaim": 1.02
+              "action": -1,
+              "move": -1,
+              "reaim": -1
             }
           },
           {
@@ -48476,7 +48935,7 @@
             }
           },
           {
-            "time": 0.72,
+            "time": 0.55,
             "type": "WAIT"
           }
         ]

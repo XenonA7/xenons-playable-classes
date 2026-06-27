@@ -89,6 +89,27 @@
       "offY": 144
     }
   },
+  "csTribladerCustom3HeatAttack3A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM3_TRIBLADER_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Double Whirl"
+    },
+    "description": {
+      "en_US": "Two large spin attacks followed by a blast of fire from your sword."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 144
+    }
+  },
   "csTribladerCustom1ShockAttack1B": {
     "list": [
       {

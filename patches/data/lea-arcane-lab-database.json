@@ -846,31 +846,10 @@
     "element": "HEAT",
     "activeCondition": "player.entity.name == 'Lea'",
     "name": {
-      "en_US": "\\i[class-tri] Double Whirl"
+      "en_US": "\\i[class-tri] Flaming Flurry"
     },
     "description": {
-      "en_US": "Two large spin attacks followed by a blast of fire from your sword."
-    },
-    "icon": {
-      "src": "media/gui/circuit-icons.png",
-      "offX": 96,
-      "offY": 144
-    }
-  },
-  "csLeaTribladerCustom1HeatAttack2A": {
-    "list": [
-      {
-        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL2_A",
-        "actionCheckKey": "ATTACK_SPECIAL2"
-      }
-    ],
-    "element": "HEAT",
-    "activeCondition": "player.entity.name == 'Lea'",
-    "name": {
-      "en_US": "\\i[class-tri] Sunfury"
-    },
-    "description": {
-      "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
+      "en_US": "A flurry of large flame slashes followed by a blast of fire from your sword."
     },
     "icon": {
       "src": "media/gui/circuit-icons.png",
@@ -896,6 +875,48 @@
     "icon": {
       "src": "media/gui/circuit-icons.png",
       "offX": 120,
+      "offY": 144
+    }
+  },
+  "csLeaTribladerCustom1HeatAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Sunfury"
+    },
+    "description": {
+      "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
+      "offY": 144
+    }
+  },
+  "csLeaTribladerCustom2HeatAttack2A": {
+    "list": [
+      {
+        "replaceTo": "CS_TRIBLADER_CUSTOM2_ATTACK_SPECIAL2_A",
+        "actionCheckKey": "ATTACK_SPECIAL2"
+      }
+    ],
+    "element": "HEAT",
+    "activeCondition": "player.entity.name == 'Lea'",
+    "name": {
+      "en_US": "\\i[class-tri] Double Whirl"
+    },
+    "description": {
+      "en_US": "Two large spin attacks followed by a blast of fire from your sword."
+    },
+    "icon": {
+      "src": "media/gui/circuit-icons.png",
+      "offX": 96,
       "offY": 144
     }
   },

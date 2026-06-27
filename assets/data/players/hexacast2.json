@@ -28102,7 +28102,7 @@
           ]
         },
         {
-          "volume": 0.3,
+          "volume": 0.35,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -28248,7 +28248,7 @@
           ]
         },
         {
-          "volume": 0.3,
+          "volume": 0.35,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -31078,7 +31078,7 @@
           ]
         },
         {
-          "volume": 0.2,
+          "volume": 0.25,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -31087,7 +31087,7 @@
           "sound": "media/sound/battle/hexacast/mc-exp.ogg"
         },
         {
-          "volume": 0.40,
+          "volume": 0.45,
           "global": false,
           "loop": false,
           "speed": 0.95,
@@ -31229,7 +31229,7 @@
           ]
         },
         {
-          "volume": 0.2,
+          "volume": 0.25,
           "global": false,
           "loop": false,
           "speed": 0.8,
@@ -31238,7 +31238,7 @@
           "sound": "media/sound/battle/hexacast/mc-exp.ogg"
         },
         {
-          "volume": 0.40,
+          "volume": 0.45,
           "global": false,
           "loop": false,
           "speed": 0.95,

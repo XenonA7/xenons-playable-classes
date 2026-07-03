@@ -30,6 +30,8 @@ Install instructions can be found at the bottom of this page. The DLC is require
 ![triblader-lea](https://github.com/user-attachments/assets/102ad202-6f8b-4d93-bcce-be67cc3ef53f)
 ![Hexacast1](https://github.com/user-attachments/assets/e083a9c0-6b50-4cba-8ab3-31bb22e5ef68)
 ![Hexacast2](https://github.com/user-attachments/assets/9c7f862b-c225-4935-a4d6-e99ef1381f5a)
+![hexacast-lea](https://github.com/user-attachments/assets/4cb8ea51-be5a-48af-89d0-e498bbeb09da)
+
 
 ## **How to Play:**
 1. The entrance to the Rhombus Dungeon at the start of the game will have an option to divert to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.

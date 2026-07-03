@@ -1,3 +1,8 @@
+## 3.5.1 (07/02/2026)
+### Fixes
+- Fixed frame issue with Hexacast Lea aniamtions postShoot1H and postShoot1HSlow
+- Fixed version number mismatch
+
 ## 3.5.0 (07/02/2026)
 ### New Content
 - New playable character: Hexacast Lea

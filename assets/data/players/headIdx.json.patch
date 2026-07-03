@@ -66,5 +66,13 @@
       "img": "media/gui/severed-heads/hexacast3.png",
       "name": "hexacast3"
     }
-  }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "id": "main.hexacast-lea",
+      "img": "media/gui/severed-heads/hexacast-lea.png",
+      "name": "hexacast-lea"
+    }
+  },
 ]

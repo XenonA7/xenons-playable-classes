@@ -158,7 +158,7 @@ sc.PlayerLevelNotifier.inject({
                 }
             )
         }
-        else if (model.name == 'Hexacast1' || model.name == 'Hexacast2' || model.name == 'Hexacast3') {
+        else if (model.name == 'Hexacast1' || model.name == 'Hexacast2' || model.name == 'Hexacast3' || model.name == 'hexacast-lea') {
             return new ig.Event(
                 {
                     steps: [

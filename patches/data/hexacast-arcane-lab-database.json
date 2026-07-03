@@ -155,7 +155,7 @@
       }
     ],
     "element": "BASE",
-    "activeCondition": "player.entity.name == 'Hexacast1'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Hexacast Ranged (Homing)"
     },
@@ -446,7 +446,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Magic Mortar"
     },
@@ -467,7 +467,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Sentry Card"
     },
@@ -488,7 +488,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Mundane Scatter"
     },
@@ -617,7 +617,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Heavy Sentry"
     },
@@ -638,7 +638,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Gradual Hive Missile"
     },
@@ -659,7 +659,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Ancient Power"
     },
@@ -917,7 +917,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Poison Slash"
     },
@@ -1058,7 +1058,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Acceleration Mine"
     },
@@ -1295,7 +1295,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] \\c[1]Venom Infusion\\c[0]"
     },
@@ -1424,7 +1424,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Stunning Glare"
     },
@@ -1499,7 +1499,7 @@
       }
     ],
     "element": "HEAT",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Flame Mortar"
     },
@@ -1520,7 +1520,7 @@
       }
     ],
     "element": "HEAT",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Meteor Flare (Ranged)"
     },
@@ -1595,7 +1595,7 @@
       }
     ],
     "element": "HEAT",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Meteor Storm (Ranged)"
     },
@@ -1898,7 +1898,7 @@
       "offY": 144
     }
   },
-  "csHexacastCustom1TribladerHeatAttack2A": {
+  "csHexacastTribladerCustom1HeatAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_CUSTOM1_ATTACK_SPECIAL2_A",
@@ -1919,7 +1919,7 @@
       "offY": 144
     }
   },
-  "csHexacastCustom2TribladerHeatAttack2A": {
+  "csHexacastTribladerCustom2HeatAttack2A": {
     "list": [
       {
         "replaceTo": "CS_TRIBLADER_CUSTOM2_ATTACK_SPECIAL2_A",
@@ -2280,7 +2280,7 @@
       }
     ],
     "element": "HEAT",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Kindling Mine"
     },
@@ -3013,7 +3013,7 @@
       }
     ],
     "element": "COLD",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Ice Mortar"
     },
@@ -3171,7 +3171,7 @@
       }
     ],
     "element": "COLD",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Embrittlement"
     },
@@ -3658,7 +3658,7 @@
       }
     ],
     "element": "COLD",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Chilling Gale"
     },
@@ -3787,7 +3787,7 @@
       }
     ],
     "element": "COLD",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] \\c[2]Frontal Sublimation\\c[0]"
     },
@@ -4383,7 +4383,7 @@
       }
     ],
     "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Jolt Mortar"
     },
@@ -4433,7 +4433,7 @@
       }
     ],
     "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Diving Jolt"
     },
@@ -4612,7 +4612,7 @@
       }
     ],
     "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Lightning Orb"
     },
@@ -5563,7 +5563,7 @@
       }
     ],
     "element": "SHOCK",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Bolt Aura"
     },
@@ -5720,7 +5720,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Toxic Mortar"
     },
@@ -5741,7 +5741,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] \\c[2]Heal Mortar\\c[0]"
     },
@@ -5791,7 +5791,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Bubble Pulse"
     },
@@ -5970,7 +5970,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Blaster Sentry (Static)"
     },
@@ -5991,7 +5991,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Miasmic Mortar"
     },
@@ -6141,7 +6141,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Spirit Tornado"
     },
@@ -6212,7 +6212,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] \\c[2]Healing Burst\\c[0]"
     },
@@ -6287,7 +6287,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa]\\i[head-lily] Verdant Blast"
     },
@@ -6653,7 +6653,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] Celestial Cohort"
     },
@@ -6890,7 +6890,7 @@
       }
     ],
     "element": "WAVE",
-    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2'",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
     "name": {
       "en_US": "\\i[class-hexa] \\c[2]Ethereal Stance\\c[0]"
     },

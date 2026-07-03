@@ -1,3 +1,11 @@
+## 3.5.0 (07/02/2026)
+### New Content
+- New playable character: Hexacast Lea
+  * custom skill support for Hexacast bonus and Lily arts (33 total)
+### Fixes
+- Fixed a naming inconsistency in hexacast-arcane-lab-database.json with Solar Eruption and Double Whirl
+- Updated outdated custom skill count per character in hideout-east
+
 ## 3.4.0 (06/27/2026)
 ### New Content
 - New Triblader combat art: Flaming Flurry (Heat Melee Lv.2A), Double Whirl converted to custom skill

@@ -7,7 +7,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea')",
     "name": {
       "en_US": "\\i[xenon-logo] \\c[3]Cursor Teleport\\c[0]"
     },
@@ -28,7 +28,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea')",
     "name": {
       "en_US": "\\i[xenon-logo] \\c[3]Cliff Jump 1\\c[0]"
     },
@@ -49,7 +49,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea')",
     "name": {
       "en_US": "\\i[xenon-logo] \\c[3]Cliff Jump 2\\c[0]"
     },
@@ -70,7 +70,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea')",
     "name": {
       "en_US": "\\i[xenon-logo] \\c[3]NoClip\\c[0]"
     },
@@ -91,7 +91,7 @@
       }
     ],
     "element": "NEUTRAL",
-    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3')",
+    "activeCondition": "plot.xpc.cheatsUnlocked && (player.entity.name == 'Lea' || player.entity.name == 'Schneider' || player.entity.name == 'Luke' || player.entity.name == 'triblader2' || player.entity.name == 'triblader3' || player.entity.name == 'triblader4' || player.entity.name == 'triblader5' || player.entity.name == 'triblader-lea' || player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea')",
     "name": {
       "en_US": "\\i[xenon-logo] \\c[3]Animation Debugger\\c[0]"
     },

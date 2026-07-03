@@ -6,3 +6,4 @@ sc.PARTY_OPTIONS.push("triblader-lea");
 sc.PARTY_OPTIONS.push("Hexacast1");
 sc.PARTY_OPTIONS.push("Hexacast2");
 sc.PARTY_OPTIONS.push("Hexacast3");
+sc.PARTY_OPTIONS.push("hexacast-lea");

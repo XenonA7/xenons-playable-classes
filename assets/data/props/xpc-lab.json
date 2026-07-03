@@ -576,6 +576,63 @@
           }
         ]
       }
+    },
+    {
+      "name": "avatar11",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 32
+      },
+      "collType": "NONE",
+      "anims": {
+        "sheet": {
+          "src": "media/map/xpc-lab.png",
+          "width": 32,
+          "height": 48,
+          "offX": 320,
+          "offY": 0,
+          "xCount": 1
+        },
+        "repeat": true,
+        "time": 0.3,
+        "shapeType": "Y_FLAT",
+        "frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "framesGfxOffset": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "framesAlpha": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "SUB": [
+          {
+            "name": "test"
+          }
+        ]
+      }
     }
   ]
 }

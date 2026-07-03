@@ -188,7 +188,7 @@
     "content": {
       "withElse": false,
       "type": "IF",
-      "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3'",
+      "condition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'Hexacast3' || player.entity.name == 'hexacast-lea'",
       "thenStep": [
         {
           "wait": false,

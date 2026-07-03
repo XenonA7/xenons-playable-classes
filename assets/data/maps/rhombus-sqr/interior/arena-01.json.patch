@@ -447,6 +447,31 @@
               ],
               "1": [
                 {
+                  "name": "hexacast-lea",
+                  "type": "SWITCH_PLAYER_CONFIG"
+                },
+                {
+                  "type": "CLEAR_BOARD_MSG"
+                },
+                {
+                  "time": 0.15,
+                  "type": "WAIT"
+                },
+                {
+                  "text": {
+                  "en_US": "\\s[1]Character: \\c[3]Hexacast Lea\\c[0]\nClass: \\i[class-hexa]\nSpecial attributes:\n* \\c[3]Straight\\c[0] charged shots\n* Hexacast bonus custom skill support"
+                },
+                  "center": false,
+                  "autoContinue": false,
+                  "type": "SHOW_BOARD_MSG"
+                },
+                {
+                  "type": "CLEAR_MSG",
+                  "side": "ALL"
+                }
+              ],
+              "2": [
+                {
                   "name": "Hexacast1",
                   "type": "SWITCH_PLAYER_CONFIG"
                 },
@@ -470,7 +495,7 @@
                   "side": "ALL"
                 }
               ],
-              "2": [
+              "3": [
                 {
                   "name": "Hexacast2",
                   "type": "SWITCH_PLAYER_CONFIG"
@@ -495,7 +520,7 @@
                   "side": "ALL"
                 }
               ],
-              "3": [],
+              "4": [],
               "type": "SHOW_CHOICE",
               "person": {
                 "person": "main.lea",
@@ -506,6 +531,13 @@
                   "0": " ",
                   "label": {
                     "en_US": "Lea"
+                  },
+                  "activeCondition": "true"
+                },
+                {
+                  "0": " ",
+                  "label": {
+                    "en_US": "Lea (Hexacast)"
                   },
                   "activeCondition": "true"
                 },

@@ -1,0 +1,1870 @@
+{
+  "DOCTYPE": "MULTI_DIR_ANIMATION",
+  "namedSheets": {
+    "walk": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 11,
+      "offX": 0,
+      "offY": 0,
+      "width": 32,
+      "height": 40
+    },
+    "attack": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 6,
+      "offX": 352,
+      "offY": 0,
+      "width": 32,
+      "height": 40
+    },
+    "aiming": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 11,
+      "offX": 0,
+      "offY": 200,
+      "width": 32,
+      "height": 40
+    },
+    "posesSit": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 3,
+      "offX": 384,
+      "offY": 200,
+      "width": 32,
+      "height": 40
+    },
+    "posesGround": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 3,
+      "offX": 416,
+      "offY": 200,
+      "width": 32,
+      "height": 40
+    },
+    "floatEC": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 3,
+      "offX": 416,
+      "offY": 240,
+      "width": 32,
+      "height": 40
+    },
+    "handUp": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 5,
+      "offX": 384,
+      "offY": 320,
+      "width": 32,
+      "height": 40
+    },
+    "eating": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 15,
+      "offX": 0,
+      "offY": 400,
+      "width": 32,
+      "height": 40
+    },
+    "crateChest": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 11,
+      "offX": 0,
+      "offY": 440,
+      "width": 32,
+      "height": 40
+    },
+    "additional": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 16,
+      "offX": 0,
+      "offY": 560,
+      "width": 32,
+      "height": 40
+    },
+    "levelUp": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "offX": 0,
+      "offY": 760,
+      "width": 32,
+      "height": 40
+    },
+    "fanning": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 14,
+      "offX": 0,
+      "offY": 800,
+      "width": 32,
+      "height": 40
+    },
+    "shuffle": {
+      "src": "media/entity/npc/hexacast-lea.png",
+      "xCount": 16,
+      "offX": 0,
+      "offY": 840,
+      "width": 32,
+      "height": 40
+    },
+    "sweeps": {
+      "src": "media/entity/npc/hexacast-lea-sweeps.png",
+      "xCount": 12,
+      "offX": 0,
+      "offY": 0,
+      "width": 32,
+      "height": 40
+    },
+    "dashSpin": {
+      "src": "media/entity/npc/hexacast-lea-sweeps.png",
+      "xCount": 1,
+      "offX": 0,
+      "offY": 0,
+      "width": 32,
+      "height": 40
+    },
+    "dashSpinRev": {
+      "src": "media/entity/npc/hexacast-lea-sweeps.png",
+      "xCount": 1,
+      "offX": 0,
+      "offY": 0,
+      "width": 32,
+      "height": 40
+    }
+  },
+  "offset": {
+    "x": 0,
+    "y": -4,
+    "z": 0
+  },
+  "shapeType": "Y_FLAT",
+  "SUB": [
+    {
+      "sheet": "walk",
+      "dirs": "8",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "SUB": [
+        {
+          "tileOffsets": [
+            0,
+            11,
+            22,
+            33,
+            44,
+            33,
+            22,
+            11
+          ],
+          "SUB": [
+            {
+              "name": "blank",
+              "time": 1,
+              "repeat": false,
+              "frames": [
+                -1
+              ]
+            },
+            {
+              "name": "idle",
+              "time": 1,
+              "repeat": false,
+              "frames": [
+                1
+              ]
+            },
+            {
+              "name": "walk",
+              "time": 0.133,
+              "repeat": true,
+              "frames": [
+                0,
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "name": "run",
+              "time": 0.086,
+              "repeat": true,
+              "frames": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "name": "runGrumpy",
+              "time": 0.086,
+              "repeat": true,
+              "frames": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "name": "jump",
+              "time": 0.0666,
+              "repeat": true,
+              "frames": [
+                9
+              ]
+            },
+            {
+              "name": "fall",
+              "time": 0.0666,
+              "repeat": true,
+              "frames": [
+                10
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "aiming",
+      "dirs": "8",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "SUB": [
+        {
+          "tileOffsets": [
+            0,
+            11,
+            22,
+            33,
+            44,
+            33,
+            22,
+            11
+          ],
+          "SUB": [
+            {
+              "name": "damage",
+              "time": 0.07,
+              "repeat": true,
+              "frames": [
+                0,
+                1
+              ]
+            },
+            {
+              "name": "startAim",
+              "time": 0.07,
+              "repeat": false,
+              "frames": [
+                2,
+                3
+              ]
+            },
+            {
+              "name": "aim",
+              "time": 0.1,
+              "repeat": true,
+              "frames": [
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "name": "aimMove",
+              "time": 0.1,
+              "repeat": true,
+              "frames": [
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "name": "aimMoveRev",
+              "time": 0.1,
+              "repeat": true,
+              "frames": [
+                10,
+                9,
+                8,
+                7
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "attack",
+      "dirs": "6",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tileOffsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "anchorOffsetX": [
+        10,
+        15,
+        10,
+        -9,
+        -14,
+        -12
+      ],
+      "anchorOffsetY": [
+        -22,
+        -13,
+        -2,
+        -4,
+        -9,
+        -21
+      ],
+      "anchorOffsetZ": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "SUB": [
+        {
+          "name": "attackEnd",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            6
+          ]
+        },
+        {
+          "name": "attackEndLoop",
+          "time": 0.08,
+          "repeat": true,
+          "frames": [
+            12,
+            18,
+            24
+          ]
+        },
+        {
+          "flipX": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "tileOffsets": [
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "posesSit",
+      "dirs": "4",
+      "flipX": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "SUB": [
+        {
+          "name": "sit",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "posesGround",
+      "dirs": "1",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "ground",
+          "time": 1,
+          "repeat": false,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "groundClosed",
+          "time": 1,
+          "repeat": false,
+          "frames": [
+            1
+          ]
+        },
+        {
+          "name": "sitSouthClosed",
+          "time": 1,
+          "repeat": false,
+          "frames": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "eating",
+      "dirs": "1",
+      "flipX": [
+        0
+      ],
+      "tileOffsets": [
+        0
+      ],
+      "SUB": [
+        {
+          "name": "itemFetch",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "itemHold",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            2
+          ]
+        },
+        {
+          "name": "itemHoldRev",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            14
+          ]
+        },
+        {
+          "name": "itemEatFast",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            5,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "itemEatFastest",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            5,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "itemEatSlow",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            5,
+            6,
+            5,
+            6,
+            5,
+            6,
+            5,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "itemEffect",
+          "time": 0.07,
+          "repeat": false,
+          "frames": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "name": "itemEffectLoop",
+          "time": 0.07,
+          "repeat": true,
+          "frames": [
+            11,
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "crateChest",
+      "dirs": "4",
+      "flipX": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        11,
+        22,
+        11
+      ],
+      "SUB": [
+        {
+          "name": "gripStand",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "gripPush",
+          "time": 0.15,
+          "repeat": true,
+          "frames": [
+            1,
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "name": "gripPull",
+          "time": 0.15,
+          "repeat": true,
+          "frames": [
+            4,
+            5,
+            6,
+            5
+          ]
+        },
+        {
+          "name": "chestOpen",
+          "time": 0.08,
+          "repeat": false,
+          "frames": [
+            7,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "name": "landOnGround",
+          "time": 0.07,
+          "repeat": false,
+          "frames": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "additional",
+      "dirs": "8",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "SUB": [
+        {
+          "tileOffsets": [
+            0,
+            16,
+            32,
+            48,
+            64,
+            48,
+            32,
+            16
+          ],
+          "SUB": [
+            {
+              "name": "guard",
+              "time": 0.12,
+              "repeat": true,
+              "frames": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "name": "hover",
+              "time": 0.2,
+              "repeat": true,
+              "frames": [
+                3,
+                4,
+                5,
+                4
+              ]
+            },
+            {
+              "name": "brake",
+              "time": 0.07,
+              "repeat": false,
+              "frames": [
+                6,
+                7
+              ]
+            },
+            {
+              "name": "preIdle",
+              "time": 0.07,
+              "repeat": false,
+              "frames": [
+                8
+              ]
+            },
+            {
+              "name": "charge",
+              "time": 0.1,
+              "repeat": false,
+              "frames": [
+                9
+              ]
+            },
+            {
+              "name": "specialShoot",
+              "time": 0.066,
+              "repeat": false,
+              "frames": [
+                10
+              ]
+            },
+            {
+              "name": "specialLoop",
+              "time": 0.066,
+              "repeat": true,
+              "frames": [
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "name": "postShoot1H",
+              "time": 0.05,
+              "repeat": false,
+              "frames": [
+                
+              ]
+            },
+            {
+              "name": "postShoot1HSlow",
+              "time": 0.075,
+              "repeat": false,
+              "frames": [
+                
+              ]
+            },
+            {
+              "name": "postShoot2H",
+              "time": 0.05,
+              "repeat": false,
+              "frames": [
+                14,
+                15
+              ]
+            },
+            {
+              "name": "postShoot2HSlow",
+              "time": 0.075,
+              "repeat": false,
+              "frames": [
+                14,
+                15
+              ]
+            },
+            {
+              "name": "postShoot",
+              "time": 0.05,
+              "repeat": false,
+              "frames": [
+                14,
+                15
+              ]
+            },
+            {
+              "name": "postShootSlow",
+              "time": 0.075,
+              "repeat": false,
+              "frames": [
+                14,
+                15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "dashSpin",
+      "dirs": "8",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "dash",
+          "time": 0.03,
+          "repeat": true,
+          "dirFrames": [
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            [
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ]
+          ]
+        },
+        {
+          "name": "dashSlow",
+          "time": 0.05,
+          "repeat": true,
+          "dirFrames": [
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            [
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ]
+          ]
+        },
+        {
+          "name": "dashFast",
+          "time": 0.020,
+          "repeat": true,
+          "dirFrames": [
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            [
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ]
+          ]
+        },
+        {
+          "name": "dashLong",
+          "time": 0.025,
+          "repeat": false,
+          "dirFrames": [
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ],
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "dashSpinRev",
+      "dirs": "8",
+      "flipX": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "SUB": [
+        {
+          "name": "dashRev",
+          "time": 0.03,
+          "repeat": true,
+          "dirFrames": [
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            [
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ]
+          ]
+        },
+        {
+          "name": "dashRevFast",
+          "time": 0.020,
+          "repeat": true,
+          "dirFrames": [
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            [
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ]
+          ]
+        },
+        {
+          "name": "dashLongRev",
+          "time": 0.025,
+          "repeat": false,
+          "dirFrames": [
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ],
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            [
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3
+            ],
+            [
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4
+            ],
+            [
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5
+            ],
+            [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0,
+              7,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "sweeps",
+      "dirs": "8",
+      "flipX": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "tileOffsets": [
+            0,
+            12,
+            24,
+            36,
+            48,
+            60,
+            72,
+            84
+          ],
+          "SUB": [
+            {
+              "name": "sweep",
+              "time": 0.03,
+              "repeat": false,
+              "frames": [
+                0,
+                1
+              ]
+            },
+            {
+              "name": "sweepRev",
+              "time": 0.03,
+              "repeat": false,
+              "frames": [
+                6,
+                7
+              ]
+            },
+            {
+              "name": "sweepEnd",
+              "time": 0.04,
+              "repeat": false,
+              "frames": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "name": "sweepRevEnd",
+              "time": 0.04,
+              "repeat": false,
+              "frames": [
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "name": "sweepFast",
+              "time": 0.015,
+              "repeat": false,
+              "frames": [
+                0,
+                1
+              ]
+            },
+            {
+              "name": "sweepRevFast",
+              "time": 0.015,
+              "repeat": false,
+              "frames": [
+                6,
+                7
+              ]
+            },
+            {
+              "name": "sweepEndFast",
+              "time": 0.02,
+              "repeat": false,
+              "frames": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "name": "sweepRevEndFast",
+              "time": 0.02,
+              "repeat": false,
+              "frames": [
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "name": "sweepEndInstant",
+              "time": 0.04,
+              "repeat": false,
+              "frames": [
+                5
+              ]
+            },
+            {
+              "name": "sweepRevEndInstant",
+              "time": 0.04,
+              "repeat": false,
+              "frames": [
+                11
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "shuffle",
+      "dirs": "2",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "shuffle2Fast",
+          "time": 0.05,
+          "repeat": true,
+          "frames": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "floatEC",
+      "dirs": "1",
+      "flipX": [
+        0
+      ],
+      "tileOffsets": [
+        0
+      ],
+      "SUB": [
+        {
+          "name": "floatEyeClosed",
+          "time": 0.2,
+          "repeat": true,
+          "frames": [
+            0,
+            1,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "fanning",
+      "dirs": "2",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "exhale",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "fanPre",
+          "time": 0.1,
+          "repeat": false,
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "fanPreFast",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "fanLoop",
+          "time": 0.2,
+          "repeat": true,
+          "frames": [
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "handUp",
+      "dirs": "2",
+      "flipX": [
+        0,
+        1
+      ],
+      "tileOffsets": [
+        0,
+        0
+      ],
+      "SUB": [
+        {
+          "name": "handUpPre",
+          "time": 0.07,
+          "repeat": false,
+          "frames": [
+            0
+          ]
+        },
+        {
+          "name": "handUpLoop",
+          "time": 0.07,
+          "repeat": false,
+          "frames": [
+            1
+          ]
+        },
+        {
+          "name": "handUpPreAir",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            2
+          ]
+        },
+        {
+          "name": "handUpLoopAir",
+          "time": 0.07,
+          "repeat": false,
+          "frames": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "levelUp",
+      "dirs": 1,
+      "flipX": [
+        0
+      ],
+      "tileOffsets": [
+        0
+      ],
+      "SUB": [
+        {
+          "name": "levelUpPre",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "levelUpStand",
+          "time": 0.09,
+          "repeat": true,
+          "frames": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "name": "levelUpPreJump",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            9,
+            10
+          ]
+        },
+        {
+          "name": "levelUpJump",
+          "time": 0.05,
+          "repeat": false,
+          "frames": [
+            11
+          ]
+        }
+      ]
+    }
+  ]
+}

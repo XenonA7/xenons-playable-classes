@@ -24,6 +24,7 @@ ig.ENTITY.Player.inject({
         if(sc.model.player.name == "Hexacast1"
             || sc.model.player.name == "Hexacast2"
             || sc.model.player.name == "Hexacast3"
+            || sc.model.player.name == "hexacast-lea"
             ){
                 //new variable, block player charge shots for x seconds. 0.6 seemed to be long enough but i added 0.1 just in case
                 ig.ENTITY.Player.chargeBlockTime = 0.7;

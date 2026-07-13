@@ -1,0 +1,193 @@
+{
+  "level": 38,
+  "params": {
+    "hp": 1000000000,
+    "attack": 175
+  },
+  "credit": 0,
+  "exp": 0,
+  "maxSp": 8,
+  "enduranceScale": 1,
+  "healDropRate": 0,
+  "boss": false,
+  "bossOrder": 0,
+  "padding": {
+    "x": 2,
+    "y": 2
+  },
+  "material": "METAL",
+  "aiGroup": "",
+  "aiLearnType": "IMMEDIATELY",
+  "itemDrops": [],
+  "targetDetect": {},
+  "hpBreaks": [],
+  "size": {
+    "x": 16,
+    "y": 16,
+    "z": 24
+  },
+  "anims": "enemies.invisible",
+  "defaultState": "IDLE",
+  "walkConfigs": {
+    "normal": {
+      "idle": "hidden"
+    }
+  },
+  "_wm": null,
+  "walkAnims": "normal",
+  "weight": 100,
+  "maxVel": 180,
+  "zGravityFactor": 0,
+  "jumpingEnabled": true,
+  "collType": "NONE",
+  "shadow": 0,
+  "aggression": "PEACEFUL",
+  "annotate": {
+    "active": "NONE",
+    "passive": "IMMUNE",
+    "weapon": "ANY",
+    "element": "ANY",
+    "extra": []
+  },
+  "DOCTYPE": "ENEMY",
+  "trackers": {
+    "weakRegen": {
+      "target": 3,
+      "initRandom": 0,
+      "resetRandom": 0,
+      "noStateReset": false,
+      "noAssist": false,
+      "type": "TIME"
+    }
+  },
+  "states": {
+    "IDLE": {
+      "appearAction": "Appear",
+      "choices": []
+    }
+  },
+  "proxies": {
+    "quadroGunBullet": {
+      "effects": "ball",
+      "effectKeys": {
+        "wall": "sentryCardBulletWallFX",
+        "air": "sentryCardBulletAirKill"
+      },
+      "speed": 1200,
+      "maxBounce": 0,
+      "timer": 0.5,
+      "trail": false,
+      "multiHit": false,
+      "light": "S",
+      "noLightGlow": false,
+      "type": "BALL",
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/npc/quadro-gun.png",
+          "offX": 40,
+          "offY": 214,
+          "width": 4,
+          "height": 13
+        },
+        "renderMode": "lighter",
+        "time": 0.025,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "attack": {
+        "type": "MASSIVE",
+        "visualType": "MEDIUM",
+        "fly": "MEDIUM",
+        "element": "NEUTRAL",
+        "damageFactor": 12,
+        "reverse": false,
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": []
+    },
+    "heatBall": {
+      "size": {
+        "x": 24,
+        "y": 24,
+        "z": 24
+      },
+      "effects": "enemies.last-dng",
+      "effectKeys": {
+        "trail": "ballTrailHeat"
+      },
+      "speed": 225,
+      "maxBounce": 0,
+      "timer": 3,
+      "trail": true,
+      "multiHit": true,
+      "light": "NONE",
+      "noLightGlow": true,
+      "hitSideways": true,
+      "type": "BALL",
+      "effect": "ar",
+      "maxBounds": 0,
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/enemy/turret-arid.png",
+          "offX": 0,
+          "offY": 0,
+          "width": 8,
+          "height": 8
+        },
+        "renderMode": "lighter",
+        "time": 0.05,
+        "repeat": true,
+        "frames": [
+          -1
+        ]
+      },
+      "attack": {
+        "type": "MASSIVE",
+        "element": "HEAT",
+        "damageFactor": 1,
+        "fly": "HEAVY",
+        "reverse": false,
+        "status": 2,
+        "hints": [
+          "CHARGED"
+        ],
+        "guardable": "",
+        "skillBonus": "RANGED_DMG",
+        "hitInvincible": true,
+        "noIronStance": true,
+        "limiter": ""
+      },
+      "timeBoni": null,
+      "behaviors": []
+    }
+  },
+  "actions": {
+    "Appear": [
+      {
+        "type": "WAIT",
+        "time": 0.1
+      }
+    ]
+  },
+  "reactions": {},
+  "meta": {
+    "species": {
+      "en_US": "????",
+      "de_DE": "????<<C<<Geprüft: Minsu",
+      "zh_CN": "????<<A<<[CHANGED 2021/01/12]",
+      "zh_TW": "哺乳類<<A<<[CHANGED 2021/01/12]",
+      "ja_JP": "？？？？<<A<<[CHANGED 2021/01/12]",
+      "ko_KR": "????<<A<<[CHANGED 2021/01/12]",
+      "langUid": 4
+    },
+    "category": "ABSTRACT",
+    "descriptions": []
+  }
+}

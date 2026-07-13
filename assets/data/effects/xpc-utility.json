@@ -122,6 +122,113 @@
         "frames": [
           0
         ]
+      },
+      {
+        "name": "DUST_UP",
+        "sheet": {
+          "src": "media/entity/effects/dust.png",
+          "width": 24,
+          "height": 32,
+          "offY": 32
+        },
+        "pivot": {
+          "x": 10,
+          "y": 24
+        },
+        "time": 0.06,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "DUST_UP_FAST",
+        "sheet": {
+          "src": "media/entity/effects/dust.png",
+          "width": 24,
+          "height": 32,
+          "offY": 32
+        },
+        "pivot": {
+          "x": 10,
+          "y": 24
+        },
+        "time": 0.03,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "DUST_UP_FAST_FLIP",
+        "sheet": {
+          "src": "media/entity/effects/dust.png",
+          "width": 24,
+          "height": 32,
+          "offY": 32
+        },
+        "pivot": {
+          "x": 10,
+          "y": 24
+        },
+        "flipX": true,
+        "time": 0.03,
+        "repeat": false,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "GUN_MAG",
+        "sheet": {
+          "src": "media/entity/npc/quadro-gun.png",
+          "offX": 40,
+          "offY": 200,
+          "width": 7,
+          "height": 9
+        },
+        "guiSprites": false,
+        "renderMode": "source-over",
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      {
+        "name": "GUN_SHELL",
+        "sheet": {
+          "src": "media/entity/npc/quadro-gun.png",
+          "offX": 40,
+          "offY": 209,
+          "width": 5,
+          "height": 5
+        },
+        "guiSprites": false,
+        "renderMode": "source-over",
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
       }
     ]
   },
@@ -646,6 +753,135 @@
       {
         "time": 2,
         "type": "WAIT"
+      }
+    ],
+    "gunDust": [
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 0.2,
+        "startAngle": 0.4,
+        "startDist": 14,
+        "flipRightParticles": true,
+        "uniformRandom": 0.5,
+        "offset": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "minSpeed": 80,
+        "maxSpeed": 160,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.6,
+            "y": 0.6
+          }
+        },
+        "anim": "DUST_UP_FAST_FLIP",
+        "type": "PARTICLE_CIRCLE"
+      }
+    ],
+    "gunMagazineDeath": [
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0,
+        "startDist": -5,
+        "random": false,
+        "zBounciness": 0,
+        "collision": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": -50,
+        "maxSpeed": -75,
+        "minZSpeed": 0,
+        "maxZSpeed": 25,
+        "minZVel": 10,
+        "pAlpha": {
+          "init": 1.0,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pRotate": {
+          "init": 0.5,
+          "start": {
+            "value": -0.2,
+            "time": 0.3,
+            "spline": "EASE_OUT_STRONG"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          }
+        },
+        "angleVary": 0,
+        "shadowSize": 0,
+        "particleDuration": 1.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "GUN_MAG"
+      }
+    ],
+    "gunShellEject": [
+      {
+        "numParticles": 1,
+        "duration": 0,
+        "centralAngle": 0.2,
+        "startAngle": 0.425,
+        "startDist": 2,
+        "random": true,
+        "zBounciness": 0,
+        "collision": true,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "minSpeed": 50,
+        "maxSpeed": 100,
+        "minZSpeed": 25,
+        "maxZSpeed": 50,
+        "minZVel": 10,
+        "pAlpha": {
+          "init": 1.0,
+          "end": {
+            "value": 0,
+            "time": 0.5
+          }
+        },
+        "pRotate": {
+          "init": 0,
+          "start": {
+            "value": 2.5,
+            "time": 0.45,
+            "spline": "EASE_OUT"
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 1.0,
+            "y": 1.0
+          }
+        },
+        "angleVary": 1,
+        "shadowSize": 0,
+        "particleDuration": 1.5,
+        "type": "DEBRIS_CIRCLE",
+        "anim": "GUN_SHELL"
       }
     ]
   }

@@ -1,3 +1,8 @@
+## 3.5.2 (07/12/2026)
+### New Content
+- Added a new scene to the NPCs in hideout-north that has a 25% chance of happening when entering the map
+- Added \assets\data\enemies\proxy-library-xpc.json
+
 ## 3.5.1 (07/02/2026)
 ### Fixes
 - Fixed frame issue with Hexacast Lea aniamtions postShoot1H and postShoot1HSlow

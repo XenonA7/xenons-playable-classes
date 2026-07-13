@@ -27,6 +27,40 @@
         "type": "PARTICLE_CIRCLE"
       }
     ],
+    "frontFlippedGun": [
+      {
+        "numParticles": 3,
+        "duration": 0,
+        "centralAngle": 0.3,
+        "startAngle": 0.35,
+        "startDist": 16,
+        "flipRightParticles": true,
+        "random": true,
+        "offset": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "minSpeed": 80,
+        "maxSpeed": 160,
+        "collision": false,
+        "pAlpha": {
+          "init": 0.8,
+          "start": {
+            "value": 0.5,
+            "spline": ""
+          }
+        },
+        "pScale": {
+          "init": {
+            "x": 0.8,
+            "y": 0.8
+          }
+        },
+        "anim": "DUST_UP_FAST",
+        "type": "PARTICLE_CIRCLE"
+      }
+    ],
     "magicMortarDust": [
       {
         "numParticles": 6,

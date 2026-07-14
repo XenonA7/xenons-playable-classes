@@ -1,3 +1,9 @@
+## 3.5.3 (07/13/2026)
+### Fixes
+- Added TouchTrigger zones to hideout-north to trigger sandbag failsafe when the player enters from the south
+- Failsafe is now also triggered at the end of signModder NPC dialogue during scene 4
+- Fixed effect bombHeatTrailSilent for proxy daybreakThrow to be BOTTOM align instead of BASE, reduced offset
+
 ## 3.5.2 (07/12/2026)
 ### New Content
 - Added a new scene to the NPCs in hideout-north that has a 25% chance of happening when entering the map

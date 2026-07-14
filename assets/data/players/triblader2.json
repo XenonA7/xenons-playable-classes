@@ -1788,7 +1788,7 @@
         },
         {
           "duration": -1,
-          "align": "BASE",
+          "align": "BOTTOM",
           "rotateFace": 0,
           "flipLeftFace": false,
           "wait": false,
@@ -1803,7 +1803,7 @@
           "offset": {
             "x": 0,
             "y": 0,
-            "z": 12
+            "z": 4
           }
         },
         {

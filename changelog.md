@@ -1,3 +1,7 @@
+## 3.6.1 (10/19/2026)
+### Fixes
+- Fixed crash due to a misplaced pentafist file reference
+
 ## 3.6.0 (10/18/2026)
 ### New Content
 - New Hexacast custom skill: Healing Volley (Wave Throw Lv.1)

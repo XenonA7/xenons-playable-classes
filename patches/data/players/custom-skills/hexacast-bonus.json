@@ -15607,8 +15607,8 @@
           "fixPos": false,
           "type": "SHOW_EFFECT",
           "effect": {
-            "sheet": "specials.wave-penta",
-            "name": "healingCustomPenta"
+            "sheet": "specials.wave",
+            "name": "healingCustom"
           },
           "offset": {
             "x": 0,

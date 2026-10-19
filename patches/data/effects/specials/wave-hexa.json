@@ -23173,7 +23173,6 @@
         "moveDist": 80,
         "moveVariance": 24,
         "keySpline": "EASE_IN",
-        "random": true,
         "inverse": true,
         "collision": false,
         "pScale": {
@@ -25657,7 +25656,7 @@
         "type": "PLAY_ANIM"
       }
     ],
-"healingVolleyCardFX": [
+    "healingVolleyCardFX": [
       {
         "size": "L",
         "fadeIn": 0,

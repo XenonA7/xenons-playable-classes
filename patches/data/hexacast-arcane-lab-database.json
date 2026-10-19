@@ -5754,6 +5754,27 @@
       "offY": 24
     }
   },
+  "csHexacastCustom3WaveThrow1A": {
+    "list": [
+      {
+        "replaceTo": "CS_CUSTOM3_HEXACAST_THROW_SPECIAL1_A",
+        "actionCheckKey": "THROW_SPECIAL1"
+      }
+    ],
+    "element": "WAVE",
+    "activeCondition": "player.entity.name == 'Hexacast1' || player.entity.name == 'Hexacast2' || player.entity.name == 'hexacast-lea'",
+    "name": {
+      "en_US": "\\i[class-hexa] \\c[2]Healing Volley\\c[0]"
+    },
+    "description": {
+      "en_US": "Shoot an aimed volley of healing projectiles."
+    },
+    "icon": {
+      "src": "media/gui/custom-skills/hexacast-bonus-skills.png",
+      "offX": 96,
+      "offY": 96
+    }
+  },
   "csAlSpheroknightWaveThrow1A": {
     "list": [
       {

@@ -15284,6 +15284,363 @@
       },
       "timeBoni": null,
       "behaviors": []
+    },
+    "healingVolleyCard": {
+      "animation": {
+        "shapeType": "Y_FLAT",
+        "SUB": [
+          {
+            "offset": {
+              "x": 0,
+              "y": 12,
+              "z": 0
+            },
+            "sheet": {
+              "src": "media/entity/effects/hexacast/hexa-cards.png",
+              "offX": 0,
+              "offY": 256,
+              "width": 24,
+              "height": 32
+            },
+            "SUB": [
+              {
+                "name": "default",
+                "faceRotate": true,
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  0
+                ]
+              },
+              {
+                "name": "rotating",
+                "faceRotate": false,
+                "time": 0.05,
+                "repeat": true,
+                "frames": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  13,
+                  14,
+                  15
+                ]
+              },
+              {
+                "name": "spinning",
+                "time": 0.016,
+                "repeat": true,
+                "frames": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "framesAngle": [
+                  0,
+                  22.5,
+                  45,
+                  67.5,
+                  90,
+                  112.5,
+                  135,
+                  157.5
+                ]
+              },
+              {
+                "name": "stuck",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  8
+                ]
+              },
+              {
+                "name": "hidden",
+                "time": 0.016,
+                "repeat": false,
+                "frames": [
+                  -1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "COMBATANT",
+      "action": [
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "hit",
+          "value": false
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "default"
+        },
+        {
+          "value": 5,
+          "type": "SET_ACCEL_SPEED"
+        },
+        {
+          "posType": "TARGET",
+          "align": "BOTTOM",
+          "type": "SET_HIT_PROXY",
+          "proxy": "healingVolleyHitProxy",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "combat.hexacastXPC",
+            "name": "scale85"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healingVolleyCardFX"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "duration": -1,
+          "align": "BOTTOM",
+          "rotateFace": -1,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": false,
+          "group": "",
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave",
+            "name": "healingVolleyCardTrail"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "align": "BOTTOM",
+          "radius": 12,
+          "yScale": 0,
+          "zHeight": 24,
+          "centralAngle": 1,
+          "duration": 3,
+          "expandRadius": 0,
+          "alwaysFull": true,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "rectangular": false,
+          "repeat": false,
+          "uniformHitDir": false,
+          "fixPos": false,
+          "checkCollision": true,
+          "type": "CIRCLE_ATTACK",
+          "party": "ENEMY",
+          "attack": {
+            "type": "NONE",
+            "element": "WAVE",
+            "damageFactor": 0,
+            "reverse": false,
+            "guardable": "NEVER",
+            "skillBonus": "",
+            "limiter": "SIGNAL",
+            "hints": [
+              "NO_PUZZLE"
+            ]
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -12
+          }
+        },
+        {
+          "attribName": "loopCount",
+          "changeType": "set",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 60
+        },
+        {
+          "name": "LOOP",
+          "type": "LABEL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.hit",
+          "thenStep": [
+            {
+              "name": "END",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "time": 0.05,
+          "stopBeforeEdge": false,
+          "collideCancel": 1,
+          "type": "MOVE_FORWARD"
+        },
+        {
+          "attribName": "loopCount",
+          "changeType": "sub",
+          "type": "SET_ATTRIB_NUMBER",
+          "value": 1
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "entity.attrib.loopCount > 0",
+          "thenStep": [
+            {
+              "name": "LOOP",
+              "type": "GOTO_LABEL"
+            }
+          ]
+        },
+        {
+          "name": "END",
+          "type": "LABEL"
+        },
+        {
+          "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "CLEAR_HIT_PROXY"
+        }
+      ],
+      "invisible": false,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "type": "GENERIC",
+      "size": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "config": {
+        "maxVel": 550,
+        "collType": "PROJECTILE",
+        "zGravityFactor": 0,
+        "shadow": 16
+      }
+    },
+    "healingVolleyHitProxy": {
+      "copyOwnerAnims": false,
+      "breakType": "NEVER",
+      "action": [
+        {
+          "type": "SET_ATTRIB_BOOL",
+          "name": "hit",
+          "changeConnected": "PROXY_SOURCE",
+          "value": true
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "value": 0.05,
+          "target": "TARGET",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
+          "duration": 0,
+          "align": "BOTTOM",
+          "target": "TARGET",
+          "rotateFace": 0,
+          "flipLeftFace": false,
+          "wait": false,
+          "waitSkip": 0,
+          "actionDetached": true,
+          "fixPos": false,
+          "type": "SHOW_EFFECT",
+          "effect": {
+            "sheet": "specials.wave-penta",
+            "name": "healingCustomPenta"
+          },
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "volume": 1.5,
+          "global": false,
+          "loop": false,
+          "speed": 2.0,
+          "variance": 0,
+          "sound": "media/sound/move/heal.ogg",
+          "type": "PLAY_SOUND"
+        },
+        {
+          "time": 0.1,
+          "type": "WAIT"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "TARGET",
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {},
+      "type": "GENERIC"
     }
   },
   "actions": {
@@ -20934,6 +21291,166 @@
           {
             "time": 0.02,
             "type": "WAIT"
+          }
+        ]
+      },
+      "CS_CUSTOM3_HEXACAST_THROW_SPECIAL1_A": {
+        "name": {
+          "en_US": "\\c[2]Healing Volley\\c[0]"
+        },
+        "description": {
+          "en_US": "Shoot an aimed volley of healing projectiles."
+        },
+        "dmgType": "NONE",
+        "stunType": "",
+        "status": false,
+        "steps": [
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0.1,
+              "action": -1,
+              "move": -1,
+              "reaim": -1
+            }
+          },
+          {
+            "duration": 0,
+            "align": "FACE",
+            "rotateFace": 6,
+            "flipLeftFace": true,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "specials.wave",
+              "name": "hexaShootWave"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "followUp": "attackEndLoop",
+            "wait": false,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "attackEnd"
+          },
+          {
+            "posType": "TARGET",
+            "align": "BOTTOM",
+            "type": "SET_HIT_PROXY",
+            "proxy": "essenceStealProxy",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.015,
+            "angleVary": 0,
+            "startDist": 24,
+            "startDistCollide": "DROP",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": true,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "healingVolleyCard",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.015,
+            "angleVary": 0,
+            "startDist": 24,
+            "startDistCollide": "DROP",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": true,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "healingVolleyCard",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.15,
+            "type": "WAIT"
+          },
+          {
+            "type": "PLAYER_ADJUST_FACE"
+          },
+          {
+            "align": "BOTTOM",
+            "centralAngle": 0.015,
+            "angleVary": 0,
+            "startDist": 24,
+            "startDistCollide": "DROP",
+            "random": false,
+            "count": 1,
+            "duration": 0,
+            "clockwise": true,
+            "flipLeftFace": 0,
+            "circularArea": false,
+            "uniformDir": 0,
+            "delay": 0,
+            "repeat": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "proxy": "healingVolleyCard",
+            "offset": {
+              "z": 12
+            }
+          },
+          {
+            "time": 0.45,
+            "type": "WAIT"
+          },
+          {
+            "type": "SET_PLAYER_ACTION_BLOCK",
+            "blockData": {
+              "dash": 0,
+              "action": 0,
+              "move": 0,
+              "reaim": 0
+            }
+          },
+          {
+            "followUp": "preIdle",
+            "wait": true,
+            "viaWalkConfig": false,
+            "type": "SHOW_ANIMATION",
+            "anim": "postShoot1HSlow"
+          },
+          {
+            "type": "CLEAR_ANIMATION"
           }
         ]
       },

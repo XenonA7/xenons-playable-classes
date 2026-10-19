@@ -339,7 +339,7 @@
         "offX": 144,
         "offY": 0,
         "sizeX": 100,
-        "sizeY": 384
+        "sizeY": 272
       },
       "Head": {
         "gfxOffX": 0,
@@ -348,7 +348,7 @@
         "offY": 288,
         "sizeX": 126,
         "sizeY": 35
-      },
+      }
     }
   }
 ]

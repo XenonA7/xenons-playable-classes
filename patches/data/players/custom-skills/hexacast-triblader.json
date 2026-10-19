@@ -8,6 +8,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -45,6 +46,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -81,6 +83,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -117,6 +120,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -153,6 +157,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -183,6 +188,9 @@
     },
     "tri-chargedNeutral": {
       "effects": "ball",
+      "effectKeys": {
+        "trail": "ballTrailTri"
+      },
       "speed": 600,
       "maxBounce": 3,
       "timer": 1.5,
@@ -24098,6 +24106,7 @@
       "trail": false,
       "multiHit": false,
       "noLightGlow": false,
+      "light": "S",
       "type": "BALL",
       "animation": {
         "name": "default",
@@ -41430,7 +41439,7 @@
             "duration": 0,
             "align": "BOTTOM",
             "rotateFace": 8,
-            "flipLeftFace": true,
+            "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -42273,7 +42282,7 @@
             "duration": 0,
             "align": "BOTTOM",
             "rotateFace": 8,
-            "flipLeftFace": true,
+            "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -42785,7 +42794,7 @@
             "duration": 0,
             "align": "BOTTOM",
             "rotateFace": 8,
-            "flipLeftFace": true,
+            "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -43153,7 +43162,7 @@
             "duration": 0,
             "align": "BOTTOM",
             "rotateFace": 8,
-            "flipLeftFace": true,
+            "flipLeftFace": false,
             "wait": false,
             "waitSkip": 0,
             "actionDetached": false,
@@ -67954,6 +67963,47 @@
             "count": 12,
             "type": "SHOOT_PROXY_RANGE",
             "proxy": "tri-waveDustShort",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0,
+            "align": "BOTTOM",
+            "rotateFace": 8,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "actionDetached": false,
+            "fixPos": true,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "frontFlipped"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "duration": 0.25,
+            "align": "BOTTOM",
+            "rotateFace": 0,
+            "flipLeftFace": false,
+            "wait": false,
+            "waitSkip": 0,
+            "group": "",
+            "actionDetached": false,
+            "fixPos": false,
+            "type": "SHOW_EFFECT",
+            "effect": {
+              "sheet": "dust",
+              "name": "line"
+            },
             "offset": {
               "x": 0,
               "y": 0,

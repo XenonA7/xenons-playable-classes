@@ -1,3 +1,34 @@
+## 3.6.0 (10/18/2026)
+### New Content
+- New Hexacast custom skill: Healing Volley (Wave Throw Lv.1)
+- Added HEAL_SPARKLE effects to hexa-misc.png
+### Changes
+- Added cave floor texture to all "crater" particle sprites (Calamity Beacon, etc)
+- Updated description for Essence Steal
+- Replaced "false" conditions for Hexacast debug messages with "tmp.xpcDebugMessages" used by Pentafist, updated info-for-modders.md
+- Added dust effects to Triblader Ki Spin
+- Added pLight to Triblader chargedNeutral trial effects
+- All Triblader uncharged default proxies now use "light": "S" (new standard from Pentafist)
+- Temporal Miasma design rework: now applies an on/off monitor based on field distance to recipient rather than constantly re-applying the buff
+- Deleted "posesSit" sheet from hexacast-lea animation file, merged into "crateChest" sheet
+- Effects healMortarImpact, healingBurstFX, healBatteryInitialHealPulse, healBatteryHealPulse now use HEAL_SPARKLE effects instead of WAVE_SPARKLE
+### Fixes
+- Return teleporter to XPC hideout from Starcaller2 lobby now has spawnCondition quest.xpc-heat-penguins.solved
+- Fixed Temporal Miasma only being able to buff one player/ally/party member at a time
+- Fixed typo in Giga Drain description
+- Fixed incorrect sizeY value for triblader-lea small menu portrait
+- All instances of XPC effect dust.frontFlipped now correctly use "flipLeftFace": false
+- Removed leftover out-of-bounds props from maps xpc/bonus/training-apollo-5 and bergen/hideout-hexa
+- Fixed hexacast-lea "sit" animation used in vanilla cutscenes
+### Balance
+- Essence Steal card impact damageFactor increased from 2.75 to 3.25
+- Essence Steal now heals a guaranteed 5% HP plus additional absorption from the enemy
+- Essence Steal repeating damageFactor increased from 0.12 to 0.15, absorb factor decreased from 0.11 to 0.075
+  * This is a small damage increase and a slight reduction to overall healing to make it more in-line with other classes
+- Beam Blaster damageFactor increased from 3 to 4.15, status reduced from 0.7 to 0.6
+- Giga Drain guaranteed healing increased from 5% to 10% (total healing is still roughly half of Lea's Vital Pulse)
+- Healing from healBatteryInitialHealProxy increased from 5% to 7.5% (initial healing pulse when using Heal Battery)
+
 ## 3.5.5 (09/13/2026)
 ### General
 - Now requires menu-ui-replacer 1.1.0 or higher

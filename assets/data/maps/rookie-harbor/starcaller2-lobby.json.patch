@@ -24,6 +24,7 @@
             "dir": "SOUTH",
             "map": "bergen.hideout-southwest",
             "marker": "sc2-config",
+            "spawnCondition": "quest.xpc-heat-penguins.solved",
             "teleportLabel": {
               "en_US": "To: XPC Modding Hideout",
               "de_DE": "",

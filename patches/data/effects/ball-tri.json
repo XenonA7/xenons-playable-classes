@@ -135,6 +135,37 @@
         "anim": "SWORD1_SHADOW",
         "type": "OFFSET_PARTICLE_CIRCLE"
       }
+    ],
+    "ballTrailTri": [
+      {
+        "noLighter": false,
+        "pAlpha": {
+          "init": 0.6,
+          "start": {
+            "value": 0
+          }
+        },
+        "particleDuration": 0.1,
+        "type": "COPY_SPRITE"
+      },
+      {
+        "type": "PLAY_ANIM",
+        "anim": "CIRCLE",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 4
+        },
+        "pAlpha": {
+          "init": 0
+        },
+        "pLight": "M",
+        "particleDuration": 0.1
+      },
+      {
+        "time": 0.02,
+        "type": "WAIT"
+      }
     ]
   }
 }

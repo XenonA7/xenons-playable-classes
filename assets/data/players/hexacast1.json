@@ -3657,7 +3657,7 @@
         "type": "LIGHT",
         "visualType": "MEDIUM",
         "element": "WAVE",
-        "damageFactor": 2.75,
+        "damageFactor": 3.25,
         "reverse": false,
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -3779,6 +3779,12 @@
           "type": "WAIT"
         },
         {
+          "value": 0.05,
+          "target": "PROXY_OWNER",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
           "attribName": "hits",
           "changeType": "set",
           "proxyOwner": false,
@@ -3799,7 +3805,7 @@
           "attack": {
             "type": "LIGHT",
             "element": "WAVE",
-            "damageFactor": 0.12,
+            "damageFactor": 0.15,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -3808,7 +3814,7 @@
           }
         },
         {
-          "factor": 0.11,
+          "factor": 0.075,
           "type": "ABSORB_DAMAGE"
         },
         {
@@ -19160,9 +19166,9 @@
           "attack": {
             "type": "HEAVY",
             "element": "WAVE",
-            "damageFactor": 3,
+            "damageFactor": 4.15,
             "reverse": false,
-            "status": 0.7,
+            "status": 0.6,
             "fly": "MASSIVE",
             "spFactor": 0,
             "guardable": "",
@@ -29770,7 +29776,7 @@
           "type": "WAIT"
         },
         {
-          "value": 0.050,
+          "value": 0.10,
           "target": "PROXY_OWNER",
           "hideNumbers": false,
           "type": "REGEN_HP"
@@ -42814,13 +42820,13 @@
           "yScale": 0,
           "zHeight": 64,
           "centralAngle": 1,
-          "duration": 0.25,
+          "duration": 99,
           "expandRadius": 0,
           "alwaysFull": true,
           "clockwise": false,
           "flipLeftFace": 0,
           "rectangular": false,
-          "repeat": true,
+          "repeat": false,
           "uniformHitDir": false,
           "fixPos": false,
           "checkCollision": false,
@@ -42862,7 +42868,7 @@
         "z": 32
       },
       "config": {
-        "collType": "NONE",
+        "collType": "PROJECTILE",
         "zGravityFactor": 0
       },
       "type": "GENERIC"
@@ -42927,16 +42933,24 @@
       "type": "GENERIC"
     },
     "miasmaTimeBuff": {
-      "copyOwnerAnims": false,
-      "breakType": "COMBATANT",
-      "action": [
-        {
-          "target": "TARGET",
-          "ignoreSelf": true,
-          "group": "miasmaTimeBuffGroup",
-          "keepCount": 1,
-          "type": "REMOVE_PROXIES"
+      "animation": {
+        "name": "default",
+        "sheet": {
+          "src": "media/entity/effects/cold.png",
+          "offX": 160,
+          "offY": 0,
+          "width": 32,
+          "height": 32
         },
+        "time": 0.05,
+        "repeat": false,
+        "frames": [
+          0
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
         {
           "type": "CONNECT_PROXY_TO_TARGET"
         },
@@ -42944,7 +42958,70 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "duration": 0.25,
+          "name": "miasmaInRange",
+          "type": "SET_ATTRIB_BOOL",
+          "value": false
+        },
+        {
+          "align": "BOTTOM",
+          "centralAngle": 0,
+          "angleVary": 0,
+          "startDist": 0,
+          "startDistCollide": "NONE",
+          "random": false,
+          "clockwise": false,
+          "flipLeftFace": 0,
+          "circularArea": false,
+          "uniformDir": 0,
+          "delay": 0,
+          "repeat": false,
+          "posEntity": "PROXY_SRC",
+          "duration": 0,
+          "type": "SHOOT_PROXY_RANGE",
+          "proxy": "miasmaBuffRangeMonitor",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "count": 1
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "maxTime": 1.5,
+          "type": "WAIT_UNTIL",
+          "condition": "entity.attrib.miasmaInRange"
+        },
+        {
+          "name": "BUFF_ON",
+          "type": "LABEL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "tmp.xpcDebugMessages",
+          "thenStep": [
+            {
+              "type": "CLEAR_AR_MSG"
+            },
+            {
+              "text": {
+                "en_US": "Miasma in range!"
+              },
+              "mode": "NO_LINE",
+              "color": "GREEN",
+              "actionDetached": true,
+              "hideOutsideOfScreen": false,
+              "type": "SHOW_AR_MSG",
+              "time": 2
+            }
+          ]
+        },
+        {
+          "duration": -1,
           "target": "TARGET",
           "align": "CENTER",
           "rotateFace": 0,
@@ -42953,6 +43030,7 @@
           "waitSkip": 0,
           "actionDetached": false,
           "fixPos": false,
+          "group": "miasmaBuffFX",
           "type": "SHOW_EFFECT",
           "effect": {
             "sheet": "specials.wave",
@@ -42972,27 +43050,151 @@
           "type": "ADD_TEMP_INFLUENCE"
         },
         {
-          "time": 0.25,
-          "type": "WAIT"
+          "type": "WAIT_UNTIL",
+          "condition": "!entity.attrib.miasmaInRange"
         },
         {
-          "type": "STOP_REPEATING_FORCE"
+          "name": "BUFF_OFF",
+          "type": "GOTO_LABEL"
         },
         {
+          "name": "BUFF_OFF",
+          "type": "LABEL"
+        },
+        {
+          "withElse": false,
+          "type": "IF",
+          "condition": "tmp.xpcDebugMessages",
+          "thenStep": [
+            {
+              "type": "CLEAR_AR_MSG"
+            },
+            {
+              "text": {
+                "en_US": "Miasma out of range!"
+              },
+              "mode": "NO_LINE",
+              "color": "RED",
+              "actionDetached": true,
+              "hideOutsideOfScreen": false,
+              "type": "SHOW_AR_MSG",
+              "time": 2
+            }
+          ]
+        },
+        {
+          "group": "miasmaBuffFX",
           "type": "CLEAR_EFFECTS"
+        },
+        {
+          "type": "CLEAR_TEMP_INFLUENCE"
+        },
+        {
+          "type": "WAIT_UNTIL",
+          "condition": "entity.attrib.miasmaInRange"
+        },
+        {
+          "name": "BUFF_ON",
+          "type": "GOTO_LABEL"
         }
       ],
       "invisible": true,
       "hp": 0,
       "stickToSource": "TARGET",
       "stickFaceAlign": false,
-      "group": "miasmaTimeBuffGroup",
+      "group": "",
       "size": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": 16,
+        "y": 16,
+        "z": 16
       },
       "config": {},
+      "type": "GENERIC"
+    },
+    "miasmaBuffRangeMonitor": {
+      "animation": {
+        "SUB": [
+          {
+            "name": "default",
+            "sheet": {
+              "src": "media/entity/enemy/heat-projectile.png",
+              "offX": 0,
+              "offY": 24,
+              "width": 32,
+              "height": 32
+            },
+            "time": 0.1,
+            "repeat": false,
+            "frames": [
+              0
+            ]
+          }
+        ]
+      },
+      "copyOwnerAnims": false,
+      "breakType": "ACTION",
+      "action": [
+        {
+          "kind": "PROXY_SRC",
+          "type": "SET_TEMP_TARGET"
+        },
+        {
+          "type": "DETACH_TIME_PARENT"
+        },
+        {
+          "name": "LOOP",
+          "type": "LABEL"
+        },
+        {
+          "withElse": true,
+          "type": "COMBAT_IF",
+          "conditions": [
+            {
+              "min": 0,
+              "max": 116,
+              "type": "TARGET_DISTANCE"
+            }
+          ],
+          "thenStep": [
+            {
+              "name": "miasmaInRange",
+              "type": "SET_ATTRIB_BOOL",
+              "changeConnected": "PROXY_SOURCE",
+              "value": true
+            }
+          ],
+          "elseStep": [
+            {
+              "name": "miasmaInRange",
+              "type": "SET_ATTRIB_BOOL",
+              "changeConnected": "PROXY_SOURCE",
+              "value": false
+            }
+          ]
+        },
+        {
+          "time": 0.05,
+          "type": "WAIT"
+        },
+        {
+          "name": "LOOP",
+          "type": "GOTO_LABEL"
+        }
+      ],
+      "invisible": true,
+      "hp": 0,
+      "stickToSource": "NONE",
+      "stickFaceAlign": false,
+      "group": "",
+      "size": {
+        "x": 16,
+        "y": 16,
+        "z": 16
+      },
+      "config": {
+        "collType": "NONE",
+        "zGravityFactor": 0
+      },
       "type": "GENERIC"
     },
     "thunderingSparksSource": {
@@ -48439,7 +48641,7 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "value": 0.050,
+          "value": 0.075,
           "target": "TARGET",
           "hideNumbers": false,
           "type": "REGEN_HP"
@@ -55814,7 +56016,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "false",
+          "condition": "tmp.xpcDebugMessages",
           "thenStep": [
             {
               "text": {
@@ -56085,7 +56287,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "false",
+          "condition": "tmp.xpcDebugMessages",
           "thenStep": [
             {
               "text": {
@@ -86973,7 +87175,7 @@
           "en_US": "\\c[2]Essence Steal\\c[0]"
         },
         "description": {
-          "en_US": "Hit an enemy to absorb HP."
+          "en_US": "Hit an enemy to heal \\c[2]+5%\\c[0] of your HP plus additional absorption from the enemy."
         },
         "dmgType": "RANGED",
         "stunType": "",
@@ -87201,7 +87403,7 @@
           "en_US": "\\c[2]Giga Drain\\c[0]"
         },
         "description": {
-          "en_US": "Hit a single enemy to heal \\c[2]+5%\\c[0] of your HP plus additional absorbtion from the enemy."
+          "en_US": "Hit a single enemy to heal \\c[2]+10%\\c[0] of your HP plus additional absorption from the enemy."
         },
         "dmgType": "RANGED",
         "stunType": "",

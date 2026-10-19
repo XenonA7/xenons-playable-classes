@@ -64,3 +64,4 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
       * THROW_CHARGED (for Hexacast2)
       * Fire Hand
    * Zir'vitar Strike's targeting segment moves faster, cannot stop, and turns less sharp
+* tmp.xpcDebugMessages (when true, enables some SHOW_AR_MSG used for debug on some player combat arts, used for development)

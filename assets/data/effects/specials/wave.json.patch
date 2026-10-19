@@ -11,11 +11,6 @@
     "type": "INCLUDE",
     "src": "mod:patches/data/effects/specials/wave-custom.json"
   },
-
-
-
-
-
   {
     "type": "ENTER",
     "index": [
@@ -95,13 +90,6 @@
       ]
     }
   },
-
-
-
-
-
-
-
   {
     "type": "ADD_ARRAY_ELEMENT",
     "index": 0,
@@ -433,6 +421,31 @@
         2,
         1,
         0
+      ]
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "name": "HEAL_SPARKLE",
+      "sheet": {
+        "src": "media/entity/effects/hexacast/hexa-misc.png",
+        "xCount": 1,
+        "offX": 256,
+        "offY": 192,
+        "width": 16,
+        "height": 16
+      },
+      "guiSprites": true,
+      "renderMode": "lighter",
+      "time": 0.1,
+      "repeat": true,
+      "frames": [
+        0,
+        1,
+        2,
+        1
       ]
     }
   },

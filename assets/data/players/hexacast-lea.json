@@ -3657,7 +3657,7 @@
         "type": "LIGHT",
         "visualType": "MEDIUM",
         "element": "WAVE",
-        "damageFactor": 2.75,
+        "damageFactor": 3.25,
         "reverse": false,
         "guardable": "",
         "skillBonus": "RANGED_DMG",
@@ -3779,6 +3779,12 @@
           "type": "WAIT"
         },
         {
+          "value": 0.05,
+          "target": "PROXY_OWNER",
+          "hideNumbers": false,
+          "type": "REGEN_HP"
+        },
+        {
           "attribName": "hits",
           "changeType": "set",
           "proxyOwner": false,
@@ -3799,7 +3805,7 @@
           "attack": {
             "type": "LIGHT",
             "element": "WAVE",
-            "damageFactor": 0.12,
+            "damageFactor": 0.15,
             "reverse": false,
             "status": 0,
             "guardable": "",
@@ -3808,7 +3814,7 @@
           }
         },
         {
-          "factor": 0.11,
+          "factor": 0.075,
           "type": "ABSORB_DAMAGE"
         },
         {
@@ -29770,7 +29776,7 @@
           "type": "WAIT"
         },
         {
-          "value": 0.050,
+          "value": 0.10,
           "target": "PROXY_OWNER",
           "hideNumbers": false,
           "type": "REGEN_HP"
@@ -48439,7 +48445,7 @@
           "type": "DETACH_TIME_PARENT"
         },
         {
-          "value": 0.050,
+          "value": 0.075,
           "target": "TARGET",
           "hideNumbers": false,
           "type": "REGEN_HP"
@@ -55814,7 +55820,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "false",
+          "condition": "tmp.xpcDebugMessages",
           "thenStep": [
             {
               "text": {
@@ -56085,7 +56091,7 @@
         {
           "withElse": false,
           "type": "IF",
-          "condition": "false",
+          "condition": "tmp.xpcDebugMessages",
           "thenStep": [
             {
               "text": {
@@ -86969,8 +86975,8 @@
         ]
       },
       "THROW_SPECIAL1_B": {
-        "name": {
-          "en_US": "\\c[2]Essence Steal\\c[0]"
+        "description": {
+          "en_US": "Hit an enemy to heal \\c[2]+5%\\c[0] of your HP plus additional absorption from the enemy."
         },
         "description": {
           "en_US": "Hit an enemy to absorb HP."
@@ -87201,7 +87207,7 @@
           "en_US": "\\c[2]Giga Drain\\c[0]"
         },
         "description": {
-          "en_US": "Hit a single enemy to heal \\c[2]+5%\\c[0] of your HP plus additional absorbtion from the enemy."
+          "en_US": "Hit a single enemy to heal \\c[2]+10%\\c[0] of your HP plus additional absorbtion from the enemy."
         },
         "dmgType": "RANGED",
         "stunType": "",

@@ -1,3 +1,10 @@
+## 3.6.2 (11/09/2026)
+### New Content
+- Added Hexacast-Lea support to elemental hair mod if installed (special thanks to QuieType)
+- Added interaction to sit on a couch in hideout-lobby (based on original concept by QuieType)
+### Fixes
+- Fixed "sit" animation definition for Tribalder2/3/4/5/Lea and Hexacast1/2/3/Lea
+
 ## 3.6.1 (10/19/2026)
 ### Fixes
 - Fixed crash due to a misplaced pentafist file reference

@@ -35,7 +35,7 @@
     },
     "posesSit": {
       "src": "media/entity/npc/hexacast2.png",
-      "xCount": 3,
+      "xCount": 1,
       "offX": 0,
       "offY": 400,
       "width": 32,

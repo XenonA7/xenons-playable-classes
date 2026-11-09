@@ -18,6 +18,7 @@ import "./js/custom-arena-cups.js";
 import "./js/custom-attack-limiters.js";
 import "./js/custom-bgm.js";
 import "./js/custom-combat-conditions.js";
+import "./js/custom-elemental-hair.js";
 import "./js/custom-env-particles.js";
 import "./js/custom-event-steps.js";
 import "./js/custom-font-icons.js";

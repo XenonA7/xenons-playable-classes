@@ -12,6 +12,8 @@ import "./js/krypek/pvp-gui-fix.js";
 
 import "./js/lubkuluk/key-panel-fix.js";
 
+import "./js/2767mr/xenodialog-ignorecutscenes.js";
+
 import "./js/custom-action-buffs.js";
 import "./js/custom-action-steps.js";
 import "./js/custom-arena-cups.js";

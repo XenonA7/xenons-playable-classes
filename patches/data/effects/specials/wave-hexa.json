@@ -6657,7 +6657,7 @@
         "angleVary": 0,
         "moveWithTarget": 0.1,
         "particleDuration": 0.6,
-        "anim": "WAVE_SPARKLE",
+        "anim": "HEAL_SPARKLE",
         "type": "PLAY_ANIMS_OVER_ENTITY"
       }
     ],

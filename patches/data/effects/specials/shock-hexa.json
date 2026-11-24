@@ -4662,7 +4662,7 @@
         "type": "PLAY_ANIM"
       }
     ],
-    "meleeTrail": [
+    "throttleHexPlayerAura": [
       {
         "volume": 0.7,
         "global": false,
@@ -4684,7 +4684,7 @@
         "fadeIn": 0.1,
         "fadeOut": 0.1,
         "duration": -1,
-        "glow": true,
+        "glow": false,
         "type": "LIGHT"
       },
       {

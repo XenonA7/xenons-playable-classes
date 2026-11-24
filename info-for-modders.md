@@ -1,5 +1,5 @@
 # XPC Technical Information
-Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping with JS features.
+Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, 2767mr, and Lubkuluk for helping with JS features.
 
 ## Misc JS Features
 * SHOW_EXTERN_ANIM will support non-Lea characters if said character has an animation by the same name in their main animation file
@@ -8,6 +8,7 @@ Thank you to Krypek, Azure Lazuline, Bakafish, Alyxia, and Lubkuluk for helping 
 * Adds the "default2" OneTimeSwitch type which has the default appearance but properly supports being hidden
 * Adds the "forest-dng" map style
 * Adds the "noHomingWhenAimingAtThis" config {} field option for generic proxies, will disable Hexacast homing while player is aiming at a proxy with this set to true
+* Adds the optional "ignoreCutscenes" property to XenoDialog entities, allowing them to trigger while events are active
 
 ## PVP Features
 * Speeds up the game when player dies in PVP but has party members remaining (can be disabled with tmp.speedUpBlock)

@@ -1,3 +1,17 @@
+## 3.6.3 (11/23/2026)
+### New Content
+- Added Schneider menu artwork by Rioreur
+- Added "ignoreCutscenes" bool property to XenoDialog, updated info-for-modders.md (feature by 2767mr)
+- You can now sit on all 9 tables in the XPC hideout maps if playing as Triblader2/3/4/5
+### Changes
+- Reformatted in-game mod credits, added Rioreur and 2767mr, and updated readme.md
+- Triblader2 bonus dialogue for sitEvent can now only show once per map entry in hideout-lobby
+- Effect gigaDrainHeal now uses HEAL_SPARKLE particles instead of WAVE_SPARKLE
+- Renamed effect meleeTrail to throttleHexPlayerAura
+- Removed light glow from effect throttleHexPlayerAura
+### Fixes
+- Krypek fix for pvp-gui-fix.js not checking that pvp is active before counting kills
+
 ## 3.6.2 (11/09/2026)
 ### New Content
 - Added Hexacast-Lea support to elemental hair mod if installed (special thanks to QuieType)

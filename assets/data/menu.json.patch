@@ -296,10 +296,48 @@
     "content": {
       "DOCTYPE": "MENU_GUI_CONFIG",
       "name": "Schneider",
-      "gfx": "media/gui/menu-schneiders.png",
-      "TinyHead": {
+      "gfx": "media/gui/menu-lukas.png",
+      "Large": {
+        "gfxOffX": -10,
+        "gfxOffY": -28,
         "offX": 0,
         "offY": 0,
+        "sizeX": 190,
+        "sizeY": 416
+      },
+      "Small": {
+        "gfxOffX": -1,
+        "gfxOffY": -18,
+        "offX": 192,
+        "offY": 0,
+        "sizeX": 124,
+        "sizeY": 286
+      },
+      "Head": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 192,
+        "offY": 296,
+        "sizeX": 126,
+        "sizeY": 35
+      },
+      "AreaButton": {
+        "gfxOffX": 0,
+        "gfxOffY": 0,
+        "offX": 192,
+        "offY": 352,
+        "sizeX": 14,
+        "sizeY": 11
+      },
+      "MapFloorButtonContainer": {
+        "offX": 192,
+        "offY": 368,
+        "sizeX": 34,
+        "sizeY": 20
+      },
+      "TinyHead": {
+        "offX": 224,
+        "offY": 352,
         "sizeX": 10,
         "sizeY": 12
       }

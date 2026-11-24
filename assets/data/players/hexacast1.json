@@ -83154,7 +83154,7 @@
             "type": "SHOW_EFFECT",
             "effect": {
               "sheet": "specials.shock",
-              "name": "meleeTrail"
+              "name": "throttleHexPlayerAura"
             },
             "offset": {
               "x": 0,

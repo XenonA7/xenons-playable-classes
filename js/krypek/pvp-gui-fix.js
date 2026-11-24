@@ -36,6 +36,7 @@ sc.PVP_MESSAGE.ROUND_START = 5
 sc.PvpModel.inject({
     onPvpCombatantDefeat(combatant) {
         if (isMultiplayerPvpOn()) return this.parent(combatant)
+        if (!this.isActive()) return this.parent(combatant)
 
         const name = combatant ? (combatant == ig.game.playerEntity ? 'player' : combatant.name) : ''
         ig.vars.set('tmp.pvp_' + name + '_defeated', true)

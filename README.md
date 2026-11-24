@@ -65,7 +65,9 @@ https://github.com/2hh8899/ArcaneLab/archive/refs/heads/dev.zip
 - **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
 - **Lubkuluk**: Patch for Hexacast key panel functionality
 - **Azure Lazuline**: JS support, many small code features and patches
-- **Orco Pixelado**: Triblader2 and Triblader Lea menu portrait artwork
+- **Orco Pixelado**: Triblader2 and Triblader Lea menu artwork
+- **Rioreur**: Schneider menu artwork
+- **2767mr**: JS feature for XenoDialog ignoring cutscenes
 - **Laz**: Gameplay testing, created music used for XPC hideout area
 
 # Install Instructions
